@@ -1,0 +1,87 @@
+{
+    "title": "Simbologia e Convenções",
+    "content": [
+        {
+            "type": "text",
+            "value": "A simbologia elétrica é a linguagem universal para representar componentes e circuitos em diagramas. Dominar os símbolos é essencial para leitura eficiente."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Padrões Internacionais",
+            "text": "ISO (International), JIS (Japonês), SAE (Americano), e DIN (Alemão). Cada um com variações específicas."
+        },
+        {
+            "type": "text",
+            "value": "Símbolos básicos incluem: terra, alimentação, fusível, relé, interruptor, diodo, transistor, e componentes específicos."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Símbolo ISO", "Símbolo SAE"],
+            "rows": [
+                ["Terra", "┴───", "⊥"],
+                ["Alimentação +12V", "+─", "+─"],
+                ["Fusível", "─⧸─", "─⧸─"],
+                ["Relé", "┌─┐", "┌─┐"],
+                ["Interruptor", "─┘─", "─┘─"],
+                ["Diodo", "─|─", "─|─"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importância da Padronização",
+            "text": "Diferentes fabricantes usam convenções ligeiramente diferentes. Aprenda múltiplos padrões."
+        },
+        {
+            "type": "text",
+            "value": "Cores de fios seguem padrões: vermelho (positivo), preto (terra), amarelo (comunicação), e azul (negativo chaveado)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Convenções de Numeração",
+            "text": "Componentes numerados sequencialmente. Fios identificados por cor e número."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Simbologia"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual símbolo representa terra em padrão ISO?",
+            "options": [
+                "⊥",
+                "⏚",
+                "⧸",
+                "┌─┐"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual cor de fio representa terra em padrão automotivo?",
+            "options": [
+                "Vermelho",
+                "Preto",
+                "Amarelo",
+                "Azul"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual padrão de simbologia é americano?",
+            "options": [
+                "ISO",
+                "JIS",
+                "SAE",
+                "DIN"
+            ],
+            "correct": 2
+        }
+    ]
+}

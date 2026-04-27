@@ -1,0 +1,85 @@
+{
+    "title": "Sensores de Temperatura HVAC",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sensores de temperatura controlam o sistema A/C para conforto e proteção. Incluem sensores de evaporador, cabine, solar e temperatura externa, cada um com função específica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Sensores",
+            "text": "NTC (Negative Temperature Coefficient) - resistência diminui com aumento da temperatura."
+        },
+        {
+            "type": "text",
+            "value": "Sensor do evaporador previne congelamento. Se a temperatura cair abaixo de ~2°C, o módulo HVAC desliga o compressor para evitar formação de gelo."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Localização", "Função", "Falha Comum"],
+            "rows": [
+                ["Evaporador", "Unidade evaporadora", "Prevenir congelamento", "Circuito aberto"],
+                ["Cabine", "Painel/duto", "Controle de temperatura", "Leitura incorreta"],
+                ["Solar", "Painel dash", "Compensação solar", "Exposição ao sol"],
+                ["Externa", "Grade frontal", "Controle de ventilação", "Sujeita/umidade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sensor do Evaporador",
+            "text": "Se falhar, o compressor pode ciclar rapidamente ou não ligar. Pode causar congelamento e redução de fluxo de ar."
+        },
+        {
+            "type": "text",
+            "value": "Sensores NTC têm resistência que varia inversamente com temperatura. Teste com multímetro: 5kΩ a 25°C, diminui com calor, aumenta com frio."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Calibração",
+            "text": "Alguns sistemas requerem calibração após substituição. Consulte manual do fabricante para procedimento específico."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Temperatura"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se o sensor do evaporador falhar?",
+            "options": [
+                "Compressor não liga",
+                "Evaporador pode congelar",
+                "Aumenta temperatura da cabine",
+                "Todas as anteriores"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a característica dos sensores NTC?",
+            "options": [
+                "Resistência aumenta com temperatura",
+                "Resistência diminui com temperatura",
+                "Resistência é constante",
+                "Resistência não afetada por temperatura"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "A que temperatura o módulo HVAC geralmente desliga o compressor para evitar congelamento?",
+            "options": [
+                "0°C",
+                "2°C",
+                "5°C",
+                "10°C"
+            ],
+            "correct": 1
+        }
+    ]
+}

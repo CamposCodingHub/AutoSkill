@@ -1,0 +1,85 @@
+{
+    "title": "Luzes Diurnas (DRL)",
+    "content": [
+        {
+            "type": "text",
+            "value": "Luzes Diurnas (DRL - Daytime Running Lights) são obrigatórias em muitos países, aumentando a visibilidade do veículo durante o dia e melhorando a segurança."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Requisitos Legais",
+            "text": "Muitos países exigem DRL desde 2011. Devem acender automaticamente com o motor e apagar com faróis."
+        },
+        {
+            "type": "text",
+            "value": "DRLs modernas usam LEDs de alta eficiência, consumindo apenas 5-15W vs 55W de faróis baixos, economizando combustível."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Consumo", "Vantagens", "Desvantagens"],
+            "rows": [
+                ["LED", "5-15W", "Eficiente, vida útil longa", "Custo inicial"],
+                ["Halógeno", "55W", "Baixo custo", "Alto consumo"],
+                ["CCFL", "25W", "Boa eficiência", "Complexo"],
+                ["Fibra Óptica", "10W", "Design flexível", "Custo elevado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Instalação",
+            "text": "DRLs devem ser instaladas corretamente para não ofuscar outros motoristas. Verifique regulamentação local."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas inteligentes ajustam brilho baseado em condições ambientais e integração com sensores de luz."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Integração",
+            "text": "DRLs integram com sistema de iluminação, controladas pela ECU ou módulo específico."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema DRL"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o principal benefício das DRLs?",
+            "options": [
+                "Economia de combustível",
+                "Aumento da visibilidade e segurança",
+                "Melhor estética",
+                "Redução de manutenção"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia é mais comum em DRLs modernas?",
+            "options": [
+                "Halógena",
+                "Xenon",
+                "LED",
+                "Laser"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Quando as DRLs devem acender automaticamente?",
+            "options": [
+                "Apenas à noite",
+                "Apenas com chuva",
+                "Com o motor ligado e luz baixa desligada",
+                "Apenas com faróis altos"
+            ],
+            "correct": 2
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "title": "Capacitores e Indutores",
+    "content": [
+        {
+            "type": "text",
+            "value": "Capacitores e indutores são componentes reativos que armazenam energia temporariamente. O capacitor armazena energia em um campo elétrico (opõe-se a variações de tensão). O indutor armazena energia em um campo magnético (opõe-se a variações de corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Macete para lembrar",
+            "text": "Capacitor = 'C' de Corrente Contínua não passa (circuito aberto). Indutor = 'I' de Inércia – resiste a mudanças na corrente."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Característica",
+                "Capacitor",
+                "Indutor"
+            ],
+            "rows": [
+                [
+                    "Armazena energia em...",
+                    "Campo elétrico",
+                    "Campo magnético"
+                ],
+                [
+                    "Unidade",
+                    "Farad (F)",
+                    "Henry (H)"
+                ],
+                [
+                    "Em corrente contínua (regime permanente)",
+                    "Circuito aberto",
+                    "Curto-circuito"
+                ],
+                [
+                    "Em corrente alternada (alta frequência)",
+                    "Baixa impedância (deixa passar)",
+                    "Alta impedância (bloqueia)"
+                ],
+                [
+                    "Comportamento na energização",
+                    "Tensão aumenta gradualmente",
+                    "Corrente aumenta gradualmente"
+                ],
+                [
+                    "Comportamento na desenergização",
+                    "Tensão cai gradualmente (fornece energia)",
+                    "Corrente tende a continuar fluindo (flyback)"
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Aplicações no carro: filtro de ripple do alternador (capacitor eletrolítico), supressão de ruído (capacitores cerâmicos), bobina de ignição (indutor), solenoides/relés (indutores com núcleo de ferro), sensores indutivos (CKP)."
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente do carro utiliza o fenômeno do 'flyback' (colapso do campo magnético) para gerar alta tensão? (Obs: já perguntado, mas vamos reforçar)",
+            "options": [
+                "Capacitor de filtro",
+                "Bobina de ignição",
+                "Sensor NTC",
+                "Alternador"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função dos capacitores no sistema elétrico automotivo?",
+            "options": [
+                "Armazenar energia para partida do motor",
+                "Filtrar ripple e suprimir ruído elétrico",
+                "Gerar campo magnético para relés",
+                "Medir temperatura do motor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que um capacitor se comporta como um circuito aberto para corrente contínua?",
+            "options": [
+                "Porque armazena energia em campo elétrico",
+                "Porque sua resistência interna é muito alta",
+                "Porque se opõe a variações de tensão",
+                "Porque só conduz em alta frequência"
+            ],
+            "correct": 2
+        }
+    ]
+}

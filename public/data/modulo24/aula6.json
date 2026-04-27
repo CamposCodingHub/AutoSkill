@@ -1,0 +1,86 @@
+{
+    "title": "Normas e Regulamentações",
+    "content": [
+        {
+            "type": "text",
+            "value": "Normas e regulamentações são fundamentais para segurança e conformidade legal em oficinas automotivas, estabelecendo padrões obrigatórios."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Principais Normas",
+            "text": "NR-10 (Segurança em Instalações Elétricas), NR-35 (Trabalho em Altura), e normas ABNT para trabalhos elétricos."
+        },
+        {
+            "type": "text",
+            "value": "Conformidade com normas garante segurança, evita multas, e protege legalmente a empresa e funcionários."
+        },
+        {
+            "type": "table",
+            "headers": ["Norma", "Abrangência", "Requisitos Principais"],
+            "rows": [
+                ["NR-10", "Instalações elétricas", "Segurança em instalações, EPIs"],
+                ["NR-12", "Trabalho em altura", "Proteção contra quedas"],
+                ["NR-35", "Trabalho em altura", "Equipamentos, procedimentos"],
+                ["ABNT NBR 5410", "Instalações elétricas", "Padrões técnicos"],
+                ["ABNT NBR 14039", "Emergências médicas", "Procedimentos de resposta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Obrigações Legais",
+            "text": "Cumprir normas é obrigatório. Fiscalização pode resultar em multas, interdição, e responsabilização criminal."
+        },
+        {
+            "type": "text",
+            "value": "Mantenha documentação atualizada: laudos, certificados, treinamentos, e registros de segurança."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Atualizações",
+            "text": "Normas são atualizadas regularmente. Mantenha-se informado sobre mudanças e novas exigências."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Normas e Regulamentações"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual norma trata de segurança em instalações elétricas?",
+            "options": [
+                "NR-10",
+                "NR-12",
+                "NR-35",
+                "ABNT NBR 5410"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual norma trata de trabalho em altura?",
+            "options": [
+                "NR-10",
+                "NR-12",
+                "NR-35",
+                "ABNT NBR 14039"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que manter documentação de segurança atualizada?",
+            "options": [
+                "Apenas burocracia",
+                "Evitar multas, interdição e responsabilização legal",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

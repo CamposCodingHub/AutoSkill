@@ -1,0 +1,86 @@
+{
+    "title": "Comunicação e Telemetria",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de comunicação e telemetria permitem monitoramento remoto em tempo real, envio de alertas, e controle remoto de funções do veículo através de redes celulares e satélites."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologias de Comunicação",
+            "text": "GSM/GPRS, 3G/4G/5G, satélite, e redes mesh. Cada uma com cobertura e capacidade diferentes."
+        },
+        {
+            "type": "text",
+            "value": "Telemetria envolve coleta de dados do veículo (GPS, velocidade, fuel, status motor) e transmissão para servidores centralizados para análise e armazenamento."
+        },
+        {
+            "type": "table",
+            "headers": ["Dado", "Fonte", "Frequência"],
+            "rows": [
+                ["Posição GPS", "Módulo GPS", "1-60 segundos"],
+                ["Velocidade", "CAN/ECU", "5-30 segundos"],
+                ["Nível Combustível", "CAN/Sensor", "30-300 segundos"],
+                ["Status Motor", "CAN/ECU", "Evento-based"],
+                ["Alertas", "Múltiplos", "Imediato"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Consumo de Dados",
+            "text": "Otimize frequência de transmissão para equilibrar informações em tempo real com custos de dados e bateria."
+        },
+        {
+            "type": "text",
+            "value": "Protocolos de comunicação incluem MQTT para IoT, HTTP/HTTPS para web, e protocolos proprietários para sistemas específicos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Segurança na Comunicação",
+            "text": "Use criptografia TLS/SSL, autenticação de dispositivos, e firewalls para proteger dados contra acesso não autorizado."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Telemetria"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual protocolo é otimizado para dispositivos IoT?",
+            "options": [
+                "HTTP",
+                "FTP",
+                "MQTT",
+                "SMTP"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a frequência típica de transmissão de posição GPS?",
+            "options": [
+                "A cada 24 horas",
+                "1-60 segundos",
+                "Apenas uma vez",
+                "A cada ano"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante otimizar a frequência de transmissão de dados?",
+            "options": [
+                "Para aumentar o custo",
+                "Para equilibrar informações em tempo real com custos de dados e bateria",
+                "Para não funcionar",
+                "Para danificar o sistema"
+            ],
+            "correct": 1
+        }
+    ]
+}

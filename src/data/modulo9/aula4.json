@@ -1,0 +1,85 @@
+{
+    "title": "Memórias e Calibração",
+    "content": [
+        {
+            "type": "text",
+            "value": "A ECU possui múltiplos tipos de memória: ROM para firmware, EEPROM/Flash para calibrações, e RAM para dados temporários. Cada tipo tem características específicas de velocidade e persistência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Memória",
+            "text": "Firmware vs mapas: programa define como calcular, mapas definem quanto injetar e avançar em cada ponto."
+        },
+        {
+            "type": "text",
+            "value": "Reprogramação 'stage' mexe principalmente em calibração; alterações profundas mudam também o firmware. Mapas contêm valores de injeção, avanço, limites e estratégias de controle."
+        },
+        {
+            "type": "table",
+            "headers": ["Memória", "Função", "Volatilidade", "Velocidade"],
+            "rows": [
+                ["ROM", "Firmware base", "Não volátil", "Média"],
+                ["Flash/EEPROM", "Calibrações, adaptativos", "Não volátil", "Lenta escrita"],
+                ["RAM", "Dados temporários", "Volátil", "Rápida"],
+                ["NVRAM", "Códigos de falha", "Não volátil", "Média"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Valores Adaptativos",
+            "text": "A ECU aprende e ajusta valores baseado no uso do veículo, armazenando em EEPROM para manter após desligar."
+        },
+        {
+            "type": "text",
+            "value": "Calibrações incluem mapas 3D de injeção vs RPM vs carga, tabelas de avanço, limites de proteção, e estratégias de controle de emissões."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Backup",
+            "text": "Sempre faça backup da calibração original antes de qualquer reprogramação. Perder a calibração original pode impossibilitar retorno."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Memória"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Onde a ECU armazena valores adaptativos que devem ser mantidos após desligar?",
+            "options": [
+                "RAM",
+                "ROM",
+                "EEPROM/Flash",
+                "Cache"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece com os valores adaptativos quando a bateria é desconectada?",
+            "options": [
+                "São mantidos na ROM",
+                "Podem ser perdidos se não forem salvos na EEPROM",
+                "São automaticamente recalculados ao reconectar",
+                "Não afetam o funcionamento do veículo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função dos valores adaptativos da ECU?",
+            "options": [
+                "Controlar a temperatura do motor",
+                "Compensar variações do motor e envelhecimento de componentes",
+                "Regular a pressão dos pneus",
+                "Controlar o sistema de áudio"
+            ],
+            "correct": 1
+        }
+    ]
+}

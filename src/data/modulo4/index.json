@@ -1,0 +1,43 @@
+{
+    "id": 4,
+    "title": "Sistema Elétrico do Veículo",
+    "icon": "🚗",
+    "description": "Bateria, alternador, motor de partida, fusíveis, relés, aterramento, diagramas elétricos.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Arquitetura da Rede Elétrica",
+            "slug": "arquitetura-rede-eletrica"
+        },
+        {
+            "id": 2,
+            "title": "Baterias Automotivas",
+            "slug": "baterias-automotivas"
+        },
+        {
+            "id": 3,
+            "title": "Sistema de Partida",
+            "slug": "sistema-partida"
+        },
+        {
+            "id": 4,
+            "title": "Alternador e Sistema de Carga",
+            "slug": "alternador-sistema-carga"
+        },
+        {
+            "id": 5,
+            "title": "Sistema de Aterramento",
+            "slug": "sistema-aterramento"
+        },
+        {
+            "id": 6,
+            "title": "Distribuição de Energia",
+            "slug": "distribuicao-energia"
+        },
+        {
+            "id": 7,
+            "title": "Diagramas Elétricos",
+            "slug": "diagramas-eletricos"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "id": 6,
+    "title": "Sensores Automotivos",
+    "icon": "📡",
+    "description": "CKP (rotação), CMP (fase), MAP, MAF, TPS, ECT, sonda lambda, sensor knock, ABS.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Sensor CKP (Virabrequim)",
+            "slug": "sensor-ckp"
+        },
+        {
+            "id": 2,
+            "title": "Sensor CMP (Comando de Válvulas)",
+            "slug": "sensor-cmp"
+        },
+        {
+            "id": 3,
+            "title": "Sensor MAP (Pressão Absoluta)",
+            "slug": "sensor-map"
+        },
+        {
+            "id": 4,
+            "title": "Sensor MAF (Fluxo de Ar)",
+            "slug": "sensor-maf"
+        },
+        {
+            "id": 5,
+            "title": "Sensor TPS (Posição Borboleta)",
+            "slug": "sensor-tps"
+        },
+        {
+            "id": 6,
+            "title": "Sensores de Temperatura",
+            "slug": "sensores-temperatura"
+        },
+        {
+            "id": 7,
+            "title": "Sonda Lambda (Oxigênio)",
+            "slug": "sonda-lambda"
+        }
+    ]
+}

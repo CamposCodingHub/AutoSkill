@@ -1,0 +1,78 @@
+{
+    "title": "Bobinas de Ignição",
+    "content": [
+        {
+            "type": "text",
+            "value": "Bobinas de ignição são transformadores elevadores que convertem a baixa tensão da bateria (12V) em alta tensão necessária para criar a faísca na vela (20-40kV)."
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Analogia Hidráulica",
+            "text": "Assim como uma pequena pressão pode mover grande volume de água através de um bocal fino, a baixa tensão no primário induz alta tensão no secundário."
+        },
+        {
+            "type": "text",
+            "value": "O funcionamento baseia-se no princípio da indução eletromagnética: quando a corrente no primário é interrompida, o colapso do campo magnético induz alta tensão no secundário."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Características", "Aplicação Típica"],
+            "rows": [
+                ["Caneta (COP antigo)", "Uma bobina, múltiplas saídas", "Motos mais antigas"],
+                ["DIS", "Módulo com múltiplas bobinas", "Carros anos 90-2000"],
+                ["COP", "Uma bobina por cilindro", "Carros modernos"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Dwell Time",
+            "text": "Dwell é o tempo que a bobina fica energizada antes da faísca. Dwell insuficiente = faísca fraca; excessivo = superaquecimento."
+        },
+        {
+            "type": "text",
+            "value": "O diagnóstico de bobinas inclui teste de resistência do primário e secundário, verificação de isolamento e análise da forma de onda com osciloscópio."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Cálculo de Potência da Bobina"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de bobina oferece melhor controle individual por cilindro?",
+            "options": [
+                "Caneta tradicional",
+                "DIS com múltiplas saídas",
+                "COP (Coil-on-Plug)",
+                "Bobina externa com distribuidor"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do sistema COP (Coil-on-Plug)?",
+            "options": [
+                "Menor custo de manutenção",
+                "Maior energia de faísca e melhor controle",
+                "Menor consumo de energia",
+                "Maior durabilidade do distribuidor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa uma bobina COP com multímetro?",
+            "options": [
+                "Medindo a resistência primária e secundária",
+                "Verificando apenas a tensão de alimentação",
+                "Testando a continuidade com o motor ligado",
+                "Medindo a corrente de ignição"
+            ],
+            "correct": 0
+        }
+    ]
+}

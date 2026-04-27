@@ -1,0 +1,85 @@
+{
+    "title": "Veículos Autônomos e IA",
+    "content": [
+        {
+            "type": "text",
+            "value": "Veículos autônomos e inteligência artificial estão revolucionando a eletricidade automotiva, criando sistemas que aprendem e se adaptam continuamente."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologias Chave",
+            "text": "Machine Learning, Deep Learning, Visão Computacional, Redes Neurais, e Processamento de Linguagem Natural."
+        },
+        {
+            "type": "text",
+            "value": "IA em veículos permite: diagnóstico preditivo, otimização de consumo, condução autônoma, e manutenção preditiva."
+        },
+        {
+            "type": "table",
+            "headers": ["Aplicação IA", "Benefício", "Impacto"],
+            "rows": [
+                ["Diagnóstico Preditivo", "Antecipa falhas", "Reduz tempo de reparo"],
+                ["Otimização Consumo", "Economia de combustível", "Menor emissão"],
+                ["Condução Autônoma", "Segurança e conforto", "Reduz acidentes"],
+                ["Manutenção Preditiva", "Evita quebras", "Aumenta disponibilidade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Processamento em tempo real, segurança cibernética, e integração com sistemas legados."
+        },
+        {
+            "type": "text",
+            "value": "O futuro exige profissionais com habilidades em: programação, análise de dados, redes neurais, e segurança de sistemas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Especialização em IA automotiva, desenvolvimento de algoritmos, e integração de sistemas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de IA em Veículos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia permite diagnóstico preditivo?",
+            "options": [
+                "Visão Computacional",
+                "Machine Learning",
+                "Processamento Digital",
+                "Análise Espectral"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual aplicação de IA reduz acidentes?",
+            "options": [
+                "Diagnóstico preditivo",
+                "Condução autônoma",
+                "Otimização de consumo",
+                "Manutenção preditiva"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o futuro exige habilidades em programação?",
+            "options": [
+                "Apenas burocracia",
+                "IA e sistemas modernos requerem desenvolvimento de algoritmos",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

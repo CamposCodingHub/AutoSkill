@@ -1,0 +1,85 @@
+{
+    "title": "Emendas de Chicotes Elétricos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Emendas de chicotes elétricos são operações críticas que exigem técnicas profissionais para garantir confiabilidade e segurança a longo prazo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Emendas",
+            "text": "Solda, crimpe, conectores de reparo, e emendas termo-retráteis. Cada uma com aplicações específicas."
+        },
+        {
+            "type": "text",
+            "value": "Emendas profissionais devem ser seladas contra umidade, protegidas mecanicamente, e ter baixa resistência elétrica."
+        },
+        {
+            "type": "table",
+            "headers": ["Técnica", "Aplicação", "Vantagens", "Desvantagens"],
+            "rows": [
+                ["Solda", "Componentes precisos", "Conexão permanente", "Risco de corrosão"],
+                ["Crimpe", "Fios de potência", "Rápido, confiável", "Requer ferramenta"],
+                ["Conector Reparo", "Reparos rápidos", "Fácil instalação", "Custo elevado"],
+                ["Termo-retrátil", "Selagem perfeita", "Proteção total", "Requer ferramenta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimento Padrão",
+            "text": "1. Limpe fios 2. Estanhe pontas 3. Faça emenda 4. Isole completamente 5. Teste continuidade."
+        },
+        {
+            "type": "text",
+            "value": "Use materiais adequados: solda sem chumbo, conectores de qualidade, fita auto-fusível, e tubo termo-retrátil."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Qualidade da Emenda",
+            "text": "Emenda ideal deve ter resistência <0.01Ω, ser mecanicamente forte, e completamente selada."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Emendas de Chicotes"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a resistência máxima aceitável para emenda profissional?",
+            "options": [
+                "<0.01Ω",
+                "<0.1Ω",
+                "<1.0Ω",
+                "<10Ω"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual técnica é ideal para fios de potência?",
+            "options": [
+                "Solda",
+                "Crimpe",
+                "Fita isolante apenas",
+                "Nenhuma das acima"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no procedimento padrão de emenda?",
+            "options": [
+                "Isolar completamente",
+                "Limpar fios",
+                "Testar continuidade",
+                "Estanhar pontas"
+            ],
+            "correct": 1
+        }
+    ]
+}

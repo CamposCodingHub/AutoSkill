@@ -1,0 +1,85 @@
+{
+    "title": "Motores Elétricos de Tração",
+    "content": [
+        {
+            "type": "text",
+            "value": "Motores elétricos de tração convertem energia elétrica das baterias em energia mecânica para movimentar o veículo. Diferentes tecnologias oferecem vantagens específicas para aplicações híbridas e elétricas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "BLDC (Brushless DC), Motor de Indução, Motor Síncrono com Ímãs Permanentes (PMSM), e SRM (Relutância Chaveada)."
+        },
+        {
+            "type": "text",
+            "value": "Motores modernos usam ímãs de terras raras e operam em alta eficiência (90-95%). Controle preciso requer inversores e algoritmos sofisticados de controle vetorial."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Eficiência", "Aplicação", "Características"],
+            "rows": [
+                ["BLDC", "92-95%", "BEV, HEV", "Alto torque, controle preciso"],
+                ["Indução", "85-92%", "HEV, industrial", "Robusto, baixo custo"],
+                ["PMSM", "94-97%", "BEV premium", "Alta densidade potência"],
+                ["SRM", "85-90%", "Aplicações especiais", "Robusto, sem ímãs"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Controle do Motor",
+            "text": "Inversores convertem DC das baterias para AC trifásico para motores. Controlam velocidade e torque com precisão."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de refrigeração são essenciais: líquida para motores de alta potência, ar para aplicações menores. Superaquecimento reduz eficiência e vida útil."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Regeneração",
+            "text": "Motores operam como geradores durante frenagem, convertendo energia cinética em elétrica para recarregar baterias."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Motores Elétricos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente converte DC das baterias em AC para o motor?",
+            "options": [
+                "BMS",
+                "Inversor",
+                "DC-DC Converter",
+                "OBC"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de motor tem a maior eficiência (94-97%)?",
+            "options": [
+                "Motor de Indução",
+                "BLDC",
+                "PMSM (Síncrono com Ímãs Permanentes)",
+                "SRM (Relutância Chaveada)"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Como os motores elétricos funcionam durante a frenagem regenerativa?",
+            "options": [
+                "Desligam completamente",
+                "Operam como geradores convertendo energia cinética em elétrica",
+                "Aumentam a velocidade",
+                "Consumem mais energia"
+            ],
+            "correct": 1
+        }
+    ]
+}

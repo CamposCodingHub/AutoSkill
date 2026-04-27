@@ -1,0 +1,86 @@
+{
+    "title": "Estudos de Caso - Problemas Complexos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Estudos de caso de problemas complexos desafiam habilidades avançadas, exigindo conhecimento integrado de múltiplos sistemas e pensamento analítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Características de Problemas Complexos",
+            "text": "Sintomas intermitentes, múltiplos sistemas afetados, falhas térmicas, e problemas de comunicação."
+        },
+        {
+            "type": "text",
+            "value": "Problemas complexos frequentemente envolvem interações entre sistemas, exigindo diagnóstico holístico e abordagem sistemática."
+        },
+        {
+            "type": "table",
+            "headers": ["Caso", "Sintomas", "Sistemas Afetados", "Solucão Integrada"],
+            "rows": [
+                ["Falha intermitente CAN", "Múltiplos sistemas com falhas aleatórias", "ECU, BCM, painel", "Terminação CAN ruim"],
+                ["Sobreaquecimento ECU", "Desempenho reduzido quando quente", "Motor, transmissão", "Problema dissipador"],
+                ["Consumo variável", "Consumo instável sem padrão", "Injeção, ignição", "Sensor MAP com ruído"],
+                ["Comunicação perdida", "Módulos não comunicam", "Rede CAN inteira", "Curto em linha CAN-H"],
+                ["Falha cascata", "Uma falha causa outras", "Múltiplos sistemas", "Fonte alimentação instável"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Metodologia Avançada",
+            "text": "Use análise de dados, correlação temporal, e testes de estresse. Documente tudo detalhadamente."
+        },
+        {
+            "type": "text",
+            "value": "Problemas complexos frequentemente requerem ferramentas avançadas: osciloscópio, analisador lógico, e software especializado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Colaboração",
+            "text": "Não hesite em consultar colegas especialistas. Problemas complexos podem beneficiar de múltiplas perspectivas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Problemas Complexos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual característica define problemas complexos?",
+            "options": [
+                "Sintomas claros e constantes",
+                "Sintomas intermitentes e múltiplos sistemas",
+                "Problemas mecânicos simples",
+                "Falhas visíveis facilmente"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para diagnóstico de problemas complexos?",
+            "options": [
+                "Apenas chave de fenda",
+                "Osciloscópio e analisador lógico",
+                "Apenas martelo",
+                "Não é necessário ferramenta especial"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que consultar colegas especialistas em problemas complexos?",
+            "options": [
+                "Apenas para socializar",
+                "Múltiplas perspectivas podem ajudar a resolver problemas difíceis",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

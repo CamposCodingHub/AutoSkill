@@ -1,0 +1,43 @@
+{
+    "id": 12,
+    "title": "Conforto e Carroceria",
+    "icon": "🪟",
+    "description": "Vidros elétricos, travas centrais, retrovisores, bancos elétricos, limpadores, sistema de áudio.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Vidros Elétricos",
+            "slug": "vidros-eletricos"
+        },
+        {
+            "id": 2,
+            "title": "Travas Centrais e Alarme",
+            "slug": "travas-centrais"
+        },
+        {
+            "id": 3,
+            "title": "Retrovisores Elétricos",
+            "slug": "retrovisores-eletricos"
+        },
+        {
+            "id": 4,
+            "title": "Bancos Elétricos e Ajustes",
+            "slug": "bancos-eletricos"
+        },
+        {
+            "id": 5,
+            "title": "Limpadores e Lavadores",
+            "slug": "limpadores-lavadores"
+        },
+        {
+            "id": 6,
+            "title": "Sistema de Áudio e Entretenimento",
+            "slug": "sistema-audio"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico de Sistemas de Conforto",
+            "slug": "diagnostico-conforto"
+        }
+    ]
+}

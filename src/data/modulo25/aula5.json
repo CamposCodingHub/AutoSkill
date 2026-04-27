@@ -1,0 +1,85 @@
+{
+    "title": "Entrevistas Técnicas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Entrevistas técnicas são o momento decisivo para demonstrar conhecimento, habilidades, e adequação cultural à empresa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Entrevistas",
+            "text": "Técnica (conhecimento), prática (habilidades), comportamental (atitudes), e com o gestor."
+        },
+        {
+            "type": "text",
+            "value": "Prepare-se para diferentes formatos: provas situacionais, diagnóstico em veículo real, e perguntas comportamentais."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Foco", "Preparação"],
+            "rows": [
+                ["Técnica", "Conhecimento específico", "Estudo teórico profundo"],
+                ["Prática", "Habilidades manuais", "Treinamento em bancada"],
+                ["Comportamental", "Atitudes profissionais", "Exemplos STAR"],
+                ["Com Gestor", "Visão geral", "Questões estratégicas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Método STAR",
+            "text": "Situation (situação), Task (tarefa), Action (ação), Result (resultado). Estrutura para respostas comportamentais."
+        },
+        {
+            "type": "text",
+            "value": "Pesquise a empresa, prepare perguntas para o entrevistador, e demonstre interesse genuíno na posição."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diferenciais",
+            "text": "Mostre projetos desafiadores, certificações raras, e especializações em alta demanda."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Entrevistas Técnicas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o significado de 'T' no método STAR?",
+            "options": [
+                "Time",
+                "Task",
+                "Team",
+                "Technical"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de entrevista foca em habilidades manuais?",
+            "options": [
+                "Técnica",
+                "Prática",
+                "Comportamental",
+                "Com gestor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que pesquisar a empresa antes da entrevista?",
+            "options": [
+                "Apenas curiosidade",
+                "Demonstrar interesse genuíno e preparar perguntas relevantes",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

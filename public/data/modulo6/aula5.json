@@ -1,0 +1,86 @@
+{
+    "title": "Sensor TPS (Posição Borboleta)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sensor TPS (Throttle Position Sensor) informa à ECU a posição da borboleta de aceleração, essencial para controle da mistura e resposta do motor."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Potenciômetro (resistivo), Hall effect, e sensores sem contato. Cada um com características específicas."
+        },
+        {
+            "type": "text",
+            "value": "O TPS é crucial para controle de marcha lenta, aceleração, e estratégias de transmissão automática."
+        },
+        {
+            "type": "table",
+            "headers": ["Posição", "Voltagem Típica", "Função"],
+            "rows": [
+                ["Borboleta fechada", "0.3-0.7V", "Marcha lenta"],
+                ["25% abertura", "1.0-1.5V", "Carga leve"],
+                ["50% abertura", "2.0-2.5V", "Carga média"],
+                ["75% abertura", "3.0-3.5V", "Carga pesada"],
+                ["100% abertura", "4.0-4.8V", "Plena carga"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste alimentação 5V, terra bom, e sinal variando suavemente sem saltos. Use osciloscópio para verificar linearidade."
+        },
+        {
+            "type": "text",
+            "value": "Sinais com ruído ou saltos indicam problemas no sensor ou mau contato no chicote elétrico."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sintomas de Falha",
+            "text": "Marcha lenta instável, resposta lenta, consumo elevado, e luz de check engine acesa."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensor TPS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a voltagem típica do TPS com borboleta fechada?",
+            "options": [
+                "0.3-0.7V",
+                "1.5-2.0V",
+                "2.5-3.0V",
+                "4.0-4.5V"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sensor TPS?",
+            "options": [
+                "Medir a temperatura do motor",
+                "Detectar a posição da borboleta de aceleração",
+                "Controlar a pressão do combustível",
+                "Regular a rotação do motor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa um sensor TPS com multímetro?",
+            "options": [
+                "Medindo a resistência entre os terminais",
+                "Verificando a voltagem de saída enquanto move a borboleta",
+                "Testando a continuidade com o motor desligado",
+                "Medindo a corrente que passa pelo sensor"
+            ],
+            "correct": 1
+        }
+    ]
+}

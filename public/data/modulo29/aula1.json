@@ -1,0 +1,86 @@
+{
+    "title": "Planejamento de Negócios",
+    "content": [
+        {
+            "type": "text",
+            "value": "O planejamento de negócios é fundamental para o sucesso de uma oficina, definindo estratégias, metas, e ações para construir um negócio sustentável."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Essenciais",
+            "text": "Análise de mercado, plano financeiro, estratégia de marketing, operações, e estrutura organizacional."
+        },
+        {
+            "type": "text",
+            "value": "Um plano de negócios completo deve incluir: análise SWOT, projeções financeiras, estratégia de diferenciação, e plano de implementação."
+        },
+        {
+            "type": "table",
+            "headers": ["Seção", "Conteúdo", "Importância"],
+            "rows": [
+                ["Sumário Executivo", "Visão geral do negócio", "Primeira impressão"],
+                ["Análise de Mercado", "Concorrência e oportunidades", "Posicionamento"],
+                ["Plano Financeiro", "Projeções e investimentos", "Viabilidade econômica"],
+                ["Estratégia", "Diferenciação e marketing", "Como competir"],
+                ["Operações", "Processos e recursos", "Como executar"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Análise SWOT",
+            "text": "Strengths (forças), Weaknesses (fraquezas), Opportunities (oportunidades), Threats (ameaças)."
+        },
+        {
+            "type": "text",
+            "value": "O planejamento deve ser realista, baseado em pesquisa de mercado, e atualizado regularmente conforme o negócio evolui."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Métricas de Sucesso",
+            "text": "Defina KPIs claros: faturamento, margem, número de clientes, satisfação, e crescimento."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Planejamento de Negócios"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a primeira seção de um plano de negócios?",
+            "options": [
+                "Análise de mercado",
+                "Sumário executivo",
+                "Plano financeiro",
+                "Estratégia de marketing"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa a letra 'O' na análise SWOT?",
+            "options": [
+                "Operations",
+                "Objectives",
+                "Opportunities",
+                "Outcomes"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que definir KPIs claros é importante?",
+            "options": [
+                "Apenas burocracia",
+                "Permite medir progresso e sucesso do negócio",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

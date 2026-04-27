@@ -1,0 +1,87 @@
+{
+    "title": "Eletromagnetismo",
+    "content": [
+        {
+            "type": "text",
+            "value": "O eletromagnetismo descreve a interação entre eletricidade e magnetismo. Princípios fundamentais: 1) Corrente elétrica gera campo magnético (eletroímã). 2) Campo magnético variável induz corrente elétrica em um condutor (indução eletromagnética – Faraday). 3) A corrente induzida se opõe à variação que a gerou (Lei de Lenz)."
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Aplicações no carro",
+            "text": "Motor de arranque, alternador, bobinas de ignição, relés, solenoides, sensores indutivos (CKP, ABS passivo), sensores Hall, motores de passo, etc. O eletromagnetismo está em praticamente tudo."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Componente",
+                "Princípio",
+                "Como diagnosticar"
+            ],
+            "rows": [
+                [
+                    "Solenoide (partida, injeção)",
+                    "Eletroímã move um núcleo de ferro",
+                    "Medir resistência da bobina (0,5–5Ω). Sem acionamento: bobina aberta ou curto."
+                ],
+                [
+                    "Relé automotivo",
+                    "Eletroímã fecha contatos",
+                    "Resistência da bobina (85-86): 50–120Ω. Aplicar 12V e ouvir clique."
+                ],
+                [
+                    "Bobina de ignição",
+                    "Indução mútua: 12V → 20–40kV",
+                    "Resistência primário: 0,4–2Ω; secundário: 6k–15kΩ."
+                ],
+                [
+                    "Alternador",
+                    "Rotor (eletroímã) induz corrente no estator",
+                    "Tensão de carga: 13,8–14,4V. Ripple CA < 50mV."
+                ],
+                [
+                    "Sensor indutivo (CKP, ABS passivo)",
+                    "Variação do campo magnético → tensão AC",
+                    "Resistência: 200–2000Ω. Sinal senoidal no osciloscópio."
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Flyback: quando a corrente em uma bobina é interrompida, a tensão pode atingir centenas de volts. Para proteger transistores, usam-se diodos flyback (também chamados de diodos de roda livre)."
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente do carro utiliza o fenômeno do 'flyback' (colapso do campo magnético) para gerar alta tensão?",
+            "options": [
+                "Alternador",
+                "Bobina de ignição",
+                "Sensor de temperatura",
+                "Fusível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Ao medir a resistência da bobina de um relé automotivo, qual valor é considerado normal?",
+            "options": [
+                "0,5-5Ω",
+                "50-120Ω",
+                "200-2000Ω",
+                "6k-15kΩ"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o princípio fundamental que permite que um sensor indutivo (como CKP) gere sinal elétrico?",
+            "options": [
+                "Resistência térmica",
+                "Indução eletromagnética",
+                "Efeito fotoelétrico",
+                "Capacitância variável"
+            ],
+            "correct": 1
+        }
+    ]
+}

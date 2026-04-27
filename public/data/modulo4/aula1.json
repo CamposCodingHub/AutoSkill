@@ -1,0 +1,85 @@
+{
+    "title": "Arquitetura da Rede Elétrica",
+    "content": [
+        {
+            "type": "text",
+            "value": "A arquitetura da rede elétrica automotiva é projetada para distribuir energia de forma segura e eficiente para todos os sistemas do veículo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Sistemas Principais",
+            "text": "Positivo permanente, positivo chaveado, massa, e distribuição por fusíveis e relés."
+        },
+        {
+            "type": "text",
+            "value": "O sistema usa bateria como fonte principal, alternador para recarga, e múltiplos pontos de distribuição para diferentes cargas elétricas."
+        },
+        {
+            "type": "table",
+            "headers": ["Circuito", "Função", "Proteção"],
+            "rows": [
+                ["Positivo Permanente", "Sistemas sempre ativos", "Fusível principal"],
+                ["Positivo Chaveado", "Sistemas com ignição", "Chave de ignição"],
+                ["Massa", "Retorno para bateria", "Múltiplos pontos"],
+                ["Distribuição", "Alimentação de cargas", "Fusíveis individuais"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importância do Aterramento",
+            "text": "Mau aterramento causa problemas intermitentes, falhas eletrônicas, e danos a componentes."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos usam CAN bus para comunicação, reduzindo fios e permitindo diagnóstico integrado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Evolução dos Sistemas",
+            "text": "De sistemas simples com poucos fios para redes complexas com múltiplos módulos e comunicação digital."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Rede Elétrica"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual circuito alimenta sistemas sempre ativos?",
+            "options": [
+                "Positivo chaveado",
+                "Positivo permanente",
+                "Massa",
+                "Distribuição"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do positivo chaveado em um veículo?",
+            "options": [
+                "Alimentar sistemas de segurança sempre ativos",
+                "Alimentar acessórios que só funcionam com ignição ligada",
+                "Fornecer terra para componentes",
+                "Proteger contra sobretensão"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se o positivo permanente for interrompido?",
+            "options": [
+                "O veículo não liga",
+                "A memória da ECU é perdida",
+                "Apenas o rádio para de funcionar",
+                "Nenhum efeito perceptível"
+            ],
+            "correct": 1
+        }
+    ]
+}

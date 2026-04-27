@@ -1,0 +1,86 @@
+{
+    "title": "Projetos Práticos - Avançados",
+    "content": [
+        {
+            "type": "text",
+            "value": "Projetos práticos avançados representam o ápice do aprendizado em eletricidade automotiva, integrando conceitos complexos e tecnologias de ponta."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Projetos Recomendados",
+            "text": "ECU programável, sistema híbrido simulado, análise de sinais avançada, e integração de múltiplos sistemas."
+        },
+        {
+            "type": "text",
+            "value": "Projetos avançados devem simular sistemas reais de veículos modernos, incluindo comunicação CAN, controle de motores, e estratégias de gerenciamento."
+        },
+        {
+            "type": "table",
+            "headers": ["Projeto", "Objetivo", "Habilidades de Nível Superior"],
+            "rows": [
+                ["ECU Completa", "Gerenciar motor completo", "Integração total de sistemas"],
+                ["Sistema Híbrido", "Simular HEV", "Múltiplas fontes energia"],
+                ["Análise Sinais", "Processamento DSP", "Filtros digitais, FFT"],
+                ["Rede CAN", "Comunicação veicular", "Protocolos, diagnóstico"],
+                ["Controle Motor", "Controle vetorial", "Algoritmos complexos"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Complexidade Máxima",
+            "text": "Projetos avançados exigem conhecimento profundo de eletrônica, programação, e sistemas automotivos."
+        },
+        {
+            "type": "text",
+            "value": "Use plataformas poderosas como FPGA, DSPs, ou computadores embarcados para processamento em tempo real."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Inovação e Pesquisa",
+            "text": "Projetos avançados podem levar a inovações. Documente e compartilhe descobertas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Projetos Avançados"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia é ideal para processamento de sinais em tempo real?",
+            "options": [
+                "Microcontrolador básico",
+                "Arduino",
+                "DSP ou FPGA",
+                "Placa de prototipagem"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual habilidade é desenvolvida no projeto de ECU completa?",
+            "options": [
+                "Apenas soldagem",
+                "Integração total de sistemas",
+                "Apenas medição",
+                "Apenas lógica simples"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que projetos avançados podem levar a inovações?",
+            "options": [
+                "Apenas teoria",
+                "Exploram conceitos complexos e podem gerar descobertas",
+                "Não levam a nada",
+                "Apenas burocracia"
+            ],
+            "correct": 1
+        }
+    ]
+}

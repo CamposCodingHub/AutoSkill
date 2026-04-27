@@ -1,0 +1,86 @@
+{
+    "title": "Módulo HVAC e Clima Automático",
+    "content": [
+        {
+            "type": "text",
+            "value": "O módulo HVAC (Heating, Ventilation, Air Conditioning) é o cérebro do sistema de climatização, processando dados de múltiplos sensores e controlando todos os atuadores para manter o conforto desejado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Integração",
+            "text": "Moderno HVAC integra com rede CAN, motor, transmissão e outros sistemas para otimizar desempenho e eficiência."
+        },
+        {
+            "type": "text",
+            "value": "O módulo recebe entradas de temperatura interna/externa, umidade, posição do sol, velocidade do veículo e temperatura do motor, calculando a saída ótima para compressor, ventiladores e distribuição de ar."
+        },
+        {
+            "type": "table",
+            "headers": ["Entrada", "Fonte", "Função no Controle"],
+            "rows": [
+                ["Temperatura Cabine", "Sensor NTC", "Controle principal de conforto"],
+                ["Temperatura Externa", "Sensor NTC", "Compensação externa"],
+                ["Sensor Solar", "Fotodiodo", "Ajuste por radiação solar"],
+                ["Velocidade Veículo", "CAN/ABS", "Controle de fluxo natural"],
+                ["RPM Motor", "CAN/ECU", "Controle de compressor variável"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Modos de Operação",
+            "text": "Manual vs automático. Em automático, o módulo controla tudo. Em manual, o usuário define temperatura e velocidade manualmente."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem algoritmos de aprendizado, adaptando-se aos padrões de uso do motorista e condições climáticas locais."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Self-Test",
+            "text": "Ao ligar, o módulo executa autodiagnóstico verificando todos os sensores e atuadores. Códigos de falha são armazenados para diagnóstico."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Controle HVAC"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que o módulo HVAC usa para compensar radiação solar?",
+            "options": [
+                "Sensor de pressão",
+                "Sensor solar",
+                "Sensor de umidade",
+                "Sensor de velocidade"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a diferença principal entre modo manual e automático do HVAC?",
+            "options": [
+                "Modo manual usa mais combustível",
+                "Em automático o módulo controla tudo, em manual o usuário define",
+                "Modo automático só funciona no inverno",
+                "Não há diferença entre os modos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que o módulo HVAC faz ao ligar o veículo?",
+            "options": [
+                "Liga o compressor imediatamente",
+                "Executa autodiagnóstico verificando sensores e atuadores",
+                "Desliga todos os sistemas",
+                "Ajusta apenas a temperatura"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Sistemas Start-Stop e Recuperação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas start-stop e recuperação de energia representam tecnologias modernas para eficiência energética, desligando o motor em paradas e recuperando energia na frenagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologias Combinadas",
+            "text": "Start-stop desliga motor em paradas. Recuperação converte energia cinética em elétrica durante frenagem."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas start-stop exigem baterias especiais (AGM/EFB), motores de partida reforçados, e estratégias de controle avançadas."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Requisitos"],
+            "rows": [
+                ["Bateria AGM/EFB", "Ciclagem profunda", "Alta durabilidade"],
+                ["Motor Partida", "Partidas frequentes", "Alta resistência"],
+                ["ECU Start-Stop", "Controle inteligente", "Sensores específicos"],
+                ["Gerenciamento", "Otimização", "Comunicação CAN"],
+                ["Recuperação", "Conversão energia", "Motor/gerador"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Complexidade aumentada, necessidade de ferramentas especiais, e treinamento específico."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de recuperação usam o motor como gerador durante frenagem, armazenando energia na bateria ou em sistemas híbridos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Benefícios",
+            "text": "Redução de consumo 5-15%, menor emissão, e maior vida útil do motor em tráfego urbano."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Start-Stop"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de bateria é exigido para sistemas start-stop?",
+            "options": [
+                "Convencional",
+                "AGM ou EFB",
+                "Lítio",
+                "Gel"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a redução típica de consumo com sistemas start-stop?",
+            "options": [
+                "1-2%",
+                "5-15%",
+                "20-30%",
+                "40-50%"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o sistema de recuperação funciona?",
+            "options": [
+                "Apenas desliga o motor",
+                "Converte energia cinética em elétrica durante frenagem",
+                "Apenas aumenta a potência",
+                "Não faz nada"
+            ],
+            "correct": 1
+        }
+    ]
+}

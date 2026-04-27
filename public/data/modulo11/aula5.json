@@ -1,0 +1,85 @@
+{
+    "title": "Atuadores de Porta de Ar",
+    "content": [
+        {
+            "type": "text",
+            "value": "Atuadores de porta de ar controlam a distribuição de ar no sistema HVAC, direcionando o fluxo para diferentes saídas (painel, piso, defrost, etc.) através de servomotores elétricos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Atuadores",
+            "text": "Servomotores de 5 fios, motores de passo, e atuadores de vácuo. Cada um com método de controle diferente."
+        },
+        {
+            "type": "text",
+            "value": "Servomotores modernos usam 5 fios: alimentação, terra, sinal de posição, e dois fios de controle. O módulo HVAC monitora a posição real através do potenciômetro integrado."
+        },
+        {
+            "type": "table",
+            "headers": ["Atuador", "Fios", "Controle", "Aplicação"],
+            "rows": [
+                ["Servomotor 5 fios", "5 fios", "Feedback de posição", "Moderno, preciso"],
+                ["Motor de passo", "4-6 fios", "Controle por passos", "Sistemas mais antigos"],
+                ["Vácuo", "1 mangueira", "Vácuo/pressão", "Sistemas básicos"],
+                ["Solenóide", "2 fios", "On/Off", "Portas simples"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Calibração",
+            "text": "Após substituição, muitos sistemas requerem calibração para 'aprender' as posições mínimas e máximas."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns incluiem atuadores travados, ruídos mecânicos, leituras de posição incorretas e falha em mover para a posição solicitada."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use scanner para monitorar posição desejada vs real. Teste atuadores diretamente com alimentação controlada."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Atuadores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quantos fios um servomotor moderno de porta de ar tipicamente tem?",
+            "options": [
+                "2 fios",
+                "3 fios",
+                "5 fios",
+                "7 fios"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que o módulo HVAC monitora através do potenciômetro integrado no servomotor?",
+            "options": [
+                "A velocidade do motor",
+                "A posição real da porta de ar",
+                "A temperatura do ar",
+                "A pressão do sistema"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que muitos sistemas requerem calibração após substituição de atuadores?",
+            "options": [
+                "Para 'aprender' as posições mínimas e máximas",
+                "Para aumentar a velocidade do motor",
+                "Para ajustar a temperatura do ar",
+                "Para limpar os códigos de falha"
+            ],
+            "correct": 0
+        }
+    ]
+}

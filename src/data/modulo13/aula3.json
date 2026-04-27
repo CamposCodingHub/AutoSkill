@@ -1,0 +1,86 @@
+{
+    "title": "Bluetooth e Conectividade",
+    "content": [
+        {
+            "type": "text",
+            "value": "Bluetooth veicular permite conectividade sem fio para chamadas mãos-livres, streaming de áudio, contatos e mensagens. Evoluindo de basic hands-free para integração completa com smartphones."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Perfis Bluetooth",
+            "text": "HFP (chamadas), A2DP (áudio), PBAP (contatos), MAP (mensagens), AVRCP (controle remoto)."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos suportam múltiplos dispositivos conectados simultaneamente, com prioridade para chamadas sobre streaming de áudio."
+        },
+        {
+            "type": "table",
+            "headers": ["Perfil", "Função", "Versão Típica"],
+            "rows": [
+                ["HFP", "Hands-Free Profile", "1.6-1.7"],
+                ["A2DP", "Advanced Audio Distribution", "1.2-1.3"],
+                ["PBAP", "Phone Book Access", "1.2"],
+                ["MAP", "Message Access Profile", "1.3"],
+                ["AVRCP", "Audio/Video Remote Control", "1.6"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Compatibilidade",
+            "text": "Nem todos os smartphones são compatíveis com todos os perfis. Verifique compatibilidade antes da instalação."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns inclui: interferência de WiFi, limitação de alcance (~10m), e problemas de emparelhamento em dispositivos mais antigos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste emparelhamento com diferentes dispositivos. Verifique atualizações de firmware do módulo Bluetooth."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Conectividade"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual perfil Bluetooth é usado para streaming de áudio de alta qualidade?",
+            "options": [
+                "HFP",
+                "A2DP",
+                "PBAP",
+                "MAP"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o alcance típico do Bluetooth em veículos?",
+            "options": [
+                "1-2 metros",
+                "~10 metros",
+                "50 metros",
+                "100 metros"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual perfil Bluetooth é usado para acessar contatos do telefone?",
+            "options": [
+                "HFP",
+                "A2DP",
+                "PBAP",
+                "AVRCP"
+            ],
+            "correct": 2
+        }
+    ]
+}

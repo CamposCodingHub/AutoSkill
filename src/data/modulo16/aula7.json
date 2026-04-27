@@ -1,0 +1,90 @@
+{
+    "title": "Diagnóstico Avançado - Metodologia",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico avançado com osciloscópio requer metodologia sistemática, conhecimento dos padrões normais, e capacidade de correlacionar sintomas com anomalias nos sinais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "1. Coletar sintomas 2. Identificar sinais relevantes 3. Capturar formas de onda 4. Analisar anomalias 5. Confirmar diagnóstico."
+        },
+        {
+            "type": "text",
+            "value": "Use banco de dados de formas de onda normais como referência. Compare sinais do veículo em teste com padrões conhecidos para identificar desvios."
+        },
+        {
+            "type": "table",
+            "headers": ["Problema", "Sinal a Analisar", "Anomalia Característica"],
+            "rows": [
+                ["Falta de cilindro", "Sinal CKP/ignição", "Pico baixo ou ausente"],
+                ["Injeção instável", "Sinal injetor", "Forma distorcida"],
+                ["Comunicação CAN", "CAN-H/L", "Ruído ou reflexões"],
+                ["Sensor MAP", "Sinal MAP", "Instável ou ruidoso"],
+                ["Alternador", "Tensão ripple", "Excesso de ondulação"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Correlação Cruzada",
+            "text": "Use múltiplos canais para relacionar sinais diferentes. Ex: sincronizar CKP com sinais de injetor."
+        },
+        {
+            "type": "text",
+            "value": "Documente todas as capturas com configurações, timestamps e notas. Use histórico para identificar problemas recorrentes e tendências."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Complementares",
+            "text": "Combine osciloscópio com scanner, multímetro e ferramentas mecânicas para diagnóstico completo e preciso."
+        },
+        {
+            "type": "text",
+            "value": "O diagnóstico moderno integra conhecimento eletrônico, mecânico e de software. Domine múltiplas disciplinas para resolver problemas complexos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Metodologia de Diagnóstico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo na metodologia de diagnóstico avançado?",
+            "options": [
+                "Capturar sinais aleatórios",
+                "Coletar sintomas do cliente",
+                "Conectar osciloscópio",
+                "Trocar componentes suspeitos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar múltiplos canais no osciloscópio?",
+            "options": [
+                "Para economizar bateria",
+                "Para relacionar diferentes sinais entre si",
+                "Para aumentar a voltagem",
+                "Para reduzir o tamanho do arquivo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual anomalia característica indica falta de cilindro?",
+            "options": [
+                "Sinal CKP com pico baixo ou ausente",
+                "Sinal MAP muito alto",
+                "Sinal CAN perfeito",
+                "Tensão ripple normal"
+            ],
+            "correct": 0
+        }
+    ]
+}

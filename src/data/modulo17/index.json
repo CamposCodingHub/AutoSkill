@@ -1,0 +1,43 @@
+{
+    "id": 17,
+    "title": "Programação, Codificação e Calibração",
+    "icon": "💻",
+    "description": "Flash de ECU, codificação de módulos, calibração de sensores, chaves imobilizadoras, diagnóstico avançado.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Flash de ECU",
+            "slug": "flash-ecu"
+        },
+        {
+            "id": 2,
+            "title": "Flash de ECU - Fundamentos",
+            "slug": "fundamentos-flash"
+        },
+        {
+            "id": 3,
+            "title": "Ferramentas de Programação",
+            "slug": "ferramentas-programacao"
+        },
+        {
+            "id": 4,
+            "title": "Codificação de Módulos",
+            "slug": "codificacao-modulos"
+        },
+        {
+            "id": 5,
+            "title": "Calibração de Sensores",
+            "slug": "calibracao-sensores"
+        },
+        {
+            "id": 6,
+            "title": "Chaves Imobilizadoras",
+            "slug": "chaves-imobilizadoras"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico Avançado e Programação",
+            "slug": "diagnostico-programacao"
+        }
+    ]
+}

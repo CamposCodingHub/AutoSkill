@@ -1,0 +1,86 @@
+{
+    "title": "Conectividade 5G e V2X",
+    "content": [
+        {
+            "type": "text",
+            "value": "Conectividade 5G e V2X (Vehicle-to-Everything) está criando uma nova era de comunicação veicular, permitindo comunicação em tempo real entre veículos e infraestrutura."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologias Principais",
+            "text": "5G NR, V2V (veículo-veículo), V2I (veículo-infraestrutura), V2P (veículo-pedestre), e V2X (veículo-tudo)."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas V2X permitem: segurança ativa, eficiência de tráfego, entretenimento conectado, e comunicação com infraestrutura inteligente."
+        },
+        {
+            "type": "table",
+            "headers": ["Tecnologia", "Aplicação", "Benefícios"],
+            "rows": [
+                ["5G NR", "Comunicação ultra-rápida", "Baixa latência, alta banda"],
+                ["V2V", "Comunicação entre veículos", "Segurança ativa, cooperativa"],
+                ["V2I", "Veículo-infraestrutura", "Semaforos inteligentes, rotas"],
+                ["V2P", "Veículo-pedestre", "Segurança pedestre, alertas"],
+                ["V2X", "Integração total", "Sistema completo conectado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Segurança cibernética, interoperabilidade, cobertura em áreas rurais, e custo de infraestrutura."
+        },
+        {
+            "type": "text",
+            "value": "O futuro inclui: comunicação direta com nuvem, atualizações over-the-air, e integração com smart cities."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Especialização em conectividade, desenvolvimento de V2X, e integração com sistemas inteligentes."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Conectividade 5G e V2X"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia permite comunicação entre veículos?",
+            "options": [
+                "V2I",
+                "V2P",
+                "V2V",
+                "5G NR"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia permite comunicação veículo-infraestrutura?",
+            "options": [
+                "V2I",
+                "V2P",
+                "V2V",
+                "V2X"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a segurança cibernética é importante em V2X?",
+            "options": [
+                "Apenas burocracia",
+                "Sistemas conectados são vulneráveis a ataques e precisam proteção",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

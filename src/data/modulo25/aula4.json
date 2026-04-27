@@ -1,0 +1,85 @@
+{
+    "title": "Preparação para Mercado",
+    "content": [
+        {
+            "type": "text",
+            "value": "A preparação para o mercado de trabalho é crucial para transformar conhecimento técnico em oportunidades profissionais, destacando-se da concorrência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Estratégias de Mercado",
+            "text": "Networking, currículo profissional, LinkedIn, e presença digital especializada."
+        },
+        {
+            "type": "text",
+            "value": "O mercado de eletricidade automotiva exige profissionais com conhecimento técnico, habilidades práticas, e capacidade de adaptação às novas tecnologias."
+        },
+        {
+            "type": "table",
+            "headers": ["Estratégia", "Ações", "Resultados"],
+            "rows": [
+                ["Networking", "Eventos, associações", "Contatos profissionais"],
+                ["Currículo", "Portfólio integrado", "Destaque técnico"],
+                ["Digital", "LinkedIn, especializado", "Visibilidade online"],
+                ["Especialização", "Nichos específicos", "Maior valor"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diferenciação",
+            "text": "Destaque-se em áreas específicas: híbridos, diagnóstico avançado, ou sistemas premium."
+        },
+        {
+            "type": "text",
+            "value": "Mantenha-se atualizado sobre tendências: veículos elétricos, conectividade, e novas tecnologias de diagnóstico."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Desenvolvimento Contínuo",
+            "text": "Invista em aprendizado constante. O mercado evolui rapidamente."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Preparação de Mercado"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual estratégia mais eficaz para destacar no mercado?",
+            "options": [
+                "Apenas certificações",
+                "Especialização em nichos específicos",
+                "Cursos genéricos",
+                "Esperar oportunidades"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual plataforma é importante para visibilidade profissional?",
+            "options": [
+                "Apenas Facebook",
+                "LinkedIn com perfil especializado",
+                "Apenas Instagram",
+                "Nenhuma plataforma"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que investir em aprendizado constante?",
+            "options": [
+                "Apenas burocracia",
+                "O mercado evolui rapidamente e exige atualização",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

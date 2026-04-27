@@ -1,0 +1,85 @@
+{
+    "title": "Simulações de Casos Reais",
+    "content": [
+        {
+            "type": "text",
+            "value": "Simulações de casos reais são fundamentais para preparar o profissional para situações complexas e intermitentes encontradas no dia a dia."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Simulações",
+            "text": "Problemas intermitentes, falhas térmicas, múltiplos sistemas afetados, e situações de emergência."
+        },
+        {
+            "type": "text",
+            "value": "Simulações devem reproduzir condições reais: temperatura, vibração, umidade, e pressão atmosférica."
+        },
+        {
+            "type": "table",
+            "headers": ["Caso Simulado", "Objetivo", "Habilidades Testadas"],
+            "rows": [
+                ["Falha intermitente CAN", "Diagnóstico de rede", "Análise de sinais"],
+                ["Problema térmico ECU", "Diagnóstico térmico", "Uso de termovisão"],
+                ["Múltiplos sistemas", "Diagnóstico integrado", "Sistêmica"],
+                ["Emergência elétrica", "Resposta rápida", "Procedimentos de segurança"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Realismo Essencial",
+            "text": "Use veículos reais ou simuladores avançados. Crie condições desafiadoras realistas."
+        },
+        {
+            "type": "text",
+            "value": "Avalie tempo de diagnóstico, precisão da solução, segurança, e documentação do processo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Feedback Detalhado",
+            "text": "Forneça feedback específico sobre cada etapa. Identifique pontos fortes e áreas de melhoria."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Simulações"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o objetivo principal de simulações?",
+            "options": [
+                "Testar apenas conhecimento teórico",
+                "Preparar para situações reais e intermitentes",
+                "Avaliar velocidade de trabalho",
+                "Testar apenas ferramentas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual condição deve ser reproduzida em simulações?",
+            "options": [
+                "Apenas temperatura ambiente",
+                "Temperatura, vibração, umidade e pressão atmosférica",
+                "Apenas luz",
+                "Nenhuma condição"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que fornecer feedback detalhado após simulações?",
+            "options": [
+                "Apenas burocracia",
+                "Identificar pontos fortes e áreas de melhoria",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

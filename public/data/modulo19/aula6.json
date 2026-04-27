@@ -1,0 +1,86 @@
+{
+    "title": "Precificação e Orçamentação",
+    "content": [
+        {
+            "type": "text",
+            "value": "A precificação correta dos serviços é fundamental para sustentabilidade do negócio. Deve cobrir custos, gerar margem adequada, e permanecer competitiva no mercado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes do Preço",
+            "text": "Custo direto + mão de obra + overhead + margem. Cada componente deve ser calculado precisamente."
+        },
+        {
+            "type": "text",
+            "value": "Custo da mão de obra inclui: salário técnico, encargos sociais, treinamento, ferramentas, e tempo não produtivo. Taxa horária típica: R$80-150."
+        },
+        {
+            "type": "table",
+            "headers": ["Serviço", "Custo Peças", "Mão Obra", "Markup", "Preço Final"],
+            "rows": [
+                ["Troca Óleo", "R$50", "R$40", "50%", "R$135"],
+                ["Troca Pastilha", "R$120", "R$80", "60%", "R$320"],
+                ["Diagnóstico Elétrico", "R$0", "R$150", "100%", "R$300"],
+                ["Reparo Injetor", "R$400", "R$200", "70%", "R$1020"],
+                ["Instalar Som", "R$800", "R$120", "40%", "R$1288"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Overhead",
+            "text": "Inclui aluguel, contas, marketing, seguro. Adicione 15-25% sobre custo direto para cobrir overhead."
+        },
+        {
+            "type": "text",
+            "value": "Use software de orçamentação para padronizar processos, manter histórico, e calcular preços consistentemente."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Análise de Mercado",
+            "text": "Pesque preços da concorrência regularmente. Ajuste estratégias conforme posicionamento desejado."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Precificação"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual percentual típico de overhead deve ser adicionado?",
+            "options": [
+                "5-10%",
+                "15-25%",
+                "30-40%",
+                "50-60%"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a taxa horária típica de mão de obra técnica?",
+            "options": [
+                "R$20-40",
+                "R$80-150",
+                "R$200-300",
+                "R$500-800"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que compõe o custo da mão de obra?",
+            "options": [
+                "Apenas salário",
+                "Salário, encargos, treinamento, ferramentas e tempo não produtivo",
+                "Apenas ferramentas",
+                "Apenas tempo de trabalho"
+            ],
+            "correct": 1
+        }
+    ]
+}

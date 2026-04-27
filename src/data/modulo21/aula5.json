@@ -1,0 +1,86 @@
+{
+    "title": "Sistema de Carga Completo",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sistema de carga completo envolve bateria, alternador, regulador, e todos os componentes que garantem energia elétrica para o veículo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Integração dos Componentes",
+            "text": "Bateria armazena energia, alternador gera, regulador controla, e distribuição entrega para todos os sistemas."
+        },
+        {
+            "type": "text",
+            "value": "O sistema deve manter tensão estável entre 13.8-14.8V em todas as condições de operação, protegendo componentes e otimizando desempenho."
+        },
+        {
+            "type": "table",
+            "headers": ["Condição", "Tensão Esperada", "Corrente Alternador"],
+            "rows": [
+                ["Marcha lenta", "13.8-14.2V", "10-30A"],
+                ["Carga leve", "14.0-14.4V", "20-50A"],
+                ["Carga média", "14.2-14.6V", "40-80A"],
+                ["Carga pesada", "14.4-14.8V", "60-150A"],
+                ["Alta RPM", "13.8-14.0V", "Máxima capacidade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico Integrado",
+            "text": "Teste todo o sistema como um todo. Problemas em um componente afetam todo o sistema."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem gerenciamento inteligente de carga, comunicação CAN, e estratégias adaptativas para diferentes condições."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Eficiência do Sistema",
+            "text": "Eficiência típica: 55-70% da energia mecânica convertida em elétrica. Perdas em calor e atrito."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Carga"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a tensão ideal em carga média do alternador?",
+            "options": [
+                "13.8-14.2V",
+                "14.0-14.4V",
+                "14.2-14.6V",
+                "14.4-14.8V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a eficiência típica de conversão do sistema de carga?",
+            "options": [
+                "20-30%",
+                "55-70%",
+                "85-95%",
+                "100%"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a corrente típica do alternador em marcha lenta?",
+            "options": [
+                "1-5A",
+                "10-30A",
+                "50-100A",
+                "150-200A"
+            ],
+            "correct": 1
+        }
+    ]
+}

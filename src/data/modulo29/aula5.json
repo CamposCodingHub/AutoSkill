@@ -1,0 +1,86 @@
+{
+    "title": "Estrutura Física e Equipamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A estrutura física e equipamentos são fundamentais para o sucesso de uma oficina, influenciando produtividade, segurança, e percepção dos clientes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Planejamento do Espaço",
+            "text": "Layout otimizado, áreas específicas, ventilação adequada, e organização de fluxo de trabalho."
+        },
+        {
+            "type": "text",
+            "value": "A estrutura ideal deve incluir: área de serviço, estoque, escritório, recepção, e área de espera para clientes."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Tamanho Mínimo", "Equipamentos Essenciais"],
+            "rows": [
+                ["Oficina Principal", "50m²", "Pontos elevados, ferramentas"],
+                ["Estoque", "20m²", "Prateleiras, controle"],
+                ["Escritório", "10m²", "Computador, impressora"],
+                ["Recepção", "15m²", "Sofá, balcão atendimento"],
+                ["Área Espera", "10m²", "Cadeiras, TV, café"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Equipamentos Essenciais",
+            "text": "Ferramentas básicas, equipamentos de diagnóstico, sistema de elevação, e segurança."
+        },
+        {
+            "type": "text",
+            "value": "Invista em equipamentos de qualidade: scanner, osciloscópio, ferramentas especiais, e sistema de gestão."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Layout Otimizado",
+            "text": "Planeje fluxo de trabalho: recepção → diagnóstico → serviço → entrega → pagamento."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Estrutura e Equipamentos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o tamanho mínimo recomendado para oficina principal?",
+            "options": [
+                "20m²",
+                "30m²",
+                "40m²",
+                "50m²"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Qual equipamento é essencial para diagnóstico?",
+            "options": [
+                "Apenas chave de fenda",
+                "Scanner automotivo",
+                "Apenas martelo",
+                "Apenas alicate"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o layout otimizado é importante?",
+            "options": [
+                "Apenas estética",
+                "Melhora fluxo de trabalho e produtividade",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

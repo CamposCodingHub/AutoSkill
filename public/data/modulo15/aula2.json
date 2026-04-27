@@ -1,0 +1,85 @@
+{
+    "title": "Baterias de Alta Tensão - Fundamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Baterias de tração em veículos híbridos e elétricos operam em alta tensão (200-800V) e armazenam energia para propulsão. Diferem fundamentalmente das baterias de 12V tradicionais."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança CRÍTICA",
+            "text": "Alta tensão pode ser letal. Use EPI completo, ferramentas isoladas, e siga procedimentos de segurança rigorosos."
+        },
+        {
+            "type": "text",
+            "value": "Químicas comuns incluem Li-ion (NMC, LFP), NiMH em híbridos mais antigos, e tecnologias emergentes como solid-state. Cada uma tem características específicas."
+        },
+        {
+            "type": "table",
+            "headers": ["Química", "Tensão Nominal", "Vida Útil", "Aplicação"],
+            "rows": [
+                ["Li-ion NMC", "3.6-3.7V célula", "8-10 anos", "BEV moderno"],
+                ["Li-ion LFP", "3.2-3.3V célula", "10-15 anos", "BEV seguro"],
+                ["NiMH", "1.2V célula", "5-8 anos", "HEV antigo"],
+                ["Solid-State", "3.6-4.0V célula", "15+ anos", "Futuro"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Capacidade vs Potência",
+            "text": "Capacidade (kWh) determina autonomia. Potência (kW) determina aceleração. Baterias precisam balancear ambos."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de gestão térmica são essenciais: refrigeração líquida para Li-ion de alta performance, ar para sistemas mais simples. Temperatura afeta vida útil e performance."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "BMS (Battery Management System)",
+            "text": "Monitora tensão, temperatura, corrente de cada célula. Protege contra sobrecarga, descarga profunda e desbalanceamento."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Baterias HV"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a tensão típica de um sistema de bateria em um BEV moderno?",
+            "options": [
+                "12-24V",
+                "48-72V",
+                "200-800V",
+                "1000-1500V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que veículos elétricos usam tensões tão altas (400-800V)?",
+            "options": [
+                "Para ser mais seguro",
+                "Para reduzir corrente e permitir cabos mais finos",
+                "Para aumentar o peso do veículo",
+                "Para usar baterias menores"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do BMS em veículos elétricos?",
+            "options": [
+                "Controlar apenas a velocidade",
+                "Gerenciar carga, descarga e segurança da bateria",
+                "Regular a temperatura do motor",
+                "Controlar o sistema de áudio"
+            ],
+            "correct": 1
+        }
+    ]
+}

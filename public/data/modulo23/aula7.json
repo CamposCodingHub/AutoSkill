@@ -1,0 +1,86 @@
+{
+    "title": "Metodologia de Diagnóstico Prático",
+    "content": [
+        {
+            "type": "text",
+            "value": "A metodologia de diagnóstico prático é fundamental para resolver problemas eficientemente, combinando conhecimento técnico com abordagem sistemática."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Etapas do Diagnóstico",
+            "text": "1. Coletar informações 2. Analisar sintomas 3. Formular hipóteses 4. Testar sistematicamente 5. Validar solução."
+        },
+        {
+            "type": "text",
+            "value": "Diagnóstico eficiente requer: escuta ativa ao cliente, observação cuidadosa, uso adequado de ferramentas, e documentação precisa."
+        },
+        {
+            "type": "table",
+            "headers": ["Etapa", "Ações", "Ferramentas"],
+            "rows": [
+                ["Coleta", "Entrevista, observação", "Scanner, multímetro"],
+                ["Análise", "Interpretação sintomas", "Experiência, manuais"],
+                ["Hipóteses", "Possíveis causas", "Conhecimento técnico"],
+                ["Testes", "Verificação sistemática", "Ferramentas específicas"],
+                ["Validação", "Confirmar solução", "Teste de road"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Erros Comuns",
+            "text": "Pular etapas, substituir sem diagnóstico, ignorar sintomas secundários, e não documentar processo."
+        },
+        {
+            "type": "text",
+            "value": "Use o princípio da navalha de Occam: a solução mais simples geralmente é a correta, mas não ignore problemas raros."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Melhoria Contínua",
+            "text": "Após cada diagnóstico, analise o processo. Identifique o que funcionou e o que pode ser melhorado."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Metodologia de Diagnóstico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o princípio fundamental do diagnóstico?",
+            "options": [
+                "Substituir componentes até resolver",
+                "Abordagem sistemática e metódica",
+                "Confiar apenas na intuição",
+                "Resetar todos os sistemas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o princípio da navalha de Occam?",
+            "options": [
+                "Substituir tudo",
+                "A solução mais simples geralmente é a correta",
+                "Ignorar problemas simples",
+                "Usar apenas ferramentas complexas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que analisar o processo após cada diagnóstico?",
+            "options": [
+                "Apenas burocracia",
+                "Identificar o que funcionou e o que pode ser melhorado",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

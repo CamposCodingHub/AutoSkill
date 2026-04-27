@@ -1,0 +1,85 @@
+{
+    "title": "Sistema de Partida",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sistema de partida é responsável por girar o motor para iniciar o ciclo de combustão, composto por bateria, motor de partida, solenoide e circuitos de controle."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Bateria (energia), motor de partida (torque), solenoide (engate), e chave de ignição (controle)."
+        },
+        {
+            "type": "text",
+            "value": "Motor de partida consome alta corrente (100-400A) durante curto período. Requer bateria em bom estado e conexões de baixa resistência."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "rows": [
+                ["Motor Partida", "Girar motor", "Clique sem girar, ruído"],
+                ["Solenoide", "Engatar pinhão", "Clique único, sem giro"],
+                ["Bateria", "Fornecer energia", "Giro lento, não gira"],
+                ["Chave Ignição", "Ativar sistema", "Sem resposta, intermitente"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste queda de tensão durante partida. Voltagem não deve cair abaixo 9.6V sob carga."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem start-stop, que exigem baterias especiais (AGM/EFB) e motores de partida reforçados."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Manutenção",
+            "text": "Verifique conexões, limpe terminais, e teste corrente de partida regularmente."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Partida"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a queda de tensão máxima aceitável durante partida?",
+            "options": [
+                "10.5V",
+                "9.6V",
+                "8.0V",
+                "7.2V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica uma queda de tensão abaixo de 9.6V durante a partida?",
+            "options": [
+                "Bateria em perfeitas condições",
+                "Bateria fraca ou conexões ruins",
+                "Alternador com defeito",
+                "Sistema start-stop funcionando"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal causa de queda de tensão excessiva durante a partida?",
+            "options": [
+                "Alternador sobrecarregado",
+                "Resistência alta no circuito de partida",
+                "Fusível queimado",
+                "Muitos acessórios ligados"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Diagnóstico de Sistemas de Iluminação",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas de iluminação requer abordagem sistemática, conhecimento das diferentes tecnologias e uso adequado de ferramentas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "1. Verificar alimentação 2. Testar interruptores 3. Inspecionar lâmpadas 4. Analisar circuitos."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns incluem: lâmpadas queimadas, mau contato em conectores, falha em módulos de controle, e problemas de aterramento."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "rows": [
+                ["Luz não acende", "Lâmpada queimada", "Teste continuidade"],
+                ["Luz fraca", "Mau contato", "Medir queda tensão"],
+                ["Piscando", "Módulo defeituoso", "Scanner diagnóstico"],
+                ["Ofuscando", "Regulagem errada", "Ajustar faróis"],
+                ["Cor errada", "Lâmpada inadequada", "Verificar especificação"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança no Diagnóstico",
+            "text": "Use óculos de proteção. Sistemas Xenon operam em alta tensão. Desconecte bateria antes de intervenções."
+        },
+        {
+            "type": "text",
+            "value": "Use scanner para ler códigos de falha em sistemas modernos. Verifique configurações e calibrações após reparos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Específicas",
+            "text": "Alinhador de faróis, testador de sistemas Xenon, scanner específico para iluminação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico de Iluminação"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no diagnóstico de luz que não acende?",
+            "options": [
+                "Testar módulo de controle",
+                "Verificar alimentação",
+                "Substituir lâmpada",
+                "Ajustar regulagem"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para diagnosticar problemas em sistemas LED?",
+            "options": [
+                "Alicate amperímetro",
+                "Osciloscópio",
+                "Scanner específico do fabricante",
+                "Testador de lâmpadas halógenas"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica código de falha em sistema de iluminação adaptativa?",
+            "options": [
+                "Lâmpada queimada",
+                "Problema no módulo de controle ou calibração",
+                "Fusível queimado",
+                "Alternador com defeito"
+            ],
+            "correct": 1
+        }
+    ]
+}

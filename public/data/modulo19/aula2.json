@@ -1,0 +1,86 @@
+{
+    "title": "Organização do Espaço Físico",
+    "content": [
+        {
+            "type": "text",
+            "value": "A organização eficiente do espaço físico da oficina é fundamental para produtividade, segurança e profissionalismo. Layout adequado otimiza fluxo de trabalho e reduz tempo perdido."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Zonas da Oficina",
+            "text": "Recepção, diagnóstico, reparos rápidos, reparos pesados, lavagem, e estoque. Cada zona com equipamentos específicos."
+        },
+        {
+            "type": "text",
+            "value": "O layout deve considerar fluxo lógico: entrada do veículo → diagnóstico → reparo → teste → saída. Minimize deslocamentos e cruzamento de fluxos."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Tamanho Mínimo", "Equipamentos Essenciais"],
+            "rows": [
+                ["Box Diagnóstico", "3x4m", "Scanner, computador, ferramentas básicas"],
+                ["Box Reparo Leve", "3x5m", "Ferramentas completas, iluminação"],
+                ["Box Reporo Pesado", "4x6m", "Ponte rolante, ferramentas pesadas"],
+                ["Área Lavagem", "3x3m", "Lavadora, aspirador, produtos"],
+                ["Estoque Peças", "2x3m", "Prateleiras, sistema controle"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Ventilação e Iluminação",
+            "text": "Ventilação adequada para gases e poeira. Iluminação mínima 500 lux em áreas de trabalho."
+        },
+        {
+            "type": "text",
+            "value": "Organização de ferramentas com sistema visual: painéis de ferramentas, caixas etiquetadas, e localização fixa para cada item."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ergonomia",
+            "text": "Bancos ajustáveis, cadeiras confortáveis, e posturas corretas reduzem fadiga e aumentam produtividade."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Layout de Oficina"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a iluminação mínima recomendada para áreas de trabalho?",
+            "options": [
+                "200 lux",
+                "300 lux",
+                "500 lux",
+                "1000 lux"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o fluxo lógico ideal para veículos na oficina?",
+            "options": [
+                "Saída → Reparo → Diagnóstico → Entrada",
+                "Entrada → Diagnóstico → Reparo → Teste → Saída",
+                "Reparo → Diagnóstico → Teste → Entrada",
+                "Não há fluxo definido"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a ergonomia é importante na oficina?",
+            "options": [
+                "Apenas estética",
+                "Reduz fadiga e aumenta produtividade",
+                "Aumenta o custo",
+                "Não é importante"
+            ],
+            "correct": 1
+        }
+    ]
+}

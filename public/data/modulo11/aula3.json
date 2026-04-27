@@ -1,0 +1,85 @@
+{
+    "title": "Sensores de Pressão do Refrigerante",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sensores de pressão monitoram o sistema A/C para proteção do compressor e controle eficiente. Incluem pressostatos (discretos) e transdutores (analógicos)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função Principal",
+            "text": "Proteger o compressor contra operação com pressões inadequadas e fornecer dados para controle do sistema."
+        },
+        {
+            "type": "text",
+            "value": "Pressostato de baixa pressão desliga o compressor se a pressão cair abaixo de ~20-25 PSI (falta de refrigerante). Pressostato de alta desliga acima ~250-300 PSI (superaquecimento)."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Tipo", "Faixa Típica", "Função"],
+            "rows": [
+                ["Pressostato Baixa", "Discreto ON/OFF", "20-25 PSI", "Proteção contra falta de gás"],
+                ["Pressostato Alta", "Discreto ON/OFF", "250-300 PSI", "Proteção contra excesso"],
+                ["Transdutor", "Analógico 0-5V", "0-500 PSI", "Controle preciso e diagnóstico"],
+                ["Sensor Trinary", "Três estágios", "Baixa/Média/Alta", "Controle de ventilador"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "Nunca pular pressostatos para testar - pode causar dano catastrófico ao compressor."
+        },
+        {
+            "type": "text",
+            "value": "Transdutores modernos enviam sinal analógico para o módulo HVAC, permitindo controle variável do compressor e ventiladores baseado na pressão real."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use manifold para verificar pressões reais e comparar com leituras dos sensores. Diferenças indicam sensor defeituoso."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Pressão"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a função principal do pressostato de baixa pressão?",
+            "options": [
+                "Controlar velocidade do ventilador",
+                "Proteger compressor contra falta de refrigerante",
+                "Ajustar temperatura da cabine",
+                "Medir umidade do ar"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Em que pressão o pressostato de alta geralmente desliga o compressor?",
+            "options": [
+                "50-100 PSI",
+                "100-150 PSI",
+                "250-300 PSI",
+                "400-500 PSI"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a diferença entre pressostato e transdutor de pressão?",
+            "options": [
+                "Pressostato é analógico, transdutor é digital",
+                "Pressostato é discreto ON/OFF, transdutor é analógico",
+                "Não há diferença, são iguais",
+                "Transdutor só funciona em alta pressão"
+            ],
+            "correct": 1
+        }
+    ]
+}

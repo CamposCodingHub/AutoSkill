@@ -1,0 +1,84 @@
+{
+    "title": "Sensor CKP (Virabrequim)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sensor CKP (Crankshaft Position) é um dos sensores mais críticos no motor, informando à ECU a posição e velocidade do virabrequim."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Indutivo (VR), Hall effect, e Magneto-resistivo. Cada um com características específicas para diferentes aplicações."
+        },
+        {
+            "type": "text",
+            "value": "O CKP é essencial para sincronização de injeção e ignição. Sem sinal do CKP, o motor não funciona."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Princípio", "Aplicação", "Sinal"],
+            "rows": [
+                ["Indutivo (VR)", "Relutância variável", "Motores mais antigos", "Sinal AC"],
+                ["Hall Effect", "Campo magnético", "Motores modernos", "Sinal digital"],
+                ["Magneto-resistivo", "Variação magnética", "Alta precisão", "Sinal digital"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste resistência da bobina (200-1000Ω). Verifique gap entre sensor e roda dentada. Use osciloscópio para analisar forma de onda."
+        },
+        {
+            "type": "text",
+            "value": "Sinais típicos: 2-8V AC (indutivo) ou 0-5V digital (Hall). Frequência aumenta com RPM do motor."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Falhas Comuns",
+            "text": "Bobina queimada, gap incorreto, sujeira, interferência eletromagnética, e problemas no chicote."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensor CKP"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o sinal típico de sensor CKP indutivo?",
+            "options": [
+                "0-5V DC",
+                "12V DC",
+                "2-8V AC",
+                "5-12V AC"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sensor CKP?",
+            "options": [
+                "Medir a temperatura do motor",
+                "Detectar a posição e velocidade do virabrequim",
+                "Controlar a injeção de combustível",
+                "Regular a pressão do óleo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa um sensor CKP com multímetro?",
+            "options": [
+                "Medindo a resistência da bobina",
+                "Verificando a tensão de saída com o motor girando",
+                "Testando a continuidade com o motor desligado",
+                "Medindo a capacitância do sensor"
+            ],
+            "correct": 0
+        }
+    ]
+}

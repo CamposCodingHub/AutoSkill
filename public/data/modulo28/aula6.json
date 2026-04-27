@@ -1,0 +1,86 @@
+{
+    "title": "Documentação Técnica Profissional",
+    "content": [
+        {
+            "type": "text",
+            "value": "A documentação técnica profissional é essencial para projetos integradores, permitindo comunicação clara, replicação, e manutenção dos sistemas desenvolvidos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes da Documentação",
+            "text": "Diagramas elétricos, código-fonte, manuais de operação, procedimentos de teste, e relatórios técnicos."
+        },
+        {
+            "type": "text",
+            "value": "Documentação profissional deve seguir padrões internacionais, ser clara e concisa, e incluir todas as informações necessárias para replicação."
+        },
+        {
+            "type": "table",
+            "headers": ["Documento", "Conteúdo", "Padrão"],
+            "rows": [
+                ["Diagrama Elétrico", "Esquema completo", "IEEE/IEC"],
+                ["Manual Operação", "Uso do sistema", "ISO 9001"],
+                ["Procedimentos", "Passo a passo", "ISO 13485"],
+                ["Relatório Técnico", "Análise completa", "ABNT"],
+                ["Lista Materiais", "BOM completo", "Padrão interno"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Qualidade da Documentação",
+            "text": "Use ferramentas profissionais, mantenha versões atualizadas, e inclua revisões e aprovações."
+        },
+        {
+            "type": "text",
+            "value": "Documentação deve ser versionada, com histórico de mudanças, e disponível para toda a equipe."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas de Documentação",
+            "text": "AutoCAD Electrical, Altium Designer, LaTeX, e sistemas de gestão de documentação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Documentação Técnica"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual padrão é comum para diagramas elétricos?",
+            "options": [
+                "ISO 9001",
+                "IEEE/IEC",
+                "ISO 13485",
+                "ABNT"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é usada para desenhar diagramas elétricos profissionais?",
+            "options": [
+                "Paint",
+                "AutoCAD Electrical",
+                "Bloco de notas",
+                "Excel"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que versionar documentação com histórico de mudanças?",
+            "options": [
+                "Apenas burocracia",
+                "Permite rastrear evolução e reverter versões se necessário",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

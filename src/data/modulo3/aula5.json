@@ -1,0 +1,85 @@
+{
+    "title": "Resistores e Potenciômetros",
+    "content": [
+        {
+            "type": "text",
+            "value": "Resistores e potenciômetros são componentes passivos fundamentais em circuitos automotivos, usados para limitar corrente, dividir tensão e controlar parâmetros."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Resistores",
+            "text": "Carvão, filme metálico, fio enrolado. Cada um com características de precisão e potência diferentes."
+        },
+        {
+            "type": "text",
+            "value": "Em automotivos, resistores controlam corrente em LEDs, limitam carga em sensores, e são usados em divisores de tensão para medições."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Precisão", "Potência", "Aplicação"],
+            "rows": [
+                ["Carvão", "±5%", "1/4-2W", "Circuitos gerais"],
+                ["Filme Metálico", "±1%", "1/8-1W", "Circuitos precisos"],
+                ["Fio Enrolado", "±5%", "5-50W", "Alta potência"],
+                ["SMD", "±1-5%", "1/16-1W", "ECUs, montagem"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Código de Cores",
+            "text": "Resistores usam código de cores para indicar valor. Aprenda o código para identificação rápida."
+        },
+        {
+            "type": "text",
+            "value": "Potenciômetros são resistores variáveis usados para ajuste: posição de borboleta, controle de brilho, e ajustes de calibração."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sensores Resistivos",
+            "text": "NTC e PTC são resistores que variam com temperatura. Essenciais em medição de temperatura automotiva."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Resistores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de resistor tem maior precisão?",
+            "options": [
+                "Carvão",
+                "Filme metálico",
+                "Fio enrolado",
+                "SMD"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função de um resistor em circuitos automotivos?",
+            "options": [
+                "Armazenar energia",
+                "Limitar corrente e dividir tensão",
+                "Amplificar sinais",
+                "Retificar corrente"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você identifica o valor de um resistor com código de cores?",
+            "options": [
+                "Pela cor do corpo do resistor",
+                "Pelas faixas coloridas no corpo",
+                "Pelo tamanho físico do resistor",
+                "Pela potência nominal impressa"
+            ],
+            "correct": 1
+        }
+    ]
+}

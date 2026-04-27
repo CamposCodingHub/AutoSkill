@@ -1,0 +1,85 @@
+{
+    "title": "Alternador e Sistema de Carga",
+    "content": [
+        {
+            "type": "text",
+            "value": "O alternador é o coração do sistema de carga, convertendo energia mecânica do motor em energia elétrica para recarregar bateria e alimentar sistemas elétricos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Rotor, estator, regulador de tensão, diodos retificadores, e polia com embreagem."
+        },
+        {
+            "type": "text",
+            "value": "Alternadores modernos fornecem 13.8-14.8V com corrente de 60-200A, dependendo da demanda elétrica do veículo."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "rows": [
+                ["Rotor", "Campo magnético", "Sem carga, luz bateria"],
+                ["Estator", "Geração AC", "Baixa saída, ruído"],
+                ["Regulador", "Controla tensão", "Sobrecarga/subcarga"],
+                ["Diodos", "Retificação AC→DC", "Ripple excessivo, carga fraca"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste do Alternador",
+            "text": "Teste tensão em marcha lenta (13.8-14.8V). Teste sob carga. Verifique ripple AC (<0.5V)."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem controle inteligente de carga, comunicação CAN, e estratégias de recarga otimizadas para diferentes tipos de bateria."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Manutenção",
+            "text": "Verifique correias, conexões, e limpeza regularmente. Teste anualmente para prevenção."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Alternador"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a tensão normal de operação do alternador?",
+            "options": [
+                "12.0-12.6V",
+                "13.8-14.8V",
+                "15.0-16.0V",
+                "10.5-11.5V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica uma tensão de alternador acima de 15V?",
+            "options": [
+                "Alternador funcionando perfeitamente",
+                "Regulador de tensão com defeito (sobrecarga)",
+                "Bateria muito fraca",
+                "Sistema start-stop ativo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do regulador de tensão no alternador?",
+            "options": [
+                "Controlar a rotação do alternador",
+                "Manter a tensão de saída constante",
+                "Proteger contra curtos-circuitos",
+                "Melhorar a eficiência energética"
+            ],
+            "correct": 1
+        }
+    ]
+}

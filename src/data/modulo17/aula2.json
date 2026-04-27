@@ -1,0 +1,85 @@
+{
+    "title": "Flash de ECU - Fundamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Flash de ECU é o processo de atualizar ou substituir o software/firmware da unidade de controle eletrônica para corrigir defeitos, melhorar desempenho ou adicionar funcionalidades."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Flash",
+            "text": "OEM updates (correções), performance tuning (otimização), custom calibration (aplicações específicas)."
+        },
+        {
+            "type": "text",
+            "value": "O processo envolve comunicação através de protocolos específicos (CAN, K-Line, J2534) e requer ferramentas especializadas e procedimentos de segurança rigorosos."
+        },
+        {
+            "type": "table",
+            "headers": ["Protocolo", "Aplicação", "Velocidade", "Segurança"],
+            "rows": [
+                ["CAN", "Moderno", "500kbps-1Mbps", "Criptografia"],
+                ["K-Line", "Antigo", "10.4kbps", "Segurança básica"],
+                ["J2534", "Universal", "Variável", "Padronizado"],
+                ["Bootloader", "Recuperação", "Lento", "Modo especial"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "RISCOS CRÍTICOS",
+            "text": "Interrupção pode 'brickar' a ECU. Sempre verifique voltagem da bateria (>12.6V) e use fonte estabilizada."
+        },
+        {
+            "type": "text",
+            "value": "Checksums garantem integridade do arquivo. Qualquer corrupção impedirá o flash ou causará mau funcionamento pós-flash."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Backup Essencial",
+            "text": "Sempre faça backup completo do software original antes de qualquer modificação. Guarde arquivo e checksum."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Processo Flash"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o requisito mínimo de voltagem da bateria para flash seguro?",
+            "options": [
+                "11.0V",
+                "12.0V",
+                "12.6V",
+                "13.8V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se o processo de flash for interrompido?",
+            "options": [
+                "A ECU reinicia normalmente",
+                "A ECU pode ficar inoperável ('brickada')",
+                "Apenas o arquivo é perdido",
+                "Nada acontece"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual protocolo é mais comum em veículos modernos para flash de ECU?",
+            "options": [
+                "K-Line",
+                "CAN",
+                "RS232",
+                "USB"
+            ],
+            "correct": 1
+        }
+    ]
+}

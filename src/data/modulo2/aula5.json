@@ -1,0 +1,86 @@
+{
+    "title": "Testador de Baterias e Sistema de Carga",
+    "content": [
+        {
+            "type": "text",
+            "value": "Testadores de bateria e sistema de carga são essenciais para diagnóstico completo do sistema elétrico, avaliando bateria, alternador e consumo parasitário."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Testadores",
+            "text": "Testador de carga (carbon pile), analisador eletrônico, e testador de condutância. Cada um com aplicações específicas."
+        },
+        {
+            "type": "text",
+            "value": "Analisadores eletrônicos modernos testam CCA, voltagem, resistência interna, e simulam carga real para avaliar performance da bateria."
+        },
+        {
+            "type": "table",
+            "headers": ["Teste", "Valores Normais", "Indica"],
+            "rows": [
+                ["Voltagem Repouso", "12.6V+ (100%)", "Estado de carga"],
+                ["CCA Test", ">80% especificação", "Capacidade partida"],
+                ["Resistência Interna", "<0.01Ω", "Saúde da bateria"],
+                ["Carga Alternador", "13.8-14.8V", "Sistema carregando"],
+                ["Ripple Alternador", "<0.5V AC", "Diodos bons"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimento de Teste",
+            "text": "Desligue cargas, espere 2 horas, limpe terminais, teste temperatura ambiente (25°C ideal)."
+        },
+        {
+            "type": "text",
+            "value": "Teste de carga parasitário mede consumo com veículo desligado. Valores normais: <50mA (moderno), <20mA (luxo)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico do Alternador",
+            "text": "Teste sob carga: voltagem deve manter 13.8-14.8V. Teste ripple: excesso indica diodos ruins."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Carga"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual voltagem ideal de bateria 100% carregada?",
+            "options": [
+                "11.8V",
+                "12.2V",
+                "12.6V",
+                "13.2V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica uma voltagem de 11.2V em uma bateria de carro?",
+            "options": [
+                "Bateria completamente carregada",
+                "Bateria com 50% de carga",
+                "Bateria descarregada ou com problema",
+                "Bateria em sobrecarga"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a voltagem normal de um alternador funcionando corretamente?",
+            "options": [
+                "11.8V - 12.2V",
+                "12.6V - 13.0V",
+                "13.8V - 14.4V",
+                "15.0V - 16.0V"
+            ],
+            "correct": 2
+        }
+    ]
+}

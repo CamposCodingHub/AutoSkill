@@ -1,0 +1,43 @@
+{
+    "id": 3,
+    "title": "Componentes Elétricos Fundamentais",
+    "icon": "🔧",
+    "description": "Fusíveis, relés, diodos, transistores, resistores, LEDs, conectores e chaves elétricas.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Fusíveis Automotivos",
+            "slug": "fusiveis-automotivos"
+        },
+        {
+            "id": 2,
+            "title": "Relés e Solenoides",
+            "slug": "reles-solenoides"
+        },
+        {
+            "id": 3,
+            "title": "Diodos e Retificadores",
+            "slug": "diodos-retificadores"
+        },
+        {
+            "id": 4,
+            "title": "Transistores e Circuitos Integrados",
+            "slug": "transistores-ci"
+        },
+        {
+            "id": 5,
+            "title": "Resistores e Potenciômetros",
+            "slug": "resistores-potenciometros"
+        },
+        {
+            "id": 6,
+            "title": "Conectores e Terminais",
+            "slug": "conectores-terminais"
+        },
+        {
+            "id": 7,
+            "title": "Chaves e Interruptores",
+            "slug": "chaves-interruptores"
+        }
+    ]
+}

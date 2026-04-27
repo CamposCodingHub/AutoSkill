@@ -1,0 +1,85 @@
+{
+    "title": "Sistema 24V",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas elétricos de 24V são padrão em veículos pesados como caminhões e ônibus, oferecendo vantagens sobre sistemas de 12V em termos de eficiência, potência e compatibilidade com componentes industriais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Vantagens do 24V",
+            "text": "Menor corrente para mesma potência, cabos mais finos, menor perda de energia, compatibilidade com equipamentos industriais."
+        },
+        {
+            "type": "text",
+            "value": "A configuração típica usa duas baterias de 12V conectadas em série para fornecer 24V. O alternador carrega o sistema a aproximadamente 28V para compensar perdas."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Especificação", "Função"],
+            "rows": [
+                ["Baterias", "2x12V em série", "Armazenamento de energia"],
+                ["Alternador", "24V/28V output", "Geração de energia"],
+                ["Distribuição", "Fusíveis e relés", "Proteção e controle"],
+                ["Conversores", "24V→12V", "Alimentação de acessórios 12V"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "24V pode causar arcos elétricos mais intensos. Use EPI adequado e desconecte bateria antes de intervenções."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem conversores DC-DC para alimentar acessórios de 12V, permitindo uso de componentes automotivos padrão em sistemas de 24V."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste voltagem em cada bateria individualmente. Verifique equilíbrio de carga e funcionamento do alternador."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Sistema 24V"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Como as baterias são configuradas para fornecer 24V?",
+            "options": [
+                "Em paralelo",
+                "Em série",
+                "Uma única bateria de 24V",
+                "Em triângulo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a voltagem de carga típica de um sistema de 24V?",
+            "options": [
+                "12V",
+                "24V",
+                "28V",
+                "36V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que sistemas de 24V usam cabos mais finos que sistemas de 12V?",
+            "options": [
+                "Porque são mais baratos",
+                "Menor corrente para mesma potência reduz perda",
+                "Porque são mais flexíveis",
+                "Porque o alternador é menor"
+            ],
+            "correct": 1
+        }
+    ]
+}

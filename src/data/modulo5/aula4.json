@@ -1,0 +1,86 @@
+{
+    "title": "Iluminação LED",
+    "content": [
+        {
+            "type": "text",
+            "value": "Iluminação LED representa o estado da arte em iluminação automotiva, oferecendo eficiência energética superior, vida útil extendida e design flexível."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Vantagens Principais",
+            "text": "100x mais vida útil, 80% menos consumo, resposta instantânea, design compacto, e controle preciso."
+        },
+        {
+            "type": "text",
+            "value": "LEDs automotivos operam com 1-3W por chip, mas produzem brilho equivalente a 15-25W halógenos. Requerem dissipadores térmicos."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "LED vs Halógena", "Impacto"],
+            "rows": [
+                ["Consumo", "80% menor", "Menor carga bateria"],
+                ["Vida Útil", "100x maior", "Menor manutenção"],
+                ["Temperatura Cor", "5000-6500K", "Luz branca pura"],
+                ["Tempo Resposta", "Instantâneo", "Sem delay"],
+                ["Design", "Flexível", "Formas criativas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Requerem dissipadores térmicos, drivers específicos, e proteção contra sobretensão."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem controle PWM para ajuste de brilho, comunicação CAN para diagnóstico, e adaptação automática."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tipos de LEDs Automotivos",
+            "text": "COB (Chip on Board), SMD (Surface Mount), e High-Power. Cada um com aplicações específicas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Iluminação LED"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a principal vantagem do LED sobre halógena?",
+            "options": [
+                "Maior potência",
+                "Menor consumo e vida útil",
+                "Cor mais amarelada",
+                "Menor custo inicial"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente controla o brilho individual dos LEDs em sistemas Matrix?",
+            "options": [
+                "Resistor variável",
+                "Módulo de controle LED",
+                "Alternador",
+                "Sensor de luz"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como os sistemas LED Matrix adaptam o feixe de luz?",
+            "options": [
+                "Movendo fisicamente o farol",
+                "Ajustando individualmente cada LED",
+                "Mudando a temperatura de cor",
+                "Variando a potência total"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Inversores e Eletrônica de Potência",
+    "content": [
+        {
+            "type": "text",
+            "value": "Inversores são o coração dos sistemas de propulsão elétrica, convertendo DC das baterias em AC trifásico para controlar motores elétricos com precisão e eficiência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função Principal",
+            "text": "DC → AC trifásico + controle de velocidade/torque + regeneração de frenagem."
+        },
+        {
+            "type": "text",
+            "value": "Inversores modernos usam IGBTs ou MOSFETs de potência operando em alta frequência (10-20kHz) para criar formas de onda PWM precisas."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Tecnologia"],
+            "rows": [
+                ["IGBT/MOSFET", "Chaveamento de potência", "Silicon, SiC, GaN"],
+                ["Capacitores DC", "Filtragem de ripple", "Eletrólíticos, filme"],
+                ["Driver Gates", "Controle de switches", "Isolamento óptico"],
+                ["Microcontrolador", "Controle PWM", "DSP dedicado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Refrigeração Essencial",
+            "text": "Inversores geram calor significativo. Requerem refrigeração líquida para operação segura e eficiente."
+        },
+        {
+            "type": "text",
+            "value": "Tecnologias emergentes como SiC (Silicon Carbide) e GaN (Gallium Nitride) oferecem maior eficiência, menor tamanho e operação em temperaturas mais altas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Modulação PWM",
+            "text": "Controla amplitude e frequência da tensão AC para regular velocidade e torque do motor com precisão."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Inversores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia de semicondutor está substituindo IGBTs em inversores modernos?",
+            "options": [
+                "Silicone tradicional",
+                "SiC (Silicon Carbide)",
+                "Germanium",
+                "Silício amorfo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a frequência típica de operação dos inversores modernos?",
+            "options": [
+                "50-60Hz",
+                "10-20kHz",
+                "100-200kHz",
+                "1MHz"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que inversores requerem refrigeração líquida?",
+            "options": [
+                "Porque são muito grandes",
+                "Geram calor significativo durante operação",
+                "Porque operam em baixa voltagem",
+                "Porque são feitos de plástico"
+            ],
+            "correct": 1
+        }
+    ]
+}

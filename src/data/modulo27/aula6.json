@@ -1,0 +1,85 @@
+{
+    "title": "Conversões Elétricas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Conversões elétricas são um nicho especializado que transforma veículos a combustão em elétricos, exigindo conhecimentos avançados em eletrônica e integração de sistemas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Conversões",
+            "text": "Conversão completa (ICE→EV), híbridos (HEV), e conversões parciais (motor elétrico com transmissão)."
+        },
+        {
+            "type": "text",
+            "value": "Conversões elétricas envolvem: remoção do motor a combustão, instalação de motor elétrico, bateria HV, e sistemas de gerenciamento."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Componentes Principais", "Complexidade"],
+            "rows": [
+                ["Conversão Completa", "Motor EV, bateria HV, inversor", "Máxima"],
+                ["Híbrido", "Motor ICE + motor EV", "Alta"],
+                ["Motor Elétrico", "Motor EV, transmissão", "Média"],
+                ["Conversão Parcial", "Componentes específicos", "Baixa"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Integração de sistemas, gerenciamento térmico, homologação, e segurança em alta tensão."
+        },
+        {
+            "type": "text",
+            "value": "Profissionais especializados em conversões têm alta demanda e podem cobrar valores premium por serviços customizados."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Workshops especializados, consultoria em conversões, e desenvolvimento de kits de conversão."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Conversões Elétricas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de conversão é o mais complexo?",
+            "options": [
+                "Conversão completa",
+                "Híbrido",
+                "Motor elétrico",
+                "Conversão parcial"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é essencial em conversão completa?",
+            "options": [
+                "Apenas motor elétrico",
+                "Motor EV, bateria HV e inversor",
+                "Apenas bateria",
+                "Apenas transmissão"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a homologação é importante em conversões elétricas?",
+            "options": [
+                "Apenas burocracia",
+                "Garante conformidade legal e segurança do veículo",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

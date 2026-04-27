@@ -1,0 +1,89 @@
+{
+    "title": "Diagnóstico de ABS/ESP/SRS",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas de segurança requer ferramentas específicas, conhecimento de segurança e procedimentos sistemáticos. Cada sistema tem códigos de falha específicos e metodologias de teste."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança Primeiro",
+            "text": "Sistemas SRS podem disparar acidentalmente durante testes inadequados. Siga sempre procedimentos do fabricante."
+        },
+        {
+            "type": "text",
+            "value": "Use scanner automotivo com suporte ABS/ESP/SRS. Códigos genéricos OBD-II não fornecem detalhes suficientes para diagnóstico preciso."
+        },
+        {
+            "type": "table",
+            "headers": ["Sistema", "Códigos Típicos", "Teste Principal"],
+            "rows": [
+                ["ABS", "C0xxx - Circuito sensor", "Testar resistência do sensor"],
+                ["ESP", "C1xxx - Yaw/accelerômetro", "Calibrar sensores"],
+                ["SRS", "B2xxx - Squib/cinto", "Verificar continuidade"],
+                ["Comunicação", "U0xxx - CAN", "Testar barramento"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Sensores de Roda",
+            "text": "Meça resistência e sinal com osciloscópio. Sensor ruim causa falha em todo o sistema ABS/ESP."
+        },
+        {
+            "type": "text",
+            "value": "Procedimento geral: ler códigos, analisar dados em tempo real, testar componentes individuais, verificar alimentação e terra, limpar códigos e testar novamente."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Essenciais",
+            "text": "Scanner automotivo, multímetro, osciloscópio, ferramentas especiais para SRS, manuais do fabricante."
+        },
+        {
+            "type": "text",
+            "value": "Após reparos, execute procedimentos de calibração e aprendizado. Sistemas modernos requerem recalibração de sensores e zeramento de adaptativos."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual código indica problema em sensor de roda do ABS?",
+            "options": [
+                "B1234",
+                "C1234",
+                "P1234",
+                "U1234"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que códigos OBD-II genéricos não são suficientes para diagnóstico de ABS/ESP/SRS?",
+            "options": [
+                "Porque são muito caros",
+                "Não fornecem detalhes suficientes para diagnóstico preciso",
+                "Porque só funcionam em veículos antigos",
+                "Porque não existem códigos para esses sistemas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que deve ser feito após reparos em sistemas de segurança modernos?",
+            "options": [
+                "Apenas limpar os códigos",
+                "Executar procedimentos de calibração e aprendizado",
+                "Trocar a bateria do veículo",
+                "Reiniciar o veículo 3 vezes"
+            ],
+            "correct": 1
+        }
+    ]
+}

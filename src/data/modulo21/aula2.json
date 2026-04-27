@@ -1,0 +1,85 @@
+{
+    "title": "Solenóide de Engate",
+    "content": [
+        {
+            "type": "text",
+            "value": "A solenóide de engate é o componente que move o pinhão do motor de arranque para engatar com o volante do motor, permitindo a transmissão de força."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio de Funcionamento",
+            "text": "Eletroímã move o mecanismo de engate quando energizado, permitindo controle preciso do momento de engate."
+        },
+        {
+            "type": "text",
+            "value": "A solenóide opera em alta corrente (30-50A) durante o engate e depois mantém com baixa corrente (5-10A) para manter engatado."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "rows": [
+                ["Bobina", "Gera campo magnético", "Sem engate ou ruído"],
+                ["Mecanismo", "Move pinhão", "Engate intermitente"],
+                ["Contatos", "Transmite corrente", "Corrente excessiva ou nula"],
+                ["Mola", "Retorna posição", "Não desengata"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste resistência da bobina (2-5Ω). Verifique movimento do mecanismo e integridade dos contatos."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem engate progressivo para redução de ruído e desgaste, e proteção contra engate prematuro."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Integração",
+            "text": "Controlada pela ECU ou módulo de partida. Comunica status para diagnóstico de sistema."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Solenóide de Engate"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a corrente típica de manutenção da solenóide?",
+            "options": [
+                "5-10A",
+                "15-20A",
+                "30-50A",
+                "60-80A"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a resistência típica da bobina da solenóide?",
+            "options": [
+                "0.1-0.5Ω",
+                "2-5Ω",
+                "10-20Ω",
+                "50-100Ω"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função da solenóide de engate?",
+            "options": [
+                "Apenas gerar luz",
+                "Mover o pinhão para engatar com o volante do motor",
+                "Apenas emitir som",
+                "Apenas aquecer o motor"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Projetos Práticos - Básicos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Projetos práticos básicos são fundamentais para desenvolver habilidades fundamentais em eletricidade automotiva, aplicando teoria em situações reais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Projetos Recomendados",
+            "text": "Circuito de iluminação simples, teste de sensores, montagem de relé, e medição de consumo."
+        },
+        {
+            "type": "text",
+            "value": "Cada projeto deve incluir: objetivos, materiais necessários, procedimento passo a passo, medições esperadas, e análise de resultados."
+        },
+        {
+            "type": "table",
+            "headers": ["Projeto", "Objetivo", "Habilidades Desenvolvidas"],
+            "rows": [
+                ["Circuito LED", "Controle básico", "Lei de Ohm, soldagem"],
+                ["Teste Sensor NTC", "Medição temperatura", "Uso multímetro, análise"],
+                ["Relé Temporizado", "Controle tempo", "Lógica, temporização"],
+                ["Divisor Tensão", "Referência de tensão", "Cálculo, montagem"],
+                ["Medidor Corrente", "Análise consumo", "Uso alicate, medição"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimento Padrão",
+            "text": "1. Monte o circuito 2. Meça valores 3. Compare com esperado 4. Documente resultados 5. Analise desvios."
+        },
+        {
+            "type": "text",
+            "value": "Use componentes reais de veículos quando possível. Simule condições reais de temperatura e vibração."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Segurança nos Projetos",
+            "text": "Use fontes com proteção, limpe área, e siga procedimentos de segurança elétrica."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Projetos Básicos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo em qualquer projeto prático?",
+            "options": [
+                "Montar o circuito",
+                "Definir objetivos e materiais",
+                "Fazer medições",
+                "Documentar resultados"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual habilidade é desenvolvida no projeto de circuito LED?",
+            "options": [
+                "Apenas soldagem",
+                "Lei de Ohm e soldagem",
+                "Apenas medição",
+                "Apenas lógica"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que simular condições reais de temperatura e vibração?",
+            "options": [
+                "Apenas para gastar tempo",
+                "Para testar componentes em condições similares ao veículo",
+                "Não é necessário",
+                "Apenas estética"
+            ],
+            "correct": 1
+        }
+    ]
+}

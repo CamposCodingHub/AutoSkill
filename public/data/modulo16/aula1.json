@@ -1,0 +1,98 @@
+{
+  "id": 1,
+  "title": "Uso do Osciloscópio",
+  "slug": "osciloscopio",
+  "content": [
+    {
+      "type": "text",
+      "value": "O osciloscópio é a ferramenta mais poderosa para diagnóstico eletrônico automotivo. Diferente do multímetro que mostra apenas valores médios, o osciloscópio permite visualizar o comportamento elétrico em tempo real, identificando problemas que seriam impossíveis de detectar de outra forma."
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "title": "Por que o Osciloscópio é Essencial?",
+      "text": "Enquanto o multímetro mostra 'o quê' (tensão, resistência), o osciloscópio mostra 'como' - a forma como o sinal se comporta ao longo do tempo. Isso é crucial para diagnosticar sensores, atuadores e sistemas de comunicação."
+    },
+    {
+      "type": "text",
+      "value": "Um osciloscópio moderno para automóveis deve ter: largura de banda mínima de 20MHz, pelo menos 2 canais isolados, função de trigger automático, base de tempo ajustável (1s/div a 10μs/div), e pontas de prova específicas para automotiva com aterramento adequado."
+    },
+    {
+      "type": "callout",
+      "style": "warning",
+      "title": "Cuidado com Pontas de Prova",
+      "text": "Nunca use pontas de prova comuns em sistemas eletrônicos automotivos. Use sempre pontas de prova com aterramento próprio e isolação adequada para evitar danos à ECU e ao equipamento."
+    }
+  ],
+  "table": {
+    "headers": ["Parâmetro", "Configuração Inicial", "Aplicação Típica"],
+    "rows": [
+      ["Volts/div", "5V", "Sensores 5V (MAP, TPS)"],
+      ["Tempo/div", "10ms", "Sinais de rotação"],
+      ["Trigger", "Auto", "Sinais desconhecidos"],
+      ["Acoplamento", "AC", "Sinais alternados"],
+      ["Impedância", "1MΩ", "Padrão automotivo"]
+    ]
+  },
+  "simulator": {
+    "type": "OscilloscopeSimulator",
+    "title": "Simulador de Osciloscópio",
+    "description": "Ajuste os parâmetros para visualizar diferentes formas de onda automotivas",
+    "controls": [
+      {
+        "label": "Tipo de Sinal",
+        "type": "select",
+        "options": ["Sensor MAP", "Sensor TPS", "Sinal CKP", "Injetor", "Ignição"],
+        "default": "Sensor MAP"
+      },
+      {
+        "label": "Volts/Div",
+        "type": "range",
+        "min": 1,
+        "max": 20,
+        "default": 5,
+        "unit": "V"
+      },
+      {
+        "label": "Tempo/Div",
+        "type": "range",
+        "min": 0.1,
+        "max": 100,
+        "default": 10,
+        "unit": "ms"
+      }
+    ]
+  },
+  "quiz": {
+    "question": "Qual é a principal vantagem do osciloscópio sobre o multímetro no diagnóstico automotivo?",
+    "options": [
+      "Mede valores mais precisos",
+      "Visualiza o comportamento do sinal ao longo do tempo",
+      "É mais fácil de usar",
+      "Custa menos"
+    ],
+    "correct": 1
+  },
+  "quizzes": [
+    {
+      "question": "Qual é a largura de banda mínima recomendada para um osciloscópio automotivo?",
+      "options": [
+        "10MHz",
+        "20MHz",
+        "50MHz",
+        "100MHz"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Por que não usar pontas de prova comuns em sistemas eletrônicos automotivos?",
+      "options": [
+        "Porque são muito caras",
+        "Podem causar danos à ECU e ao equipamento",
+        "Porque não funcionam",
+        "Porque são muito grandes"
+      ],
+      "correct": 1
+    }
+  ]
+}

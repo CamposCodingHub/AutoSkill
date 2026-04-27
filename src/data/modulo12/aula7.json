@@ -1,0 +1,90 @@
+{
+    "title": "Diagnóstico de Sistemas de Conforto",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas de conforto exige abordagem sistemática: verificar alimentação, terra, comunicação CAN, sensores e atuadores. Use ferramentas adequadas e conhecimento dos sistemas integrados."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "Comece com problemas básicos (fusíveis, relés), depois verifique comunicação CAN e finalmente teste componentes individuais."
+        },
+        {
+            "type": "text",
+            "value": "Muitos sistemas de conforto são controlados pelo BCM (Body Control Module) através de rede CAN. Problemas na comunicação afetam múltiplos sistemas simultaneamente."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "rows": [
+                ["Vidro não funciona", "Motor vidro, interruptor", "Testar alimentação 12V no motor"],
+                ["Trava não responde", "Atuador, BCM, CAN", "Verificar sinal no atuador"],
+                ["Retrovisor parado", "Motor, interruptor", "Testar continuidade dos fios"],
+                ["Banco não move", "Motor, fusível 30A", "Medir corrente do motor"],
+                ["Áudio sem som", "Amplificador, CAN", "Verificar linha de áudio"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Problemas CAN",
+            "text": "Códigos U0xxx indicam problemas de comunicação. Verifique terminações CAN e integridade da rede."
+        },
+        {
+            "type": "text",
+            "value": "Use scanner automotivo para ler códigos do BCM e outros módulos. Dados em tempo real mostram status de interruptores e sensores."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Essenciais",
+            "text": "Multímetro, scanner automotivo, osciloscópio, ferramentas especiais para painéis e bancos."
+        },
+        {
+            "type": "text",
+            "value": "Após reparos, execute procedimentos de inicialização e aprendizado. Sistemas modernos precisam 'aprender' posições e configurações após intervenções."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico de Conforto"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual módulo controla a maioria dos sistemas de conforto modernos?",
+            "options": [
+                "ECU do motor",
+                "BCM (Body Control Module)",
+                "Módulo de transmissão",
+                "Módulo de freios ABS"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que indicam códigos de falha U0xxx?",
+            "options": [
+                "Problemas no motor",
+                "Problemas de comunicação CAN",
+                "Problemas no sistema de freios",
+                "Problemas no sistema de áudio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que muitos sistemas de conforto falham simultaneamente?",
+            "options": [
+                "Porque todos usam a mesma bateria",
+                "Porque são controlados pelo BCM através de rede CAN",
+                "Porque todos têm o mesmo fusível",
+                "Porque todos estão no mesmo painel"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "title": "Válvula IAC / IACV - Ar de Marcha Lenta",
+    "content": [
+        {
+            "type": "text",
+            "value": "A válvula IAC (Idle Air Control) complementa a borboleta quase fechada, passando ar extra para estabilizar RPM em frio, permitir desaceleração suave e compensar cargas elétricas como ar condicionado e faróis."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função Principal",
+            "text": "Controla a quantidade de ar que bypassa a borboleta quando fechada, mantendo RPM estável em diferentes condições de carga."
+        },
+        {
+            "type": "text",
+            "value": "Existem dois tipos principais de IAC com designs elétricos completamente diferentes, cada um exigindo abordagens distintas de diagnóstico e reparo."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Fios", "Controle", "Características"],
+            "rows": [
+                ["Motor de Passo", "4-6 fios", "Sequência de passos", "Movimento preciso em etapas"],
+                ["Rotativa PWM", "2 fios", "Modulação por largura de pulso", "Controle proporcional contínuo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Incompatibilidade",
+            "text": "Trocar um tipo pelo outro no chicote é impossível sem adaptação - são fundamentalmente diferentes."
+        },
+        {
+            "type": "text",
+            "value": "O motor de passo usa sequência de fases onde a ECU 'conta passos' para abrir ou fechar o canal de ar. Já a rotativa PWM funciona como um solenoide que gira um obturador proporcionalmente ao sinal PWM."
+        },
+        {
+            "type": "text",
+            "value": "Para diagnóstico de marcha lenta instável ou motor morrendo com AC, siga este procedimento sistemático:"
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Scanner: Verificar contagem de passos IAC ou comando %, executar reaprendizado de marcha lenta após limpeza",
+                "Mecânico: Inspecionar carbonização que trava o eixo - elétrica pode estar OK mas fluxo não muda",
+                "Comparação: Testar vazamento de vácuo que falso ar mimetiza IAC ruim - borrifar água/ouvir ou medir MAP"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Bateria Desconectada",
+            "text": "Em muitos veículos antigos, perder memória de adaptação de IAC exige procedimento de relearn - não assuma defeito imediato."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Cálculo de Consumo IAC"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "IAC do tipo motor de passo é controlado principalmente por:",
+            "options": [
+                "Um único fio de massa contínua",
+                "Sequência de excitação nas bobinas do motor em passos",
+                "Tensão fixa de 100V",
+                "Apenas o sensor de oxigênio, sem ECU"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do IAC (Idle Air Control)?",
+            "options": [
+                "Controlar a pressão do combustível",
+                "Regular a rotação de marcha lenta",
+                "Controlar a temperatura do motor",
+                "Regular a pressão do óleo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se o IAC falhar na posição fechada?",
+            "options": [
+                "O motor superaquece",
+                "O motor pode morrer em marcha lenta",
+                "O consumo de combustível aumenta",
+                "A pressão do combustível cai"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Baterias Automotivas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Baterias automotivas são a fonte de energia primária do veículo, armazenando energia química e convertendo-a em energia elétrica para partida e sistemas elétricos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Baterias",
+            "text": "Chumbo-ácido (convencional), AGM, EFB, e Lítio. Cada uma com características específicas para diferentes aplicações."
+        },
+        {
+            "type": "text",
+            "value": "Baterias modernas incluem tecnologias avançadas: AGM (Absorbent Glass Mat) para start-stop, EFB (Enhanced Flooded Battery) para aplicações intermediárias, e Lítio para alta performance."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "CCA", "Vida Útil", "Aplicação"],
+            "rows": [
+                ["Convencional", "Alto", "3-4 anos", "Veículos básicos"],
+                ["AGM", "Médio-Alto", "4-6 anos", "Start-stop, luxo"],
+                ["EFB", "Médio", "3-5 anos", "Start-stop econômico"],
+                ["Lítio", "Médio", "8-10 anos", "Performance, esportivo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Manutenção Essencial",
+            "text": "Verifique nível de eletrólito (baterias convencionais), limpe terminais, e aperte conectores regularmente."
+        },
+        {
+            "type": "text",
+            "value": "Teste de bateria deve incluir: voltagem em repouso, teste de carga (CCA), e teste de capacidade para diagnóstico completo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sintomas de Falha",
+            "text": "Partida lenta, luzes fracas, luz de bateria acesa, e problemas eletrônicos intermitentes."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Baterias"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de bateria é recomendada para sistemas start-stop?",
+            "options": [
+                "Convencional",
+                "AGM",
+                "EFB",
+                "Lítio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem das baterias AGM sobre as convencionais?",
+            "options": [
+                "Menor peso",
+                "Maior resistência a ciclos de descarga profunda",
+                "Custo mais baixo",
+                "Maior capacidade de partida a frio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você deve testar uma bateria AGM?",
+            "options": [
+                "Com testador de bateria convencional",
+                "Com testador específico para AGM/EFB",
+                "Apenas medindo a tensão em repouso",
+                "Com teste de carga com lâmpadas"
+            ],
+            "correct": 1
+        }
+    ]
+}

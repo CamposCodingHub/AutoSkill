@@ -1,0 +1,43 @@
+{
+    "id": 10,
+    "title": "Segurança Ativa e Passiva",
+    "icon": "🛡️",
+    "description": "Airbags, pré-tensionadores, ABS, ESP, controle de tração, sensores de impacto e sistemas de retenção.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "ABS - Sistema de Freio Antitravamento",
+            "slug": "abs"
+        },
+        {
+            "id": 2,
+            "title": "ESP/ESC - Controle de Estabilidade",
+            "slug": "esp"
+        },
+        {
+            "id": 3,
+            "title": "Controle de Tração (TCS)",
+            "slug": "tcs"
+        },
+        {
+            "id": 4,
+            "title": "Assistente de Partida em Rampa (HSA)",
+            "slug": "hsa"
+        },
+        {
+            "id": 5,
+            "title": "Airbags e Sistema SRS",
+            "slug": "airbags-srs"
+        },
+        {
+            "id": 6,
+            "title": "Cinto com Pré-tensionador",
+            "slug": "cinto-pretensionador"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico de ABS/ESP/SRS",
+            "slug": "diagnostico-seguranca"
+        }
+    ]
+}

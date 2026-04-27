@@ -1,0 +1,874 @@
+[
+    {
+        "id": 1,
+        "title": "Fundamentos de Eletricidade",
+        "slug": "fundamentos",
+        "description": "Tensão, corrente, resistência, Lei de Ohm, potência, circuitos série e paralelo.",
+        "icon": "⚡",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Tensão, Corrente e Resistência",
+                "slug": "tensao-corrente-resistencia",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "A tensão (V) é a força que empurra os elétrons. A corrente (I) é o fluxo de elétrons. A resistência (R) é a oposição a esse fluxo."
+                    },
+                    {
+                        "type": "callout",
+                        "style": "tip",
+                        "title": "Analogia",
+                        "text": "Pense na água: tensão é a pressão, corrente é o fluxo, resistência é o diâmetro da mangueira."
+                    }
+                ],
+                "quiz": {
+                    "question": "Qual a unidade de medida da corrente elétrica?",
+                    "options": [
+                        "Volt",
+                        "Ampere",
+                        "Ohm",
+                        "Watt"
+                    ],
+                    "correct": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Ferramentas e Equipamentos",
+        "slug": "ferramentas",
+        "description": "Multímetro, scanner OBD-II, osciloscópio, alicate amperímetro, testador de bateria.",
+        "icon": "🛠️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Multímetro Digital",
+                "slug": "multimetro",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "O multímetro é a ferramenta mais importante do eletricista automotivo. Aprenda a medir tensão, corrente, resistência e fazer teste de continuidade."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Componentes Elétricos Fundamentais",
+        "slug": "componentes",
+        "description": "Fusíveis, relés, diodos, transistores, resistores, LEDs, conectores e chaves.",
+        "icon": "🔧",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Fusíveis Automotivos",
+                "slug": "fusiveis",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Fusíveis protegem os circuitos contra sobrecorrente. Conheça os tipos ATO, MINI, MAXI e como testá-los."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Sistema Elétrico do Veículo",
+        "slug": "sistema-eletrico",
+        "description": "Bateria, alternador, motor de partida, fusíveis, relés, aterramento, diagramas elétricos.",
+        "icon": "🚗",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Arquitetura da Rede Elétrica",
+                "slug": "arquitetura",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Todo veículo possui positivo permanente, positivo chaveado e massa. Entenda como a energia é distribuída."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Sistemas de Iluminação",
+        "slug": "iluminacao",
+        "description": "Lâmpadas halógenas, xenon (HID), LED, laser, DRL, faróis adaptativos (AFS/Matrix).",
+        "icon": "💡",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Tipos de Lâmpadas",
+                "slug": "tipos-lampadas",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Halógenas, xenon, LED e laser – cada tecnologia tem vantagens, desvantagens e aplicações específicas."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Sensores Automotivos",
+        "slug": "sensores",
+        "description": "CKP (rotação), CMP (fase), MAP, MAF, TPS, ECT, sonda lambda, sensor knock, ABS.",
+        "icon": "📡",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Sensor CKP (Virabrequim)",
+                "slug": "ckp",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "O sensor CKP informa a posição e rotação do virabrequim. Pode ser indutivo (VR) ou Hall."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Atuadores de Carga",
+        "slug": "atuadores",
+        "description": "Injetores, bobinas de ignição, válvulas, motores, solenoides e outros atuadores controlados pela ECU.",
+        "icon": "⚙️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Injetores de Combustível",
+                "slug": "injetores",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Injetores controlam a quantidade de combustível injetada. Entenda peak & hold vs saturação e baixa vs alta impedância."
+                    },
+                    {
+                        "type": "callout",
+                        "style": "danger",
+                        "title": "Compatibilidade",
+                        "text": "Acoplar injetor de baixa impedância em driver só de saturação pode queimar o driver."
+                    }
+                ],
+                "quiz": null
+            },
+            {
+                "id": 2,
+                "title": "Bobinas de Ignição",
+                "slug": "bobinas-ignicao",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Bobinas transformam baixa tensão em alta tensão. Conheça caneta, DIS e COP e como diagnosticar falhas."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Redes de Comunicação Veicular",
+        "slug": "redes-comunicacao",
+        "description": "CAN bus, LIN, K-Line, ISO-9141, protocolos de diagnóstico e comunicação entre módulos.",
+        "icon": "🌐",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Protocolo CAN Bus",
+                "slug": "can-bus",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "CAN bus é a espinha dorsal da comunicação veicular. Entenda terminações, velocidades e topologia."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Central de Injeção Eletrônica (ECU)",
+        "slug": "ecu",
+        "description": "Arquitetura da ECU, processadores, memória, drivers de potência, estratégias de controle.",
+        "icon": "🖥️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Arquitetura da ECU",
+                "slug": "arquitetura-ecu",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "ECU é o cérebro do motor. Conheça microcontroladores, memória EEPROM/Flash e drivers de saída."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Segurança Ativa e Passiva",
+        "slug": "seguranca",
+        "description": "Airbags, pré-tensionadores, ABS, ESP, controle de tração, sensores de impacto e sistemas de retenção.",
+        "icon": "🛡️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Sistema de Airbags",
+                "slug": "airbags",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Airbags salvam vidas mas exigem cuidados especiais. Entenda sensores de impacto, infladores e procedimentos de segurança."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Ar Condicionado Automotivo",
+        "slug": "ar-condicionado",
+        "description": "Ciclo de refrigeração, compressor, condensador, evaporador, válvula de expansão, sensores de pressão.",
+        "icon": "❄️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Ciclo de Refrigeração",
+                "slug": "ciclo-refrigeracao",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Entenda o ciclo termodinâmico do ar condicionado e como cada componente funciona no sistema."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Conforto e Carroceria",
+        "slug": "conforto",
+        "description": "Vidros elétricos, travas centrais, retrovisores, bancos elétricos, limpadores, sistema de áudio.",
+        "icon": "🪟",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Vidros Elétricos",
+                "slug": "vidros-eletricos",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Motores, interruptores e módulos de controle. Aprenda a diagnosticar falhas comuns no sistema de vidros."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Áudio, Multimídia e Telemática",
+        "slug": "multimidia",
+        "description": "Sistemas de som, GPS, Bluetooth, Android Auto, Apple CarPlay, sistemas de infoentretenimento.",
+        "icon": "🎵",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Sistemas de Áudio",
+                "slug": "sistemas-audio",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Head units, amplificadores, alto-falantes e processadores de sinal. Entenda a arquitetura do sistema automotivo."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Elétrica de Caminhões e Pesados",
+        "slug": "caminhoes-pesados",
+        "description": "Sistemas 24V, pneus, freios ABS, tomadas de reboque, iluminação pesada, sistemas de trailer.",
+        "icon": "🚚",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Sistema 24V",
+                "slug": "sistema-24v",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Diferenças entre 12V e 24V, baterias em série, alternadores e particularidades de veículos pesados."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Híbridos e Elétricos (HEV/BEV)",
+        "slug": "hibridos-eletricos",
+        "description": "Baterias de alta tensão, motores elétricos, inversores, sistemas BMS, regeneração, segurança HV.",
+        "icon": "🔋",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Baterias de Alta Tensão",
+                "slug": "baterias-hv",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Baterias de tração diferem das de 12V. Conheça químicas, sistemas de gestão e procedimentos de segurança."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Diagnóstico Avançado de Sinal",
+        "slug": "diagnostico-avancado",
+        "description": "Osciloscópio, analisador de sinais, padrões de forma de onda, diagnóstico de sensores e atuadores.",
+        "icon": "📊",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Uso do Osciloscópio",
+                "slug": "osciloscopio",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Osciloscópio é a ferramenta mais poderosa para diagnóstico. Aprenda a interpretar formas de onda de sensores."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Programação, Codificação e Calibração",
+        "slug": "programacao",
+        "description": "Flash de ECU, codificação de módulos, calibração de sensores, chaves imobilizadoras, diagnóstico avançado.",
+        "icon": "💻",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Flash de ECU",
+                "slug": "flash-ecu",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Atualização de software da ECU, procedimentos de segurança e ferramentas de programação."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Rastreamento, Alarmes e Segurança",
+        "slug": "rastreamento",
+        "description": "Rastreadores GPS, alarmes, imobilizadores, bloqueadores, sensores de presença, comunicação remota.",
+        "icon": "📡",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Sistemas de Rastreamento",
+                "slug": "rastreadores",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "GPS, GSM, antenas e centrais de monitoramento. Entenda como os sistemas de rastreamento funcionam."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Gestão de Oficina Elétrica",
+        "slug": "gestao-oficina",
+        "description": "Organização de ferramentas, fluxo de trabalho, documentação, atendimento ao cliente, precificação.",
+        "icon": "🏪",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Organização da Oficina",
+                "slug": "organizacao-oficina",
+                "content": [
+                    {
+                        "type": "text",
+                        "value": "Layout eficiente, gestão de ferramentas, estoque de peças e otimização do espaço de trabalho."
+                    }
+                ],
+                "quiz": null
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Diagramas Elétricos e Leitura de Esquemas",
+        "slug": "diagramas-eletricos",
+        "description": "Leitura e interpretação de diagramas elétricos, simbologia, localização de componentes, análise de circuitos.",
+        "icon": "📋",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Simbologia e Convenções",
+                "slug": "simbologia-convencoes"
+            },
+            {
+                "id": 2,
+                "title": "Tipos de Diagramas",
+                "slug": "tipos-diagramas"
+            },
+            {
+                "id": 3,
+                "title": "Leitura de Esquemas Elétricos",
+                "slug": "leitura-esquemas"
+            },
+            {
+                "id": 4,
+                "title": "Análise de Circuitos",
+                "slug": "analise-circuitos"
+            },
+            {
+                "id": 5,
+                "title": "Localização de Componentes",
+                "slug": "localizacao-componentes"
+            },
+            {
+                "id": 6,
+                "title": "Software de Diagramas",
+                "slug": "software-diagramas"
+            },
+            {
+                "id": 7,
+                "title": "Prática e Estudos de Caso",
+                "slug": "pratica-estudos-caso"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Sistemas de Partida e Carga",
+        "slug": "sistemas-partida-carga",
+        "description": "Motor de arranque, alternador, regulagem de tensão, sistema de carga, diagnóstico completo.",
+        "icon": "⚡",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Motor de Arranque - Fundamentos",
+                "slug": "motor-arranque-fundamentos"
+            },
+            {
+                "id": 2,
+                "title": "Solenóide de Engate",
+                "slug": "solenoide-engate"
+            },
+            {
+                "id": 3,
+                "title": "Alternador - Princípio e Componentes",
+                "slug": "alternador-principio"
+            },
+            {
+                "id": 4,
+                "title": "Regulador de Tensão",
+                "slug": "regulador-tensao"
+            },
+            {
+                "id": 5,
+                "title": "Sistema de Carga Completo",
+                "slug": "sistema-carga-completo"
+            },
+            {
+                "id": 6,
+                "title": "Diagnóstico de Partida e Carga",
+                "slug": "diagnostico-partida-carga"
+            },
+            {
+                "id": 7,
+                "title": "Sistemas Start-Stop e Recuperação",
+                "slug": "sistemas-start-stop"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Técnicas de Soldagem e Emendas Profissionais",
+        "slug": "tecnicas-soldagem",
+        "description": "Soldagem de componentes, emendas de chicotes, reparo de conectores, técnicas profissionais de baixa temperatura.",
+        "icon": "🔩",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Fundamentos de Soldagem",
+                "slug": "fundamentos-soldagem"
+            },
+            {
+                "id": 2,
+                "title": "Equipamentos de Soldagem",
+                "slug": "equipamentos-soldagem"
+            },
+            {
+                "id": 3,
+                "title": "Soldagem de Componentes Eletrônicos",
+                "slug": "soldagem-componentes"
+            },
+            {
+                "id": 4,
+                "title": "Emendas de Chicotes Elétricos",
+                "slug": "emendas-chicotes"
+            },
+            {
+                "id": 5,
+                "title": "Reparo de Conectores",
+                "slug": "reparo-conectores"
+            },
+            {
+                "id": 6,
+                "title": "Técnicas de Baixa Temperatura",
+                "slug": "tecnicas-baixa-temperatura"
+            },
+            {
+                "id": 7,
+                "title": "Qualidade e Teste de Emendas",
+                "slug": "qualidade-teste-emendas"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Laboratório Prático e Estudos de Caso",
+        "slug": "laboratorio-pratico",
+        "description": "Laboratório prático, estudos de caso reais, metodologia de diagnóstico, projetos práticos.",
+        "icon": "🔬",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Montagem do Laboratório",
+                "slug": "montagem-laboratorio"
+            },
+            {
+                "id": 2,
+                "title": "Projetos Práticos - Básicos",
+                "slug": "projetos-basicos"
+            },
+            {
+                "id": 3,
+                "title": "Projetos Práticos - Intermediários",
+                "slug": "projetos-intermediarios"
+            },
+            {
+                "id": 4,
+                "title": "Projetos Práticos - Avançados",
+                "slug": "projetos-avancados"
+            },
+            {
+                "id": 5,
+                "title": "Estudos de Caso - Problemas Comuns",
+                "slug": "estudos-caso-comuns"
+            },
+            {
+                "id": 6,
+                "title": "Estudos de Caso - Problemas Complexos",
+                "slug": "estudos-caso-complexos"
+            },
+            {
+                "id": 7,
+                "title": "Metodologia de Diagnóstico Prático",
+                "slug": "metodologia-diagnostico"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Segurança em Oficina e Procedimentos",
+        "slug": "seguranca-oficina",
+        "description": "Segurança elétrica, EPIs, procedimentos de emergência, normas regulamentares, gestão de riscos.",
+        "icon": "🛡️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Segurança Elétrica Fundamentos",
+                "slug": "seguranca-eletrica-fundamentos"
+            },
+            {
+                "id": 2,
+                "title": "Equipamentos de Proteção Individual (EPI)",
+                "slug": "epi-equipamentos"
+            },
+            {
+                "id": 3,
+                "title": "Procedimentos de Trabalho Seguro",
+                "slug": "procedimentos-seguros"
+            },
+            {
+                "id": 4,
+                "title": "Trabalho em Alta Tensão",
+                "slug": "trabalho-alta-tensao"
+            },
+            {
+                "id": 5,
+                "title": "Emergências e Primeiros Socorros",
+                "slug": "emergencias-primeiros-socorros"
+            },
+            {
+                "id": 6,
+                "title": "Normas e Regulamentações",
+                "slug": "normas-regulamentacoes"
+            },
+            {
+                "id": 7,
+                "title": "Gestão de Riscos e Prevenção",
+                "slug": "gestao-riscos"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Certificação e Validação de Competências",
+        "slug": "certificacao",
+        "description": "Certificações profissionais, provas práticas, validação de competências, portfólio técnico, preparação para mercado.",
+        "icon": "🏆",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Certificações Profissionais",
+                "slug": "certificacoes-profissionais"
+            },
+            {
+                "id": 2,
+                "title": "Provas Práticas de Validação",
+                "slug": "provas-praticas"
+            },
+            {
+                "id": 3,
+                "title": "Portfólio Técnico",
+                "slug": "portfolio-tecnico"
+            },
+            {
+                "id": 4,
+                "title": "Preparação para Mercado",
+                "slug": "preparacao-mercado"
+            },
+            {
+                "id": 5,
+                "title": "Entrevistas Técnicas",
+                "slug": "entrevistas-tecnicas"
+            },
+            {
+                "id": 6,
+                "title": "Simulações de Casos Reais",
+                "slug": "simulacoes-casos"
+            },
+            {
+                "id": 7,
+                "title": "Validação Final de Competências",
+                "slug": "validacao-final"
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Tendências e Futuro da Eletricidade Automotiva",
+        "slug": "tendencias-futuro",
+        "description": "Veículos autônomos, IA em diagnóstico, carregamento wireless, novas arquiteturas elétricas, sustentabilidade.",
+        "icon": "🔮",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Veículos Autônomos e IA",
+                "slug": "veiculos-autonomos-ia"
+            },
+            {
+                "id": 2,
+                "title": "Carregamento Wireless e Dinâmico",
+                "slug": "carregamento-wireless"
+            },
+            {
+                "id": 3,
+                "title": "Novas Arquiteturas Elétricas",
+                "slug": "arquiteturas-eletricas"
+            },
+            {
+                "id": 4,
+                "title": "Sustentabilidade e Inovação",
+                "slug": "sustentabilidade-inovacao"
+            },
+            {
+                "id": 5,
+                "title": "Diagnóstico Baseado em IA",
+                "slug": "diagnostico-ia"
+            },
+            {
+                "id": 6,
+                "title": "Conectividade 5G e V2X",
+                "slug": "conectividade-5g-v2x"
+            },
+            {
+                "id": 7,
+                "title": "Futuro da Profissão",
+                "slug": "futuro-profissao"
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Especializações e Nichos de Mercado",
+        "slug": "especializacoes-nichos",
+        "description": "Marcas premium, preparação de competição, som automotivo high-end, customização e performance.",
+        "icon": "🎯",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Marcas Premium Alemãs",
+                "slug": "marcas-premium-alemas"
+            },
+            {
+                "id": 2,
+                "title": "Preparação de Competição",
+                "slug": "preparacao-competicao"
+            },
+            {
+                "id": 3,
+                "title": "Som Automotivo High-End",
+                "slug": "som-high-end"
+            },
+            {
+                "id": 4,
+                "title": "Customização e Performance",
+                "slug": "customizacao-performance"
+            },
+            {
+                "id": 5,
+                "title": "Restauração de Clássicos",
+                "slug": "restauracao-classicos"
+            },
+            {
+                "id": 6,
+                "title": "Conversões Elétricas",
+                "slug": "conversoes-eletricas"
+            },
+            {
+                "id": 7,
+                "title": "Mercado de Tuning",
+                "slug": "mercado-tuning"
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Projetos Integradores e Portfolio",
+        "slug": "projetos-integradores",
+        "description": "Projetos completos do início ao fim, integração de múltiplos sistemas, documentação técnica profissional.",
+        "icon": "🛠️",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Projeto 1 - Sistema de Iluminação Completo",
+                "slug": "projeto-iluminacao-completo"
+            },
+            {
+                "id": 2,
+                "title": "Projeto 2 - Sistema de Áudio Premium",
+                "slug": "projeto-audio-premium"
+            },
+            {
+                "id": 3,
+                "title": "Projeto 3 - Diagnóstico Avançado Integrado",
+                "slug": "projeto-diagnostico-avancado"
+            },
+            {
+                "id": 4,
+                "title": "Projeto 4 - Sistema Híbrido Simulado",
+                "slug": "projeto-hibrido-simulado"
+            },
+            {
+                "id": 5,
+                "title": "Projeto 5 - Smart Grid Veicular",
+                "slug": "projeto-smart-grid"
+            },
+            {
+                "id": 6,
+                "title": "Documentação Técnica Profissional",
+                "slug": "documentacao-tecnica"
+            },
+            {
+                "id": 7,
+                "title": "Apresentação e Defesa de Projetos",
+                "slug": "apresentacao-projetos"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Empreendedorismo e Abertura de Oficina",
+        "slug": "empreendedorismo",
+        "description": "Planejamento de negócios, marketing digital, gestão financeira, legalização, e expansão.",
+        "icon": "💼",
+        "lessons": [
+            {
+                "id": 1,
+                "title": "Planejamento de Negócios",
+                "slug": "planejamento-negocios"
+            },
+            {
+                "id": 2,
+                "title": "Marketing Digital para Oficinas",
+                "slug": "marketing-digital"
+            },
+            {
+                "id": 3,
+                "title": "Gestão Financeira",
+                "slug": "gestao-financeira"
+            },
+            {
+                "id": 4,
+                "title": "Legalização e Licenciamento",
+                "slug": "legalizacao-licenciamento"
+            },
+            {
+                "id": 5,
+                "title": "Estrutura Física e Equipamentos",
+                "slug": "estrutura-equipamentos"
+            },
+            {
+                "id": 6,
+                "title": "Gestão de Clientes e Fidelização",
+                "slug": "gestao-clientes"
+            },
+            {
+                "id": 7,
+                "title": "Expansão e Franchising",
+                "slug": "expansao-franchising"
+            }
+        ]
+    }
+]

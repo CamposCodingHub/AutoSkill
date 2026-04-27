@@ -1,0 +1,43 @@
+{
+    "id": 22,
+    "title": "Técnicas de Soldagem e Emendas Profissionais",
+    "icon": "🔩",
+    "description": "Soldagem de componentes, emendas de chicotes, reparo de conectores, técnicas profissionais de baixa temperatura.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Fundamentos de Soldagem",
+            "slug": "fundamentos-soldagem"
+        },
+        {
+            "id": 2,
+            "title": "Equipamentos de Soldagem",
+            "slug": "equipamentos-soldagem"
+        },
+        {
+            "id": 3,
+            "title": "Soldagem de Componentes Eletrônicos",
+            "slug": "soldagem-componentes"
+        },
+        {
+            "id": 4,
+            "title": "Emendas de Chicotes Elétricos",
+            "slug": "emendas-chicotes"
+        },
+        {
+            "id": 5,
+            "title": "Reparo de Conectores",
+            "slug": "reparo-conectores"
+        },
+        {
+            "id": 6,
+            "title": "Técnicas de Baixa Temperatura",
+            "slug": "tecnicas-baixa-temperatura"
+        },
+        {
+            "id": 7,
+            "title": "Qualidade e Teste de Emendas",
+            "slug": "qualidade-teste-emendas"
+        }
+    ]
+}

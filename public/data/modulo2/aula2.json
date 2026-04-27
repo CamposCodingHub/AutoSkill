@@ -1,0 +1,85 @@
+{
+    "title": "Scanner OBD-II e Diagnóstico",
+    "content": [
+        {
+            "type": "text",
+            "value": "Scanner OBD-II é a ferramenta principal para diagnóstico eletrônico moderno. Permite acessar dados da ECU, ler códigos de falha, monitorar sensores em tempo real e executar testes funcionais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Protocolos OBD-II",
+            "text": "ISO 9141-2, KWP2000, SAE J1850 VPW/PWM, CAN (ISO 15765-4), UDS (ISO 14229)."
+        },
+        {
+            "type": "text",
+            "value": "Scanners profissionais oferecem acesso a todos os sistemas (motor, transmissão, ABS, airbag, conforto), enquanto scanners básicos limitam-se ao motor (emissões)."
+        },
+        {
+            "type": "table",
+            "headers": ["Nível Scanner", "Acesso", "Funções", "Preço"],
+            "rows": [
+                ["Básico", "Motor apenas", "Leitura/limpeza códigos", "R$100-300"],
+                ["Intermediário", "Múltiplos sistemas", "Dados ao vivo, testes", "R$500-1500"],
+                ["Profissional", "Todos sistemas", "Programação, codificação", "R$2000-10000"],
+                ["OEM", "Fabricante específico", "Diagnóstico avançado", "R$5000-50000"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Cuidados na Escolha",
+            "text": "Verifique compatibilidade com sua frota, suporte técnico, e atualizações regulares. Nem todos os scanners suportam todos os veículos."
+        },
+        {
+            "type": "text",
+            "value": "Funções avançadas incluem: gravação de dados, comparação com valores de referência, testes de atuadores, e programação de módulos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Interpretação de Códigos",
+            "text": "P0xxx = Genérico/Emissões, P1xxx = Fabricante, C0xxx = Chassi, B0xxx = Carroceria, U0xxx = Comunicação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Scanner OBD-II"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa código P0171?",
+            "options": [
+                "Falha no sistema de ignição",
+                "Sistema muito pobre (combustível)",
+                "Falha no sensor de oxigênio",
+                "Problema na transmissão"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a primeira etapa ao diagnosticar um código de falha?",
+            "options": [
+                "Substituir o componente indicado",
+                "Limpar o código e testar o veículo",
+                "Pesquisar o significado e verificar dados congêneres",
+                "Desconectar a bateria para resetar a ECU"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para diagnosticar problemas intermitentes no sistema elétrico?",
+            "options": [
+                "Multímetro básico",
+                "Osciloscópio",
+                "Chave de fenda",
+                "Alicate de pressão"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Fusíveis Automotivos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Fusíveis são dispositivos de proteção essenciais em sistemas elétricos automotivos. Sacrificam-se para proteger circuitos contra sobrecorrente, prevenindo danos maiores."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "ATO/ATO MAXI (padrão japonês), MINI (compacto), JCASE (alto amperagem), e blade type (padrão europeu)."
+        },
+        {
+            "type": "text",
+            "value": "Fusíveis automotivos operam por tempo x corrente. Tipos fast-blow (rápido) para eletrônica, e slow-blow (lento) para cargas indutivas."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Corrente", "Aplicação", "Identificação"],
+            "rows": [
+                ["MINI", "2-30A", "Circuitos baixa potência", "Pequeno, verde/azul"],
+                ["ATO", "5-40A", "Circuitos médios", "Padrão japonês"],
+                ["MAXI", "20-80A", "Potência elevada", "Grande, amarelo/vermelho"],
+                ["JCASE", "30-100A", "Sistemas de alta potência", "Retangular"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "NUNCA SUBSTITUA POR MAIOR!",
+            "text": "Usar fusível de amperagem maior remove a proteção e pode causar incêndio. Sempre substitua pelo valor original."
+        },
+        {
+            "type": "text",
+            "value": "Teste de fusíveis: visual (filamento intacto), continuidade com multímetro, ou teste de carga em circuito."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Fusíveis Inteligentes",
+            "text": "Modernos incluem indicadores visuais, proteção contra surtos, e comunicação com sistemas de diagnóstico."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Fusíveis"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de fusível para circuito de alta potência?",
+            "options": [
+                "MINI",
+                "ATO",
+                "MAXI",
+                "JCASE"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função principal de um fusível em um circuito automotivo?",
+            "options": [
+                "Regular a tensão do circuito",
+                "Proteger contra correntes excessivas",
+                "Melhorar a eficiência energética",
+                "Armazenar energia temporariamente"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece quando um fusível queima?",
+            "options": [
+                "O circuito continua funcionando com tensão reduzida",
+                "O circuito se abre e para de funcionar",
+                "O circuito entra em curto-circuito",
+                "O fusível se regenera automaticamente"
+            ],
+            "correct": 1
+        }
+    ]
+}

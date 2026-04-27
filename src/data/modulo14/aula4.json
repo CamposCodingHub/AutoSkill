@@ -1,0 +1,89 @@
+{
+    "title": "Tomadas de Reboque e Trailer",
+    "content": [
+        {
+            "type": "text",
+            "value": "Tomadas de reboque em veículos pesados seguem padrões internacionais específicos, fornecendo alimentação, iluminação e comunicação com trailers e reboques."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Padrões Comuns",
+            "text": "ISO 1185 (7 pinos), ISO 12098 (13 pinos), SAE J560 (7 pinos americano), e padrões específicos para diferentes aplicações."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem comunicação CAN com trailer, controle de freios eletrônicos, e sistemas de gerenciamento de carga inteligentes."
+        },
+        {
+            "type": "table",
+            "headers": ["Pino", "Função ISO 1185", "Função ISO 12098"],
+            "rows": [
+                ["1", "Terra", "Terra"],
+                ["2", "Luz de ré", "Luz de ré"],
+                ["3", "Massa iluminação", "Massa iluminação"],
+                ["4", "Farol esquerdo", "Farol esquerdo"],
+                ["5", "Sinal esquerdo", "Sinal esquerdo"],
+                ["6", "Farol direito", "Farol direito"],
+                ["7", "Sinal direito", "Sinal direito"],
+                ["8-13", "N/A", "CAN, alimentação 24V, freios"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Compatibilidade",
+            "text": "Adaptadores entre padrões podem causar perda de funcionalidades. Use adaptadores certificados e verifique compatibilidade."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas EBS (Electronic Braking System) comunicam-se com trailer através de CAN, permitindo controle sincronizado e distribuído dos freios."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste continuidade e tensão em cada pino. Verifique corrosão e conexões adequadas antes de conectar trailer."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Tomadas de Reboque"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual padrão de 13 pinos inclui comunicação CAN?",
+            "options": [
+                "ISO 1185",
+                "SAE J560",
+                "ISO 12098",
+                "ISO 7638"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que permite o sistema EBS (Electronic Braking System) comunicar com o trailer?",
+            "options": [
+                "Apenas cabos de alimentação",
+                "Comunicação CAN",
+                "Apenas sinais de luz",
+                "Sistema Bluetooth"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função do pino 1 nos padrões ISO 1185 e ISO 12098?",
+            "options": [
+                "Farol esquerdo",
+                "Terra",
+                "Luz de ré",
+                "Sinal direito"
+            ],
+            "correct": 1
+        }
+    ]
+}

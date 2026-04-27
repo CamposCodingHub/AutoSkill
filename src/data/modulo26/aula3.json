@@ -1,0 +1,86 @@
+{
+    "title": "Novas Arquiteturas Elétricas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Novas arquiteturas elétricas estão redefinindo o design de sistemas veiculares, com distribuição de alta tensão, smart grids, e integração total de sistemas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Arquiteturas Emergentes",
+            "text": "Smart grids veiculares, distribuição em 48V, sistemas modulares, e arquiteturas baseadas em domínio."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos integram: múltiplos níveis de tensão, gerenciamento inteligente de energia, e comunicação em tempo real entre componentes."
+        },
+        {
+            "type": "table",
+            "headers": ["Arquitetura", "Características", "Aplicações"],
+            "rows": [
+                ["48V Mild Hybrid", "Eficiência melhorada", "Veículos leves"],
+                ["800V Performance", "Alta potência", "VEs premium"],
+                ["Distribuída", "Redução de peso", "Veículos modernos"],
+                ["Modular", "Flexibilidade", "Plataformas compartilhadas"],
+                ["Smart Grid", "Otimização", "Frotas inteligentes"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Gerenciamento térmico, segurança em alta tensão, compatibilidade eletromagnética, e complexidade crescente."
+        },
+        {
+            "type": "text",
+            "value": "O futuro inclui: arquiteturas reconfiguráveis, distribuição baseada em demanda, e integração total com sistemas de energia."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Padrões e Protocolos",
+            "text": "Novos padrões para comunicação, segurança, e interoperabilidade entre sistemas elétricos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Arquiteturas Elétricas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual arquitetura oferece melhor eficiência para hybrids leves?",
+            "options": [
+                "12V tradicional",
+                "24V",
+                "48V mild hybrid",
+                "800V performance"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual arquitetura é usada em VEs premium para alta potência?",
+            "options": [
+                "12V tradicional",
+                "24V",
+                "48V mild hybrid",
+                "800V performance"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Por que arquiteturas modulares são importantes?",
+            "options": [
+                "Apenas estética",
+                "Oferecem flexibilidade para plataformas compartilhadas",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

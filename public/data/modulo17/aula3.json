@@ -1,0 +1,86 @@
+{
+    "title": "Ferramentas de Programação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Ferramentas de programação de ECU variam desde scanners básicos até sistemas profissionais dedicados. Cada ferramenta tem capacidades específicas e limitações importantes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Categorias",
+            "text": "OEM scanners, J2534 pass-thru, ferramentas de tuning, e sistemas de recuperação/emergência."
+        },
+        {
+            "type": "text",
+            "value": "J2534 é o padrão SAE para interface de programação universal. Permite comunicação com múltiplos protocolos através de hardware padronizado."
+        },
+        {
+            "type": "table",
+            "headers": ["Ferramenta", "Capacidade", "Protocolos", "Custo"],
+            "rows": [
+                ["Scanner OEM", "Completo", "CAN/K-Line/LIN", "Alto"],
+                ["J2534", "Universal", "Múltiplos", "Médio"],
+                ["Tuning Tool", "Especializada", "CAN", "Alto"],
+                ["Bench Flasher", "Recuperação", "Bootloader", "Médio"],
+                ["OBD Programmer", "Básico", "CAN", "Baixo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Compatibilidade",
+            "text": "Verifique compatibilidade da ferramenta com o veículo específico. Nem todas as ECUs são programáveis com todas as ferramentas."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas profissionais incluem recursos como backup automático, verificação de integridade, e recuperação de falhas durante o processo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Software vs Hardware",
+            "text": "Hardware J2534 + software específico = sistema completo. Hardware pode ser reutilizado com diferentes softwares."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Ferramentas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual padrão SAE define interface universal de programação?",
+            "options": [
+                "OBD-II",
+                "J1939",
+                "J2534",
+                "ISO 9141"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta oferece capacidade completa para programação OEM?",
+            "options": [
+                "OBD Programmer",
+                "Scanner OEM",
+                "Bench Flasher",
+                "Multímetro"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que permite o hardware J2534?",
+            "options": [
+                "Apenas ler códigos de falha",
+                "Ser reutilizado com diferentes softwares",
+                "Apenas medir voltagem",
+                "Apenas testar sensores"
+            ],
+            "correct": 1
+        }
+    ]
+}

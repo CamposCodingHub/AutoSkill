@@ -1,0 +1,85 @@
+{
+    "title": "Faróis Adaptativos e Matrix",
+    "content": [
+        {
+            "type": "text",
+            "value": "Faróis adaptativos e Matrix representam o futuro da iluminação automotiva, usando LEDs controlados individualmente para criar padrões de luz dinâmicos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologia Matrix",
+            "text": "Milhares de LEDs controlados individualmente permitem criar feixes de luz precisos e adaptados em tempo real."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas adaptativos ajustam direção, intensidade e padrão da luz baseado em velocidade, direção, e condições da estrada."
+        },
+        {
+            "type": "table",
+            "headers": ["Função", "Como Funciona", "Benefício"],
+            "rows": [
+                ["Adaptive Front-lighting", "Ajusta direção luz", "Melhor visibilidade curvas"],
+                ["Glare-free High Beam", "Apaga LEDs específicos", "Evita ofuscamento"],
+                ["Matrix Light", "Controla cada LED", "Feixes precisos"],
+                ["Cornering Light", "Iluminação lateral", "Segurança em curvas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Complexidade e Custo",
+            "text": "Sistemas Matrix são complexos e caros. Requerem calibração especializada e diagnóstico avançado."
+        },
+        {
+            "type": "text",
+            "value": "Integração com câmeras, GPS e sensores permite resposta automática a diferentes situações de condução."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Requer scanners específicos e software do fabricante. Falhas podem requerer recalibração completa."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Faróis Adaptativos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quantos LEDs um sistema Matrix típico usa?",
+            "options": [
+                "50-100 LEDs",
+                "500-1000 LEDs",
+                "2000-5000 LEDs",
+                "10000+ LEDs"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função dos faróis Matrix adaptativos?",
+            "options": [
+                "Apenas aumentar o brilho total",
+                "Projetar diferentes padrões de luz e evitar ofuscamento",
+                "Reduzir o consumo de energia",
+                "Melhorar a estética do veículo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como os faróis Matrix detectam outros veículos?",
+            "options": [
+                "Apenas com câmera frontal",
+                "Com câmera e sensores de luz",
+                "Com radar e laser",
+                "Apenas com GPS"
+            ],
+            "correct": 1
+        }
+    ]
+}

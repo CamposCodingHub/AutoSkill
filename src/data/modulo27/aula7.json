@@ -1,0 +1,86 @@
+{
+    "title": "Mercado de Tuning",
+    "content": [
+        {
+            "type": "text",
+            "value": "O mercado de tuning é um nicho lucrativo que combina modificação estética com melhorias de performance, exigindo conhecimentos especializados em eletrônica e customização."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Áreas de Tuning",
+            "text": "Performance, estética, áudio, iluminação, e eletrônica customizada. Cada uma com mercado específico."
+        },
+        {
+            "type": "text",
+            "value": "Tuning profissional envolve: modificações eletrônicas, instalação de componentes customizados, e programação avançada de sistemas."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Modificação", "Mercado"],
+            "rows": [
+                ["Performance", "ECU tuning, turbos", "Entusiastas de potência"],
+                ["Estética", "LEDs, iluminação custom", "Jovens e customização"],
+                ["Áudio", "Sistemas premium", "Audiófilos automotivos"],
+                ["Eletrônica", "Displays, sensores", "Tecnólogos"],
+                ["Interior", "Iluminação ambiente", "Customização de interior"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Integração de sistemas, programação avançada, e conformidade com regulamentações."
+        },
+        {
+            "type": "text",
+            "value": "Profissionais de tuning precisam dominar: eletrônica avançada, programação, design de iluminação, e instalação customizada."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Alta demanda por modificações personalizadas. Especialização em nichos específicos aumenta o valor."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Mercado de Tuning"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual área de tuning tem maior demanda entre jovens?",
+            "options": [
+                "Performance extrema",
+                "Estética e iluminação custom",
+                "Áudio profissional",
+                "Tuning de motor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual modificação é focada em entusiastas de potência?",
+            "options": [
+                "Iluminação ambiente",
+                "ECU tuning e turbos",
+                "Áudio premium",
+                "Displays custom"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a especialização em nichos aumenta o valor?",
+            "options": [
+                "Apenas burocracia",
+                "Permite cobrar valores premium por serviços especializados",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

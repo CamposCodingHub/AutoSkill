@@ -1,0 +1,86 @@
+{
+    "title": "Sistemas de Áudio",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de áudio automotivos evoluíram de rádios AM/FM simples para sistemas complexos com múltiplos alto-falantes, subwoofers, amplificadores e processamento digital de sinal."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Head unit, amplificadores, alto-falantes, subwoofers, processadores de sinal e equalizadores."
+        },
+        {
+            "type": "text",
+            "value": "A qualidade do som depende de múltiplos fatores: qualidade dos componentes, instalação correta, acústica do veículo e calibração do sistema."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Especificação Típica"],
+            "rows": [
+                ["Head Unit", "Fonte de áudio e controle", "4x50W, processamento DSP"],
+                ["Amplificador", "Potência adicional", "4-8 canais, 50-100W/canal"],
+                ["Alto-falantes", "Reprodução de frequências", "2-8 ohms, 20-100W RMS"],
+                ["Subwoofer", "Graves profundos", "4-8 ohms, 200-500W RMS"],
+                ["Processador", "Equalização e crossover", "DSP, ajuste digital"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Impedância e Potência",
+            "text": "Combine impedância corretamente (série/paralelo). Subwoofer em bridge dobra potência mas altera impedância."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem processamento digital com equalização paramétrica, crossover ativo, correção de tempo e calibração automática."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste cada componente individualmente. Verifique conexões, fusíveis e configurações do amplificador."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Sistemas de Áudio"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a impedância típica dos alto-falantes automotivos?",
+            "options": [
+                "1 ohm",
+                "2-8 ohms",
+                "16 ohms",
+                "32 ohms"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece quando você conecta um subwoofer em bridge no amplificador?",
+            "options": [
+                "A potência diminui",
+                "A potência dobra mas a impedância altera",
+                "A impedância aumenta muito",
+                "Não há diferença"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é responsável pela equalização e crossover em sistemas modernos?",
+            "options": [
+                "Apenas a head unit",
+                "Processador DSP",
+                "Apenas os alto-falantes",
+                "A bateria do veículo"
+            ],
+            "correct": 1
+        }
+    ]
+}

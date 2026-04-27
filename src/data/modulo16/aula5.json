@@ -1,0 +1,86 @@
+{
+    "title": "Análise de Comunicação CAN Bus",
+    "content": [
+        {
+            "type": "text",
+            "value": "A análise de sinais CAN bus com osciloscópio permite diagnosticar problemas de comunicação, terminação, ruído e integridade dos sinais digitais que scanners não detectam."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Sinais CAN Diferenciais",
+            "text": "CAN-H (2.5-3.5V) e CAN-L (2.5-1.5V). Sinais complementares com transições limpas e simétricas."
+        },
+        {
+            "type": "text",
+            "value": "Use trigger em CAN-H ou CAN-L com modo normal. Verifique amplitude, ruído, reflexões e tempo de subida/descida dos sinais."
+        },
+        {
+            "type": "table",
+            "headers": ["Parâmetro", "Normal", "Indica Problema"],
+            "rows": [
+                ["Amplitude", "2-3V pico a pico", "Baixa = terminação ruim"],
+                ["Transições", "Limpeza, simetria", "Ruído = interferência"],
+                ["Tempo subida", "<100ns", "Lento = problemas físicos"],
+                ["Nível idle", "2.5V ambos", "Offset = terra ruim"],
+                ["Atividade", "Frames visíveis", "Sem sinal = bus off"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Problemas Comuns",
+            "text": "Reflexões por terminação incorreta, ruído EMI, curtos entre fios, e módulos em modo bus off."
+        },
+        {
+            "type": "text",
+            "value": "Use math function para calcular CAN-H - CAN-L e visualizar sinal diferencial. Isso revela problemas que não são visíveis em canais individuais."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Decodificação CAN",
+            "text": "Osciloscópios avançados podem decodificar frames CAN, mostrando IDs, dados e timestamps para análise detalhada."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de CAN Bus"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a amplitude esperada entre CAN-H e CAN-L em operação normal?",
+            "options": [
+                "1-2V",
+                "2-3V",
+                "5-12V",
+                "0.5-1V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o nível idle esperado para CAN-H e CAN-L?",
+            "options": [
+                "0V",
+                "5V",
+                "2.5V ambos",
+                "12V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica amplitude baixa nos sinais CAN?",
+            "options": [
+                "Terminação ruim",
+                "Sistema funcionando perfeitamente",
+                "Bateria muito forte",
+                "Motor desligado"
+            ],
+            "correct": 0
+        }
+    ]
+}

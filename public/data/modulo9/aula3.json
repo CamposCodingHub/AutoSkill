@@ -1,0 +1,84 @@
+{
+    "title": "Drivers de Potência e Estágios de Saída",
+    "content": [
+        {
+            "type": "text",
+            "value": "Drivers de potência são estágios que isolam o microcontrolador das cargas de alta corrente como injetores, bobinas de ignição e relés. Protegem o processador e fornecem corrente adequada aos atuadores."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função",
+            "text": "Converte sinais lógicos de baixa potência do microcontrolador em corrente suficiente para acionar cargas indutivas."
+        },
+        {
+            "type": "text",
+            "value": "Existem diferentes tipos de drivers: low-side (aterram a carga), high-side (alimentam a carga), e H-bridge (controle bidirecional). Cada um tem aplicações específicas."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Configuração", "Aplicação", "Proteção"],
+            "rows": [
+                ["Low-side", "Transistor NPN/MOSFET para terra", "Injetores, bobinas", "Clamp diodo"],
+                ["High-side", "Transistor PNP/MOSFET para +12V", "Relés, solenoides", "Current limit"],
+                ["H-bridge", "4 transistores em ponte", "Motores DC, válvulas", "Shoot-through protection"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Proteções",
+            "text": "Drivers incluem proteções contra curto, sobretemperatura, sobre-corrente e transientes de carga indutiva."
+        },
+        {
+            "type": "text",
+            "value": "Falha em driver pode causar sintomas específicos: driver queimado = atuador não funciona; driver em curto = pode derrubar a ECU inteira."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste de drivers envolve medida de resistência, verificação de sinais com osciloscópio e testes de carga controlada."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Drivers"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de driver é mais comum para controle de injetores?",
+            "options": [
+                "High-side",
+                "H-bridge", 
+                "Low-side",
+                "Linear"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do driver low-side para injetores?",
+            "options": [
+                "Maior precisão de controle",
+                "Menor custo e simplicidade de implementação",
+                "Maior imunidade a ruído",
+                "Menor consumo de energia"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como um driver low-side controla um injetor?",
+            "options": [
+                "Controlando a alimentação positiva do injetor",
+                "Controlando o terra (negativo) do injetor",
+                "Variando a resistência do injetor",
+                "Modulando a pressão do combustível"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Chaves Imobilizadoras",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas imobilizadores usam chaves eletrônicas com transponders que se comunicam com a ECU para autorizar partida. Programação envolve sincronizar chaves, módulos e ECU."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes",
+            "text": "Chave com transponder, módulo imobilizador, antena de leitura, e ECU com função de segurança."
+        },
+        {
+            "type": "text",
+            "value": "O transponder na chave responde ao desafio da ECU com código único. Se o código for reconhecido, a ECU permite partida e injeção de combustível."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Tecnologia", "Segurança"],
+            "rows": [
+                ["Fix Code", "Código fixo", "Baixa"],
+                ["Crypto", "Criptografia rolling", "Média"],
+                ["RFID", "Radiofrequência", "Baixa"],
+                ["Smart Key", "Cripto + rolling", "Alta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimentos de Programação",
+            "text": "Requer ferramentas específicas, códigos de segurança, e procedimentos do fabricante. Cada marca tem método diferente."
+        },
+        {
+            "type": "text",
+            "value": "Programação de novas chaves requer acesso ao sistema, senhas do fabricante, e sincronização com todos os componentes do sistema."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Problemas Comuns",
+            "text": "Perda de chaves, falha no transponder, problemas na antena, e dessincronização entre componentes."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema Imobilizador"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia oferece maior segurança em sistemas imobilizadores?",
+            "options": [
+                "Fix Code",
+                "Crypto rolling code",
+                "RFID básico",
+                "Código simples"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que o transponder na chave faz?",
+            "options": [
+                "Apenas emite luz",
+                "Responde ao desafio da ECU com código único",
+                "Apenas abre a porta",
+                "Apenas liga o rádio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quais componentes compõem o sistema imobilizador?",
+            "options": [
+                "Apenas a chave",
+                "Chave com transponder, módulo imobilizador, antena de leitura e ECU",
+                "Apenas a bateria",
+                "Apenas o motor"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Tipos de Lâmpadas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Lâmpadas automotivas evoluíram significativamente, oferecendo diferentes tecnologias com vantagens específicas para cada aplicação."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologias Principais",
+            "text": "Halógenas, Xenon/HID, LED, e Laser. Cada uma com características de eficiência, durabilidade e performance."
+        },
+        {
+            "type": "text",
+            "value": "Halógenas são as mais tradicionais, Xenon oferecem maior brilho, LEDs são mais eficientes, e Laser representam o futuro da iluminação."
+        },
+        {
+            "type": "table",
+            "headers": ["Tecnologia", "Eficiência", "Vida Útil", "Aplicação"],
+            "rows": [
+                ["Halógena", "15-25 lm/W", "500-1000 horas", "Padrão, econômico"],
+                ["Xenon/HID", "80-120 lm/W", "2000-3000 horas", "Alta performance"],
+                ["LED", "100-200 lm/W", "10000+ horas", "Moderno, eficiente"],
+                ["Laser", "200+ lm/W", "10000+ horas", "Futuro, premium"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança na Substituição",
+            "text": "Use luvas e óculos de proteção. Lâmpadas Xenon operam em alta tensão (>20kV)."
+        },
+        {
+            "type": "text",
+            "value": "A escolha da tecnologia depende do veículo, regulamentações, e preferência do motorista."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Regulamentações",
+            "text": "Verifique legislação local para uso de diferentes tecnologias. Algumas têm restrições específicas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Lâmpadas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia tem maior eficiência luminosa?",
+            "options": [
+                "Halógena",
+                "Xenon",
+                "LED",
+                "Laser"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem das luzes LED em veículos modernos?",
+            "options": [
+                "Maior consumo de energia",
+                "Menor durabilidade",
+                "Menor consumo de energia e maior durabilidade",
+                "Maior geração de calor"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia de iluminação requer sistema de nivelamento automático obrigatório?",
+            "options": [
+                "Halógena",
+                "LED",
+                "Xenon",
+                "Laser"
+            ],
+            "correct": 2
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Procedimentos de Trabalho Seguro",
+    "content": [
+        {
+            "type": "text",
+            "value": "Procedimentos de trabalho seguro são essenciais para prevenir acidentes em oficinas automotivas, estabelecendo padrões para todas as atividades."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "PROCEDIMENTOS CRÍTICOS",
+            "text": "1. LOCKOUT/TAGOUT 2. Verificação de ausência de tensão 3. Uso de EPI completo 4. Permissão de trabalho."
+        },
+        {
+            "type": "text",
+            "value": "Procedimentos seguros devem ser seguidos rigorosamente, sem exceções. A segurança é mais importante que a velocidade do trabalho."
+        },
+        {
+            "type": "table",
+            "headers": ["Procedimento", "Passos", "Quando Aplicar"],
+            "rows": [
+                ["Lockout/Tagout", "Desconectar, travar, etiquetar", "Trabalho em circuitos energizados"],
+                ["Teste Zero Energia", "Verificar ausência tensão", "Antes de tocar em componentes"],
+                ["Permissão Trabalho", "Autorização formal", "Trabalhos de risco"],
+                ["Inspeção Área", "Verificar condições", "Início de qualquer trabalho"],
+                ["Acompanhamento", "Trabalho em dupla", "Trabalhos em alta tensão"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Comunicação Essencial",
+            "text": "Comunique todos os procedimentos à equipe. Verifique entendimento antes de iniciar qualquer trabalho."
+        },
+        {
+            "type": "text",
+            "value": "Procedimentos devem ser documentados, treinados, e atualizados regularmente. Todos devem conhecer e seguir."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Supervisão",
+            "text": "Trabalhos de risco devem ter supervisão adequada. Não trabalhe sozinho em situações perigosas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Procedimentos Seguros"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no lockout/tagout?",
+            "options": [
+                "Testar ausência de tensão",
+                "Desconectar e travar energia",
+                "Colocar EPI",
+                "Iniciar trabalho"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quando é necessário permissão de trabalho?",
+            "options": [
+                "Apenas para trabalhos simples",
+                "Trabalhos de risco",
+                "Nunca é necessário",
+                "Apenas para gerentes"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que comunicar procedimentos à equipe?",
+            "options": [
+                "Apenas burocracia",
+                "Verificar entendimento antes de iniciar trabalho",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

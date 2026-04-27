@@ -1,0 +1,98 @@
+{
+    "title": "Solenoide de Purge (Cânister EVAP)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O solenoide de purge do sistema EVAP (Evaporative Emission System) controla a passagem dos vapores de combustível do cânister de carvão ativado para o coletor de admissão, sob comando direto da ECU."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função Ambiental",
+            "text": "Impede que vapores de combustível escapem para a atmosfera, queimando-os de forma controlada no motor."
+        },
+        {
+            "type": "text",
+            "value": "Com o motor em funcionamento e nas condições adequadas (temperatura, carga, velocidade), a ECU energiza o solenoide e admite os vapores já diluídos para serem queimados na combustão."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importante",
+            "text": "Testes de vazamento do sistema (smoke machine, pressão) são distintos do teste do atuador em si."
+        },
+        {
+            "type": "text",
+            "value": "Para testar o solenoide com multímetro, meça a resistência da bobina. O valor típico fica na faixa de dezenas de ohms - sempre consulte o manual específico do veículo."
+        },
+        {
+            "type": "table",
+            "headers": ["Condição", "Resistência", "Diagnóstico"],
+            "rows": [
+                ["Normal", "20-80 Ω (típico)", "Solenoide funcional"],
+                ["Circuito Aberto", "∞ Ω", "Nunca abre - MIL acesa"],
+                ["Curto Circuito", "0 Ω", "Pode derrubar driver da ECU"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Atenção ao Medir",
+            "text": "Com ignição ligada, um lado do conector pode mostrar 'refresco' da ECU (pulso) - interprete com cuidado para não danificar o equipamento."
+        },
+        {
+            "type": "text",
+            "value": "O método mais seguro para testar o atuador é através do scanner com função de teste de saída (output test)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Teste por Scanner",
+            "text": "Em 'Output Test' > 'EVAP Purge', ouve-se o clique do solenoide e a RPM pode oscilar levemente se o vapor chegar ao motor - confirma que o driver funciona até o conector."
+        },
+        {
+            "type": "text",
+            "value": "Sintomas comuns de falha no solenoide de purge incluem mistura rica/ pobre instável, odor de combustível, MIL acesa com código P0443, e dificuldade na partida a quente."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Teste de Solenoide EVAP"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se o solenoide de purge ficar travado aberto?",
+            "options": [
+                "Motor não pega",
+                "Mistura excessivamente rica com odor de combustível",
+                "Aumenta a potência do motor",
+                "Não afeta o funcionamento"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do solenoide de purge EVAP?",
+            "options": [
+                "Controlar a pressão do combustível",
+                "Direcionar vapores de combustível do tanque para o motor",
+                "Regular a temperatura do motor",
+                "Controlar a rotação de marcha lenta"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa um solenoide de purge com multímetro?",
+            "options": [
+                "Medindo a resistência da bobina",
+                "Verificando a pressão do combustível",
+                "Testando a continuidade com o motor ligado",
+                "Medindo a voltagem da bateria"
+            ],
+            "correct": 0
+        }
+    ]
+}

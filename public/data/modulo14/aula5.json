@@ -1,0 +1,86 @@
+{
+    "title": "Iluminação Pesada e Sinalização",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de iluminação em veículos pesados são projetados para máxima visibilidade e durabilidade, operando em 24V com componentes robustos e múltiplas funções de segurança."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Características",
+            "text": "Lâmpadas de maior potência, refletores grandes, sistemas de limpeza automática e sinalização intensificada."
+        },
+        {
+            "type": "text",
+            "value": "Faróis de caminhões usam lâmpadas H4/H7 de 55-70W ou sistemas LED/HID de maior intensidade. Sistemas modernos incluem ajuste automático de altura e luzes de curva."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Potência Típica", "Função"],
+            "rows": [
+                ["Faróis principais", "55-70W cada", "Iluminação longa distância"],
+                ["Faróis de neblina", "35-55W cada", "Penetração em mau tempo"],
+                ["Luzes de posição", "5-10W cada", "Visibilidade lateral"],
+                ["Luzes de freio", "21-35W cada", "Sinalização de parada"],
+                ["Luzes de reversão", "16-21W cada", "Iluminação traseira"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sistemas LED",
+            "text": "LEDs consomem menos energia mas requerem drivers específicos e dissipadores de calor. Não podem ser substituídos diretamente por lâmpadas incandescentes."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de sinalização incluíam luzes intermitentes de alta visibilidade, luzes de alerta e refletores obrigatórios para segurança em estradas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Verifique continuidade e tensão. Em sistemas LED, teste drivers e dissipadores. Verifique reguladores de voltagem."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Iluminação Pesada"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a potência típica de faróis principais em caminhões?",
+            "options": [
+                "35W cada",
+                "55-70W cada",
+                "100W cada",
+                "150W cada"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que LEDs não podem ser substituídos diretamente por lâmpadas incandescentes?",
+            "options": [
+                "Porque são mais caros",
+                "Porque requerem drivers específicos e dissipadores de calor",
+                "Porque não brilham o suficiente",
+                "Porque consomem mais energia"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual voltagem os sistemas de iluminação em veículos pesados tipicamente operam?",
+            "options": [
+                "12V",
+                "24V",
+                "48V",
+                "110V"
+            ],
+            "correct": 1
+        }
+    ]
+}

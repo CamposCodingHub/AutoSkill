@@ -1,0 +1,86 @@
+{
+    "title": "Sustentabilidade e Inovação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sustentabilidade e inovação estão transformando a indústria automotiva, com foco em economia circular, materiais sustentáveis, e processos de produção mais limpos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Principais Tendências",
+            "text": "Economia circular, materiais reciclados, produção com baixo carbono, e logística reversa."
+        },
+        {
+            "type": "text",
+            "value": "A eletricidade automotiva do futuro será baseada em: componentes recicláveis, manufatura aditiva, e sistemas de gerenciamento de fim de vida."
+        },
+        {
+            "type": "table",
+            "headers": ["Tecnologia", "Benefício", "Impacto"],
+            "rows": [
+                ["Baterias Recicláveis", "Redução de lixo", "Economia circular"],
+                ["Manufatura Aditiva", "Peças sob demanda", "Redução de estoque"],
+                ["Bioplásticos", "Biodegradáveis", "Menor poluição"],
+                ["Energia Solar", "Fonte limpa", "Redução de carbono"],
+                ["Logística Reversa", "Reaproveitamento", "Sustentabilidade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Regulamentações Ambientais",
+            "text": "Normas mais rígidas, metas de carbono, e relatórios de sustentabilidade obrigatórios."
+        },
+        {
+            "type": "text",
+            "value": "O futuro exige profissionais com conhecimento em: análise de ciclo de vida, gestão de resíduos, e otimização ambiental."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Especialização em sustentabilidade, consultoria ambiental, e desenvolvimento de tecnologias verdes."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sustentabilidade"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia permite manufatura de peças sob demanda?",
+            "options": [
+                "Injeção tradicional",
+                "Manufatura aditiva",
+                "Estampagem",
+                "Fundição"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual material é biodegradável?",
+            "options": [
+                "Plástico tradicional",
+                "Bioplásticos",
+                "Alumínio",
+                "Aço"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a logística reversa é importante?",
+            "options": [
+                "Apenas burocracia",
+                "Permite reaproveitamento e sustentabilidade",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

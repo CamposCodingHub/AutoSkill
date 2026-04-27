@@ -1,0 +1,90 @@
+{
+    "title": "OBD-II e Diagnóstico Padronizado",
+    "content": [
+        {
+            "type": "text",
+            "value": "OBD-II (On-Board Diagnostics II) padronizou o conector de diagnóstico e protocolos de comunicação. O conector de 16 pinos (SAE J1962) define pinos mínimos para alimentação e CAN de diagnóstico em veículos recentes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Padronização",
+            "text": "Modos SAE J1979 definem o que pedir e como interpretar as respostas dos módulos eletrônicos."
+        },
+        {
+            "type": "text",
+            "value": "O conector OBD-II localiza-se sob o painel, lado do motorista, e deve ser acessível sem ferramentas. Pinos essenciais incluem alimentação, terra e linhas de comunicação."
+        },
+        {
+            "type": "table",
+            "headers": ["Pino", "Função", "Protocolo"],
+            "rows": [
+                ["4, 5", "Terra (Chassi)", "Todos"],
+                ["16", "Alimentação +12V", "Todos"],
+                ["6, 14", "CAN-H, CAN-L", "ISO 15765-4"],
+                ["7", "K-Line", "ISO 9141-2"],
+                ["15", "L-Line", "ISO 9141-2"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Modos de Diagnóstico",
+            "text": "Modo $01: Dados em tempo real. Modo $03: DTCs armazenados. Modo $04: Limpar DTCs. Modo $05: Testes de O2."
+        },
+        {
+            "type": "text",
+            "value": "PIDs (Parameter IDs) são identificadores numéricos que solicitam dados específicos. PID $01 calcula RPM, $04 carga do motor, $05 temperatura do líquido, $0C RPM do motor."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Evolução dos Protocolos",
+            "text": "Veículos mais antigos usam K-Line, intermediários PWM/VPW, modernos CAN. Scanner deve suportar múltiplos protocolos."
+        },
+        {
+            "type": "text",
+            "value": "DTCs (Diagnostic Trouble Codes) seguem formato SAE J2012: Primeiro caractere indica sistema (P=Powertrain, B=Body, C=Chassis, U=Network)."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Teste de Pinos OBD-II"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quais pinos do conector OBD-II são usados para comunicação CAN em veículos modernos?",
+            "options": [
+                "4 e 5",
+                "7 e 15",
+                "6 e 14",
+                "2 e 10"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função dos pinos 4 e 5 no conector OBD-II?",
+            "options": [
+                "Comunicação CAN",
+                "Alimentação 12V",
+                "Terra (ground)",
+                "Sinal K-Line"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual pino do OBD-II fornece alimentação 12V permanente?",
+            "options": [
+                "Pino 4",
+                "Pino 7",
+                "Pino 16",
+                "Pino 2"
+            ],
+            "correct": 2
+        }
+    ]
+}

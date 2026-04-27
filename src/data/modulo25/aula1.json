@@ -1,0 +1,86 @@
+{
+    "title": "Certificações Profissionais",
+    "content": [
+        {
+            "type": "text",
+            "value": "Certificações profissionais são essenciais para validar competências em eletricidade automotiva, abrindo portas no mercado de trabalho e demonstrando qualificação técnica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Principais Certificações",
+            "text": "INMETRO, SENAI, ABNT, e certificações internacionais como ASE (EUA) e IMI (Europa)."
+        },
+        {
+            "type": "text",
+            "value": "Certificações validam conhecimento teórico e prático, exigem atualização constante, e são reconhecidas nacional e internacionalmente."
+        },
+        {
+            "type": "table",
+            "headers": ["Certificação", "Instituição", "Validade", "Requisitos"],
+            "rows": [
+                ["INMETRO", "INMETRO", "5 anos", "Exame teórico + prático"],
+                ["SENAI", "SENAI", "Específica", "Curso completo + prova"],
+                ["ASE (EUA)", "ASE", "5 anos", "Exame internacional"],
+                ["IMI (Europa)", "IMI", "3 anos", "Exame europeu"],
+                ["ABNT", "ABNT", "Variável", "Normas específicas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Preparação Essencial",
+            "text": "Estude o conteúdo programado, faça simulados, e pratique em laboratório antes das provas."
+        },
+        {
+            "type": "text",
+            "value": "Certificações aumentam empregabilidade, salários, e credibilidade profissional. São investimentos que retornam rapidamente."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Manutenção da Certificação",
+            "text": "Participe de cursos de atualização, mantenha-se informado sobre novas tecnologias, e renove antes do vencimento."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Certificações"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual certificação é reconhecida internacionalmente?",
+            "options": [
+                "INMETRO",
+                "SENAI",
+                "ASE",
+                "ABNT"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a validade da certificação INMETRO?",
+            "options": [
+                "1 ano",
+                "3 anos",
+                "5 anos",
+                "10 anos"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que participar de cursos de atualização?",
+            "options": [
+                "Apenas burocracia",
+                "Manter certificação e atualizar conhecimentos",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

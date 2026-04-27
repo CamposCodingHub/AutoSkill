@@ -1,0 +1,86 @@
+{
+    "title": "Osciloscópio Automotivo",
+    "content": [
+        {
+            "type": "text",
+            "value": "Osciloscópio é a ferramenta mais poderosa para diagnóstico avançado, permitindo visualizar formas de onda, analisar sinais digitais, e identificar problemas que multímetros não detectam."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Vantagens sobre Multímetro",
+            "text": "Visualiza forma de onda, mede frequência, detecta ruído, analisa sinais digitais, identifica problemas intermitentes."
+        },
+        {
+            "type": "text",
+            "value": "Para uso automotivo, escolha osciloscópio com bandwidth mínimo 20MHz, 2-4 canais, taxa de amostragem >100MSa/s, e memória profunda (>2M pontos)."
+        },
+        {
+            "type": "table",
+            "headers": ["Especificação", "Mínima", "Recomendada", "Profissional"],
+            "rows": [
+                ["Bandwidth", "20MHz", "50MHz", "100MHz+"],
+                ["Taxa Amostragem", "100MSa/s", "250MSa/s", "1GSa/s+"],
+                ["Canais", "2", "4", "4+"],
+                ["Memória", "2M pontos", "10M pontos", "14M pontos+"],
+                ["Tensão", "±40V", "±100V", "±600V"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Configuração Essencial",
+            "text": "Trigger correto, escala adequada, aterramento seguro, e probes calibrados são fundamentais para medições precisas."
+        },
+        {
+            "type": "text",
+            "value": "Aplicações principais incluem: análise de sinais de sensores (CKP, MAP, MAF), diagnóstico de ignição (primária/secundária), análise de comunicação CAN, e teste de atuadores."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Técnicas Avançadas",
+            "text": "Use trigger por largura de pulso, math functions para FFT, XY mode para comparação, e averaging para reduzir ruído."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Osciloscópio"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o bandwidth mínimo recomendado para diagnóstico automotivo?",
+            "options": [
+                "5MHz",
+                "20MHz",
+                "100MHz",
+                "500MHz"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do osciloscópio de duplo canal no diagnóstico automotivo?",
+            "options": [
+                "Medir duas tensões simultaneamente",
+                "Economizar espaço na oficina",
+                "Reduzir o consumo de energia",
+                "Aumentar a precisão das medições"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o trigger é importante no uso do osciloscópio?",
+            "options": [
+                "Para estabilizar a forma de onda na tela",
+                "Para aumentar a velocidade de captura",
+                "Para reduzir o consumo de bateria",
+                "Para melhorar a resolução vertical"
+            ],
+            "correct": 0
+        }
+    ]
+}

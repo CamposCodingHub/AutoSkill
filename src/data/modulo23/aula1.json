@@ -1,0 +1,86 @@
+{
+    "title": "Montagem do Laboratório",
+    "content": [
+        {
+            "type": "text",
+            "value": "Um laboratório prático bem equipado é essencial para o desenvolvimento de habilidades em eletricidade automotiva, permitindo testes seguros e aprendizado hands-on."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Equipamentos Essenciais",
+            "text": "Fonte de alimentação variável, bancada de testes, multimetros, osciloscópio, e ferramentas de segurança."
+        },
+        {
+            "type": "text",
+            "value": "O laboratório deve ter área de trabalho segura, iluminação adequada, ventilação, e organização eficiente de ferramentas e componentes."
+        },
+        {
+            "type": "table",
+            "headers": ["Equipamento", "Especificação", "Aplicação"],
+            "rows": [
+                ["Fonte Variável", "0-30V, 5A", "Simulação sistemas veiculares"],
+                ["Bancada Testes", "Múltiplos circuitos", "Teste componentes"],
+                ["Multímetros", "CAT III 600V", "Medições gerais"],
+                ["Osciloscópio", "50MHz+, 4 canais", "Análise de sinais"],
+                ["Ferramentas", "Profissionais", "Montagem/reparo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança no Laboratório",
+            "text": "Use EPI completo, mantenha área organizada, e tenha extintor e kit primeiros socorros acessíveis."
+        },
+        {
+            "type": "text",
+            "value": "Organize componentes em caixas etiquetadas, mantenha inventário atualizado, e crie procedimentos padrão para cada tipo de teste."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Documentação",
+            "text": "Registre todos os experimentos, resultados, e aprendizados. Crie um portfólio de projetos práticos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Laboratório"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a voltagem máxima recomendada para fonte de laboratório automotivo?",
+            "options": [
+                "12V",
+                "24V",
+                "30V",
+                "48V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria de segurança deve ter multímetros para uso automotivo?",
+            "options": [
+                "CAT I",
+                "CAT II",
+                "CAT III 600V",
+                "CAT IV"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante documentar todos os experimentos no laboratório?",
+            "options": [
+                "Apenas burocracia",
+                "Criar portfólio de projetos e registrar aprendizados",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

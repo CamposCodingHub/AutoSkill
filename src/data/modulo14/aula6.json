@@ -1,0 +1,85 @@
+{
+    "title": "Sistemas de Trailer e Acoplamento",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de acoplamento e trailer em veículos pesados envolvem conexões mecânicas, pneumáticas, elétricas e eletrônicas para operação segura e integrada entre caminhão e reboque."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Engate mecânico, conexões pneumáticas, elétricas (7/13 pinos), e sistemas eletrônicos de controle."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem acoplamentos automáticos, sensores de carga, controle eletrônico de freios e comunicação CAN bidirecional."
+        },
+        {
+            "type": "table",
+            "headers": ["Sistema", "Função", "Características"],
+            "rows": [
+                ["Engate Mecânico", "Conexão física", "Quinta roda, engates tipo anel"],
+                ["Pneumático", "Freios e suspensão", "Linhas de ar, válvulas protetoras"],
+                ["Elétrico", "Iluminação e comunicação", "7/13 pinos, CAN bus"],
+                ["Eletrônico", "Controle integrado", "EBS, TPMS, telemática"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "Verifique sempre o engate completo antes de mover. Use sistemas de verificação dupla e procedimentos de segurança."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas EBS (Electronic Braking System) permitem controle distribuído dos freios entre caminhão e trailer, com modulação individual e resposta em milissegundos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use scanner específico para sistemas de trailer. Verifique integridade das conexões e comunicação CAN."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistemas de Trailer"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema permite controle distribuído dos freios entre caminhão e trailer?",
+            "options": [
+                "ABS tradicional",
+                "EBS (Electronic Braking System)",
+                "Freios a ar manuais",
+                "Freios hidráulicos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de engate mecânico é mais comum em caminhões para reboques pesados?",
+            "options": [
+                "Engate tipo bola",
+                "Quinta roda",
+                "Engate magnético",
+                "Engate por gravidade"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que o sistema pneumático no acoplamento de trailer controla?",
+            "options": [
+                "Apenas a iluminação",
+                "Freios e suspensão",
+                "Apenas o sistema de áudio",
+                "Apenas o GPS"
+            ],
+            "correct": 1
+        }
+    ]
+}

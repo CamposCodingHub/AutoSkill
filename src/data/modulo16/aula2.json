@@ -1,0 +1,106 @@
+{
+  "id": 2,
+  "title": "Osciloscópio - Fundamentos e Aplicações",
+  "slug": "fundamentos-osciloscopio",
+  "content": [
+    {
+      "type": "text",
+      "value": "Para usar o osciloscópio efetivamente, você precisa entender seus fundamentos. A tela do osciloscópio mostra tensão no eixo Y e tempo no eixo X. Cada divisão vertical representa uma voltagem (volts/div) e cada divisão horizontal representa um período de tempo (tempo/div)."
+    },
+    {
+      "type": "callout",
+      "style": "tip",
+      "title": "Trigger - O Segredo do Osciloscópio",
+      "text": "O trigger é o que 'congela' a forma de onda na tela. Sem trigger, a imagem ficaria se movendo rapidamente. Ajuste o nível de trigger para um ponto estável do sinal para obter uma imagem clara."
+    },
+    {
+      "type": "text",
+      "value": "Em automóveis, os sinais mais comuns são: sinais analógicos de 0-5V (sensores), sinais PWM (atuadores), sinais digitais (comunicação), e sinais de alta tensão (ignição). Cada tipo requer configurações específicas do osciloscópio."
+    },
+    {
+      "type": "callout",
+      "style": "warning",
+      "title": "Atenção à Isolação",
+      "text": "Nunca conecte o terra do osciloscópio diretamente ao terra da bateria quando medir sinais flutuantes. Use sempre pontas de prova diferenciais ou isolação adequada para evitar curtos-circuitos."
+    }
+  ],
+  "table": {
+    "headers": ["Tipo de Sinal", "Faixa de Tensão", "Tempo/Div Recomendado", "Aplicação"],
+    "rows": [
+      ["Sensor MAP", "0-5V", "10-50ms", "Variação de pressão"],
+      ["Sensor TPS", "0.5-4.5V", "100-500ms", "Posição da borboleta"],
+      ["Sinal CKP", "0.5-50V", "2-10ms", "Rotação do motor"],
+      ["Injetor", "12V PWM", "1-5ms", "Pulso de injeção"],
+      ["Bobina Ignição", "200-400V", "1-5ms", "Faísca de ignição"]
+    ]
+  },
+  "simulator": {
+    "type": "WaveformAnalyzer",
+    "title": "Analisador de Formas de Onda",
+    "description": "Selecione diferentes tipos de sinais automotivos para análise",
+    "controls": [
+      {
+        "label": "Tipo de Sinal",
+        "type": "select",
+        "options": ["Senoidal", "Quadrada", "Triangular", "Dente de Serra", "PWM"],
+        "default": "Senoidal"
+      },
+      {
+        "label": "Frequência (Hz)",
+        "type": "range",
+        "min": 1,
+        "max": 1000,
+        "default": 50,
+        "unit": "Hz"
+      },
+      {
+        "label": "Amplitude (V)",
+        "type": "range",
+        "min": 0.5,
+        "max": 50,
+        "default": 5,
+        "unit": "V"
+      },
+      {
+        "label": "Duty Cycle (%)",
+        "type": "range",
+        "min": 10,
+        "max": 90,
+        "default": 50,
+        "unit": "%"
+      }
+    ]
+  },
+  "quiz": {
+    "question": "O que acontece se você configurar o tempo/div muito alto para medir um sinal rápido?",
+    "options": [
+      "O sinal aparecerá muito comprimido na tela",
+      "O sinal aparecerá muito alongado na tela",
+      "O osciloscópio não funcionará",
+      "O sinal desaparecerá completamente"
+    ],
+    "correct": 0
+  },
+  "quizzes": [
+    {
+      "question": "O que o trigger faz no osciloscópio?",
+      "options": [
+        "Aumenta a voltagem",
+        "'Congela' a forma de onda na tela",
+        "Desliga o equipamento",
+        "Reduz o ruído"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Qual é a faixa de tensão típica de sinais de sensores automotivos?",
+      "options": [
+        "0-1V",
+        "0-5V",
+        "12-24V",
+        "100-200V"
+      ],
+      "correct": 1
+    }
+  ]
+}

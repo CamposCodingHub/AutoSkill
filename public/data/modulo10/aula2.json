@@ -1,0 +1,85 @@
+{
+    "title": "ESP/ESC - Controle de Estabilidade",
+    "content": [
+        {
+            "type": "text",
+            "value": "O ESP (Electronic Stability Program) ou ESC (Electronic Stability Control) é um sistema avançado que detecta e corrige perda de tração do veículo, intervindo nos freios e motor para manter a estabilidade."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Diferença ABS vs ESP",
+            "text": "ABS controla travamento durante frenagem; ESP controla estabilidade em curvas e manobras evasivas."
+        },
+        {
+            "type": "text",
+            "value": "O ESP utiliza múltiplos sensores: sensor de yaw (rotação vertical), acelerômetro lateral, sensores de roda, sensor de ângulo do volante e sensor de velocidade do veículo."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Função", "Falha Comum"],
+            "rows": [
+                ["Sensor de Yaw", "Detecta rotação do veículo", "Calibração incorreta"],
+                ["Acelerômetro", "Mede aceleração lateral", "Sensibilidade reduzida"],
+                ["Sensor Ângulo Volante", "Intenção do motorista", "Desalinhamento"],
+                ["Sensores de Roda", "Velocidade individual", "Sujeira, dano"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Intervenção",
+            "text": "ESP pode frear rodas individualmente e reduzir potência do motor para corrigir derrapagem ou sobrester."
+        },
+        {
+            "type": "text",
+            "value": "O sistema compara a direção pretendida (volante) com a direção real (yaw) e intervém quando detecta discrepância que pode causar perda de controle."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Modos de Operação",
+            "text": "ESP pode ser desativado parcialmente (tração apenas) ou completamente (off) para condições específicas como neve profunda ou areia."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sinais ESP"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sensor detecta se o veículo está girando em torno do eixo vertical?",
+            "options": [
+                "Sensor de roda",
+                "Sensor de yaw",
+                "Acelerômetro",
+                "Sensor MAP"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sistema de controle de estabilidade (ESC)?",
+            "options": [
+                "Aumentar a velocidade máxima",
+                "Prevenir perda de tração e derrapagens",
+                "Melhorar o consumo de combustível",
+                "Controlar apenas a direção"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o ESC atua quando detecta uma derrapagem?",
+            "options": [
+                "Apenas acelera o motor",
+                "Aplica freios individualmente e reduz potência",
+                "Desliga todos os freios",
+                "Aumenta a pressão dos pneus"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Marcas Premium Alemãs",
+    "content": [
+        {
+            "type": "text",
+            "value": "Marcas premium alemãs como BMW, Mercedes-Benz, Audi, Porsche e Volkswagen representam o topo da tecnologia automotiva, exigindo especialização e conhecimentos avançados."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Principais Marcas",
+            "text": "BMW, Mercedes-Benz, Audi, Porsche, Volkswagen, MINI, e marcas de luxo do grupo VAG."
+        },
+        {
+            "type": "text",
+            "value": "Essas marcas utilizam tecnologias proprietárias, protocolos específicos, e sistemas de diagnóstico avançados que exigem treinamento especializado."
+        },
+        {
+            "type": "table",
+            "headers": ["Marca", "Tecnologias Chave", "Sistemas Específicos"],
+            "rows": [
+                ["BMW", "iDrive, ConnectedDrive", "ECU Bosch/Continental"],
+                ["Mercedes", "COMAND, MBUX", "Sistemas proprietários"],
+                ["Audi", "MMI, Virtual Cockpit", "Audi Connect"],
+                ["Porsche", "PCM, Sport Chrono", "Sistemas high-end"],
+                ["VAG", "MIB, Infotainment", "Sistemas compartilhados"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Requisitos de Especialização",
+            "text": "Ferramentas específicas, treinamento certificado, acesso a documentação restrita."
+        },
+        {
+            "type": "text",
+            "value": "Profissionais especializados em marcas premium têm salários mais altos, maior demanda, e oportunidades em workshops especializados."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades de Mercado",
+            "text": "Workshops especializados, preparação de veículos premium, e consultoria técnica."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Marcas Premium"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema de infotainment usa a BMW?",
+            "options": [
+                "MMI",
+                "COMAND",
+                "iDrive",
+                "MBUX"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema usa a Mercedes-Benz?",
+            "options": [
+                "MMI",
+                "COMAND/MBUX",
+                "iDrive",
+                "PCM"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que marcas premium exigem especialização?",
+            "options": [
+                "Apenas marketing",
+                "Usam tecnologias proprietárias e protocolos específicos",
+                "Não exigem especialização",
+                "Apenas para aumentar custo"
+            ],
+            "correct": 1
+        }
+    ]
+}

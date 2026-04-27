@@ -1,0 +1,86 @@
+{
+    "title": "Multímetro Digital",
+    "content": [
+        {
+            "type": "text",
+            "value": "O multímetro digital é a ferramenta mais essencial para o eletricista automotivo. Permite medir tensão, corrente, resistência, continuidade e testar componentes eletrônicos com precisão."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funções Principais",
+            "text": "Tensão DC/AC, Corrente DC/AC, Resistência, Continuidade, Teste de Diodos, Frequência, Duty Cycle, Temperatura."
+        },
+        {
+            "type": "text",
+            "value": "Para uso automotivo, escolha multímetro com True RMS, categoria de segurança CAT III 600V, e range automático. Especificações mínimas: 4000 contagens, basic DC accuracy 0.5%."
+        },
+        {
+            "type": "table",
+            "headers": ["Função", "Aplicação Automotiva", "Como Conectar"],
+            "rows": [
+                ["Tensão DC", "Bateria, alternador, sensores", "Paralelo ao circuito"],
+                ["Corrente DC", "Consumo de componentes", "Série no circuito"],
+                ["Resistência", "Sensores, bobinas", "Circuito desligado"],
+                ["Continuidade", "Fios, fusíveis", "Testar continuidade"],
+                ["Teste Diodo", "Alternador, LEDs", "Testar polaridade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança CRÍTICA",
+            "text": "NUNCA meça resistência em circuito energizado! NUNCA meça corrente sem saber o valor máximo! Use sempre categoria CAT III para automotivo."
+        },
+        {
+            "type": "text",
+            "value": "Técnicas avançadas incluem medição de queda de tensão para diagnosticar conexões ruins, teste de capacitores para sistemas de áudio, e uso de modo MIN/MAX para capturar picos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Calibração e Manutenção",
+            "text": "Verifique calibração anualmente. Troque bateria internamente a cada 2-3 anos. Limpe pontas de prova regularmente."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise com Multímetro"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria de segurança mínima para multímetro automotivo?",
+            "options": [
+                "CAT I 300V",
+                "CAT II 600V", 
+                "CAT III 600V",
+                "CAT IV 1000V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função dos óculos de segurança em trabalhos elétricos?",
+            "options": [
+                "Apenas melhorar a visão",
+                "Proteger contra impacto de partículas e arco elétrico",
+                "Filtrar luz UV do sol",
+                "Evitar reflexos em superfícies metálicas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante usar ferramentas com isolamento CAT III em sistemas de 12V automotivos?",
+            "options": [
+                "Porque a tensão pode atingir picos de 60V durante a partida",
+                "Porque o sistema pode ter transientes de alta tensão",
+                "Porque as ferramentas CAT I não funcionam em 12V",
+                "Porque é exigência por lei"
+            ],
+            "correct": 1
+        }
+    ]
+}

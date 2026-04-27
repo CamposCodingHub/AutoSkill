@@ -1,0 +1,87 @@
+{
+    "title": "Projeto 5 - Smart Grid Veicular",
+    "content": [
+        {
+            "type": "text",
+            "value": "Este projeto integrador desenvolve um smart grid veicular, integrando geração, armazenamento, e distribuição de energia com otimização inteligente."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Objetivos do Projeto",
+            "text": "Criar sistema inteligente que gerencia múltiplas fontes de energia, otimiza consumo, e permite carregamento bidirecional."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve incluir: design da arquitetura, desenvolvimento do sistema de controle, integração com fontes renováveis, e otimização de energia."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Especificação", "Função"],
+            "rows": [
+                ["Painel Solar", "100W 12V", "Geração de energia"],
+                ["Bateria Principal", "12V 100Ah", "Armazenamento principal"],
+                ["Bateria Secundária", "12V 50Ah", "Armazenamento backup"],
+                ["Controlador Solar", "PWM 10A", "Gerenciamento solar"],
+                ["Inversor", "12V 220V 500W", "Conversão AC"],
+                ["Monitor Energia", "IoT WiFi", "Monitoramento remoto"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Gerenciamento de múltiplas fontes, otimização de consumo, e integração com sistemas veiculares."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve ser documentado com: diagramas elétricos, algoritmos de otimização, código-fonte, e procedimentos de teste."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Avaliação",
+            "text": "Será avaliada eficiência energética, inteligência do sistema, documentação técnica, e inovação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Smart Grid Veicular"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é essencial para gerenciamento solar?",
+            "options": [
+                "Inversor",
+                "Controlador solar",
+                "Monitor de energia",
+                "Bateria secundária"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente converte DC para AC?",
+            "options": [
+                "Controlador solar",
+                "Inversor",
+                "Bateria principal",
+                "Painel solar"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que algoritmos de otimização são importantes em smart grid?",
+            "options": [
+                "Apenas burocracia",
+                "Gerenciam múltiplas fontes e otimizam consumo de energia",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

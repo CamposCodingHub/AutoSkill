@@ -1,0 +1,86 @@
+{
+    "title": "Codificação de Módulos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Codificação de módulos é o processo de programar configurações específicas em módulos eletrônicos para adaptá-los ao veículo, incluindo VIN, configurações de hardware e opções de fábrica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Quando Codificar",
+            "text": "Substituição de módulo, atualização de hardware, mudança de configurações, ou restauração de configurações de fábrica."
+        },
+        {
+            "type": "text",
+            "value": "A codificação inclui informações como VIN do veículo, opções instaladas, configurações regionais, e calibrações específicas do hardware."
+        },
+        {
+            "type": "table",
+            "headers": ["Módulo", "Dados Codificados", "Ferramenta"],
+            "rows": [
+                ["ECU", "VIN, opções motor", "Scanner OEM"],
+                ["BCM", "VIN, opções conforto", "Scanner OEM"],
+                ["Instrument Cluster", "VIN, quilometragem", "Ferramenta especializada"],
+                ["Airbag", "VIN, configurações", "Scanner OEM"],
+                ["Sistema Áudio", "VIN, regional", "Ferramenta específica"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importância do VIN",
+            "text": "VIN incorreto pode causar problemas de comunicação, imobilizador, e incompatibilidade com sistemas de diagnóstico."
+        },
+        {
+            "type": "text",
+            "value": "Alguns módulos requerem codificação online através de servidores do fabricante. Outros permitem codificação offline com ferramentas locais."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Backup Antes",
+            "text": "Sempre faça backup das configurações originais antes de recodificar. Isso permite reversão em caso de problemas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Codificação"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual informação é essencial na codificação de módulos?",
+            "options": [
+                "Cor do veículo",
+                "VIN do veículo",
+                "Nome do proprietário",
+                "Data da fabricação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que pode causar um VIN incorreto na codificação?",
+            "options": [
+                "Apenas cor diferente",
+                "Problemas de comunicação, imobilizador e incompatibilidade",
+                "Melhor performance",
+                "Nenhum problema"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quando é necessário codificar um módulo?",
+            "options": [
+                "Apenas quando o veículo é novo",
+                "Substituição de módulo, atualização de hardware ou mudança de configurações",
+                "Apenas a cada 5 anos",
+                "Nunca é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

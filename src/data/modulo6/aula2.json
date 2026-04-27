@@ -1,0 +1,86 @@
+{
+    "title": "Sensor CMP (Comando de Válvulas)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sensor CMP (Camshaft Position) informa à ECU a posição do eixo comando de válvulas, essencial para sincronização precisa do motor."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função Principal",
+            "text": "Determina qual cilindro está no ciclo de combustão, permitindo injeção sequencial e ignição otimizada."
+        },
+        {
+            "type": "text",
+            "value": "O CMP trabalha em conjunto com o CKP. CKP informa quando ocorre a combustão, CMP informa qual cilindro."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "Valor Típico", "Importância"],
+            "rows": [
+                ["Tipo", "Hall effect", "Sinal digital limpo"],
+                ["Alimentação", "5V ou 12V", "Depende do sistema"],
+                ["Sinal", "0-5V digital", "Fácil interpretação"],
+                ["Relação CKP", "1:1 ou 2:1", "Depende do motor"],
+                ["Montagem", "Cabeçote ou tampa", "Acesso variável"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste alimentação (5V/12V). Verifique sinal com osciloscópio. Sinal deve aparecer uma vez por ciclo do cilindro."
+        },
+        {
+            "type": "text",
+            "value": "Motores com distribuidor podem não ter CMP. Motores com injeção sequencial exigem CMP para funcionar corretamente."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sintomas de Falha",
+            "text": "Motor não pega, falha de cilindro, consumo elevado, e código de falha CMP."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensor CMP"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a principal função do sensor CMP?",
+            "options": [
+                "Medir velocidade do motor",
+                "Determinar posição do cilindro",
+                "Controlar temperatura",
+                "Medir pressão do óleo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a diferença principal entre sensor CKP e CMP?",
+            "options": [
+                "CKP mede velocidade, CMP mede posição do cilindro",
+                "CKP mede temperatura, CMP mede pressão",
+                "CKP controla injeção, CMP controla ignição",
+                "Não há diferença, são iguais"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se o sensor CMP falhar?",
+            "options": [
+                "O motor não liga ou falha ao dar partida",
+                "Apenas a luz de Check Engine acende",
+                "O motor superaquece",
+                "O consumo de combustível diminui"
+            ],
+            "correct": 0
+        }
+    ]
+}

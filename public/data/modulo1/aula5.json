@@ -1,0 +1,110 @@
+{
+    "title": "Efeito Joule e Dimensionamento de Cabos",
+    "content": [
+        {
+            "type": "text",
+            "value": "O Efeito Joule (aquecimento resistivo) é o fenômeno onde a passagem de corrente elétrica por um condutor gera calor. A potência dissipada em calor é: P = I² × R. Quanto maior a corrente ou maior a resistência, mais calor é gerado."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Perigo: fio subdimensionado",
+            "text": "Um fio muito fino para a corrente que passa tem resistência mais alta e, portanto, dissipa mais calor. Se o calor gerado for maior que a capacidade de dissipação do fio, o isolamento derrete, podendo causar curto-circuito e incêndio."
+        },
+        {
+            "type": "text",
+            "value": "Para dimensionar um cabo automotivo, use a fórmula de queda de tensão: ΔV = (2 × ρ × L × I) / A, onde ρ = 0,0175 Ω·mm²/m (cobre), L = comprimento do fio (m), I = corrente (A), A = área da seção (mm²). A queda máxima recomendada é de 3% (0,36V em 12V) para circuitos críticos e 5% (0,6V) para não críticos."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "AWG",
+                "mm² (aprox.)",
+                "Corrente máxima (A)",
+                "Aplicação típica"
+            ],
+            "rows": [
+                [
+                    "22 AWG",
+                    "0,35 mm²",
+                    "3 A",
+                    "Sinais, sensores"
+                ],
+                [
+                    "20 AWG",
+                    "0,50 mm²",
+                    "5 A",
+                    "Comando de relé, LEDs internos"
+                ],
+                [
+                    "18 AWG",
+                    "0,75 mm²",
+                    "8 A",
+                    "Luzes de posição, DRL"
+                ],
+                [
+                    "16 AWG",
+                    "1,30 mm²",
+                    "12 A",
+                    "Farol baixo (1 lâmpada 55W)"
+                ],
+                [
+                    "14 AWG",
+                    "2,08 mm²",
+                    "20 A",
+                    "Farol alto, circuito duplo"
+                ],
+                [
+                    "12 AWG",
+                    "3,31 mm²",
+                    "30 A",
+                    "Ventilador, compressor A/C"
+                ],
+                [
+                    "10 AWG",
+                    "5,26 mm²",
+                    "40 A",
+                    "Alimentação principal, amplificador"
+                ]
+            ]
+        },
+        {
+            "type": "example",
+            "title": "Exemplo prático: Farol de milha (110W)",
+            "value": "Corrente = 110W / 12V = 9,17A. Comprimento = 4m (ida). Queda máxima aceitável = 0,36V (3%). A = (2 × 0,0175 × 4 × 9,17) / 0,36 = 1,28 / 0,36 ≈ 3,56 mm² → usar 4,0 mm² (12 AWG)."
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece com o calor gerado por um fio se a corrente que passa por ele dobrar?",
+            "options": [
+                "O calor dobra",
+                "O calor permanece o mesmo",
+                "O calor quadruplica",
+                "O calor cai pela metade"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal consequência de usar um cabo subdimensionado (muito fino) para a corrente que ele deve suportar?",
+            "options": [
+                "Aumenta a eficiência do circuito",
+                "Gera excesso de calor que pode derreter o isolamento e causar incêndio",
+                "Reduz o consumo de energia",
+                "Melhora a qualidade do sinal"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Para um farol de 55W alimentado por 12V, qual bitola mínima de cabo recomendada (considerando até 4m de comprimento)?",
+            "options": [
+                "22 AWG (0,35 mm²)",
+                "18 AWG (0,75 mm²)",
+                "16 AWG (1,30 mm²)",
+                "12 AWG (3,31 mm²)"
+            ],
+            "correct": 2
+        }
+    ]
+}

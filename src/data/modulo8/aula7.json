@@ -1,0 +1,90 @@
+{
+    "title": "Redes de Comunicação - Revisão Geral",
+    "content": [
+        {
+            "type": "text",
+            "value": "Redes de comunicação veicular evoluíram de sistemas simples K-Line para complexas redes CAN e LIN, permitindo integração entre múltiplos módulos eletrônicos com alta velocidade e confiabilidade."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Evolução",
+            "text": "K-Line → PWM/VPW → CAN/LIN → Ethernet. Cada geração trouxe mais velocidade e funcionalidade."
+        },
+        {
+            "type": "text",
+            "value": "O profissional moderno precisa dominar múltiplos protocolos para diagnosticar veículos de diferentes épocas e fabricantes."
+        },
+        {
+            "type": "table",
+            "headers": ["Protocolo", "Velocidade", "Aplicações", "Complexidade"],
+            "rows": [
+                ["K-Line", "10.4 kbps", "Diagnóstico básico", "Baixa"],
+                ["PWM/VPW", "10.4/41.6 kbps", "Ford/GM antigos", "Média"],
+                ["CAN", "125-500 kbps", "Motor, transmissão", "Alta"],
+                ["LIN", "9.6-19.2 kbps", "Conforto", "Baixa"],
+                ["Ethernet", "100+ Mbps", "Infoentretenimento", "Muito Alta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tendências Futuras",
+            "text": "Automotive Ethernet gaining popularity for high-bandwidth applications like ADAS and autonomous driving."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas essenciais incluem scanner multprotocolo, osciloscópio, analisador de protocolos e conhecimento de esquemas elétricos."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios",
+            "text": "Gateways complexos, criptografia, diagnóstico remoto e atualizações over-the-air aumentam a complexidade do diagnóstico."
+        },
+        {
+            "type": "text",
+            "value": "O diagnóstico moderno combina conhecimento tradicional com tecnologia avançada, exigindo atualização constante e aprendizado contínuo."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Comparativo de Protocolos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual protocolo está substituindo CAN em aplicações de alta largura de banda?",
+            "options": [
+                "K-Line",
+                "LIN",
+                "Automotive Ethernet",
+                "PWM"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do Automotive Ethernet sobre o CAN Bus?",
+            "options": [
+                "Menor custo por módulo",
+                "Maior velocidade e largura de banda",
+                "Maior imunidade a interferência",
+                "Menor consumo de energia"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual aplicação está impulsionando a adoção do Automotive Ethernet?",
+            "options": [
+                "Controle de janelas elétricas",
+                "Sistemas de assistência ao motorista (ADAS)",
+                "Controle de climatização",
+                "Sistemas de áudio básicos"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Transistores e Circuitos Integrados",
+    "content": [
+        {
+            "type": "text",
+            "value": "Transistores e circuitos integrados são componentes semicondutores fundamentais em eletrônica automotiva, usados para amplificação, chaveamento e processamento de sinais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Transistores",
+            "text": "BJT (NPN/PNP), MOSFET (N-channel/P-channel), e IGBTs. Cada um com características específicas."
+        },
+        {
+            "type": "text",
+            "value": "Em ECUs, transistores controlam injetores, bobinas, e outros atuadores. MOSFETs são preferidos por alta eficiência."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Aplicação Automotiva"],
+            "rows": [
+                ["BJT NPN", "Amplificação/Chave", "Drivers de baixa potência"],
+                ["MOSFET", "Chaveamento rápido", "Injetores, bobinas"],
+                ["IGBT", "Alta potência", "Sistemas de ignição"],
+                ["Op-Amp", "Amplificação", "Sensores, processamento"],
+                ["Microcontrolador", "Processamento", "ECU, módulos de controle"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Transistores",
+            "text": "Use multímetro com função de teste de transistores. Verifique junções base-emissor e base-coletor."
+        },
+        {
+            "type": "text",
+            "value": "Circuitos integrados incluem: reguladores de tensão, amplificadores operacionais, microcontroladores, e drivers de potência."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Proteção Térmica",
+            "text": "Transistores de potência precisam de dissipadores térmicos. Verifique temperatura em operação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Transistores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de transistor é mais usado em drivers de injetores modernos?",
+            "options": [
+                "BJT NPN",
+                "MOSFET",
+                "IGBT",
+                "JFET"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do MOSFET sobre o BJT em aplicações automotivas?",
+            "options": [
+                "Maior ganho de corrente",
+                "Comutação mais rápida e menor dissipação",
+                "Menor custo de fabricação",
+                "Maior tensão de operação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa um transistor MOSFET com multímetro?",
+            "options": [
+                "Mede a resistência entre dreno e fonte",
+                "Verifica a continuidade do gate",
+                "Testa o diodo interno entre dreno e fonte",
+                "Mede a capacitância do gate"
+            ],
+            "correct": 2
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "id": 2,
+    "title": "Ferramentas e Equipamentos",
+    "icon": "🛠️",
+    "description": "Multímetro, scanner OBD-II, osciloscópio, alicate amperímetro, testador de bateria, ferramentas especiais.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Multímetro Digital",
+            "slug": "multimetro-digital"
+        },
+        {
+            "id": 2,
+            "title": "Scanner OBD-II e Diagnóstico",
+            "slug": "scanner-obd2"
+        },
+        {
+            "id": 3,
+            "title": "Osciloscópio Automotivo",
+            "slug": "osciloscopio-automotivo"
+        },
+        {
+            "id": 4,
+            "title": "Alicate Amperímetro e Teste de Corrente",
+            "slug": "alicate-amperimetro"
+        },
+        {
+            "id": 5,
+            "title": "Testador de Baterias e Sistema de Carga",
+            "slug": "testador-baterias"
+        },
+        {
+            "id": 6,
+            "title": "Ferramentas Especiais Automotivas",
+            "slug": "ferramentas-especiais"
+        },
+        {
+            "id": 7,
+            "title": "Equipamentos de Segurança e Proteção",
+            "slug": "equipamentos-seguranca"
+        }
+    ]
+}

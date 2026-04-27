@@ -1,0 +1,86 @@
+{
+    "title": "Software de Diagramas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Software moderno de diagramas elétricos revolucionou o diagnóstico, permitindo acesso interativo, busca inteligente e análise dinâmica de circuitos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Recursos Principais",
+            "text": "Zoom infinito, busca por componente, navegação entre circuitos, e integração com informações de peças."
+        },
+        {
+            "type": "text",
+            "value": "Software profissional inclui: diagramas esquemáticos, localização de componentes, pinagens de conectores, e especificações técnicas."
+        },
+        {
+            "type": "table",
+            "headers": ["Software", "Recursos", "Aplicação"],
+            "rows": [
+                ["Alldata", "Completo, atualizado", "Oficinas profissionais"],
+                ["Mitchell", "Detalhado, preciso", "Diagnóstico avançado"],
+                ["Bentley", "Fabricante específico", "Luxo europeu"],
+                ["Esi Tronic", "Multimarca", "Reparos gerais"],
+                ["Autodata", "Europeu/asiático", "Importados"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Custo vs Benefício",
+            "text": "Software profissional tem custo significativo mas compensa em tempo de diagnóstico e precisão."
+        },
+        {
+            "type": "text",
+            "value": "Recursos avançados incluem: diagramas interativos, sequências de teste, procedimentos de reparo, e integração com catálogos de peças."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tendências",
+            "text": "Nuvem (cloud-based), IA para diagnóstico, realidade aumentada, e integração com ferramentas de teste."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Software de Diagramas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual software é mais usado em oficinas profissionais?",
+            "options": [
+                "Alldata",
+                "Mitchell",
+                "Bentley",
+                "Esi Tronic"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual recurso permite encontrar componentes rapidamente em software de diagramas?",
+            "options": [
+                "Busca por componente",
+                "Apenas rolagem manual",
+                "Não é possível buscar",
+                "Apenas impressão"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tendência está emergindo em software de diagramas?",
+            "options": [
+                "Apenas papel",
+                "Nuvem, IA para diagnóstico e realidade aumentada",
+                "Apenas disquetes",
+                "Software estático"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "title": "Protocolo CAN Bus",
+    "content": [
+        {
+            "type": "text",
+            "value": "CAN Bus (Controller Area Network) é o protocolo de comunicação padrão na indústria automotiva, permitindo que múltiplos módulos eletrônicos compartilhem informações através de um único par de fios."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Vantagens",
+            "text": "Reduz complexidade da fiação, melhora confiabilidade e permite diagnóstico avançado através de uma única conexão."
+        },
+        {
+            "type": "text",
+            "value": "O CAN opera em duas velocidades principais: CAN High Speed (500 kbps) para comunicação crítica do motor e CAN Low Speed (125 kbps) para sistemas de conforto."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "CAN High Speed", "CAN Low Speed"],
+            "rows": [
+                ["Velocidade", "500 kbps", "125 kbps"],
+                ["Aplicação", "Motor, transmissão, freios", "Ar condicionado, vidros, áudio"],
+                ["Cor dos fios", "Verde/branco e branco/verde", "Amarelo/branco e branco/amarelo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Terminações",
+            "text": "Cada rede CAN precisa de duas resistências de 120Ω nas extremidades. Terminação incorreta causa comunicação instável."
+        },
+        {
+            "type": "text",
+            "value": "A topologia CAN é um barramento linear com terminações em ambas as extremidades. Todos os módulos conectados devem estar em boas condições para não afetar a comunicação."
+        },
+        {
+            "type": "simulator",
+            "name": "VoltageDropSimulator",
+            "config": {
+                "title": "Simulador de Terminação CAN"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a resistência total esperada em uma rede CAN corretamente terminada?",
+            "options": [
+                "60Ω",
+                "120Ω", 
+                "240Ω",
+                "500Ω"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função dos resistores de terminação em uma rede CAN?",
+            "options": [
+                "Proteger contra picos de tensão",
+                "Evitar reflexões de sinal e garantir comunicação estável",
+                "Limitar a corrente na rede",
+                "Aumentar a velocidade de comunicação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica uma resistência de 120Ω entre CAN-H e CAN-L?",
+            "options": [
+                "Rede com terminação correta",
+                "Apenas um resistor de terminação presente",
+                "Rede sem terminação",
+                "Curto-circuito na rede"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Projeto 2 - Sistema de Áudio Premium",
+    "content": [
+        {
+            "type": "text",
+            "value": "Este projeto integrador desenvolve um sistema completo de áudio premium automotivo, integrando múltiplos componentes, processamento digital, e otimização acústica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Objetivos do Projeto",
+            "text": "Criar sistema de áudio de alta qualidade com processamento digital, múltiplos canais, e integração com sistemas veiculares."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve incluir: design acústico, seleção de componentes, processamento digital, calibração, e integração com infoentretenimento."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Especificação", "Função"],
+            "rows": [
+                ["Processador DSP", "24-bit/192kHz", "Processamento digital"],
+                ["Amplificador", "4x200W Classe D", "Amplificação"],
+                ["Subwoofer", "12\" 500W", "Baixas frequências"],
+                ["Mid-Range", "6.5\" 100W", "Frequências médias"],
+                ["Tweeters", "1\" 50W", "Altas frequências"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Calibração acústica, integração de sistemas, e otimização para diferentes tipos de música."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve ser documentado com: diagramas de instalação, configurações de DSP, medições acústicas, e procedimentos de calibração."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Avaliação",
+            "text": "Será avaliada qualidade sonora, integração, documentação técnica, e inovação no processamento."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Áudio Premium"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é essencial para processamento digital?",
+            "options": [
+                "Amplificador analógico",
+                "Processador DSP",
+                "Subwoofer passivo",
+                "Tweeter simples"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de amplificador oferece melhor eficiência?",
+            "options": [
+                "Classe A",
+                "Classe AB",
+                "Classe D",
+                "Classe C"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a calibração acústica é importante?",
+            "options": [
+                "Apenas burocracia",
+                "Garante qualidade sonora ideal em diferentes ambientes",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

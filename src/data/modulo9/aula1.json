@@ -1,0 +1,86 @@
+{
+    "title": "Arquitetura da ECU",
+    "content": [
+        {
+            "type": "text",
+            "value": "A ECU (Electronic Control Unit) é o cérebro eletrônico do motor, responsável por processar dados de sensores e controlar atuadores para otimizar performance, economia e emissões."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Microcontrolador, memória (Flash/EEPROM/RAM), drivers de potência, conversores A/D, e circuitos de alimentação."
+        },
+        {
+            "type": "text",
+            "value": "A arquitetura da ECU baseia-se em microcontroladores de 16 ou 32 bits, operando em frequências de 40-200MHz, com múltiplos núcleos em sistemas modernos."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Características"],
+            "rows": [
+                ["Microcontrolador", "Processamento central", "16/32-bit, 40-200MHz, multicore"],
+                ["Memória Flash", "Armazenamento de calibração", "256KB-4MB, regravável"],
+                ["EEPROM", "Dados adaptativos", "4KB-64KB, não volátil"],
+                ["RAM", "Memória de trabalho", "32KB-512KB, volátil"],
+                ["Drivers de Potência", "Controle de atuadores", "MOSFETs, proteção, diagnóstico"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sensibilidade a Temperatura",
+            "text": "ECUs operam em -40°C a +125°C. Falhas térmicas são comuns em veículos com problemas de refrigeração."
+        },
+        {
+            "type": "text",
+            "value": "O processamento ocorre em loops de controle: leitura de sensores → processamento → cálculo de saídas → atuação em injetores/bobinas → repetição a cada milissegundo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Evolução das ECUs",
+            "text": "De sistemas simples com poucos mapas para ECUs modernas com milhões de parâmetros, aprendizado adaptativo e conectividade."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Arquitetura ECU"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de memória armazena a calibração do motor?",
+            "options": [
+                "RAM",
+                "EEPROM",
+                "Flash",
+                "Cache"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a faixa de temperatura operacional típica de uma ECU?",
+            "options": [
+                "0°C a 50°C",
+                "-20°C a 80°C",
+                "-40°C a 125°C",
+                "-10°C a 100°C"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente da ECU é responsável pelo processamento central?",
+            "options": [
+                "Memória Flash",
+                "Driver de potência",
+                "Microcontrolador",
+                "Conversor A/D"
+            ],
+            "correct": 2
+        }
+    ]
+}

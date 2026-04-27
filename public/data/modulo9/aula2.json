@@ -1,0 +1,88 @@
+{
+    "title": "Alimentação e Aterramento",
+    "content": [
+        {
+            "type": "text",
+            "value": "Ruído e leituras fantasmas costumam vir de massa compartilhada ou queda de tensão na alimentação da ECM sob carga de bobinas e injetores. Uma alimentação limpa é essencial para operação correta."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Múltiplos Terra",
+            "text": "Muitas ECM separam massa de sensores (retorno de referência) da massa de potência dos drivers para evitar interferência."
+        },
+        {
+            "type": "text",
+            "value": "Unir pontos de terra fora do conector da ECU cria offset nas leituras A/D. Sintoma comum: MAP/TPS 'andando' quando injetores disparam."
+        },
+        {
+            "type": "table",
+            "headers": ["Pino Típico", "Função"],
+            "rows": [
+                ["Alimentação chaveada + relé principal", "ECM 'acorda' com ignição; keep-alive separado"],
+                ["Sensor ground", "Retorno de 5V ref, NTC, TPS"],
+                ["Power ground", "Retorno de corrente dos drivers"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tensão de Referência 5V",
+            "text": "O 5V regulado alimenta potenciômetros e sensores de pressão. Curto no 5V para massa pode derrubar referência de todos os sensores."
+        },
+        {
+            "type": "text",
+            "value": "Alguns esquemas trazem 5V sense separado para compensar queda no chicote, garantindo precisão nas medições dos sensores."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Cuidado ao Testar",
+            "text": "Nunca injete tensão externa nos pinos de sensor sem esquema - pode danificar entradas do microcontrolador."
+        },
+        {
+            "type": "text",
+            "value": "Verifique sempre a continuidade e integridade dos pontos de terra com o motor desligado. Terra ruim causa sintomas intermitentes e difíceis de diagnosticar."
+        },
+        {
+            "type": "simulator",
+            "name": "VoltageDropSimulator",
+            "config": {
+                "title": "Análise de Alimentação ECU"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a ECM costuma ter mais de um terminal de massa dedicado?",
+            "options": [
+                "Apenas para ocupar pinos vazios no conector",
+                "Isolar retornos de sensíveis dos retornos de alta corrente dos drivers",
+                "Para aumentar a tensão da bateria",
+                "Para eliminar a necessidade de fusível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal consequência de um terra ruim na ECU?",
+            "options": [
+                "Apenas aumento do consumo de combustível",
+                "Funcionamento errático dos sensores e atuadores",
+                "Melhor performance do motor",
+                "Redução da temperatura de operação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você deve testar a qualidade do terra da ECU?",
+            "options": [
+                "Apenas com o motor desligado",
+                "Medindo a resistência entre o terra da ECU e o negativo da bateria",
+                "Verificando a tensão com o motor funcionando",
+                "Testando apenas com multímetro analógico"
+            ],
+            "correct": 1
+        }
+    ]
+}

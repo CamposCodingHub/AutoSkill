@@ -1,0 +1,43 @@
+{
+    "id": 5,
+    "title": "Sistemas de Iluminação",
+    "icon": "💡",
+    "description": "Lâmpadas halógenas, xenon (HID), LED, laser, DRL, faróis adaptativos (AFS/Matrix).",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Tipos de Lâmpadas",
+            "slug": "tipos-lampadas"
+        },
+        {
+            "id": 2,
+            "title": "Faróis Halógenos",
+            "slug": "farois-halogenos"
+        },
+        {
+            "id": 3,
+            "title": "Sistemas Xenon/HID",
+            "slug": "sistemas-xenon"
+        },
+        {
+            "id": 4,
+            "title": "Iluminação LED",
+            "slug": "iluminacao-led"
+        },
+        {
+            "id": 5,
+            "title": "Faróis Adaptativos e Matrix",
+            "slug": "farois-adaptativos"
+        },
+        {
+            "id": 6,
+            "title": "Luzes Diurnas (DRL)",
+            "slug": "luzes-diurnas"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico de Sistemas de Iluminação",
+            "slug": "diagnostico-iluminacao"
+        }
+    ]
+}

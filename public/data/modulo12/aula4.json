@@ -1,0 +1,86 @@
+{
+    "title": "Bancos Elétricos e Ajustes",
+    "content": [
+        {
+            "type": "text",
+            "value": "Bancos elétricos oferecem ajuste motorizado de posição, altura, inclinação, suporte lombar e aquecimento. Sistemas avançados incluem memória, ventilação e massagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes",
+            "text": "Motores elétricos, sensores de posição, módulo de controle, aquecimento e sistemas de memória."
+        },
+        {
+            "type": "text",
+            "value": "Cada função usa motores específicos: ajuste longitudinal (frente/trás), altura, inclinação do encosto, suporte lombar e aquecimento dos assentos."
+        },
+        {
+            "type": "table",
+            "headers": ["Função", "Motor/Atuador", "Consumo Típico"],
+            "rows": [
+                ["Ajuste Longitudinal", "Motor DC com engrenagens", "15-25A"],
+                ["Ajuste Altura", "Motor DC + cremalheira", "10-20A"],
+                ["Inclinação Encosto", "Motor DC", "8-15A"],
+                ["Aquecimento", "Elemento resistivo", "5-10A"],
+                ["Ventilação", "Ventiladores pequenos", "3-8A"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sistemas de Memória",
+            "text": "Armazenam posições preferidas para múltiplos motoristas. Integrados com retrovisores e volante."
+        },
+        {
+            "type": "text",
+            "value": "Sensores de posição (potenciômetros) informam ao módulo a posição atual de cada ajuste, permitindo controle preciso e função de memória."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste cada função individualmente. Verifique fusíveis de alta corrente (30A) e interruptores no painel."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Bancos Elétricos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a corrente típica do motor de ajuste longitudinal do banco?",
+            "options": [
+                "5-10A",
+                "15-25A",
+                "30-40A",
+                "1-3A"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que os sensores de posição (potenciômetros) informam ao módulo do banco?",
+            "options": [
+                "A temperatura do assento",
+                "A posição atual de cada ajuste",
+                "A velocidade do veículo",
+                "O nível de combustível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual fusível é tipicamente usado para bancos elétricos?",
+            "options": [
+                "5A",
+                "10A",
+                "30A",
+                "50A"
+            ],
+            "correct": 2
+        }
+    ]
+}

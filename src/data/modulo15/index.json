@@ -1,0 +1,43 @@
+{
+    "id": 15,
+    "title": "Híbridos e Elétricos (HEV/BEV)",
+    "icon": "🔋",
+    "description": "Baterias de alta tensão, motores elétricos, inversores, sistemas BMS, regeneração, segurança HV.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Baterias de Alta Tensão",
+            "slug": "baterias-hv"
+        },
+        {
+            "id": 2,
+            "title": "Baterias de Alta Tensão - Fundamentos",
+            "slug": "fundamentos-baterias"
+        },
+        {
+            "id": 3,
+            "title": "Motores Elétricos de Tração",
+            "slug": "motores-eletricos"
+        },
+        {
+            "id": 4,
+            "title": "Inversores e Eletrônica de Potência",
+            "slug": "inversores"
+        },
+        {
+            "id": 5,
+            "title": "Sistemas de Gestão de Bateria (BMS)",
+            "slug": "sistema-bms"
+        },
+        {
+            "id": 6,
+            "title": "Carregamento e Sistemas de Recuperação",
+            "slug": "carregamento"
+        },
+        {
+            "id": 7,
+            "title": "Segurança em Sistemas de Alta Tensão",
+            "slug": "seguranca-hv"
+        }
+    ]
+}

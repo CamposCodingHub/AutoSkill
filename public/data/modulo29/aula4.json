@@ -1,0 +1,86 @@
+{
+    "title": "Legalização e Licenciamento",
+    "content": [
+        {
+            "type": "text",
+            "value": "A legalização e licenciamento são fundamentais para operar uma oficina de forma regular, envolvendo registro, licenças, e conformidade com regulamentações."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Passos Essenciais",
+            "text": "1. Abertura de empresa 2. Licenças municipais 3. Alvará de funcionamento 4. Registro em órgãos específicos."
+        },
+        {
+            "type": "text",
+            "value": "A legalização completa envolve: escolha do regime tributário, obtenção de licenças ambientais, e conformidade com normas de segurança."
+        },
+        {
+            "type": "table",
+            "headers": ["Licença", "Órgão", "Validade"],
+            "rows": [
+                ["Alvará de Funcionamento", "Prefeitura", "Anual"],
+                ["Licença Ambiental", "Secretaria Meio Ambiente", "Permanente"],
+                ["Registro ANTT", "ANTT", "Permanente"],
+                ["Alvará de Corpo de Bombeiros", "Bombeiros", "Anual"],
+                ["Inscrição Estadual", "Secretaria Fazenda", "Permanente"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Documentação Essencial",
+            "text": "Contrato social, RG, CPF, comprovante de residência, e documentos do imóvel."
+        },
+        {
+            "type": "text",
+            "value": "Consulte um contador especializado para escolher o melhor regime tributário e garantir conformidade fiscal."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Custos de Legalização",
+            "text": "Incluem taxas de registro, licenças, e honorários profissionais. Planeje esses custos no investimento inicial."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Legalização"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual órgão emite o alvará de funcionamento?",
+            "options": [
+                "Secretaria da Fazenda",
+                "Prefeitura Municipal",
+                "ANTT",
+                "Corpo de Bombeiros"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual documento é essencial para abertura de empresa?",
+            "options": [
+                "Apenas RG",
+                "Contrato social",
+                "Apenas CPF",
+                "Apenas comprovante de residência"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que consultar um contador especializado?",
+            "options": [
+                "Apenas burocracia",
+                "Escolher melhor regime tributário e garantir conformidade fiscal",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

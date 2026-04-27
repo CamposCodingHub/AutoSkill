@@ -1,0 +1,86 @@
+{
+    "title": "Instalação e Configuração",
+    "content": [
+        {
+            "type": "text",
+            "value": "A instalação correta de sistemas de rastreamento e segurança é fundamental para funcionamento confiável. Envolve posicionamento de antenas, conexão elétrica, e configuração de parâmetros."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Localização Ideal",
+            "text": "Módulo principal: protegido, acesso para manutenção. Antena GPS: visibilidade do céu, longe de metal."
+        },
+        {
+            "type": "text",
+            "value": "A antena GPS deve ter visão clara do céu (mínimo 4 satélites). Evite metal, vidro com metalizado, e áreas com interferência eletromagnética."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Localização", "Considerações"],
+            "rows": [
+                ["Módulo Principal", "Interior protegido", "Acesso para manutenção"],
+                ["Antena GPS", "Teto/dash superior", "Visibilidade céu"],
+                ["Antena GSM", "Interior ou externa", "Sinal celular"],
+                ["Sensores", "Portas/capô", "Acesso fácil"],
+                ["Fonte Alimentação", "Constante +12V", "Fusível dedicado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Alimentação Elétrica",
+            "text": "Use fonte constante (não chaveada) com fusível dedicado. Bateria backup essencial para operação sem alimentação veicular."
+        },
+        {
+            "type": "text",
+            "value": "Configuração inclui: ID do dispositivo, servidor de comunicação, intervalos de transmissão, alertas, e parâmetros específicos do veículo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Teste de Funcionamento",
+            "text": "Verifique: fix GPS, comunicação GSM, sensores, e envio de dados. Teste em diferentes condições antes da instalação final."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Instalação"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a principal consideração ao instalar antena GPS?",
+            "options": [
+                "Estética",
+                "Visibilidade do céu",
+                "Proximidade do motor",
+                "Cor do veículo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar fonte constante de alimentação para o módulo de rastreamento?",
+            "options": [
+                "Para economizar energia",
+                "Para operar mesmo com veículo desligado",
+                "Para aumentar o custo",
+                "Para não funcionar"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que deve ser evitado ao instalar antena GPS?",
+            "options": [
+                "Áreas com visibilidade do céu",
+                "Metal, vidro com metalizado e interferência eletromagnética",
+                "Locais protegidos",
+                "Áreas abertas"
+            ],
+            "correct": 1
+        }
+    ]
+}

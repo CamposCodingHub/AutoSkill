@@ -1,0 +1,85 @@
+{
+    "title": "Vidros Elétricos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de vidros elétricos proporcionam conveniência e segurança com controle motorizado dos vidros das portas. Inclui funções de um toque, proteção contra esmagamento e controle centralizado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes",
+            "text": "Motor vidro, interruptores, módulo de controle, relés e sistema de proteção contra esmagamento."
+        },
+        {
+            "type": "text",
+            "value": "Cada vidro tem um motor DC com mecanismo de cremalheira e pinhão ou cabo. O motor é controlado pelo interruptor da porta ou pelo painel central."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Motor Vidro", "Mover vidro para cima/baixo", "Motor queimado, engrenagem"],
+                ["Interruptor Porta", "Controle local", "Contatos oxidados, desgaste"],
+                ["Interruptor Central", "Controle de todos os vidros", "Falha no módulo, mau contato"],
+                ["Sensor Obstrução", "Proteção contra esmagamento", "Calibração, sujeita"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Proteção contra Esmaçamento",
+            "text": "Sistemas modernos detectam obstrução e revertem o vidro automaticamente. Calibração incorreta causa funcionamento errático."
+        },
+        {
+            "type": "text",
+            "value": "A corrente do motor é monitorada para detectar obstruções. Se a corrente aumentar abruptamente, o sistema inverte o movimento."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste alimentação do motor (10-20A). Verifique continuidade dos interruptores e calibração do sistema."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Vidros Elétricos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a corrente típica de um motor de vidro elétrico?",
+            "options": [
+                "1-3A",
+                "10-20A",
+                "30-40A",
+                "50A"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o sistema detecta obstrução durante o fechamento do vidro?",
+            "options": [
+                "Por sensor de luz",
+                "Monitorando a corrente do motor",
+                "Por sensor de pressão",
+                "Por sensor de temperatura"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que causa funcionamento errático da proteção contra esmagamento?",
+            "options": [
+                "Excesso de luz solar",
+                "Calibração incorreta do sistema",
+                "Velocidade muito alta do veículo",
+                "Temperatura muito baixa"
+            ],
+            "correct": 1
+        }
+    ]
+}

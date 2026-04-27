@@ -1,0 +1,86 @@
+{
+    "title": "Portfólio Técnico",
+    "content": [
+        {
+            "type": "text",
+            "value": "O portfólio técnico é essencial para demonstrar competências e projetos realizados, servindo como prova prática das habilidades desenvolvidas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes do Portfólio",
+            "text": "Projetos completos, fotos/vídeos, documentação técnica, certificados, e feedback de clientes."
+        },
+        {
+            "type": "text",
+            "value": "Um portfólio profissional deve ser organizado, atualizado regularmente, e adaptado para diferentes públicos (empregadores, clientes)."
+        },
+        {
+            "type": "table",
+            "headers": ["Seção", "Conteúdo", "Formato"],
+            "rows": [
+                ["Projetos", "Diagnósticos, reparos, instalações", "Fotos + relatórios"],
+                ["Certificações", "Cursos, provas, especializações", "PDFs originais"],
+                ["Ferramentas", "Equipamentos dominados", "Lista detalhada"],
+                ["Clientes", "Serviços realizados", "Depoimentos"],
+                ["Aprendizados", "Casos complexos solucionados", "Análise crítica"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Organização Essencial",
+            "text": "Use estrutura clara, categorize por tipo de trabalho, e mantenha versão atualizada."
+        },
+        {
+            "type": "text",
+            "value": "Crie versões diferentes: completo para empregadores, resumido para clientes, e técnico para colegas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Apresentação Profissional",
+            "text": "Use design limpo, linguagem técnica precisa, e destaque resultados e impactos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Portfólio"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual seção essencial do portfólio técnico?",
+            "options": [
+                "Apenas certificações",
+                "Projetos completos com documentação",
+                "Apenas lista de ferramentas",
+                "Fotos pessoais"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que criar versões diferentes do portfólio?",
+            "options": [
+                "Apenas burocracia",
+                "Adaptar para diferentes públicos (empregadores, clientes)",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual característica define um portfólio profissional?",
+            "options": [
+                "Design caótico",
+                "Estrutura clara, organização e atualização regular",
+                "Apenas fotos",
+                "Apenas texto"
+            ],
+            "correct": 1
+        }
+    ]
+}

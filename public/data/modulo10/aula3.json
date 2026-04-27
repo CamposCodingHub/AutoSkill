@@ -1,0 +1,84 @@
+{
+    "title": "Controle de Tração (TCS)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O Controle de Tração (TCS - Traction Control System) detecta e corrige patinagem das rodas motrizes, reduzindo a potência do motor ou aplicando freios para manter aderência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funcionamento",
+            "text": "Compara velocidade das rodas motrizes com as não motrizes para detectar patinagem e intervir."
+        },
+        {
+            "type": "text",
+            "value": "O TCS utiliza os mesmos sensores de roda do ABS, mas com lógica diferente. Enquanto ABS previne travamento, TCS previne patinagem excessiva."
+        },
+        {
+            "type": "table",
+            "headers": ["Intervenção", "Método", "Condição"],
+            "rows": [
+                ["Redução Motor", "Fechar borboleta, cortar injeção", "Patinagem moderada"],
+                ["Freio da Roda", "Aplicar freio na roda patinando", "Patinagem severa"],
+                ["Ambos", "Combinar motor + freio", "Condições extremas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações",
+            "text": "TCS não pode criar aderência, apenas otimizar a que existe. Em superfícies com zero atrito, o sistema tem limite."
+        },
+        {
+            "type": "text",
+            "value": "O sistema pode ser desativado para situações onde alguma patinagem é desejável, como sair de neve profunda ou lama."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Indicador no Painel",
+            "text": "Luz de tração controlada pisca quando o sistema está ativo, informando o motorista da intervenção."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Tração"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que o TCS faz quando detecta patinagem da roda direita?",
+            "options": [
+                "Aumenta potência do motor",
+                "Aplica freio na roda direita ou reduz motor",
+                "Não faz nada",
+                "Trava a roda esquerda"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal diferença entre ABS e TCS?",
+            "options": [
+                "ABS usa sensores de roda, TCS não",
+                "ABS previne travamento, TCS previne patinagem",
+                "TCS é apenas para veículos diesel",
+                "ABS controla a direção, TCS controla o freio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Em que situação o TCS pode ser desativado?",
+            "options": [
+                "Em rodovias com asfalto seco",
+                "Em neve profunda ou lama onde patinagem é necessária",
+                "Em frenagens de emergência",
+                "Em velocidades acima de 100 km/h"
+            ],
+            "correct": 1
+        }
+    ]
+}

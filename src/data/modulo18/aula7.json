@@ -1,0 +1,90 @@
+{
+    "title": "Diagnóstico e Manutenção",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico e manutenção de sistemas de rastreamento e segurança requer conhecimento de eletrônica, comunicação, e software. Problemas podem ser elétricos, de comunicação, ou de configuração."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "Verifique alimentação → comunicação → sensores → configuração → servidor. Teste cada componente isoladamente."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns incluem: perda de sinal GPS, falha de comunicação GSM, sensores defeituosos, bateria backup descarregada, e configurações incorretas."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Solução"],
+            "rows": [
+                ["Sem posição GPS", "Antena/módulo GPS", "Verificar antena, localização"],
+                ["Sem comunicação", "Antena GSM/sinal", "Testar operadora, antena"],
+                ["Alertas falsos", "Sensores/configuração", "Ajustar sensibilidade"],
+                ["Bateria fraca", "Carga/desgaste", "Substituir bateria"],
+                ["Configuração perdida", "Reset/falha", "Reconfigurar sistema"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Antenas",
+            "text": "Use analisador de espectro ou medidor de sinal para verificar performance das antenas GPS e GSM."
+        },
+        {
+            "type": "text",
+            "value": "Manutenção preventiva inclui: verificação de conexões, limpeza de antenas, teste de baterias, e atualização de firmware/sistema."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Logs de Sistema",
+            "text": "Analise logs de erros e eventos para identificar padrões de falha e otimizar configurações."
+        },
+        {
+            "type": "text",
+            "value": "Documente todas as intervenções e mantenha histórico de manutenção para rastreamento de problemas e planejamento de upgrades."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo ao diagnosticar perda de sinal?",
+            "options": [
+                "Substituir módulo",
+                "Verificar antenas e conexões",
+                "Reconfigurar servidor",
+                "Resetar sistema"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que pode causar alertas falsos em sistemas de alarme?",
+            "options": [
+                "Sensores defeituosos ou configuração incorreta",
+                "Bateria muito forte",
+                "Motor muito potente",
+                "Pneus novos"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Por que analisar logs de erros e eventos?",
+            "options": [
+                "Para gastar tempo",
+                "Para identificar padrões de falha e otimizar configurações",
+                "Para não fazer nada",
+                "Para aumentar o custo"
+            ],
+            "correct": 1
+        }
+    ]
+}

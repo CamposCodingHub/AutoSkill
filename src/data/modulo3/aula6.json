@@ -1,0 +1,86 @@
+{
+    "title": "Conectores e Terminais",
+    "content": [
+        {
+            "type": "text",
+            "value": "Conectores e terminais são fundamentais para sistemas elétricos automotivos, garantindo conexões confiáveis entre componentes e chicotes elétricos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Conectores",
+            "text": "Weather-pack, Deutsch, AMP, Molex, Bosch. Cada fabricante usa padrões específicos com diferentes selagens."
+        },
+        {
+            "type": "text",
+            "value": "Conectores modernos incluem selagem contra umidade, travas de segurança, e identificação por cor ou numeração."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Característica", "Aplicação"],
+            "rows": [
+                ["Weather-Pack", "Selagem completa", "Motor, exterior"],
+                ["Deutsch", "Alta confiabilidade", "Caminhões, industriais"],
+                ["AMP", "Padrão americano", "Veículos americanos"],
+                ["Molex", "Custo-benefício", "Circuitos gerais"],
+                ["Bosch", "Padrão europeu", "Veículos europeus"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Problemas Comuns",
+            "text": "Oxidação, folga nos contatos, travas quebradas, e selagem comprometida causam falhas intermitentes."
+        },
+        {
+            "type": "text",
+            "value": "Técnicas de reparo incluem: extração de terminais especiais, crimpagem adequada, e uso de conectores de reparo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Especiais",
+            "text": "Use ferramentas adequadas para cada tipo de conector. Evite danificar travas ou terminais durante extração."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Conectores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de conector é melhor para áreas externas?",
+            "options": [
+                "Molex",
+                "Weather-Pack",
+                "AMP",
+                "Bosch"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal característica dos conectores Weather-Pack?",
+            "options": [
+                "Maior capacidade de corrente",
+                "Proteção contra umidade e poeira",
+                "Menor tamanho físico",
+                "Conexão mais rápida"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você deve testar a continuidade de um conector automotivo?",
+            "options": [
+                "Medindo a resistência entre pinos",
+                "Verificando a tensão nos terminais",
+                "Testando com multímetro em modo continuidade",
+                "Aplicando corrente e medindo queda"
+            ],
+            "correct": 2
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Faróis Halógenos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Faróis halógenos são a tecnologia mais tradicional em iluminação automotiva, usando filamento de tungstênio em ambiente de gás halógeno para maior eficiência e durabilidade."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funcionamento",
+            "text": "Gás halógeno recicla partículas de tungstênio de volta ao filamento, aumentando vida útil e mantendo brilho constante."
+        },
+        {
+            "type": "text",
+            "value": "Faróis halógenos operam entre 55-65W para faróis baixos e 60-80W para faróis altos, produzindo 1000-1500 lumens."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "Valor Típico", "Importância"],
+            "rows": [
+                ["Potência", "55-80W", "Determina brilho e consumo"],
+                ["Voltagem", "12V", "Padrão automotivo"],
+                ["Temperatura Cor", "3200-3500K", "Cor da luz (amarelada)"],
+                ["Vida Útil", "500-1000 horas", "Durabilidade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Cuidados na Instalação",
+            "text": "Use luvas ao manusear lâmpadas. Oleosidade da pele reduz vida útil. Verifique alinhamento após instalação."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns incluem: filamento queimado, soquete oxidado, mau contato, e refletor embaçado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Regulagem",
+            "text": "Faróis devem ser regulados para não ofuscar outros motoristas. Verifique regulagem regularmente."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Faróis Halógenos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a temperatura de cor típica de faróis halógenos?",
+            "options": [
+                "2500-2800K",
+                "3200-3500K",
+                "4000-4500K",
+                "5000-6000K"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual temperatura de cor produz luz mais branca/azulada?",
+            "options": [
+                "2500K (amarelada)",
+                "3500K (branca quente)",
+                "5000K (branca fria)",
+                "6500K (branca azulada)"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia tem temperatura de cor mais próxima da luz solar?",
+            "options": [
+                "Halógena (3200K)",
+                "Xenon (4300K)",
+                "LED (5500K)",
+                "Laser (6000K)"
+            ],
+            "correct": 2
+        }
+    ]
+}

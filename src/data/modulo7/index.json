@@ -1,0 +1,48 @@
+{
+    "id": 7,
+    "title": "Atuadores de Carga",
+    "icon": "⚙️",
+    "description": "Injetores, bobinas de ignição, válvulas, motores, solenoides e outros atuadores controlados pela ECU.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Injetores de Combustível",
+            "slug": "injetores"
+        },
+        {
+            "id": 2,
+            "title": "Bobinas de Ignição",
+            "slug": "bobinas-ignicao"
+        },
+        {
+            "id": 3,
+            "title": "Válvula IAC / IACV - Ar de Marcha Lenta",
+            "slug": "valvula-iac"
+        },
+        {
+            "id": 4,
+            "title": "Solenoide de Purge (Cânister EVAP)",
+            "slug": "solenoide-purge"
+        },
+        {
+            "id": 5,
+            "title": "Ventiladores Elétricos",
+            "slug": "ventiladores"
+        },
+        {
+            "id": 6,
+            "title": "Bomba de Combustível Elétrica",
+            "slug": "bomba-combustivel"
+        },
+        {
+            "id": 7,
+            "title": "Motores de Partida a Frio",
+            "slug": "partida-frio"
+        },
+        {
+            "id": 8,
+            "title": "Atuadores de Carga - Revisão Geral",
+            "slug": "revisao-geral"
+        }
+    ]
+}

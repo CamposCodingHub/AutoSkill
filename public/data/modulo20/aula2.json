@@ -1,0 +1,86 @@
+{
+    "title": "Tipos de Diagramas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Existem diferentes tipos de diagramas elétricos, cada um com propósito específico para facilitar diagnóstico e reparo de sistemas automotivos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Principais Tipos",
+            "text": "Esquemático, de localização, de conectores, de roteamento, e de blocos funcionais."
+        },
+        {
+            "type": "text",
+            "value": "Cada tipo de diagrama oferece informações específicas: esquemáticos mostram funcionamento, localização mostram onde encontrar componentes, e conectores detalham pinagens."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Função Principal", "Quando Usar"],
+            "rows": [
+                ["Esquemático", "Mostra funcionamento", "Diagnóstico de circuitos"],
+                ["Localização", "Posição física", "Encontrar componentes"],
+                ["Conectores", "Pinos e terminais", "Teste de conectores"],
+                ["Roteamento", "Caminho dos fios", "Reparo de chicotes"],
+                ["Blocos", "Visão geral", "Entendimento do sistema"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Uso Combinado",
+            "text": "Use múltiplos diagramas juntos para diagnóstico completo. Cada um complementa o outro."
+        },
+        {
+            "type": "text",
+            "value": "Diagramas modernos são interativos, permitindo zoom, busca de componentes, e navegação entre circuitos relacionados."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Acesso",
+            "text": "Diagramas podem ser encontrados em manuais de serviço, software de diagnóstico, e sites especializados."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Tipos de Diagramas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual diagrama mostra posição física dos componentes?",
+            "options": [
+                "Esquemático",
+                "Localização",
+                "Conectores",
+                "Roteamento"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual diagrama é usado para teste de conectores?",
+            "options": [
+                "Esquemático",
+                "Localização",
+                "Conectores",
+                "Blocos"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar múltiplos diagramas juntos?",
+            "options": [
+                "Para confundir",
+                "Cada diagrama complementa o outro para diagnóstico completo",
+                "Apenas um é suficiente",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

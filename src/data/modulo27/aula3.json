@@ -1,0 +1,86 @@
+{
+    "title": "Som Automotivo High-End",
+    "content": [
+        {
+            "type": "text",
+            "value": "Som automotivo high-end representa o topo da qualidade em áudio veicular, com tecnologias avançadas, materiais premium, e instalação especializada."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Marcas Premium",
+            "text": "Focal, Dynaudio, Burmester, Bang & Olufsen, e sistemas de áudio de fábrica premium."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas high-end incluem: processamento digital de sinal, amplificadores de alta potência, múltiplos canais, e integração com sistemas de infoentretenimento."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Tecnologia", "Benefício"],
+            "rows": [
+                ["Processador DSP", "Processamento digital", "Qualidade superior"],
+                ["Amplificador Classe D", "Alta eficiência", "Baixo consumo"],
+                ["Subwoofers", "Baixa frequência", "Impacto sonoro"],
+                ["Tweeters", "Alta frequência", "Detalhes finos"],
+                ["Equalização", "Ajuste fino", "Personalização"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Instalação Profissional",
+            "text": "Requer conhecimento em acústica, instalação customizada, e calibração precisa do sistema."
+        },
+        {
+            "type": "text",
+            "value": "Projetos high-end exigem: planejamento detalhado, escolha adequada de componentes, e integração perfeita com o veículo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Mercado e Oportunidades",
+            "text": "Alta demanda por sistemas premium. Especialização em marcas específicas aumenta o valor profissional."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Som High-End"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia oferece melhor qualidade de áudio?",
+            "options": [
+                "Processamento analógico",
+                "Processamento digital DSP",
+                "Processamento AM/FM",
+                "Processamento estéreo básico"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de amplificador oferece alta eficiência?",
+            "options": [
+                "Classe A",
+                "Classe AB",
+                "Classe D",
+                "Classe C"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a calibração precisa é importante em som high-end?",
+            "options": [
+                "Apenas burocracia",
+                "Garante qualidade sonora ideal e personalização",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

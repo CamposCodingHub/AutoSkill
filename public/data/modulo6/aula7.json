@@ -1,0 +1,85 @@
+{
+    "title": "Sonda Lambda (Oxigênio)",
+    "content": [
+        {
+            "type": "text",
+            "value": "A sonda lambda (sensor de oxigênio) é essencial para controle de emissões e eficiência do motor, medindo o teor de oxigênio nos gases de escape."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Lambda zircônio (narrowband), planar, e wideband. Cada um com características específicas para diferentes aplicações."
+        },
+        {
+            "type": "text",
+            "value": "A sonda lambda envia sinal para a ECU que indica se a mistura está rica (>0.45V) ou pobre (<0.45V), permitindo correção automática."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Sinal", "Aplicação", "Precisão"],
+            "rows": [
+                ["Zircônio Narrowband", "0.1-0.9V", "Controle básico", "Baixa"],
+                ["Planar", "0.1-0.9V", "Aquecimento rápido", "Média"],
+                ["Wideband", "0-5V", "Diagnóstico preciso", "Alta"],
+                ["Titânia", "0-5V", "Aplicações especiais", "Alta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste com multímetro em modo volts. Sinal deve oscilar entre rico e pobre. Frequência: 1-5Hz em marcha lenta."
+        },
+        {
+            "type": "text",
+            "value": "Sondas modernas incluem aquecimento elétrico para atingir temperatura operacional rapidamente (<30s)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sintomas de Falha",
+            "text": "Consumo elevado, emissões altas, marcha lenta instável, e luz de check engine acesa."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sonda Lambda"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual voltagem indica mistura rica em sonda narrowband?",
+            "options": [
+                "0.1-0.2V",
+                "0.45V",
+                "0.6-0.9V",
+                "1.0-1.5V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual voltagem indica mistura ideal (estequiométrica) em sonda narrowband?",
+            "options": [
+                "0.1-0.2V (pobre)",
+                "0.45V (ideal)",
+                "0.6-0.9V (rica)",
+                "1.0-1.5V (muito rica)"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal diferença entre sonda narrowband e wideband?",
+            "options": [
+                "Wideband mede apenas mistura rica",
+                "Wideband mede faixa mais ampla de mistura ar-combustível",
+                "Narrowband é mais precisa que wideband",
+                "Não há diferença, são iguais"
+            ],
+            "correct": 1
+        }
+    ]
+}

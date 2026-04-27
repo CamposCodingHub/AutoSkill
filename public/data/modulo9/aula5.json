@@ -1,0 +1,79 @@
+{
+    "title": "Estratégias de Controle do Motor",
+    "content": [
+        {
+            "type": "text",
+            "value": "A ECU implementa múltiplas estratégias de controle para otimizar desempenho, economia e emissões. Inclui controle de combustível, ignição, ar e proteções do motor."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Modos de Operação",
+            "text": "Partida frio, aquecimento, marcha lenta, carga parcial, carga máxima, corte de combustível."
+        },
+        {
+            "type": "text",
+            "value": "Controle de combustível usa estratégias como speed-density, MAF-based, alpha-N e closed-loop com sonda lambda para manter a mistura ideal."
+        },
+        {
+            "type": "table",
+            "headers": ["Estratégia", "Sensores Principais", "Aplicação"],
+            "rows": [
+                ["Speed-Density", "MAP, TPS, IAT", "Motores sem MAF"],
+                ["MAF-based", "MAF, O2", "Controle preciso de massa de ar"],
+                ["Alpha-N", "TPS, RPM", "Racing, alta rotação"],
+                ["Closed-loop", "O2, MAP/MAF", "Correção em tempo real"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Proteções do Motor",
+            "text": "A ECU implementa limites de RPM, temperatura, pressão e detonação para proteger o motor contra danos."
+        },
+        {
+            "type": "text",
+            "value": "Estratégias de ignição calculam avanço baseado em RPM, carga, temperatura e octanagem. Mapas 3D definem avanço ideal para cada condição de operação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Estratégias"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual estratégia usa principalmente sensor MAF para controle de combustível?",
+            "options": [
+                "Speed-Density",
+                "MAF-based",
+                "Alpha-N",
+                "Open-loop"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual estratégia usa sensores MAP e TPS para calcular combustível?",
+            "options": [
+                "MAF-based",
+                "Speed-Density",
+                "Alpha-N",
+                "Closed-loop"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quando a ECU usa a estratégia Alpha-N?",
+            "options": [
+                "Em marcha lenta normal",
+                "Em alta rotação com TPS e MAP",
+                "Apenas com motor frio",
+                "Em todas as condições de operação"
+            ],
+            "correct": 1
+        }
+    ]
+}

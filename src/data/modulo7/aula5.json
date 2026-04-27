@@ -1,0 +1,88 @@
+{
+    "title": "Ventiladores Elétricos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Ventiladores elétricos do radiador e condensador de ar-condicionado operam com alta corrente, exigindo relés ou módulos de controle dedicados. A maioria dos sistemas utiliza duas velocidades para otimizar refrigeração e consumo de energia."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Controle de Velocidade",
+            "text": "Duas velocidades são comuns em projetos com resistor série ou segundo relé para controle fino do fluxo de ar."
+        },
+        {
+            "type": "text",
+            "value": "Em muitos esquemas, a baixa velocidade passa por um resistor ou enrolamento auxiliar, enquanto a alta recebe 12V direto via segundo relé. A ECM/PCM comanda a bobina do relé aterrando o negativo (low-side) ou chaveando positivo conforme o fabricante."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Suspeita Principal"],
+            "rows": [
+                ["Só alta funciona", "Resistor série queimado, relé de baixa, fusível parcial"],
+                ["Nenhuma velocidade", "Fusível principal, relé de carga, sensor ECT 'mentindo' frio"],
+                ["Liga com AC mas não por temperatura", "Entrada ECT vs lógica de AC - separar causas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Ventoinhas moduladas recebem PWM de um módulo dedicado para menos ruído e controle fino. Falha pode ser alimentação do módulo, terra, ou motor com consumo elevado."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos usam módulos PWM que variam a velocidade continuamente em vez de dois estágios fixos. Isso proporciona controle mais preciso e redução de ruído."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança",
+            "text": "Ventoinha pode ligar com motor frio durante teste de scanner - mantenha mãos e ferramentas longe das pás!"
+        },
+        {
+            "type": "text",
+            "value": "Para diagnóstico, sempre compare com o esquema elétrico antes de fazer ponte direta na bateria. Teste os relés individualmente e verifique a integridade dos resistores de baixa velocidade."
+        },
+        {
+            "type": "simulator",
+            "name": "VoltageDropSimulator",
+            "config": {
+                "title": "Simulador de Queda em Ventilador"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Esquema com duas velocidades por dois relés costuma usar qual recurso para a velocidade mais baixa?",
+            "options": [
+                "Segundo alternador dedicado",
+                "Resistor em série ou caminho de menor tensão no motor",
+                "Apenas fusível de 3A em ambas",
+                "Sensor de velocidade das rodas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do resistor em série em motores de duas velocidades?",
+            "options": [
+                "Aumentar a corrente do motor",
+                "Limitar a corrente para reduzir a velocidade",
+                "Proteger contra curtos-circuitos",
+                "Melhorar a eficiência energética"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você identifica um motor de duas velocidades no esquema elétrico?",
+            "options": [
+                "Apenas pela cor do fio",
+                "Pela presença de dois relés ou resistor limitador",
+                "Pelo tamanho do motor",
+                "Pela potência nominal"
+            ],
+            "correct": 1
+        }
+    ]
+}

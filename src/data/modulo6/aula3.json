@@ -1,0 +1,86 @@
+{
+    "title": "Sensor MAP (Pressão Absoluta)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sensor MAP (Manifold Absolute Pressure) mede a pressão absoluta no coletor de admissão, informação crucial para cálculo da massa de ar admitida."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio de Funcionamento",
+            "text": "Usa elemento piezoelétrico ou capacitivo que varia resistência/capacitância com a pressão. Convertido em sinal de 0-5V."
+        },
+        {
+            "type": "text",
+            "value": "O MAP é essencial para motores aspirados onde não há sensor MAF. Em motores turbo, mede pressão antes e depois do turbo."
+        },
+        {
+            "type": "table",
+            "headers": ["Condição", "Pressão", "Voltagem Típica"],
+            "rows": [
+                ["Marcha lenta", "20-40 kPa", "0.5-1.5V"],
+                ["Carga leve", "40-80 kPa", "1.5-2.5V"],
+                ["Carga média", "80-100 kPa", "2.5-3.5V"],
+                ["Plena carga", "100-105 kPa", "3.5-4.5V"],
+                ["Turbo", ">100 kPa", "4.5-5.0V"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste com multímetro: 5V alimentação, terra bom, sinal variando com vácuo. Use bomba de vácuo para testar."
+        },
+        {
+            "type": "text",
+            "value": "Em motores com sensor MAF, o MAP é usado principalmente para detecção de carga e diagnóstico (barométrico)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Integração com Outros Sensores",
+            "text": "ECU combina MAP com temperatura do ar e RPM para calcular massa de ar admitida com precisão."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensor MAP"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a voltagem típica do MAP em plena carga aspirada?",
+            "options": [
+                "0.5-1.5V",
+                "1.5-2.5V",
+                "3.5-4.5V",
+                "4.5-5.0V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sensor MAP?",
+            "options": [
+                "Medir a temperatura do ar admitido",
+                "Medir a pressão absoluta no coletor de admissão",
+                "Controlar a rotação do motor",
+                "Regular a pressão do combustível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o sensor MAP afeta o cálculo de combustível?",
+            "options": [
+                "Não afeta, apenas mede pressão",
+                "Ajuda a ECU a calcular a densidade do ar e ajustar injeção",
+                "Controla diretamente a bomba de combustível",
+                "Regula apenas o tempo de ignição"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Estudos de Caso - Problemas Comuns",
+    "content": [
+        {
+            "type": "text",
+            "value": "Estudos de caso de problemas comuns são essenciais para desenvolver habilidades práticas de diagnóstico, aplicando conhecimento em situações reais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Metodologia de Análise",
+            "text": "1. Coletar sintomas 2. Formular hipóteses 3. Testar sistematicamente 4. Validar solução 5. Documentar aprendizado."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns incluem: falhas de partida, consumo excessivo, luzes intermitentes, e problemas eletrônicos intermitentes."
+        },
+        {
+            "type": "table",
+            "headers": ["Caso", "Sintomas", "Diagnóstico", "Solução"],
+            "rows": [
+                ["Bateria descarrega", "Bateria morre em 2 dias", "Corrente parasita 80mA", "Isolar circuito de alarme"],
+                ["Farol fraco", "Luz direita mais fraca", "Queda tensão no soquete", "Limpar e reapertar conexão"],
+                ["Motor não pega", "Clique único sem giro", "Solenoide com falha", "Substituir solenoide"],
+                ["Ar condicionado não liga", "Sem refrigeração", "Pressostato aberto", "Substituir sensor de pressão"],
+                ["Rádio com interferência", "Ruído em áudio", "Filtro de linha ruim", "Instalar filtro adequado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importância da Documentação",
+            "text": "Registre cada caso: sintomas, testes realizados, resultados, e solução. Crie banco de dados para consultas futuras."
+        },
+        {
+            "type": "text",
+            "value": "Use diferentes abordagens: análise sintomática, testes sistemáticos, e verificação de padrões conhecidos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Desenvolvimento de Intuição",
+            "text": "Com experiência, desenvolva intuição para diagnóstico rápido, mas sempre valide com testes objetivos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Estudos de Caso"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo na análise de problemas comuns?",
+            "options": [
+                "Substituir componentes",
+                "Coletar sintomas e formular hipóteses",
+                "Testar aleatoriamente",
+                "Resetar sistemas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual corrente parasita é considerada anormal?",
+            "options": [
+                "10mA",
+                "80mA",
+                "200mA",
+                "500mA"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que documentar cada caso de diagnóstico?",
+            "options": [
+                "Apenas burocracia",
+                "Criar banco de dados para consultas futuras e aprendizado",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

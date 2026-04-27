@@ -1,0 +1,43 @@
+{
+    "id": 21,
+    "title": "Sistemas de Partida e Carga",
+    "icon": "⚡",
+    "description": "Motor de arranque, alternador, regulagem de tensão, sistema de carga, diagnóstico completo.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Motor de Arranque - Fundamentos",
+            "slug": "motor-arranque-fundamentos"
+        },
+        {
+            "id": 2,
+            "title": "Solenóide de Engate",
+            "slug": "solenoide-engate"
+        },
+        {
+            "id": 3,
+            "title": "Alternador - Princípio e Componentes",
+            "slug": "alternador-principio"
+        },
+        {
+            "id": 4,
+            "title": "Regulador de Tensão",
+            "slug": "regulador-tensao"
+        },
+        {
+            "id": 5,
+            "title": "Sistema de Carga Completo",
+            "slug": "sistema-carga-completo"
+        },
+        {
+            "id": 6,
+            "title": "Diagnóstico de Partida e Carga",
+            "slug": "diagnostico-partida-carga"
+        },
+        {
+            "id": 7,
+            "title": "Sistemas Start-Stop e Recuperação",
+            "slug": "sistemas-start-stop"
+        }
+    ]
+}

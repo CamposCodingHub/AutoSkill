@@ -1,0 +1,85 @@
+{
+    "title": "GPS e Navegação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas GPS veiculares fornecem navegação precisa, informações de trânsito em tempo real e integração com outros sistemas do veículo. Usam constelação de satélites para determinar posição exata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes",
+            "text": "Antena GPS, receptor, processador, banco de dados de mapas, e integração com sistemas de áudio e instrumentos."
+        },
+        {
+            "type": "text",
+            "value": "O sistema GPS recebe sinais de múltiplos satélites (mínimo 4 para posição 3D). A precisão típica é de 3-10 metros, melhorada com sistemas de augmentação."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Antena GPS", "Receber sinais satélite", "Danos, má localização"],
+                ["Receptor", "Processar sinais", "Desatualização de firmware"],
+                ["Módulo Navegação", "Calcular rotas", "Banco de dados desatualizado"],
+                ["Display", "Interface visual", "Touch screen não responsivo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Integração Veicular",
+            "text": "GPS integra com CAN para velocidade, direção, e informações de trânsito. Permite cálculo preciso de ETA e rotas alternativas."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem atualizações over-the-air, integração com smartphones, e recursos de segurança como chamadas de emergência automáticas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Verifique sinal GPS, atualização de mapas, e comunicação CAN. Teste antena e receptor com ferramentas especializadas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema GPS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quantos satélites são necessários para determinar posição 3D?",
+            "options": [
+                "2 satélites",
+                "3 satélites",
+                "4 satélites",
+                "6 satélites"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sistema GPS em veículos?",
+            "options": [
+                "Controlar a temperatura do motor",
+                "Fornecer localização e navegação",
+                "Regular o sistema de áudio",
+                "Monitorar a pressão dos pneus"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o GPS determina a velocidade do veículo?",
+            "options": [
+                "Através de sensores de roda",
+                "Calculando mudanças de posição ao longo do tempo",
+                "Usando o velocímetro tradicional",
+                "Medindo a rotação do motor"
+            ],
+            "correct": 1
+        }
+    ]
+}

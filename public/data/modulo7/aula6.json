@@ -1,0 +1,88 @@
+{
+    "title": "Bomba de Combustível Elétrica",
+    "content": [
+        {
+            "type": "text",
+            "value": "A bomba de combustível elétrica pode operar com carga contínua ou chaveada em PWM (sistemas GDI e módulos modernos). O caminho bateria → relé → bomba → massa deve ter queda mínima para garantir pressão estável."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Carga Elétrica",
+            "text": "A bomba consome 10A ou mais na partida (inrush) e 5-8A em operação normal. O relé deve suportar essa corrente continuamente."
+        },
+        {
+            "type": "text",
+            "value": "A linha de comando (bobina do relé) opera com baixa corrente, enquanto os contatos do relé levam a alta corrente da bomba. Contatos corroídos ou aquecidos causam partidas longas ou corte em alta demanda."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sintomas Comuns",
+            "text": "Funciona em marcha lenta mas falha em carga ou com tanque baixo (bomba mais quente)."
+        },
+        {
+            "type": "text",
+            "value": "A resistência do fio e terminais é crucial pela Lei de Ohm. Fio fino ou terra ruim causa queda de tensão, rotação da bomba cai e pressão fica insuficiente."
+        },
+        {
+            "type": "table",
+            "headers": ["Problema", "Causa Elétrica", "Sintoma"],
+            "rows": [
+                ["Queda de tensão > 0.5V", "Fio fino ou mau contato", "Pressão baixa em carga"],
+                ["Relé com contato ruim", "Corrosão nos contatos", "Partida longa ou intermitente"],
+                ["Terra deficiente", "Oxidação no chassi", "Bomba superaquece"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Módulos Modernos",
+            "text": "Alguns veículos usam módulo de bomba variando tensão para controle preciso de pressão, especialmente em sistemas GDI."
+        },
+        {
+            "type": "text",
+            "value": "Para diagnóstico, meça a queda de tensão no circuito completo: bateria → relé → bomba → massa. Qualquer queda acima de 0.5V indica problema que precisa ser corrigido."
+        },
+        {
+            "type": "simulator",
+            "name": "VoltageDropSimulator",
+            "config": {
+                "title": "Queda de Tensão na Bomba"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Pressão de combustível baixa só em aceleração forte ou estrada; marcha lenta ok. Causa elétrica plausível?",
+            "options": [
+                "Sensor MAP com defeito",
+                "Queda de tensão no circuito da bomba",
+                "Filtro de ar sujo",
+                "Vela de ignição gasta"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal causa de queda de tensão em circuitos de bomba de combustível?",
+            "options": [
+                "Alternador com defeito",
+                "Resistência alta em conexões ou chicotes",
+                "Bateria muito fraca",
+                "Excesso de acessórios ligados"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa a queda de tensão na bomba de combustível?",
+            "options": [
+                "Medindo a resistência da bomba",
+                "Medindo a tensão na bomba durante operação",
+                "Testando a continuidade com o motor desligado",
+                "Verificando a pressão apenas em marcha lenta"
+            ],
+            "correct": 1
+        }
+    ]
+}

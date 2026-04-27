@@ -1,0 +1,86 @@
+{
+    "title": "Projeto 3 - Diagnóstico Avançado Integrado",
+    "content": [
+        {
+            "type": "text",
+            "value": "Este projeto integrador desenvolve um sistema avançado de diagnóstico automotivo, integrando múltiplos sensores, análise de sinais, e inteligência artificial."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Objetivos do Projeto",
+            "text": "Criar sistema de diagnóstico que integra múltiplos sensores, analisa padrões de falha, e fornece diagnósticos precisos."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve incluir: desenvolvimento de hardware, software de análise, algoritmos de IA, e interface de usuário."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Especificação", "Função"],
+            "rows": [
+                ["Microcontrolador", "ESP32/STM32", "Processamento principal"],
+                ["Osciloscópio", "2 canais 1MHz", "Análise de sinais"],
+                ["Sensores", "Temperatura, tensão, corrente", "Coleta de dados"],
+                ["Display", "TFT 3.5\"", "Interface visual"],
+                ["Comunicação", "CAN, Bluetooth", "Conectividade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Processamento em tempo real, análise de padrões, e integração com múltiplos protocolos."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve ser documentado com: esquemas elétricos, código-fonte, algoritmos de IA, e procedimentos de teste."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Avaliação",
+            "text": "Será avaliada precisão de diagnóstico, velocidade de processamento, inovação técnica, e documentação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico Avançado"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual microcontrolador é ideal para diagnóstico?",
+            "options": [
+                "Arduino Uno",
+                "ESP32/STM32",
+                "Raspberry Pi",
+                "PIC16F"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é usado para análise de sinais?",
+            "options": [
+                "Multímetro básico",
+                "Osciloscópio 2 canais",
+                "Apenas sensor de temperatura",
+                "Chave de fenda"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o processamento em tempo real é importante em diagnóstico?",
+            "options": [
+                "Apenas burocracia",
+                "Permite detecção imediata de falhas e padrões",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

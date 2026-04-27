@@ -1,0 +1,86 @@
+{
+    "title": "Sistema de Áudio e Entretenimento",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de áudio automotivos evoluíram de rádios simples para sistemas multimídia complexos com integração GPS, Bluetooth, Android Auto, Apple CarPlay e conectividade avançada."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Modernos",
+            "text": "Head unit, amplificadores, alto-falantes, subwoofers, processadores de sinal e antenas diversas."
+        },
+        {
+            "type": "text",
+            "value": "Head units modernas operam como computadores embarcados, processando áudio digital, vídeo, navegação e comunicação com múltiplos protocolos."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Conexão Típica"],
+            "rows": [
+                ["Head Unit", "Processamento central", "CAN, MOST, USB, Bluetooth"],
+                ["Amplificador", "Potência dos alto-falantes", "Line-level, CAN, speaker level"],
+                ["Alto-falantes", "Conversão elétrico-som", "2-8 ohms, 20-100W"],
+                ["Subwoofer", "Graves profundos", "Mono bridge, 4-8 ohms"],
+                ["Processador", "Equalização e crossover", "Digital/analógico"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Integração Veicular",
+            "text": "Sistemas modernos integram com CAN bus para informações de velocidade, volume automático e comandos por volante."
+        },
+        {
+            "type": "text",
+            "value": "Protocolos de comunicação incluem CAN para dados veiculares, MOST para áudio digital de alta velocidade, e A2DP para streaming Bluetooth."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use scanner específico para áudio. Teste alimentação, terra e sinais de áudio com osciloscópio."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Áudio"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual protocolo é usado para streaming de áudio Bluetooth de alta qualidade?",
+            "options": [
+                "CAN",
+                "MOST",
+                "A2DP",
+                "USB"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a impedância típica dos alto-falantes automotivos?",
+            "options": [
+                "1 ohm",
+                "2-8 ohms",
+                "16 ohms",
+                "32 ohms"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual função o CAN bus fornece para sistemas de áudio modernos?",
+            "options": [
+                "Apenas alimentação elétrica",
+                "Informações de velocidade, volume automático e comandos por volante",
+                "Apenas conexão com GPS",
+                "Controle apenas da antena"
+            ],
+            "correct": 1
+        }
+    ]
+}

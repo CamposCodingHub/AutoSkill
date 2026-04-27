@@ -1,0 +1,43 @@
+{
+    "id": 14,
+    "title": "Elétrica de Caminhões e Pesados",
+    "icon": "🚚",
+    "description": "Sistemas 24V, pneus, freios ABS, tomadas de reboque, iluminação pesada, sistemas de trailer.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Sistema 24V",
+            "slug": "sistema-24v"
+        },
+        {
+            "id": 2,
+            "title": "Sistema 24V - Fundamentos",
+            "slug": "fundamentos-24v"
+        },
+        {
+            "id": 3,
+            "title": "Pneus e Sistema de Freios ABS Pesados",
+            "slug": "freios-abs-pesados"
+        },
+        {
+            "id": 4,
+            "title": "Tomadas de Reboque e Trailer",
+            "slug": "tomadas-reboque"
+        },
+        {
+            "id": 5,
+            "title": "Iluminação Pesada e Sinalização",
+            "slug": "iluminacao-pesada"
+        },
+        {
+            "id": 6,
+            "title": "Sistemas de Trailer e Acoplamento",
+            "slug": "sistemas-trailer"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico de Sistemas Pesados",
+            "slug": "diagnostico-pesados"
+        }
+    ]
+}

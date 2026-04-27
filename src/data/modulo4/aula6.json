@@ -1,0 +1,86 @@
+{
+    "title": "Distribuição de Energia",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sistema de distribuição de energia entrega eletricidade da bateria para todos os componentes do veículo através de uma rede organizada de fusíveis, relés e chicotes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Caixa de fusíveis, relés, chicotes elétricos, conectores, e pontos de distribuição."
+        },
+        {
+            "type": "text",
+            "value": "A distribuição é organizada por sistemas: motor, iluminação, conforto, segurança, cada um com proteção individual."
+        },
+        {
+            "type": "table",
+            "headers": ["Circuito", "Proteção", "Controle"],
+            "rows": [
+                ["Motor", "Fusível 30A", "ECU/Relé"],
+                ["Faróis", "Fusível 15A", "Interruptor/Relé"],
+                ["Bomba Combustível", "Fusível 20A", "Relé/ECU"],
+                ["Ventilador", "Fusível 25A", "ECU/Termostato"],
+                ["Áudio", "Fusível 10A", "Chave/Head Unit"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Organização do Chicote",
+            "text": "Chicotes mal organizados causam interferência, dificuldade de diagnóstico, e risco de curtos-circuitos."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos usam distribuição inteligente com comunicação CAN, reduzindo fios e permitindo diagnóstico integrado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Melhores Práticas",
+            "text": "Use cores padronizadas, proteção contra abrasão, e identificação clara de cada circuito."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Distribuição"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente protege circuitos individuais?",
+            "options": [
+                "Relé",
+                "Fusível",
+                "Interruptor",
+                "Conector"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a diferença entre fusível e disjuntor automotivo?",
+            "options": [
+                "O disjuntor pode ser resetado, o fusível precisa ser substituído",
+                "O fusível é mais caro que o disjuntor",
+                "O disjuntor só protege contra sobrecarga, o fusível contra curto",
+                "Não há diferença, são iguais"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se você substituir um fusível por outro de amperagem maior?",
+            "options": [
+                "O circuito fica mais protegido",
+                "O circuito pode ser danificado por sobrecorrente",
+                "O consumo de energia diminui",
+                "Não há problema, apenas aumenta a capacidade"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Ciclo Térmico e Componentes",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sistema de ar condicionado automotivo opera através do ciclo termodinâmico de refrigeração, transferindo calor do interior do veículo para o exterior usando refrigerante como meio de transporte."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Lei Básica",
+            "text": "Refrigerante absorve calor quando evapora (baixa pressão) e libera calor quando condensa (alta pressão)."
+        },
+        {
+            "type": "text",
+            "value": "Os componentes principais são: compressor (aumenta pressão), condensador (libera calor), válvula de expansão (reduz pressão), evaporador (absorve calor) e refrigerante (meio de transporte)."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Estado do Refrigerante"],
+            "rows": [
+                ["Compressor", "Comprime e circula refrigerante", "Baixa pressão gás → Alta pressão gás"],
+                ["Condensador", "Libera calor para ambiente", "Alta pressão gás → Alta pressão líquido"],
+                ["Válvula Expansão", "Reduz pressão e controla fluxo", "Alta pressão líquido → Baixa pressão mistura"],
+                ["Evaporador", "Absorve calor da cabine", "Baixa pressão mistura → Baixa pressão gás"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Refrigerantes",
+            "text": "R134a é comum em veículos mais antigos. R1234yf é o padrão moderno, mais ecológico mas com pressões mais altas."
+        },
+        {
+            "type": "text",
+            "value": "O sistema opera em duas pressões: lado de alta pressão (compressor → condensador → válvula) e lado de baixa pressão (válvula → evaporador → compressor)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Eficiência",
+            "text": "Manutenção correta inclui verificação de vazamentos, limpeza do condensador e carga adequada de refrigerante."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise do Ciclo Térmico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente absorve calor do interior do veículo?",
+            "options": [
+                "Compressor",
+                "Condensador",
+                "Evaporador",
+                "Válvula de expansão"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece com o refrigerante no condensador?",
+            "options": [
+                "Absorve calor",
+                "Libera calor e condensa",
+                "Evapora",
+                "Muda de cor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função principal do compressor no sistema A/C?",
+            "options": [
+                "Resfriar o refrigerante",
+                "Comprimir e circular o refrigerante",
+                "Filtrar impurezas",
+                "Controlar a velocidade do ventilador"
+            ],
+            "correct": 1
+        }
+    ]
+}

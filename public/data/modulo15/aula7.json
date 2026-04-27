@@ -1,0 +1,90 @@
+{
+    "title": "Segurança em Sistemas de Alta Tensão",
+    "content": [
+        {
+            "type": "text",
+            "value": "Segurança em sistemas de alta tensão é crítica em veículos híbridos e elétricos. Requer procedimentos específicos, EPI adequado, e conhecimento dos sistemas de proteção integrados."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "RISCO DE VIDA",
+            "text": "Alta tensão (>60V DC) pode causar parada cardíaca fatal. Siga rigorosamente todos os procedimentos de segurança."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de segurança incluem contatores de alta tensão, intertravamentos mecânicos, sensores de isolamento, e sistemas de desativação automática em emergências."
+        },
+        {
+            "type": "table",
+            "headers": ["Sistema de Segurança", "Função", "Ativação"],
+            "rows": [
+                ["Contatores HV", "Isolar bateria", "Manual/emergência"],
+                ["Intertravamento", "Prevenir acesso", "Mecânico/elétrico"],
+                ["Sensor Isolamento", "Detectar fuga", "Contínuo"],
+                ["Disjuntor", "Proteção sobrecorrente", "Automático"],
+                ["Loop de Desativação", "Emergência", "Manual/crash"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimentos Seguros",
+            "text": "1. Desconectar bateria 12V 2. Esperar 5 minutos 3. Verificar HV desativada 4. Usar EPI completo 5. Testar com multímetro."
+        },
+        {
+            "type": "text",
+            "value": "Equipamentos de proteção individual incluem luvas isoladas Classe 0 (1000V), óculos de proteção, vestimenta isolada e ferramentas com isolamento adequado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sinalização",
+            "text": "Cabos laranja com标识 HV, etiquetas de advertência, e indicadores luminosos de sistema ativo."
+        },
+        {
+            "type": "text",
+            "value": "Treinamento específico é obrigatório. Técnicos devem ser certificados para trabalhar em sistemas HV e conhecer procedimentos de emergência."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Segurança HV"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a voltagem mínima considerada de risco fatal?",
+            "options": [
+                "12V",
+                "48V",
+                "60V",
+                "120V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a classe de luvas isoladas necessárias para 1000V?",
+            "options": [
+                "Classe 00",
+                "Classe 0",
+                "Classe 1",
+                "Classe 2"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o primeiro passo no procedimento seguro antes de trabalhar em sistemas HV?",
+            "options": [
+                "Testar com multímetro",
+                "Desconectar bateria 12V",
+                "Usar EPI completo",
+                "Verificar HV desativada"
+            ],
+            "correct": 1
+        }
+    ]
+}

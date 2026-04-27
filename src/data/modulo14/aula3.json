@@ -1,0 +1,86 @@
+{
+    "title": "Pneus e Sistema de Freios ABS Pesados",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de freios em veículos pesados operam com pressões muito mais altas que veículos leves, usando ar comprimido e componentes robustos projetados para cargas extremas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Diferenças Fundamentais",
+            "text": "Freios a ar vs hidráulicos, pressões até 120 PSI, múltiplos circuitos e sistemas de recuperação de energia."
+        },
+        {
+            "type": "text",
+            "value": "ABS em caminhões monitora cada roda individualmente, ajustando pressão de freio para evitar travamento mesmo em superfícies irregulares e com cargas desiguais."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Característica"],
+            "rows": [
+                ["Compressor de Ar", "Gerar ar comprimido", "120-150 PSI"],
+                ["Tanque de Ar", "Armazenar pressão", "Múltiplos tanques"],
+                ["Válvulas Moduladoras", "Controlar freio ABS", "Modulação rápida"],
+                ["Sensores de Roda", "Detectar velocidade", "Robustos, selados"],
+                ["Cilindros de Freio", "Aplicar força", "Grande diâmetro"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "Sistemas de freio a ar podem liberar energia repentinamente. Use procedimentos de segurança e EPI adequado."
+        },
+        {
+            "type": "text",
+            "value": "ABS pesados inclui modos especiais como ABS para carga leve/vazia, controle de estabilidade de reboque e otimização de frenagem regenerativa."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use scanner específico para veículos pesados. Verifique pressão do sistema, vazamentos e funcionamento das válvulas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Freios Pesados"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a pressão típica de operação em freios a ar de caminhões?",
+            "options": [
+                "30-50 PSI",
+                "60-80 PSI",
+                "120-150 PSI",
+                "200-250 PSI"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal diferença entre freios a ar e hidráulicos?",
+            "options": [
+                "Freios a ar usam menor pressão",
+                "Freios a ar operam com pressões muito mais altas e usam ar comprimido",
+                "Freios hidráulicos são mais potentes",
+                "Não há diferença significativa"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o ABS em caminhões monitora as rodas?",
+            "options": [
+                "Monitora apenas as rodas dianteiras",
+                "Monitora cada roda individualmente",
+                "Monitora apenas o eixo traseiro",
+                "Não monitora as rodas"
+            ],
+            "correct": 1
+        }
+    ]
+}

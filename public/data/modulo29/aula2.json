@@ -1,0 +1,86 @@
+{
+    "title": "Marketing Digital para Oficinas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Marketing digital é essencial para oficinas modernas, permitindo alcançar clientes, construir marca, e destacar-se da concorrência online."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Estratégias Digitais",
+            "text": "SEO local, Google Meu Negócio, redes sociais, marketing de conteúdo, e anúncios segmentados."
+        },
+        {
+            "type": "text",
+            "value": "Marketing digital para oficinas deve focar em: presença online, geração de leads, construção de autoridade, e relacionamento com clientes."
+        },
+        {
+            "type": "table",
+            "headers": ["Canal", "Função", "Investimento"],
+            "rows": [
+                ["Google Meu Negócio", "Presença local", "Gratuito"],
+                ["SEO Local", "Busca orgânica", "Médio"],
+                ["Redes Sociais", "Engajamento", "Baixo/Médio"],
+                ["Anúncios Google", "Geração de leads", "Médio/Alto"],
+                ["Email Marketing", "Retenção", "Baixo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importância do Conteúdo",
+            "text": "Crie conteúdo útil: tutoriais, dicas de manutenção, e informações técnicas para atrair clientes."
+        },
+        {
+            "type": "text",
+            "value": "Use métricas para avaliar resultados: tráfego, conversões, custo por lead, e retorno sobre investimento."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Automação de Marketing",
+            "text": "Use ferramentas para automatizar: emails, posts em redes sociais, e follow-up de clientes."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Marketing Digital"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para presença local?",
+            "options": [
+                "Facebook Ads",
+                "Instagram",
+                "Google Meu Negócio",
+                "LinkedIn"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de conteúdo atrai clientes para oficinas?",
+            "options": [
+                "Apenas promoções",
+                "Tutoriais, dicas de manutenção e informações técnicas",
+                "Apenas fotos",
+                "Apenas memes"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar métricas em marketing digital?",
+            "options": [
+                "Apenas burocracia",
+                "Avaliar resultados, tráfego, conversões e ROI",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

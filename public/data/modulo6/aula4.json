@@ -1,0 +1,85 @@
+{
+    "title": "Sensor MAF (Fluxo de Ar)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sensor MAF (Mass Air Flow) mede a massa de ar admitida pelo motor, informação essencial para cálculo preciso da mistura ar-combustível."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Fio quente (hot-wire), filme quente (hot-film), e vortex/Kármán. Cada um com diferentes tecnologias."
+        },
+        {
+            "type": "text",
+            "value": "O MAF é crucial para motores modernos com injeção eletrônica, permitindo controle preciso da mistura e otimização do consumo."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Princípio", "Aplicação", "Vantagens"],
+            "rows": [
+                ["Hot-wire", "Resistência variável", "Motores modernos", "Alta precisão"],
+                ["Hot-film", "Capacitância variável", "Motos de alta performance", "Resposta rápida"],
+                ["Vortex", "Frequência variável", "Motos diesel", "Robusto"],
+                ["Karman", "Pressão diferencial", "Aplicações específicas", "Custo-benefício"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste alimentação 5V, terra bom, e sinal variando com fluxo de ar. Limpe com spray limpador específico."
+        },
+        {
+            "type": "text",
+            "value": "Sinal típico: 0.5-1.0V em marcha lenta, aumentando até 4.5-5.0V em plena carga."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Problemas Comuns",
+            "text": "Sujeira no elemento sensor, fio partido, mau contato, e sinal instável."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensor MAF"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a voltagem típica do MAF em marcha lenta?",
+            "options": [
+                "0.5-1.0V",
+                "2.0-2.5V",
+                "3.5-4.0V",
+                "4.5-5.0V"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sensor MAF?",
+            "options": [
+                "Medir a temperatura do ar",
+                "Medir o fluxo de massa de ar admitido",
+                "Controlar a pressão do combustível",
+                "Regular a rotação do motor"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você limpa um sensor MAF sujo?",
+            "options": [
+                "Com água e sabão",
+                "Com spray limpador de MAF específico",
+                "Com álcool isopropílico",
+                "Com ar comprimido apenas"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Soldagem de Componentes Eletrônicos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A soldagem de componentes eletrônicos automotivos requer técnicas precisas e cuidados especiais devido à sensibilidade dos componentes modernos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Sensíveis",
+            "text": "ECUs, módulos de controle, sensores, e circuitos integrados exigem soldagem de baixa temperatura e controle preciso."
+        },
+        {
+            "type": "text",
+            "value": "Técnicas incluem: solda por imersão para placas, solda ponto a ponto para componentes, e reflow para montagem SMD."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Temperatura Máxima", "Tempo Máximo", "Cuidados"],
+            "rows": [
+                ["Componentes SMD", "250°C", "3-5 segundos", "Evitar sobreaquecimento"],
+                ["Conectores Plástico", "200°C", "2-3 segundos", "Proteger plástico"],
+                ["Fios Finos", "300°C", "1-2 segundos", "Isolar rapidamente"],
+                ["ECU/Módulos", "220°C", "2-4 segundos", "Usar fluxo mínimo"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Prevenção de Danos",
+            "text": "Use aterramento estático, controle de temperatura, e tempo mínimo de exposição ao calor."
+        },
+        {
+            "type": "text",
+            "value": "Use solda sem chumbo para componentes modernos. Fluxo adequado ajuda na soldagem e protege contra oxidação."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Inspeção Pós-Soldagem",
+            "text": "Verifique com microscópio: brilho, continuidade, e ausência de pontes de solda."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Soldagem de Componentes"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a temperatura máxima para componentes SMD?",
+            "options": [
+                "200°C",
+                "250°C",
+                "300°C",
+                "350°C"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o tempo máximo de exposição ao calor para conectores de plástico?",
+            "options": [
+                "5-10 segundos",
+                "2-3 segundos",
+                "15-20 segundos",
+                "30-60 segundos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar aterramento estático ao soldar componentes eletrônicos?",
+            "options": [
+                "Apenas estética",
+                "Prevenir danos por descarga eletrostática",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

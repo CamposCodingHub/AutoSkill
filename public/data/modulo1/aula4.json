@@ -1,0 +1,87 @@
+{
+    "title": "Circuitos em Série e Paralelo",
+    "content": [
+        {
+            "type": "text",
+            "value": "A forma como os componentes são conectados dita as regras do circuito. Série: mesmo caminho para a corrente. Paralelo: múltiplos caminhos."
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Analogia do trânsito",
+            "text": "Série é uma estrada de pista única com pedágios: o fluxo é o mesmo em toda a estrada, mas a 'pressa' (tensão) se divide entre cada pedágio. Paralelo é uma avenida com várias faixas: cada faixa é um caminho independente, a 'pressa' é a mesma em todas as faixas, mas o fluxo total é a soma."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tipo",
+                "Onde encontrar no carro",
+                "Característica"
+            ],
+            "rows": [
+                [
+                    "Série",
+                    "Resistor do motor do ventilador (controle de velocidades), circuitos de sensores",
+                    "A corrente é igual em todos os componentes; a tensão se divide"
+                ],
+                [
+                    "Paralelo",
+                    "Faróis, lanternas, luzes de freio, vidros elétricos, sistema de som",
+                    "Todos os componentes recebem a tensão total da bateria; a corrente se divide entre os ramos"
+                ],
+                [
+                    "Misto",
+                    "Painel de instrumentos (LEDs em série/paralelo), sistema de arrefecimento (ventoinha com resistor em série e relé em paralelo)",
+                    "Combina as vantagens de ambos os tipos"
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Em um circuito em série, se um componente queimar, o circuito se abre e nenhum componente funciona. Em paralelo, se um componente queimar, os outros continuam funcionando – por isso os faróis são em paralelo."
+        },
+        {
+            "type": "list",
+            "items": [
+                " Série: resistência total = R1 + R2 + ...",
+                " Paralelo: resistência total = 1 / (1/R1 + 1/R2 + ...)",
+                " Queda de tensão (voltage drop) é maior em componentes com maior resistência (série)",
+                " Em paralelo, o ramo de menor resistência puxa maior corrente"
+            ],
+            "ordered": false
+        },
+        {
+            "type": "quiz",
+            "question": "Em um circuito com duas lâmpadas idênticas em série, uma delas queima (circuito aberto). O que acontece com a outra lâmpada?",
+            "options": [
+                "Ela brilha mais intensamente",
+                "Ela continua acesa com o mesmo brilho",
+                "Ela se apaga, pois o circuito é interrompido",
+                "Ela pisca"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que os faróis de um carro são conectados em paralelo e não em série?",
+            "options": [
+                "Para economizar fiação",
+                "Para que se um farol queimar, o outro continue funcionando",
+                "Para reduzir o consumo de energia",
+                "Para aumentar a vida útil das lâmpadas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Em um circuito paralelo com duas resistências diferentes (10Ω e 20Ω) alimentado por 12V, qual resistor terá maior corrente?",
+            "options": [
+                "O de 10Ω (menor resistência)",
+                "O de 20Ω (maior resistência)",
+                "Ambos terão a mesma corrente",
+                "Nenhum, pois não há corrente em paralelo"
+            ],
+            "correct": 0
+        }
+    ]
+}

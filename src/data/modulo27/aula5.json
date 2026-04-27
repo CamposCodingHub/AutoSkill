@@ -1,0 +1,86 @@
+{
+    "title": "Restauração de Clássicos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Restauração de veículos clássicos é um nicho lucrativo que combina conhecimento histórico com técnicas modernas de eletricidade e mecânica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Épicas Populares",
+            "text": "Muscle cars dos anos 60-70, clássicos europeus, e veículos esportivos históricos."
+        },
+        {
+            "type": "text",
+            "value": "A restauração elétrica de clássicos envolve: modernização de sistemas elétricos, instalação de componentes modernos, e melhoria de performance."
+        },
+        {
+            "type": "table",
+            "headers": ["Sistema", "Modificação Moderna", "Benefício"],
+            "rows": [
+                ["Iluminação", "LED + relés modernos", "Eficiência e durabilidade"],
+                ["Ignição", "Eletrônica moderna", "Melhor combustão"],
+                ["Carregamento", "Alternador moderno", "Confiabilidade"],
+                ["Áudio", "Sistemas Bluetooth/USB", "Conectividade"],
+                ["Segurança", "Alarmes modernos", "Proteção avançada"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Integração de sistemas modernos em estruturas antigas, preservação do original, e conformidade com regulamentações."
+        },
+        {
+            "type": "text",
+            "value": "Profissionais especializados em clássicos têm alta demanda e podem cobrar valores premium por serviços especializados."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Workshops especializados, consultoria em restauração, e fornecimento de componentes modernizados."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Restauração de Clássicos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema oferece maior eficiência em clássicos?",
+            "options": [
+                "Iluminação original com lâmpadas halógenas",
+                "Iluminação moderna com LEDs",
+                "Sistema sem iluminação",
+                "Iluminação com velas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual modificação melhora a combustão em clássicos?",
+            "options": [
+                "Ignição original",
+                "Ignição eletrônica moderna",
+                "Sem ignição",
+                "Ignição com velas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a preservação do original é importante em restauração?",
+            "options": [
+                "Apenas estética",
+                "Mantém valor histórico e autenticidade do veículo",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

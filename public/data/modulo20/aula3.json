@@ -1,0 +1,86 @@
+{
+    "title": "Leitura de Esquemas Elétricos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A leitura de esquemas elétricos é uma habilidade fundamental que permite entender como os circuitos funcionam e diagnosticar problemas eficientemente."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Técnica de Leitura",
+            "text": "Comece da esquerda para direita, siga o fluxo da corrente, e identifique componentes e suas conexões."
+        },
+        {
+            "type": "text",
+            "value": "Pratique a leitura seguindo o fluxo: da fonte de alimentação → através de fusíveis → relés → interruptores → carga → terra."
+        },
+        {
+            "type": "table",
+            "headers": ["Passo", "O que Procurar", "Como Interpretar"],
+            "rows": [
+                ["1. Fonte", "Identificar alimentação", "Bateria, alternador"],
+                ["2. Proteção", "Localizar fusíveis", "Valores e localização"],
+                ["3. Controle", "Encontrar interruptores", "Posição e função"],
+                ["4. Carga", "Identificar componente", "Tipo e potência"],
+                ["5. Terra", "Verificar retorno", "Pontos de massa"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Atenção aos Detalhes",
+            "text": "Note cores dos fios, números de pinos, e valores dos componentes. Pequenos detalhes são cruciais."
+        },
+        {
+            "type": "text",
+            "value": "Use marcadores coloridos para identificar diferentes circuitos. Isso ajuda a visualizar o fluxo e entender interconexões."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Prática Recomendada",
+            "text": "Comece com circuitos simples (iluminação) e avance para sistemas complexos (injeção, CAN bus)."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Leitura de Esquemas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a direção recomendada para leitura de diagramas?",
+            "options": [
+                "Direita para esquerda",
+                "Esquerda para direita",
+                "De cima para baixo",
+                "Aleatoriamente"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é o fluxo típico em um circuito elétrico?",
+            "options": [
+                "Terra → Fonte → Carga",
+                "Fonte → Fusíveis → Relés → Interruptores → Carga → Terra",
+                "Carga → Fonte → Terra",
+                "Não há fluxo definido"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar marcadores coloridos ao ler diagramas?",
+            "options": [
+                "Apenas estética",
+                "Para identificar diferentes circuitos e visualizar o fluxo",
+                "Para aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

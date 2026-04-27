@@ -1,0 +1,92 @@
+{
+    "title": "Uso do Multímetro",
+    "content": [
+        {
+            "type": "text",
+            "value": "O multímetro digital (DMM) é a ferramenta mais importante do eletricista automotivo. Permite medir tensão (V), corrente (A) e resistência (Ω), além de continuidade, diodo, frequência e temperatura."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Grandeza",
+                "Configuração",
+                "Conexão",
+                "Cuidado"
+            ],
+            "rows": [
+                [
+                    "Tensão (V)",
+                    "V⎓ (DC) – escala 20V",
+                    "Em paralelo com o componente",
+                    "Nunca medir resistência com circuito energizado"
+                ],
+                [
+                    "Corrente (A)",
+                    "A⎓ (DC) – escala 10A",
+                    "Em série com o circuito",
+                    "⚠️ Risco de curto! Use entrada 10A"
+                ],
+                [
+                    "Resistência (Ω)",
+                    "Ω – escala 200Ω",
+                    "Em paralelo, com o componente desconectado",
+                    "Circuito deve estar DESLIGADO"
+                ],
+                [
+                    "Continuidade",
+                    ")))",
+                    "Em paralelo",
+                    "Bip indica resistência < 30Ω"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Regra de ouro",
+            "text": "NUNCA meça resistência em um circuito energizado. O multímetro aplica sua própria tensão; tensão externa pode danificar o equipamento."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Para medir tensão da bateria: ponta vermelha no positivo, preta no negativo (12,4–12,8V desligado, 13,8–14,4V ligado).",
+                "Teste de queda de tensão (voltage drop): com circuito ligado, meça entre dois pontos – deve ser < 0,5V (positivo) e < 0,2V (massa).",
+                "Teste de resistência: desconecte o componente, escolha a escala apropriada (ex: 200Ω para baixas resistências)."
+            ],
+            "ordered": false
+        },
+        {
+            "type": "quiz",
+            "question": "Você quer medir a resistência da bobina de um relé. O que é OBRIGATÓRIO fazer antes?",
+            "options": [
+                "Ligar a ignição do carro",
+                "Desconectar o relé do chicote (ou desligar a alimentação)",
+                "Conectar as pontas em paralelo com a bobina",
+                "Usar a escala de 10A"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal causa de danos ao multímetro ao medir resistência?",
+            "options": [
+                "Usar a escala errada",
+                "Medir resistência em circuito energizado",
+                "Conectar as pontas invertidas",
+                "Usar pontas de prova ruins"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você deve posicionar o multímetro para medir a corrente que passa por um componente?",
+            "options": [
+                "Em paralelo com o componente",
+                "Em série com o circuito",
+                "Aterrado no chassi do carro",
+                "Na escala de tensão AC"
+            ],
+            "correct": 1
+        }
+    ]
+}

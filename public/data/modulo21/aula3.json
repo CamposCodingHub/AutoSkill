@@ -1,0 +1,86 @@
+{
+    "title": "Alternador - Princípio e Componentes",
+    "content": [
+        {
+            "type": "text",
+            "value": "O alternador é o coração do sistema de carga, convertendo energia mecânica do motor em energia elétrica para recarregar bateria e alimentar sistemas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio de Funcionamento",
+            "text": "Rotação do rotor cria campo magnético variável que induz corrente no estator, gerando AC retificada para DC."
+        },
+        {
+            "type": "text",
+            "value": "Componentes principais: rotor (campo), estator (geração), diodos retificadores, regulador de tensão, e polia com embreagem."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "rows": [
+                ["Rotor", "Campo magnético", "Sem carga, luz bateria"],
+                ["Estator", "Geração AC", "Baixa saída, ruído"],
+                ["Diodos", "Retificação AC→DC", "Ripple excessivo"],
+                ["Regulador", "Controla tensão", "Sobrecarga/subcarga"],
+                ["Rolamentos", "Suporte eixo", "Ruído, superaquecimento"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste tensão em marcha lenta (13.8-14.8V). Teste sob carga. Verifique ripple AC (<0.5V)."
+        },
+        {
+            "type": "text",
+            "value": "Alternadores modernos incluem controle inteligente, comunicação CAN, e estratégias de carga otimizadas para diferentes tipos de bateria."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Manutenção",
+            "text": "Verifique correias, conexões, e limpeza regularmente. Teste anualmente para prevenção."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Alternador"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a tensão normal de operação do alternador?",
+            "options": [
+                "12.0-12.6V",
+                "13.8-14.8V",
+                "15.0-16.0V",
+                "10.5-11.5V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente retifica AC para DC no alternador?",
+            "options": [
+                "Rotor",
+                "Estator",
+                "Diodos",
+                "Rolamentos"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o ripple AC máximo aceitável em um alternador saudável?",
+            "options": [
+                "0.1V",
+                "0.5V",
+                "1.0V",
+                "2.0V"
+            ],
+            "correct": 1
+        }
+    ]
+}

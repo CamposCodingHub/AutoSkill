@@ -1,0 +1,56 @@
+{
+    "title": "Motores de Partida a Frio",
+    "content": [
+        {
+            "type": "text",
+            "value": "Motores de partida a frio (glow plugs) aquecem o ar de admissão em motores diesel para facilitar a combustão em temperaturas baixas. Operam com alta corrente e exigem circuito robusto."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funcionamento",
+            "text": "Aquecem até 800-1000°C em poucos segundos, permitindo ignição espontânea do combustível diesel mesmo no frio."
+        },
+        {
+            "type": "text",
+            "value": "O sistema consiste em várias velhas de aquecimento conectadas em paralelo, controladas por um relé ou módulo dedicado. Cada vela consome 6-12A, resultando em corrente total de 30-60A."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "rows": [
+                ["Não aquece", "Relé defeituoso, fusível queimado", "Testar alimentação do relé"],
+                ["Aquece irregular", "Vela com resistência alta", "Medir resistência individual"],
+                ["Consome bateria", "Curto em alguma vela", "Testar isolamento"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Resistência",
+            "text": "Vela nova: 0.1-2Ω. Acima de 5Ω indica vela defeituosa que deve ser substituída."
+        },
+        {
+            "type": "text",
+            "value": "O módulo de controle pode temporizar o aquecimento baseado na temperatura do líquido de arrefecimento. Em temperaturas acima de 5-10°C, o sistema pode não ativar."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Consumo do Sistema de Aquecimento"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a corrente total aproximada de um sistema com 4 velhas de aquecimento consumindo 8A cada?",
+            "options": [
+                "8A",
+                "16A",
+                "32A",
+                "64A"
+            ],
+            "correct": 2
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "id": 20,
+    "title": "Diagramas Elétricos e Leitura de Esquemas",
+    "icon": "📋",
+    "description": "Leitura e interpretação de diagramas elétricos, simbologia, localização de componentes, análise de circuitos.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Simbologia e Convenções",
+            "slug": "simbologia-convencoes"
+        },
+        {
+            "id": 2,
+            "title": "Tipos de Diagramas",
+            "slug": "tipos-diagramas"
+        },
+        {
+            "id": 3,
+            "title": "Leitura de Esquemas Elétricos",
+            "slug": "leitura-esquemas"
+        },
+        {
+            "id": 4,
+            "title": "Análise de Circuitos",
+            "slug": "analise-circuitos"
+        },
+        {
+            "id": 5,
+            "title": "Localização de Componentes",
+            "slug": "localizacao-componentes"
+        },
+        {
+            "id": 6,
+            "title": "Software de Diagramas",
+            "slug": "software-diagramas"
+        },
+        {
+            "id": 7,
+            "title": "Prática e Estudos de Caso",
+            "slug": "pratica-estudos-caso"
+        }
+    ]
+}

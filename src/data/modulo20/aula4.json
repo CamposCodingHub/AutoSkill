@@ -1,0 +1,85 @@
+{
+    "title": "Análise de Circuitos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A análise de circuitos é a habilidade de entender como a eletricidade flui através dos componentes, permitindo diagnosticar problemas e prever comportamento do sistema."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Leis Fundamentais",
+            "text": "Lei de Ohm (V=IR), Lei de Kirchhoff (soma das correntes=0), e análise série/paralelo."
+        },
+        {
+            "type": "text",
+            "value": "Use análise de circuitos para calcular quedas de tensão, correntes em ramos, e identificar pontos de falha potenciais."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo Circuito", "Cálculo Principal", "Aplicação"],
+            "rows": [
+                ["Série", "Rt = R1 + R2 + ...", "Divisores de tensão"],
+                ["Paralelo", "1/Rt = 1/R1 + 1/R2", "Cargas múltiplas"],
+                ["Misto", "Combinação", "Circuitos reais"],
+                ["Divisor Tensão", "Vout = Vin * (R2/(R1+R2))", "Sensores, referências"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Análise Prática",
+            "text": "Meça tensão em diferentes pontos para identificar quedas. Calcule correntes esperadas vs reais."
+        },
+        {
+            "type": "text",
+            "value": "Use análise para prever comportamento, dimensionar componentes, e otimizar desempenho do sistema."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas de Análise",
+            "text": "Simuladores de circuitos, calculadoras online, e software especializado para análise complexa."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Circuitos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a fórmula para resistores em paralelo?",
+            "options": [
+                "Rt = R1 + R2",
+                "1/Rt = 1/R1 + 1/R2",
+                "Rt = (R1 * R2) / (R1 + R2)",
+                "Rt = R1 - R2"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a Lei de Ohm?",
+            "options": [
+                "V = IR",
+                "I = VR",
+                "R = VI",
+                "P = VI"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Para que serve a análise de circuitos?",
+            "options": [
+                "Apenas teoria",
+                "Diagnosticar problemas e prever comportamento do sistema",
+                "Apenas calcular números",
+                "Não tem utilidade prática"
+            ],
+            "correct": 1
+        }
+    ]
+}

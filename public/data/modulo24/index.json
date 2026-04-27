@@ -1,0 +1,43 @@
+{
+    "id": 24,
+    "title": "Segurança em Oficina e Procedimentos",
+    "icon": "🛡️",
+    "description": "Segurança elétrica, EPIs, procedimentos de emergência, normas regulamentares, gestão de riscos.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Segurança Elétrica Fundamentos",
+            "slug": "seguranca-eletrica-fundamentos"
+        },
+        {
+            "id": 2,
+            "title": "Equipamentos de Proteção Individual (EPI)",
+            "slug": "epi-equipamentos"
+        },
+        {
+            "id": 3,
+            "title": "Procedimentos de Trabalho Seguro",
+            "slug": "procedimentos-seguros"
+        },
+        {
+            "id": 4,
+            "title": "Trabalho em Alta Tensão",
+            "slug": "trabalho-alta-tensao"
+        },
+        {
+            "id": 5,
+            "title": "Emergências e Primeiros Socorros",
+            "slug": "emergencias-primeiros-socorros"
+        },
+        {
+            "id": 6,
+            "title": "Normas e Regulamentações",
+            "slug": "normas-regulamentacoes"
+        },
+        {
+            "id": 7,
+            "title": "Gestão de Riscos e Prevenção",
+            "slug": "gestao-riscos"
+        }
+    ]
+}

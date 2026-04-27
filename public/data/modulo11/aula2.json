@@ -1,0 +1,85 @@
+{
+    "title": "Compressor e Embreagem",
+    "content": [
+        {
+            "type": "text",
+            "value": "O compressor é o coração do sistema A/C, responsável por circular o refrigerante e aumentar sua pressão. A embreagem eletromagnética controla quando o compressor está acoplado ao motor."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Compressor",
+            "text": "Fixo vs variável. Compressores variáveis ajustam deslocamento baseado na demanda para maior eficiência."
+        },
+        {
+            "type": "text",
+            "value": "A embreagem eletromagnética recebe 12V do módulo HVAC ou relé A/C. Quando energizada, acopla o polia do compressor ao motor através de atrito eletromagnético."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Bobina da Embreagem", "Gera campo magnético", "Circuito aberto/curto"],
+                ["Placa de Pressão", "Transmite força ao polia", "Desgaste, superaquecimento"],
+                ["Rolamento do Compressor", "Suporta eixo rotativo", "Ruído, falha por falta de óleo"],
+                ["Válvula de Expansão", "Controla fluxo de refrigerante", "Obstrução, congelamento"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Proteção do Compressor",
+            "text": "Pressostato de baixa/alta pressão desliga o compressor para evitar danos por falta ou excesso de refrigerante."
+        },
+        {
+            "type": "text",
+            "value": "Compressores variáveis usam controle de ângulo da placa swash ou controle de capacidade para ajustar o deslocamento baseado na demanda de refrigeração."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Verifique resistência da bobina (2-5Ω), ruído do rolamento, e funcionamento da embreagem com testes de ativação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise do Compressor"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que controla o acoplamento do compressor ao motor?",
+            "options": [
+                "Válvula termostática",
+                "Embreagem eletromagnética",
+                "Sensor de temperatura",
+                "Pressostato de alta"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função da embreagem do compressor de AC?",
+            "options": [
+                "Controlar a temperatura do evaporador",
+                "Ligar e desligar o compressor conforme necessário",
+                "Regular a pressão do refrigerante",
+                "Controlar a velocidade do ventilador"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa a embreagem do compressor com multímetro?",
+            "options": [
+                "Medindo a resistência da bobina",
+                "Verificando a tensão de alimentação",
+                "Testando a continuidade com o motor ligado",
+                "Medindo a corrente de operação"
+            ],
+            "correct": 0
+        }
+    ]
+}

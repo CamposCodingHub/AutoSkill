@@ -1,0 +1,85 @@
+{
+    "title": "Diodos e Retificadores",
+    "content": [
+        {
+            "type": "text",
+            "value": "Diodos são componentes semicondutores que permitem fluxo de corrente em apenas uma direção, essenciais em sistemas automotivos para retificação e proteção."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Diodo retificador, zener, LED, Schottky. Cada um com características específicas para diferentes aplicações."
+        },
+        {
+            "type": "text",
+            "value": "Em alternadores, ponte retificadora de diodos converte AC para DC. Diodos de proteção previnem danos por polaridade reversa."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Função", "Aplicação Automotiva"],
+            "rows": [
+                ["Retificador", "Converte AC→DC", "Alternador, carregador"],
+                ["Zener", "Regula tensão", "Proteção, referência"],
+                ["LED", "Emite luz", "Painéis, iluminação"],
+                ["Schottky", "Alta velocidade", "Circuitos rápidos"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Diodos",
+            "text": "Use multímetro em modo diodo. Deve mostrar baixa resistência em um sentido e alta no reverso."
+        },
+        {
+            "type": "text",
+            "value": "Ponte retificadora completa usa 4 diodos em configuração de ponte para retificação completa de onda."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Falhas Comuns",
+            "text": "Diodo em curto = condução bilateral. Diodo aberto = não conduz. Ambos causam problemas no sistema."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Diodos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quantos diodos em uma ponte retificadora completa?",
+            "options": [
+                "2 diodos",
+                "3 diodos",
+                "4 diodos",
+                "6 diodos"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função de um diodo em um circuito automotivo?",
+            "options": [
+                "Regular a corrente que passa",
+                "Permitir fluxo de corrente em apenas uma direção",
+                "Armazenar energia temporariamente",
+                "Amplificar o sinal"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se você inverter a polaridade de um diodo em um circuito?",
+            "options": [
+                "O diodo continua funcionando normalmente",
+                "O diodo bloqueia a passagem de corrente",
+                "O diodo queima imediatamente",
+                "O diodo deixa passar o dobro de corrente"
+            ],
+            "correct": 1
+        }
+    ]
+}

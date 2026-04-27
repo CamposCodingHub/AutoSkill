@@ -1,0 +1,43 @@
+{
+    "id": 8,
+    "title": "Redes de Comunicação Veicular",
+    "icon": "🌐",
+    "description": "CAN bus, LIN, K-Line, ISO-9141, protocolos de diagnóstico e comunicação entre módulos.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Protocolo CAN Bus",
+            "slug": "can-bus"
+        },
+        {
+            "id": 2,
+            "title": "Protocolo LIN Bus",
+            "slug": "lin-bus"
+        },
+        {
+            "id": 3,
+            "title": "OBD-II e Diagnóstico Padronizado",
+            "slug": "obd2"
+        },
+        {
+            "id": 4,
+            "title": "K-Line e ISO-9141",
+            "slug": "k-line"
+        },
+        {
+            "id": 5,
+            "title": "Topologia e Terminação CAN",
+            "slug": "topologia-can"
+        },
+        {
+            "id": 6,
+            "title": "Diagnóstico de Redes CAN",
+            "slug": "diagnostico-can"
+        },
+        {
+            "id": 7,
+            "title": "Redes de Comunicação - Revisão Geral",
+            "slug": "revisao-redes"
+        }
+    ]
+}

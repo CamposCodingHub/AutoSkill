@@ -1,0 +1,135 @@
+{
+    "title": "Potência Elétrica (Watts)",
+    "content": [
+        {
+            "type": "text",
+            "value": "A potência elétrica é a quantidade de energia que um componente consome ou transforma por segundo. Unidade: watt (W). A fórmula fundamental é: P = V × I"
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Analogia: a força da água",
+            "text": "Uma mangueira com pressão (tensão) e fluxo (corrente) gera potência. Se você colocar uma rodinha d'água na saída, quanto maior a potência, mais rápido ela gira."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Fórmulas derivadas",
+            "text": "I = P ÷ V | V = P ÷ I"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Componente",
+                "Potência típica",
+                "Corrente (12V)",
+                "Fusível sugerido"
+            ],
+            "rows": [
+                [
+                    "Lâmpada de cortesia",
+                    "5W",
+                    "~0,4A",
+                    "5A"
+                ],
+                [
+                    "Farol baixo (halógeno)",
+                    "55W",
+                    "~4,6A",
+                    "10A"
+                ],
+                [
+                    "Farol de milha (par)",
+                    "110W",
+                    "~9,2A",
+                    "15A"
+                ],
+                [
+                    "Ventilador do radiador",
+                    "150W a 300W",
+                    "12,5A a 25A",
+                    "20A a 30A"
+                ],
+                [
+                    "Motor de vidro elétrico",
+                    "60W a 80W",
+                    "5A a 6,7A",
+                    "10A a 15A"
+                ],
+                [
+                    "Bomba de combustível",
+                    "100W a 150W",
+                    "8,3A a 12,5A",
+                    "15A a 20A"
+                ],
+                [
+                    "Motor de arranque (carro 1.0)",
+                    "1200W a 1800W",
+                    "100A a 150A",
+                    "— (cabo direto)"
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Para estimar rapidamente a corrente de um acessório de 12V, divida a potência (W) por 12. Ex: um amplificador de 300W puxará cerca de 25A. Isso ajuda a escolher fusível e cabo."
+        },
+        {
+            "type": "quiz",
+            "question": "O que a potência elétrica (em watts) representa em um circuito?",
+            "options": [
+                "A força que empurra os elétrons (tensão)",
+                "O fluxo de elétrons através do condutor",
+                "A quantidade de energia consumida ou transformada por segundo",
+                "A oposição à passagem da corrente",
+                "A capacidade de armazenar carga elétrica"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Você vai instalar um compressor de ar de 180W em um carro (12V). Qual a corrente aproximada que ele consumirá?",
+            "options": [
+                "1,5 A",
+                "7,5 A",
+                "15 A",
+                "21,6 A",
+                "180 A"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Você calculou que um circuito consumirá 12A contínuos. Qual fusível é o mais adequado para proteger esse circuito?",
+            "options": [
+                "10 A",
+                "15 A",
+                "20 A",
+                "12 A",
+                "30 A"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "simulator",
+            "name": "PowerSimulator",
+            "config": {
+                "title": "Simulador de Potência – Corrente e Fusível",
+                "defaultPower": 110,
+                "defaultVoltage": 12
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Calculadora de Potência",
+                "modes": [
+                    "calcularP",
+                    "calcularI",
+                    "calcularV"
+                ]
+            }
+        }
+    ]
+}

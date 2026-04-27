@@ -1,0 +1,137 @@
+{
+    "title": "Tensão, Corrente e Resistência",
+    "content": [
+        {
+            "type": "text",
+            "value": "A tensão (V) – também chamada de diferença de potencial (DDP) ou 'voltagem' – é a 'força' ou 'pressão' que empurra os elétrons através de um condutor. É medida em volts (V). No carro, a bateria fornece ~12,6V em repouso e o alternador gera ~14V com o motor ligado."
+        },
+        {
+            "type": "text",
+            "value": "A corrente (I) é o fluxo ordenado de elétrons através de um condutor, medido em amperes (A). Representa a quantidade de carga que passa por um ponto em um segundo. No carro, o motor de arranque pode puxar mais de 200A durante a partida, enquanto uma lâmpada de LED consome menos de 1A."
+        },
+        {
+            "type": "text",
+            "value": "A resistência (R) é a oposição que o material oferece à passagem da corrente, medida em ohms (Ω). Todo fio, conector ou componente tem alguma resistência. Conexões oxidadas ou frouxas criam resistência indesejada – o vilão número 1 dos problemas elétricos automotivos."
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Analogia hidráulica",
+            "text": "Imagine uma caixa d'água elevada com uma mangueira descendo. A altura da caixa (pressão) é a Tensão (V). O fluxo de água que passa pela mangueira é a Corrente (I). O diâmetro ou obstrução da mangueira é a Resistência (R)."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Nunca meça resistência em um circuito energizado!",
+            "text": "O multímetro aplica sua própria tensão para medir a resistência. Se houver tensão externa no circuito, você pode queimar o fusível interno do multímetro ou danificar o equipamento permanentemente. Sempre desligue o circuito antes de medir resistência."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Grandeza",
+                "Símbolo",
+                "Unidade",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "V",
+                    "Volts (V)",
+                    "Multímetro em paralelo"
+                ],
+                [
+                    "Corrente",
+                    "I",
+                    "Amperes (A)",
+                    "Multímetro em série / Alicate"
+                ],
+                [
+                    "Resistência",
+                    "R",
+                    "Ohms (Ω)",
+                    "Multímetro (circuito desligado)"
+                ]
+            ]
+        },
+        {
+            "type": "list",
+            "items": [
+                "🔋 Bateria descarregada: tensão cai abaixo de 12V (perdeu a 'pressão')",
+                "🔌 Farol fraco: resistência indesejada no circuito (mau contato) 'rouba' tensão",
+                "⚡ Fusível queimado: corrente excessiva (curto-circuito) – fusível se sacrifica para proteger a fiação",
+                "🌡️ Sensor de temperatura (NTC): sua resistência varia com a temperatura – a ECU mede essa variação"
+            ],
+            "ordered": false
+        },
+        {
+            "type": "quiz",
+            "question": "Um eletricista mede 0,3 Ω de resistência no fio que alimenta uma lâmpada que não acende. O que esse valor indica?",
+            "options": [
+                "Resistência muito alta – o fio está partido internamente",
+                "Resistência normal – o problema está em outro ponto (interruptor, fusível, massa)",
+                "Resistência zero – o fio está em curto-circuito",
+                "Resistência infinita – o circuito está aberto",
+                "Resistência variável – o fio está se partindo com a vibração"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O cliente reclama que o farol direito está mais fraco que o esquerdo. As lâmpadas são novas e idênticas. Qual a causa MAIS provável?",
+            "options": [
+                "Fusível do farol direito queimado",
+                "Alta resistência no circuito (mau contato no soquete ou massa oxidada)",
+                "Alternador com defeito, gerando tensão insuficiente",
+                "Bateria descarregada, fornecendo menos de 12V",
+                "Lâmpada com potência diferente (ex: 35W em vez de 55W)"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Você precisa medir a corrente que uma lâmpada de freio está consumindo. Como deve conectar o multímetro e em qual escala?",
+            "options": [
+                "Em paralelo com a lâmpada, na escala de tensão DC (20V)",
+                "Em série com o circuito, na escala de corrente DC (10A)",
+                "Em paralelo com a lâmpada, na escala de resistência (200Ω)",
+                "Com o alicate amperímetro, sem precisar interromper o circuito",
+                "Em série com o circuito, na escala de tensão DC (20V)"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função principal do alternador em um veículo?",
+            "options": [
+                "Aumentar a rotação do motor durante a partida",
+                "Carregar a bateria enquanto o motor está ligado",
+                "Regular a tensão do sistema elétrico",
+                "Fornecer energia para o sistema de injeção"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece se você medir resistência em um circuito energizado?",
+            "options": [
+                "A medição será incorreta e pode danificar o multímetro",
+                "O multímetro mostrará apenas a resistência interna do circuito",
+                "A medição será precisa se usar a escala correta",
+                "O circuito entrará em curto automaticamente"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é essencial para proteger o sistema elétrico contra correntes excessivas?",
+            "options": [
+                "Resistor de potência",
+                "Capacitor",
+                "Diodo retificador",
+                "Fusível"
+            ],
+            "correct": 3
+        }
+    ]
+}

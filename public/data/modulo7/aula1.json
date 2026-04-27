@@ -1,0 +1,77 @@
+{
+    "title": "Injetores de Combustível",
+    "content": [
+        {
+            "type": "text",
+            "value": "Injetores são atuadores essenciais que controlam a quantidade de combustível injetada na câmara de combustão. A precisão do controle de injeção afeta diretamente o desempenho, consumo e emissões do motor."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio Básico",
+            "text": "Injetores funcionam como válvulas eletromagnéticas que abrem por milissegundos para permitir a passagem de combustível sob pressão."
+        },
+        {
+            "type": "text",
+            "value": "Existem dois tipos principais de injetores quanto à impedância elétrica, cada um exigindo uma estratégia de controle diferente da ECU."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Impedância Típica", "Estratégia de Controle"],
+            "rows": [
+                ["Baixa Impedância", "1-4 Ω", "Peak & Hold (pico + manutenção)"],
+                ["Alta Impedância", "12-16 Ω", "Saturação (corrente limitada)"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Nunca meça resistência em um circuito energizado!",
+            "text": "Testar injetores com o motor ligado pode danificar a ECU ou o próprio injetor. Sempre desligue a ignição antes de fazer medições."
+        },
+        {
+            "type": "text",
+            "value": "O modo Peak & Hold aplica uma corrente alta inicial para abrir rapidamente o injetor, depois reduz para uma corrente menor de manutenção para evitar superaquecimento. Já o modo saturação depende da própria resistência da bobina para limitar a corrente."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Calculadora de Injetores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Injetores de baixa impedância exigem qual estratégia de controle?",
+            "options": [
+                "Apenas tensão contínua sem limite de corrente",
+                "Peak & Hold (pico + corrente reduzida de manutenção)",
+                "Nunca precisam de controle de corrente",
+                "Ligados direto na bobina de ignição"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal diferença entre injetores de alta e baixa impedância?",
+            "options": [
+                "Apenas o tamanho físico",
+                "Resistência da bobina e corrente de operação",
+                "Tipo de combustível usado",
+                "Pressão de operação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa um injetor com multímetro?",
+            "options": [
+                "Medindo a resistência da bobina",
+                "Verificando a pressão do combustível",
+                "Testando a continuidade com o motor ligado",
+                "Medindo a voltagem de saída da ECU"
+            ],
+            "correct": 0
+        }
+    ]
+}

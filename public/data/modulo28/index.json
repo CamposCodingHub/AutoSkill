@@ -1,0 +1,43 @@
+{
+    "id": 28,
+    "title": "Projetos Integradores e Portfolio",
+    "icon": "🛠️",
+    "description": "Projetos completos do início ao fim, integração de múltiplos sistemas, documentação técnica profissional.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Projeto 1 - Sistema de Iluminação Completo",
+            "slug": "projeto-iluminacao-completo"
+        },
+        {
+            "id": 2,
+            "title": "Projeto 2 - Sistema de Áudio Premium",
+            "slug": "projeto-audio-premium"
+        },
+        {
+            "id": 3,
+            "title": "Projeto 3 - Diagnóstico Avançado Integrado",
+            "slug": "projeto-diagnostico-avancado"
+        },
+        {
+            "id": 4,
+            "title": "Projeto 4 - Sistema Híbrido Simulado",
+            "slug": "projeto-hibrido-simulado"
+        },
+        {
+            "id": 5,
+            "title": "Projeto 5 - Smart Grid Veicular",
+            "slug": "projeto-smart-grid"
+        },
+        {
+            "id": 6,
+            "title": "Documentação Técnica Profissional",
+            "slug": "documentacao-tecnica"
+        },
+        {
+            "id": 7,
+            "title": "Apresentação e Defesa de Projetos",
+            "slug": "apresentacao-projetos"
+        }
+    ]
+}

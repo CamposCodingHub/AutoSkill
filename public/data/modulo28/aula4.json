@@ -1,0 +1,86 @@
+{
+    "title": "Projeto 4 - Sistema Híbrido Simulado",
+    "content": [
+        {
+            "type": "text",
+            "value": "Este projeto integrador desenvolve um sistema híbrido simulado, integrando motor elétrico, bateria, e sistema de gerenciamento para demonstrar conceitos de veículos híbridos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Objetivos do Projeto",
+            "text": "Simular sistema híbrido com motor elétrico, bateria HV, e sistema de gerenciamento de energia."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve incluir: design do sistema elétrico, desenvolvimento do BMS, controle de motor, e interface de monitoramento."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Especificação", "Função"],
+            "rows": [
+                ["Motor Elétrico", "48V 1kW", "Tração elétrica"],
+                ["Bateria HV", "48V 20Ah LiFePO4", "Armazenamento"],
+                ["BMS", "48V 20A", "Gerenciamento bateria"],
+                ["Controlador", "48V 30A", "Controle motor"],
+                ["Display", "OLED 0.96\"", "Interface usuário"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Gerenciamento de energia, segurança em alta tensão, e otimização de eficiência."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve ser documentado com: esquemas elétricos, código-fonte do BMS, procedimentos de segurança, e testes de validação."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Avaliação",
+            "text": "Será avaliada eficiência do sistema, segurança, documentação técnica, e inovação no gerenciamento."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema Híbrido"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é essencial para segurança em alta tensão?",
+            "options": [
+                "Display OLED",
+                "Motor elétrico",
+                "BMS (Battery Management System)",
+                "Controlador de motor"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de bateria é usado em sistemas híbridos?",
+            "options": [
+                "Chumbo-ácido",
+                "LiFePO4",
+                "NiMH",
+                "Alcalina"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que procedimentos de segurança são críticos em alta tensão?",
+            "options": [
+                "Apenas burocracia",
+                "Alta tensão pode causar choques letais e incêndios",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

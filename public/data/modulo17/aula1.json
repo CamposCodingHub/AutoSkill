@@ -1,0 +1,86 @@
+{
+    "title": "Flash de ECU",
+    "content": [
+        {
+            "type": "text",
+            "value": "Flash de ECU é o processo de atualizar o software/firmware da unidade de controle eletrônico. Permite corrigir defeitos, melhorar desempenho, adicionar funcionalidades e adaptar o veículo a novas exigências."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Aplicações do Flash",
+            "text": "Atualizações OEM, correções de bugs, melhorias de consumo, adaptação a novos combustíveis, e customizações."
+        },
+        {
+            "type": "text",
+            "value": "O processo envolve comunicação através de protocolos específicos como CAN, K-Line ou J2534. Requer hardware compatível e software específico para cada fabricante."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo de Flash", "Propósito", "Complexidade"],
+            "rows": [
+                ["OEM Update", "Correções de fábrica", "Baixa"],
+                ["Performance Tuning", "Otimização de potência", "Média"],
+                ["Custom Calibration", "Aplicações específicas", "Alta"],
+                ["Recovery Flash", "Recuperação de falha", "Média"],
+                ["Regional Adaptation", "Adaptação local", "Baixa"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Riscos",
+            "text": "Interrupção pode danificar a ECU. Use fonte estabilizada e verifique compatibilidade antes de iniciar."
+        },
+        {
+            "type": "text",
+            "value": "Checksums garantem integridade do arquivo. Qualquer corrupção impedirá o flash ou causará mau funcionamento. Verifique sempre o checksum antes e após o processo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Backup",
+            "text": "Sempre faça backup do software original antes de qualquer modificação. Guarde arquivo e checksum para recuperação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Flash ECU"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função principal do checksum no processo de flash?",
+            "options": [
+                "Aumentar a velocidade",
+                "Garantir integridade do arquivo",
+                "Reduzir o tamanho do arquivo",
+                "Melhorar a performance"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual protocolo é mais comum em veículos modernos para flash?",
+            "options": [
+                "RS232",
+                "CAN",
+                "Paralelo",
+                "Serial antigo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que fazer backup antes do flash?",
+            "options": [
+                "Para não fazer nada",
+                "Para permitir recuperação em caso de problemas",
+                "Para aumentar o custo",
+                "Para gastar tempo"
+            ],
+            "correct": 1
+        }
+    ]
+}

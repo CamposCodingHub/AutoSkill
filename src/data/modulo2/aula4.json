@@ -1,0 +1,86 @@
+{
+    "title": "Alicate Amperímetro e Teste de Corrente",
+    "content": [
+        {
+            "type": "text",
+            "value": "Alicate amperímetro (clamp meter) permite medir corrente sem interromper o circuito, essencial para diagnóstico de consumo e testes de carga em sistemas automotivos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio de Funcionamento",
+            "text": "Usa sensor de efeito Hall para detectar campo magnético gerado pela corrente, convertendo em leitura digital."
+        },
+        {
+            "type": "text",
+            "value": "Para uso automotivo, escolha alicate com range DC 0-400A, True RMS, resolução mínima 0.01A, e função de pico (inrush current)."
+        },
+        {
+            "type": "table",
+            "headers": ["Aplicação", "Range Típico", "O que Medir"],
+            "rows": [
+                ["Consumo Motor Partida", "100-400A", "Corrente de partida"],
+                ["Alternador Carregando", "10-100A", "Saída do alternador"],
+                ["Bomba Combustível", "3-8A", "Consumo da bomba"],
+                ["Ventilador Radiador", "15-40A", "Corrente do motor"],
+                ["Sistema Áudio", "5-50A", "Consumo amplificador"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Técnica Correta",
+            "text": "Posicione o alicate perpendicular ao cabo, longe de interferência eletromagnética. Zero o instrumento antes de medir."
+        },
+        {
+            "type": "text",
+            "value": "Usos avançados incluem: teste de fuga de corrente em bateria, diagnóstico de curtos-circuitos, e verificação de balanceamento de fases."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Limitações",
+            "text": "Não funciona em cabos blindados ou múltiplos cabos juntos. Precisa separar fios individuais."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Corrente"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o principal benefício do alicate amperímetro?",
+            "options": [
+                "Maior precisão que multímetro",
+                "Não precisa interromper o circuito",
+                "Mede tensão e corrente",
+                "Funciona sem bateria"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a limitação principal do alicate amperímetro?",
+            "options": [
+                "Não mede correntes muito baixas (< 0.1A)",
+                "Não funciona em circuitos de alta tensão",
+                "Precisa de calibração frequente",
+                "Só mede corrente alternada"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Quando você deve preferir o multímetro em série sobre o alicate amperímetro?",
+            "options": [
+                "Para medir correntes muito baixas",
+                "Para medir correntes muito altas",
+                "Para medir em espaços apertados",
+                "Para medições rápidas"
+            ],
+            "correct": 0
+        }
+    ]
+}

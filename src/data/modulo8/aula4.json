@@ -1,0 +1,89 @@
+{
+    "title": "K-Line e ISO-9141",
+    "content": [
+        {
+            "type": "text",
+            "value": "K-Line é um protocolo de comunicação serial usado em veículos mais antigos, operando com um único fio de sinal. Baseado no padrão ISO-9141, foi precursor dos sistemas CAN modernos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Características",
+            "text": "Comunicação serial bidirecional, 10.4 kbps, inicialização por 5-baud, compatível com sistemas europeus e asiáticos."
+        },
+        {
+            "type": "text",
+            "value": "O protocolo usa comunicação mestre-escravo onde o scanner (mestre) inicia a comunicação e a ECU (escravo) responde. A inicialização envolve sequência específica de bytes."
+        },
+        {
+            "type": "table",
+            "headers": ["Protocolo", "Velocidade", "Aplicação", "Pinos OBD-II"],
+            "rows": [
+                ["ISO 9141-2", "10.4 kbps", "Europeu/Asiático pré-2000", "7 (K), 15 (L)"],
+                ["ISO 14230-4 (KWP2000)", "1.2-10.4 kbps", "Europeu/Asiático 2000-2008", "7 (K)"],
+                ["SAE J1850 PWM", "41.6 kbps", "Ford/GM pré-2008", "2, 10"],
+                ["SAE J1850 VPW", "10.4 kbps", "GM pré-2008", "2"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações",
+            "text": "Velocidade baixa, comunicação sequencial, não suporta múltiplos mestres simultaneamente."
+        },
+        {
+            "type": "text",
+            "value": "Diagnóstico via K-Line requer scanner compatível e tempo de resposta maior. A comunicação é mais lenta que CAN mas ainda funcional para diagnóstico básico."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Transição para CAN",
+            "text": "A partir de 2008, CAN tornou-se obrigatório nos EUA e gradualmente substituiu K-Line mundialmente."
+        },
+        {
+            "type": "text",
+            "value": "Ainda encontrado em veículos mais antigos e alguns sistemas específicos como imobilizadores e rádios que mantiveram o protocolo por compatibilidade."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Protocolo K-Line"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a velocidade típica do protocolo ISO 9141-2 K-Line?",
+            "options": [
+                "500 kbps",
+                "104 kbps",
+                "10.4 kbps",
+                "1 Mbps"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal característica do protocolo K-Line?",
+            "options": [
+                "Comunicação bidirecional de alta velocidade",
+                "Comunicação serial unidirecional de baixa velocidade",
+                "Comunicação paralela multi-mestre",
+                "Rede differential de alta imunidade"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Em que tipo de veículos o protocolo K-Line é mais comum?",
+            "options": [
+                "Veículos europeus até 2004",
+                "Veículos americanos modernos",
+                "Veículos asiáticos atuais",
+                "Todos os veículos modernos"
+            ],
+            "correct": 0
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Chaves e Interruptores",
+    "content": [
+        {
+            "type": "text",
+            "value": "Chaves e interruptores são componentes fundamentais em sistemas elétricos automotivos, controlando o fluxo de corrente e permitindo operação manual ou automática de circuitos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Interruptores de alavanca, botões, sensores de posição, chaves de ignição, e relés de estado sólido."
+        },
+        {
+            "type": "text",
+            "value": "Interruptores automotivos devem suportar vibração, umidade, e correntes de até 30A em aplicações de alta potência."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Função", "Aplicação"],
+            "rows": [
+                ["Interruptor Alavanca", "Contato mecânico", "Setas, faróis"],
+                ["Botão Push", "Contato momentâneo", "Buzina, vidros"],
+                ["Chave Ignição", "Múltiplas posições", "Partida, acessórios"],
+                ["Sensor Posição", "Detecta estado", "Portas, capô"],
+                ["Relé Estado Sólido", "Chaveamento eletrônico", "Sistemas modernos"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Interruptores",
+            "text": "Use multímetro em modo continuidade. Verifique contatos em todas as posições. Teste resistência dos contatos."
+        },
+        {
+            "type": "text",
+            "value": "Chaves de ignição modernas incluem: transponder imobilizador, reconhecimento de chave, e comunicação com módulos de segurança."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Manutenção",
+            "text": "Limpe contatos com spray limpador. Verifique folga mecânica e travas. Substitua se apresentar mau contato."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Interruptores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de interruptor usa contato momentâneo?",
+            "options": [
+                "Alavanca",
+                "Botão push",
+                "Chave de ignição",
+                "Sensor de posição"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função de um interruptor em circuitos automotivos?",
+            "options": [
+                "Regular a tensão do circuito",
+                "Controlar o fluxo de corrente abrindo/fechando o circuito",
+                "Armazenar energia temporariamente",
+                "Amplificar sinais digitais"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa um interruptor com multímetro?",
+            "options": [
+                "Medindo a resistência em ambas as posições",
+                "Verificando a tensão nos terminais",
+                "Testando a continuidade apenas na posição ligada",
+                "Medindo a capacitância dos contatos"
+            ],
+            "correct": 0
+        }
+    ]
+}

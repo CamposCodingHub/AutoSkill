@@ -1,0 +1,43 @@
+{
+    "id": 16,
+    "title": "Diagnóstico Avançado de Sinal",
+    "icon": "📊",
+    "description": "Osciloscópio, analisador de sinais, padrões de forma de onda, diagnóstico de sensores e atuadores.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Uso do Osciloscópio",
+            "slug": "osciloscopio"
+        },
+        {
+            "id": 2,
+            "title": "Osciloscópio - Fundamentos e Aplicações",
+            "slug": "fundamentos-osciloscopio"
+        },
+        {
+            "id": 3,
+            "title": "Análise de Sinais de Sensores",
+            "slug": "analise-sensores"
+        },
+        {
+            "id": 4,
+            "title": "Diagnóstico de Sistemas de Ignição",
+            "slug": "diagnostico-ignicao"
+        },
+        {
+            "id": 5,
+            "title": "Análise de Comunicação CAN Bus",
+            "slug": "analise-can-bus"
+        },
+        {
+            "id": 6,
+            "title": "Técnicas Avançadas de Captura",
+            "slug": "tecnicas-captura"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico Avançado - Metodologia",
+            "slug": "metodologia-diagnostico"
+        }
+    ]
+}

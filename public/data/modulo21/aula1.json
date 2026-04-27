@@ -1,0 +1,86 @@
+{
+    "title": "Motor de Arranque - Fundamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "O motor de arranque é o componente responsável por girar o motor para iniciar o ciclo de combustão, operando em alta corrente por curto período."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio de Funcionamento",
+            "text": "Motor elétrico série que engata com o volante do motor através de pinhão, convertendo energia elétrica em energia mecânica."
+        },
+        {
+            "type": "text",
+            "value": "Motores de arranque consomem 100-400A durante 1-3 segundos, exigindo bateria em bom estado e conexões de baixa resistência."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "Valor Típico", "Importância"],
+            "rows": [
+                ["Corrente", "100-400A", "Torque para partida"],
+                ["Voltagem", "9.6-12.6V", "Energia suficiente"],
+                ["Duração", "1-3 segundos", "Evita sobreaquecimento"],
+                ["Potência", "1-3 kW", "Capacidade de giro"],
+                ["Engate", "Bendix", "Transmissão de força"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste queda de tensão durante partida. Voltagem não deve cair abaixo 9.6V sob carga."
+        },
+        {
+            "type": "text",
+            "value": "Sintomas de falha incluem: clique único sem giro, giro lento, ruído de engate, e não acionamento."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Manutenção",
+            "text": "Verifique conexões, limpe terminais, e teste corrente de partida regularmente."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Motor de Arranque"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a queda de tensão máxima aceitável durante partida?",
+            "options": [
+                "10.5V",
+                "9.6V",
+                "8.0V",
+                "7.2V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a corrente típica consumida pelo motor de arranque?",
+            "options": [
+                "10-50A",
+                "100-400A",
+                "500-800A",
+                "1000-1500A"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a duração típica de operação do motor de arranque?",
+            "options": [
+                "10-30 segundos",
+                "1-3 segundos",
+                "5-10 minutos",
+                "30-60 minutos"
+            ],
+            "correct": 1
+        }
+    ]
+}

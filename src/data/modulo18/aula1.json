@@ -1,0 +1,86 @@
+{
+    "title": "Sistemas de Rastreamento GPS",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de rastreamento GPS veiculares utilizam tecnologia de posicionamento global para monitorar localização em tempo real, fornecer dados de telemetria e permitir gerenciamento de frota e segurança."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologia GPS",
+            "text": "GPS (Global Positioning System) usa constelação de satélites para determinar posição com precisão de 3-10 metros em condições normais."
+        },
+        {
+            "type": "text",
+            "value": "O módulo GPS calcula posição medindo tempo de viagem de sinais de múltiplos satélites. Mínimo 4 satélites são necessários para posicionamento 3D (latitude, longitude, altitude)."
+        },
+        {
+            "type": "table",
+            "headers": ["Sistema GNSS", "País/Região", "Satélites", "Status"],
+            "rows": [
+                ["GPS", "EUA", "31+", "Operacional"],
+                ["GLONASS", "Rússia", "24+", "Operacional"],
+                ["Galileo", "Europa", "26+", "Operacional"],
+                ["BeiDou", "China", "45+", "Operacional"],
+                ["IRNSS", "Índia", "7+", "Regional"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações GPS",
+            "text": "Sinal não penetra em túneis, garagens subterrâneas ou áreas densamente construídas. Requer linha de visão com satélites."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos combinam GPS com outras tecnologias como GLONASS, Galileo e WiFi para melhorar precisão e cobertura em ambientes desafiadores."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Aumentação de Precisão",
+            "text": "Sistemas WAAS/EGNOS/MSAS melhoram precisão para 1-3 metros usando estações terrestres de referência."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema GPS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quantos satélites GPS são necessários para posicionamento 3D?",
+            "options": [
+                "2 satélites",
+                "3 satélites",
+                "4 satélites",
+                "6 satélites"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema GNSS é operado pela Europa?",
+            "options": [
+                "GPS",
+                "GLONASS",
+                "Galileo",
+                "BeiDou"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que melhora a precisão do GPS de 3-10m para 1-3m?",
+            "options": [
+                "Mais satélites",
+                "Sistemas de aumentação WAAS/EGNOS",
+                "Antena maior",
+                "Bateria mais forte"
+            ],
+            "correct": 1
+        }
+    ]
+}

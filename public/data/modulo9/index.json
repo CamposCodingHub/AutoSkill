@@ -1,0 +1,48 @@
+{
+    "id": 9,
+    "title": "Central de Injeção Eletrônica (ECU)",
+    "icon": "🖥️",
+    "description": "Arquitetura da ECU, processadores, memória, drivers de potência, estratégias de controle.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Arquitetura da ECU",
+            "slug": "arquitetura-ecu"
+        },
+        {
+            "id": 2,
+            "title": "Alimentação e Aterramento",
+            "slug": "alimentacao-aterramento"
+        },
+        {
+            "id": 3,
+            "title": "Drivers de Potência e Estágios de Saída",
+            "slug": "drivers-potencia"
+        },
+        {
+            "id": 4,
+            "title": "Memórias e Calibração",
+            "slug": "memorias-calibracao"
+        },
+        {
+            "id": 5,
+            "title": "Estratégias de Controle do Motor",
+            "slug": "estrategias-controle"
+        },
+        {
+            "id": 6,
+            "title": "Diagnóstico da ECU",
+            "slug": "diagnostico-ecu"
+        },
+        {
+            "id": 7,
+            "title": "Reprogramação e Flash",
+            "slug": "reprogramacao-flash"
+        },
+        {
+            "id": 8,
+            "title": "ECU - Revisão Geral",
+            "slug": "revisao-ecu"
+        }
+    ]
+}

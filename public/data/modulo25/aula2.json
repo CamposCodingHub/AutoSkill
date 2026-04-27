@@ -1,0 +1,85 @@
+{
+    "title": "Provas Práticas de Validação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Provas práticas de validação são fundamentais para demonstrar competências reais em eletricidade automotiva, simulando condições de trabalho reais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Provas",
+            "text": "Provas teóricas, práticas em bancada, diagnóstico em veículos reais, e simulações de emergência."
+        },
+        {
+            "type": "text",
+            "value": "Provas práticas devem avaliar: conhecimento técnico, habilidade manual, raciocínio lógico, segurança no trabalho, e capacidade de solucionar problemas."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo Prova", "Duração", "Avaliação", "Peso"],
+            "rows": [
+                ["Teórica", "2 horas", "Conhecimento técnico", "30%"],
+                ["Prática Bancada", "4 horas", "Habilidade manual", "40%"],
+                ["Diagnóstico Veículo", "3 horas", "Raciocínio lógico", "20%"],
+                ["Simulação Emergência", "1 hora", "Segurança", "10%"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Critérios de Avaliação",
+            "text": "Precisão, tempo de execução, segurança, organização, e documentação do processo."
+        },
+        {
+            "type": "text",
+            "value": "Use checklists detalhadas para avaliação. Documente cada etapa, tempo gasto, e resultado obtido."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Feedback Construtivo",
+            "text": "Forneça feedback específico sobre pontos fortes e áreas de melhoria. Sugira treinamentos complementares."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Provas Práticas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o peso recomendado para prova prática em bancada?",
+            "options": [
+                "20%",
+                "30%",
+                "40%",
+                "50%"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual critério é avaliado em provas práticas?",
+            "options": [
+                "Apenas velocidade",
+                "Precisão, tempo, segurança, organização e documentação",
+                "Apenas aparência",
+                "Apenas custo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar checklists detalhados na avaliação?",
+            "options": [
+                "Apenas burocracia",
+                "Documentar cada etapa, tempo gasto e resultado obtido",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

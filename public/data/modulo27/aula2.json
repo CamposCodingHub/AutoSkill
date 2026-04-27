@@ -1,0 +1,86 @@
+{
+    "title": "Preparação de Competição",
+    "content": [
+        {
+            "type": "text",
+            "value": "A preparação de competição é fundamental para profissionais que desejam trabalhar com veículos de alta performance, exigindo conhecimentos avançados e habilidades específicas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Categorias de Competição",
+            "text": "Drift, circuito, arrancada, speed, rally, e preparação de motores. Cada uma com requisitos específicos."
+        },
+        {
+            "type": "text",
+            "value": "Preparação profissional envolve: conhecimento de mecânica avançada, eletrônica de alta performance, e otimização de sistemas."
+        },
+        {
+            "type": "table",
+            "headers": ["Categoria", "Foco Principal", "Especialização"],
+            "rows": [
+                ["Drift", "Controle lateral", "Suspensão, direção"],
+                ["Circuito", "Tempo por volta", "Aerodinâmica, motor"],
+                ["Arrancada", "Aceleração máxima", "Transmissão, tração"],
+                ["Speed", "Velocidade final", "Aerodinâmica, potência"],
+                ["Rally", "Controle em superfícies variadas", "Suspensão, tração"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança na Competição",
+            "text": "Use equipamentos de segurança, gaiolas, e procedimentos de emergência. A velocidade exige preparação."
+        },
+        {
+            "type": "text",
+            "value": "Profissionais de competição precisam: ferramentas especializadas, conhecimento de regulamentações, e capacidade de trabalhar sob pressão."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades de Mercado",
+            "text": "Workshops de preparação, equipes de competição, e consultoria especializada em performance."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Preparação de Competição"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria foca em controle lateral?",
+            "options": [
+                "Drift",
+                "Speed",
+                "Arrancada",
+                "Circuito"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria foca em aceleração máxima?",
+            "options": [
+                "Drift",
+                "Speed",
+                "Arrancada",
+                "Rally"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a segurança é crítica em competição?",
+            "options": [
+                "Apenas burocracia",
+                "Velocidade alta exige equipamentos e procedimentos de emergência",
+                "Não é necessário",
+                "Apenas estética"
+            ],
+            "correct": 1
+        }
+    ]
+}

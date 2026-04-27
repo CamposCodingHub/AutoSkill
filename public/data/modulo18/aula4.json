@@ -1,0 +1,86 @@
+{
+    "title": "Bloqueadores e Imobilizadores",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de bloqueio e imobilização são a última linha de defesa contra roubo, impedindo o funcionamento do veículo mesmo que o ladrão consiga acesso ao interior."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Métodos de Bloqueio",
+            "text": "Corte de combustível, inibição de partida, bloqueio de ignição, e desativação de sistemas eletrônicos críticos."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos usam múltiplas camadas de segurança: chave transponder, imobilizador ECU, bloqueador motor, e comunicação com central de monitoramento."
+        },
+        {
+            "type": "table",
+            "headers": ["Método", "Ativação", "Recuperação"],
+            "rows": [
+                ["Corte Combustível", "Comando remoto", "Senha/autorização"],
+                ["Bloqueio Motor", "Imobilizador", "Chave original"],
+                ["Inibição Partida", "ECU", "Reset sistema"],
+                ["Bloqueio Eletrônico", "Módulo específico", "Reprogramação"],
+                ["Trava Física", "Mecânica", "Chave mestre"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança na Recuperação",
+            "text": "Procedimentos de recuperação devem ser rigorosos para evitar ativação acidental ou uso não autorizado."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas avançados incluem bloqueio progressivo: primeiro alerta, depois limitação de performance, e finalmente parada completa do veículo."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Backup de Recuperação",
+            "text": "Métodos alternativos como códigos mestre, senhas de emergência, ou procedimentos especiais para recuperação em caso de falha."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistemas de Bloqueio"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual método oferece maior segurança contra roubo?",
+            "options": [
+                "Apenas alarme sonoro",
+                "Bloqueio de combustível",
+                "Múltiplas camadas de segurança",
+                "Trava mecânica apenas"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que é bloqueio progressivo?",
+            "options": [
+                "Bloqueio imediato do veículo",
+                "Alerta, limitação de performance e depois parada completa",
+                "Apenas emitir som",
+                "Bloqueio apenas das portas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como recuperar um veículo com bloqueio de combustível?",
+            "options": [
+                "Apenas com chave física",
+                "Com senha/autorização através do sistema",
+                "Desconectando a bateria",
+                "Não é possível recuperar"
+            ],
+            "correct": 1
+        }
+    ]
+}

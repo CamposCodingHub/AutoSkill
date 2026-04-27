@@ -1,0 +1,90 @@
+{
+    "title": "Gestão Financeira e Crescimento",
+    "content": [
+        {
+            "type": "text",
+            "value": "A gestão financeira é a espinha dorsal do negócio. Controle rigoroso de fluxo de caixa, custos, e investimentos garante sustentabilidade e viabiliza crescimento planejado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Indicadores Chave",
+            "text": "Fluxo de caixa, margem de lucro, ROI, ticket médio, taxa de conversão, e churn rate (perda de clientes)."
+        },
+        {
+            "type": "text",
+            "value": "Mantenha reserva de emergência equivalente a 3-6 meses de custos fixos. Isso protege contra sazonalidade e imprevistos do mercado."
+        },
+        {
+            "type": "table",
+            "headers": ["Métrica", "Meta Saudável", "Como Medir"],
+            "rows": [
+                ["Margem Líquida", "15-25%", "Lucro ÷ Receita"],
+                ["ROI Investimentos", ">20%/ano", "Retorno ÷ Investimento"],
+                ["Ticket Médio", "R$300-800", "Receita ÷ Clientes"],
+                ["Taxa Conversão", "60-80%", "Orçamentos ÷ Contatos"],
+                ["CAC", "<R$50", "Custo ÷ Novos Clientes"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Controle de Custos",
+            "text": "Monitore custos fixos e variáveis mensalmente. Identifique oportunidades de otimização sem comprometer qualidade."
+        },
+        {
+            "type": "text",
+            "value": "Planejamento estratégico deve incluir metas de curto (3-6 meses), médio (1-2 anos) e longo prazo (3-5 anos) com ações específicas para cada período."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diversificação",
+            "text": "Considere expansão para serviços complementares: detailing, instalação de acessórios, e manutenção preventiva."
+        },
+        {
+            "type": "text",
+            "value": "Use tecnologia para otimizar processos: software de gestão, marketing digital, e automação de tarefas repetitivas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise Financeira"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a margem líquida saudável para oficina de serviços?",
+            "options": [
+                "5-10%",
+                "15-25%",
+                "30-40%",
+                "50-60%"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a reserva de emergência recomendada para a oficina?",
+            "options": [
+                "1 mês de custos fixos",
+                "3-6 meses de custos fixos",
+                "12 meses de custos fixos",
+                "Não é necessário reserva"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que representa o CAC (Custo de Aquisição de Cliente)?",
+            "options": [
+                "Custo total para adquirir um novo cliente",
+                "Custo de peças",
+                "Custo de mão de obra",
+                "Lucro do negócio"
+            ],
+            "correct": 0
+        }
+    ]
+}

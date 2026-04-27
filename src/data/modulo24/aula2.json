@@ -1,0 +1,87 @@
+{
+    "title": "Equipamentos de Proteção Individual (EPI)",
+    "content": [
+        {
+            "type": "text",
+            "value": "Equipamentos de Proteção Individual (EPI) são essenciais para segurança em trabalhos elétricos automotivos, protegendo contra riscos específicos da área."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "EPIs OBRIGATÓRIOS",
+            "text": "Luvas isoladas CAT III 1000V, óculos de proteção ANSI Z87.1, calçado isolante, e vestimenta resistente."
+        },
+        {
+            "type": "text",
+            "value": "EPIs adequados devem ser selecionados baseados no risco específico, estar em bom estado, e ser usados corretamente."
+        },
+        {
+            "type": "table",
+            "headers": ["EPI", "Proteção", "Quando Usar"],
+            "rows": [
+                ["Luvas Isoladas", "Choque elétrico", "Trabalho em circuitos energizados"],
+                ["Óculos Proteção", "Arco elétrico, partículas", "Qualquer trabalho elétrico"],
+                ["Calçado Isolante", "Choque pelo chão", "Ambientes úmidos"],
+                ["Capacete", "Impacto, queda objetos", "Trabalhos em altura"],
+                ["Protetor Auditivo", "Ruído excessivo", "Uso de ferramentas barulhentas"],
+                ["Máscara Solda", "Fumaça tóxica", "Soldagem e corte"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Manutenção e Inspeção",
+            "text": "Inspecione EPIs antes de cada uso. Substitua imediatamente se danificados. Guarde em local adequado."
+        },
+        {
+            "type": "text",
+            "value": "EPIs devem ser confortáveis para garantir uso correto. Ajuste adequadamente e não comprometa a proteção por conforto."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Treinamento",
+            "text": "Treine todos os funcionários no uso correto de EPIs. Realize simulações de emergência regularmente."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de EPIs"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria mínima para luvas em trabalho automotivo?",
+            "options": [
+                "CAT I 500V",
+                "CAT II 600V",
+                "CAT III 1000V",
+                "CAT IV 2000V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual EPI protege contra fumaça tóxica durante soldagem?",
+            "options": [
+                "Luvas isoladas",
+                "Máscara de solda",
+                "Calçado isolante",
+                "Capacete"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que treinar funcionários no uso correto de EPIs?",
+            "options": [
+                "Apenas burocracia",
+                "Garantir uso correto e segurança efetiva",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

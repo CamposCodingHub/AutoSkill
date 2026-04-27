@@ -1,0 +1,86 @@
+{
+    "title": "Telemática e Conectividade Veicular",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas telemáticos conectam o veículo à nuvem, oferecendo serviços como rastreamento, diagnóstico remoto, atualizações over-the-air e emergência automática."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Serviços",
+            "text": "eCall, bCall, diagnóstico remoto, atualizações OTA, concierge, e integração com assistentes virtuais."
+        },
+        {
+            "type": "text",
+            "value": "O módulo telemático usa múltiplas tecnologias: celular (4G/5G), GPS, WiFi, Bluetooth e CAN bus para comunicação completa com o veículo e serviços externos."
+        },
+        {
+            "type": "table",
+            "headers": ["Tecnologia", "Função", "Aplicação"],
+            "rows": [
+                ["4G/5G", "Comunicação celular", "Diagnóstico remoto, streaming"],
+                ["GPS", "Localização", "Rastreamento, navegação"],
+                ["WiFi", "Conectividade local", "Atualizações, hotspot"],
+                ["CAN", "Dados veiculares", "Status do veículo"],
+                ["Bluetooth", "Conexão local", "Smartphone integration"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "eCall Automático",
+            "text": "Em caso de acidente grave, o sistema automaticamente chama emergência com localização e dados do impacto."
+        },
+        {
+            "type": "text",
+            "value": "Diagnóstico remoto permite que fabricantes monitorem saúde do veículo, enviem alertas de manutenção e até realizem reparos à distância."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Segurança",
+            "text": "Sistemas telemáticos incluem criptografia, firewalls e proteções contra acessos não autorizados ao veículo."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise Telemática"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema chama automaticamente emergência em caso de acidente?",
+            "options": [
+                "Bluetooth",
+                "WiFi",
+                "eCall",
+                "GPS"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia o módulo telemático usa para comunicação celular?",
+            "options": [
+                "2G",
+                "3G",
+                "4G/5G",
+                "WiFi"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que permite o diagnóstico remoto de veículos?",
+            "options": [
+                "Apenas GPS",
+                "Conexão celular e comunicação CAN",
+                "Apenas Bluetooth",
+                "Apenas rádio AM/FM"
+            ],
+            "correct": 1
+        }
+    ]
+}

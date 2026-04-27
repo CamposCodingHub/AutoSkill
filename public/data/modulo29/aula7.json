@@ -1,0 +1,85 @@
+{
+    "title": "Expansão e Franchising",
+    "content": [
+        {
+            "type": "text",
+            "value": "A expansão e franchising representam o crescimento de uma oficina bem-sucedida, permitindo replicação do modelo de negócio e ampliação de mercado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Estratégias de Expansão",
+            "text": "Franchising, filiais próprias, parcerias, e expansão digital (serviços remotos)."
+        },
+        {
+            "type": "text",
+            "value": "A expansão bem-sucedida exige: modelo de negócio replicável, processos padronizados, treinamento consistente, e suporte contínuo."
+        },
+        {
+            "type": "table",
+            "headers": ["Modelo", "Vantagens", "Desafios"],
+            "rows": [
+                ["Franchising", "Crescimento rápido, capital externo", "Controle qualidade, padronização"],
+                ["Filiais Próprias", "Controle total", "Alto investimento, gestão complexa"],
+                ["Parcerias", "Baixo risco", "Divisão lucros, dependência"],
+                ["Expansão Digital", "Baixo custo", "Competição online"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Requisitos para Franchising",
+            "text": "Manual de operações, treinamento estruturado, suporte contínuo, e marca forte."
+        },
+        {
+            "type": "text",
+            "value": "Planeje a expansão com base em: capacidade operacional, demanda de mercado, recursos financeiros, e equipe qualificada."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Métricas de Expansão",
+            "text": "ROI por unidade, tempo de payback, satisfação de franqueados, e crescimento de mercado."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Expansão e Franchising"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual modelo permite crescimento mais rápido?",
+            "options": [
+                "Filiais próprias",
+                "Franchising",
+                "Parcerias",
+                "Expansão digital"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual documento é essencial para franchising?",
+            "options": [
+                "Apenas contrato social",
+                "Manual de operações",
+                "Apenas RG",
+                "Apenas CPF"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que processos padronizados são importantes para expansão?",
+            "options": [
+                "Apenas burocracia",
+                "Garantem consistência e replicação do modelo de negócio",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

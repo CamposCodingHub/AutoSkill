@@ -1,0 +1,85 @@
+{
+    "title": "Airbags e Sistema SRS",
+    "content": [
+        {
+            "type": "text",
+            "value": "O Sistema de Retenção Suplementar (SRS - Supplemental Restraint System) inclui airbags, pré-tensionadores de cinto e sensores de impacto. São sistemas de segurança passiva que ativam em milissegundos durante colisões."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança Máxima",
+            "text": "Nunca trabalhe em sistemas SRS sem desconectar a bateria e esperar o descarregamento dos capacitores (mínimo 10 minutos)."
+        },
+        {
+            "type": "text",
+            "value": "Airbags utilizam geradores de gás (squibs) que inflam em milissegundos para inflar o airbag. O processo completo desde impacto até deflação leva menos de 100ms."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Tempo de Ativação"],
+            "rows": [
+                ["Sensor de Impacto", "Detecta desaceleração brusca", "5-15ms"],
+                ["Módulo SRS", "Processa sinal e dispara", "15-25ms"],
+                ["Inflador Squib", "Gera gás para inflar", "20-30ms"],
+                ["Airbag", "Infla e protege ocupante", "30-60ms"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Tipos de Airbags",
+            "text": "Frontal, lateral, cortina, joelho, etc. Cada um com sensor específico e estratégia de disparo diferente."
+        },
+        {
+            "type": "text",
+            "value": "O módulo SRS monitora continuamente os sensores e armazena códigos de falha. Qualquer anomalia acende a luz SRS no painel."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use scanner específico para SRS. Nunca use testes elétricos convencionais nos squibs - risco de disparo acidental."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de SRS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quanto tempo esperar após desconectar bateria antes de trabalhar em SRS?",
+            "options": [
+                "1 minuto",
+                "5 minutos",
+                "10 minutos",
+                "30 minutos"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que são os squibs no sistema de airbags?",
+            "options": [
+                "Sensores de velocidade",
+                "Geradores de gás que inflam para inflar o airbag",
+                "Módulos de controle do motor",
+                "Sensores de temperatura"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que nunca usar testes elétricos convencionais nos squibs?",
+            "options": [
+                "Porque são muito caros",
+                "Risco de disparo acidental do airbag",
+                "Porque não funcionam com voltagem baixa",
+                "Porque estão sempre desligados"
+            ],
+            "correct": 1
+        }
+    ]
+}

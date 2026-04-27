@@ -1,0 +1,43 @@
+{
+    "id": 27,
+    "title": "Especializações e Nichos de Mercado",
+    "icon": "🎯",
+    "description": "Marcas premium, preparação de competição, som automotivo high-end, customização e performance.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Marcas Premium Alemãs",
+            "slug": "marcas-premium-alemas"
+        },
+        {
+            "id": 2,
+            "title": "Preparação de Competição",
+            "slug": "preparacao-competicao"
+        },
+        {
+            "id": 3,
+            "title": "Som Automotivo High-End",
+            "slug": "som-high-end"
+        },
+        {
+            "id": 4,
+            "title": "Customização e Performance",
+            "slug": "customizacao-performance"
+        },
+        {
+            "id": 5,
+            "title": "Restauração de Clássicos",
+            "slug": "restauracao-classicos"
+        },
+        {
+            "id": 6,
+            "title": "Conversões Elétricas",
+            "slug": "conversoes-eletricas"
+        },
+        {
+            "id": 7,
+            "title": "Mercado de Tuning",
+            "slug": "mercado-tuning"
+        }
+    ]
+}

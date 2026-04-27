@@ -1,0 +1,86 @@
+{
+    "title": "Gestão de Ferramentas e Equipamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A gestão eficiente de ferramentas e equipamentos é crucial para produtividade, redução de perdas e manutenção da qualidade do serviço. Inclui controle de inventário, manutenção preventiva e organização."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Categorias de Ferramentas",
+            "text": "Básicas (chaves, alicates), especializadas (scanner, osciloscópio), e equipamentos (ponte rolante, compressor)."
+        },
+        {
+            "type": "text",
+            "value": "Implemente sistema de controle: código de barras, RFID, ou software específico. Registre movimentação, manutenção e localização de cada item."
+        },
+        {
+            "type": "table",
+            "headers": ["Ferramenta", "Frequência Manutenção", "Vida Útil Típica"],
+            "rows": [
+                ["Scanner Automotivo", "Calibração anual", "5-8 anos"],
+                ["Osciloscópio", "Verificação mensal", "8-10 anos"],
+                ["Compressor", "Manutenção semestral", "10-15 anos"],
+                ["Ponte Rolante", "Inspeção anual", "15-20 anos"],
+                ["Ferramentas Manuais", "Limpeza semanal", "Indefinida"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Manutenção Preventiva",
+            "text": "Crie calendário de manutenção. Ferramentas mal mantidas causam perda de tempo e qualidade no serviço."
+        },
+        {
+            "type": "text",
+            "value": "Organização visual facilita localização rápida: painéis de ferramentas com contorno, caixas transparentes, e etiquetagem clara."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Investimento vs ROI",
+            "text": "Ferramentas de qualidade têm custo inicial maior mas ROI melhor através de durabilidade e precisão."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Gestão de Ferramentas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a frequência recomendada para calibração de scanner automotivo?",
+            "options": [
+                "Mensal",
+                "Trimestral",
+                "Semestral",
+                "Anual"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia pode ser usada para controle de inventário de ferramentas?",
+            "options": [
+                "Apenas papel",
+                "Código de barras, RFID ou software específico",
+                "Apenas memória",
+                "Não é possível controlar"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que investir em ferramentas de qualidade?",
+            "options": [
+                "Apenas estética",
+                "Melhor ROI através de durabilidade e precisão",
+                "Aumenta o custo sem benefício",
+                "Não faz diferença"
+            ],
+            "correct": 1
+        }
+    ]
+}

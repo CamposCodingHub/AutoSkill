@@ -1,0 +1,85 @@
+{
+    "title": "Diagnóstico Baseado em IA",
+    "content": [
+        {
+            "type": "text",
+            "value": "Diagnóstico baseado em IA está revolucionando a eletricidade automotiva, permitindo identificação precisa de falhas e otimização de processos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Aplicações da IA",
+            "text": "Análise preditiva, diagnóstico automatizado, otimização de parâmetros, e assistência remota."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de IA analisam dados históricos, padrões de falha, e comportamento do sistema para fornecer diagnósticos rápidos e precisos."
+        },
+        {
+            "type": "table",
+            "headers": ["Aplicação IA", "Benefício", "Tecnologia"],
+            "rows": [
+                ["Diagnóstico Preditivo", "Antecipa falhas", "Machine Learning"],
+                ["Análise de Sinais", "Interpretação avançada", "Deep Learning"],
+                ["Otimização", "Melhor performance", "Algoritmos genéticos"],
+                ["Assistência Remota", "Suporte em tempo real", "Computer Vision"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Qualidade de dados, treinamento contínuo, interpretação de resultados, e integração com sistemas existentes."
+        },
+        {
+            "type": "text",
+            "value": "O futuro inclui: IA embarcada, aprendizado contínuo, e sistemas auto-otimizantes."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Desenvolvimento de algoritmos especializados, consultoria em IA automotiva, e integração de sistemas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de IA em Diagnóstico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia IA é mais usada para análise de sinais?",
+            "options": [
+                "Machine Learning tradicional",
+                "Deep Learning",
+                "Processamento Digital",
+                "Análise Estatística"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual aplicação de IA antecipa falhas?",
+            "options": [
+                "Assistência remota",
+                "Diagnóstico preditivo",
+                "Otimização",
+                "Análise de sinais"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a qualidade de dados é importante em IA?",
+            "options": [
+                "Apenas burocracia",
+                "Dados de qualidade garantem diagnósticos precisos e confiáveis",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

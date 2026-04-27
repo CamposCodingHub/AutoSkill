@@ -1,0 +1,85 @@
+{
+    "title": "Técnicas de Baixa Temperatura",
+    "content": [
+        {
+            "type": "text",
+            "value": "Técnicas de soldagem de baixa temperatura são essenciais para componentes eletrônicos sensíveis, especialmente em ECUs e módulos modernos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Vantagens da Baixa Temperatura",
+            "text": "Menor risco de danos, menor estresse térmico, melhor qualidade de solda, e proteção de componentes adjacentes."
+        },
+        {
+            "type": "text",
+            "value": "Soldagem de baixa temperatura usa ligas especiais (bismuto, índio) e técnicas controladas para minimizar exposição ao calor."
+        },
+        {
+            "type": "table",
+            "headers": ["Técnica", "Temperatura", "Aplicação", "Benefícios"],
+            "rows": [
+                ["Liga Bismuto", "95-138°C", "Componentes sensíveis", "Muito baixa temperatura"],
+                ["Liga Índio", "120-180°C", "Conexões precisas", "Excelente molhamento"],
+                ["Solda por Imersão", "200-230°C", "Montagem em massa", "Produção"],
+                ["Reflow Controlado", "180-220°C", "Componentes SMD", "Precisão"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Equipamentos Especiais",
+            "text": "Requer estações de solda com controle preciso, ligas especiais, e técnicas de pré-aquecimento."
+        },
+        {
+            "type": "text",
+            "value": "Use fluxo adequado para baixa temperatura, controle de tempo de exposição, e resfriamento controlado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Aplicações Críticas",
+            "text": "ECUs, módulos de airbag, sensores precisos, e componentes com encapsulamento plástico."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Baixa Temperatura"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual liga permite menor temperatura de fusão?",
+            "options": [
+                "Estanho/Chumbo",
+                "Bismuto",
+                "Prata",
+                "Alumínio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a temperatura típica da liga de bismuto?",
+            "options": [
+                "95-138°C",
+                "183°C",
+                "217°C",
+                "600°C"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Para que são usadas técnicas de baixa temperatura?",
+            "options": [
+                "Apenas estética",
+                "Componentes sensíveis como ECUs e módulos modernos",
+                "Apenas soldagem de alumínio",
+                "Não têm aplicação"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "ABS - Sistema de Freio Antitravamento",
+    "content": [
+        {
+            "type": "text",
+            "value": "O ABS (Anti-lock Braking System) impede que as rodas travem durante frenagens de emergência, permitindo que o motorista mantenha controle direcional e reduza a distância de parada."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio Básico",
+            "text": "ABS modula a pressão dos freios até 15 vezes por segundo, mantendo as rodas na borda do travamento para máxima aderência."
+        },
+        {
+            "type": "text",
+            "value": "O sistema utiliza sensores de velocidade em cada roda, módulo hidráulico com válvulas solenoide e bomba elétrica para controlar a pressão de freio individualmente."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Sensor de Roda", "Detecta velocidade e travamento", "Sujeira, dano, fio quebrado"],
+                ["Módulo ABS", "Processa sinais e controla válvulas", "Relé queimado, software corrompido"],
+                ["Bomba Hidráulica", "Gera pressão para modulação", "Motor queimado, obstrução"],
+                ["Válvulas Solenoide", "Controlam pressão em cada roda", "Válvula presa, curto elétrico"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações",
+            "text": "ABS não reduz distância de parada em todas as superfícies. Em neve ou areia fofa, travamento pode ser melhor para criar cunha."
+        },
+        {
+            "type": "text",
+            "value": "Durante frenagem normal, o ABS não interfere. Só ativa quando detecta diferença significativa de velocidade entre rodas indicando travamento iminente."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Luz ABS acesa indica falha no sistema. Use scanner para ler códigos específicos (C0xxx) e testar componentes."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de ABS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do sistema ABS?",
+            "options": [
+                "Aumentar a velocidade do veículo",
+                "Impedir que as rodas travem durante frenagens",
+                "Controlar apenas a direção",
+                "Melhorar o consumo de combustível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quantas vezes por segundo o ABS pode modular a pressão dos freios?",
+            "options": [
+                "1-2 vezes",
+                "5-10 vezes",
+                "Até 15 vezes",
+                "50 vezes"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Em que superfície o travamento das rodas pode ser mais eficiente que o ABS?",
+            "options": [
+                "Asfalto seco",
+                "Neve ou areia fofa",
+                "Asfalto molhado",
+                "Concreto"
+            ],
+            "correct": 1
+        }
+    ]
+}

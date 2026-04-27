@@ -1,0 +1,175 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("user") // "admin" ou "user"
+  bio       String?  // Biografia do usuário
+  avatar    String?  @db.Text // Foto de perfil em base64 (Text para suportar strings grandes)
+  phone     String?  // Telefone
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  progress      Progress[]
+  gamification  Gamification[]
+  sessions      Session[]
+  auditLogs     AuditLog[]
+  certifications CertificationProgress[]
+  portfolios    Portfolio[]
+  mentorMentorships Mentorship[] @relation("MentorMentorships")
+  menteeMentorships Mentorship[] @relation("MenteeMentorships")
+}
+
+model Progress {
+  id              String   @id @default(cuid())
+  userId          String
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  completedLessons Json     // {"1-1": true, "1-2": true}
+  quizAnswers     Json     // {"1-1-quiz": 0, "1-2-quiz": 1}
+  lessonQuizProgress Json // {"1-1": {answered: 5, correct: 4, total: 5}}
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId])
+}
+
+model Gamification {
+  id                      String   @id @default(cuid())
+  userId                  String
+  user                    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalXP                 Int      @default(0)
+  currentLevel            Int      @default(1)
+  levelProgress           Int      @default(0)
+  streak                  Int      @default(0)
+  longestStreak           Int      @default(0)
+  achievements            String[] // Array de IDs
+  weeklyXP                Int      @default(0)
+  monthlyXP               Int      @default(0)
+  lastStudyDate           DateTime?
+  studyHistory            DateTime[]
+  streakFreezeAvailable   Boolean  @default(false)
+  updatedAt               DateTime @updatedAt
+
+  @@unique([userId])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model GamificationConfig {
+  id                  String   @id @default(cuid())
+  xpPerLesson         Int      @default(50)
+  xpPerQuizCorrect    Int      @default(10)
+  xpPerQuizComplete   Int      @default(20)
+  xpPerStreakDay      Int      @default(15)
+  levelXPBase         Int      @default(100)
+  levelXPMultiplier    Float    @default(1.5)
+  leaderboardEnabled  Boolean  @default(true)
+  leaderboardType     String   @default("global") // "global" ou "module"
+  streakBonusEnabled  Boolean  @default(true)
+  achievementsEnabled  Boolean  @default(true)
+  updatedAt           DateTime @updatedAt
+}
+
+model AuditLog {
+  id          String   @id @default(cuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  action      String   // "CREATE", "UPDATE", "DELETE", "LOGIN", "LOGOUT", etc.
+  entity      String   // "User", "Module", "Lesson", "Gamification", etc.
+  entityId    String?  // ID da entidade afetada
+  details     Json?    // Detalhes adicionais da ação
+  ipAddress   String?
+  userAgent   String?
+  createdAt   DateTime @default(now())
+}
+
+model Certification {
+  id          String   @id @default(cuid())
+  name        String   // "Básico", "Intermediário", "Avançado", "Especialista"
+  description String?
+  level       String   // "basic", "intermediate", "advanced", "expert"
+  modules     Json     // [1, 2, 3, 4] - IDs dos módulos necessários
+  minQuizScore Int     @default(70) // Pontuação mínima nos quizzes (70%)
+  minFinalScore Int    @default(70) // Pontuação mínima na prova final (70%)
+  minStudyHours Int    @default(10) // Horas mínimas de estudo
+  enabled     Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  progress    CertificationProgress[]
+}
+
+model CertificationProgress {
+  id              String   @id @default(cuid())
+  userId          String
+  certificationId String
+  status          String   @default("in_progress") // "in_progress", "eligible", "completed"
+  enrolledAt      DateTime @default(now())
+  completedAt     DateTime?
+  finalExamScore  Int?
+  completedModules Json?
+  userName        String?
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  certification   Certification @relation(fields: [certificationId], references: [id], onDelete: Cascade)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([userId, certificationId])
+}
+
+// Sistema de Portfólio
+model Portfolio {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  description String
+  projectType String   // "diagnostic", "repair", "maintenance", "custom"
+  images      Json     // Array de URLs de imagens
+  skills      Json     // Array de skills utilizados
+  difficulty  String   // "beginner", "intermediate", "advanced"
+  status      String   @default("draft") // "draft", "published", "archived"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  likes       Int      @default(0)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+// Sistema de Mentoria
+model Mentorship {
+  id          String   @id @default(cuid())
+  mentorId    String
+  menteeId    String
+  status      String   @default("pending") // "pending", "active", "completed", "cancelled"
+  startedAt   DateTime?
+  endedAt     DateTime?
+  goals       Json     // Array de objetivos
+  notes       Json?    // Notas do mentor
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  mentor      User     @relation("MentorMentorships", fields: [mentorId], references: [id], onDelete: Cascade)
+  mentee      User     @relation("MenteeMentorships", fields: [menteeId], references: [id], onDelete: Cascade)
+
+  @@unique([mentorId, menteeId])
+  @@index([status])
+}

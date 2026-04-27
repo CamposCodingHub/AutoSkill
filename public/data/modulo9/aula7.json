@@ -1,0 +1,85 @@
+{
+    "title": "Reprogramação e Flash",
+    "content": [
+        {
+            "type": "text",
+            "value": "Reprogramação ou flash da ECU permite atualizar firmware e calibrações para corrigir defeitos, melhorar desempenho ou adicionar funcionalidades. Requer ferramentas específicas e procedimentos seguros."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Flash",
+            "text": "OEM update (correção), performance tuning (otimização), e custom calibration (aplicações específicas)."
+        },
+        {
+            "type": "text",
+            "value": "O processo envolve conectar ferramenta de diagnóstico, verificar bateria estável, seguir procedimentos específicos do fabricante e nunca interromper durante o processo."
+        },
+        {
+            "type": "table",
+            "headers": ["Ferramenta", "Protocolo", "Aplicação"],
+            "rows": [
+                ["OEM Scanner", "CAN/ISO9141", "Atualizações oficiais"],
+                ["J2534", "Múltiplos", "Reparos independentes"],
+                ["Bench Flasher", "Bootloader", "Performance tuning"],
+                ["OBD-II Programmer", "CAN", "Calibrações básicas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Riscos",
+            "text": "Interrupção pode 'brickar' a ECU. Sempre verifique voltagem da bateria (>12.6V) e use fonte estabilizada."
+        },
+        {
+            "type": "text",
+            "value": "Backup é essencial antes de qualquer modificação. Guarde arquivo original e checksum para possível recuperação."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Checksum",
+            "text": "Arquivos de calibração possuem checksum que deve ser recalculado após modificações para evitar erros de integridade."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Flash"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o requisito mínimo de voltagem da bateria para flash seguro da ECU?",
+            "options": [
+                "11.0V",
+                "12.0V",
+                "12.6V",
+                "13.8V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante manter a voltagem estável durante o flash da ECU?",
+            "options": [
+                "Apenas para economizar bateria",
+                "Para evitar corrupção do software durante a programação",
+                "Para esquentar a ECU mais rápido",
+                "Para testar o alternador"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual equipamento é essencial para flash seguro de ECU?",
+            "options": [
+                "Apenas um scanner básico",
+                "Fonte de alimentação estabilizada ou mantenedor de bateria",
+                "Alicate amperímetro",
+                "Osciloscópio"
+            ],
+            "correct": 1
+        }
+    ]
+}

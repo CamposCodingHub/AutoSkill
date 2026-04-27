@@ -1,0 +1,85 @@
+{
+    "title": "Sistema de Aterramento",
+    "content": [
+        {
+            "type": "text",
+            "value": "O sistema de aterramento é fundamental para o funcionamento correto de todos os sistemas elétricos automotivos, servindo como retorno para a bateria e referência para sensores."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Importância Crítica",
+            "text": "Sem aterramento adequado, circuitos não funcionam, sensores fornecem leituras erradas, e componentes podem ser danificados."
+        },
+        {
+            "type": "text",
+            "value": "Veículos modernos usam múltiplos pontos de aterramento: chassi, motor, e pontos específicos para sistemas sensíveis."
+        },
+        {
+            "type": "table",
+            "headers": ["Ponto", "Função", "Problemas Comuns"],
+            "rows": [
+                ["Chassi", "Retorno principal", "Oxidação, folga"],
+                ["Motor", "Aterramento motor", "Vibração, corrosão"],
+                ["ECU", "Referência sensores", "Interferência, ruído"],
+                ["Sistema Áudio", "Reduz ruído", "Zumbido, interferência"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sintomas de Mau Aterramento",
+            "text": "Luzes intermitentes, falhas eletrônicas, sensores com leituras erradas, e consumo excessivo."
+        },
+        {
+            "type": "text",
+            "value": "Teste de aterramento: use multímetro em modo continuidade entre ponto de massa e negativo da bateria. Resistência deve ser <0.1Ω."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Melhorias",
+            "text": "Adicione cabos suplementares, use terminais estanhados, e aplique graxa dielétrica para prevenir corrosão."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Aterramento"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a resistência máxima aceitável para aterramento?",
+            "options": [
+                "<0.1Ω",
+                "<1.0Ω",
+                "<10Ω",
+                "<100Ω"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "O que causa alta resistência no aterramento do veículo?",
+            "options": [
+                "Conexões oxidadas ou soltas",
+                "Excesso de corrente no sistema",
+                "Alternador sobrecarregado",
+                "Bateria muito forte"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Como você testa a qualidade do aterramento do motor?",
+            "options": [
+                "Medindo a resistência entre o motor e o negativo da bateria",
+                "Verificando a tensão no motor com o veículo desligado",
+                "Testando a continuidade com o motor ligado",
+                "Medindo a corrente que passa pelo terra"
+            ],
+            "correct": 0
+        }
+    ]
+}

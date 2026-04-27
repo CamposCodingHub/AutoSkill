@@ -1,0 +1,86 @@
+{
+    "title": "Gestão Financeira",
+    "content": [
+        {
+            "type": "text",
+            "value": "A gestão financeira é fundamental para a sobrevivência e crescimento de uma oficina, envolvendo controle de custos, precificação, e planejamento financeiro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Essenciais",
+            "text": "Fluxo de caixa, controle de custos, precificação, margens de lucro, e planejamento tributário."
+        },
+        {
+            "type": "text",
+            "value": "Gestão financeira eficaz permite: tomada de decisões informada, identificação de oportunidades, e sustentabilidade do negócio."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Função", "Métricas"],
+            "rows": [
+                ["Fluxo de Caixa", "Controle de entradas/saídas", "Saldo diário"],
+                ["Custos Fixos", "Aluguel, salários", "Custo mensal"],
+                ["Custos Variáveis", "Peças, materiais", "Custo por serviço"],
+                ["Precificação", "Formação de preços", "Margem de lucro"],
+                ["Tributação", "Planejamento fiscal", "Economia tributária"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Indicadores Financeiros",
+            "text": "Margem bruta, margem líquida, ROI, payback, e ponto de equilíbrio."
+        },
+        {
+            "type": "text",
+            "value": "Use software de gestão financeira para automatizar controles, gerar relatórios, e facilitar tomada de decisões."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Planejamento Tributário",
+            "text": "Escolha regime tributário adequado: Simples Nacional, Lucro Presumido, ou Lucro Real."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Gestão Financeira"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual indicador mostra o ponto onde não há lucro nem prejuízo?",
+            "options": [
+                "ROI",
+                "Ponto de equilíbrio",
+                "Margem bruta",
+                "Fluxo de caixa"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de custo varia com o volume de serviços?",
+            "options": [
+                "Custos fixos",
+                "Custos variáveis",
+                "Custos administrativos",
+                "Custos de marketing"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar software de gestão financeira?",
+            "options": [
+                "Apenas burocracia",
+                "Automatiza controles, gera relatórios e facilita decisões",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

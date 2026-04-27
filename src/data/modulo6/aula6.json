@@ -1,0 +1,85 @@
+{
+    "title": "Sensores de Temperatura",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sensores de temperatura são fundamentais para o controle do motor, informando à ECU as temperaturas de líquido de arrefecimento, ar de admissão, e outros componentes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "NTC (Negative Temperature Coefficient), PTC (Positive Temperature Coefficient), e termopares. NTC é o mais comum."
+        },
+        {
+            "type": "text",
+            "value": "Sensores NTC têm resistência que diminui com aumento da temperatura. São usados para temperatura do líquido de arrefecimento e ar de admissão."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Faixa Típica", "Resistência a 25°C", "Aplicação"],
+            "rows": [
+                ["ECT (Líquido)", "-40°C a 130°C", "200-2000Ω", "Temperatura motor"],
+                ["IAT (Ar)", "-40°C a 130°C", "200-2000Ω", "Temperatura admissão"],
+                ["Óleo", "-40°C a 150°C", "100-1000Ω", "Temperatura óleo"],
+                ["Combustível", "-40°C a 125°C", "100-1000Ω", "Temperatura combustível"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste resistência com multímetro. Verifique variação com temperatura. Compare com tabela do fabricante."
+        },
+        {
+            "type": "text",
+            "value": "Sensores defeituosos causam: dificuldade de partida, consumo elevado, marcha lenta instável, e emissões altas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Teste Prático",
+            "text": "Aqueça sensor com água quente e resfrie com ar frio. Verifique variação da resistência."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensores de Temperatura"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa NTC em sensores de temperatura?",
+            "options": [
+                "Negative Temperature Coefficient",
+                "Normal Temperature Control",
+                "Negative Temperature Calibration",
+                "Normal Thermal Coefficient"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Como um sensor NTC se comporta quando a temperatura aumenta?",
+            "options": [
+                "A resistência aumenta",
+                "A resistência diminui",
+                "A tensão aumenta",
+                "A corrente diminui"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a aplicação mais comum de sensores NTC em veículos?",
+            "options": [
+                "Medir temperatura do líquido de arrefecimento",
+                "Controlar a pressão dos pneus",
+                "Medir a velocidade do veículo",
+                "Regular a altitude"
+            ],
+            "correct": 0
+        }
+    ]
+}

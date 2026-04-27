@@ -1,0 +1,86 @@
+{
+    "title": "Emergências e Primeiros Socorros",
+    "content": [
+        {
+            "type": "text",
+            "value": "Procedimentos de emergência e primeiros socorros são essenciais em oficinas automotivas, onde choques elétricos e outros acidentes podem ocorrer."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "EMERGÊNCIA ELÉTRICA",
+            "text": "Choque elétrico requer resposta imediata: 1. Desligue fonte 2. Afaste vítima 3. Inicie RCP se necessário 4. Chame emergência."
+        },
+        {
+            "type": "text",
+            "value": "Primeiros socorros específicos para acidentes elétricos incluem: RCP, tratamento de queimaduras, e estabilização da vítima."
+        },
+        {
+            "type": "table",
+            "headers": ["Emergência", "Procedimento", "Equipamentos"],
+            "rows": [
+                ["Choque Elétrico", "RCP, desfibrilador", "Kit primeiros socorros"],
+                ["Queimaduras", "Água fria, curativos", "Kit queimaduras"],
+                ["Arco Elétrico", "Proteção ocular, atendimento médico", "Óculos de segurança"],
+                ["Incêndio", "Extintor CO2, evacuação", "Extintores, alarmes"],
+                ["Queda", "Imobilização, atendimento", "Kit imobilização"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Treinamento Essencial",
+            "text": "Todos os funcionários devem ser treinados em primeiros socorros e procedimentos de emergência. Realize treinamentos regulares."
+        },
+        {
+            "type": "text",
+            "value": "Mantenha contatos de emergência acessíveis: bombeiros (193), SAMU (192), e emergência médica (192)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Kit de Emergência",
+            "text": "Mantenha kit completo: desfibrilador, máscara RCP, luvas, curativos, e números de emergência."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Emergências"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo em choque elétrico?",
+            "options": [
+                "Iniciar RCP imediatamente",
+                "Desligar fonte de energia",
+                "Chamar emergência",
+                "Aplicar gelo na área"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual número de emergência para SAMU?",
+            "options": [
+                "190",
+                "191",
+                "192",
+                "193"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que treinar funcionários em primeiros socorros?",
+            "options": [
+                "Apenas burocracia",
+                "Responder rapidamente a emergências e salvar vidas",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Assistente de Partida em Rampa (HSA)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O Assistente de Partida em Rampa (HSA - Hill Start Assist) mantém o freio pressionado por alguns segundos após o motorista tirar o pé do pedal, evitando que o veículo role para trás em rampas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funcionamento",
+            "text": "Detecta inclinação e mantém pressão nos freios por 2-3 segundos para dar tempo de acelerar."
+        },
+        {
+            "type": "text",
+            "value": "O sistema utiliza sensores de inclinação, sensores de pressão no sistema de freio e módulo de controle para determinar quando ativar o assistente."
+        },
+        {
+            "type": "table",
+            "headers": ["Condição", "Ação do Sistema", "Duração"],
+            "rows": [
+                ["Rampa detectada + freio pressionado", "Mantém pressão", "2-3 segundos"],
+                ["Aceleração detectada", "Libera freio gradualmente", "Imediato"],
+                ["Plano ou inclinação mínima", "Não ativa", "N/A"],
+                ["Freio solto >3 segundos", "Libera completamente", "Timeout"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações",
+            "text": "HSA não substitui o freio de mão em inclinações muito íngremes ou paradas prolongadas."
+        },
+        {
+            "type": "text",
+            "value": "O sistema é especialmente útil em trânsito urbano com paradas e partidas frequentes em semáforos em ruas inclinadas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Integração",
+            "text": "HSA geralmente integrado ao sistema ESC/ABS, compartilhando sensores e módulo de controle."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de HSA"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Por quanto tempo o HSA mantém o freio pressionado após soltar o pedal?",
+            "options": [
+                "1 segundo",
+                "2-3 segundos",
+                "5 segundos",
+                "10 segundos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quais sensores o HSA utiliza para funcionar?",
+            "options": [
+                "Apenas sensores de velocidade",
+                "Sensores de inclinação e pressão no freio",
+                "Sensores de temperatura do motor",
+                "Sensores de nível de combustível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O HSA substitui completamente o freio de mão?",
+            "options": [
+                "Sim, em todas as situações",
+                "Não, não substitui em inclinações muito íngremes",
+                "Sim, mas apenas em veículos automáticos",
+                "Não, o freio de mão não é mais necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "title": "Diagnóstico Elétrico do A/C",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico elétrico do sistema A/C requer abordagem sistemática: verificar alimentação, terra, sensores, atuadores e comunicação. Use ferramentas adequadas e siga procedimentos seguros."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança",
+            "text": "Sistema A/C opera em alta pressão. Use equipamentos de proteção e nunca conecte manifold sem verificar o estado do sistema."
+        },
+        {
+            "type": "text",
+            "value": "Comece com verificação básica: fusível A/C, relé do compressor, alimentação do módulo HVAC e terra. Problemas simples causam sintomas complexos."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Elétrica Provável", "Teste"],
+            "rows": [
+                ["Compressor não liga", "Relé, fusível, embreagem", "Testar alimentação 12V"],
+                ["Cicla rápido", "Sensor evaporador, pressostato", "Verificar temperaturas"],
+                ["Ar não frio", "Embreagem deslizando, baixa pressão", "Testar corrente da embreagem"],
+                ["Ventilador não funciona", "Resistor, motor, módulo", "Testar alimentação do motor"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "DTCs Comuns",
+            "text": "B0413 - embreagem A/C, B0128 - sensor solar, P0530 - sensor pressão A/C. Use scanner para leitura precisa."
+        },
+        {
+            "type": "text",
+            "value": "Teste individual de componentes: embreagem (resistência 2-5Ω), sensores NTC (variação resistência), pressostatos (continuidade), atuadores (movimento)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Essenciais",
+            "text": "Manifold, multímetro, scanner HVAC, termômetro infravermelho, detector de vazamento."
+        },
+        {
+            "type": "text",
+            "value": "Após reparos, execute procedimentos de recalibração e aprendizado. Sistemas modernos precisam 'aprender' posições e adaptativos após intervenções."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico A/C"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no diagnóstico de compressor que não liga?",
+            "options": [
+                "Trocar compressor",
+                "Verificar fusível e relé A/C",
+                "Adicionar refrigerante",
+                "Testar sensor de temperatura"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a resistência típica da embreagem do compressor A/C?",
+            "options": [
+                "0.5-1Ω",
+                "2-5Ω",
+                "10-15Ω",
+                "20-30Ω"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que causa o ciclo rápido do compressor (liga e desliga frequentemente)?",
+            "options": [
+                "Excesso de refrigerante",
+                "Sensor do evaporador ou pressostato com falha",
+                "Ventilador muito rápido",
+                "Temperatura muito baixa externa"
+            ],
+            "correct": 1
+        }
+    ]
+}

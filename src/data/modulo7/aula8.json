@@ -1,0 +1,91 @@
+{
+    "title": "Atuadores de Carga - Revisão Geral",
+    "content": [
+        {
+            "type": "text",
+            "value": "Atuadores de carga são componentes que convertem sinais elétricos da ECU em ação mecânica ou física. Incluem injetores, bobinas, válvulas, motores e solenoides que controlam diversos sistemas do veículo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio",
+            "text": "Todos atuadores compartilham o mesmo conceito básico: recebem um sinal elétrico e realizam trabalho físico controlado."
+        },
+        {
+            "type": "text",
+            "value": "O diagnóstico de atuadores envolve três aspectos principais: circuito elétrico, componente mecânico e sinal de controle da ECU."
+        },
+        {
+            "type": "table",
+            "headers": ["Atuador", "Corrente Típica", "Controle", "Falha Comum"],
+            "rows": [
+                ["Injetor", "1-4A", "Peak & Hold ou Saturação", "Entupimento, curto"],
+                ["Bobina Ignição", "5-8A", "Pulso de terra", "Curto secundário"],
+                ["IAC", "1-2A", "Passos ou PWM", "Carbonização"],
+                ["Válvula Purge", "0.5A", "On/Off", "Travada aberta"],
+                ["Ventilador", "10-20A", "Relé ou PWM", "Motor queimado"],
+                ["Bomba Combustível", "5-10A", "Contínuo ou PWM", "Relé com defeito"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Segurança no Diagnóstico",
+            "text": "Nunca meça resistência em circuitos energizados. Desconecte a bateria antes de testar componentes de alta corrente."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas essenciais para diagnóstico de atuadores incluem multímetro, scanner com funções de teste, osciloscópio para análise de sinais e banco de testes para componentes."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Evolução Tecnológica",
+            "text": "Sistemas modernos usam PWM e controle preciso, reduzindo consumo e melhorando desempenho, mas exigem diagnóstico mais especializado."
+        },
+        {
+            "type": "text",
+            "value": "O profissional moderno precisa entender tanto a eletrônica de controle quanto a mecânica dos atuadores para diagnosticar eficientemente os sistemas modernos."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Calculadora de Atuadores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para diagnosticar problemas de sinal em atuadores modernos?",
+            "options": [
+                "Alicate de pressão",
+                "Chave de fenda",
+                "Osciloscópio",
+                "Termômetro"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do osciloscópio para diagnosticar atuadores?",
+            "options": [
+                "Mede apenas tensão média",
+                "Mostra a forma de onda do sinal de controle",
+                "Testa apenas resistência",
+                "Verifica apenas continuidade"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica um sinal PWM em um atuador?",
+            "options": [
+                "Tensão constante de 12V",
+                "Sinal quadrado com largura variável",
+                "Corrente alternada senoidal",
+                "Tensão zero contínua"
+            ],
+            "correct": 1
+        }
+    ]
+}

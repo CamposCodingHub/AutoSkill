@@ -1,0 +1,43 @@
+{
+    "id": 23,
+    "title": "Laboratório Prático e Estudos de Caso",
+    "icon": "🔬",
+    "description": "Laboratório prático, estudos de caso reais, metodologia de diagnóstico, projetos práticos.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Montagem do Laboratório",
+            "slug": "montagem-laboratorio"
+        },
+        {
+            "id": 2,
+            "title": "Projetos Práticos - Básicos",
+            "slug": "projetos-basicos"
+        },
+        {
+            "id": 3,
+            "title": "Projetos Práticos - Intermediários",
+            "slug": "projetos-intermediarios"
+        },
+        {
+            "id": 4,
+            "title": "Projetos Práticos - Avançados",
+            "slug": "projetos-avancados"
+        },
+        {
+            "id": 5,
+            "title": "Estudos de Caso - Problemas Comuns",
+            "slug": "estudos-caso-comuns"
+        },
+        {
+            "id": 6,
+            "title": "Estudos de Caso - Problemas Complexos",
+            "slug": "estudos-caso-complexos"
+        },
+        {
+            "id": 7,
+            "title": "Metodologia de Diagnóstico Prático",
+            "slug": "metodologia-diagnostico"
+        }
+    ]
+}

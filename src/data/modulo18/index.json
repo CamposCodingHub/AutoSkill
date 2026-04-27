@@ -1,0 +1,43 @@
+{
+    "id": 18,
+    "title": "Rastreamento, Alarmes e Segurança",
+    "icon": "🚨",
+    "description": "GPS, rastreamento veicular, alarmes, bloqueadores, imobilizadores, telemetria e segurança.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Sistemas de Rastreamento GPS",
+            "slug": "rastreamento-gps"
+        },
+        {
+            "id": 2,
+            "title": "Sistemas de Rastreamento GPS",
+            "slug": "sistemas-gps"
+        },
+        {
+            "id": 3,
+            "title": "Alarmes e Segurança Perimetral",
+            "slug": "alarmes-seguranca"
+        },
+        {
+            "id": 4,
+            "title": "Bloqueadores e Imobilizadores",
+            "slug": "bloqueadores-imobilizadores"
+        },
+        {
+            "id": 5,
+            "title": "Comunicação e Telemetria",
+            "slug": "comunicacao-telemetria"
+        },
+        {
+            "id": 6,
+            "title": "Instalação e Configuração",
+            "slug": "instalacao-configuracao"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico e Manutenção",
+            "slug": "diagnostico-manutencao"
+        }
+    ]
+}

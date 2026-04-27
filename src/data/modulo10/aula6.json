@@ -1,0 +1,85 @@
+{
+    "title": "Cinto com Pré-tensionador",
+    "content": [
+        {
+            "type": "text",
+            "value": "Cintos com pré-tensionador usam pequenos explosivos (squibs) para retrair o cinto instantaneamente durante uma colisão, removendo folga e posicionando o ocupante corretamente para os airbags."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funcionamento",
+            "text": "Ativa 10-50ms antes dos airbags, removendo até 10cm de folga do cinto para melhor proteção."
+        },
+        {
+            "type": "text",
+            "value": "O pré-tensionador é um dispositivo descartável que precisa ser substituído após qualquer disparo, mesmo que pareça intacto."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Após Disparo"],
+            "rows": [
+                ["Squib", "Explosivo retrator", "Substituir obrigatório"],
+                ["Carretel", "Bobina de cinto", "Verificar danos"],
+                ["Sensor", "Detecta impacto", "Resetar sistema"],
+                ["Módulo SRS", "Controle central", "Limpar memória"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitador de Carga",
+            "text": "Sistemas modernos incluem limitador de carga que libera um pouco o cinto para reduzir força no tórax, prevenindo lesões."
+        },
+        {
+            "type": "text",
+            "value": "O diagnóstico do sistema de cintos inclui verificação elétrica dos squibs, testes mecânicos e reset dos módulos após reparos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Códigos de Falha",
+            "text": "Códigos B2xxx indicam problemas nos cintos. B2491 = pré-tensionador disparado, B2492 = circuito aberto."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Pré-tensionador"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que acontece com um pré-tensionador após disparar?",
+            "options": [
+                "Pode ser reutilizado",
+                "Deve ser substituído obrigatoriamente",
+                "Auto-repara em 24 horas",
+                "Não precisa de manutenção"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quanto tempo antes dos airbags o pré-tensionador ativa?",
+            "options": [
+                "1-5ms",
+                "10-50ms",
+                "100-200ms",
+                "500ms"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função do limitador de carga nos cintos modernos?",
+            "options": [
+                "Aumentar a retenção do cinto",
+                "Liberar um pouco o cinto para reduzir força no tórax",
+                "Travar o cinto completamente",
+                "Substituir o pré-tensionador"
+            ],
+            "correct": 1
+        }
+    ]
+}

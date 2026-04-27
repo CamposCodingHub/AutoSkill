@@ -1,0 +1,86 @@
+{
+    "title": "Projeto 1 - Sistema de Iluminação Completo",
+    "content": [
+        {
+            "type": "text",
+            "value": "Este projeto integrador desenvolve um sistema completo de iluminação automotiva, integrando múltiplos tipos de luzes, controle inteligente, e otimização de consumo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Objetivos do Projeto",
+            "text": "Integrar faróis, luzes diurnas, setas, e luzes internas com controle centralizado e otimização de energia."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve incluir: design do sistema elétrico, seleção de componentes, programação do controle, e otimização de performance."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Especificação", "Função"],
+            "rows": [
+                ["Faróis LED Matrix", "Adaptivos, 100W", "Iluminação principal"],
+                ["DRLs", "LEDs 5W", "Luz diurna"],
+                ["Setas Dinâmicas", "LEDs sequenciais", "Sinalização"],
+                ["Módulo Controle", "Arduino/ESP32", "Gerenciamento"],
+                ["Sensor Luz", "LDR + RTC", "Controle automático"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Integração de múltiplos sistemas, controle de consumo, e conformidade com regulamentações."
+        },
+        {
+            "type": "text",
+            "value": "O projeto deve ser documentado com: esquemas elétricos, código-fonte, lista de materiais, e procedimentos de teste."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Avaliação",
+            "text": "Será avaliado funcionalidade, eficiência energética, qualidade da documentação, e inovação técnica."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Iluminação"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o principal desafio em sistemas de iluminação integrados?",
+            "options": [
+                "Apenas consumo de energia",
+                "Integração de múltiplos sistemas",
+                "Apenas seleção de LEDs",
+                "Apenas conformidade legal"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente é responsável pelo gerenciamento do sistema?",
+            "options": [
+                "Faróis LED Matrix",
+                "DRLs",
+                "Módulo de controle Arduino/ESP32",
+                "Sensor de luz"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que documentar o projeto com esquemas e código?",
+            "options": [
+                "Apenas burocracia",
+                "Permite reprodução, manutenção e avaliação completa",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

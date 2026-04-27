@@ -1,0 +1,86 @@
+{
+    "title": "Equipamentos de Segurança e Proteção",
+    "content": [
+        {
+            "type": "text",
+            "value": "Segurança é fundamental em eletricidade automotiva. Equipamentos de proteção adequados previnem acidentes graves e garantem a integridade do profissional."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "RISCOS ELÉTRICOS",
+            "text": "Choque elétrico, queimaduras, arco elétrico, explosão de bateria, e incêndio. Use sempre EPI completo."
+        },
+        {
+            "type": "text",
+            "value": "EPI essencial inclui: luvas isoladas (CAT III 1000V), óculos de proteção, vestimenta resistente, calçado isolante, e capacete quando necessário."
+        },
+        {
+            "type": "table",
+            "headers": ["Equipamento", "Categoria", "Uso Obrigatório"],
+            "rows": [
+                ["Luvas Isoladas", "CAT III 1000V", "Trabalhos em circuitos energizados"],
+                ["Óculos Proteção", "ANSI Z87.1", "Qualquer trabalho elétrico"],
+                ["Calçado Isolante", "EH rated", "Ambientes úmidos"],
+                ["Extintor CO2", "Classe ABC", "Oficinas elétricas"],
+                ["Kit Primeiros Socorros", "Completo", "Todos os locais de trabalho"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimentos de Segurança",
+            "text": "1. Desconecte bateria 2. Verifique ausência de tensão 3. Use ferramentas isoladas 4. Mantenha área limpa."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de alta tensão (>60V) requerem procedimentos especiais: EPI completo, ferramentas isoladas, e treinamento específico."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Sinalização",
+            "text": "Use placas de advertência, fita de isolamento, e sinalização adequada em áreas de trabalho elétrico."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Segurança"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria mínima para luvas em trabalho automotivo?",
+            "options": [
+                "CAT I 500V",
+                "CAT II 600V",
+                "CAT III 1000V",
+                "CAT IV 2000V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função das luvas isolantes em trabalhos elétricos?",
+            "options": [
+                "Proteger apenas contra sujeira",
+                "Proteger contra choque elétrico",
+                "Melhorar a pegada das ferramentas",
+                "Evitar quedas de ferramentas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Com que frequência você deve inspecionar suas luvas de segurança elétrica?",
+            "options": [
+                "Apenas quando parecerem danificadas",
+                "Antes de cada uso",
+                "Uma vez por semana",
+                "Uma vez por mês"
+            ],
+            "correct": 1
+        }
+    ]
+}

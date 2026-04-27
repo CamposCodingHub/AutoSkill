@@ -1,0 +1,86 @@
+{
+    "title": "Ferramentas Especiais Automotivas",
+    "content": [
+        {
+            "type": "text",
+            "value": "Ferramentas especiais automotivas são essenciais para diagnóstico e reparo profissional, incluindo ferramentas de diagnóstico, reparo e segurança específicas para veículos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Categorias Principais",
+            "text": "Diagnóstico eletrônico, reparo de conectores, extração de fusíveis, e ferramentas de segurança elétrica."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas de diagnóstico incluem: testador de injetores, testador de bobinas, analisador de bateria, e ferramentas de teste de sensores específicas."
+        },
+        {
+            "type": "table",
+            "headers": ["Ferramenta", "Função", "Aplicação"],
+            "rows": [
+                ["Testador Injetor", "Teste de injetores", "Balançamento, resistência"],
+                ["Testador Bobina", "Teste de ignição", "Faísca, resistência"],
+                ["Extractor Fusível", "Remoção fusíveis", "Fusíveis difíceis acesso"],
+                ["Kit Conectores", "Reparo conectores", "Terminais, reparos"],
+                ["Ferramenta Relay", "Teste de relés", "Contato, bobina"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Qualidade vs Custo",
+            "text": "Ferramentas de qualidade duram mais e oferecem medições mais precisas. Invista em ferramentas profissionais."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas de segurança incluem: óculos de proteção, luvas isoladas, extintor CO2, e kit de primeiros socorros específico para trabalhos elétricos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Organização",
+            "text": "Mantenha ferramentas organizadas e etiquetadas. Use caixas de ferramentas com divisórias e sistema de inventário."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Ferramentas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para testar injetores?",
+            "options": [
+                "Multímetro básico",
+                "Testador de injetores",
+                "Alicate amperímetro",
+                "Scanner OBD-II"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do testador de injetores?",
+            "options": [
+                "Medir a resistência do injetor",
+                "Testar o funcionamento e padrão de pulverização",
+                "Ajustar a pressão do combustível",
+                "Calcular o tempo de injeção"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você deve testar um injetor com multímetro?",
+            "options": [
+                "Medir a resistência da bobina",
+                "Medir a tensão de operação",
+                "Testar a continuidade do terra",
+                "Verificar o fluxo de combustível"
+            ],
+            "correct": 0
+        }
+    ]
+}

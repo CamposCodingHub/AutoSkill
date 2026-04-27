@@ -1,0 +1,90 @@
+{
+    "title": "Diagnóstico de Sistemas Pesados",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas elétricos em veículos pesados exige conhecimento específico de 24V, sistemas pneumáticos, componentes robustos e ferramentas adequadas para alta corrente e pressão."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "Verifique bateria → alternador → terra → distribuição → componentes individuais. Use procedimentos de segurança adequados."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas pesados apresentam desafios únicos: corrosão acelerada, vibrações extremas, exposição a elementos e cargas elétricas muito mais altas."
+        },
+        {
+            "type": "table",
+            "headers": ["Problema", "Causa Comum", "Diagnóstico"],
+            "rows": [
+                ["Bateria não carrega", "Alternador, regulador", "Testar carga 28V"],
+                ["Faróis fracos", "Fiação, terra ruim", "Medir queda de tensão"],
+                ["ABS não funciona", "Sensor, válvula", "Testar pressão ar"],
+                ["Trailer sem comunicação", "Conector, CAN", "Verificar terminação CAN"],
+                ["Partida difícil", "Motor partida, bateria", "Testar corrente partida"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Ferramentas Específicas",
+            "text": "Shunt para alta corrente, manômetro para ar, scanner pesados, e multímetros com escala adequada para 24V."
+        },
+        {
+            "type": "text",
+            "value": "Use scanners específicos para veículos pesados (J1939, J1708). Protocolos são diferentes dos veículos leves e requerem ferramentas especializadas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Segurança Primeiro",
+            "text": "Desconecte bateria antes de intervenções. Use EPI completo. Sistemas pneumáticos podem liberar energia repentinamente."
+        },
+        {
+            "type": "text",
+            "value": "Após reparos, execute testes de carga completos e verifique todos os sistemas interconectados. Documente todas as intervenções para rastreamento."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico Pesado"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual protocolo de comunicação é comum em caminhões modernos?",
+            "options": [
+                "OBD-II",
+                "J1939/CAN",
+                "K-Line",
+                "PWM"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a voltagem de carga típica em sistemas de 24V de veículos pesados?",
+            "options": [
+                "12V",
+                "28V",
+                "36V",
+                "48V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que sistemas pesados apresentam corrosão acelerada?",
+            "options": [
+                "Porque usam materiais de baixa qualidade",
+                "Exposição a elementos, vibrações extremas e ambientes agressivos",
+                "Porque não têm proteção",
+                "Porque operam em baixa voltagem"
+            ],
+            "correct": 1
+        }
+    ]
+}

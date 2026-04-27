@@ -1,0 +1,86 @@
+{
+    "title": "Sistemas de Infoentretenimento",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de infoentretenimento evoluíram de rádios simples para centros multimídia complexos com telas touch, processadores potentes, armazenamento interno e conectividade avançada."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Arquitetura Moderna",
+            "text": "SoC dedicado, RAM, armazenamento flash, múltiplas interfaces de comunicação e sistema operacional embarcado."
+        },
+        {
+            "type": "text",
+            "value": "Head units modernas funcionam como computadores embarcados, processando áudio/vídeo, navegação, conectividade e integração com sistemas veiculares através de CAN."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Especificação Típica"],
+            "rows": [
+                ["Processador", "Processamento central", "ARM Cortex-A53, 1-2GHz"],
+                ["RAM", "Memória temporária", "2-8GB DDR4"],
+                ["Armazenamento", "Mapas e apps", "32-128GB eMMC"],
+                ["Display", "Interface visual", "7-12\" HD/4K touch"],
+                ["SoC Áudio", "Processamento de som", "DSP dedicado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Integração CAN",
+            "text": "Comunica-se com rede CAN para dados de velocidade, gear, e informações de veículo para funcionalidades inteligentes."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas operacionais incluem Android Automotive, QNX, Linux embarcado. Cada um oferece diferentes níveis de personalização e segurança."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Use ferramentas de diagnóstico específicas. Verifique atualizações de software e integridade do sistema."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Infoentretenimento"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema operacional é mais comum em head units modernas?",
+            "options": [
+                "Windows",
+                "macOS",
+                "Android Automotive",
+                "iOS"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a quantidade típica de RAM em head units modernas?",
+            "options": [
+                "512MB - 1GB",
+                "2-8GB",
+                "16-32GB",
+                "64-128GB"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Para que a head unit se comunica com a rede CAN do veículo?",
+            "options": [
+                "Apenas para alimentação elétrica",
+                "Para obter dados de velocidade, gear e informações do veículo",
+                "Apenas para conectar com GPS",
+                "Apenas para controle de áudio"
+            ],
+            "correct": 1
+        }
+    ]
+}

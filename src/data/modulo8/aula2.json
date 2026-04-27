@@ -1,0 +1,90 @@
+{
+    "title": "Protocolo LIN Bus",
+    "content": [
+        {
+            "type": "text",
+            "value": "Local Interconnect Network (LIN) é uma rede serial econômica que utiliza um único fio de sinal mais massa, com um mestre único (ex: BCM) e vários escravos (vidro, sensor de chuva, sensor de luz)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Características",
+            "text": "Serial econômica, um fio + massa, mestre único, múltiplos escravos. Ideal para sistemas de conforto."
+        },
+        {
+            "type": "text",
+            "value": "O mestre inicia cada quadro com cabeçalho (break, sync, ID) e os escravos respondem na janela de dados. Não há arbitragem como no CAN - colisão é evitada pelo próprio protocolo."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "LIN Bus", "CAN Bus"],
+            "rows": [
+                ["Topologia", "Mestre-escravos", "Multi-mestre"],
+                ["Fios", "1 fio + massa", "2 fios diferenciais"],
+                ["Taxa", "9.6-19.2 kbit/s", "125-500 kbit/s"],
+                ["Custo", "Baixo", "Médio/Alto"],
+                ["Robustez", "Moderada", "Alta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações",
+            "text": "LIN tolera tempos maiores e menos robustez EMI que CAN diferencial. Não adequado para sistemas críticos de segurança."
+        },
+        {
+            "type": "text",
+            "value": "LIN é ideal para atuadores lentos e sensores de baixa criticidade. Falha de LIN pode afetar vidros, sensores de porta, mas raramente compromete sistemas críticos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Scanner com suporte LIN mostra frames ou DTCs de 'slave'; multímetro vê repouso ~bateria com pull-up; osciloscópio mostra pacotes após comando do mestre."
+        },
+        {
+            "type": "text",
+            "value": "Aplicações comuns incluem: controle de vidros elétricos, sensores de chuva, sensores de luminosidade, espelhos retrovisores, e controles de conforto em geral."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Cálculo de Consumo LIN"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "No LIN Bus, quem inicia a troca de mensagens com os escravos?",
+            "options": [
+                "Qualquer nó em ordem aleatória",
+                "O mestre - escravos só respondem quando solicitados",
+                "Apenas o módulo de airbag",
+                "O sensor de oxigênio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do LIN Bus sobre o CAN Bus?",
+            "options": [
+                "Maior velocidade de comunicação",
+                "Menor custo e simplicidade para aplicações simples",
+                "Maior número de nós suportados",
+                "Maior imunidade a ruído"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a velocidade típica de comunicação do LIN Bus?",
+            "options": [
+                "500 kbps",
+                "250 kbps",
+                "20 kbps",
+                "1 Mbps"
+            ],
+            "correct": 2
+        }
+    ]
+}

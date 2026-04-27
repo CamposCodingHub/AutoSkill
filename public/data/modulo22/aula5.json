@@ -1,0 +1,86 @@
+{
+    "title": "Reparo de Conectores",
+    "content": [
+        {
+            "type": "text",
+            "value": "O reparo de conectores é uma habilidade essencial para eletricistas automotivos, permitindo restaurar conexões danificadas sem substituição completa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Danos",
+            "text": "Travas quebradas, terminais corroídos, invólucros trincados, e pinos danificados."
+        },
+        {
+            "type": "text",
+            "value": "Reparo profissional requer ferramentas especiais, terminais de reposição, e técnicas adequadas para cada tipo de conector."
+        },
+        {
+            "type": "table",
+            "headers": ["Dano", "Técnica Reparo", "Ferramentas"],
+            "rows": [
+                ["Trava Quebrada", "Substituir trava", "Kit de reparo"],
+                ["Terminal Corroído", "Limpar/substituir", "Limpador químico"],
+                ["Pino Danificado", "Extrair e substituir", "Extractor de pinos"],
+                ["Invólucro Trincado", "Reparar com epóxi", "Resina epóxi"],
+                ["Mau Contato", "Ajustar terminal", "Alicate de crimpagem"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimento Padrão",
+            "text": "1. Desconecte bateria 2. Extraia terminal danificado 3. Instale novo terminal 4. Teste continuidade 5. Proteja conexão."
+        },
+        {
+            "type": "text",
+            "value": "Use kits de reparo específicos para cada fabricante. Terminais universais podem não ter encaixe perfeito."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Qualidade do Reparo",
+            "text": "Reparo ideal deve ter encaixe firme, contato elétrico perfeito, e proteção contra umidade."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Reparo de Conectores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a primeira etapa no reparo de conectores?",
+            "options": [
+                "Extrair terminal danificado",
+                "Desconectar bateria",
+                "Limpar conector",
+                "Testar continuidade"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é usada para extrair pinos danificados?",
+            "options": [
+                "Alicate de corte",
+                "Extractor de pinos",
+                "Chave de fenda",
+                "Martelo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar kits de reparo específicos do fabricante?",
+            "options": [
+                "Apenas estética",
+                "Terminais universais podem não ter encaixe perfeito",
+                "Aumentar o custo",
+                "Não faz diferença"
+            ],
+            "correct": 1
+        }
+    ]
+}

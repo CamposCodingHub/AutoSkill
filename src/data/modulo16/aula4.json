@@ -1,0 +1,86 @@
+{
+    "title": "Diagnóstico de Sistemas de Ignição",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas de ignição com osciloscópio permite analisar formas de onda primárias e secundárias, identificar problemas de bobinas, velas e módulos de ignição."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Formas de Onda",
+            "text": "Primária (baixa tensão) e secundária (alta tensão). Cada uma revela diferentes aspectos do sistema."
+        },
+        {
+            "type": "text",
+            "value": "A forma de onda secundária mostra a 'curva de ignição' com picos de tensão até 40kV. Análise revela problemas de velas, cabos e bobinas."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "Normal", "Indica Problema"],
+            "rows": [
+                ["Pico de tensão", "25-40kV", "Baixo = vela/cabo ruim"],
+                ["Tempo de queima", "1-3ms", "Longo = resistência alta"],
+                ["Oscilações", "Presentes", "Ausentes = sistema aberto"],
+                ["Linha base", "Estável", "Instável = interferência"],
+                ["Dwell", "2-8ms", "Variável = problema ECU"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança na Medição",
+            "text": "Use probes de alta tensão com atenuação 1000:1. Nunca conecte diretamente no secundário sem proteção adequada."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas DIS (Distributorless Ignition System) e COP (Coil-On-Plug) têm padrões diferentes. COP mostra forma mais limpa sem interferência de distribuidor."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Análise Comparativa",
+            "text": "Compare formas de onda entre cilindros. Diferenças significativas indicam problemas específicos daquele cilindro."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Ignição"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica um pico de tensão baixo na forma de onda secundária?",
+            "options": [
+                "Bobina em curto",
+                "Vela ou cabo com alta resistência",
+                "ECU defeituosa",
+                "Alimentação baixa"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a atenuação típica das probes de alta tensão para medição de ignição?",
+            "options": [
+                "10:1",
+                "100:1",
+                "1000:1",
+                "10000:1"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema de ignição mostra forma de onda mais limpa sem interferência?",
+            "options": [
+                "Sistema com distribuidor",
+                "COP (Coil-On-Plug)",
+                "DIS convencional",
+                "Sistema de pontos"
+            ],
+            "correct": 1
+        }
+    ]
+}

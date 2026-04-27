@@ -1,0 +1,86 @@
+{
+    "title": "Validação Final de Competências",
+    "content": [
+        {
+            "type": "text",
+            "value": "A validação final de competências é o processo conclusivo que confirma se o profissional está preparado para o mercado de trabalho."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Critérios de Validação",
+            "text": "Conhecimento técnico, habilidades práticas, segurança, comunicação, e capacidade de resolver problemas complexos."
+        },
+        {
+            "type": "text",
+            "value": "A validação deve ser abrangente, cobrindo todos os aspectos da formação e preparando o profissional para desafios reais."
+        },
+        {
+            "type": "table",
+            "headers": ["Competência", "Critério Avaliação", "Nível Mínimo"],
+            "rows": [
+                ["Conhecimento Técnico", "Provas teóricas", "80% acertos"],
+                ["Habilidade Prática", "Provas práticas", "Execução sem erros"],
+                ["Segurança", "Procedimentos", "100% conformidade"],
+                ["Diagnóstico", "Casos reais", "Resolução em tempo hábil"],
+                ["Comunicação", "Entrevistas", "Clareza técnica"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Avaliação Abrangente",
+            "text": "Use múltiplos avaliadores e diferentes cenários para garantir validação justa e completa."
+        },
+        {
+            "type": "text",
+            "value": "O profissional validado deve ser capaz de trabalhar autonomamente, resolver problemas complexos, e manter-se atualizado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Certificação Final",
+            "text": "Emita certificado oficial reconhecido pelo mercado. Inclua competências validadas e projetos realizados."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Validação Final"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o nível mínimo de acertos em provas teóricas?",
+            "options": [
+                "60%",
+                "70%",
+                "80%",
+                "90%"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual competência exige 100% de conformidade?",
+            "options": [
+                "Conhecimento técnico",
+                "Habilidade prática",
+                "Segurança",
+                "Comunicação"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que usar múltiplos avaliadores na validação?",
+            "options": [
+                "Apenas burocracia",
+                "Garantir validação justa e completa",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

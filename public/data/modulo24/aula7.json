@@ -1,0 +1,86 @@
+{
+    "title": "Gestão de Riscos e Prevenção",
+    "content": [
+        {
+            "type": "text",
+            "value": "A gestão de riscos e prevenção é fundamental para criar um ambiente de trabalho seguro, identificando perigos e implementando medidas preventivas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Ciclo de Gestão de Riscos",
+            "text": "1. Identificar perigos 2. Avaliar riscos 3. Implementar controles 4. Monitorar eficácia 5. Melhorar continuamente."
+        },
+        {
+            "type": "text",
+            "value": "Riscos em oficinas elétricas incluem: choque elétrico, arco elétrico, quedas, incêndios, e problemas ergonômicos."
+        },
+        {
+            "type": "table",
+            "headers": ["Risco", "Probabilidade", "Severidade", "Controle"],
+            "rows": [
+                ["Choque Elétrico", "Baixa", "Alta", "EPI, procedimentos"],
+                ["Arco Elétrico", "Média", "Média", "Proteção facial, treinamento"],
+                ["Queda", "Baixa", "Média", "Guarda-corpos, ordem"],
+                ["Incêndio", "Baixa", "Alta", "Extintores, procedimentos"],
+                ["Ergonomia", "Alta", "Baixa", "Ajuste posto, pausas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Análise de Riscos",
+            "text": "Use matriz de riscos: probabilidade x severidade. Priorize controles baseados no nível de risco."
+        },
+        {
+            "type": "text",
+            "value": "Prevenção inclui: treinamento regular, inspeções periódicas, manutenção preventiva, e cultura de segurança."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Melhoria Contínua",
+            "text": "Investigue incidentes, aprenda com erros, e atualize procedimentos regularmente."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Gestão de Riscos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo na gestão de riscos?",
+            "options": [
+                "Implementar controles",
+                "Identificar perigos",
+                "Monitorar eficácia",
+                "Melhorar procedimentos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é usada para priorizar controles?",
+            "options": [
+                "Apenas intuição",
+                "Matriz de riscos (probabilidade x severidade)",
+                "Apenas sorte",
+                "Não é necessário"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que investigar incidentes?",
+            "options": [
+                "Apenas burocracia",
+                "Aprender com erros e atualizar procedimentos",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Qualidade e Teste de Emendas",
+    "content": [
+        {
+            "type": "text",
+            "value": "A qualidade de emendas elétricas é fundamental para confiabilidade do sistema. Testes adequados garantem que as conexões suportarão as condições do veículo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Critérios de Qualidade",
+            "text": "Resistência mínima, isolamento completo, proteção mecânica, e resistência à vibração."
+        },
+        {
+            "type": "text",
+            "value": "Testes de qualidade incluem: medição de resistência, teste de continuidade, inspeção visual, e teste de carga."
+        },
+        {
+            "type": "table",
+            "headers": ["Teste", "Valor Aceitável", "Como Medir"],
+            "rows": [
+                ["Resistência", "<0.01Ω", "Multímetro precisão"],
+                ["Continuidade", "0Ω", "Teste de continuidade"],
+                ["Isolamento", ">10MΩ", "Megômetro"],
+                ["Carga", "Sem falha", "Teste de corrente"],
+                ["Vibração", "Sem desconexão", "Teste mecânico"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Carga",
+            "text": "Aplique carga máxima esperada e verifique se a emenda mantém conexão. Monitore temperatura."
+        },
+        {
+            "type": "text",
+            "value": "Use microscópio para inspeção detalhada. Verifique: brilho da solda, ausência de pontes, e integridade do isolamento."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Documentação",
+            "text": "Registre todos os testes, valores obtidos, e aprovação/reprovação. Crie histórico de qualidade."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Qualidade de Emendas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a resistência máxima aceitável para emenda profissional?",
+            "options": [
+                "<0.01Ω",
+                "<0.1Ω",
+                "<1.0Ω",
+                "<10Ω"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é usada para medir isolamento de emendas?",
+            "options": [
+                "Multímetro comum",
+                "Megômetro",
+                "Alicate de corte",
+                "Chave de fenda"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que documentar todos os testes de qualidade?",
+            "options": [
+                "Para gastar tempo",
+                "Criar histórico de qualidade e rastreamento",
+                "Apenas por obrigação",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

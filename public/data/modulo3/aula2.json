@@ -1,0 +1,86 @@
+{
+    "title": "Relés e Solenoides",
+    "content": [
+        {
+            "type": "text",
+            "value": "Relés e solenoides são atuadores eletromecânicos essenciais em sistemas automotivos, controlando cargas de alta potência com sinais de baixa potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípio de Funcionamento",
+            "text": "Corrente na bobina cria campo magnético que move contatos mecânicos, permitindo controle remoto de cargas."
+        },
+        {
+            "type": "text",
+            "value": "Relés automotivos padrão: 12V, 30-40A, 4 ou 5 pinos. Configurações: SPST, SPDT, DPDT para diferentes aplicações."
+        },
+        {
+            "type": "table",
+            "headers": ["Pino", "Função", "Cor Comum"],
+            "rows": [
+                ["30", "Entrada de potência", "Sempre alimentado"],
+                ["85", "Bobina (+)", "Controle positivo"],
+                ["86", "Bobina (-)", "Controle negativo"],
+                ["87", "Saída NO", "Normalmente aberto"],
+                ["87a", "Saída NC", "Normalmente fechado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste de Relé",
+            "text": "Teste continuidade entre 85-86 (bobina). Teste entre 30-87 (sem energia) e 30-87a (sem energia)."
+        },
+        {
+            "type": "text",
+            "value": "Solenoides são relés de ação linear usados em: partida, injetores, válvulas, travas, e outros atuadores."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Relés Inteligentes",
+            "text": "Modernos incluem temporização, proteção contra sobrecarga, e comunicação com sistemas de controle."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Relés"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual pino recebe alimentação constante em relé automotivo?",
+            "options": [
+                "85",
+                "86",
+                "30",
+                "87"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a função do pino 86 em um relé automotivo?",
+            "options": [
+                "Alimentação de saída para carga",
+                "Terra da bobina do relé",
+                "Controle da bobina (sinal da ECU)",
+                "Alimentação constante da bobina"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "O que você deve ouvir ao testar um relé aplicando 12V nos pinos 85 e 86?",
+            "options": [
+                "Um clique da bobina armada",
+                "Um zumbido contínuo",
+                "Silêncio absoluto",
+                "Um bip curto"
+            ],
+            "correct": 0
+        }
+    ]
+}

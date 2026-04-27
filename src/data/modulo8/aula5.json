@@ -1,0 +1,79 @@
+{
+    "title": "Topologia e Terminação CAN",
+    "content": [
+        {
+            "type": "text",
+            "value": "A topologia CAN é um barramento linear com terminações em ambas as extremidades. Todos os nós conectados devem estar em boas condições para não afetar a comunicação."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Terminações",
+            "text": "Cada rede CAN precisa de duas resistências de 120Ω nas extremidades. Terminação incorreta causa comunicação instável."
+        },
+        {
+            "type": "text",
+            "value": "As resistências de terminação impedem reflexões de sinal nas extremidades do barramento. Sem terminação adequada, os sinais refletem e causam corrupção de dados."
+        },
+        {
+            "type": "table",
+            "headers": ["Problema", "Causa", "Sintoma"],
+            "rows": [
+                ["Resistência > 120Ω", "Terminação faltando", "Comunicação intermitente"],
+                ["Resistência < 60Ω", "Terminação duplicada", "Sinal fraco, ruído"],
+                ["Resistência = ∞", "Circuito aberto", "Sem comunicação"],
+                ["Resistência variável", "Mau contato", "Falhas aleatórias"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Medição",
+            "text": "Meça resistência entre CAN-H e CAN-L com bateria desconectada. Valor normal: 60Ω (duas de 120Ω em paralelo)."
+        },
+        {
+            "type": "text",
+            "value": "A topologia estrela não é recomendada para CAN. Derivações longas podem causar reflexões e degradação do sinal."
+        },
+        {
+            "type": "simulator",
+            "name": "VoltageDropSimulator",
+            "config": {
+                "title": "Calculadora de Terminação CAN"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a resistência esperada entre CAN-H e CAN-L em uma rede corretamente terminada?",
+            "options": [
+                "120Ω",
+                "60Ω",
+                "240Ω",
+                "0Ω"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica uma resistência infinita entre CAN-H e CAN-L?",
+            "options": [
+                "Rede com terminação correta",
+                "Rede sem terminação ou com fio quebrado",
+                "Curto-circuito na rede",
+                "Comunicação normal"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você deve testar a terminação de uma rede CAN?",
+            "options": [
+                "Com o veículo ligado e motor funcionando",
+                "Com a bateria desconectada",
+                "Com o veículo desligado e todos os módulos conectados",
+                "Apenas com o scanner conectado"
+            ],
+            "correct": 2
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Carregamento Wireless e Dinâmico",
+    "content": [
+        {
+            "type": "text",
+            "value": "Carregamento wireless e dinâmico representa o futuro da recarga de veículos elétricos, eliminando a necessidade de conexões físicas e otimizando o uso da energia."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tecnologias Emergentes",
+            "text": "Carregamento por indução, carregamento dinâmico em estradas, e carregamento bidirecional (V2G)."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos permitem: carregamento automático quando estacionado, carregamento durante a condução, e venda de energia de volta para a rede."
+        },
+        {
+            "type": "table",
+            "headers": ["Tecnologia", "Potência", "Aplicação", "Vantagens"],
+            "rows": [
+                ["Indução", "7.7-22kW", "Estacionamento", "Conveniência total"],
+                ["Dinâmico", "11-350kW", "Estradas especiais", "Carregamento contínuo"],
+                ["V2G", "7.4-22kW", "Rede inteligente", "Monetização"],
+                ["Ultra-rápido", "350kW+", "Postos especiais", "Minuto para 80%"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Padrões e Compatibilidade",
+            "text": "CCS, CHAdeMO, GB/T, e novos padrões em desenvolvimento. Verifique compatibilidade com seu veículo."
+        },
+        {
+            "type": "text",
+            "value": "O futuro inclui: carregamento automático em estacionamentos, integração com smart grids, e carregamento solar integrado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Impacto na Rede Elétrica",
+            "text": "Carregamento inteligente distribui carga, evita picos, e otimiza uso de energia renovável."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Carregamento Wireless"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia permite carregamento sem conexão física?",
+            "options": [
+                "CCS Tipo 2",
+                "Carregamento por indução",
+                "CHAdeMO",
+                "GB/T"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual potência típica do carregamento dinâmico em estradas?",
+            "options": [
+                "7.7kW",
+                "11-350kW",
+                "22kW",
+                "50kW"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o carregamento inteligente é importante para a rede elétrica?",
+            "options": [
+                "Apenas burocracia",
+                "Distribui carga, evita picos e otimiza uso de energia renovável",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Técnicas Avançadas de Captura",
+    "content": [
+        {
+            "type": "text",
+            "value": "Técnicas avançadas de captura com osciloscópio permitem diagnosticar problemas intermitentes, eventos raros e anomalias temporárias que são difíceis de detectar com métodos convencionais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Modos de Captura",
+            "text": "Normal, Single, Roll, e Capture de longa duração. Cada um otimizado para diferentes tipos de sinais."
+        },
+        {
+            "type": "text",
+            "value": "Use trigger inteligente para capturar eventos específicos: trigger por largura de pulso, trigger por tempo entre pulsos, e trigger por padrão serial."
+        },
+        {
+            "type": "table",
+            "headers": ["Técnica", "Aplicação", "Configuração"],
+            "rows": [
+                ["Single Capture", "Eventos únicos", "Trigger normal, single sweep"],
+                ["Roll Mode", "Sinais muito lentos", "Sem trigger, time base longa"],
+                ["Segmented Memory", "Eventos múltiplos", "Trigger rápido, memória segmentada"],
+                ["FFT Analysis", "Análise de frequência", "Math function FFT"],
+                ["XY Mode", "Comparação de sinais", "Dois canais, X-Y display"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Captura Longa Duração",
+            "text": "Use para problemas intermitentes. Configure trigger para evento suspeito e capture por horas se necessário."
+        },
+        {
+            "type": "text",
+            "value": "Técnicas de averaging reduzem ruído em sinais repetitivos. Use math functions para calcular média de múltiplas capturas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Análise Serial",
+            "text": "Osciloscópios modernos podem decodificar protocolos seriais como UART, SPI, I2C, e CAN para análise detalhada."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Técnicas de Captura Avançadas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual modo usar para analisar sinais muito lentos como temperatura?",
+            "options": [
+                "Normal trigger",
+                "Single capture",
+                "Roll mode",
+                "FFT analysis"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual técnica reduz ruído em sinais repetitivos?",
+            "options": [
+                "Aumentar a voltagem",
+                "Averaging de múltiplas capturas",
+                "Usar trigger automático",
+                "Desligar o osciloscópio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Para que serve a memória segmentada (Segmented Memory)?",
+            "options": [
+                "Para economizar bateria",
+                "Para capturar eventos múltiplos",
+                "Para aumentar a resolução",
+                "Para reduzir o tamanho do arquivo"
+            ],
+            "correct": 1
+        }
+    ]
+}

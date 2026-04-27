@@ -1,0 +1,86 @@
+{
+    "title": "Projetos Práticos - Intermediários",
+    "content": [
+        {
+            "type": "text",
+            "value": "Projetos práticos intermediários desafiam habilidades mais complexas, integrando múltiplos sistemas e componentes automotivos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Projetos Recomendados",
+            "text": "Sistema de injeção simulado, controle de temperatura, comunicação serial, e análise de sinais."
+        },
+        {
+            "type": "text",
+            "value": "Projetos intermediários devem integrar microcontroladores, sensores, e atuadores para simular sistemas reais de veículos."
+        },
+        {
+            "type": "table",
+            "headers": ["Projeto", "Objetivo", "Habilidades Avançadas"],
+            "rows": [
+                ["Injeção Simulada", "Controlar injetor", "Microcontrolador, PWM"],
+                ["Controle Temperatura", "Sistema de refrigeração", "Sensores, controle PID"],
+                ["Comunicação CAN", "Simular rede CAN", "Protocolos, análise"],
+                ["Analisador Sinais", "Processar sinais", "DSP, filtros digitais"],
+                ["Sistema Ignição", "Controlar bobinas", "Temporização, alta tensão"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Complexidade Crescente",
+            "text": "Projetos intermediários exigem programação, eletrônica digital, e compreensão de sistemas integrados."
+        },
+        {
+            "type": "text",
+            "value": "Use plataformas como Arduino, Raspberry Pi, ou microcontroladores dedicados para prototipagem rápida."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Documentação Detalhada",
+            "text": "Documente código, esquemas, e procedimentos de teste. Isso facilita reprodução e aprendizado."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Projetos Intermediários"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual plataforma é ideal para prototipagem rápida?",
+            "options": [
+                "Placas de prototipagem dedicadas",
+                "Arduino/Raspberry Pi",
+                "Circuitos discretos",
+                "Simuladores apenas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual habilidade é desenvolvida no projeto de controle de temperatura?",
+            "options": [
+                "Apenas soldagem",
+                "Sensores e controle PID",
+                "Apenas medição",
+                "Apenas lógica simples"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que documentar código, esquemas e procedimentos de teste?",
+            "options": [
+                "Apenas burocracia",
+                "Facilita reprodução e aprendizado",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

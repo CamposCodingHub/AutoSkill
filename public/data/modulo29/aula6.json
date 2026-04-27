@@ -1,0 +1,86 @@
+{
+    "title": "Gestão de Clientes e Fidelização",
+    "content": [
+        {
+            "type": "text",
+            "value": "A gestão de clientes e fidelização é essencial para o sucesso de uma oficina, garantindo recorrência, indicações, e construção de marca forte."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Estratégias de Fidelização",
+            "text": "Atendimento excepcional, comunicação proativa, programas de fidelidade, e serviço pós-venda."
+        },
+        {
+            "type": "text",
+            "value": "Gestão eficaz de clientes envolve: cadastro completo, histórico de serviços, comunicação personalizada, e acompanhamento pós-atendimento."
+        },
+        {
+            "type": "table",
+            "headers": ["Estratégia", "Implementação", "Resultados"],
+            "rows": [
+                ["CRM", "Sistema de gestão de clientes", "Organização e acompanhamento"],
+                ["Comunicação", "WhatsApp, email, SMS", "Engajamento constante"],
+                ["Programa Fidelidade", "Pontos, descontos", "Retenção de clientes"],
+                ["Serviço Pós-Venda", "Follow-up, satisfação", "Indicações"],
+                ["Personalização", "Ofertas específicas", "Relevância e valor"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Métricas de Satisfação",
+            "text": "Net Promoter Score (NPS), taxa de retorno, número de indicações, e tempo médio entre serviços."
+        },
+        {
+            "type": "text",
+            "value": "Use tecnologia para automatizar: lembretes de manutenção, ofertas personalizadas, e comunicação em datas especiais."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diferencial Competitivo",
+            "text": "Ofereça experiência superior: conforto na espera, transparência, e garantia estendida."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Gestão de Clientes"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual métrica mede disposição de indicar a oficina?",
+            "options": [
+                "Taxa de retorno",
+                "Net Promoter Score (NPS)",
+                "Tempo médio de serviço",
+                "Número de clientes novos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sistema ajuda na organização e acompanhamento de clientes?",
+            "options": [
+                "Apenas planilha Excel",
+                "CRM (Customer Relationship Management)",
+                "Apenas bloco de notas",
+                "Apenas WhatsApp"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o serviço pós-venda é importante?",
+            "options": [
+                "Apenas burocracia",
+                "Gera satisfação, indicações e retenção de clientes",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

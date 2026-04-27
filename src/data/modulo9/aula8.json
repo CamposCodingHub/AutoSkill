@@ -1,0 +1,89 @@
+{
+    "title": "ECU - Revisão Geral",
+    "content": [
+        {
+            "type": "text",
+            "value": "A Central de Injeção Eletrônica (ECU) é o cérebro do motor moderno, processando dados de múltiplos sensores em tempo real para controlar injetores, ignição e outros sistemas essenciais."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Evolução",
+            "text": "De sistemas simples analógicos para ECUs digitais multi-core com processamento de 32/64 bits e redes de comunicação complexas."
+        },
+        {
+            "type": "text",
+            "value": "Arquitetura típica: entradas (sensores) → condicionamento → processamento → drivers → saídas (atuadores), tudo sincronizado em tempo real."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Microcontrolador", "Processamento principal", "Overclock/overheat"],
+                ["Memória Flash", "Armazenamento firmware", "Corrupção de dados"],
+                ["Drivers", "Controle de potência", "Queima por curto"],
+                ["Reguladores", "Alimentação interna", "Instabilidade de tensão"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tendências Futuras",
+            "text": "ECUs com conectividade OTA, aprendizado de máquina, processamento distribuído e integração com sistemas autônomos."
+        },
+        {
+            "type": "text",
+            "value": "O diagnóstico moderno combina conhecimento eletrônico com entendimento de mecânica do motor, exigindo formação contínua e ferramentas especializadas."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "ECUs modernas incluem criptografia e proteções contra acesso não autorizado, dificultando modificações não autorizadas."
+        },
+        {
+            "type": "text",
+            "value": "O profissional do futuro precis dominar eletrônica, redes, programação e diagnóstico avançado para manter veículos cada vez mais complexos."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise Completa da ECU"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tendência está moldando o futuro das ECUs modernas?",
+            "options": [
+                "Retorno a sistemas mecânicos",
+                "Conectividade e aprendizado de máquina",
+                "Eliminação de sensores",
+                "Uso apenas de 8 bits"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia está revolucionando o processamento em ECUs modernas?",
+            "options": [
+                "Processadores de 8 bits",
+                "Arquitetura multicore e GPUs",
+                "Transistores de válvula",
+                "Sistemas puramente analógicos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como a IA está sendo aplicada em sistemas automotivos modernos?",
+            "options": [
+                "Apenas para controle de áudio",
+                "Para prever falhas e otimizar performance em tempo real",
+                "Para substituir todos os sensores",
+                "Apenas para sistemas de entretenimento"
+            ],
+            "correct": 1
+        }
+    ]
+}

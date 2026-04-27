@@ -1,0 +1,43 @@
+{
+    "id": 13,
+    "title": "Áudio, Multimídia e Telemática",
+    "icon": "🎵",
+    "description": "Sistemas de som, GPS, Bluetooth, Android Auto, Apple CarPlay, sistemas de infoentretenimento.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Sistemas de Áudio",
+            "slug": "sistemas-audio"
+        },
+        {
+            "id": 2,
+            "title": "GPS e Navegação",
+            "slug": "gps-navegacao"
+        },
+        {
+            "id": 3,
+            "title": "Bluetooth e Conectividade",
+            "slug": "bluetooth-conectividade"
+        },
+        {
+            "id": 4,
+            "title": "Android Auto e Apple CarPlay",
+            "slug": "android-carplay"
+        },
+        {
+            "id": 5,
+            "title": "Sistemas de Infoentretenimento",
+            "slug": "infoentretenimento"
+        },
+        {
+            "id": 6,
+            "title": "Telemática e Conectividade Veicular",
+            "slug": "telematica"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico de Sistemas Multimídia",
+            "slug": "diagnostico-multimidia"
+        }
+    ]
+}

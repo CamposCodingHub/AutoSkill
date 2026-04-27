@@ -1,0 +1,86 @@
+{
+    "title": "Futuro da Profissão",
+    "content": [
+        {
+            "type": "text",
+            "value": "O futuro da profissão de eletricista automotivo será radicalmente diferente, exigindo novas competências e especializações em tecnologias emergentes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Novas Competências Essenciais",
+            "text": "Programação, IA, análise de dados, redes neurais, e integração de sistemas complexos."
+        },
+        {
+            "type": "text",
+            "value": "O profissional do futuro precisará dominar: eletrônica avançada, software, redes, segurança cibernética, e sistemas de energia inteligentes."
+        },
+        {
+            "type": "table",
+            "headers": ["Competência Futura", "Descrição", "Preparação"],
+            "rows": [
+                ["IA e Machine Learning", "Diagnóstico inteligente", "Cursos especializados"],
+                ["Cibersegurança", "Proteção de sistemas", "Certificações específicas"],
+                ["Programação", "Software embarcado", "Linguagens modernas"],
+                ["Redes Neurais", "Análise avançada", "Ferramentas específicas"],
+                ["Energia Inteligente", "Sistemas avançados", "Atualização contínua"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios da Transformação",
+            "text": "Velocidade das mudanças, obsolescência rápida, necessidade de aprendizado contínuo."
+        },
+        {
+            "type": "text",
+            "value": "O profissional do futuro será um híbrido entre eletricista, programador, analista de dados, e especialista em IA."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Oportunidades",
+            "text": "Especialização em veículos autônomos, consultoria em IA, desenvolvimento de sistemas inteligentes."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise do Futuro da Profissão"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual competência será mais importante no futuro?",
+            "options": [
+                "Soldagem tradicional",
+                "Diagnóstico com multímetro",
+                "IA e Machine Learning",
+                "Reparo mecânico básico"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual desafio a transformação tecnológica traz?",
+            "options": [
+                "Apenas mais trabalho",
+                "Velocidade das mudanças e obsolescência rápida",
+                "Menos oportunidades",
+                "Nenhum desafio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o aprendizado contínuo será essencial?",
+            "options": [
+                "Apenas burocracia",
+                "Tecnologias evoluem rapidamente e exigem atualização constante",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

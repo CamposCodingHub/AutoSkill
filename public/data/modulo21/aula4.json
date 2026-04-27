@@ -1,0 +1,85 @@
+{
+    "title": "Regulador de Tensão",
+    "content": [
+        {
+            "type": "text",
+            "value": "O regulador de tensão é o componente que controla a saída do alternador, mantendo a tensão dentro de limites seguros para proteger componentes eletrônicos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Função Principal",
+            "text": "Limitar tensão em 13.8-14.8V, proteger contra sobrecarga, e otimizar carga da bateria."
+        },
+        {
+            "type": "text",
+            "value": "Reguladores modernos usam transistores MOSFET para maior eficiência e menor geração de calor, comparados com reguladores de transístor bipolar tradicionais."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Tecnologia", "Vantagens"],
+            "rows": [
+                ["Mecânico", "Contato físico", "Simples, robusto"],
+                ["Eletrônico", "Transistor/MOSFET", "Preciso, eficiente"],
+                ["Inteligente", "Microcontrolador", "Adaptativo, comunicação"],
+                ["Multifase", "Múltiplos estágios", "Alta corrente"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Diagnóstico",
+            "text": "Teste tensão de saída em diferentes RPM. Verifique estabilidade e resposta à carga."
+        },
+        {
+            "type": "text",
+            "value": "Sintomas de falha incluem: sobrecarga (>15V), subcarga (<13V), flutuação excessiva, e ruído na saída."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Integração com BMS",
+            "text": "Reguladores modernos comunicam com sistemas de gerenciamento de bateria para otimizar carga."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Regulador de Tensão"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a faixa normal de tensão regulada pelo alternador?",
+            "options": [
+                "12.0-12.6V",
+                "13.8-14.8V",
+                "15.0-16.0V",
+                "10.5-11.5V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia usam reguladores modernos para maior eficiência?",
+            "options": [
+                "Transistores bipolares",
+                "Transistores MOSFET",
+                "Contato mecânico",
+                "Relés"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sintoma indica falha do regulador de tensão?",
+            "options": [
+                "Sobrecarga (>15V) ou subcarga (<13V)",
+                "Motor funcionando perfeitamente",
+                "Bateria sempre carregada",
+                "Não há sintomas"
+            ],
+            "correct": 0
+        }
+    ]
+}

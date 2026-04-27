@@ -1,0 +1,86 @@
+{
+    "title": "Análise de Sinais de Sensores",
+    "content": [
+        {
+            "type": "text",
+            "value": "A análise de sinais de sensores com osciloscópio permite diagnosticar problemas que multímetros não detectam, como ruído, sinais intermitentes, e comportamento dinâmico incorreto."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Sensores Analógicos",
+            "text": "MAP, MAF, TPS, ECT - sinais de 0-5V com variações baseadas nas condições operacionais."
+        },
+        {
+            "type": "text",
+            "value": "Sensores de posição como TPS devem mostrar transições suaves sem saltos. Ruído excessivo indica problemas no chicote ou no próprio sensor."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Sinal Esperado", "Problemas Comuns"],
+            "rows": [
+                ["TPS", "0.5-4.5V linear", "Saltos, ruído, dead zone"],
+                ["MAP", "0.5-4.5V (vácuo)", "Instável, resposta lenta"],
+                ["MAF", "0-5V (fluxo ar)", "Ruído, sinal fraco"],
+                ["O2", "0.1-0.9V oscilando", "Lento, constante, sem oscilação"],
+                ["CKP", "Pulsos 5V", "Amplitude variável, ruído"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sensores Digitais",
+            "text": "CKP, CMP, sensores Hall - requerem trigger adequado e análise de forma de onda para verificar frequência e amplitude."
+        },
+        {
+            "type": "text",
+            "value": "Use trigger de borda para sensores digitais. Verifique frequência (Hz) e relação duty cycle para confirmar funcionamento correto."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Técnicas Avançadas",
+            "text": "Use math functions para FFT (análise de frequência), XY mode para comparação de sinais, e averaging para reduzir ruído."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sensores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sensor deve mostrar oscilação típica de 0.1-0.9V em operação normal?",
+            "options": [
+                "TPS",
+                "MAP",
+                "Sonda Lambda",
+                "Sensor de temperatura"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica ruído excessivo no sinal do TPS?",
+            "options": [
+                "Sensor funcionando perfeitamente",
+                "Problemas no chicote ou no próprio sensor",
+                "Bateria fraca",
+                "Motor desligado"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de trigger deve ser usado para sensores digitais como CKP?",
+            "options": [
+                "Trigger automático",
+                "Trigger de borda",
+                "Trigger de vídeo",
+                "Trigger de ruído"
+            ],
+            "correct": 1
+        }
+    ]
+}

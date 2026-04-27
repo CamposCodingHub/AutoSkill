@@ -1,0 +1,96 @@
+{
+    "title": "Introdução ao Osciloscópio",
+    "content": [
+        {
+            "type": "text",
+            "value": "O osciloscópio desenha um gráfico contínuo de tensão (vertical) × tempo (horizontal). Enquanto o multímetro mostra um valor médio, o osciloscópio revela detalhes rápidos: picos de tensão, ruídos, tempos de subida e falhas intermitentes."
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Analogia",
+            "text": "O multímetro é como um termômetro (dá a temperatura média). O osciloscópio é o eletrocardiograma (mostra cada batida). Para entender a 'saúde' do circuito, o osciloscópio é insubstituível."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Parâmetro",
+                "Descrição",
+                "Exemplo de uso"
+            ],
+            "rows": [
+                [
+                    "Escala vertical (Volts/Div)",
+                    "Quantos volts cada quadrado vertical representa",
+                    "Sensor de 5V → 1V/div; bateria → 5V/div"
+                ],
+                [
+                    "Base de tempo (Time/Div)",
+                    "Intervalo de tempo por divisão horizontal",
+                    "Injetor: 1ms/div; CKP: 20ms/div; CAN: 1µs/div"
+                ],
+                [
+                    "Gatilho (Trigger)",
+                    "Ponto de início da captura; estabiliza a imagem",
+                    "Ajustar nível no meio da amplitude do sinal"
+                ],
+                [
+                    "Acoplamento (Coupling)",
+                    "DC: sinal completo; AC: bloqueia componente contínua",
+                    "Medir ripple do alternador (AC)"
+                ]
+            ]
+        },
+        {
+            "type": "list",
+            "items": [
+                "CKP Hall: onda digital (quadrada), amplitude constante (0–5V ou 0–12V).",
+                "CKP indutivo: senoidal, amplitude aumenta com a rotação.",
+                "Injetor: pulso de 12V com largura variável (ms).",
+                "Bobina primária: queda abrupta a 0V seguida de pico de indução (flyback).",
+                "Sonda lambda (estreita): oscilação entre 0,1V e 0,9V várias vezes por segundo.",
+                "CAN Bus: sinais diferenciais (CAN_H e CAN_L)."
+            ],
+            "ordered": false
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Atenção: alta tensão",
+            "text": "Nunca conecte uma ponta de prova comum ao secundário da bobina de ignição (pode chegar a 40.000V). Use ponta de prova específica para alta tensão (10x)."
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a principal vantagem do osciloscópio sobre o multímetro para diagnosticar um sensor CKP com falha intermitente?",
+            "options": [
+                "O osciloscópio é mais barato",
+                "O osciloscópio mostra a forma de onda ao longo do tempo, capturando eventos rápidos",
+                "O multímetro não mede tensão em sensores Hall",
+                "O osciloscópio não precisa de alimentação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual configuração inicial do osciloscópio é recomendada para analisar um sensor de posição do virabrequim (CKP)?",
+            "options": [
+                "Volts/div: 1V, Tempo/div: 1s, Trigger: Auto",
+                "Volts/div: 5V, Tempo/div: 10ms, Trigger: Edge",
+                "Volts/div: 20V, Tempo/div: 100μs, Trigger: Single",
+                "Volts/div: 0.1V, Tempo/div: 1min, Trigger: Normal"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é perigoso usar pontas de prova comuns no secundário da bobina de ignição?",
+            "options": [
+                "Porque pode causar curto-circuito na bobina",
+                "Porque a alta tensão (até 40.000V) pode danificar o osciloscópio e o operador",
+                "Porque interfere com o sinal do sensor CKP",
+                "Porque consome muita energia do sistema"
+            ],
+            "correct": 1
+        }
+    ]
+}

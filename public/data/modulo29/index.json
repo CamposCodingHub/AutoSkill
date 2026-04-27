@@ -1,0 +1,43 @@
+{
+    "id": 29,
+    "title": "Empreendedorismo e Abertura de Oficina",
+    "icon": "💼",
+    "description": "Planejamento de negócios, marketing digital, gestão financeira, legalização, e expansão.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Planejamento de Negócios",
+            "slug": "planejamento-negocios"
+        },
+        {
+            "id": 2,
+            "title": "Marketing Digital para Oficinas",
+            "slug": "marketing-digital"
+        },
+        {
+            "id": 3,
+            "title": "Gestão Financeira",
+            "slug": "gestao-financeira"
+        },
+        {
+            "id": 4,
+            "title": "Legalização e Licenciamento",
+            "slug": "legalizacao-licenciamento"
+        },
+        {
+            "id": 5,
+            "title": "Estrutura Física e Equipamentos",
+            "slug": "estrutura-equipamentos"
+        },
+        {
+            "id": 6,
+            "title": "Gestão de Clientes e Fidelização",
+            "slug": "gestao-clientes"
+        },
+        {
+            "id": 7,
+            "title": "Expansão e Franchising",
+            "slug": "expansao-franchising"
+        }
+    ]
+}

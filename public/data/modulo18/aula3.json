@@ -1,0 +1,86 @@
+{
+    "title": "Alarmes e Segurança Perimetral",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de alarme veicular proporcionam proteção contra roubo e vandalismo através de múltiplos sensores, comunicação remota e dispositivos de imobilização."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes do Sistema",
+            "text": "Módulo de alarme, sensores (porta, capô, vidro, impacto), sirene, imobilizador, e comunicação remota."
+        },
+        {
+            "type": "text",
+            "value": "Sensores detectam diferentes tipos de invasão: abertura de portas/capô, quebra de vidros, impacto/choque, inclinação (roubo de rodas), e movimento interno."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Tipo", "Detecção"],
+            "rows": [
+                ["Porta/Capô", "Contato mecânico", "Abertura não autorizada"],
+                ["Vidro", "Acústico/microfone", "Quebra de vidro"],
+                ["Impacto", "Acelerômetro", "Choques/vibrações"],
+                ["Inclinação", "Giroscópio", "Levantamento veículo"],
+                ["Movimento", "Infravermelho", "Presença interna"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Comunicação Remota",
+            "text": "Sistemas modernos enviam alertas via GSM/GPRS, permitindo controle remoto através de aplicativos e central de monitoramento."
+        },
+        {
+            "type": "text",
+            "value": "Funções avançadas incluem geofencing, bloqueio remoto do motor, acompanhamento em tempo real, e integração com sistemas de gestão de frota."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Imobilização",
+            "text": "Pode cortar combustível, inibir partida, ou bloqueiar sistemas eletrônicos. Requer procedimentos de segurança rigorosos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema de Alarme"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sensor detecta tentativa de roubo de rodas?",
+            "options": [
+                "Sensor de porta",
+                "Sensor de vidro",
+                "Sensor de inclinação",
+                "Sensor de impacto"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia permite envio de alertas de alarme remotamente?",
+            "options": [
+                "Bluetooth",
+                "GSM/GPRS",
+                "WiFi apenas",
+                "USB"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como o sistema de imobilização pode impedir o funcionamento do veículo?",
+            "options": [
+                "Cortar combustível, inibir partida ou bloquear sistemas eletrônicos",
+                "Apenas emitir som",
+                "Apenas acender luzes",
+                "Não interfere no funcionamento"
+            ],
+            "correct": 0
+        }
+    ]
+}

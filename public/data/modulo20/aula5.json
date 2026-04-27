@@ -1,0 +1,87 @@
+{
+    "title": "Localização de Componentes",
+    "content": [
+        {
+            "type": "text",
+            "value": "A localização precisa de componentes é essencial para diagnóstico eficiente, permitindo encontrar rapidamente peças e entender o layout do sistema elétrico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Diagramas de Localização",
+            "text": "Vistas explodidas, desenhos em perspectiva, e fotografias com indicações. Cada um com vantagens específicas."
+        },
+        {
+            "type": "text",
+            "value": "Diagramas de localização mostram a posição física de componentes, conectores, pontos de aterramento, e fusíveis no veículo."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Componentes Típicos", "Dificuldade de Acesso"],
+            "rows": [
+                ["Compartimento Motor", "ECU, sensores, relés", "Média"],
+                ["Painel Instrumentos", "Módulos, conectores", "Fácil"],
+                ["Porta Motorista", "Módulos de conforto", "Fácil"],
+                ["Porta Passageiro", "Módulos, alto-falantes", "Fácil"],
+                ["Traseira", "Módulos, amplificador", "Média"],
+                ["Bagageiro", "ECU, bateria (híbridos)", "Difícil"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Técnicas de Localização",
+            "text": "Use referências visuais (marcas de montagem), compare com manual, e siga sequência lógica de remoção."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas como endoscópio, câmeras de inspeção, e luzes especiais facilitam localização de componentes de difícil acesso."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Documentação",
+            "text": "Fotografe antes de desmontar. Anote posições e orientações. Isso facilita montagem posterior."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Localização"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual área geralmente tem maior dificuldade de acesso?",
+            "options": [
+                "Painel instrumentos",
+                "Porta motorista",
+                "Compartimento motor",
+                "Porta passageiro"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta facilita localização de componentes de difícil acesso?",
+            "options": [
+                "Apenas chave de fenda",
+                "Endoscópio ou câmera de inspeção",
+                "Apenas martelo",
+                "Não é possível acessar"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que fotografar antes de desmontar?",
+            "options": [
+                "Para gastar tempo",
+                "Para facilitar montagem posterior e documentar posições",
+                "Para não fazer nada",
+                "Apenas por estética"
+            ],
+            "correct": 1
+        }
+    ]
+}

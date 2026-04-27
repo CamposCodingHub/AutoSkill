@@ -1,0 +1,86 @@
+{
+    "title": "Sistema 24V - Fundamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas 24V são padrão em veículos pesados devido à maior potência, menor corrente e melhor eficiência em longas distâncias. Compreender as diferenças com sistemas 12V é essencial."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Vantagens 24V",
+            "text": "Metade da corrente para mesma potência, fios mais finos, menos queda de tensão, melhor para longas distâncias."
+        },
+        {
+            "type": "text",
+            "value": "Em sistemas 24V, duas baterias de 12V são conectadas em série, resultando em 24V nominal. A capacidade em Ah permanece a mesma, mas a potência dobra."
+        },
+        {
+            "type": "table",
+            "headers": ["Característica", "Sistema 12V", "Sistema 24V"],
+            "rows": [
+                ["Tensão Nominal", "12V", "24V"],
+                ["Corrente (mesma potência)", "100A", "50A"],
+                ["Diâmetro do fio", "Maior", "Menor"],
+                ["Queda de tensão", "Maior", "Menor"],
+                ["Componentes", "Padrão automotivo", "Específico pesados"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "24V pode causar arcos mais potentes. Use ferramentas isoladas e EPI adequado ao trabalhar em sistemas pesados."
+        },
+        {
+            "type": "text",
+            "value": "Alternadores em 24V fornecem maior corrente de carga e suportam demandas de sistemas pesados como ar condicionado de grande porte e sistemas hidráulicos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Valores de resistência são metade dos sistemas 12V. Use multímetro com escala adequada para medições precisas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema 24V"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a principal vantagem do sistema 24V sobre 12V?",
+            "options": [
+                "Maior tensão de partida",
+                "Menor corrente para mesma potência",
+                "Baterias mais baratas",
+                "Menor voltagem de operação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que sistemas 24V usam cabos mais finos que sistemas 12V?",
+            "options": [
+                "Porque são mais baratos",
+                "Porque menor corrente permite cabos mais finos",
+                "Porque a tensão é mais baixa",
+                "Porque a resistência é maior"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você conecta duas baterias 12V para obter 24V?",
+            "options": [
+                "Em paralelo",
+                "Em série",
+                "Apenas com uma bateria",
+                "Em paralelo com inversor"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "title": "Organização da Oficina",
+    "content": [
+        {
+            "type": "text",
+            "value": "A organização eficiente da oficina é fundamental para produtividade, segurança e profissionalismo. Uma oficina bem organizada reduz tempo perdido, melhora qualidade do serviço e aumenta satisfação do cliente."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípios Básicos",
+            "text": "5S (Seiri, Seiton, Seiso, Seiketsu, Shitsuke): organização, ordem, limpeza, padronização e disciplina."
+        },
+        {
+            "type": "text",
+            "value": "Implemente sistema visual: etiquetas coloridas, sinalização clara, e organização lógica. Isso facilita localização rápida e reduz erros."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Organização", "Benefícios"],
+            "rows": [
+                ["Recepção", "Documentos organizados, limpa", "Primeira impressão positiva"],
+                ["Área de Trabalho", "Ferramentas no lugar, limpa", "Produtividade aumentada"],
+                ["Estoque", "Peças categorizadas, rotuladas", "Controle eficiente"],
+                ["Área de Descarte", "Separado por tipo, identificado", "Conformidade ambiental"],
+                ["Área de Pausa", "Limpa, organizada", "Bem-estar da equipe"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança",
+            "text": "Mantenha áreas de circulação livres, extintores acessíveis, e EPI disponível. Organização reduz acidentes."
+        },
+        {
+            "type": "text",
+            "value": "Crie rotinas de limpeza diária e organização semanal. Envolva toda a equipe no processo para manter padrões consistentes."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Auditoria",
+            "text": "Realize auditorias mensais para verificar conformidade com padrões de organização e identificar oportunidades de melhoria."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Organização"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa o 'S' de Seiton no 5S?",
+            "options": [
+                "Limpeza",
+                "Ordem/arrumação",
+                "Disciplina",
+                "Padronização"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual benefício principal da organização visual?",
+            "options": [
+                "Apenas estética",
+                "Facilita localização rápida e reduz erros",
+                "Aumenta o custo",
+                "Não faz diferença"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Com que frequência devem ser realizadas auditorias de organização?",
+            "options": [
+                "Diariamente",
+                "Semanalmente",
+                "Mensalmente",
+                "Anualmente"
+            ],
+            "correct": 2
+        }
+    ]
+}

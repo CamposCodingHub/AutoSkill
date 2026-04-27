@@ -1,0 +1,85 @@
+{
+    "title": "Fundamentos de Soldagem",
+    "content": [
+        {
+            "type": "text",
+            "value": "A soldagem é uma técnica essencial para reparos elétricos automotivos, permitindo conexões permanentes e confiáveis entre componentes e fios."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Princípios Fundamentais",
+            "text": "Fusão de metais com calor, criação de junção molecular, e formação de liga metálica forte."
+        },
+        {
+            "type": "text",
+            "value": "Soldagem profissional requer conhecimento de metalurgia, controle de temperatura, e técnicas específicas para cada tipo de material."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Temperatura", "Aplicação", "Vantagens"],
+            "rows": [
+                ["Estanho/Chumbo", "183°C", "Componentes eletrônicos", "Baixa temperatura"],
+                ["Chumbo Livre", "217-227°C", "Componentes modernos", "Sem chumbo"],
+                ["Prata", "600°C", "Conexões de alta potência", "Alta condutividade"],
+                ["Alumínio", "660°C", "Componentes de alumínio", "Leveza"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Segurança na Soldagem",
+            "text": "Use ventilação adequada, máscara de solda, luvas de proteção, e óculos de segurança."
+        },
+        {
+            "type": "text",
+            "value": "Técnicas incluem: solda por imersão, onda de calor, e reflow para componentes SMD."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Qualidade da Solda",
+            "text": "Solda ideal deve ser brilhante, lisa, e com ângulo de molhamento correto (~45°)."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Soldagem"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a temperatura da solda estanho/chumbo tradicional?",
+            "options": [
+                "183°C",
+                "217°C",
+                "600°C",
+                "660°C"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tipo de solda é usado para componentes modernos sem chumbo?",
+            "options": [
+                "Estanho/chumbo",
+                "Chumbo livre (lead-free)",
+                "Prata",
+                "Alumínio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual deve ser o ângulo de molhamento ideal em uma solda?",
+            "options": [
+                "15°",
+                "45°",
+                "90°",
+                "180°"
+            ],
+            "correct": 1
+        }
+    ]
+}

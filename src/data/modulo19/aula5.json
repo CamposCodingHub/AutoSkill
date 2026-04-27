@@ -1,0 +1,87 @@
+{
+    "title": "Atendimento ao Cliente",
+    "content": [
+        {
+            "type": "text",
+            "value": "O atendimento ao cliente é um diferencial competitivo crucial. Excelência no serviço gera fidelização, indicações e reputação positiva no mercado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Processo de Atendimento",
+            "text": "Recepção → Diagnóstico → Orçamento → Aprovação → Execução → Entrega → Pós-venda."
+        },
+        {
+            "type": "text",
+            "value": "Comunicação transparente é essencial. Mantenha cliente informado sobre progresso, descobertas adicionais, e possíveis atrasos ou custos extras."
+        },
+        {
+            "type": "table",
+            "headers": ["Etapa", "Tempo Resposta", "Ações Chave"],
+            "rows": [
+                ["Primeiro Contato", "Até 2 horas", "Agendamento, informações básicas"],
+                ["Diagnóstico", "4-24 horas", "Análise completa, relatório detalhado"],
+                ["Orçamento", "Até 48 horas", "Detalhado, com opções"],
+                ["Execução", "Conforme combinado", "Atualizações periódicas"],
+                ["Entrega", "No prazo", "Explicação do serviço"],
+                ["Follow-up", "7 dias após", "Satisfação, feedback"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Gestão de Expectativas",
+            "text": "Seja realista sobre prazos e custos. Melhor surpreender positivamente do que decepcionar."
+        },
+        {
+            "type": "text",
+            "value": "Use múltiplos canais de comunicação: telefone, WhatsApp, e-mail, e sistema de gestão. Prefira o canal preferido do cliente."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tratamento de Reclamações",
+            "text": "Ouça ativamente, empatize, ofereça solução rápida, e use feedback para melhorar processos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Atendimento"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o tempo máximo de resposta para primeiro contato?",
+            "options": [
+                "30 minutos",
+                "2 horas",
+                "24 horas",
+                "48 horas"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o prazo máximo para apresentar orçamento ao cliente?",
+            "options": [
+                "12 horas",
+                "24 horas",
+                "48 horas",
+                "1 semana"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante gerir expectativas do cliente?",
+            "options": [
+                "Para aumentar o custo",
+                "Para ser realista sobre prazos e custos, evitando decepções",
+                "Para decepcionar o cliente",
+                "Não é importante"
+            ],
+            "correct": 1
+        }
+    ]
+}

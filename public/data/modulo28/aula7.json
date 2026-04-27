@@ -1,0 +1,87 @@
+{
+    "title": "Apresentação e Defesa de Projetos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A apresentação e defesa de projetos é fundamental para demonstrar competências, comunicar resultados, e receber feedback construtivo sobre o trabalho realizado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Estrutura da Apresentação",
+            "text": "1. Introdução 2. Objetivos 3. Metodologia 4. Resultados 5. Conclusões 6. Perguntas."
+        },
+        {
+            "type": "text",
+            "value": "Apresentação profissional deve ser clara, concisa, e focada nos resultados alcançados e aprendizados obtidos durante o projeto."
+        },
+        {
+            "type": "table",
+            "headers": ["Seção", "Duração", "Conteúdo"],
+            "rows": [
+                ["Introdução", "2 minutos", "Contexto e importância"],
+                ["Objetivos", "3 minutos", "Metas e escopo"],
+                ["Metodologia", "5 minutos", "Técnicas e ferramentas"],
+                ["Resultados", "7 minutos", "Demonstração prática"],
+                ["Conclusões", "2 minutos", "Aprendizados e impactos"],
+                ["Perguntas", "6 minutos", "Discussão e feedback"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Preparação Essencial",
+            "text": "Ensaiar apresentação, preparar para perguntas difíceis, e ter backup de todos os materiais."
+        },
+        {
+            "type": "text",
+            "value": "Use recursos visuais: slides profissionais, demonstrações práticas, vídeos de funcionamento, e gráficos de resultados."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Critérios de Avaliação",
+            "text": "Serão avaliados: clareza, profundidade técnica, qualidade da apresentação, e capacidade de responder perguntas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Apresentação de Projetos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual a duração recomendada para a seção de resultados?",
+            "options": [
+                "2 minutos",
+                "5 minutos",
+                "7 minutos",
+                "10 minutos"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual seção deve ter maior duração na apresentação?",
+            "options": [
+                "Introdução",
+                "Objetivos",
+                "Resultados",
+                "Conclusões"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que ensaiar a apresentação é essencial?",
+            "options": [
+                "Apenas perda de tempo",
+                "Garante fluência, timing e preparação para perguntas",
+                "Não é necessário",
+                "Apenas estética"
+            ],
+            "correct": 1
+        }
+    ]
+}

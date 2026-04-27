@@ -1,0 +1,90 @@
+{
+    "title": "Diagnóstico Avançado e Programação",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico avançado em sistemas programáveis requer conhecimento profundo de eletrônica, software, e protocolos de comunicação. Combina diagnóstico tradicional com programação e calibração."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Integrada",
+            "text": "Diagnóstico → Identificação → Programação → Verificação → Documentação. Ciclo completo para resolução de problemas complexos."
+        },
+        {
+            "type": "text",
+            "value": "Problemas em sistemas programáveis muitas vezes não são defeitos de hardware, mas configurações incorretas, software desatualizado, ou incompatibilidades de versão."
+        },
+        {
+            "type": "table",
+            "headers": ["Problema", "Diagnóstico", "Solução"],
+            "rows": [
+                ["Módulo não comunica", "Verificar protocolo, versão", "Atualizar/reprogramar"],
+                ["Função ausente", "Configuração desativada", "Codificar opção"],
+                ["Erro de software", "Código específico", "Flash atualização"],
+                ["Incompatibilidade", "Versão hardware/software", "Verificar compatibilidade"],
+                ["Performance ruim", "Calibração incorreta", "Recalibrar sistema"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Documentação Essencial",
+            "text": "Registre todas as intervenções, versões de software, configurações alteradas, e resultados obtidos para rastreamento futuro."
+        },
+        {
+            "type": "text",
+            "value": "Use ferramentas de diagnóstico avançado para analisar comunicação CAN, verificar integridade de software, e testar funcionalidades programáveis."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Tendências Futuras",
+            "text": "Programação over-the-air, diagnósticos remotos, e IA para análise preditiva estão mudando o paradigma do diagnóstico veicular."
+        },
+        {
+            "type": "text",
+            "value": "O profissional moderno precisa dominar tanto a eletrônica tradicional quanto as novas tecnologias de software e conectividade para diagnóstico completo."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Diagnóstico Programação Integrado"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo ao diagnosticar problema em módulo programável?",
+            "options": [
+                "Reprogramar imediatamente",
+                "Verificar comunicação e versões",
+                "Substituir o módulo",
+                "Ignorar e continuar"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que pode causar ausência de funcionalidade em um módulo?",
+            "options": [
+                "Bateria muito forte",
+                "Configuração desativada no software",
+                "Motor muito potente",
+                "Pneus novos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante documentar todas as intervenções em sistemas programáveis?",
+            "options": [
+                "Para gastar tempo",
+                "Para rastreamento futuro e resolução de problemas",
+                "Para não fazer nada",
+                "Para aumentar o custo"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Sistemas de Gestão de Bateria (BMS)",
+    "content": [
+        {
+            "type": "text",
+            "value": "O Battery Management System (BMS) é o cérebro do sistema de baterias, monitorando e controlando cada célula individualmente para garantir segurança, performance e longevidade."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funções Essenciais",
+            "text": "Monitoramento de tensão/corrente/temperatura, balanceamento, proteção contra sobrecarga/descarga profunda, e comunicação."
+        },
+        {
+            "type": "text",
+            "value": "BMS monitora cada célula individualmente (tipicamente 96-192 células em BEV), garantindo que nenhuma célula ultrapasse limites seguros de operação."
+        },
+        {
+            "type": "table",
+            "headers": ["Função BMS", "Limite Típico", "Ação de Proteção"],
+            "rows": [
+                ["Tensão Célula", "2.5-4.2V", "Desconectar carga/carga"],
+                ["Temperatura", "-20°C a +60°C", "Reduzir performance"],
+                ["Corrente", "1-3C contínua", "Limitar ou desconectar"],
+                ["Balanceamento", "±50mV", "Ativar balanceamento"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Balanceamento",
+            "text": "Essencial para manter células com mesma carga. Desbalanceamento reduz capacidade e vida útil do pacote."
+        },
+        {
+            "type": "text",
+            "value": "BMS se comunica com outros sistemas através de CAN bus, enviando dados de SOC (State of Charge), SOH (State of Health) e status de segurança."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Segurança",
+            "text": "BMS pode acionar contatores de alta tensão em emergências, isolando a bateria do resto do sistema."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de BMS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa SOC em um sistema BMS?",
+            "options": [
+                "State of Charge (carga)",
+                "State of Current (corrente)",
+                "System of Control (controle)",
+                "Speed of Charge (velocidade)"
+            ],
+            "correct": 0
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a faixa de tensão típica por célula em baterias de íons de lítio?",
+            "options": [
+                "1-2V",
+                "2.5-4.2V",
+                "5-6V",
+                "10-12V"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o balanceamento de células é essencial em um BMS?",
+            "options": [
+                "Para aumentar a velocidade",
+                "Para manter células com mesma carga e reduzir desbalanceamento",
+                "Para diminuir o peso",
+                "Para reduzir o custo"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Baterias de Alta Tensão",
+    "content": [
+        {
+            "type": "text",
+            "value": "Baterias de alta tensão em veículos elétricos e híbridos operam tipicamente entre 300-800V DC, armazenando energia química que é convertida em energia mecânica pelo motor elétrico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Química Principal",
+            "text": "Íons de lítio (NMC, NCA, LFP) oferecem alta densidade energética, longa vida útil e boa performance em diversas temperaturas."
+        },
+        {
+            "type": "text",
+            "value": "O pacote de baterias consiste em múltiplos módulos conectados em série/paralelo para alcançar a voltagem e capacidade desejada. Cada módulo contém várias células individuais."
+        },
+        {
+            "type": "table",
+            "headers": ["Química", "Densidade Energética", "Vantagens", "Aplicação"],
+            "rows": [
+                ["NMC", "200-250 Wh/kg", "Alta densidade, boa performance", "BEV premium"],
+                ["NCA", "250-280 Wh/kg", "Máxima densidade", "Tesla, performance"],
+                ["LFP", "150-180 Wh/kg", "Segurança, longa vida", "BEV econômico, industrial"],
+                ["LMO", "120-150 Wh/kg", "Baixo custo", "Aplicações híbridas"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Gerenciamento Térmico",
+            "text": "Baterias requerem controle de temperatura estrito (15-35°C ideal). Refrigeração líquida é comum em BEV modernos."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de monitoramento contínuo verificam tensão, corrente e temperatura de cada célula. Desequilíbrios podem reduzir performance e vida útil."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ciclos de Vida",
+            "text": "Baterias modernas suportam 1000-2000 ciclos com 80% de capacidade residual. Depende de química e condições de operação."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Baterias HV"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a faixa típica de voltagem das baterias em veículos elétricos?",
+            "options": [
+                "12-24V",
+                "48-72V",
+                "300-800V",
+                "1000-1500V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual química de bateria oferece a maior densidade energética?",
+            "options": [
+                "LFP",
+                "NMC",
+                "NCA",
+                "LMO"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a temperatura ideal de operação para baterias de íons de lítio?",
+            "options": [
+                "0-10°C",
+                "15-35°C",
+                "50-60°C",
+                "70-80°C"
+            ],
+            "correct": 1
+        }
+    ]
+}

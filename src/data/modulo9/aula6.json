@@ -1,0 +1,85 @@
+{
+    "title": "Diagnóstico da ECU",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico da ECU envolve análise de códigos de falha, dados em tempo real, testes de componentes e verificação da comunicação. Requer conhecimento dos protocolos e ferramentas adequadas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "Comece com códigos de falha, depois dados em tempo real, seguido por testes específicos e verificação elétrica."
+        },
+        {
+            "type": "text",
+            "value": "DTCs (Diagnostic Trouble Codes) seguem padrão SAE J2012: primeiro caractere indica sistema, números seguintes identificam o problema específico."
+        },
+        {
+            "type": "table",
+            "headers": ["Código", "Sistema", "Exemplo Comum"],
+            "rows": [
+                ["P0xxx", "Powertrain", "P0171 - Sistema muito pobre"],
+                ["B0xxx", "Body", "B1234 - Sensor de temperatura"],
+                ["C0xxx", "Chassis", "C0035 - Sensor ABS"],
+                ["U0xxx", "Network", "U0001 - CAN bus off"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Códigos Pending",
+            "text": "Códigos pendentes indicam falhas intermitentes que podem não estar ativas no momento do diagnóstico."
+        },
+        {
+            "type": "text",
+            "value": "Dados em tempo real (PIDs) mostram valores dos sensores e status do sistema. Use para verificar se os valores estão dentro das faixas esperadas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Testes de Saída",
+            "text": "Scanners avançados permitem atuar componentes específicos para teste, como injetores, relés e válvulas."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de DTCs"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que indica um código começando com 'U' em diagnóstico veicular?",
+            "options": [
+                "Problema no motor",
+                "Falha na carroceria",
+                "Comunicação de rede",
+                "Sistema de freios"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual prefixo de código indica problemas no sistema de transmissão?",
+            "options": [
+                "P (Powertrain)",
+                "B (Body)",
+                "C (Chassis)",
+                "U (Network)"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa o primeiro caractere 'B' em um código de falha?",
+            "options": [
+                "Problema no sistema de freios",
+                "Falha na carroceria ou acessórios",
+                "Comunicação de rede",
+                "Problema no motor"
+            ],
+            "correct": 1
+        }
+    ]
+}

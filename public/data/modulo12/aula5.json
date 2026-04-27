@@ -1,0 +1,85 @@
+{
+    "title": "Limpadores e Lavadores",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de limpadores e lavadores garantem visibilidade segura, controlando velocidade dos limpadores, direção do jato de água e funções automáticas como sensor de chuva."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes",
+            "text": "Motor limpador, bomba lavador, interruptores, sensor de chuva, bicos injetores e reservatório de água."
+        },
+        {
+            "type": "text",
+            "value": "Motor limpador opera em múltiplas velocidades através de controle de terra ou alimentação. Sistemas modernos incluem função de parada automática e intervalo variável."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Motor Limpador", "Movimentar palhetas", "Escovas gastas, engrenagem"],
+                ["Bomba Lavador", "Pressurizar água", "Bomba queimada, mangueira obstruída"],
+                ["Sensor Chuva", "Detectar precipitação", "Calibração, sujeira no sensor"],
+                ["Bicos Injetores", "Direcionar jato", "Entupimento, má direção"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Sensor de Chuva",
+            "text": "Usa infravermelho para detectar gotas no para-brisa. Calibração incorreta causa funcionamento errático."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas inteligentes ajustam velocidade baseada na intensidade da chuva e velocidade do veículo. Alguns incluiam função de lavagem automática."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste alimentação do motor limpador (10-15A). Verifique continuidade da bomba lavador (2-4A)."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Limpadores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tecnologia usa o sensor de chuva moderno?",
+            "options": [
+                "Ultrassom",
+                "Infravermelho",
+                "Capacitivo",
+                "Magnético"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a corrente típica do motor limpador?",
+            "options": [
+                "1-3A",
+                "10-15A",
+                "25-30A",
+                "50A"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que causa funcionamento errático do sensor de chuva?",
+            "options": [
+                "Excesso de água no reservatório",
+                "Calibração incorreta ou sujeira no sensor",
+                "Velocidade muito alta do veículo",
+                "Temperatura muito baixa"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "Diagramas Elétricos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Diagramas elétricos são mapas essenciais para diagnóstico e reparo de sistemas elétricos automotivos, mostrando a localização e interconexão de todos os componentes."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Diagramas",
+            "text": "Esquemáticos, de localização, de conectores, e de roteamento de fios. Cada um com propósito específico."
+        },
+        {
+            "type": "text",
+            "value": "Aprender a ler diagramas elétricos é fundamental para diagnóstico eficiente. Use cores, símbolos padronizados, e sigas o fluxo lógico."
+        },
+        {
+            "type": "table",
+            "headers": ["Tipo", "Função", "Quando Usar"],
+            "rows": [
+                ["Esquemático", "Mostra funcionamento", "Diagnóstico de circuitos"],
+                ["Localização", "Posição componentes", "Encontrar peças no veículo"],
+                ["Conectores", "Pinos e terminais", "Teste de conectores"],
+                ["Roteamento", "Caminho dos fios", "Reparo de chicotes"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Simbologia Padrão",
+            "text": "Aprenda símbolos internacionais (ISO, JIS, SAE). Cada fabricante pode ter variações."
+        },
+        {
+            "type": "text",
+            "value": "Ferramentas modernas incluem diagramas interativos em software, permitindo zoom, busca de componentes, e navegação entre circuitos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Técnicas de Leitura",
+            "text": "Siga o fluxo da esquerda para direita, use cores para identificar circuitos, e marque problemas encontrados."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Diagramas"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual diagrama mostra posição física dos componentes?",
+            "options": [
+                "Esquemático",
+                "Localização",
+                "Conectores",
+                "Roteamento"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal função do diagrama esquemático?",
+            "options": [
+                "Mostrar onde os componentes estão fisicamente localizados",
+                "Mostrar as conexões elétricas entre componentes",
+                "Indicar o comprimento dos fios",
+                "Listar as cores dos fios"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual diagrama você deve usar para encontrar um fusível queimado?",
+            "options": [
+                "Diagrama esquemático",
+                "Diagrama de localização de componentes",
+                "Diagrama de conectores",
+                "Diagrama de roteamento de fios"
+            ],
+            "correct": 1
+        }
+    ]
+}

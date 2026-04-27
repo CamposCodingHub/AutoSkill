@@ -1,0 +1,85 @@
+{
+    "title": "Android Auto e Apple CarPlay",
+    "content": [
+        {
+            "type": "text",
+            "value": "Android Auto e Apple CarPlay permitem integração profunda de smartphones com o sistema veicular, oferecendo navegação, música, mensagens e chamadas através de interface otimizada para uso ao dirigir."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Diferenças",
+            "text": "Android Auto (Google) vs CarPlay (Apple). Ambos oferecem funcionalidades similares mas com ecossistemas diferentes."
+        },
+        {
+            "type": "text",
+            "value": "O sistema requer conexão USB ou wireless, compatibilidade do smartphone, e head unit certificada. A projeção usa protocolos específicos para cada plataforma."
+        },
+        {
+            "type": "table",
+            "headers": ["Requisito", "Android Auto", "Apple CarPlay"],
+            "rows": [
+                ["Versão Mínima", "Android 8.0+", "iOS 13+"],
+                ["Conexão", "USB/Wireless", "USB/Wireless"],
+                ["Apps Suportados", "Google Maps, Waze, Spotify", "Apple Maps, Waze, Spotify"],
+                ["Controle", "Touch, voz, botões", "Touch, voz, botões"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Limitações",
+            "text": "Alguns apps bloqueados durante movimento. Requisitos legais limitam funcionalidades para segurança."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos suportam conexão wireless, atualizações automáticas e integração com assistentes de voz (Google Assistant, Siri)."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Verifique cabo USB, autenticação do smartphone, e atualizações da head unit. Teste com diferentes dispositivos."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Integração Smartphone"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual versão mínima do Android é necessária para Android Auto?",
+            "options": [
+                "Android 5.0",
+                "Android 6.0",
+                "Android 8.0",
+                "Android 10.0"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual versão mínima do iOS é necessária para Apple CarPlay?",
+            "options": [
+                "iOS 10",
+                "iOS 11",
+                "iOS 13",
+                "iOS 15"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Por que alguns apps são bloqueados durante o movimento do veículo?",
+            "options": [
+                "Porque consomem muita bateria",
+                "Requisitos legais de segurança",
+                "Porque não são compatíveis",
+                "Porque causam interferência"
+            ],
+            "correct": 1
+        }
+    ]
+}

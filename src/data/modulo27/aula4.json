@@ -1,0 +1,86 @@
+{
+    "title": "Customização e Performance",
+    "content": [
+        {
+            "type": "text",
+            "value": "Customização e performance de veículos é um mercado lucrativo que exige conhecimentos avançados em eletrônica, mecânica e software."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Áreas de Customização",
+            "text": "Performance de motor, suspensão, freios, aerodinâmica, e sistemas de infoentretenimento."
+        },
+        {
+            "type": "text",
+            "value": "Customização profissional envolve: remapeamento de ECU, instalação de turbos, preparação de motores, e otimização de sistemas."
+        },
+        {
+            "type": "table",
+            "headers": ["Área", "Modificação", "Impacto"],
+            "rows": [
+                ["Motor", "Reprogramação ECU", "+30-50% potência"],
+                ["Suspensão", "Kit esportivo", "Melhor manuseio"],
+                ["Freios", "Disco ventilado", "Melhor frenagem"],
+                ["Aerodinâmica", "Kit aerodinâmico", "Redução arrasto"],
+                ["Infoentretenimento", "Sistema premium", "Experiência superior"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Desafios Técnicos",
+            "text": "Integração de sistemas, calibração precisa, e conformidade com regulamentações."
+        },
+        {
+            "type": "text",
+            "value": "Profissionais de customização precisam dominar: software de programação, eletrônica avançada, e dinâmica veicular."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Mercado e Oportunidades",
+            "text": "Alta demanda, margens atrativas, e especialização em marcas específicas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Customização e Performance"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual modificação oferece maior ganho de potência?",
+            "options": [
+                "Kit aerodinâmico",
+                "Suspensão esportiva",
+                "Reprogramação de ECU",
+                "Freios ventilados"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ganho típico de potência com reprogramação de ECU?",
+            "options": [
+                "+5-10%",
+                "+30-50%",
+                "+100-150%",
+                "+200-300%"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a calibração precisa é importante em customização?",
+            "options": [
+                "Apenas burocracia",
+                "Garante integração de sistemas e conformidade com regulamentações",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

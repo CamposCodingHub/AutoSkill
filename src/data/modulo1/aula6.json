@@ -1,0 +1,59 @@
+{
+    "title": "Leis de Kirchhoff",
+    "content": [
+        {
+            "type": "text",
+            "value": "As Leis de Kirchhoff são a base da análise de circuitos complexos. A Lei das Malhas (KVL): a soma algébrica de todas as tensões em qualquer malha fechada é igual a zero. Em termos práticos: toda tensão fornecida pela bateria é consumida pelas cargas e pelas resistências do circuito."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Lei das Malhas (KVL)",
+            "text": "V_bateria = V_carga1 + V_carga2 + ... + V_quedas_indesejadas. Se a bateria tem 12V e o farol recebe apenas 10,2V, então 1,8V estão sendo 'roubados' por resistências extras (mau contato, oxidação)."
+        },
+        {
+            "type": "text",
+            "value": "A Lei dos Nós (KCL): a soma das correntes que entram em um nó é igual à soma das correntes que saem desse nó. Isto é consequência da conservação da carga elétrica."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Aplicação prática no diagnóstico",
+            "text": "Teste de queda de tensão (voltage drop): meça a tensão entre dois pontos que deveriam ter a mesma tensão com o circuito sob carga. Qualquer diferença indica resistência indesejada – use KVL para localizar exatamente onde a tensão está sendo 'roubada'."
+        },
+        {
+            "type": "quiz",
+            "question": "Você mede 12,4V na bateria e apenas 9,8V no farol (com o farol aceso). Qual a queda de tensão total no circuito até o farol?",
+            "options": [
+                "12,4V",
+                "9,8V",
+                "2,6V",
+                "22,2V",
+                "0V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Segundo a Lei das Malhas de Kirchhoff, o que acontece com a tensão fornecida por uma bateria em um circuito?",
+            "options": [
+                "Aumenta à medida que passa pelos componentes",
+                "Diminui à medida que é consumida pelas cargas e resistências",
+                "Permanece constante em todo o circuito",
+                "É duplicada em circuitos paralelos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Em um nó de circuito onde chegam 5A e saem 3A para um ramo e 2A para outro, o que a Lei dos Nós de Kirchhoff nos diz?",
+            "options": [
+                "O circuito está com defeito, pois a soma não é zero",
+                "O nó está em equilíbrio, pois 5A = 3A + 2A",
+                "Faltam 2A para completar o circuito",
+                "Sobram 2A que devem retornar à bateria"
+            ],
+            "correct": 1
+        }
+    ]
+}

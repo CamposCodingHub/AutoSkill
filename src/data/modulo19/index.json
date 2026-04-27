@@ -1,0 +1,43 @@
+{
+    "id": 19,
+    "title": "Gestão de Oficina e Negócios",
+    "icon": "🏪",
+    "description": "Organização de oficina, gestão de ferramentas, controle de estoque, atendimento ao cliente, precificação.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Organização da Oficina",
+            "slug": "organizacao-oficina"
+        },
+        {
+            "id": 2,
+            "title": "Organização do Espaço Físico",
+            "slug": "espaco-fisico"
+        },
+        {
+            "id": 3,
+            "title": "Gestão de Ferramentas e Equipamentos",
+            "slug": "gestao-ferramentas"
+        },
+        {
+            "id": 4,
+            "title": "Controle de Estoque e Peças",
+            "slug": "controle-estoque"
+        },
+        {
+            "id": 5,
+            "title": "Atendimento ao Cliente",
+            "slug": "atendimento-cliente"
+        },
+        {
+            "id": 6,
+            "title": "Precificação e Orçamentação",
+            "slug": "precificacao-orcamento"
+        },
+        {
+            "id": 7,
+            "title": "Gestão Financeira e Crescimento",
+            "slug": "gestao-financeira"
+        }
+    ]
+}

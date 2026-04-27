@@ -1,0 +1,86 @@
+{
+    "title": "Calibração de Sensores",
+    "content": [
+        {
+            "type": "text",
+            "value": "Calibração de sensores é o processo de ajustar e configurar sensores para garantir leituras precisas e consistentes, essencial para o correto funcionamento dos sistemas veiculares."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Sensores que Requerem Calibração",
+            "text": "TPS, MAP, MAF, sensores de posição, sensores de temperatura, e sensores de pressão específicos."
+        },
+        {
+            "type": "text",
+            "value": "A calibração envolve ajustar pontos mínimo e máximo, linearizar a resposta, e configurar parâmetros específicos do veículo no módulo de controle."
+        },
+        {
+            "type": "table",
+            "headers": ["Sensor", "Procedimento", "Ferramenta"],
+            "rows": [
+                ["TPS", "Ajustar closed/throttle", "Scanner OEM"],
+                ["MAP", "Calibrar vácuo/atmosférica", "Scanner + manômetro"],
+                ["MAF", "Ajustar fluxo mínimo", "Scanner especializado"],
+                ["Posição Pedal", "Calibrar curso completo", "Scanner OEM"],
+                ["Temperatura", "Verificar linearidade", "Multímetro + scanner"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Procedimento Padrão",
+            "text": "1. Condições estáveis 2. Ferramentas calibradas 3. Procedimento do fabricante 4. Verificação pós-calibração."
+        },
+        {
+            "type": "text",
+            "value": "Sensores de posição como TPS e pedal de acelerador requerem calibração após substituição para que a ECU reconheça corretamente as posições mínima e máxima."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Adaptativos",
+            "text": "Muitos sistemas modernos têm aprendizado adaptativo. Após calibração, execute procedimentos de relearn para otimizar performance."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Calibração"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual sensor requer calibração de curso completo após substituição?",
+            "options": [
+                "Sensor de temperatura do líquido",
+                "Sensor MAP",
+                "Sensor TPS",
+                "Sensor de oxigênio"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "O que envolve a calibração de sensores?",
+            "options": [
+                "Apenas limpar o sensor",
+                "Ajustar pontos mínimo e máximo, linearizar a resposta e configurar parâmetros",
+                "Apenas trocar a bateria",
+                "Apenas verificar o fusível"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que executar procedimentos de relearn após calibração?",
+            "options": [
+                "Para gastar mais tempo",
+                "Para otimizar performance em sistemas com aprendizado adaptativo",
+                "Para danificar o sensor",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

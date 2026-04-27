@@ -1,0 +1,86 @@
+{
+    "title": "Trabalho em Alta Tensão",
+    "content": [
+        {
+            "type": "text",
+            "value": "Trabalho em alta tensão (>60V) é extremamente perigoso e requer procedimentos especiais, EPIs adequados, e treinamento específico."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "RISCO LETAL",
+            "text": "Alta tensão pode causar parada cardíaca e morte. Use apenas profissionais treinados e qualificados."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de alta tensão incluem: híbridos (200-800V), elétricos (400-800V), e alguns sistemas de partida moderna."
+        },
+        {
+            "type": "table",
+            "headers": ["Procedimento", "Passos", "Risco se Ignorado"],
+            "rows": [
+                ["Identificação", "Verificar tensão máxima", "Exposição a tensão letal"],
+                ["Isolamento", "Desconectar e isolar", "Choque elétrico"],
+                ["Descarga", "Descargar capacitores", "Arco elétrico"],
+                ["Verificação", "Testar zero tensão", "Trabalho em circuito energizado"],
+                ["Proteção", "Barreiras, sinalização", "Acesso não autorizado"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "EPIs Especiais",
+            "text": "Luvas CAT IV 1000V, óculos de proteção facial, vestimenta isolada, e ferramentas isoladas específicas."
+        },
+        {
+            "type": "text",
+            "value": "Use sempre detector de tensão antes de tocar em qualquer componente. Verifique ausência de tensão em múltiplos pontos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Procedimentos de Emergência",
+            "text": "Tenha plano de emergência, saiba usar desfibrilador, e mantenha treinamento atualizado."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Alta Tensão"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual tensão define trabalho em alta tensão?",
+            "options": [
+                "12V",
+                "24V",
+                "60V",
+                "120V"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual categoria de EPI é necessária para alta tensão?",
+            "options": [
+                "CAT I",
+                "CAT II",
+                "CAT III",
+                "CAT IV 1000V"
+            ],
+            "correct": 3
+        },
+        {
+            "type": "quiz",
+            "question": "Por que descarregar capacitores antes de trabalhar?",
+            "options": [
+                "Apenas procedimento",
+                "Evitar arco elétrico e choque",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

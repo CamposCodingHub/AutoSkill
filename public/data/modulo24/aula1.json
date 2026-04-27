@@ -1,0 +1,86 @@
+{
+    "title": "Segurança Elétrica Fundamentos",
+    "content": [
+        {
+            "type": "text",
+            "value": "A segurança elétrica é fundamental em oficinas automotivas, protegendo profissionais contra choques, arcos elétricos, e outros riscos graves."
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "RISCOS GRAVES",
+            "text": "Choque elétrico, queimaduras, arco elétrico, explosão de bateria, e incêndio. Use sempre EPI completo."
+        },
+        {
+            "type": "text",
+            "value": "Eletricidade automotiva envolve alta corrente e, em sistemas modernos, alta tensão (híbridos/elétricos). Os riscos são aumentados pelo ambiente de oficina."
+        },
+        {
+            "type": "table",
+            "headers": ["Risco", "Causa", "Prevenção"],
+            "rows": [
+                ["Choque Elétrico", "Contato direto com energizado", "EPI, ferramentas isoladas"],
+                ["Arco Elétrico", "Curto-circuito com alta corrente", "Proteção facial, óculos"],
+                ["Explosão Bateria", "Faísca em ambiente gás", "Ventilação, sem chamas"],
+                ["Queimaduras", "Contato com componentes quentes", "Luvas, proteção térmica"],
+                ["Incêndio", "Curto-circuito, sobrecarga", "Extintor, procedimentos"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Princípios Fundamentais",
+            "text": "1. Desconecte sempre que possível 2. Verifique ausência de tensão 3. Use ferramentas adequadas 4. Mantenha área organizada."
+        },
+        {
+            "type": "text",
+            "value": "A segurança deve ser parte integrada do trabalho, não uma opção. Cada ação deve considerar os riscos envolvidos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Responsabilidade",
+            "text": "Tanto empregador quanto empregado têm responsabilidades na segurança. Conheça seus direitos e deveres."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Segurança Elétrica"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro princípio de segurança elétrica?",
+            "options": [
+                "Trabalhar rápido",
+                "Desconectar sempre que possível",
+                "Usar ferramentas baratas",
+                "Ignorar procedimentos"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual EPI é essencial para proteção contra arco elétrico?",
+            "options": [
+                "Apenas luvas",
+                "Proteção facial e óculos",
+                "Apenas sapatos",
+                "Nenhum EPI necessário"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a segurança deve ser parte integrada do trabalho?",
+            "options": [
+                "Apenas burocracia",
+                "Cada ação deve considerar os riscos envolvidos",
+                "Aumentar o custo",
+                "Não é necessário"
+            ],
+            "correct": 1
+        }
+    ]
+}

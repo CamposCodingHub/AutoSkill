@@ -1,0 +1,43 @@
+{
+    "id": 11,
+    "title": "Ar Condicionado Automotivo",
+    "icon": "❄️",
+    "description": "Ciclo de refrigeração, compressor, condensador, evaporador, válvula de expansão, sensores de pressão.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Ciclo Térmico e Componentes",
+            "slug": "ciclo-termico"
+        },
+        {
+            "id": 2,
+            "title": "Compressor e Embreagem",
+            "slug": "compressor-embreagem"
+        },
+        {
+            "id": 3,
+            "title": "Sensores de Pressão do Refrigerante",
+            "slug": "sensores-pressao"
+        },
+        {
+            "id": 4,
+            "title": "Sensores de Temperatura HVAC",
+            "slug": "sensores-temperatura"
+        },
+        {
+            "id": 5,
+            "title": "Atuadores de Porta de Ar",
+            "slug": "atuadores-porta-ar"
+        },
+        {
+            "id": 6,
+            "title": "Módulo HVAC e Clima Automático",
+            "slug": "modulo-hvac"
+        },
+        {
+            "id": 7,
+            "title": "Diagnóstico Elétrico do A/C",
+            "slug": "diagnostico-ac"
+        }
+    ]
+}

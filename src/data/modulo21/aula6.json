@@ -1,0 +1,86 @@
+{
+    "title": "Diagnóstico de Partida e Carga",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas de partida e carga requer abordagem sistemática, conhecimento dos componentes, e uso adequado de ferramentas."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem Sistemática",
+            "text": "1. Testar bateria 2. Verificar partida 3. Analisar alternador 4. Inspecionar conexões 5. Testar sob carga."
+        },
+        {
+            "type": "text",
+            "value": "Use ferramentas adequadas: testador de bateria, alicate amperímetro, multímetro, e scanner para diagnóstico completo."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "rows": [
+                ["Motor não gira", "Bateria/partida", "Testar tensão partida"],
+                ["Luz bateria acesa", "Alternador/regulador", "Medir tensão carga"],
+                ["Partida lenta", "Bateria/conexões", "Testar queda tensão"],
+                ["Ruído alternador", "Rolamentos/diódos", "Testar ripple AC"],
+                ["Consumo excessivo", "Curto parasita", "Medir corrente descarga"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Teste Sob Carga",
+            "text": "Use carbon pile ou testador de carga. Simule demanda real e verifique desempenho do sistema."
+        },
+        {
+            "type": "text",
+            "value": "Sintomas intermitentes frequentemente indicam conexões ruins ou componentes com falha térmica."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Prevenção",
+            "text": "Manutenção regular, limpeza de conexões, e testes periódicos previnem a maioria dos problemas."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no diagnóstico de sistema de carga?",
+            "options": [
+                "Testar alternador",
+                "Testar bateria",
+                "Testar motor de partida",
+                "Verificar fusíveis"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta simula demanda real no sistema de carga?",
+            "options": [
+                "Apenas multímetro",
+                "Carbon pile ou testador de carga",
+                "Apenas chave de fenda",
+                "Apenas martelo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que sintomas intermitentes frequentemente indicam?",
+            "options": [
+                "Componentes perfeitos",
+                "Conexões ruins ou componentes com falha térmica",
+                "Bateria muito forte",
+                "Motor muito potente"
+            ],
+            "correct": 1
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "id": 25,
+    "title": "Certificação e Validação de Competências",
+    "icon": "🏆",
+    "description": "Certificações profissionais, provas práticas, validação de competências, portfólio técnico, preparação para mercado.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Certificações Profissionais",
+            "slug": "certificacoes-profissionais"
+        },
+        {
+            "id": 2,
+            "title": "Provas Práticas de Validação",
+            "slug": "provas-praticas"
+        },
+        {
+            "id": 3,
+            "title": "Portfólio Técnico",
+            "slug": "portfolio-tecnico"
+        },
+        {
+            "id": 4,
+            "title": "Preparação para Mercado",
+            "slug": "preparacao-mercado"
+        },
+        {
+            "id": 5,
+            "title": "Entrevistas Técnicas",
+            "slug": "entrevistas-tecnicas"
+        },
+        {
+            "id": 6,
+            "title": "Simulações de Casos Reais",
+            "slug": "simulacoes-casos"
+        },
+        {
+            "id": 7,
+            "title": "Validação Final de Competências",
+            "slug": "validacao-final"
+        }
+    ]
+}

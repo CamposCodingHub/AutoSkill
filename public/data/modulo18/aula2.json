@@ -1,0 +1,86 @@
+{
+    "title": "Sistemas de Rastreamento GPS",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de rastreamento GPS veiculares usam tecnologia de posicionamento global para monitorar localização em tempo real, fornecer dados de telemetria e permitir gerenciamento de frota e segurança."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Componentes Principais",
+            "text": "Módulo GPS, antena GSM/GPRS, antena GPS, baterias backup, e integração com sistemas veiculares."
+        },
+        {
+            "type": "text",
+            "value": "O sistema GPS determina posição usando múltiplos satélites (mínimo 4 para 3D). A precisão típica é de 3-10 metros, melhorada com sistemas de augmentação como WAAS/EGNOS."
+        },
+        {
+            "type": "table",
+            "headers": ["Tecnologia", "Função", "Aplicação"],
+            "rows": [
+                ["GPS", "Posicionamento global", "Localização em tempo real"],
+                ["GSM/GPRS", "Comunicação celular", "Envio de dados para servidor"],
+                ["WiFi", "Posicionamento indoor", "Backup em garagens"],
+                ["GLONASS", "Sistema russo", "Backup adicional"],
+                ["Galileo", "Sistema europeu", "Precisão melhorada"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Integração Veicular",
+            "text": "Conecta-se ao CAN bus para obter dados de velocidade, fuel, e status do motor. Permite telemetria avançada e diagnóstico remoto."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas modernos incluem geofencing (cercas virtuais), alertas de velocidade, controle remoto (bloqueio), e integração com sistemas de gestão de frota."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Baterias Backup",
+            "text": "Garantem operação por 24-48 horas sem alimentação do veículo. Essencial para rastreamento em caso de roubo."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Sistema GPS"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Quantos satélites são necessários para posicionamento 3D?",
+            "options": [
+                "2 satélites",
+                "3 satélites",
+                "4 satélites",
+                "6 satélites"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a precisão típica do GPS em veículos?",
+            "options": [
+                "1-2 metros",
+                "3-10 metros",
+                "50-100 metros",
+                "1-2 quilômetros"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que é geofencing em sistemas de rastreamento?",
+            "options": [
+                "Tipo de antena",
+                "Cercas virtuais para alertas de entrada/saída",
+                "Tipo de bateria",
+                "Protocolo de comunicação"
+            ],
+            "correct": 1
+        }
+    ]
+}

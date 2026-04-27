@@ -1,0 +1,43 @@
+{
+    "id": 26,
+    "title": "Tendências e Futuro da Eletricidade Automotiva",
+    "icon": "🔮",
+    "description": "Veículos autônomos, IA em diagnóstico, carregamento wireless, novas arquiteturas elétricas, sustentabilidade.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Veículos Autônomos e IA",
+            "slug": "veiculos-autonomos-ia"
+        },
+        {
+            "id": 2,
+            "title": "Carregamento Wireless e Dinâmico",
+            "slug": "carregamento-wireless"
+        },
+        {
+            "id": 3,
+            "title": "Novas Arquiteturas Elétricas",
+            "slug": "arquiteturas-eletricas"
+        },
+        {
+            "id": 4,
+            "title": "Sustentabilidade e Inovação",
+            "slug": "sustentabilidade-inovacao"
+        },
+        {
+            "id": 5,
+            "title": "Diagnóstico Baseado em IA",
+            "slug": "diagnostico-ia"
+        },
+        {
+            "id": 6,
+            "title": "Conectividade 5G e V2X",
+            "slug": "conectividade-5g-v2x"
+        },
+        {
+            "id": 7,
+            "title": "Futuro da Profissão",
+            "slug": "futuro-profissao"
+        }
+    ]
+}

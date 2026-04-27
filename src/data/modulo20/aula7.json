@@ -1,0 +1,86 @@
+{
+    "title": "Prática e Estudos de Caso",
+    "content": [
+        {
+            "type": "text",
+            "value": "A prática com estudos de caso é fundamental para consolidar conhecimento e desenvolver habilidades práticas em diagnóstico elétrico automotivo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Metodologia",
+            "text": "1. Analise o problema 2. Formule hipóteses 3. Teste sistematicamente 4. Valide a solução 5. Documente tudo."
+        },
+        {
+            "type": "text",
+            "value": "Estudos de caso reais incluem problemas complexos que exigem conhecimento integrado de múltiplos sistemas e habilidades de diagnóstico avançado."
+        },
+        {
+            "type": "table",
+            "headers": ["Caso", "Sintoma", "Diagnóstico", "Solução"],
+            "rows": [
+                ["Farol intermitente", "Luz pisca aleatoriamente", "Mau contato no soquete", "Limpeza e reaperto"],
+                ["Motor não pega", "Sem rotação", "Sensor CKP com falha", "Substituir sensor"],
+                ["Consumo excessivo", "15km/L", "Injetor gotejando", "Limpeza/injeção"],
+                ["Bateria descarrega", "Bateria morre", "Corrente parasita 80mA", "Isolar circuito"],
+                ["Ar condicionado não liga", "Sem refrigeração", "Pressostato aberto", "Substituir sensor"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Importância da Documentação",
+            "text": "Registre cada caso: sintomas, testes realizados, resultados, e solução. Crie seu próprio banco de dados."
+        },
+        {
+            "type": "text",
+            "value": "Use diferentes abordagens: análise de sintomas, testes sistemáticos, e verificação de padrões conhecidos."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Desenvolvimento de Habilidades",
+            "text": "Pratique regularmente, aprenda com cada caso, e desenvolva intuição para diagnóstico rápido."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Estudos de Caso"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no diagnóstico sistemático?",
+            "options": [
+                "Substituir componentes",
+                "Analisar sintomas e formular hipóteses",
+                "Testar aleatoriamente",
+                "Resetar ECU"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que documentar cada caso de diagnóstico?",
+            "options": [
+                "Para gastar tempo",
+                "Para criar banco de dados e aprender com cada caso",
+                "Para não fazer nada",
+                "Apenas por obrigação"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual corrente parasita é considerada anormal?",
+            "options": [
+                "10mA",
+                "80mA",
+                "200mA",
+                "500mA"
+            ],
+            "correct": 1
+        }
+    ]
+}

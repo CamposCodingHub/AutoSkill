@@ -1,0 +1,85 @@
+{
+    "title": "Retrovisores Elétricos",
+    "content": [
+        {
+            "type": "text",
+            "value": "Retrovisores elétricos proporcionam conveniência e segurança com ajuste motorizado, aquecimento, rebatimento automático e integração com sistemas de estacionamento."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Funções Modernas",
+            "text": "Ajuste elétrico, aquecimento, rebatimento, setas integradas, câmeras e memória de posição."
+        },
+        {
+            "type": "text",
+            "value": "Cada retrovisor usa múltiplos motores: ajuste horizontal/vertical, rebatimento e aquecimento. O controle pode ser no painel, no painel de portas ou através de comandos remotos."
+        },
+        {
+            "type": "table",
+            "headers": ["Componente", "Função", "Falha Comum"],
+            "rows": [
+                ["Motor Ajuste", "Mover espelho", "Motor queimado, engrenagem"],
+                ["Elemento Aquecedor", "Desembaçar", "Circuito aberto, não aquece"],
+                ["Seta Integrada", "Sinalização", "LED queimado, má conexão"],
+                ["Mecanismo Rebatimento", "Dobrar espelho", "Motor travado, cabo rompido"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Integração",
+            "text": "Sistemas modernos integram com memória de banco, sensores de estacionamento e câmeras 360°."
+        },
+        {
+            "type": "text",
+            "value": "O aquecimento é ativado automaticamente com o desembaçador traseiro ou manualmente. Elementos resistivos consomem 10-20W por espelho."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Diagnóstico",
+            "text": "Teste cada função individualmente. Verifique fusíveis, interruptores e chicote na dobradiça da porta."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Retrovisores"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente causa o não funcionamento do aquecimento do retrovisor?",
+            "options": [
+                "Motor de ajuste",
+                "Elemento aquecedor",
+                "Seta integrada",
+                "Mecanismo de rebatimento"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Quanta potência um elemento aquecedor de retrovisor tipicamente consome?",
+            "options": [
+                "1-5W",
+                "10-20W",
+                "50-100W",
+                "200W"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Onde geralmente se encontra problemas de conexão elétrica nos retrovisores?",
+            "options": [
+                "No painel de instrumentos",
+                "No chicote na dobradiça da porta",
+                "No módulo de controle do motor",
+                "Na bateria"
+            ],
+            "correct": 1
+        }
+    ]
+}

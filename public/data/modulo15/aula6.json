@@ -1,0 +1,85 @@
+{
+    "title": "Carregamento e Sistemas de Recuperação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Sistemas de carregamento em veículos elétricos incluem carregamento onboard (OBC), carregamento rápido DC, e recuperação de energia regenerativa durante frenagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos de Carregamento",
+            "text": "AC (Level 1/2) através de OBC onboard, DC (Level 3) carregamento rápido direto, e regeneração durante frenagem."
+        },
+        {
+            "type": "text",
+            "value": "On-Board Charger (OBC) converte AC da rede em DC para carregar baterias. Tipicamente 3.3-22kW, limitado pelo espaço e peso no veículo."
+        },
+        {
+            "type": "table",
+            "headers": ["Carregamento", "Potência", "Tempo 0-80%", "Aplicação"],
+            "rows": [
+                ["Level 1 AC", "1.2-3.3kW", "8-20 horas", "Doméstico 120V"],
+                ["Level 2 AC", "3.3-22kW", "4-8 horas", "Residencial/Trabalho"],
+                ["DC Fast", "50-350kW", "20-40 min", "Estações públicas"],
+                ["Regeneração", "10-60kW", "Contínuo", "Frenagem/desaceleração"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Regeneração",
+            "text": "Recupera 10-30% da energia durante frenagem urbana. Eficiência depende de estratégia de condução e topografia."
+        },
+        {
+            "type": "text",
+            "value": "Sistemas de carregamento rápido DC usam estações externas que convertem AC→DC, carregando diretamente as baterias ignorando o OBC limitado."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Gerenciamento Térmico",
+            "text": "Carregamento rápido gera calor significativo. Requer sistemas de refrigeração ativa para proteger baterias."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Carregamento"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual componente converte AC da rede em DC para carregar baterias?",
+            "options": [
+                "Inversor",
+                "DC-DC Converter",
+                "On-Board Charger (OBC)",
+                "BMS"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a potência típica de carregamento DC rápido?",
+            "options": [
+                "1-3kW",
+                "10-20kW",
+                "50-350kW",
+                "500kW"
+            ],
+            "correct": 2
+        },
+        {
+            "type": "quiz",
+            "question": "Quanta energia pode ser recuperada durante frenagem regenerativa?",
+            "options": [
+                "1-5%",
+                "10-30%",
+                "50-70%",
+                "90-100%"
+            ],
+            "correct": 1
+        }
+    ]
+}

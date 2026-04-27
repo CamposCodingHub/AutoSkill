@@ -1,0 +1,79 @@
+{
+    "title": "Diagnóstico de Redes CAN",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de redes CAN envolve análise de sinais, verificação de terminações, testes de continuidade e interpretação de DTCs de comunicação."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Ferramentas",
+            "text": "Osciloscópio é essencial para analisar formas de onda CAN. Scanner verifica DTCs e dados em tempo real."
+        },
+        {
+            "type": "text",
+            "value": "Formas de onda CAN devem mostrar sinais diferenciais simétricos entre CAN-H (2.5-3.5V) e CAN-L (2.5-1.5V) com transições limpas."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "rows": [
+                ["U0001 - Bus Off", "Excesso de erros", "Verificar terminações"],
+                ["U0002 - Sem Comunicação", "Circuito aberto", "Testar continuidade"],
+                ["U0073 - Módulo Off", "Módulo defeituoso", "Testar alimentação"],
+                ["Comunicação Lenta", "Resistência alta", "Medir terminação"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Bus Off",
+            "text": "Módulo entra em modo bus off após detectar muitos erros, desconectando-se da rede para não poluí-la."
+        },
+        {
+            "type": "text",
+            "value": "Use osciloscópio para verificar ruído, reflexões e amplitude dos sinais. Sinais distorcidos indicam problemas físicos na rede."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Sinais CAN"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "O que significa o código U0001 em redes CAN?",
+            "options": [
+                "Alta tensão na rede",
+                "Módulo em modo bus off",
+                "Resistência baixa",
+                "Comunicação normal"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal causa de um módulo entrar em modo bus off?",
+            "options": [
+                "Consumo excessivo de combustível",
+                "Excesso de erros de comunicação ou ruído na rede",
+                "Temperatura alta do motor",
+                "Bateria fraca"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Como você recupera um módulo em modo bus off?",
+            "options": [
+                "Desconectando e reconectando a bateria",
+                "Apenas apagando os códigos com scanner",
+                "Corrigindo o problema raiz e ciclando a ignição",
+                "Substituindo o módulo imediatamente"
+            ],
+            "correct": 2
+        }
+    ]
+}

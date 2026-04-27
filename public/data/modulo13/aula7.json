@@ -1,0 +1,90 @@
+{
+    "title": "Diagnóstico de Sistemas Multimídia",
+    "content": [
+        {
+            "type": "text",
+            "value": "O diagnóstico de sistemas multimídia requer conhecimento de eletrônica digital, redes de comunicação, software e integração veicular. Use ferramentas especializadas e abordagem sistemática."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Abordagem",
+            "text": "Verifique hardware → software → conectividade → integração veicular. Teste cada componente isoladamente."
+        },
+        {
+            "type": "text",
+            "value": "Problemas comuns incluem: falha em inicializar, tela touch não responsiva, sem áudio, problemas de conectividade e erro de atualização de software."
+        },
+        {
+            "type": "table",
+            "headers": ["Sintoma", "Causa Provável", "Solução"],
+            "rows": [
+                ["Não liga", "Fusível, alimentação", "Verificar 12V constantes"],
+                ["Tela preta", "Display, backlight", "Testar vídeo com fonte externa"],
+                ["Sem áudio", "Amplificador, mute", "Verificar linha de áudio"],
+                ["Bluetooth falha", "Módulo, antena", "Resetar pareamento"],
+                ["GPS sem sinal", "Antena, localização", "Testar em área aberta"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Atualizações de Software",
+            "text": "Muitos problemas são resolvidos com atualizações. Sempre verifique disponibilidade antes de intervenções complexas."
+        },
+        {
+            "type": "text",
+            "value": "Use ferramentas de diagnóstico do fabricante para acessar logs do sistema, testar componentes e realizar calibrações específicas."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Ferramentas Essenciais",
+            "text": "Scanner multimídia, osciloscópio, fonte de alimentação variável, ferramentas de software do fabricante."
+        },
+        {
+            "type": "text",
+            "value": "Após reparos, execute procedimentos de inicialização e calibração. Sistemas modernos precisam reconhecer componentes e reconfigurar automaticamente."
+        },
+        {
+            "type": "simulator",
+            "name": "OhmLawCalculator",
+            "config": {
+                "title": "Análise de Diagnóstico Multimídia"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual o primeiro passo no diagnóstico de head unit que não liga?",
+            "options": [
+                "Trocar display",
+                "Verificar fusível e alimentação",
+                "Atualizar software",
+                "Testar GPS"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "O que pode resolver muitos problemas de sistemas multimídia sem intervenção física?",
+            "options": [
+                "Trocar a bateria",
+                "Atualizações de software",
+                "Limpar o display",
+                "Reiniciar o veículo"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual ferramenta é essencial para acessar logs do sistema multimídia?",
+            "options": [
+                "Apenas multímetro",
+                "Ferramentas de diagnóstico do fabricante",
+                "Apenas chave de fenda",
+                "Apenas óculos de proteção"
+            ],
+            "correct": 1
+        }
+    ]
+}

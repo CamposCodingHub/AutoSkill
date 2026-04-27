@@ -1,0 +1,58 @@
+{
+    "id": 1,
+    "title": "Fundamentos de Eletricidade",
+    "icon": "⚡",
+    "description": "Tensão, corrente, resistência, Lei de Ohm, potência, circuitos série e paralelo, instrumentos.",
+    "lessons": [
+        {
+            "id": 1,
+            "title": "Tensão, Corrente e Resistência",
+            "slug": "tensao-corrente-resistencia"
+        },
+        {
+            "id": 2,
+            "title": "Lei de Ohm",
+            "slug": "lei-de-ohm"
+        },
+        {
+            "id": 3,
+            "title": "Potência Elétrica (Watts)",
+            "slug": "potencia-eletrica"
+        },
+        {
+            "id": 4,
+            "title": "Circuitos em Série e Paralelo",
+            "slug": "circuitos-serie-paralelo"
+        },
+        {
+            "id": 5,
+            "title": "Efeito Joule e Dimensionamento",
+            "slug": "efeito-joule"
+        },
+        {
+            "id": 6,
+            "title": "Leis de Kirchhoff",
+            "slug": "leis-de-kirchhoff"
+        },
+        {
+            "id": 7,
+            "title": "Eletromagnetismo",
+            "slug": "eletromagnetismo"
+        },
+        {
+            "id": 8,
+            "title": "Capacitores e Indutores",
+            "slug": "capacitores-indutores"
+        },
+        {
+            "id": 9,
+            "title": "Uso do Multímetro",
+            "slug": "uso-do-multimetro"
+        },
+        {
+            "id": 10,
+            "title": "Introdução ao Osciloscópio",
+            "slug": "introducao-osciloscopio"
+        }
+    ]
+}

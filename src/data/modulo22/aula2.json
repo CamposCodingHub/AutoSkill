@@ -1,0 +1,86 @@
+{
+    "title": "Equipamentos de Soldagem",
+    "content": [
+        {
+            "type": "text",
+            "value": "Equipamentos adequados de soldagem são essenciais para obter conexões de qualidade e segurança no trabalho com componentes eletrônicos automotivos."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Tipos Principais",
+            "text": "Estação de solda, ferro de solda, pistola de ar quente, e sistema de reflow para componentes SMD."
+        },
+        {
+            "type": "text",
+            "value": "Estação de solda profissional oferece controle preciso de temperatura, diferentes pontas para diversas aplicações, e recursos avançados."
+        },
+        {
+            "type": "table",
+            "headers": ["Equipamento", "Características", "Aplicação"],
+            "rows": [
+                ["Estação Solda", "Temperatura controlada", "Componentes precisos"],
+                ["Ferro Solda", "Temperatura fixa", "Trabalhos gerais"],
+                ["Pistola Ar Quente", "Ar aquecido", "Emendas de chicotes"],
+                ["Microscópio", "Ampliação", "Componentes SMD"],
+                ["Fume Extractor", "Extração fumaça", "Segurança e qualidade"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Manutenção",
+            "text": "Limpe pontas regularmente, estanhe quando necessário, e calibre temperatura periodicamente."
+        },
+        {
+            "type": "text",
+            "value": "Recursos avançados incluem: controle digital, memória de temperaturas, e sensores de ponta para proteção."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Segurança",
+            "text": "Use ventilação adequada, proteção ocular, e luvas de proteção. Fumaça de solda é tóxica."
+        },
+        {
+            "type": "simulator",
+            "name": "PowerCalculator",
+            "config": {
+                "title": "Análise de Equipamentos de Soldagem"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual equipamento oferece melhor controle de temperatura?",
+            "options": [
+                "Ferro de solda tradicional",
+                "Estação de solda",
+                "Pistola de ar quente",
+                "Microscópio"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Qual equipamento é usado para emendas de chicotes?",
+            "options": [
+                "Microscópio",
+                "Pistola de ar quente",
+                "Fume extractor",
+                "Apenas fita isolante"
+            ],
+            "correct": 1
+        },
+        {
+            "type": "quiz",
+            "question": "Por que é importante usar fume extractor ao soldar?",
+            "options": [
+                "Apenas estética",
+                "Fumaça de solda é tóxica e prejudica saúde",
+                "Não é necessário",
+                "Apenas para aumentar o custo"
+            ],
+            "correct": 1
+        }
+    ]
+}
