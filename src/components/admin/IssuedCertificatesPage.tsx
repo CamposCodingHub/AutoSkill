@@ -260,7 +260,7 @@ const IssuedCertificatesPage: React.FC = () => {
                           </div>
                         </div>
                         <div className="flex gap-2">
-                          {progress.certificateUrl && (
+                          {progress.certificateUrl ? (
                             <>
                               <a
                                 href={`http://localhost:3001${progress.certificateUrl}`}
@@ -297,6 +297,27 @@ const IssuedCertificatesPage: React.FC = () => {
                               >
                                 📤 Compartilhar
                               </button>
+                            </>
+                          ) : (
+                            <>
+                              <button
+                                onClick={() => handleEdit(progress)}
+                                className="bg-orange-600 hover:bg-orange-700 text-white px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-1"
+                              >
+                                ✏️ Editar
+                              </button>
+                              <button
+                                onClick={() => {
+                                  setDeletingProgress(progress);
+                                  setShowDeleteModal(true);
+                                }}
+                                className="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-1"
+                              >
+                                🗑️ Excluir
+                              </button>
+                              <span className="text-xs text-gray-500 dark:text-gray-400 px-2 py-2">
+                                PDF não gerado
+                              </span>
                             </>
                           )}
                         </div>

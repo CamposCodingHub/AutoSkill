@@ -1,4 +1,9 @@
-import DOMPurify from 'dompurify';
+import createDOMPurify from 'dompurify';
+import { JSDOM } from 'jsdom';
+
+// Configurar DOMPurify para funcionar no Node.js usando jsdom
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window);
 
 // Configurações de sanitização
 const sanitizeConfig = {

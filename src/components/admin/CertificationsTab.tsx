@@ -30,6 +30,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
   const [selectedUser, setSelectedUser] = useState<string>('');
   const [selectedCertification, setSelectedCertification] = useState<string>('');
   const [finalScore, setFinalScore] = useState<number>(100);
+  const [isIssuing, setIsIssuing] = useState(false);
 
   const token = localStorage.getItem('autoskill_token');
 
@@ -66,10 +67,14 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
       });
       if (response.ok) {
         const data = await response.json();
-        setUsers(data);
+        setUsers(Array.isArray(data.users) ? data.users : []);
+      } else {
+        console.error('Erro ao carregar usuários:', response.status);
+        setUsers([]);
       }
     } catch (error) {
       console.error('Erro ao carregar usuários:', error);
+      setUsers([]);
     }
   };
 
@@ -161,6 +166,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
     }
 
     try {
+      setIsIssuing(true);
       const response = await fetch('http://localhost:3001/api/certifications/admin/issue-manual', {
         method: 'POST',
         headers: {
@@ -174,6 +180,8 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
         }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         showMessage('success', 'Certificado emitido com sucesso!');
         setShowIssueModal(false);
@@ -182,11 +190,14 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
         setFinalScore(100);
         loadCertifications();
       } else {
-        showMessage('error', 'Erro ao emitir certificado');
+        console.error('Erro na resposta:', data);
+        showMessage('error', data.error || 'Erro ao emitir certificado');
       }
     } catch (error) {
       console.error('Erro ao emitir certificado manualmente:', error);
-      showMessage('error', 'Erro ao emitir certificado');
+      showMessage('error', 'Erro ao emitir certificado. Verifique o console para detalhes.');
+    } finally {
+      setIsIssuing(false);
     }
   };
 
@@ -491,9 +502,10 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
               <div className="flex gap-2 pt-4">
                 <button
                   onClick={handleIssueManual}
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+                  disabled={isIssuing}
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
-                  Emitir
+                  {isIssuing ? 'Emitindo...' : 'Emitir'}
                 </button>
                 <button
                   onClick={() => {
@@ -502,7 +514,8 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
                     setSelectedCertification('');
                     setFinalScore(100);
                   }}
-                  className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors"
+                  disabled={isIssuing}
+                  className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors disabled:bg-gray-200 disabled:cursor-not-allowed"
                 >
                   Cancelar
                 </button>

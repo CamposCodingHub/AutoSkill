@@ -22,7 +22,10 @@ export const updateProfileSchema = z.object({
   name: z.string().min(3).max(100).optional(),
   bio: z.string().max(500).optional(),
   phone: z.string().max(20).optional(),
-  avatar: z.string().optional()
+  avatar: z.string()
+    .max(500_000, 'Avatar muito grande (máximo 500KB em base64)')
+    .regex(/^data:image\/(jpeg|png|webp);base64,/, 'Formato inválido. Use JPEG, PNG ou WebP em base64')
+    .optional()
 });
 
 // Schema de validação para alteração de senha

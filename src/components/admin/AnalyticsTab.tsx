@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface User {
   id: string;
@@ -20,6 +21,7 @@ interface AnalyticsTabProps {
 }
 
 const AnalyticsTab: React.FC<AnalyticsTabProps> = ({ users }) => {
+  const navigate = useNavigate();
   const totalUsers = users.length;
   const totalAdmins = users.filter(u => u.role === 'admin').length;
   const totalRegularUsers = users.filter(u => u.role === 'user').length;
@@ -94,7 +96,15 @@ const AnalyticsTab: React.FC<AnalyticsTabProps> = ({ users }) => {
 
       {/* Growth Chart */}
       <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
-        <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-4">📈 Crescimento de Usuários</h3>
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-lg font-bold text-gray-800 dark:text-white">📈 Crescimento de Usuários</h3>
+          <button
+            onClick={() => navigate('/admin/analytics')}
+            className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors font-medium"
+          >
+            Analytics Avançado
+          </button>
+        </div>
         <div className="grid grid-cols-2 gap-4">
           <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 p-4 rounded-lg">
             <div className="text-2xl font-bold text-orange-600 dark:text-orange-400">{newUsersLast7Days}</div>

@@ -1,6 +1,7 @@
 import PDFDocument from 'pdfkit';
 import { createWriteStream } from 'fs';
 import path from 'path';
+import QRCode from 'qrcode';
 
 interface CertificateData {
   userName: string;
@@ -9,10 +10,11 @@ interface CertificateData {
   completionDate: Date;
   finalScore: number;
   modules: number[];
+  verificationCode?: string;
 }
 
 export async function generateCertificatePDF(data: CertificateData, outputPath: string): Promise<string> {
-  return new Promise((resolve, reject) => {
+  return new Promise(async (resolve, reject) => {
     try {
       const doc = new PDFDocument({ size: 'A4', layout: 'landscape' });
       const stream = createWriteStream(outputPath);
@@ -21,84 +23,112 @@ export async function generateCertificatePDF(data: CertificateData, outputPath: 
       const width = doc.page.width;
       const height = doc.page.height;
 
-      // Fundo branco
-      doc.rect(0, 0, width, height).fill('#ffffff');
+      // Margens padrão
+      const margin = 72;
+      const contentWidth = width - (margin * 2);
 
-      // Borda externa escura (#1c3b40) - 15px
-      doc.rect(15, 15, width - 30, height - 30).lineWidth(15).fillAndStroke('#1c3b40', '#1c3b40');
+      // Fundo com gradiente sutil (tipo SENAI)
+      doc.rect(0, 0, width, height).fill('#f8f9fa');
 
-      // Borda interna dourada (#d4af37) - 3px
-      doc.rect(30, 30, width - 60, height - 60).lineWidth(3).stroke('#d4af37');
+      // Borda externa escura (#1c3b40) - 8px
+      doc.rect(8, 8, width - 16, height - 16).lineWidth(8).fillAndStroke('#1c3b40', '#1c3b40');
 
-      // Título CERTIFICADO - dourado, 50px, letter-spacing: 2px
-      doc.fontSize(50).font('Helvetica-Bold').fill('#d4af37');
-      doc.text('CERTIFICADO', width / 2, 80, { align: 'center', characterSpacing: 2 });
+      // Borda interna dourada (#d4af37) - 2px
+      doc.rect(16, 16, width - 32, height - 32).lineWidth(2).stroke('#d4af37');
 
-      // Subtítulo - dourado, 24px, letter-spacing: 1px
-      doc.fontSize(24).font('Helvetica-Bold').fill('#d4af37');
-      doc.text('DE CONCLUSÃO DE MÓDULO', width / 2, 125, { align: 'center', characterSpacing: 1 });
+      // Borda interna secundária azul (#2563eb) - 1px
+      doc.rect(20, 20, width - 40, height - 40).lineWidth(1).stroke('#2563eb');
 
-      // Texto padrão - "Este certificado é conferido com orgulho a"
-      doc.fontSize(16).font('Helvetica').fill('#333333');
-      doc.text('Este certificado é conferido com orgulho a', width / 2, 170, { align: 'center' });
+      // Selo/Logo no canto superior direito
+      doc.fontSize(10).font('Helvetica-Bold').fill('#1c3b40');
+      doc.text('AUTOSKILL', width - 80, 35, { align: 'center' });
+      doc.fontSize(8).font('Helvetica').fill('#666666');
+      doc.text('Cursos Técnicos Automotivos', width - 80, 48, { align: 'center' });
 
-      // Linha para o nome (60% da largura)
-      const lineY = 195;
-      doc.moveTo(width * 0.2, lineY).lineTo(width * 0.8, lineY).lineWidth(1).stroke('#000000');
+      // Título CERTIFICADO DE CONCLUSÃO - dourado, 28px, centralizado
+      doc.fontSize(28).font('Helvetica-Bold').fill('#d4af37');
+      doc.text('CERTIFICADO DE CONCLUSÃO', width / 2, 50, { align: 'center' });
 
-      // Nome do aluno (altura 40px)
-      doc.fontSize(32).font('Helvetica-Bold').fill('#000000');
-      doc.text(data.userName.toUpperCase(), width / 2, lineY - 15, { align: 'center' });
+      // Texto "Este certificado é conferido com orgulho a" - 12px, centralizado
+      doc.fontSize(12).font('Helvetica').fill('#333333');
+      doc.text('Este certificado é conferido com orgulho a', width / 2, 90, { align: 'center' });
 
-      // Texto padrão - "por ter concluído com êxito o módulo de formação técnica"
-      doc.fontSize(16).font('Helvetica').fill('#333333');
-      doc.text('por ter concluído com êxito o módulo de formação técnica', width / 2, lineY + 40, { align: 'center' });
+      // Nome do aluno - 24px, bold, centralizado
+      doc.fontSize(24).font('Helvetica-Bold').fill('#000000');
+      doc.text(data.userName.toUpperCase(), width / 2, 130, { align: 'center' });
 
-      // Título do módulo - 22px, bold, margin-top 30px
-      const moduleTitleY = lineY + 80;
-      doc.fontSize(22).font('Helvetica-Bold').fill('#000000');
-      doc.text(`MÓDULO: ${data.certificationName.toUpperCase()}`, width / 2, moduleTitleY, { align: 'center' });
+      // Texto "por ter concluído com êxito o módulo de formação técnica" - 12px, centralizado
+      doc.fontSize(12).font('Helvetica').fill('#333333');
+      doc.text('por ter concluído com êxito o módulo de formação técnica', width / 2, 170, { align: 'center' });
 
-      // Descrição - 14px, padding 0 40px, line-height 1.5
-      const description = `A AutoSkill Cursos Técnicos Automotivos reconhece a dedicação e o desempenho exemplar na conclusão deste módulo, ` +
-        `que abordou tópicos essenciais como diagnóstico avançado, sistemas eletrônicos e manutenção automotiva. ` +
+      // Título do módulo - 18px, bold, centralizado
+      doc.fontSize(18).font('Helvetica-Bold').fill('#000000');
+      doc.text(`MÓDULO: ${data.certificationName.toUpperCase()}`, width / 2, 210, { align: 'center' });
+
+      // Descrição - 12px, centralizado, com quebras de linha
+      const description = `A AutoSkill Cursos Técnicos Automotivos reconhece a dedicação e o desempenho exemplar ` +
+        `na conclusão deste módulo, que abordou tópicos essenciais como diagnóstico avançado, ` +
+        `sistemas eletrônicos e manutenção automotiva.\n\n` +
         `Este certificado valida o conhecimento técnico adquirido com pontuação de ${data.finalScore}%.`;
       
-      doc.fontSize(14).font('Helvetica').fill('#555555');
-      doc.text(description, width * 0.15, moduleTitleY + 30, {
+      doc.fontSize(12).font('Helvetica').fill('#555555');
+      doc.text(description, width / 2, 250, {
         align: 'center',
-        width: width * 0.7,
-        lineGap: 7
+        width: contentWidth,
+        lineGap: 8
       });
 
-      // Rodapé - margin-top 60px, padding 0 50px
-      const footerY = moduleTitleY + 130;
+      // Espaçador
+      doc.moveDown(1);
+
+      // Localização e data - 10px, centralizado
       const formattedDate = data.completionDate.toLocaleDateString('pt-BR', {
         day: '2-digit',
         month: 'long',
         year: 'numeric'
       });
 
-      // Bloco DATA - width 30%
-      const dataX = width * 0.25;
-      doc.moveTo(dataX - 60, footerY).lineTo(dataX + 60, footerY).lineWidth(1).stroke('#000000');
-      doc.fontSize(12).font('Helvetica-Bold').fill('#333333');
-      doc.text('DATA', dataX, footerY + 15, { align: 'center' });
-      doc.fontSize(11).font('Helvetica').fill('#333333');
-      doc.text(formattedDate, dataX, footerY - 10, { align: 'center' });
+      doc.fontSize(10).font('Helvetica').fill('#333333');
+      doc.text(`Mirassol - SP, ${formattedDate}`, width / 2, 320, { align: 'center' });
+      
+      // Espaçador para assinatura
+      doc.moveDown(2);
 
-      // Bloco ASSINATURA - width 30%
-      const sigX = width * 0.75;
-      doc.moveTo(sigX - 60, footerY).lineTo(sigX + 60, footerY).lineWidth(1).stroke('#000000');
+      // Linha de assinatura
+      const sigY = 380;
+      doc.moveTo(width / 2 - 100, sigY).lineTo(width / 2 + 100, sigY).lineWidth(1).stroke('#000000');
       
-      // Nome da assinatura em itálico (simulando Brush Script MT, 28px)
-      doc.fontSize(28).font('Helvetica-Oblique').fill('#000000');
-      doc.text('Douglas de Campos', sigX, footerY - 15, { align: 'center' });
+      // Nome da assinatura - 10px, centralizado
+      doc.fontSize(10).font('Helvetica').fill('#333333');
+      doc.text('Douglas Campos', width / 2, sigY + 15, { align: 'center' });
       
-      doc.fontSize(12).font('Helvetica-Bold').fill('#333333');
-      doc.text('ASSINATURA', sigX, footerY + 15, { align: 'center' });
-      doc.fontSize(12).font('Helvetica-Bold').fill('#333333');
-      doc.text('DIRETOR TÉCNICO & CEO, AUTOSKILL', sigX, footerY + 30, { align: 'center' });
+      doc.fontSize(10).font('Helvetica').fill('#333333');
+      doc.text('Diretor Técnico & CEO - AutoSkill', width / 2, sigY + 30, { align: 'center' });
+
+      // QR Code para verificação
+      if (data.verificationCode) {
+        const qrSize = 60;
+        const qrX = width - margin - qrSize - 10;
+        const qrY = height - margin - qrSize - 10;
+
+        // Gerar QR Code
+        const qrDataUrl = await QRCode.toDataURL(`http://localhost:3001/api/certifications/verify/${data.verificationCode}`, {
+          width: qrSize,
+          margin: 1,
+          color: {
+            dark: '#000000',
+            light: '#ffffff'
+          }
+        });
+
+        // Converter base64 para buffer
+        const qrBuffer = Buffer.from(qrDataUrl.split(',')[1], 'base64');
+        doc.image(qrBuffer, qrX, qrY, { width: qrSize, height: qrSize });
+
+        // Texto "Escaneie para verificar"
+        doc.fontSize(7).font('Helvetica').fill('#666666');
+        doc.text('Escaneie para verificar', qrX + qrSize / 2, qrY + qrSize + 8, { align: 'center' });
+      }
 
       doc.end();
 

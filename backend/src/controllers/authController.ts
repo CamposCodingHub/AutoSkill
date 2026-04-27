@@ -100,12 +100,14 @@ export const login = async (req: any, res: Response) => {
 
     const user = await prisma.user.findUnique({ where: { email } });
     if (!user) {
-      return res.status(401).json({ error: 'Credenciais inválidas' });
+      logger.warn('Tentativa de login com email não cadastrado', { email });
+      return res.status(401).json({ error: 'Email não cadastrado' });
     }
 
     const validPassword = await bcrypt.compare(password, user.password);
     if (!validPassword) {
-      return res.status(401).json({ error: 'Credenciais inválidas' });
+      logger.warn('Tentativa de login com senha incorreta', { email });
+      return res.status(401).json({ error: 'Senha incorreta' });
     }
 
     const token = generateToken({ userId: user.id, email: user.email });
@@ -144,7 +146,7 @@ export const login = async (req: any, res: Response) => {
       logger.warn('Dados de entrada inválidos no login', { error });
       return res.status(400).json({ error: 'Dados de entrada inválidos' });
     }
-    logger.error('Erro ao fazer login', { error });
+    logger.error('Erro ao fazer login', { error: error instanceof Error ? error.message : error, stack: error instanceof Error ? error.stack : undefined });
     res.status(500).json({ error: 'Erro ao fazer login' });
   }
 };
@@ -289,6 +291,11 @@ export const getPublicProfile = async (req: any, res: Response) => {
 };
 
 export const resetAdmin = async (req: Request, res: Response) => {
+  // Desabilitar este endpoint em produção por segurança
+  if (process.env.NODE_ENV !== 'development') {
+    return res.status(404).json({ error: 'Not Found' });
+  }
+
   try {
     const { email, password, name } = req.body;
 

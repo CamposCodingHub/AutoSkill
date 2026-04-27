@@ -2,6 +2,15 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { progressAPI, gamificationAPI } from '../services/api'
 
+// Função de debounce
+const debounce = (fn: Function, delay: number) => {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return (...args: any[]) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), delay);
+  };
+};
+
 interface ProgressState {
     completedLessons: Record<string, boolean> // chave: `${moduleId}-${lessonId}`
     quizAnswers: Record<string, number> // chave: `${moduleId}-${lessonId}-quiz`, valor: índice da resposta correta
@@ -53,11 +62,20 @@ export const useProgressStore = create<ProgressState>()(
                     completedLessons: { ...state.completedLessons, [key]: true }
                 }))
                 
-                // Sincronizar com API
+                // Adicionar à fila de sincronização offline-first
+                const pendingKey = 'autoskill-pending-sync'
+                const pendingOps = JSON.parse(localStorage.getItem(pendingKey) || '[]')
+                pendingOps.push({ type: 'completeLesson', moduleId, lessonId, timestamp: Date.now() })
+                localStorage.setItem(pendingKey, JSON.stringify(pendingOps))
+                
+                // Tentar sincronizar imediatamente
                 try {
                     await progressAPI.updateLessonProgress(moduleId, lessonId, true)
+                    // Remover da fila se sincronizou
+                    const updatedOps = pendingOps.filter((op: any) => !(op.type === 'completeLesson' && op.moduleId === moduleId && op.lessonId === lessonId))
+                    localStorage.setItem(pendingKey, JSON.stringify(updatedOps))
                 } catch (error) {
-                    console.error('Erro ao sincronizar com API:', error)
+                    console.error('Erro ao sincronizar com API, operação na fila:', error)
                 }
             },
 
@@ -223,17 +241,21 @@ export const useProgressStore = create<ProgressState>()(
                     gamificationProfile: { ...state.gamificationProfile, ...profile }
                 }))
 
-                // Sincronizar com API (converter Date para string)
-                try {
-                    const apiProfile = {
-                        ...profile,
-                        lastStudyDate: profile.lastStudyDate?.toISOString(),
-                        studyHistory: profile.studyHistory?.map(d => d.toISOString()),
+                // Sincronizar com API com debounce (converter Date para string)
+                const debouncedSync = debounce(async () => {
+                    try {
+                        const apiProfile = {
+                            ...profile,
+                            lastStudyDate: profile.lastStudyDate?.toISOString(),
+                            studyHistory: profile.studyHistory?.map(d => d.toISOString()),
+                        }
+                        await gamificationAPI.updateProfile(apiProfile)
+                    } catch (error) {
+                        console.error('Erro ao sincronizar gamificação com API:', error)
                     }
-                    await gamificationAPI.updateProfile(apiProfile)
-                } catch (error) {
-                    console.error('Erro ao sincronizar gamificação com API:', error)
-                }
+                }, 2000) // 2 segundos de debounce
+
+                debouncedSync()
             },
 
             getGamificationProfile: () => {
@@ -283,6 +305,22 @@ export const useProgressStore = create<ProgressState>()(
         }),
         {
             name: 'autoskill-progress', // chave no localStorage
+            version: 1, // versão para migração
+            // Limpar dados antigos após 7 dias de inatividade
+            onRehydrateStorage: () => (state) => {
+                if (!state) return
+                const lastAccess = localStorage.getItem('autoskill-last-access')
+                const now = Date.now()
+                const sevenDays = 7 * 24 * 60 * 60 * 1000
+                
+                if (lastAccess && now - parseInt(lastAccess) > sevenDays) {
+                    // Limpar dados expirados
+                    localStorage.removeItem('autoskill-progress')
+                    localStorage.removeItem('autoskill-last-access')
+                    return
+                }
+                localStorage.setItem('autoskill-last-access', now.toString())
+            }
         }
     )
 )

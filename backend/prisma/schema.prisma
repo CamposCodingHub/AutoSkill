@@ -30,6 +30,9 @@ model User {
   portfolios    Portfolio[]
   mentorMentorships Mentorship[] @relation("MentorMentorships")
   menteeMentorships Mentorship[] @relation("MenteeMentorships")
+
+  @@index([role])
+  @@index([createdAt])
 }
 
 model Progress {
@@ -62,6 +65,8 @@ model Gamification {
   updatedAt               DateTime @updatedAt
 
   @@unique([userId])
+  @@index([totalXP])
+  @@index([currentLevel])
 }
 
 model Session {
@@ -99,6 +104,11 @@ model AuditLog {
   ipAddress   String?
   userAgent   String?
   createdAt   DateTime @default(now())
+
+  @@index([userId])
+  @@index([action])
+  @@index([entity])
+  @@index([createdAt])
 }
 
 model Certification {
@@ -127,12 +137,17 @@ model CertificationProgress {
   finalExamScore  Int?
   completedModules Json?
   userName        String?
+  certificateUrl   String?  // URL do PDF do certificado
+  verificationCode String? @unique // Código único para validação do certificado
   user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   certification   Certification @relation(fields: [certificationId], references: [id], onDelete: Cascade)
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
 
   @@unique([userId, certificationId])
+  @@index([status])
+  @@index([completedAt])
+  @@index([verificationCode])
 }
 
 // Sistema de Portfólio

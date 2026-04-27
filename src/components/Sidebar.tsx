@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import modules from '../data/modules.json'
 import { useThemeStore } from '../stores/useStore'
+import NotificationBell from './NotificationBell'
 
 interface SidebarProps {
     isOpen: boolean
@@ -103,6 +104,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                         <p className="text-xs text-gray-400">Eletricidade Automotiva</p>
                     </div>
                     <div className="flex items-center gap-2">
+                        <NotificationBell />
                         <button
                             onClick={toggleTheme}
                             className="text-gray-300 hover:text-orange-400 transition-all hover:scale-110 text-lg bg-gray-800/50 p-2 rounded-lg"
@@ -208,94 +210,122 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                         <button
                             onClick={() => toggleCategory('basico')}
                             className="w-full text-xs uppercase text-gray-500 mt-4 mb-2 px-3 font-bold flex items-center justify-between gap-2 hover:text-gray-300 transition-colors"
+                            aria-expanded={expandedCategories.basico}
+                            aria-controls="basico-modules"
                         >
                             <div className="flex items-center gap-2">
-                                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                <span className="w-2 h-2 bg-blue-500 rounded-full" aria-hidden="true"></span>
                                 Básico
                             </div>
-                            <span className={`transform transition-transform ${expandedCategories.basico ? 'rotate-90' : ''}`}>▶</span>
+                            <span className={`transform transition-transform ${expandedCategories.basico ? 'rotate-90' : ''}`} aria-hidden="true">▶</span>
                         </button>
-                        {expandedCategories.basico && modules.filter(mod => mod.id >= 1 && mod.id <= 6).map((mod) => (
-                            <NavLink
-                                key={mod.id}
-                                to={`/modulo/${mod.id}`}
-                                className={({ isActive }) =>
-                                    `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
-                                }
-                            >
-                                <span className="text-sm">{mod.icon}</span>
-                                <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
-                            </NavLink>
-                        ))}
+                        {expandedCategories.basico && (
+                            <div id="basico-modules" role="group" aria-label="Módulos básicos">
+                                {modules.filter(mod => mod.id >= 1 && mod.id <= 6).map((mod) => (
+                                    <NavLink
+                                        key={mod.id}
+                                        to={`/modulo/${mod.id}`}
+                                        className={({ isActive }) =>
+                                            `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
+                                        }
+                                        aria-label={`Módulo ${mod.id}: ${mod.title}`}
+                                    >
+                                        <span className="text-sm" aria-hidden="true">{mod.icon}</span>
+                                        <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
+                                    </NavLink>
+                                ))}
+                            </div>
+                        )}
                         
                         <button
                             onClick={() => toggleCategory('intermediario')}
                             className="w-full text-xs uppercase text-gray-500 mt-4 mb-2 px-3 font-bold flex items-center justify-between gap-2 hover:text-gray-300 transition-colors"
+                            aria-expanded={expandedCategories.intermediario}
+                            aria-controls="intermediario-modules"
                         >
                             <div className="flex items-center gap-2">
-                                <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                                <span className="w-2 h-2 bg-green-500 rounded-full" aria-hidden="true"></span>
                                 Intermediário
                             </div>
-                            <span className={`transform transition-transform ${expandedCategories.intermediario ? 'rotate-90' : ''}`}>▶</span>
+                            <span className={`transform transition-transform ${expandedCategories.intermediario ? 'rotate-90' : ''}`} aria-hidden="true">▶</span>
                         </button>
-                        {expandedCategories.intermediario && modules.filter(mod => mod.id >= 7 && mod.id <= 19).map((mod) => (
-                            <NavLink
-                                key={mod.id}
-                                to={`/modulo/${mod.id}`}
-                                className={({ isActive }) =>
-                                    `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
-                                }
-                            >
-                                <span className="text-sm">{mod.icon}</span>
-                                <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
-                            </NavLink>
-                        ))}
+                        {expandedCategories.intermediario && (
+                            <div id="intermediario-modules" role="group" aria-label="Módulos intermediários">
+                                {modules.filter((mod: any) => mod.id >= 7 && mod.id <= 19).map((mod: any) => (
+                                    <NavLink
+                                        key={mod.id}
+                                        to={`/modulo/${mod.id}`}
+                                        className={({ isActive }) =>
+                                            `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
+                                        }
+                                        aria-label={`Módulo ${mod.id}: ${mod.title}`}
+                                    >
+                                        <span className="text-sm" aria-hidden="true">{mod.icon}</span>
+                                        <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
+                                    </NavLink>
+                                ))}
+                            </div>
+                        )}
                         
                         <button
                             onClick={() => toggleCategory('avancado')}
                             className="w-full text-xs uppercase text-gray-500 mt-4 mb-2 px-3 font-bold flex items-center justify-between gap-2 hover:text-gray-300 transition-colors"
+                            aria-expanded={expandedCategories.avancado}
+                            aria-controls="avancado-modules"
                         >
                             <div className="flex items-center gap-2">
-                                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                                <span className="w-2 h-2 bg-purple-500 rounded-full" aria-hidden="true"></span>
                                 Avançado
                             </div>
-                            <span className={`transform transition-transform ${expandedCategories.avancado ? 'rotate-90' : ''}`}>▶</span>
+                            <span className={`transform transition-transform ${expandedCategories.avancado ? 'rotate-90' : ''}`} aria-hidden="true">▶</span>
                         </button>
-                        {expandedCategories.avancado && modules.filter(mod => mod.id >= 20 && mod.id <= 24).map((mod) => (
-                            <NavLink
-                                key={mod.id}
-                                to={`/modulo/${mod.id}`}
-                                className={({ isActive }) =>
-                                    `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
-                                }
-                            >
-                                <span className="text-sm">{mod.icon}</span>
-                                <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
-                            </NavLink>
-                        ))}
+                        {expandedCategories.avancado && (
+                            <div id="avancado-modules" role="group" aria-label="Módulos avançados">
+                                {modules.filter((mod: any) => mod.id >= 20 && mod.id <= 24).map((mod: any) => (
+                                    <NavLink
+                                        key={mod.id}
+                                        to={`/modulo/${mod.id}`}
+                                        className={({ isActive }) =>
+                                            `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
+                                        }
+                                        aria-label={`Módulo ${mod.id}: ${mod.title}`}
+                                    >
+                                        <span className="text-sm" aria-hidden="true">{mod.icon}</span>
+                                        <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
+                                    </NavLink>
+                                ))}
+                            </div>
+                        )}
                         
                         <button
                             onClick={() => toggleCategory('especialista')}
                             className="w-full text-xs uppercase text-gray-500 mt-4 mb-2 px-3 font-bold flex items-center justify-between gap-2 hover:text-gray-300 transition-colors"
+                            aria-expanded={expandedCategories.especialista}
+                            aria-controls="especialista-modules"
                         >
                             <div className="flex items-center gap-2">
-                                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                                <span className="w-2 h-2 bg-orange-500 rounded-full" aria-hidden="true"></span>
                                 Especialista
                             </div>
-                            <span className={`transform transition-transform ${expandedCategories.especialista ? 'rotate-90' : ''}`}>▶</span>
+                            <span className={`transform transition-transform ${expandedCategories.especialista ? 'rotate-90' : ''}`} aria-hidden="true">▶</span>
                         </button>
-                        {expandedCategories.especialista && modules.filter(mod => mod.id >= 25 && mod.id <= 29).map((mod) => (
-                            <NavLink
-                                key={mod.id}
-                                to={`/modulo/${mod.id}`}
-                                className={({ isActive }) =>
-                                    `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-orange-600 to-orange-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
-                                }
-                            >
-                                <span className="text-sm">{mod.icon}</span>
-                                <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
-                            </NavLink>
-                        ))}
+                        {expandedCategories.especialista && (
+                            <div id="especialista-modules" role="group" aria-label="Módulos especialista">
+                                {modules.filter((mod: any) => mod.id >= 25 && mod.id <= 29).map((mod: any) => (
+                                    <NavLink
+                                        key={mod.id}
+                                        to={`/modulo/${mod.id}`}
+                                        className={({ isActive }) =>
+                                            `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-orange-600 to-orange-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50'}`
+                                        }
+                                        aria-label={`Módulo ${mod.id}: ${mod.title}`}
+                                    >
+                                        <span className="text-sm" aria-hidden="true">{mod.icon}</span>
+                                        <span>{mod.id.toString().padStart(2, '0')}. {mod.title.length > 35 ? mod.title.substring(0, 35) + '...' : mod.title}</span>
+                                    </NavLink>
+                                ))}
+                            </div>
+                        )}
                     </>
                 )}
             </nav>

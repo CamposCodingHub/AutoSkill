@@ -11,6 +11,7 @@ import notificationRoutes from './routes/notifications';
 import certificationRoutes from './routes/certifications';
 import portfolioRoutes from './routes/portfolio';
 import mentorshipRoutes from './routes/mentorship';
+import analyticsRoutes from './routes/analytics';
 import logger from './utils/logger';
 import prisma from './utils/prisma';
 import { sanitizeBody } from './utils/sanitizer';
@@ -30,7 +31,7 @@ app.use(cors({
 }));
 app.use(compression()); // Compressão de resposta gzip
 app.use(express.json({ limit: '1mb' })); // Reduzido de 10mb para 1mb por segurança
-// app.use(sanitizeBody); // Sanitização de dados para prevenir XSS (desabilitado temporariamente)
+app.use(sanitizeBody); // Sanitização de dados para prevenir XSS
 app.use('/assets', express.static('src/assets'));
 app.use('/certificates', express.static('certificates'));
 
@@ -44,6 +45,7 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/certifications', certificationRoutes);
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/mentorship', mentorshipRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 // Health check básico
 app.get('/health', (req, res) => {
@@ -88,7 +90,16 @@ app.get('/health/detailed', async (req, res) => {
 
 // Error handling middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  logger.error('Unhandled error', { error: err, path: req.path, method: req.method });
+  logger.error('Unhandled error', {
+    error: err instanceof Error ? {
+      message: err.message,
+      name: err.name,
+      stack: err.stack
+    } : err,
+    path: req.path,
+    method: req.method,
+    body: req.body
+  });
   res.status(500).json({ error: 'Internal Server Error' });
 });
 

@@ -333,6 +333,9 @@ export const issueCertificateManually = async (req: AuthRequest, res: Response) 
       return res.status(404).json({ error: 'Certificação não encontrada' });
     }
 
+    // Gerar código de verificação único
+    const verificationCode = `ASK-${Date.now()}-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+
     // Criar ou atualizar progresso de certificação
     const progress = await prisma.certificationProgress.upsert({
       where: {
@@ -345,6 +348,7 @@ export const issueCertificateManually = async (req: AuthRequest, res: Response) 
         status: 'completed',
         finalExamScore: finalExamScore || 100,
         completedAt: new Date(),
+        verificationCode,
       },
       create: {
         userId,
@@ -353,10 +357,11 @@ export const issueCertificateManually = async (req: AuthRequest, res: Response) 
         finalExamScore: finalExamScore || 100,
         completedAt: new Date(),
         completedModules: [],
+        verificationCode,
       },
     });
 
-    // Gerar PDF do certificado
+    // Gerar PDF do certificado (opcional - não falhar se der erro)
     try {
       const certificatesDir = path.join(__dirname, '../../certificates');
       if (!fs.existsSync(certificatesDir)) {
@@ -366,6 +371,7 @@ export const issueCertificateManually = async (req: AuthRequest, res: Response) 
       const fileName = `certificate_${userId}_${certificationId}_${Date.now()}.pdf`;
       const filePath = path.join(certificatesDir, fileName);
 
+      console.log('Gerando PDF em:', filePath);
       await generateCertificatePDF({
         userName: user.name,
         certificationName: certification.name,
@@ -373,7 +379,9 @@ export const issueCertificateManually = async (req: AuthRequest, res: Response) 
         completionDate: new Date(),
         finalScore: finalExamScore || 100,
         modules: certification.modules || [],
+        verificationCode,
       }, filePath);
+      console.log('PDF gerado com sucesso');
 
       // Atualizar progresso com URL do certificado
       const updatedProgress = await prisma.certificationProgress.update({
@@ -388,15 +396,17 @@ export const issueCertificateManually = async (req: AuthRequest, res: Response) 
         },
       });
 
-      res.json(updatedProgress);
+      console.log('Certificado emitido com sucesso. Código de verificação:', verificationCode);
+      res.json({ ...updatedProgress, verificationCode });
     } catch (pdfError) {
-      console.error('Erro ao gerar PDF:', pdfError);
+      console.error('Erro ao gerar PDF (não crítico):', pdfError);
       // Retornar progresso mesmo sem PDF
-      res.json(progress);
+      console.log('Retornando progresso sem PDF');
+      res.json({ ...progress, verificationCode });
     }
   } catch (error) {
     console.error('Erro ao emitir certificado manualmente:', error);
-    res.status(500).json({ error: 'Erro ao emitir certificado manualmente' });
+    res.status(500).json({ error: 'Erro ao emitir certificado manualmente', details: error instanceof Error ? error.message : 'Unknown error' });
   }
 };
 
@@ -514,5 +524,56 @@ export const deleteCertificationProgress = async (req: AuthRequest, res: Respons
   } catch (error) {
     console.error('Erro ao deletar progresso de certificação:', error);
     res.status(500).json({ error: 'Erro ao deletar progresso de certificação' });
+  }
+};
+
+// Verificar certificado pelo código de verificação
+export const verifyCertificate = async (req: AuthRequest, res: Response) => {
+  try {
+    const { code } = req.params;
+
+    const progress = await prisma.certificationProgress.findUnique({
+      where: { verificationCode: code },
+      include: {
+        user: {
+          select: {
+            id: true,
+            name: true,
+            email: true,
+          },
+        },
+        certification: true,
+      },
+    });
+
+    if (!progress) {
+      return res.status(404).json({ 
+        valid: false,
+        error: 'Certificado não encontrado ou código inválido' 
+      });
+    }
+
+    if (progress.status !== 'completed') {
+      return res.status(400).json({ 
+        valid: false,
+        error: 'Certificado não está completo' 
+      });
+    }
+
+    res.json({
+      valid: true,
+      certificate: {
+        userName: progress.user.name,
+        userEmail: progress.user.email,
+        certificationName: progress.certification.name,
+        certificationLevel: progress.certification.level,
+        finalExamScore: progress.finalExamScore,
+        completedAt: progress.completedAt,
+        verificationCode: progress.verificationCode,
+      },
+    });
+  } catch (error) {
+    console.error('Erro ao verificar certificado:', error);
+    res.status(500).json({ error: 'Erro ao verificar certificado' });
   }
 };

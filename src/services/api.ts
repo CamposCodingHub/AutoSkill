@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 
 export interface User {
   id: string;
@@ -279,6 +279,25 @@ export const notificationsAPI = {
       headers: getAuthHeaders(),
     });
     if (!response.ok) throw new Error('Erro ao verificar configuração');
+    return response.json();
+  },
+};
+
+// Analytics API
+export const analyticsAPI = {
+  getAdvancedAnalytics: async () => {
+    const response = await fetch(`${API_BASE_URL}/analytics`, {
+      headers: getAuthHeaders(),
+    });
+    if (!response.ok) throw new Error('Erro ao buscar analytics avançado');
+    return response.json();
+  },
+
+  getUserAnalytics: async (userId: string) => {
+    const response = await fetch(`${API_BASE_URL}/analytics/user/${userId}`, {
+      headers: getAuthHeaders(),
+    });
+    if (!response.ok) throw new Error('Erro ao buscar analytics do usuário');
     return response.json();
   },
 };

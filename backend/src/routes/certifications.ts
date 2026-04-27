@@ -10,7 +10,8 @@ import {
   deleteCertification,
   issueCertificateManually,
   updateCertificationProgress,
-  deleteCertificationProgress
+  deleteCertificationProgress,
+  verifyCertificate
 } from '../controllers/certificationController';
 import { authMiddleware } from '../middleware/auth';
 import { adminMiddleware } from '../middleware/admin';
@@ -22,6 +23,9 @@ router.get('/', authMiddleware, getCertifications);
 router.get('/progress', authMiddleware, getUserCertificationProgress);
 router.get('/:certificationId/eligibility', authMiddleware, checkEligibility);
 router.post('/:certificationId/issue', authMiddleware, issueCertificate);
+
+// Rota pública de verificação (não requer autenticação)
+router.get('/verify/:code', verifyCertificate);
 
 // Rotas de admin
 router.get('/admin/all', authMiddleware, adminMiddleware, getAllCertifications);
