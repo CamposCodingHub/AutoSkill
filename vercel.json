@@ -1,33 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+  "experimentalServices": {
+    "frontend": {
+      "routePrefix": "/",
+      "framework": "vite"
     },
-    {
-      "src": "api/[[...path]].ts",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 60
-      }
+    "backend": {
+      "entrypoint": "backend",
+      "routePrefix": "/api"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/health(.*)",
-      "dest": "/api/health$1"
-    },
-    {
-      "src": "/((?!api/|assets/).*)",
-      "dest": "/index.html"
-    }
-  ]
+  }
 }
