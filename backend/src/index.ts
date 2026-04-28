@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import compression from 'compression';
+import path from 'path';
 import authRoutes from './routes/auth';
 import progressRoutes from './routes/progress';
 import gamificationRoutes from './routes/gamification';
@@ -34,6 +35,14 @@ app.use(express.json({ limit: '1mb' })); // Reduzido de 10mb para 1mb por segura
 app.use(sanitizeBody); // Sanitização de dados para prevenir XSS
 app.use('/assets', express.static('src/assets'));
 app.use('/certificates', express.static('certificates'));
+
+// Serve frontend estático em produção (Render)
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../dist'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../dist/index.html'));
+  });
+}
 
 // Routes
 app.use('/api/auth', authRoutes);
