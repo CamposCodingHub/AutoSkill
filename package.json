@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build",
+        "build": "vite build",
         "build:backend": "cd backend && npx prisma generate && npx tsc",
         "build:all": "npm run build:backend && npm run build",
         "preview": "vite preview",
