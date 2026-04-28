@@ -2,7 +2,7 @@ services:
   - type: web
     name: autoskill
     env: node
-    buildCommand: cd backend && npm run build:all
+    buildCommand: cd backend && npm run build
     startCommand: cd backend && npm start
     envVars:
       - key: NODE_ENV
