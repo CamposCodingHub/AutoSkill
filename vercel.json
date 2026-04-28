@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "_comment": "Force Vercel to update - deployment fix",
   "buildCommand": "npm run build:all",
   "outputDirectory": "dist",
   "builds": [
