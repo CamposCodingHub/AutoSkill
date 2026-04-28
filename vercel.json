@@ -1,36 +1,14 @@
 {
-  "version": 2,
-  "_comment": "Force Vercel to update - deployment fix",
-  "buildCommand": "npm run build:all",
-  "outputDirectory": "dist",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+  "experimentalServices": {
+    "frontend": {
+      "routePrefix": "/",
+      "framework": "vite",
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist"
     },
-    {
-      "src": "api/[[...path]].ts",
-      "use": "@vercel/node",
-      "config": {
-        "maxDuration": 60
-      }
+    "backend": {
+      "entrypoint": "backend",
+      "routePrefix": "/api"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/health(.*)",
-      "dest": "/api/health$1"
-    },
-    {
-      "src": "/((?!api/|assets/).*)",
-      "dest": "/index.html"
-    }
-  ]
+  }
 }
