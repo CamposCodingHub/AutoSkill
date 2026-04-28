@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
+
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
 import { useProgressStore } from '../stores/useProgressStore';
 import modules from '../data/modules.json';
 
@@ -49,7 +52,7 @@ const CertificationsPage: React.FC = () => {
 
   const loadCertifications = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/certifications', {
+      const response = await fetch(`${API_URL}/certifications`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -65,7 +68,7 @@ const CertificationsPage: React.FC = () => {
 
   const loadProgress = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/certifications/progress', {
+      const response = await fetch(`${API_URL}/certifications/progress`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -83,7 +86,7 @@ const CertificationsPage: React.FC = () => {
 
   const checkEligibility = async (certId: string) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/certifications/${certId}/eligibility`, {
+      const response = await fetch(`${API_URL}/certifications/${certId}/eligibility`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -101,7 +104,7 @@ const CertificationsPage: React.FC = () => {
     if (!selectedCert) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/api/certifications/${selectedCert.id}/issue`, {
+      const response = await fetch(`${API_URL}/certifications/${selectedCert.id}/issue`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -331,7 +334,7 @@ const CertificationsPage: React.FC = () => {
                   </div>
                   {certProgress?.status === 'completed' ? (
                     <button
-                      onClick={() => window.open(`http://localhost:3001${certProgress.certificateUrl}`, '_blank')}
+                      onClick={() => window.open(`${API_BASE}${certProgress.certificateUrl}`, '_blank')}
                       className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
                     >
                       📄 Baixar Certificado
@@ -389,7 +392,7 @@ const CertificationsPage: React.FC = () => {
                     <div>• Média de quizzes: {prog.averageQuizScore?.toFixed(1)}%</div>
                   </div>
                   <button
-                    onClick={() => window.open(`http://localhost:3001${prog.certificateUrl}`, '_blank')}
+                    onClick={() => window.open(`${API_BASE}${prog.certificateUrl}`, '_blank')}
                     className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
                   >
                     📄 Baixar Certificado

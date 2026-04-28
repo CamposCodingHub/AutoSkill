@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+
 interface Certification {
   id: string;
   name: string;
@@ -42,7 +44,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
   const loadCertifications = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/certifications/admin/all', {
+      const response = await fetch(`${API_URL}/certifications/admin/all`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -60,7 +62,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
 
   const loadUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/admin/users', {
+      const response = await fetch(`${API_URL}/admin/users`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -86,8 +88,8 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
   const handleSaveCert = async (cert: Certification) => {
     try {
       const url = selectedCert 
-        ? `http://localhost:3001/api/certifications/${cert.id}`
-        : 'http://localhost:3001/api/certifications';
+        ? `${API_URL}/certifications/${cert.id}`
+        : `${API_URL}/certifications`;
       
       const method = selectedCert ? 'PUT' : 'POST';
       
@@ -117,7 +119,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
   const handleDeleteCert = async (certId: string) => {
     if (confirm('Tem certeza que deseja deletar esta certificação?')) {
       try {
-        const response = await fetch(`http://localhost:3001/api/certifications/${certId}`, {
+        const response = await fetch(`${API_URL}/certifications/${certId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -141,7 +143,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
     const cert = certifications.find(c => c.id === certId);
     if (cert) {
       try {
-        const response = await fetch(`http://localhost:3001/api/certifications/${certId}`, {
+        const response = await fetch(`${API_URL}/certifications/${certId}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -167,7 +169,7 @@ const CertificationsTab: React.FC<CertificationsTabProps> = ({ onNavigateToIssue
 
     try {
       setIsIssuing(true);
-      const response = await fetch('http://localhost:3001/api/certifications/admin/issue-manual', {
+      const response = await fetch(`${API_URL}/certifications/admin/issue-manual`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

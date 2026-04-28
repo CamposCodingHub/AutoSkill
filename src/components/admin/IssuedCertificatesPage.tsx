@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:3001';
+
 interface Certification {
   id: string;
   name: string;
@@ -37,7 +40,7 @@ const IssuedCertificatesPage: React.FC = () => {
   const loadCertifications = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/certifications/admin/all', {
+      const response = await fetch(`${API_URL}/certifications/admin/all`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -79,7 +82,7 @@ const IssuedCertificatesPage: React.FC = () => {
   };
 
   const handleCopyLink = (url: string) => {
-    const fullUrl = `http://localhost:3001${url}`;
+    const fullUrl = `${API_BASE}${url}`;
     navigator.clipboard.writeText(fullUrl);
     showMessage('success', 'Link copiado para a área de transferência!');
   };
@@ -89,7 +92,7 @@ const IssuedCertificatesPage: React.FC = () => {
       navigator.share({
         title: `Certificado: ${certName}`,
         text: `${userName} obteve o certificado de ${certName} com pontuação de ${score}%`,
-        url: `http://localhost:3001${url}`,
+        url: `${API_BASE}${url}`,
       });
     } else {
       showMessage('error', 'Compartilhamento não suportado neste navegador');
@@ -110,7 +113,7 @@ const IssuedCertificatesPage: React.FC = () => {
     if (!editingProgress) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/api/certifications/progress/${editingProgress.id}`, {
+      const response = await fetch(`${API_URL}/certifications/progress/${editingProgress.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -141,7 +144,7 @@ const IssuedCertificatesPage: React.FC = () => {
     if (!progress) return;
 
     try {
-      const response = await fetch(`http://localhost:3001/api/certifications/progress/${progressId}`, {
+      const response = await fetch(`${API_URL}/certifications/progress/${progressId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -263,7 +266,7 @@ const IssuedCertificatesPage: React.FC = () => {
                           {progress.certificateUrl ? (
                             <>
                               <a
-                                href={`http://localhost:3001${progress.certificateUrl}`}
+                                href={`${API_BASE}${progress.certificateUrl}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm transition-colors flex items-center gap-1"

@@ -1,0 +1,24 @@
+{
+  "buildCommand": "npm run build:all",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/[[...path]].ts": {
+      "runtime": "@vercel/node",
+      "maxDuration": 60
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/health(.*)",
+      "dest": "/api/health$1"
+    },
+    {
+      "src": "/((?!api/|assets/).*)",
+      "dest": "/index.html"
+    }
+  ]
+}
