@@ -136,6 +136,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </div>
                 <div className="mb-3">
                     <NavLink
+                        to="/guia-iniciante"
+                        className={({ isActive }) =>
+                            `flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-sky-600 to-sky-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50 hover:text-sky-300'}`
+                        }
+                    >
+                        <span className="text-sm">🧭</span>
+                        <span>Guia do Iniciante</span>
+                    </NavLink>
+                </div>
+                <div className="mb-3">
+                    <NavLink
                         to="/certificacoes"
                         className={({ isActive }) =>
                             `flex items-center gap-2 px-3 py-2.5 rounded-lg text-xs font-medium transition-all hover:scale-[1.02] ${isActive ? 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-lg' : 'text-gray-300 hover:bg-gray-700/50 hover:text-green-400'}`

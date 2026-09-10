@@ -1,0 +1,104 @@
+{
+    "title": "Por onde começar e erros clássicos do iniciante",
+    "content": [
+        {
+            "type": "text",
+            "value": "Objetivo desta aula: tirar o iniciante do labirinto. Em elétrica automotiva, quem se perde no começo quase sempre comete os mesmos erros: quer pular para CAN/HV sem base, mede ohms com o circuito ligado, troca peça pelo sintoma e usa ‘qualquer massa’ enferrujada como referência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Ordem que funciona (não negocie)",
+            "text": "1) V, I, R e voltage drop → 2) Multímetro seguro → 3) Caminho Bateria→fusível→relé→carga→massa → 4) Partida/carga/parasita → 5) Só então redes, ECU e HV."
+        },
+        {
+            "type": "table",
+            "headers": ["Armadilha", "O que acontece", "O que fazer"],
+            "rows": [
+                ["Ohms com circuito energizado", "DMM queima / leitura mentirosa", "Desenergize e isole antes de ohms"],
+                ["Continuidade ‘ok’ e falha sob carga", "Fio partido parcial / corrosão", "Meça voltage drop COM carga ligada"],
+                ["Trocar arranque no primeiro click", "Retrabalho e cliente bravo", "Tensão + VD nos cabos + corrente"],
+                ["Desconectar bateria no teste de fuga", "Módulo dorme e a fuga ‘some’", "mV nos fusíveis ou reespere o sleep"],
+                ["Apagar DTC sem freeze frame", "Perde evidência", "Anote/fotografe antes de limpar"]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Regra de ouro do multímetro",
+            "text": "Ao vivo = volts (e voltage drop). Ohms/continuidade = circuito morto. Corrente alta = alicate DC ou procedimento seguro — não improvise a escala 10A no DMM em cabo de partida."
+        },
+        {
+            "type": "text",
+            "value": "Defeitos que mais aparecem na oficina e que você vai treinar cedo: bateria/no-crank, partida lenta, sem carga, fuga de corrente, farol fraco (massa/conector), fusível que queima de novo, relé que clicka sem passar 30–87, falha intermitente e scanner sem comunicação."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Guia interativo no app",
+            "text": "Abra /guia-iniciante para ver defeitos comuns com primeiros testes, Semana 1 completa e quiz. Use junto com esta aula."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Reproduza o sintoma e faça inspeção visual",
+                "Meça bateria em repouso e sob demanda",
+                "Abra o diagrama e marque power/gnd/sinal",
+                "Meça no conector do componente",
+                "Faça voltage drop nos trechos de corrente",
+                "Só então substitua e valide"
+            ]
+        },
+        {
+            "type": "simulator",
+            "name": "CircuitFaultSimulator",
+            "config": {
+                "title": "Treino: aberto, curto e alta resistência"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "MultimeterPracticeSimulator",
+            "config": {
+                "title": "Multímetro: escolha a medição certa"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a prática correta para medir resistência de um componente no veículo?",
+            "options": [
+                "Medir com ignição ON para ver o valor ‘real’",
+                "Desenergizar e isolar o componente antes de usar ohms",
+                "Usar a escala de 10 A em paralelo na bateria",
+                "Sempre medir com a ponta vermelha na massa"
+            ],
+            "correct": 1,
+            "explanation": "Ohms exige circuito sem tensão. Ao vivo use volts/voltage drop."
+        },
+        {
+            "type": "quiz",
+            "question": "Farol fraco só do lado esquerdo. Qual raciocínio é mais produtivo?",
+            "options": [
+                "Trocar o alternador imediatamente",
+                "Investigar queda de tensão/massa/conector daquele circuito",
+                "Ignorar porque ‘LED é assim’",
+                "Apagar DTCs do airbag"
+            ],
+            "correct": 1,
+            "explanation": "Sintoma unilateral sob carga aponta o caminho daquele lado — não o sistema de carga inteiro."
+        },
+        {
+            "type": "quiz",
+            "question": "Por que o teste de voltage drop precisa ser feito com a carga ligada?",
+            "options": [
+                "Porque o DMM só liga com corrente",
+                "Porque a queda só aparece quando há corrente real passando pela resistência indesejada",
+                "Porque o fusível exige 14 V",
+                "Porque a CAN precisa de 60 Ω para medir volts"
+            ],
+            "correct": 1,
+            "explanation": "Sem corrente, a resistência indesejada não produz queda útil de tensão."
+        }
+    ]
+}

@@ -7,6 +7,12 @@
         },
         {
             "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos do iniciante com o DMM",
+            "text": "1) Medir ohms com o circuito energizado. 2) Usar parafuso pintado/enferrujado como massa. 3) Confiar só em continuidade (falha sob carga exige voltage drop). 4) Ponta vermelha no borne de 10A sem querer. 5) Medir corrente de partida com o DMM em série sem proteção adequada — use alicate DC."
+        },
+        {
+            "type": "callout",
             "style": "tip",
             "title": "Funções Principais",
             "text": "Tensão DC/AC, Corrente DC/AC, Resistência, Continuidade, Teste de Diodos, Frequência, Duty Cycle, Temperatura."
@@ -17,13 +23,37 @@
         },
         {
             "type": "table",
-            "headers": ["Função", "Aplicação Automotiva", "Como Conectar"],
+            "headers": [
+                "Função",
+                "Aplicação Automotiva",
+                "Como Conectar"
+            ],
             "rows": [
-                ["Tensão DC", "Bateria, alternador, sensores", "Paralelo ao circuito"],
-                ["Corrente DC", "Consumo de componentes", "Série no circuito"],
-                ["Resistência", "Sensores, bobinas", "Circuito desligado"],
-                ["Continuidade", "Fios, fusíveis", "Testar continuidade"],
-                ["Teste Diodo", "Alternador, LEDs", "Testar polaridade"]
+                [
+                    "Tensão DC",
+                    "Bateria, alternador, sensores",
+                    "Paralelo ao circuito"
+                ],
+                [
+                    "Corrente DC",
+                    "Consumo de componentes",
+                    "Série no circuito"
+                ],
+                [
+                    "Resistência",
+                    "Sensores, bobinas",
+                    "Circuito desligado"
+                ],
+                [
+                    "Continuidade",
+                    "Fios, fusíveis",
+                    "Testar continuidade"
+                ],
+                [
+                    "Teste Diodo",
+                    "Alternador, LEDs",
+                    "Testar polaridade"
+                ]
             ]
         },
         {
@@ -44,43 +74,46 @@
         },
         {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "MultimeterPracticeSimulator",
             "config": {
-                "title": "Análise com Multímetro"
+                "title": "Prática de multímetro"
             }
         },
         {
             "type": "quiz",
             "question": "Qual categoria de segurança mínima para multímetro automotivo?",
             "options": [
-                "CAT I 300V",
-                "CAT II 600V", 
                 "CAT III 600V",
+                "CAT I 300V",
+                "CAT II 600V",
                 "CAT IV 1000V"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Revise a medição e o raciocínio diagnóstico da aula antes de avançar. Na oficina, evidência vem antes da peça."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função dos óculos de segurança em trabalhos elétricos?",
             "options": [
-                "Apenas melhorar a visão",
                 "Proteger contra impacto de partículas e arco elétrico",
+                "Evitar reflexos em superfícies metálicas",
                 "Filtrar luz UV do sol",
-                "Evitar reflexos em superfícies metálicas"
+                "Apenas melhorar a visão"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Revise a medição e o raciocínio diagnóstico da aula antes de avançar. Na oficina, evidência vem antes da peça."
         },
         {
             "type": "quiz",
             "question": "Por que é importante usar ferramentas com isolamento CAT III em sistemas de 12V automotivos?",
             "options": [
+                "Porque é exigência por lei",
                 "Porque a tensão pode atingir picos de 60V durante a partida",
-                "Porque o sistema pode ter transientes de alta tensão",
                 "Porque as ferramentas CAT I não funcionam em 12V",
-                "Porque é exigência por lei"
+                "Porque o sistema pode ter transientes de alta tensão"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Revise a medição e o raciocínio diagnóstico da aula antes de avançar. Na oficina, evidência vem antes da peça."
         }
     ]
 }

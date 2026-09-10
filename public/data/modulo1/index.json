@@ -53,6 +53,11 @@
             "id": 10,
             "title": "Introdução ao Osciloscópio",
             "slug": "introducao-osciloscopio"
+        },
+        {
+            "id": 11,
+            "title": "Por onde começar e erros clássicos do iniciante",
+            "slug": "por-onde-comecar-erros-iniciante"
         }
     ]
 }

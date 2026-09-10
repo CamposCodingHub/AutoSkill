@@ -88,6 +88,20 @@ export default function HomePage() {
               Aprenda elétrica automotiva do básico ao avançado com aulas interativas, simuladores e quizzes.
               Domine sensores, atuadores, injeção eletrônica, redes CAN e muito mais.
             </p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <Link
+                to="/guia-iniciante"
+                className="inline-flex rounded-lg bg-white px-4 py-2.5 text-sm font-bold text-orange-700 shadow hover:bg-orange-50"
+              >
+                Guia do Iniciante (por onde começar)
+              </Link>
+              <Link
+                to="/modulo/1/aula/11"
+                className="inline-flex rounded-lg border border-white/40 px-4 py-2.5 text-sm font-semibold text-white hover:bg-white/10"
+              >
+                Aula: erros clássicos
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -1,0 +1,284 @@
+{
+  "title": "Guia do Iniciante — Por onde começar e o que mais confunde",
+  "subtitle": "O mapa que faltava: defeitos clássicos, erros de medição e o primeiro fluxo diagnóstico.",
+  "mantra": "Evidência antes de peça. Diagrama antes de chute. Circuito sob carga antes de ohms no vivo.",
+  "sources": [
+    "ASE A6 — diagnóstico geral, VD, bateria/partida/carga",
+    "Fluke / práticas de voltage drop sob carga",
+    "Diagnóstico de parasitic draw (mV no fusível vs amperímetro em série)",
+    "SENAI — fundamentos, carga/partida, iluminação",
+    "Oficina BR — farol fraco, no-crank, bateria que morre parado"
+  ],
+  "whereToStart": {
+    "headline": "Se você está perdido, comece aqui (nesta ordem)",
+    "steps": [
+      {
+        "n": 1,
+        "title": "Entenda V, I, R e voltage drop",
+        "why": "Sem isso você troca peça no escuro.",
+        "do": "Módulo 1 completo + lab de caminho de corrente / falha de circuito",
+        "moduleId": 1,
+        "lessonId": 1
+      },
+      {
+        "n": 2,
+        "title": "Aprenda a usar o multímetro sem queimar o instrumento",
+        "why": "O erro nº1 do iniciante é ohms com circuito energizado.",
+        "do": "Módulo 2 + lab de multímetro",
+        "moduleId": 2,
+        "lessonId": 1
+      },
+      {
+        "n": 3,
+        "title": "Siga o caminho: Bateria → fusível → relé → carga → massa",
+        "why": "90% dos ‘fantasmas’ são power/gnd, não ‘módulo misterioso’.",
+        "do": "Módulo 4 + power-up + wiring",
+        "moduleId": 4,
+        "lessonId": 1
+      },
+      {
+        "n": 4,
+        "title": "Domine partida e carga (números, não achismo)",
+        "why": "No-crank e bateria morta são o pão diário da oficina.",
+        "do": "Módulo 21 + labs de partida/carga/parasita",
+        "moduleId": 21,
+        "lessonId": 1
+      },
+      {
+        "n": 5,
+        "title": "Só então vá para CAN, ECU e HV",
+        "why": "Rede e alta tensão sem base 12V viram frustração (e risco).",
+        "do": "Módulos 8 e 15 depois da base",
+        "moduleId": 8,
+        "lessonId": 1
+      }
+    ]
+  },
+  "lostBeginnerTraps": [
+    {
+      "trap": "Querer aprender tudo de uma vez",
+      "fix": "Você abre M15 (HV) no segundo dia e trava.",
+      "fix": "Feche Semana 1: M1 → M2 → M3 → M4. Um tema por dia."
+    },
+    {
+      "trap": "Trocar peça pelo sintoma",
+      "fix": "Farol fraco → troca lâmpada → volta. No-crank → troca arranque → volta.",
+      "fix": "Meça tensão sob carga e voltage drop antes de pedir peça."
+    },
+    {
+      "trap": "Medir ohms com o circuito ligado",
+      "fix": "Leitura louca ou multímetro morto.",
+      "fix": "Ohms/continuidade = circuito DESLIGADO e isolado. Ao vivo use volts."
+    },
+    {
+      "trap": "Usar qualquer parafuso enferrujado como ‘massa’",
+      "fix": "Acha que o componente está sem alimentação.",
+      "fix": "Referência boa = negativo da bateria (ou ponto limpo validado)."
+    },
+    {
+      "trap": "Confiar só em continuidade",
+      "fix": "Fio ‘bip’ no DMM e falha sob carga (fio partido parcial / corrosão).",
+      "fix": "Voltage drop COM a carga ligada revela a verdade."
+    },
+    {
+      "trap": "Desconectar a bateria no meio do teste de parasita",
+      "fix": "Módulo ‘dorme’ e a fuga some temporariamente.",
+      "fix": "Prefira medir mV nos fusíveis com o carro em sleep; ou espere sleep de novo."
+    },
+    {
+      "trap": "Apagar DTC antes de anotar freeze frame",
+      "fix": "Perde a evidência do momento da falha.",
+      "fix": "Leia, fotografe/anote, depois limpe — se o procedimento OEM permitir."
+    }
+  ],
+  "commonDefects": [
+    {
+      "id": "battery-dead",
+      "title": "Bateria ‘morre’ / carro não gira",
+      "symptoms": ["Painel fraco ou morto", "Click no relé/solenoide", "Faróis apagam ao tentar partir"],
+      "firstTests": [
+        "Tensão em repouso (meta ~12,4–12,7 V com bateria boa)",
+        "Tensão DURANTE a tentativa de partida",
+        "Inspeção visual de terminais/corrosão/aperto"
+      ],
+      "likelyCauses": ["Bateria sem CCA", "Terminais/cabos com alta R", "Consumo parasita", "Alternador sem carga (histórico)"],
+      "dontDo": "Trocar só a bateria sem medir durante a partida e sem checar carga/parasita.",
+      "moduleId": 21,
+      "lessonId": 1,
+      "lab": "BatteryChargeSimulator"
+    },
+    {
+      "id": "no-crank-click",
+      "title": "Só dá click — não parte (no-crank)",
+      "symptoms": ["Click único ou repetido", "Motor não gira", "Às vezes farol cai"],
+      "firstTests": [
+        "Tensão na bateria em repouso e no crank",
+        "Voltage drop no cabo positivo e na massa sob tentativa de partida",
+        "Alimentação no solenoide / comando do relé"
+      ],
+      "likelyCauses": ["Bateria fraca", "Cabo/terminal ruim", "Solenoide/contato", "Arranque aberto"],
+      "dontDo": "Condenar o motor de partida sem VD nos cabos.",
+      "moduleId": 21,
+      "lessonId": 1,
+      "lab": "StarterCurrentSimulator"
+    },
+    {
+      "id": "slow-crank",
+      "title": "Partida lenta / pesada",
+      "symptoms": ["Gira devagar", "Piora a frio", "Cheiro de quente nos cabos"],
+      "firstTests": ["Corrente de partida + tensão no crank", "VD positivo e massa", "CCA / teste de carga"],
+      "likelyCauses": ["Bateria no fim", "Alta R nos cabos", "Arranque pesado / motor mecânico"],
+      "dontDo": "Só ‘dar uma carga rápida’ e entregar sem causa raiz.",
+      "moduleId": 21,
+      "lessonId": 1,
+      "lab": "StarterCurrentSimulator"
+    },
+    {
+      "id": "no-charge",
+      "title": "Luz de carga / bateria não carrega",
+      "symptoms": ["Luz de bateria acesa", "Tensão ~12 V com motor ligado", "Bateria descarrega em uso"],
+      "firstTests": ["Tensão na bateria a ~2000 rpm (esperado tipicamente 13,8–14,5 V)", "Correia", "Ripple AC (diodos)"],
+      "likelyCauses": ["Alternador/regulador", "Correia", "Cabo B+ com queda", "Circuito de excitação/D+"],
+      "dontDo": "Trocar alternador com tensão boa na bateria sem checar o circuito da luz.",
+      "moduleId": 21,
+      "lessonId": 2,
+      "lab": "BatteryChargeSimulator"
+    },
+    {
+      "id": "parasitic",
+      "title": "Bateria descarrega parado (fuga / parasita)",
+      "symptoms": ["Morre em 1–3 dias", "Partida ok depois de carregar", "Acessório aftermarket recente"],
+      "firstTests": [
+        "Esperar sleep do veículo",
+        "Corrente de descarga (muitos carros: investigar se >> ~50–100 mA — confirme OEM)",
+        "Isolar por fusível OU mV através dos fusíveis (sem ‘acordar’ módulos)"
+      ],
+      "likelyCauses": ["Luz de porta/porta-malas", "Relé colado", "Alarme/som/dashcam mal instalados", "Módulo que não dorme"],
+      "dontDo": "Trocar bateria toda semana sem achar o circuito.",
+      "moduleId": 4,
+      "lessonId": 2,
+      "lab": "ParasiticDrawSimulator"
+    },
+    {
+      "id": "dim-light",
+      "title": "Farol / luz fraca (um lado ou os dois)",
+      "symptoms": ["Luz amarelada/fraca", "Piora com outros consumidores", "Um lado pior que o outro"],
+      "firstTests": ["Tensão no soquete sob farol aceso", "VD no positivo e na massa do lado fraco", "Comparar com o lado bom"],
+      "likelyCauses": ["Massa ruim", "Conector oxidado", "Chicote com alta R", "Lâmpada errada / soquete ruim"],
+      "dontDo": "Só trocar a lâmpada quando a tensão no soquete já está baixa.",
+      "moduleId": 5,
+      "lessonId": 1,
+      "lab": "CircuitFaultSimulator"
+    },
+    {
+      "id": "fuse-blows",
+      "title": "Fusível queima de novo",
+      "symptoms": ["Fusível abre ao ligar", "Cheiro de queimado", "Circuito morto"],
+      "firstTests": ["Identificar o circuito no diagrama", "Isolar curto à massa após o fusível", "Nunca upar ampère ‘só para ir embora’"],
+      "likelyCauses": ["Curto à massa", "Consumidor em curto", "Instalação aftermarket"],
+      "dontDo": "Colocar fusível maior ou ‘gambiarra’ de fio.",
+      "moduleId": 3,
+      "lessonId": 1,
+      "lab": "CircuitFaultSimulator"
+    },
+    {
+      "id": "relay-click-no-power",
+      "title": "Relé clicka mas a carga não liga",
+      "symptoms": ["Ouviu o click", "Ventoinha/farol/bomba mortos", "Fusível ok"],
+      "firstTests": ["Tensão no pino 30", "Tensão no 87 sob comando", "Continuidade/contato 30–87", "Alimentação da bobina 85/86"],
+      "likelyCauses": ["Contato do relé ruim", "Sem B+ no 30", "Carga/massa aberta"],
+      "dontDo": "Achar que ‘click = relé bom’.",
+      "moduleId": 3,
+      "lessonId": 2,
+      "lab": "RelayCircuitSimulator"
+    },
+    {
+      "id": "intermittent",
+      "title": "Falha intermitente (só em buraco / calor / chuva)",
+      "symptoms": ["Some e volta", "Piora com vibração", "Difícil de pegar"],
+      "firstTests": ["Reproduzir com carga ligada", "Mexer chicote sob monitoramento de tensão", "Inspecionar conectores/água"],
+      "likelyCauses": ["Mau contato", "Fio partido parcial", "Água em módulo/conector"],
+      "dontDo": "Trocar módulo ‘porque o scanner acusou’ sem provar power/gnd/sinal.",
+      "moduleId": 20,
+      "lessonId": 1,
+      "lab": "WiringTraceSimulator"
+    },
+    {
+      "id": "no-comm",
+      "title": "Scanner sem comunicação / vários módulos offline",
+      "symptoms": ["Sem com com ECU/ABS/BCM", "Vários DTCs U-code", "Após instalação de alarme"],
+      "firstTests": ["Ohms CAN-H↔CAN-L IG off (~60 Ω típico com duas terminações)", "Alimentação/massa do módulo", "Danos aftermarket na rede"],
+      "likelyCauses": ["Curto H-L", "Falta terminação (≈120 Ω)", "Módulo sem power", "Emenda errada na CAN"],
+      "dontDo": "Formatar/reflashar tudo antes de medir a rede.",
+      "moduleId": 8,
+      "lessonId": 1,
+      "lab": "CANBusSimulator"
+    }
+  ],
+  "measurementCheatSheet": [
+    {
+      "mode": "Volts DC",
+      "when": "Circuito energizado — ver se chega alimentação / comparar pontos",
+      "rule": "Ponta preta em massa boa (preferência: − bateria)."
+    },
+    {
+      "mode": "Voltage drop",
+      "when": "Suspeita de fio/conector/massa ruins sob carga",
+      "rule": "Meça ENTRE dois pontos do mesmo lado (ex.: − bateria e massa do farol) COM carga ligada. Ideal tipicamente <0,1–0,2 V por trecho (confirme OEM)."
+    },
+    {
+      "mode": "Ohms / continuidade",
+      "when": "Componente isolado, fio sem energia",
+      "rule": "NUNCA com tensão presente. Desenergize e isole."
+    },
+    {
+      "mode": "Ampères / alicate",
+      "when": "Partida, parasita, consumo de circuito",
+      "rule": "Escala certa; em série no amperímetro do DMM use fusível do instrumento — alicate DC é mais seguro para altas correntes."
+    }
+  ],
+  "diagnosticFlow": [
+    "1. Ouça o cliente e confirme o sintoma (reproduza).",
+    "2. Inspeção visual: terminais, fusíveis, conectores, água, aftermarket.",
+    "3. Bateria: repouso + sob demanda (partida/carga).",
+    "4. Diagrama: marque power, gnd, sinal, fusível, relé.",
+    "5. Meça no conector do componente (não chute o módulo).",
+    "6. Voltage drop nos caminhos de corrente alta.",
+    "7. Só então substitua — e valide o reparo sob as mesmas condições."
+  ],
+  "firstWeek": [
+    { "day": 1, "focus": "V, I, R + analogia + perigo de ohms ao vivo", "moduleId": 1, "lessonId": 1 },
+    { "day": 2, "focus": "Lei de Ohm + potência no carro", "moduleId": 1, "lessonId": 2 },
+    { "day": 3, "focus": "Série/paralelo + caminho de corrente", "moduleId": 1, "lessonId": 4 },
+    { "day": 4, "focus": "Multímetro: escalas e erros clássicos", "moduleId": 2, "lessonId": 1 },
+    { "day": 5, "focus": "Fusíveis e relés (click ≠ contato bom)", "moduleId": 3, "lessonId": 1 },
+    { "day": 6, "focus": "Arquitetura 12V + leitura de diagrama", "moduleId": 4, "lessonId": 1 },
+    { "day": 7, "focus": "Revisão: 3 defeitos comuns deste guia + 1 RO", "moduleId": 23, "lessonId": 1 }
+  ],
+  "quickQuizzes": [
+    {
+      "q": "Antes de medir resistência em um relé instalado, o que é obrigatório?",
+      "options": ["Ligar a ignição", "Desenergizar / isolar", "Usar escala 10 A na bateria", "Inverter as pontas na CAN"],
+      "correct": 1,
+      "why": "Ohms com circuito vivo danifica o DMM e mente na leitura."
+    },
+    {
+      "q": "Farol fraco de um lado. Melhor hipótese inicial?",
+      "options": ["Alternador sempre", "Alta R/massa nesse circuito", "Só o rádio", "TPMS"],
+      "correct": 1,
+      "why": "Sintoma unilateral sob carga aponta caminho daquele lado."
+    },
+    {
+      "q": "Motor ligado, tensão na bateria 12,2 V. Foco?",
+      "options": ["Sistema de carga", "Pressão do estepe", "Fluido de freio", "Só o limpador"],
+      "correct": 0,
+      "why": "Sem ~13,8–14,5 V tipicamente há subcarga (confirme OEM/condição)."
+    },
+    {
+      "q": "Por que continuidade ‘ok’ ainda pode falhar na estrada?",
+      "options": ["Porque o DMM é sempre mentiroso", "Porque a falha só aparece sob corrente real (VD)", "Porque fusível aumenta sozinho", "Porque CAN vira 0 Ω"],
+      "correct": 1,
+      "why": "O ohmímetro usa corrente minúscula; corrosão aparece sob carga."
+    }
+  ]
+}

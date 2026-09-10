@@ -10,10 +10,10 @@ import SettingsPage from './pages/SettingsPage'
 import ModulePage from './pages/ModulePage'
 import LessonPage from './pages/LessonPage'
 import PublicProfilePage from './pages/PublicProfilePage'
+import BeginnerGuidePage from './pages/BeginnerGuidePage'
 import SyncToast from './components/SyncToast'
 import { SkeletonModule } from './components/Skeleton'
 
-// Code splitting para páginas pesadas
 const AdminDashboard = lazy(() => import('./pages/AdminDashboard'))
 const AdvancedAnalyticsPage = lazy(() => import('./pages/AdvancedAnalyticsPage'))
 const CertificationsPage = lazy(() => import('./pages/CertificationsPage'))
@@ -29,6 +29,11 @@ function App() {
           <Route path="/" element={
             <ProtectedRoute>
               <HomePage />
+            </ProtectedRoute>
+          } />
+          <Route path="/guia-iniciante" element={
+            <ProtectedRoute>
+              <BeginnerGuidePage />
             </ProtectedRoute>
           } />
           <Route path="/settings" element={
