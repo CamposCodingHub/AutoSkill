@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Procedimento", "Passos", "Quando Aplicar"],
+            "headers": [
+                "Procedimento",
+                "Passos",
+                "Quando Aplicar"
+            ],
             "rows": [
-                ["Lockout/Tagout", "Desconectar, travar, etiquetar", "Trabalho em circuitos energizados"],
-                ["Teste Zero Energia", "Verificar ausência tensão", "Antes de tocar em componentes"],
-                ["Permissão Trabalho", "Autorização formal", "Trabalhos de risco"],
-                ["Inspeção Área", "Verificar condições", "Início de qualquer trabalho"],
-                ["Acompanhamento", "Trabalho em dupla", "Trabalhos em alta tensão"]
+                [
+                    "Lockout/Tagout",
+                    "Desconectar, travar, etiquetar",
+                    "Trabalho em circuitos energizados"
+                ],
+                [
+                    "Teste Zero Energia",
+                    "Verificar ausência tensão",
+                    "Antes de tocar em componentes"
+                ],
+                [
+                    "Permissão Trabalho",
+                    "Autorização formal",
+                    "Trabalhos de risco"
+                ],
+                [
+                    "Inspeção Área",
+                    "Verificar condições",
+                    "Início de qualquer trabalho"
+                ],
+                [
+                    "Acompanhamento",
+                    "Trabalho em dupla",
+                    "Trabalhos em alta tensão"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Trabalhos de risco devem ter supervisão adequada. Não trabalhe sozinho em situações perigosas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança de oficina aplicado a “Procedimentos de Trabalho Seguro”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "EPI, ordem no posto, isolamento de HV, e não “testar curto com fio grosso”. Segurança é competência técnica, não burocracia. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Risco",
+                "Controle",
+                "Exemplo"
+            ],
+            "rows": [
+                [
+                    "Choque/arco",
+                    "PPE/LOTO",
+                    "HV"
+                ],
+                [
+                    "Incêndio",
+                    "Fusível correto",
+                    "Aftermarket"
+                ],
+                [
+                    "Química",
+                    "EPIs bateria",
+                    "Ácido/térmica"
+                ],
+                [
+                    "Ergonomia",
+                    "Apoios/cavaletes",
+                    "Queda de veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Anel metálico em bancada energizada; pular espera de airbag."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Avaliar risco",
+                "Preparar EPI",
+                "Procedimento escrito quando HV"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Procedimentos Seguros"
+                "title": "Checklist de segurança HV / LOTO"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo no lockout/tagout?",
             "options": [
-                "Testar ausência de tensão",
-                "Desconectar e travar energia",
                 "Colocar EPI",
-                "Iniciar trabalho"
+                "Testar ausência de tensão",
+                "Iniciar trabalho",
+                "Desconectar e travar energia"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Desconectar e travar energia. Em segurança de oficina (“Procedimentos de Trabalho Seguro”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Quando é necessário permissão de trabalho?",
             "options": [
+                "Apenas para gerentes",
                 "Apenas para trabalhos simples",
                 "Trabalhos de risco",
-                "Nunca é necessário",
-                "Apenas para gerentes"
+                "Nunca é necessário"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Trabalhos de risco. Em segurança de oficina (“Procedimentos de Trabalho Seguro”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que comunicar procedimentos à equipe?",
             "options": [
-                "Apenas burocracia",
                 "Verificar entendimento antes de iniciar trabalho",
                 "Aumentar o custo",
+                "Apenas burocracia",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Verificar entendimento antes de iniciar trabalho. Em segurança de oficina (“Procedimentos de Trabalho Seguro”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

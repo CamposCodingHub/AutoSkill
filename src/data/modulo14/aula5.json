@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Potência Típica", "Função"],
+            "headers": [
+                "Componente",
+                "Potência Típica",
+                "Função"
+            ],
             "rows": [
-                ["Faróis principais", "55-70W cada", "Iluminação longa distância"],
-                ["Faróis de neblina", "35-55W cada", "Penetração em mau tempo"],
-                ["Luzes de posição", "5-10W cada", "Visibilidade lateral"],
-                ["Luzes de freio", "21-35W cada", "Sinalização de parada"],
-                ["Luzes de reversão", "16-21W cada", "Iluminação traseira"]
+                [
+                    "Faróis principais",
+                    "55-70W cada",
+                    "Iluminação longa distância"
+                ],
+                [
+                    "Faróis de neblina",
+                    "35-55W cada",
+                    "Penetração em mau tempo"
+                ],
+                [
+                    "Luzes de posição",
+                    "5-10W cada",
+                    "Visibilidade lateral"
+                ],
+                [
+                    "Luzes de freio",
+                    "21-35W cada",
+                    "Sinalização de parada"
+                ],
+                [
+                    "Luzes de reversão",
+                    "16-21W cada",
+                    "Iluminação traseira"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Verifique continuidade e tensão. Em sistemas LED, teste drivers e dissipadores. Verifique reguladores de voltagem."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar 24V / pesados aplicado a “Iluminação Pesada e Sinalização”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "24V = duas baterias em série tipicamente. Queda de tensão e massas ruins derrubam módulos. Cuidado com retornos de chassi e tomadas de reboque. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tópico",
+                "Atenção",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Séries 12+12",
+                    "Balanceamento",
+                    "Tensão por elemento"
+                ],
+                [
+                    "Partida",
+                    "Correntes altas",
+                    "VD cabos"
+                ],
+                [
+                    "Iluminação reboque",
+                    "Terra comum",
+                    "Continuidade/VD"
+                ],
+                [
+                    "ABS/EBS",
+                    "Rede + power",
+                    "Scanner dedicado"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Tratar 24V como 12V sem recalcular corrente/potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Confirmar topologia",
+                "Medir por bateria",
+                "Inspecionar terra pesado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Iluminação Pesada"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a potência típica de faróis principais em caminhões?",
             "options": [
+                "100W cada",
                 "35W cada",
                 "55-70W cada",
-                "100W cada",
                 "150W cada"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 55-70W cada. Em 24V / pesados (“Iluminação Pesada e Sinalização”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que LEDs não podem ser substituídos diretamente por lâmpadas incandescentes?",
             "options": [
-                "Porque são mais caros",
-                "Porque requerem drivers específicos e dissipadores de calor",
                 "Porque não brilham o suficiente",
-                "Porque consomem mais energia"
+                "Porque consomem mais energia",
+                "Porque requerem drivers específicos e dissipadores de calor",
+                "Porque são mais caros"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Porque requerem drivers específicos e dissipadores de calor. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual voltagem os sistemas de iluminação em veículos pesados tipicamente operam?",
             "options": [
+                "110V",
                 "12V",
-                "24V",
                 "48V",
-                "110V"
+                "24V"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 24V. Em 24V / pesados (“Iluminação Pesada e Sinalização”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

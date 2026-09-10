@@ -17,16 +17,52 @@
         },
         {
             "type": "table",
-            "headers": ["Pino", "Função ISO 1185", "Função ISO 12098"],
+            "headers": [
+                "Pino",
+                "Função ISO 1185",
+                "Função ISO 12098"
+            ],
             "rows": [
-                ["1", "Terra", "Terra"],
-                ["2", "Luz de ré", "Luz de ré"],
-                ["3", "Massa iluminação", "Massa iluminação"],
-                ["4", "Farol esquerdo", "Farol esquerdo"],
-                ["5", "Sinal esquerdo", "Sinal esquerdo"],
-                ["6", "Farol direito", "Farol direito"],
-                ["7", "Sinal direito", "Sinal direito"],
-                ["8-13", "N/A", "CAN, alimentação 24V, freios"]
+                [
+                    "1",
+                    "Terra",
+                    "Terra"
+                ],
+                [
+                    "2",
+                    "Luz de ré",
+                    "Luz de ré"
+                ],
+                [
+                    "3",
+                    "Massa iluminação",
+                    "Massa iluminação"
+                ],
+                [
+                    "4",
+                    "Farol esquerdo",
+                    "Farol esquerdo"
+                ],
+                [
+                    "5",
+                    "Sinal esquerdo",
+                    "Sinal esquerdo"
+                ],
+                [
+                    "6",
+                    "Farol direito",
+                    "Farol direito"
+                ],
+                [
+                    "7",
+                    "Sinal direito",
+                    "Sinal direito"
+                ],
+                [
+                    "8-13",
+                    "N/A",
+                    "CAN, alimentação 24V, freios"
+                ]
             ]
         },
         {
@@ -46,44 +82,114 @@
             "text": "Teste continuidade e tensão em cada pino. Verifique corrosão e conexões adequadas antes de conectar trailer."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar 24V / pesados aplicado a “Tomadas de Reboque e Trailer”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "24V = duas baterias em série tipicamente. Queda de tensão e massas ruins derrubam módulos. Cuidado com retornos de chassi e tomadas de reboque. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tópico",
+                "Atenção",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Séries 12+12",
+                    "Balanceamento",
+                    "Tensão por elemento"
+                ],
+                [
+                    "Partida",
+                    "Correntes altas",
+                    "VD cabos"
+                ],
+                [
+                    "Iluminação reboque",
+                    "Terra comum",
+                    "Continuidade/VD"
+                ],
+                [
+                    "ABS/EBS",
+                    "Rede + power",
+                    "Scanner dedicado"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Tratar 24V como 12V sem recalcular corrente/potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Confirmar topologia",
+                "Medir por bateria",
+                "Inspecionar terra pesado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Tomadas de Reboque"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual padrão de 13 pinos inclui comunicação CAN?",
             "options": [
-                "ISO 1185",
                 "SAE J560",
-                "ISO 12098",
-                "ISO 7638"
+                "ISO 1185",
+                "ISO 7638",
+                "ISO 12098"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: ISO 12098. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "O que permite o sistema EBS (Electronic Braking System) comunicar com o trailer?",
             "options": [
+                "Apenas sinais de luz",
                 "Apenas cabos de alimentação",
                 "Comunicação CAN",
-                "Apenas sinais de luz",
                 "Sistema Bluetooth"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Comunicação CAN. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a função do pino 1 nos padrões ISO 1185 e ISO 12098?",
             "options": [
-                "Farol esquerdo",
-                "Terra",
                 "Luz de ré",
-                "Sinal direito"
+                "Sinal direito",
+                "Terra",
+                "Farol esquerdo"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Terra. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

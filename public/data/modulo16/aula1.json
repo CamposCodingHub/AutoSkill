@@ -1,98 +1,192 @@
 {
-  "id": 1,
-  "title": "Uso do Osciloscópio",
-  "slug": "osciloscopio",
-  "content": [
-    {
-      "type": "text",
-      "value": "O osciloscópio é a ferramenta mais poderosa para diagnóstico eletrônico automotivo. Diferente do multímetro que mostra apenas valores médios, o osciloscópio permite visualizar o comportamento elétrico em tempo real, identificando problemas que seriam impossíveis de detectar de outra forma."
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "title": "Por que o Osciloscópio é Essencial?",
-      "text": "Enquanto o multímetro mostra 'o quê' (tensão, resistência), o osciloscópio mostra 'como' - a forma como o sinal se comporta ao longo do tempo. Isso é crucial para diagnosticar sensores, atuadores e sistemas de comunicação."
-    },
-    {
-      "type": "text",
-      "value": "Um osciloscópio moderno para automóveis deve ter: largura de banda mínima de 20MHz, pelo menos 2 canais isolados, função de trigger automático, base de tempo ajustável (1s/div a 10μs/div), e pontas de prova específicas para automotiva com aterramento adequado."
-    },
-    {
-      "type": "callout",
-      "style": "warning",
-      "title": "Cuidado com Pontas de Prova",
-      "text": "Nunca use pontas de prova comuns em sistemas eletrônicos automotivos. Use sempre pontas de prova com aterramento próprio e isolação adequada para evitar danos à ECU e ao equipamento."
-    }
-  ],
-  "table": {
-    "headers": ["Parâmetro", "Configuração Inicial", "Aplicação Típica"],
-    "rows": [
-      ["Volts/div", "5V", "Sensores 5V (MAP, TPS)"],
-      ["Tempo/div", "10ms", "Sinais de rotação"],
-      ["Trigger", "Auto", "Sinais desconhecidos"],
-      ["Acoplamento", "AC", "Sinais alternados"],
-      ["Impedância", "1MΩ", "Padrão automotivo"]
+    "title": "Uso do Osciloscópio",
+    "content": [
+        {
+            "type": "text",
+            "value": "Objetivo: usar o osciloscópio como instrumento de diagnóstico — não só “ver uma onda bonita”, mas decidir se o sinal é compatível com o sintoma (partida, falha de cilindro, sensor preguiçoso, comando de atuador)."
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Multímetro vs osciloscópio",
+            "text": "O multímetro é uma foto embaçada da média. O osciloscópio é o vídeo quadro a quadro: amplitude, frequência, glitches, dropouts e ruído aparecem. Muitos DTCs de sensor só fazem sentido depois de ver o traço."
+        },
+        {
+            "type": "text",
+            "value": "Configuração inicial típica em laboratório automotivo: 2 canais (quando possível), pontas adequadas, massa da ponta próxima ao módulo sob teste (não em um ponto duvidoso do chassis), volts/div e time/div dimensionados para caber 2–3 períodos do sinal na tela, trigger no flanco estável."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Parâmetro",
+                "Ponto de partida",
+                "Quando ajustar"
+            ],
+            "rows": [
+                [
+                    "Volts/div",
+                    "1–5 V (sinais 5 V); 10–20 V (alimentação/atuadores)",
+                    "Sinal corta a tela → aumente V/div; sinal miúdo → reduza"
+                ],
+                [
+                    "Time/div",
+                    "1–10 ms (CKP/injetor); 50–200 ms (TPS lento)",
+                    "Poucos pulsos → aumente time/div; detalhes → reduza"
+                ],
+                [
+                    "Acoplamento",
+                    "DC na maioria dos casos automotivos",
+                    "AC só para eliminar offset e olhar ripple"
+                ],
+                [
+                    "Trigger",
+                    "Borda / nível no meio da amplitude",
+                    "Imagem “correndo” → ajuste nível/fonte de trigger"
+                ],
+                [
+                    "Bandwidth",
+                    "≥20 MHz recomendável em automotivo",
+                    "Ignorar specs de brinquedo USB muito lentos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Massa da ponta e curto",
+            "text": "A massa (jacaré) da ponta de prova comum está referenciada ao chassis do scope (e muitas vezes à terra da tomada via USB). Conectar essa massa em um ponto “quente” ou em sistemas isolados pode destruir ECU, scope e criar risco. Prefira referência correta, pontas adequadas e, quando necessário, medição diferencial conforme o equipamento."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Defina a pergunta diagnóstica antes de ligar o cabo (ex.: “o CKP oscila na partida?”).",
+                "Capture na condição do sintoma (frio, quente, sob carga, durante a falha).",
+                "Compare com padrão conhecido (biblioteca / veículo irmão / manual).",
+                "Documente print da tela no orçamento — aumenta confiança e rastreabilidade."
+            ],
+            "ordered": true
+        },
+        {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Uso do Osciloscópio”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
+            "type": "simulator",
+            "name": "ScopeWaveformSimulator",
+            "config": {
+                "title": "Biblioteca de padrões automotivos"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Qual é a principal vantagem do osciloscópio sobre o multímetro no diagnóstico eletrônico?",
+            "options": [
+                "Sempre mede com mais casas decimais de tensão contínua",
+                "Mostra como o sinal varia no tempo (forma de onda), não só um valor médio",
+                "Elimina a necessidade de diagrama elétrico",
+                "Funciona sem pontas de prova"
+            ],
+            "correct": 1,
+            "explanation": "O valor médio pode parecer “bom” enquanto o sinal tem falhas intermitentes, ruído ou perda de dentes — só o traço revela."
+        },
+        {
+            "type": "quiz",
+            "question": "A imagem do scope “corre” horizontalmente sem estabilizar. O que ajustar primeiro?",
+            "options": [
+                "Somente a escala de ohms do multímetro",
+                "Nível/fonte de trigger e, se preciso, time/div",
+                "Trocar a bateria do veículo imediatamente",
+                "Inverter CAN-H e CAN-L"
+            ],
+            "correct": 1,
+            "explanation": "Trigger é o que sincroniza a varredura a um evento do sinal. Sem ele, a forma parece instável."
+        },
+        {
+            "type": "quiz",
+            "question": "Por que a escolha da massa (referência) da ponta é crítica?",
+            "options": [
+                "Porque a cor da ponta muda a frequência",
+                "Massa mal escolhida gera leitura errada e pode causar curto/dano via caminho de retorno do instrumento",
+                "Porque scopes automotivos não usam massa",
+                "Porque só se mede em AC"
+            ],
+            "correct": 1,
+            "explanation": "Referência ruim = offset, ruído e risco elétrico. Massa próxima ao módulo sob teste costuma ser a prática correta."
+        },
+        {
+            "type": "quiz",
+            "question": "Largura de banda mínima geralmente recomendada para trabalho automotivo sério?",
+            "options": [
+                "1 MHz",
+                "20 MHz",
+                "200 Hz",
+                "Não importa a bandwidth"
+            ],
+            "correct": 1,
+            "explanation": "Sinais rápidos (comunicação, bordas de atuadores, ignição com atenuador) exigem instrumento com resposta adequada."
+        }
     ]
-  },
-  "simulator": {
-    "type": "OscilloscopeSimulator",
-    "title": "Simulador de Osciloscópio",
-    "description": "Ajuste os parâmetros para visualizar diferentes formas de onda automotivas",
-    "controls": [
-      {
-        "label": "Tipo de Sinal",
-        "type": "select",
-        "options": ["Sensor MAP", "Sensor TPS", "Sinal CKP", "Injetor", "Ignição"],
-        "default": "Sensor MAP"
-      },
-      {
-        "label": "Volts/Div",
-        "type": "range",
-        "min": 1,
-        "max": 20,
-        "default": 5,
-        "unit": "V"
-      },
-      {
-        "label": "Tempo/Div",
-        "type": "range",
-        "min": 0.1,
-        "max": 100,
-        "default": 10,
-        "unit": "ms"
-      }
-    ]
-  },
-  "quiz": {
-    "question": "Qual é a principal vantagem do osciloscópio sobre o multímetro no diagnóstico automotivo?",
-    "options": [
-      "Mede valores mais precisos",
-      "Visualiza o comportamento do sinal ao longo do tempo",
-      "É mais fácil de usar",
-      "Custa menos"
-    ],
-    "correct": 1
-  },
-  "quizzes": [
-    {
-      "question": "Qual é a largura de banda mínima recomendada para um osciloscópio automotivo?",
-      "options": [
-        "10MHz",
-        "20MHz",
-        "50MHz",
-        "100MHz"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Por que não usar pontas de prova comuns em sistemas eletrônicos automotivos?",
-      "options": [
-        "Porque são muito caras",
-        "Podem causar danos à ECU e ao equipamento",
-        "Porque não funcionam",
-        "Porque são muito grandes"
-      ],
-      "correct": 1
-    }
-  ]
 }

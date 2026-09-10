@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Característica"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Característica"
+            ],
             "rows": [
-                ["Compressor de Ar", "Gerar ar comprimido", "120-150 PSI"],
-                ["Tanque de Ar", "Armazenar pressão", "Múltiplos tanques"],
-                ["Válvulas Moduladoras", "Controlar freio ABS", "Modulação rápida"],
-                ["Sensores de Roda", "Detectar velocidade", "Robustos, selados"],
-                ["Cilindros de Freio", "Aplicar força", "Grande diâmetro"]
+                [
+                    "Compressor de Ar",
+                    "Gerar ar comprimido",
+                    "120-150 PSI"
+                ],
+                [
+                    "Tanque de Ar",
+                    "Armazenar pressão",
+                    "Múltiplos tanques"
+                ],
+                [
+                    "Válvulas Moduladoras",
+                    "Controlar freio ABS",
+                    "Modulação rápida"
+                ],
+                [
+                    "Sensores de Roda",
+                    "Detectar velocidade",
+                    "Robustos, selados"
+                ],
+                [
+                    "Cilindros de Freio",
+                    "Aplicar força",
+                    "Grande diâmetro"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use scanner específico para veículos pesados. Verifique pressão do sistema, vazamentos e funcionamento das válvulas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar 24V / pesados aplicado a “Pneus e Sistema de Freios ABS Pesados”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "24V = duas baterias em série tipicamente. Queda de tensão e massas ruins derrubam módulos. Cuidado com retornos de chassi e tomadas de reboque. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tópico",
+                "Atenção",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Séries 12+12",
+                    "Balanceamento",
+                    "Tensão por elemento"
+                ],
+                [
+                    "Partida",
+                    "Correntes altas",
+                    "VD cabos"
+                ],
+                [
+                    "Iluminação reboque",
+                    "Terra comum",
+                    "Continuidade/VD"
+                ],
+                [
+                    "ABS/EBS",
+                    "Rede + power",
+                    "Scanner dedicado"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Tratar 24V como 12V sem recalcular corrente/potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Confirmar topologia",
+                "Medir por bateria",
+                "Inspecionar terra pesado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Freios Pesados"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a pressão típica de operação em freios a ar de caminhões?",
             "options": [
-                "30-50 PSI",
-                "60-80 PSI",
+                "200-250 PSI",
                 "120-150 PSI",
-                "200-250 PSI"
+                "30-50 PSI",
+                "60-80 PSI"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 120-150 PSI. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal diferença entre freios a ar e hidráulicos?",
             "options": [
-                "Freios a ar usam menor pressão",
                 "Freios a ar operam com pressões muito mais altas e usam ar comprimido",
-                "Freios hidráulicos são mais potentes",
-                "Não há diferença significativa"
+                "Freios a ar usam menor pressão",
+                "Não há diferença significativa",
+                "Freios hidráulicos são mais potentes"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Freios a ar operam com pressões muito mais altas e usam ar comprimido. Em 24V / pesados (“Pneus e Sistema de Freios ABS Pesados”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como o ABS em caminhões monitora as rodas?",
             "options": [
+                "Monitora apenas o eixo traseiro",
                 "Monitora apenas as rodas dianteiras",
                 "Monitora cada roda individualmente",
-                "Monitora apenas o eixo traseiro",
                 "Não monitora as rodas"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Monitora cada roda individualmente. Em 24V / pesados (“Pneus e Sistema de Freios ABS Pesados”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

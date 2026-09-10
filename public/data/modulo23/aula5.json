@@ -17,13 +17,43 @@
         },
         {
             "type": "table",
-            "headers": ["Caso", "Sintomas", "Diagnóstico", "Solução"],
+            "headers": [
+                "Caso",
+                "Sintomas",
+                "Diagnóstico",
+                "Solução"
+            ],
             "rows": [
-                ["Bateria descarrega", "Bateria morre em 2 dias", "Corrente parasita 80mA", "Isolar circuito de alarme"],
-                ["Farol fraco", "Luz direita mais fraca", "Queda tensão no soquete", "Limpar e reapertar conexão"],
-                ["Motor não pega", "Clique único sem giro", "Solenoide com falha", "Substituir solenoide"],
-                ["Ar condicionado não liga", "Sem refrigeração", "Pressostato aberto", "Substituir sensor de pressão"],
-                ["Rádio com interferência", "Ruído em áudio", "Filtro de linha ruim", "Instalar filtro adequado"]
+                [
+                    "Bateria descarrega",
+                    "Bateria morre em 2 dias",
+                    "Corrente parasita 80mA",
+                    "Isolar circuito de alarme"
+                ],
+                [
+                    "Farol fraco",
+                    "Luz direita mais fraca",
+                    "Queda tensão no soquete",
+                    "Limpar e reapertar conexão"
+                ],
+                [
+                    "Motor não pega",
+                    "Clique único sem giro",
+                    "Solenoide com falha",
+                    "Substituir solenoide"
+                ],
+                [
+                    "Ar condicionado não liga",
+                    "Sem refrigeração",
+                    "Pressostato aberto",
+                    "Substituir sensor de pressão"
+                ],
+                [
+                    "Rádio com interferência",
+                    "Ruído em áudio",
+                    "Filtro de linha ruim",
+                    "Instalar filtro adequado"
+                ]
             ]
         },
         {
@@ -43,44 +73,114 @@
             "text": "Com experiência, desenvolva intuição para diagnóstico rápido, mas sempre valide com testes objetivos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar casos práticos / laboratório aplicado a “Estudos de Caso - Problemas Comuns”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Trate cada case como RO real: hipótese → teste que mata hipótese → evidência → correção → reteste. Tempo sem método é tempo perdido. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Passo",
+                "Pergunta",
+                "Saída"
+            ],
+            "rows": [
+                [
+                    "Sintoma",
+                    "O que o cliente vê?",
+                    "Reprodução"
+                ],
+                [
+                    "Hipótese",
+                    "O que explicaria?",
+                    "Lista curta"
+                ],
+                [
+                    "Teste",
+                    "O que prova/refuta?",
+                    "Número"
+                ],
+                [
+                    "Fechamento",
+                    "Validou?",
+                    "RO completo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Mudar três peças de uma vez; não registrar o que já foi testado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Uma variável por vez",
+                "Anotar resultados",
+                "Comparar com lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Estudos de Caso"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo na análise de problemas comuns?",
             "options": [
-                "Substituir componentes",
                 "Coletar sintomas e formular hipóteses",
+                "Substituir componentes",
                 "Testar aleatoriamente",
                 "Resetar sistemas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Coletar sintomas e formular hipóteses. Em casos práticos / laboratório (“Estudos de Caso - Problemas Comuns”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual corrente parasita é considerada anormal?",
             "options": [
-                "10mA",
                 "80mA",
+                "500mA",
                 "200mA",
-                "500mA"
+                "10mA"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 80mA. Meça após sleep. Desconectar a bateria pode mascarar o módulo. Isolar por fusível ou mV no fusível."
         },
         {
             "type": "quiz",
             "question": "Por que documentar cada caso de diagnóstico?",
             "options": [
+                "Não é necessário",
                 "Apenas burocracia",
-                "Criar banco de dados para consultas futuras e aprendizado",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Criar banco de dados para consultas futuras e aprendizado"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Criar banco de dados para consultas futuras e aprendizado. Em casos práticos / laboratório (“Estudos de Caso - Problemas Comuns”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

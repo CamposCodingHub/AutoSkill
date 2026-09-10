@@ -74,37 +74,108 @@
             "value": "Corrente = 110W / 12V = 9,17A. Comprimento = 4m (ida). Queda máxima aceitável = 0,36V (3%). A = (2 × 0,0175 × 4 × 9,17) / 0,36 = 1,28 / 0,36 ≈ 3,56 mm² → usar 4,0 mm² (12 AWG)."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Efeito Joule e Dimensionamento de Cabos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "O que acontece com o calor gerado por um fio se a corrente que passa por ele dobrar?",
             "options": [
-                "O calor dobra",
                 "O calor permanece o mesmo",
                 "O calor quadruplica",
+                "O calor dobra",
                 "O calor cai pela metade"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: O calor quadruplica. Em fundamentos elétricos (“Efeito Joule e Dimensionamento de Cabos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal consequência de usar um cabo subdimensionado (muito fino) para a corrente que ele deve suportar?",
             "options": [
-                "Aumenta a eficiência do circuito",
-                "Gera excesso de calor que pode derreter o isolamento e causar incêndio",
                 "Reduz o consumo de energia",
-                "Melhora a qualidade do sinal"
+                "Melhora a qualidade do sinal",
+                "Gera excesso de calor que pode derreter o isolamento e causar incêndio",
+                "Aumenta a eficiência do circuito"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Gera excesso de calor que pode derreter o isolamento e causar incêndio. Em fundamentos elétricos (“Efeito Joule e Dimensionamento de Cabos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Para um farol de 55W alimentado por 12V, qual bitola mínima de cabo recomendada (considerando até 4m de comprimento)?",
             "options": [
-                "22 AWG (0,35 mm²)",
-                "18 AWG (0,75 mm²)",
+                "12 AWG (3,31 mm²)",
                 "16 AWG (1,30 mm²)",
-                "12 AWG (3,31 mm²)"
+                "22 AWG (0,35 mm²)",
+                "18 AWG (0,75 mm²)"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 16 AWG (1,30 mm²). Em fundamentos elétricos (“Efeito Joule e Dimensionamento de Cabos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sensor", "Localização", "Função", "Falha Comum"],
+            "headers": [
+                "Sensor",
+                "Localização",
+                "Função",
+                "Falha Comum"
+            ],
             "rows": [
-                ["Evaporador", "Unidade evaporadora", "Prevenir congelamento", "Circuito aberto"],
-                ["Cabine", "Painel/duto", "Controle de temperatura", "Leitura incorreta"],
-                ["Solar", "Painel dash", "Compensação solar", "Exposição ao sol"],
-                ["Externa", "Grade frontal", "Controle de ventilação", "Sujeita/umidade"]
+                [
+                    "Evaporador",
+                    "Unidade evaporadora",
+                    "Prevenir congelamento",
+                    "Circuito aberto"
+                ],
+                [
+                    "Cabine",
+                    "Painel/duto",
+                    "Controle de temperatura",
+                    "Leitura incorreta"
+                ],
+                [
+                    "Solar",
+                    "Painel dash",
+                    "Compensação solar",
+                    "Exposição ao sol"
+                ],
+                [
+                    "Externa",
+                    "Grade frontal",
+                    "Controle de ventilação",
+                    "Sujeita/umidade"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Alguns sistemas requerem calibração após substituição. Consulte manual do fabricante para procedimento específico."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Sensores de Temperatura HVAC”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise de Temperatura"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "O que acontece se o sensor do evaporador falhar?",
             "options": [
+                "Todas as anteriores",
                 "Compressor não liga",
                 "Evaporador pode congelar",
-                "Aumenta temperatura da cabine",
-                "Todas as anteriores"
+                "Aumenta temperatura da cabine"
             ],
-            "correct": 3
+            "correct": 0,
+            "explanation": "Resposta: Todas as anteriores. Em A/C automotivo elétrico (“Sensores de Temperatura HVAC”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a característica dos sensores NTC?",
             "options": [
+                "Resistência é constante",
                 "Resistência aumenta com temperatura",
                 "Resistência diminui com temperatura",
-                "Resistência é constante",
                 "Resistência não afetada por temperatura"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Resistência diminui com temperatura. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "A que temperatura o módulo HVAC geralmente desliga o compressor para evitar congelamento?",
             "options": [
-                "0°C",
                 "2°C",
+                "10°C",
                 "5°C",
-                "10°C"
+                "0°C"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2°C. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         }
     ]
 }

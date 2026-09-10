@@ -17,14 +17,42 @@
         },
         {
             "type": "table",
-            "headers": ["Etapa", "Tempo Resposta", "Ações Chave"],
+            "headers": [
+                "Etapa",
+                "Tempo Resposta",
+                "Ações Chave"
+            ],
             "rows": [
-                ["Primeiro Contato", "Até 2 horas", "Agendamento, informações básicas"],
-                ["Diagnóstico", "4-24 horas", "Análise completa, relatório detalhado"],
-                ["Orçamento", "Até 48 horas", "Detalhado, com opções"],
-                ["Execução", "Conforme combinado", "Atualizações periódicas"],
-                ["Entrega", "No prazo", "Explicação do serviço"],
-                ["Follow-up", "7 dias após", "Satisfação, feedback"]
+                [
+                    "Primeiro Contato",
+                    "Até 2 horas",
+                    "Agendamento, informações básicas"
+                ],
+                [
+                    "Diagnóstico",
+                    "4-24 horas",
+                    "Análise completa, relatório detalhado"
+                ],
+                [
+                    "Orçamento",
+                    "Até 48 horas",
+                    "Detalhado, com opções"
+                ],
+                [
+                    "Execução",
+                    "Conforme combinado",
+                    "Atualizações periódicas"
+                ],
+                [
+                    "Entrega",
+                    "No prazo",
+                    "Explicação do serviço"
+                ],
+                [
+                    "Follow-up",
+                    "7 dias após",
+                    "Satisfação, feedback"
+                ]
             ]
         },
         {
@@ -44,44 +72,114 @@
             "text": "Ouça ativamente, empatize, ofereça solução rápida, e use feedback para melhorar processos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar gestão de oficina aplicado a “Atendimento ao Cliente”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "RO claro: sintoma → testes → evidências → peça → validação. Técnico excelente documenta; retrabalho come margem. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Benefício",
+                "KPI"
+            ],
+            "rows": [
+                [
+                    "Checklist diagnóstico",
+                    "Menos chute",
+                    "Retrabalho %"
+                ],
+                [
+                    "Foto de medições",
+                    "Prova para cliente",
+                    "Aprovação orçamento"
+                ],
+                [
+                    "Tempo por RO",
+                    "Produtividade",
+                    "Horas faturáveis"
+                ],
+                [
+                    "Estoque crítico",
+                    "Menos espera",
+                    "Giro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Orçar peça antes da evidência; não validar após o reparo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "RO padronizado",
+                "Evidência anexada",
+                "Teste final registrado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Atendimento"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o tempo máximo de resposta para primeiro contato?",
             "options": [
-                "30 minutos",
                 "2 horas",
                 "24 horas",
+                "30 minutos",
                 "48 horas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2 horas. Em gestão de oficina (“Atendimento ao Cliente”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual o prazo máximo para apresentar orçamento ao cliente?",
             "options": [
-                "12 horas",
                 "24 horas",
+                "1 semana",
                 "48 horas",
-                "1 semana"
+                "12 horas"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 48 horas. Em gestão de oficina (“Atendimento ao Cliente”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que é importante gerir expectativas do cliente?",
             "options": [
-                "Para aumentar o custo",
-                "Para ser realista sobre prazos e custos, evitando decepções",
                 "Para decepcionar o cliente",
-                "Não é importante"
+                "Para aumentar o custo",
+                "Não é importante",
+                "Para ser realista sobre prazos e custos, evitando decepções"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para ser realista sobre prazos e custos, evitando decepções. Em gestão de oficina (“Atendimento ao Cliente”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

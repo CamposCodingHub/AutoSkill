@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Atuador", "Fios", "Controle", "Aplicação"],
+            "headers": [
+                "Atuador",
+                "Fios",
+                "Controle",
+                "Aplicação"
+            ],
             "rows": [
-                ["Servomotor 5 fios", "5 fios", "Feedback de posição", "Moderno, preciso"],
-                ["Motor de passo", "4-6 fios", "Controle por passos", "Sistemas mais antigos"],
-                ["Vácuo", "1 mangueira", "Vácuo/pressão", "Sistemas básicos"],
-                ["Solenóide", "2 fios", "On/Off", "Portas simples"]
+                [
+                    "Servomotor 5 fios",
+                    "5 fios",
+                    "Feedback de posição",
+                    "Moderno, preciso"
+                ],
+                [
+                    "Motor de passo",
+                    "4-6 fios",
+                    "Controle por passos",
+                    "Sistemas mais antigos"
+                ],
+                [
+                    "Vácuo",
+                    "1 mangueira",
+                    "Vácuo/pressão",
+                    "Sistemas básicos"
+                ],
+                [
+                    "Solenóide",
+                    "2 fios",
+                    "On/Off",
+                    "Portas simples"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Use scanner para monitorar posição desejada vs real. Teste atuadores diretamente com alimentação controlada."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Atuadores de Porta de Ar”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise de Atuadores"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Quantos fios um servomotor moderno de porta de ar tipicamente tem?",
             "options": [
+                "5 fios",
                 "2 fios",
                 "3 fios",
-                "5 fios",
                 "7 fios"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 5 fios. Em A/C automotivo elétrico (“Atuadores de Porta de Ar”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que o módulo HVAC monitora através do potenciômetro integrado no servomotor?",
             "options": [
-                "A velocidade do motor",
                 "A posição real da porta de ar",
+                "A pressão do sistema",
                 "A temperatura do ar",
-                "A pressão do sistema"
+                "A velocidade do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: A posição real da porta de ar. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Por que muitos sistemas requerem calibração após substituição de atuadores?",
             "options": [
-                "Para 'aprender' as posições mínimas e máximas",
-                "Para aumentar a velocidade do motor",
+                "Para limpar os códigos de falha",
                 "Para ajustar a temperatura do ar",
-                "Para limpar os códigos de falha"
+                "Para 'aprender' as posições mínimas e máximas",
+                "Para aumentar a velocidade do motor"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: Para 'aprender' as posições mínimas e máximas. Em A/C automotivo elétrico (“Atuadores de Porta de Ar”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

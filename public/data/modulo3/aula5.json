@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Precisão", "Potência", "Aplicação"],
+            "headers": [
+                "Tipo",
+                "Precisão",
+                "Potência",
+                "Aplicação"
+            ],
             "rows": [
-                ["Carvão", "±5%", "1/4-2W", "Circuitos gerais"],
-                ["Filme Metálico", "±1%", "1/8-1W", "Circuitos precisos"],
-                ["Fio Enrolado", "±5%", "5-50W", "Alta potência"],
-                ["SMD", "±1-5%", "1/16-1W", "ECUs, montagem"]
+                [
+                    "Carvão",
+                    "±5%",
+                    "1/4-2W",
+                    "Circuitos gerais"
+                ],
+                [
+                    "Filme Metálico",
+                    "±1%",
+                    "1/8-1W",
+                    "Circuitos precisos"
+                ],
+                [
+                    "Fio Enrolado",
+                    "±5%",
+                    "5-50W",
+                    "Alta potência"
+                ],
+                [
+                    "SMD",
+                    "±1-5%",
+                    "1/16-1W",
+                    "ECUs, montagem"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "NTC e PTC são resistores que variam com temperatura. Essenciais em medição de temperatura automotiva."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar componentes (fusível, relé, diodo…) aplicado a “Resistores e Potenciômetros”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Fusível aberto é sintoma. Relé que “clicka” só prova bobina — o contato 30–87 pode estar morto. Sempre separe lado de comando e lado de potência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Peça",
+                "Teste rápido",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Fusível",
+                    "Continuidade / tensão dos dois lados",
+                    "Aberto = achar curto/sobrecorrente"
+                ],
+                [
+                    "Relé",
+                    "85/86 ohms + 30/87 sob comando",
+                    "Click ≠ potência ok"
+                ],
+                [
+                    "Diodo",
+                    "Polarização / queda ~0,5–0,7 V",
+                    "Curto ou aberto"
+                ],
+                [
+                    "Conector",
+                    "VD sob carga + inspeção visual",
+                    "Fretting/corrosão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Upar ampère do fusível; trocar relé sem medir 30 e 87; ignorar diagrama de pinagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar circuito no diagrama",
+                "Medir antes de substituir",
+                "Validar carga real após o reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Resistores"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de resistor tem maior precisão?",
             "options": [
+                "Fio enrolado",
                 "Carvão",
                 "Filme metálico",
-                "Fio enrolado",
                 "SMD"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Filme metálico. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função de um resistor em circuitos automotivos?",
             "options": [
-                "Armazenar energia",
                 "Limitar corrente e dividir tensão",
                 "Amplificar sinais",
-                "Retificar corrente"
+                "Retificar corrente",
+                "Armazenar energia"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Limitar corrente e dividir tensão. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você identifica o valor de um resistor com código de cores?",
             "options": [
-                "Pela cor do corpo do resistor",
-                "Pelas faixas coloridas no corpo",
+                "Pela potência nominal impressa",
                 "Pelo tamanho físico do resistor",
-                "Pela potência nominal impressa"
+                "Pela cor do corpo do resistor",
+                "Pelas faixas coloridas no corpo"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Pelas faixas coloridas no corpo. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

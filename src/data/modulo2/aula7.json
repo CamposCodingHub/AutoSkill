@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Equipamento", "Categoria", "Uso Obrigatório"],
+            "headers": [
+                "Equipamento",
+                "Categoria",
+                "Uso Obrigatório"
+            ],
             "rows": [
-                ["Luvas Isoladas", "CAT III 1000V", "Trabalhos em circuitos energizados"],
-                ["Óculos Proteção", "ANSI Z87.1", "Qualquer trabalho elétrico"],
-                ["Calçado Isolante", "EH rated", "Ambientes úmidos"],
-                ["Extintor CO2", "Classe ABC", "Oficinas elétricas"],
-                ["Kit Primeiros Socorros", "Completo", "Todos os locais de trabalho"]
+                [
+                    "Luvas Isoladas",
+                    "CAT III 1000V",
+                    "Trabalhos em circuitos energizados"
+                ],
+                [
+                    "Óculos Proteção",
+                    "ANSI Z87.1",
+                    "Qualquer trabalho elétrico"
+                ],
+                [
+                    "Calçado Isolante",
+                    "EH rated",
+                    "Ambientes úmidos"
+                ],
+                [
+                    "Extintor CO2",
+                    "Classe ABC",
+                    "Oficinas elétricas"
+                ],
+                [
+                    "Kit Primeiros Socorros",
+                    "Completo",
+                    "Todos os locais de trabalho"
+                ]
             ]
         },
         {
@@ -43,44 +67,115 @@
             "text": "Use placas de advertência, fita de isolamento, e sinalização adequada em áreas de trabalho elétrico."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar instrumentos e medição aplicado a “Equipamentos de Segurança e Proteção”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "O multímetro é juiz, não adivinho: volts ao vivo, ohms só desenergizado, corrente com método seguro. Voltage drop sob carga é o teste que mais separa técnico de “trocador de peça”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Modo",
+                "Use quando",
+                "Erro clássico"
+            ],
+            "rows": [
+                [
+                    "V DC",
+                    "Alimentação / sinal / VD",
+                    "Massa de referência ruim"
+                ],
+                [
+                    "Ω / bip",
+                    "Componente isolado",
+                    "Medir com tensão presente"
+                ],
+                [
+                    "A / alicate",
+                    "Consumo / partida / parasita",
+                    "Escala errada / acordar módulos"
+                ],
+                [
+                    "mV no fusível",
+                    "Isolar fuga sem puxar fusível",
+                    "Não esperar sleep do veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Ponta no borne 10A sem querer; continuidade como único teste; não zerar/validar o instrumento."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Inspecionar pontas e fusível interno do DMM",
+                "Confirmar COM / VΩ / A",
+                "Ao vivo = volts; morto = ohms",
+                "Documentar foto da tela quando possível"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "MultimeterPracticeSimulator",
             "config": {
-                "title": "Análise de Segurança"
+                "title": "Prática de multímetro"
             }
         },
         {
             "type": "quiz",
             "question": "Qual categoria mínima para luvas em trabalho automotivo?",
             "options": [
-                "CAT I 500V",
-                "CAT II 600V",
                 "CAT III 1000V",
-                "CAT IV 2000V"
+                "CAT I 500V",
+                "CAT IV 2000V",
+                "CAT II 600V"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: CAT III 1000V. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função das luvas isolantes em trabalhos elétricos?",
             "options": [
-                "Proteger apenas contra sujeira",
                 "Proteger contra choque elétrico",
-                "Melhorar a pegada das ferramentas",
-                "Evitar quedas de ferramentas"
+                "Evitar quedas de ferramentas",
+                "Proteger apenas contra sujeira",
+                "Melhorar a pegada das ferramentas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Proteger contra choque elétrico. Voltage drop só faz sentido sob carga (corrente fluindo). Compare com limites típicos/OEM e isole o trecho."
         },
         {
             "type": "quiz",
             "question": "Com que frequência você deve inspecionar suas luvas de segurança elétrica?",
             "options": [
+                "Uma vez por semana",
                 "Apenas quando parecerem danificadas",
                 "Antes de cada uso",
-                "Uma vez por semana",
                 "Uma vez por mês"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Antes de cada uso. Em instrumentos e medição (“Equipamentos de Segurança e Proteção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,11 +17,27 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "headers": [
+                "Sintoma",
+                "Causa Provável",
+                "Teste"
+            ],
             "rows": [
-                ["Não aquece", "Relé defeituoso, fusível queimado", "Testar alimentação do relé"],
-                ["Aquece irregular", "Vela com resistência alta", "Medir resistência individual"],
-                ["Consome bateria", "Curto em alguma vela", "Testar isolamento"]
+                [
+                    "Não aquece",
+                    "Relé defeituoso, fusível queimado",
+                    "Testar alimentação do relé"
+                ],
+                [
+                    "Aquece irregular",
+                    "Vela com resistência alta",
+                    "Medir resistência individual"
+                ],
+                [
+                    "Consome bateria",
+                    "Curto em alguma vela",
+                    "Testar isolamento"
+                ]
             ]
         },
         {
@@ -35,22 +51,90 @@
             "value": "O módulo de controle pode temporizar o aquecimento baseado na temperatura do líquido de arrefecimento. Em temperaturas acima de 5-10°C, o sistema pode não ativar."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar atuadores aplicado a “Motores de Partida a Frio”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Separe falha de comando (ECU/driver) de falha de potência (fusível/relé/massa) e de falha do próprio atuador. Clique de relé não prova corrente na carga. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Atuador",
+                "Prova",
+                "Armadilha"
+            ],
+            "rows": [
+                [
+                    "Injetor",
+                    "Pulso + resistência isolada",
+                    "Medir ohms energizado"
+                ],
+                [
+                    "Bobina",
+                    "Comando + primary/secondary",
+                    "Cabo/estalo enganoso"
+                ],
+                [
+                    "Solenoide",
+                    "Alimentação + massa comutada",
+                    "Só bip de continuidade"
+                ],
+                [
+                    "Motor DC",
+                    "Corrente + VD",
+                    "Bind mecânico parece elétrico"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Condenar ECU sem provar alimentação/massa/sinal no conector do atuador."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de pinos",
+                "Medir comando e potência",
+                "Validar após reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Consumo do Sistema de Aquecimento"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a corrente total aproximada de um sistema com 4 velhas de aquecimento consumindo 8A cada?",
             "options": [
-                "8A",
-                "16A",
                 "32A",
-                "64A"
+                "8A",
+                "64A",
+                "16A"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 32A. Em atuadores (“Motores de Partida a Frio”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

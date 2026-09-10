@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Química", "Densidade Energética", "Vantagens", "Aplicação"],
+            "headers": [
+                "Química",
+                "Densidade Energética",
+                "Vantagens",
+                "Aplicação"
+            ],
             "rows": [
-                ["NMC", "200-250 Wh/kg", "Alta densidade, boa performance", "BEV premium"],
-                ["NCA", "250-280 Wh/kg", "Máxima densidade", "Tesla, performance"],
-                ["LFP", "150-180 Wh/kg", "Segurança, longa vida", "BEV econômico, industrial"],
-                ["LMO", "120-150 Wh/kg", "Baixo custo", "Aplicações híbridas"]
+                [
+                    "NMC",
+                    "200-250 Wh/kg",
+                    "Alta densidade, boa performance",
+                    "BEV premium"
+                ],
+                [
+                    "NCA",
+                    "250-280 Wh/kg",
+                    "Máxima densidade",
+                    "Tesla, performance"
+                ],
+                [
+                    "LFP",
+                    "150-180 Wh/kg",
+                    "Segurança, longa vida",
+                    "BEV econômico, industrial"
+                ],
+                [
+                    "LMO",
+                    "120-150 Wh/kg",
+                    "Baixo custo",
+                    "Aplicações híbridas"
+                ]
             ]
         },
         {
@@ -42,44 +67,121 @@
             "text": "Baterias modernas suportam 1000-2000 ciclos com 80% de capacidade residual. Depende de química e condições de operação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar HV / híbridos / BEV aplicado a “Baterias de Alta Tensão”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem PPE + service plug/LOTO + verificação 0 V conforme OEM, não há serviço. 12 V auxiliar fraca impede READY. Isolation fault exige fluxo do fabricante. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Etapa",
+                "Obrigatório",
+                "Por quê"
+            ],
+            "rows": [
+                [
+                    "PPE",
+                    "Classe adequada",
+                    "Arco/choque"
+                ],
+                [
+                    "LOTO",
+                    "Service plug",
+                    "Isolar pack"
+                ],
+                [
+                    "0 V",
+                    "Medir pontos OEM",
+                    "Energia residual"
+                ],
+                [
+                    "12 V aux",
+                    "Estável",
+                    "Contatores"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir capa laranja por curiosidade; saltar interlock."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Treinamento/autorização",
+                "PPE",
+                "Procedimento OEM completo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Baterias HV"
+                "title": "Checklist de segurança HV / LOTO"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "HVIsolationMeterSimulator",
+            "config": {
+                "title": "Medidor de isolamento HV"
             }
         },
         {
             "type": "quiz",
             "question": "Qual é a faixa típica de voltagem das baterias em veículos elétricos?",
             "options": [
-                "12-24V",
                 "48-72V",
                 "300-800V",
+                "12-24V",
                 "1000-1500V"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 300-800V. Em HV / híbridos / BEV (“Baterias de Alta Tensão”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual química de bateria oferece a maior densidade energética?",
             "options": [
-                "LFP",
-                "NMC",
                 "NCA",
-                "LMO"
+                "LMO",
+                "NMC",
+                "LFP"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: NCA. Em HV / híbridos / BEV (“Baterias de Alta Tensão”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a temperatura ideal de operação para baterias de íons de lítio?",
             "options": [
-                "0-10°C",
-                "15-35°C",
                 "50-60°C",
-                "70-80°C"
+                "0-10°C",
+                "70-80°C",
+                "15-35°C"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 15-35°C. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

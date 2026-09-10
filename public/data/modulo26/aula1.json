@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Aplicação IA", "Benefício", "Impacto"],
+            "headers": [
+                "Aplicação IA",
+                "Benefício",
+                "Impacto"
+            ],
             "rows": [
-                ["Diagnóstico Preditivo", "Antecipa falhas", "Reduz tempo de reparo"],
-                ["Otimização Consumo", "Economia de combustível", "Menor emissão"],
-                ["Condução Autônoma", "Segurança e conforto", "Reduz acidentes"],
-                ["Manutenção Preditiva", "Evita quebras", "Aumenta disponibilidade"]
+                [
+                    "Diagnóstico Preditivo",
+                    "Antecipa falhas",
+                    "Reduz tempo de reparo"
+                ],
+                [
+                    "Otimização Consumo",
+                    "Economia de combustível",
+                    "Menor emissão"
+                ],
+                [
+                    "Condução Autônoma",
+                    "Segurança e conforto",
+                    "Reduz acidentes"
+                ],
+                [
+                    "Manutenção Preditiva",
+                    "Evita quebras",
+                    "Aumenta disponibilidade"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Especialização em IA automotiva, desenvolvimento de algoritmos, e integração de sistemas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar tendências 48V/zonal/IA aplicado a “Veículos Autônomos e IA”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "48V reduz corrente para mesma potência; zonal concentra falhas por zona. Smart fuse reporta DTC — “só trocar fusível” ficou velho. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Arquitetura",
+                "Impacto no diagnóstico",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "48V",
+                    "Domínio de tensão",
+                    "Identificar LV/HV"
+                ],
+                [
+                    "Zonal",
+                    "Vários sistemas caem juntos",
+                    "Power da zone ECU"
+                ],
+                [
+                    "eFuse",
+                    "DTC de distribuição",
+                    "Ler PDU"
+                ],
+                [
+                    "OTA",
+                    "Software",
+                    "Histórico de update"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Diagnosticar 48V com mentalidade só 12V sem PPE/OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar domínio",
+                "Ler módulos de energia",
+                "Seguir fluxos novos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de IA em Veículos"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia permite diagnóstico preditivo?",
             "options": [
-                "Visão Computacional",
                 "Machine Learning",
                 "Processamento Digital",
+                "Visão Computacional",
                 "Análise Espectral"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Machine Learning. Em tendências 48V/zonal/IA (“Veículos Autônomos e IA”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual aplicação de IA reduz acidentes?",
             "options": [
-                "Diagnóstico preditivo",
                 "Condução autônoma",
+                "Manutenção preditiva",
                 "Otimização de consumo",
-                "Manutenção preditiva"
+                "Diagnóstico preditivo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Condução autônoma. Em tendências 48V/zonal/IA (“Veículos Autônomos e IA”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que o futuro exige habilidades em programação?",
             "options": [
+                "Não é necessário",
                 "Apenas burocracia",
-                "IA e sistemas modernos requerem desenvolvimento de algoritmos",
                 "Aumentar o custo",
-                "Não é necessário"
+                "IA e sistemas modernos requerem desenvolvimento de algoritmos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: IA e sistemas modernos requerem desenvolvimento de algoritmos. Em tendências 48V/zonal/IA (“Veículos Autônomos e IA”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

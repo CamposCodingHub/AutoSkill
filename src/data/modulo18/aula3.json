@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sensor", "Tipo", "Detecção"],
+            "headers": [
+                "Sensor",
+                "Tipo",
+                "Detecção"
+            ],
             "rows": [
-                ["Porta/Capô", "Contato mecânico", "Abertura não autorizada"],
-                ["Vidro", "Acústico/microfone", "Quebra de vidro"],
-                ["Impacto", "Acelerômetro", "Choques/vibrações"],
-                ["Inclinação", "Giroscópio", "Levantamento veículo"],
-                ["Movimento", "Infravermelho", "Presença interna"]
+                [
+                    "Porta/Capô",
+                    "Contato mecânico",
+                    "Abertura não autorizada"
+                ],
+                [
+                    "Vidro",
+                    "Acústico/microfone",
+                    "Quebra de vidro"
+                ],
+                [
+                    "Impacto",
+                    "Acelerômetro",
+                    "Choques/vibrações"
+                ],
+                [
+                    "Inclinação",
+                    "Giroscópio",
+                    "Levantamento veículo"
+                ],
+                [
+                    "Movimento",
+                    "Infravermelho",
+                    "Presença interna"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Pode cortar combustível, inibir partida, ou bloqueiar sistemas eletrônicos. Requer procedimentos de segurança rigorosos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Alarmes e Segurança Perimetral”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistema de Alarme"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sensor detecta tentativa de roubo de rodas?",
             "options": [
-                "Sensor de porta",
-                "Sensor de vidro",
+                "Sensor de impacto",
                 "Sensor de inclinação",
-                "Sensor de impacto"
+                "Sensor de porta",
+                "Sensor de vidro"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: Sensor de inclinação. Em alarme / rastreador / segurança (“Alarmes e Segurança Perimetral”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia permite envio de alertas de alarme remotamente?",
             "options": [
+                "USB",
                 "Bluetooth",
                 "GSM/GPRS",
-                "WiFi apenas",
-                "USB"
+                "WiFi apenas"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: GSM/GPRS. Em alarme / rastreador / segurança (“Alarmes e Segurança Perimetral”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como o sistema de imobilização pode impedir o funcionamento do veículo?",
             "options": [
-                "Cortar combustível, inibir partida ou bloquear sistemas eletrônicos",
                 "Apenas emitir som",
                 "Apenas acender luzes",
+                "Cortar combustível, inibir partida ou bloquear sistemas eletrônicos",
                 "Não interfere no funcionamento"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: Cortar combustível, inibir partida ou bloquear sistemas eletrônicos. No-crank: tensão em repouso e no crank + VD nos cabos + corrente. Click não prova o motor de partida."
         }
     ]
 }

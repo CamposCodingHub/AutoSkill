@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Localização", "Considerações"],
+            "headers": [
+                "Componente",
+                "Localização",
+                "Considerações"
+            ],
             "rows": [
-                ["Módulo Principal", "Interior protegido", "Acesso para manutenção"],
-                ["Antena GPS", "Teto/dash superior", "Visibilidade céu"],
-                ["Antena GSM", "Interior ou externa", "Sinal celular"],
-                ["Sensores", "Portas/capô", "Acesso fácil"],
-                ["Fonte Alimentação", "Constante +12V", "Fusível dedicado"]
+                [
+                    "Módulo Principal",
+                    "Interior protegido",
+                    "Acesso para manutenção"
+                ],
+                [
+                    "Antena GPS",
+                    "Teto/dash superior",
+                    "Visibilidade céu"
+                ],
+                [
+                    "Antena GSM",
+                    "Interior ou externa",
+                    "Sinal celular"
+                ],
+                [
+                    "Sensores",
+                    "Portas/capô",
+                    "Acesso fácil"
+                ],
+                [
+                    "Fonte Alimentação",
+                    "Constante +12V",
+                    "Fusível dedicado"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Verifique: fix GPS, comunicação GSM, sensores, e envio de dados. Teste em diferentes condições antes da instalação final."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Instalação e Configuração”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Instalação"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a principal consideração ao instalar antena GPS?",
             "options": [
-                "Estética",
-                "Visibilidade do céu",
                 "Proximidade do motor",
-                "Cor do veículo"
+                "Cor do veículo",
+                "Visibilidade do céu",
+                "Estética"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Visibilidade do céu. Em alarme / rastreador / segurança (“Instalação e Configuração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar fonte constante de alimentação para o módulo de rastreamento?",
             "options": [
+                "Para não funcionar",
                 "Para economizar energia",
-                "Para operar mesmo com veículo desligado",
                 "Para aumentar o custo",
-                "Para não funcionar"
+                "Para operar mesmo com veículo desligado"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para operar mesmo com veículo desligado. Em alarme / rastreador / segurança (“Instalação e Configuração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que deve ser evitado ao instalar antena GPS?",
             "options": [
-                "Áreas com visibilidade do céu",
                 "Metal, vidro com metalizado e interferência eletromagnética",
-                "Locais protegidos",
-                "Áreas abertas"
+                "Áreas com visibilidade do céu",
+                "Áreas abertas",
+                "Locais protegidos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Metal, vidro com metalizado e interferência eletromagnética. Em alarme / rastreador / segurança (“Instalação e Configuração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

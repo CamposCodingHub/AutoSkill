@@ -17,13 +17,43 @@
         },
         {
             "type": "table",
-            "headers": ["Caso", "Sintomas", "Sistemas Afetados", "Solucão Integrada"],
+            "headers": [
+                "Caso",
+                "Sintomas",
+                "Sistemas Afetados",
+                "Solucão Integrada"
+            ],
             "rows": [
-                ["Falha intermitente CAN", "Múltiplos sistemas com falhas aleatórias", "ECU, BCM, painel", "Terminação CAN ruim"],
-                ["Sobreaquecimento ECU", "Desempenho reduzido quando quente", "Motor, transmissão", "Problema dissipador"],
-                ["Consumo variável", "Consumo instável sem padrão", "Injeção, ignição", "Sensor MAP com ruído"],
-                ["Comunicação perdida", "Módulos não comunicam", "Rede CAN inteira", "Curto em linha CAN-H"],
-                ["Falha cascata", "Uma falha causa outras", "Múltiplos sistemas", "Fonte alimentação instável"]
+                [
+                    "Falha intermitente CAN",
+                    "Múltiplos sistemas com falhas aleatórias",
+                    "ECU, BCM, painel",
+                    "Terminação CAN ruim"
+                ],
+                [
+                    "Sobreaquecimento ECU",
+                    "Desempenho reduzido quando quente",
+                    "Motor, transmissão",
+                    "Problema dissipador"
+                ],
+                [
+                    "Consumo variável",
+                    "Consumo instável sem padrão",
+                    "Injeção, ignição",
+                    "Sensor MAP com ruído"
+                ],
+                [
+                    "Comunicação perdida",
+                    "Módulos não comunicam",
+                    "Rede CAN inteira",
+                    "Curto em linha CAN-H"
+                ],
+                [
+                    "Falha cascata",
+                    "Uma falha causa outras",
+                    "Múltiplos sistemas",
+                    "Fonte alimentação instável"
+                ]
             ]
         },
         {
@@ -43,44 +73,114 @@
             "text": "Não hesite em consultar colegas especialistas. Problemas complexos podem beneficiar de múltiplas perspectivas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar casos práticos / laboratório aplicado a “Estudos de Caso - Problemas Complexos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Trate cada case como RO real: hipótese → teste que mata hipótese → evidência → correção → reteste. Tempo sem método é tempo perdido. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Passo",
+                "Pergunta",
+                "Saída"
+            ],
+            "rows": [
+                [
+                    "Sintoma",
+                    "O que o cliente vê?",
+                    "Reprodução"
+                ],
+                [
+                    "Hipótese",
+                    "O que explicaria?",
+                    "Lista curta"
+                ],
+                [
+                    "Teste",
+                    "O que prova/refuta?",
+                    "Número"
+                ],
+                [
+                    "Fechamento",
+                    "Validou?",
+                    "RO completo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Mudar três peças de uma vez; não registrar o que já foi testado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Uma variável por vez",
+                "Anotar resultados",
+                "Comparar com lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Problemas Complexos"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual característica define problemas complexos?",
             "options": [
-                "Sintomas claros e constantes",
                 "Sintomas intermitentes e múltiplos sistemas",
+                "Falhas visíveis facilmente",
                 "Problemas mecânicos simples",
-                "Falhas visíveis facilmente"
+                "Sintomas claros e constantes"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Sintomas intermitentes e múltiplos sistemas. Em casos práticos / laboratório (“Estudos de Caso - Problemas Complexos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é essencial para diagnóstico de problemas complexos?",
             "options": [
+                "Não é necessário ferramenta especial",
                 "Apenas chave de fenda",
-                "Osciloscópio e analisador lógico",
                 "Apenas martelo",
-                "Não é necessário ferramenta especial"
+                "Osciloscópio e analisador lógico"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Osciloscópio e analisador lógico. Em casos práticos / laboratório (“Estudos de Caso - Problemas Complexos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que consultar colegas especialistas em problemas complexos?",
             "options": [
+                "Não é necessário",
                 "Apenas para socializar",
                 "Múltiplas perspectivas podem ajudar a resolver problemas difíceis",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Múltiplas perspectivas podem ajudar a resolver problemas difíceis. Em casos práticos / laboratório (“Estudos de Caso - Problemas Complexos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

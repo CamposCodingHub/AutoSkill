@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Problema", "Sinal a Analisar", "Anomalia Característica"],
+            "headers": [
+                "Problema",
+                "Sinal a Analisar",
+                "Anomalia Característica"
+            ],
             "rows": [
-                ["Falta de cilindro", "Sinal CKP/ignição", "Pico baixo ou ausente"],
-                ["Injeção instável", "Sinal injetor", "Forma distorcida"],
-                ["Comunicação CAN", "CAN-H/L", "Ruído ou reflexões"],
-                ["Sensor MAP", "Sinal MAP", "Instável ou ruidoso"],
-                ["Alternador", "Tensão ripple", "Excesso de ondulação"]
+                [
+                    "Falta de cilindro",
+                    "Sinal CKP/ignição",
+                    "Pico baixo ou ausente"
+                ],
+                [
+                    "Injeção instável",
+                    "Sinal injetor",
+                    "Forma distorcida"
+                ],
+                [
+                    "Comunicação CAN",
+                    "CAN-H/L",
+                    "Ruído ou reflexões"
+                ],
+                [
+                    "Sensor MAP",
+                    "Sinal MAP",
+                    "Instável ou ruidoso"
+                ],
+                [
+                    "Alternador",
+                    "Tensão ripple",
+                    "Excesso de ondulação"
+                ]
             ]
         },
         {
@@ -47,44 +71,114 @@
             "value": "O diagnóstico moderno integra conhecimento eletrônico, mecânico e de software. Domine múltiplas disciplinas para resolver problemas complexos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Diagnóstico Avançado - Metodologia”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Metodologia de Diagnóstico"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo na metodologia de diagnóstico avançado?",
             "options": [
-                "Capturar sinais aleatórios",
-                "Coletar sintomas do cliente",
                 "Conectar osciloscópio",
-                "Trocar componentes suspeitos"
+                "Capturar sinais aleatórios",
+                "Trocar componentes suspeitos",
+                "Coletar sintomas do cliente"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Coletar sintomas do cliente. Em osciloscópio e formas de onda (“Diagnóstico Avançado - Metodologia”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar múltiplos canais no osciloscópio?",
             "options": [
-                "Para economizar bateria",
                 "Para relacionar diferentes sinais entre si",
-                "Para aumentar a voltagem",
-                "Para reduzir o tamanho do arquivo"
+                "Para reduzir o tamanho do arquivo",
+                "Para economizar bateria",
+                "Para aumentar a voltagem"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para relacionar diferentes sinais entre si. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual anomalia característica indica falta de cilindro?",
             "options": [
-                "Sinal CKP com pico baixo ou ausente",
                 "Sinal MAP muito alto",
                 "Sinal CAN perfeito",
+                "Sinal CKP com pico baixo ou ausente",
                 "Tensão ripple normal"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: Sinal CKP com pico baixo ou ausente. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

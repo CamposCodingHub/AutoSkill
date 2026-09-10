@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Área", "Tamanho Mínimo", "Equipamentos Essenciais"],
+            "headers": [
+                "Área",
+                "Tamanho Mínimo",
+                "Equipamentos Essenciais"
+            ],
             "rows": [
-                ["Box Diagnóstico", "3x4m", "Scanner, computador, ferramentas básicas"],
-                ["Box Reparo Leve", "3x5m", "Ferramentas completas, iluminação"],
-                ["Box Reporo Pesado", "4x6m", "Ponte rolante, ferramentas pesadas"],
-                ["Área Lavagem", "3x3m", "Lavadora, aspirador, produtos"],
-                ["Estoque Peças", "2x3m", "Prateleiras, sistema controle"]
+                [
+                    "Box Diagnóstico",
+                    "3x4m",
+                    "Scanner, computador, ferramentas básicas"
+                ],
+                [
+                    "Box Reparo Leve",
+                    "3x5m",
+                    "Ferramentas completas, iluminação"
+                ],
+                [
+                    "Box Reporo Pesado",
+                    "4x6m",
+                    "Ponte rolante, ferramentas pesadas"
+                ],
+                [
+                    "Área Lavagem",
+                    "3x3m",
+                    "Lavadora, aspirador, produtos"
+                ],
+                [
+                    "Estoque Peças",
+                    "2x3m",
+                    "Prateleiras, sistema controle"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Bancos ajustáveis, cadeiras confortáveis, e posturas corretas reduzem fadiga e aumentam produtividade."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar gestão de oficina aplicado a “Organização do Espaço Físico”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "RO claro: sintoma → testes → evidências → peça → validação. Técnico excelente documenta; retrabalho come margem. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Benefício",
+                "KPI"
+            ],
+            "rows": [
+                [
+                    "Checklist diagnóstico",
+                    "Menos chute",
+                    "Retrabalho %"
+                ],
+                [
+                    "Foto de medições",
+                    "Prova para cliente",
+                    "Aprovação orçamento"
+                ],
+                [
+                    "Tempo por RO",
+                    "Produtividade",
+                    "Horas faturáveis"
+                ],
+                [
+                    "Estoque crítico",
+                    "Menos espera",
+                    "Giro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Orçar peça antes da evidência; não validar após o reparo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "RO padronizado",
+                "Evidência anexada",
+                "Teste final registrado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Layout de Oficina"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a iluminação mínima recomendada para áreas de trabalho?",
             "options": [
-                "200 lux",
-                "300 lux",
                 "500 lux",
-                "1000 lux"
+                "1000 lux",
+                "300 lux",
+                "200 lux"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 500 lux. Em gestão de oficina (“Organização do Espaço Físico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é o fluxo lógico ideal para veículos na oficina?",
             "options": [
+                "Não há fluxo definido",
                 "Saída → Reparo → Diagnóstico → Entrada",
-                "Entrada → Diagnóstico → Reparo → Teste → Saída",
                 "Reparo → Diagnóstico → Teste → Entrada",
-                "Não há fluxo definido"
+                "Entrada → Diagnóstico → Reparo → Teste → Saída"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Entrada → Diagnóstico → Reparo → Teste → Saída. Em gestão de oficina (“Organização do Espaço Físico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a ergonomia é importante na oficina?",
             "options": [
-                "Apenas estética",
                 "Reduz fadiga e aumenta produtividade",
-                "Aumenta o custo",
-                "Não é importante"
+                "Apenas estética",
+                "Não é importante",
+                "Aumenta o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Reduz fadiga e aumenta produtividade. Em gestão de oficina (“Organização do Espaço Físico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

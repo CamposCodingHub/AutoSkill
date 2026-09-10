@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Falha Comum"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Falha Comum"
+            ],
             "rows": [
-                ["Microcontrolador", "Processamento principal", "Overclock/overheat"],
-                ["Memória Flash", "Armazenamento firmware", "Corrupção de dados"],
-                ["Drivers", "Controle de potência", "Queima por curto"],
-                ["Reguladores", "Alimentação interna", "Instabilidade de tensão"]
+                [
+                    "Microcontrolador",
+                    "Processamento principal",
+                    "Overclock/overheat"
+                ],
+                [
+                    "Memória Flash",
+                    "Armazenamento firmware",
+                    "Corrupção de dados"
+                ],
+                [
+                    "Drivers",
+                    "Controle de potência",
+                    "Queima por curto"
+                ],
+                [
+                    "Reguladores",
+                    "Alimentação interna",
+                    "Instabilidade de tensão"
+                ]
             ]
         },
         {
@@ -46,44 +66,115 @@
             "value": "O profissional do futuro precis dominar eletrônica, redes, programação e diagnóstico avançado para manter veículos cada vez mais complexos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “ECU - Revisão Geral”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise Completa da ECU"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tendência está moldando o futuro das ECUs modernas?",
             "options": [
+                "Uso apenas de 8 bits",
                 "Retorno a sistemas mecânicos",
                 "Conectividade e aprendizado de máquina",
-                "Eliminação de sensores",
-                "Uso apenas de 8 bits"
+                "Eliminação de sensores"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Conectividade e aprendizado de máquina. Em ECU e estratégias (“ECU - Revisão Geral”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia está revolucionando o processamento em ECUs modernas?",
             "options": [
+                "Transistores de válvula",
                 "Processadores de 8 bits",
                 "Arquitetura multicore e GPUs",
-                "Transistores de válvula",
                 "Sistemas puramente analógicos"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Arquitetura multicore e GPUs. Em ECU e estratégias (“ECU - Revisão Geral”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como a IA está sendo aplicada em sistemas automotivos modernos?",
             "options": [
-                "Apenas para controle de áudio",
                 "Para prever falhas e otimizar performance em tempo real",
                 "Para substituir todos os sensores",
-                "Apenas para sistemas de entretenimento"
+                "Apenas para sistemas de entretenimento",
+                "Apenas para controle de áudio"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para prever falhas e otimizar performance em tempo real. Em ECU e estratégias (“ECU - Revisão Geral”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

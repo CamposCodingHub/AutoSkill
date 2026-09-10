@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Estratégia", "Implementação", "Resultados"],
+            "headers": [
+                "Estratégia",
+                "Implementação",
+                "Resultados"
+            ],
             "rows": [
-                ["CRM", "Sistema de gestão de clientes", "Organização e acompanhamento"],
-                ["Comunicação", "WhatsApp, email, SMS", "Engajamento constante"],
-                ["Programa Fidelidade", "Pontos, descontos", "Retenção de clientes"],
-                ["Serviço Pós-Venda", "Follow-up, satisfação", "Indicações"],
-                ["Personalização", "Ofertas específicas", "Relevância e valor"]
+                [
+                    "CRM",
+                    "Sistema de gestão de clientes",
+                    "Organização e acompanhamento"
+                ],
+                [
+                    "Comunicação",
+                    "WhatsApp, email, SMS",
+                    "Engajamento constante"
+                ],
+                [
+                    "Programa Fidelidade",
+                    "Pontos, descontos",
+                    "Retenção de clientes"
+                ],
+                [
+                    "Serviço Pós-Venda",
+                    "Follow-up, satisfação",
+                    "Indicações"
+                ],
+                [
+                    "Personalização",
+                    "Ofertas específicas",
+                    "Relevância e valor"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Ofereça experiência superior: conforto na espera, transparência, e garantia estendida."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar empreendedorismo de oficina elétrica aplicado a “Gestão de Clientes e Fidelização”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Preço justo exige método: menos retrabalho, orçamento com evidência, especialização. Elétrica bem feita tem margem — chute não. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Frente",
+                "Ação",
+                "Métrica"
+            ],
+            "rows": [
+                [
+                    "Comercial",
+                    "Orçar após diagnóstico",
+                    "Taxa de aprovação"
+                ],
+                [
+                    "Operação",
+                    "Checklist padrão",
+                    "Retrabalho"
+                ],
+                [
+                    "Financeiro",
+                    "Hora técnica real",
+                    "Margem"
+                ],
+                [
+                    "Reputação",
+                    "Garantia com evidência",
+                    "Indicações"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Aceitar “olha aí rapidinho” sem RO; trabalhar no prejuízo por insegurança técnica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir escopo",
+                "Cobrar diagnóstico",
+                "Entregar validação"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Gestão de Clientes"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual métrica mede disposição de indicar a oficina?",
             "options": [
-                "Taxa de retorno",
+                "Número de clientes novos",
                 "Net Promoter Score (NPS)",
                 "Tempo médio de serviço",
-                "Número de clientes novos"
+                "Taxa de retorno"
             ],
-            "correct": 1
+            "correct": 1,
+            "explanation": "Resposta: Net Promoter Score (NPS). Em empreendedorismo de oficina elétrica (“Gestão de Clientes e Fidelização”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual sistema ajuda na organização e acompanhamento de clientes?",
             "options": [
-                "Apenas planilha Excel",
-                "CRM (Customer Relationship Management)",
+                "Apenas WhatsApp",
                 "Apenas bloco de notas",
-                "Apenas WhatsApp"
+                "Apenas planilha Excel",
+                "CRM (Customer Relationship Management)"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: CRM (Customer Relationship Management). Em empreendedorismo de oficina elétrica (“Gestão de Clientes e Fidelização”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que o serviço pós-venda é importante?",
             "options": [
-                "Apenas burocracia",
                 "Gera satisfação, indicações e retenção de clientes",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Gera satisfação, indicações e retenção de clientes. Em empreendedorismo de oficina elétrica (“Gestão de Clientes e Fidelização”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

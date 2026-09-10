@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Tecnologia", "Segurança"],
+            "headers": [
+                "Tipo",
+                "Tecnologia",
+                "Segurança"
+            ],
             "rows": [
-                ["Fix Code", "Código fixo", "Baixa"],
-                ["Crypto", "Criptografia rolling", "Média"],
-                ["RFID", "Radiofrequência", "Baixa"],
-                ["Smart Key", "Cripto + rolling", "Alta"]
+                [
+                    "Fix Code",
+                    "Código fixo",
+                    "Baixa"
+                ],
+                [
+                    "Crypto",
+                    "Criptografia rolling",
+                    "Média"
+                ],
+                [
+                    "RFID",
+                    "Radiofrequência",
+                    "Baixa"
+                ],
+                [
+                    "Smart Key",
+                    "Cripto + rolling",
+                    "Alta"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Perda de chaves, falha no transponder, problemas na antena, e dessincronização entre componentes."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar flash / coding / calibração aplicado a “Chaves Imobilizadoras”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sequência segura: backup → checksum → tensão estável → cabo bom → gravar → verificar comunicação/funções. Sem fonte, brick é questão de tempo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Passo",
+                "Critério",
+                "Falha se pular"
+            ],
+            "rows": [
+                [
+                    "Backup",
+                    "Arquivo + hash",
+                    "Sem volta"
+                ],
+                [
+                    "Checksum",
+                    "Bate com esperado",
+                    "Arquivo errado"
+                ],
+                [
+                    "Tensão",
+                    "≥13,5 V tipicamente",
+                    "Abort mid-flash"
+                ],
+                [
+                    "Verify",
+                    "Com + DTCs",
+                    "Entrega incompleta"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Flash em bateria fraca; arquivo de outro VIN/hw."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Ferramenta adequada",
+                "Energia estável",
+                "Validação pós"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Sistema Imobilizador"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia oferece maior segurança em sistemas imobilizadores?",
             "options": [
-                "Fix Code",
                 "Crypto rolling code",
                 "RFID básico",
-                "Código simples"
+                "Código simples",
+                "Fix Code"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Crypto rolling code. Em flash / coding / calibração (“Chaves Imobilizadoras”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que o transponder na chave faz?",
             "options": [
+                "Apenas liga o rádio",
                 "Apenas emite luz",
-                "Responde ao desafio da ECU com código único",
                 "Apenas abre a porta",
-                "Apenas liga o rádio"
+                "Responde ao desafio da ECU com código único"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Responde ao desafio da ECU com código único. Em flash / coding / calibração (“Chaves Imobilizadoras”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Quais componentes compõem o sistema imobilizador?",
             "options": [
-                "Apenas a chave",
                 "Chave com transponder, módulo imobilizador, antena de leitura e ECU",
-                "Apenas a bateria",
-                "Apenas o motor"
+                "Apenas o motor",
+                "Apenas a chave",
+                "Apenas a bateria"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Chave com transponder, módulo imobilizador, antena de leitura e ECU. Em flash / coding / calibração (“Chaves Imobilizadoras”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

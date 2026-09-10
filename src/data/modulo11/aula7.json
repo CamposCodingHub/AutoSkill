@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Causa Elétrica Provável", "Teste"],
+            "headers": [
+                "Sintoma",
+                "Causa Elétrica Provável",
+                "Teste"
+            ],
             "rows": [
-                ["Compressor não liga", "Relé, fusível, embreagem", "Testar alimentação 12V"],
-                ["Cicla rápido", "Sensor evaporador, pressostato", "Verificar temperaturas"],
-                ["Ar não frio", "Embreagem deslizando, baixa pressão", "Testar corrente da embreagem"],
-                ["Ventilador não funciona", "Resistor, motor, módulo", "Testar alimentação do motor"]
+                [
+                    "Compressor não liga",
+                    "Relé, fusível, embreagem",
+                    "Testar alimentação 12V"
+                ],
+                [
+                    "Cicla rápido",
+                    "Sensor evaporador, pressostato",
+                    "Verificar temperaturas"
+                ],
+                [
+                    "Ar não frio",
+                    "Embreagem deslizando, baixa pressão",
+                    "Testar corrente da embreagem"
+                ],
+                [
+                    "Ventilador não funciona",
+                    "Resistor, motor, módulo",
+                    "Testar alimentação do motor"
+                ]
             ]
         },
         {
@@ -46,44 +66,114 @@
             "value": "Após reparos, execute procedimentos de recalibração e aprendizado. Sistemas modernos precisam 'aprender' posições e adaptativos após intervenções."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Diagnóstico Elétrico do A/C”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise de Diagnóstico A/C"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo no diagnóstico de compressor que não liga?",
             "options": [
-                "Trocar compressor",
-                "Verificar fusível e relé A/C",
+                "Testar sensor de temperatura",
                 "Adicionar refrigerante",
-                "Testar sensor de temperatura"
+                "Trocar compressor",
+                "Verificar fusível e relé A/C"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Verificar fusível e relé A/C. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         },
         {
             "type": "quiz",
             "question": "Qual é a resistência típica da embreagem do compressor A/C?",
             "options": [
-                "0.5-1Ω",
                 "2-5Ω",
-                "10-15Ω",
-                "20-30Ω"
+                "20-30Ω",
+                "0.5-1Ω",
+                "10-15Ω"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2-5Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "O que causa o ciclo rápido do compressor (liga e desliga frequentemente)?",
             "options": [
+                "Ventilador muito rápido",
                 "Excesso de refrigerante",
                 "Sensor do evaporador ou pressostato com falha",
-                "Ventilador muito rápido",
                 "Temperatura muito baixa externa"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Sensor do evaporador ou pressostato com falha. Em A/C automotivo elétrico (“Diagnóstico Elétrico do A/C”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

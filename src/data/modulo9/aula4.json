@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Memória", "Função", "Volatilidade", "Velocidade"],
+            "headers": [
+                "Memória",
+                "Função",
+                "Volatilidade",
+                "Velocidade"
+            ],
             "rows": [
-                ["ROM", "Firmware base", "Não volátil", "Média"],
-                ["Flash/EEPROM", "Calibrações, adaptativos", "Não volátil", "Lenta escrita"],
-                ["RAM", "Dados temporários", "Volátil", "Rápida"],
-                ["NVRAM", "Códigos de falha", "Não volátil", "Média"]
+                [
+                    "ROM",
+                    "Firmware base",
+                    "Não volátil",
+                    "Média"
+                ],
+                [
+                    "Flash/EEPROM",
+                    "Calibrações, adaptativos",
+                    "Não volátil",
+                    "Lenta escrita"
+                ],
+                [
+                    "RAM",
+                    "Dados temporários",
+                    "Volátil",
+                    "Rápida"
+                ],
+                [
+                    "NVRAM",
+                    "Códigos de falha",
+                    "Não volátil",
+                    "Média"
+                ]
             ]
         },
         {
@@ -42,44 +67,115 @@
             "text": "Sempre faça backup da calibração original antes de qualquer reprogramação. Perder a calibração original pode impossibilitar retorno."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Memórias e Calibração”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Memória"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Onde a ECU armazena valores adaptativos que devem ser mantidos após desligar?",
             "options": [
+                "Cache",
                 "RAM",
                 "ROM",
-                "EEPROM/Flash",
-                "Cache"
+                "EEPROM/Flash"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: EEPROM/Flash. Em ECU e estratégias (“Memórias e Calibração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que acontece com os valores adaptativos quando a bateria é desconectada?",
             "options": [
-                "São mantidos na ROM",
                 "Podem ser perdidos se não forem salvos na EEPROM",
+                "São mantidos na ROM",
                 "São automaticamente recalculados ao reconectar",
                 "Não afetam o funcionamento do veículo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Podem ser perdidos se não forem salvos na EEPROM. Em ECU e estratégias (“Memórias e Calibração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função dos valores adaptativos da ECU?",
             "options": [
-                "Controlar a temperatura do motor",
                 "Compensar variações do motor e envelhecimento de componentes",
+                "Controlar o sistema de áudio",
                 "Regular a pressão dos pneus",
-                "Controlar o sistema de áudio"
+                "Controlar a temperatura do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Compensar variações do motor e envelhecimento de componentes. Em ECU e estratégias (“Memórias e Calibração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

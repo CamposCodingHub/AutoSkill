@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Falha Comum"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Falha Comum"
+            ],
             "rows": [
-                ["Bobina da Embreagem", "Gera campo magnético", "Circuito aberto/curto"],
-                ["Placa de Pressão", "Transmite força ao polia", "Desgaste, superaquecimento"],
-                ["Rolamento do Compressor", "Suporta eixo rotativo", "Ruído, falha por falta de óleo"],
-                ["Válvula de Expansão", "Controla fluxo de refrigerante", "Obstrução, congelamento"]
+                [
+                    "Bobina da Embreagem",
+                    "Gera campo magnético",
+                    "Circuito aberto/curto"
+                ],
+                [
+                    "Placa de Pressão",
+                    "Transmite força ao polia",
+                    "Desgaste, superaquecimento"
+                ],
+                [
+                    "Rolamento do Compressor",
+                    "Suporta eixo rotativo",
+                    "Ruído, falha por falta de óleo"
+                ],
+                [
+                    "Válvula de Expansão",
+                    "Controla fluxo de refrigerante",
+                    "Obstrução, congelamento"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Verifique resistência da bobina (2-5Ω), ruído do rolamento, e funcionamento da embreagem com testes de ativação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Compressor e Embreagem”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise do Compressor"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "O que controla o acoplamento do compressor ao motor?",
             "options": [
-                "Válvula termostática",
-                "Embreagem eletromagnética",
                 "Sensor de temperatura",
-                "Pressostato de alta"
+                "Pressostato de alta",
+                "Embreagem eletromagnética",
+                "Válvula termostática"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Embreagem eletromagnética. Em A/C automotivo elétrico (“Compressor e Embreagem”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função da embreagem do compressor de AC?",
             "options": [
-                "Controlar a temperatura do evaporador",
-                "Ligar e desligar o compressor conforme necessário",
+                "Controlar a velocidade do ventilador",
                 "Regular a pressão do refrigerante",
-                "Controlar a velocidade do ventilador"
+                "Controlar a temperatura do evaporador",
+                "Ligar e desligar o compressor conforme necessário"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Ligar e desligar o compressor conforme necessário. Em A/C automotivo elétrico (“Compressor e Embreagem”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como você testa a embreagem do compressor com multímetro?",
             "options": [
+                "Medindo a corrente de operação",
                 "Medindo a resistência da bobina",
                 "Verificando a tensão de alimentação",
-                "Testando a continuidade com o motor ligado",
-                "Medindo a corrente de operação"
+                "Testando a continuidade com o motor ligado"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Medindo a resistência da bobina. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

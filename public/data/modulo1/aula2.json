@@ -49,60 +49,124 @@
             "text": "Medindo a queda de tensão (V) e conhecendo a corrente (I), você calcula a resistência extra indesejada: R = V / I. Isso ajuda a localizar mau contato ou oxidação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Lei de Ohm”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "De acordo com a Lei de Ohm, se a tensão aplicada a um circuito dobra e a resistência permanece constante, o que acontece com a corrente?",
             "options": [
-                "A corrente cai pela metade",
                 "A corrente dobra",
                 "A corrente permanece a mesma",
                 "A corrente quadruplica",
+                "A corrente cai pela metade",
                 "A corrente zera"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: A corrente dobra. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Um farol de 60W é projetado para 12V. Qual a corrente aproximada que ele consome em operação normal?",
             "options": [
-                "0,2 A",
-                "5 A",
-                "12 A",
+                "60 A",
                 "20 A",
-                "60 A"
+                "12 A",
+                "0,2 A",
+                "5 A"
             ],
-            "correct": 1
+            "correct": 4,
+            "explanation": "Resposta: 5 A. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Você mede uma queda de tensão de 1,2V em um cabo que alimenta um motor de vidro elétrico que consome 8A. Qual a resistência extra (indesejada) nesse cabo?",
             "options": [
-                "0,067 Ω",
-                "0,15 Ω",
                 "0,96 Ω",
                 "9,6 Ω",
-                "1,2 Ω"
+                "1,2 Ω",
+                "0,067 Ω",
+                "0,15 Ω"
             ],
-            "correct": 1
+            "correct": 4,
+            "explanation": "Resposta: 0,15 Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "simulator",
             "name": "OhmLawCalculator",
             "config": {
-                "title": "Calculadora da Lei de Ohm",
-                "modes": [
-                    "calcularV",
-                    "calcularI",
-                    "calcularR"
-                ]
+                "title": "Lei de Ohm aplicada ao veículo"
             }
         },
         {
             "type": "simulator",
-            "name": "VoltageDropSimulator",
+            "name": "OhmLawCalculator",
             "config": {
-                "title": "Simulador de Queda de Tensão",
-                "defaultResistance": 0.1,
-                "defaultCurrent": 5
+                "title": "Lei de Ohm aplicada ao veículo"
             }
         }
     ]

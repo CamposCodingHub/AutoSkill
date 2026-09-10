@@ -60,37 +60,108 @@
             "text": "Nunca conecte uma ponta de prova comum ao secundário da bobina de ignição (pode chegar a 40.000V). Use ponta de prova específica para alta tensão (10x)."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Introdução ao Osciloscópio”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "Qual a principal vantagem do osciloscópio sobre o multímetro para diagnosticar um sensor CKP com falha intermitente?",
             "options": [
-                "O osciloscópio é mais barato",
-                "O osciloscópio mostra a forma de onda ao longo do tempo, capturando eventos rápidos",
                 "O multímetro não mede tensão em sensores Hall",
-                "O osciloscópio não precisa de alimentação"
+                "O osciloscópio não precisa de alimentação",
+                "O osciloscópio mostra a forma de onda ao longo do tempo, capturando eventos rápidos",
+                "O osciloscópio é mais barato"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: O osciloscópio mostra a forma de onda ao longo do tempo, capturando eventos rápidos. Em fundamentos elétricos (“Introdução ao Osciloscópio”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual configuração inicial do osciloscópio é recomendada para analisar um sensor de posição do virabrequim (CKP)?",
             "options": [
-                "Volts/div: 1V, Tempo/div: 1s, Trigger: Auto",
-                "Volts/div: 5V, Tempo/div: 10ms, Trigger: Edge",
                 "Volts/div: 20V, Tempo/div: 100μs, Trigger: Single",
-                "Volts/div: 0.1V, Tempo/div: 1min, Trigger: Normal"
+                "Volts/div: 1V, Tempo/div: 1s, Trigger: Auto",
+                "Volts/div: 0.1V, Tempo/div: 1min, Trigger: Normal",
+                "Volts/div: 5V, Tempo/div: 10ms, Trigger: Edge"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Volts/div: 5V, Tempo/div: 10ms, Trigger: Edge. Em fundamentos elétricos (“Introdução ao Osciloscópio”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que é perigoso usar pontas de prova comuns no secundário da bobina de ignição?",
             "options": [
-                "Porque pode causar curto-circuito na bobina",
                 "Porque a alta tensão (até 40.000V) pode danificar o osciloscópio e o operador",
-                "Porque interfere com o sinal do sensor CKP",
-                "Porque consome muita energia do sistema"
+                "Porque pode causar curto-circuito na bobina",
+                "Porque consome muita energia do sistema",
+                "Porque interfere com o sinal do sensor CKP"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Porque a alta tensão (até 40.000V) pode danificar o osciloscópio e o operador. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         }
     ]
 }

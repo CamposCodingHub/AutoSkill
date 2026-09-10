@@ -17,13 +17,43 @@
         },
         {
             "type": "table",
-            "headers": ["Risco", "Probabilidade", "Severidade", "Controle"],
+            "headers": [
+                "Risco",
+                "Probabilidade",
+                "Severidade",
+                "Controle"
+            ],
             "rows": [
-                ["Choque Elétrico", "Baixa", "Alta", "EPI, procedimentos"],
-                ["Arco Elétrico", "Média", "Média", "Proteção facial, treinamento"],
-                ["Queda", "Baixa", "Média", "Guarda-corpos, ordem"],
-                ["Incêndio", "Baixa", "Alta", "Extintores, procedimentos"],
-                ["Ergonomia", "Alta", "Baixa", "Ajuste posto, pausas"]
+                [
+                    "Choque Elétrico",
+                    "Baixa",
+                    "Alta",
+                    "EPI, procedimentos"
+                ],
+                [
+                    "Arco Elétrico",
+                    "Média",
+                    "Média",
+                    "Proteção facial, treinamento"
+                ],
+                [
+                    "Queda",
+                    "Baixa",
+                    "Média",
+                    "Guarda-corpos, ordem"
+                ],
+                [
+                    "Incêndio",
+                    "Baixa",
+                    "Alta",
+                    "Extintores, procedimentos"
+                ],
+                [
+                    "Ergonomia",
+                    "Alta",
+                    "Baixa",
+                    "Ajuste posto, pausas"
+                ]
             ]
         },
         {
@@ -43,44 +73,114 @@
             "text": "Investigue incidentes, aprenda com erros, e atualize procedimentos regularmente."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança de oficina aplicado a “Gestão de Riscos e Prevenção”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "EPI, ordem no posto, isolamento de HV, e não “testar curto com fio grosso”. Segurança é competência técnica, não burocracia. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Risco",
+                "Controle",
+                "Exemplo"
+            ],
+            "rows": [
+                [
+                    "Choque/arco",
+                    "PPE/LOTO",
+                    "HV"
+                ],
+                [
+                    "Incêndio",
+                    "Fusível correto",
+                    "Aftermarket"
+                ],
+                [
+                    "Química",
+                    "EPIs bateria",
+                    "Ácido/térmica"
+                ],
+                [
+                    "Ergonomia",
+                    "Apoios/cavaletes",
+                    "Queda de veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Anel metálico em bancada energizada; pular espera de airbag."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Avaliar risco",
+                "Preparar EPI",
+                "Procedimento escrito quando HV"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Gestão de Riscos"
+                "title": "Checklist de segurança HV / LOTO"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo na gestão de riscos?",
             "options": [
-                "Implementar controles",
-                "Identificar perigos",
                 "Monitorar eficácia",
-                "Melhorar procedimentos"
+                "Implementar controles",
+                "Melhorar procedimentos",
+                "Identificar perigos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Identificar perigos. Em segurança de oficina (“Gestão de Riscos e Prevenção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é usada para priorizar controles?",
             "options": [
-                "Apenas intuição",
                 "Matriz de riscos (probabilidade x severidade)",
-                "Apenas sorte",
-                "Não é necessário"
+                "Apenas intuição",
+                "Não é necessário",
+                "Apenas sorte"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Matriz de riscos (probabilidade x severidade). Em segurança de oficina (“Gestão de Riscos e Prevenção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que investigar incidentes?",
             "options": [
-                "Apenas burocracia",
                 "Aprender com erros e atualizar procedimentos",
                 "Aumentar o custo",
+                "Apenas burocracia",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Aprender com erros e atualizar procedimentos. Em segurança de oficina (“Gestão de Riscos e Prevenção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

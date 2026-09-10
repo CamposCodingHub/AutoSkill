@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Estratégia", "Ações", "Resultados"],
+            "headers": [
+                "Estratégia",
+                "Ações",
+                "Resultados"
+            ],
             "rows": [
-                ["Networking", "Eventos, associações", "Contatos profissionais"],
-                ["Currículo", "Portfólio integrado", "Destaque técnico"],
-                ["Digital", "LinkedIn, especializado", "Visibilidade online"],
-                ["Especialização", "Nichos específicos", "Maior valor"]
+                [
+                    "Networking",
+                    "Eventos, associações",
+                    "Contatos profissionais"
+                ],
+                [
+                    "Currículo",
+                    "Portfólio integrado",
+                    "Destaque técnico"
+                ],
+                [
+                    "Digital",
+                    "LinkedIn, especializado",
+                    "Visibilidade online"
+                ],
+                [
+                    "Especialização",
+                    "Nichos específicos",
+                    "Maior valor"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Invista em aprendizado constante. O mercado evolui rapidamente."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Preparação para Mercado”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Preparação de Mercado"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual estratégia mais eficaz para destacar no mercado?",
             "options": [
-                "Apenas certificações",
                 "Especialização em nichos específicos",
-                "Cursos genéricos",
-                "Esperar oportunidades"
+                "Apenas certificações",
+                "Esperar oportunidades",
+                "Cursos genéricos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Especialização em nichos específicos. Em certificação / ASE mindset (“Preparação para Mercado”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual plataforma é importante para visibilidade profissional?",
             "options": [
+                "Apenas Instagram",
                 "Apenas Facebook",
                 "LinkedIn com perfil especializado",
-                "Apenas Instagram",
                 "Nenhuma plataforma"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: LinkedIn com perfil especializado. Em certificação / ASE mindset (“Preparação para Mercado”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que investir em aprendizado constante?",
             "options": [
-                "Apenas burocracia",
-                "O mercado evolui rapidamente e exige atualização",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Não é necessário",
+                "O mercado evolui rapidamente e exige atualização",
+                "Apenas burocracia"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: O mercado evolui rapidamente e exige atualização. Em certificação / ASE mindset (“Preparação para Mercado”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

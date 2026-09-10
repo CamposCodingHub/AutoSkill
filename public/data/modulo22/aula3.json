@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Temperatura Máxima", "Tempo Máximo", "Cuidados"],
+            "headers": [
+                "Componente",
+                "Temperatura Máxima",
+                "Tempo Máximo",
+                "Cuidados"
+            ],
             "rows": [
-                ["Componentes SMD", "250°C", "3-5 segundos", "Evitar sobreaquecimento"],
-                ["Conectores Plástico", "200°C", "2-3 segundos", "Proteger plástico"],
-                ["Fios Finos", "300°C", "1-2 segundos", "Isolar rapidamente"],
-                ["ECU/Módulos", "220°C", "2-4 segundos", "Usar fluxo mínimo"]
+                [
+                    "Componentes SMD",
+                    "250°C",
+                    "3-5 segundos",
+                    "Evitar sobreaquecimento"
+                ],
+                [
+                    "Conectores Plástico",
+                    "200°C",
+                    "2-3 segundos",
+                    "Proteger plástico"
+                ],
+                [
+                    "Fios Finos",
+                    "300°C",
+                    "1-2 segundos",
+                    "Isolar rapidamente"
+                ],
+                [
+                    "ECU/Módulos",
+                    "220°C",
+                    "2-4 segundos",
+                    "Usar fluxo mínimo"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Verifique com microscópio: brilho, continuidade, e ausência de pontes de solda."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar solda e emendas aplicado a “Soldagem de Componentes Eletrônicos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Emenda profissional: limpeza, mecânica firme, solda adequada quando indicada, isolação e alívio de tração. Emenda fria = falha intermitente futura. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Bom",
+                "Ruim"
+            ],
+            "rows": [
+                [
+                    "Crimp",
+                    "Ferramenta certa",
+                    "Alicate “amassa”"
+                ],
+                [
+                    "Solda",
+                    "Fluxo limpo",
+                    "Frio/excesso"
+                ],
+                [
+                    "Isolação",
+                    "Termo + adesivo",
+                    "Fita frouxa"
+                ],
+                [
+                    "Local",
+                    "Longe de calor/água",
+                    "No assoalho aberto"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Torcer fio e cobrir com fita; soldar CAN sem padrão OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Preparar condutor",
+                "União mecânica",
+                "Isolar e testar sob carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Soldagem de Componentes"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a temperatura máxima para componentes SMD?",
             "options": [
-                "200°C",
-                "250°C",
+                "350°C",
                 "300°C",
-                "350°C"
+                "200°C",
+                "250°C"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 250°C. Em solda e emendas (“Soldagem de Componentes Eletrônicos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual o tempo máximo de exposição ao calor para conectores de plástico?",
             "options": [
-                "5-10 segundos",
                 "2-3 segundos",
-                "15-20 segundos",
-                "30-60 segundos"
+                "30-60 segundos",
+                "5-10 segundos",
+                "15-20 segundos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2-3 segundos. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que usar aterramento estático ao soldar componentes eletrônicos?",
             "options": [
+                "Aumentar o custo",
                 "Apenas estética",
                 "Prevenir danos por descarga eletrostática",
-                "Aumentar o custo",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Prevenir danos por descarga eletrostática. Meça após sleep. Desconectar a bateria pode mascarar o módulo. Isolar por fusível ou mV no fusível."
         }
     ]
 }

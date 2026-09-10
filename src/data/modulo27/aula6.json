@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Componentes Principais", "Complexidade"],
+            "headers": [
+                "Tipo",
+                "Componentes Principais",
+                "Complexidade"
+            ],
             "rows": [
-                ["Conversão Completa", "Motor EV, bateria HV, inversor", "Máxima"],
-                ["Híbrido", "Motor ICE + motor EV", "Alta"],
-                ["Motor Elétrico", "Motor EV, transmissão", "Média"],
-                ["Conversão Parcial", "Componentes específicos", "Baixa"]
+                [
+                    "Conversão Completa",
+                    "Motor EV, bateria HV, inversor",
+                    "Máxima"
+                ],
+                [
+                    "Híbrido",
+                    "Motor ICE + motor EV",
+                    "Alta"
+                ],
+                [
+                    "Motor Elétrico",
+                    "Motor EV, transmissão",
+                    "Média"
+                ],
+                [
+                    "Conversão Parcial",
+                    "Componentes específicos",
+                    "Baixa"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Workshops especializados, consultoria em conversões, e desenvolvimento de kits de conversão."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Conversões Elétricas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Conversões Elétricas"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de conversão é o mais complexo?",
             "options": [
-                "Conversão completa",
                 "Híbrido",
+                "Conversão parcial",
                 "Motor elétrico",
-                "Conversão parcial"
+                "Conversão completa"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Conversão completa. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Qual componente é essencial em conversão completa?",
             "options": [
-                "Apenas motor elétrico",
-                "Motor EV, bateria HV e inversor",
                 "Apenas bateria",
-                "Apenas transmissão"
+                "Apenas motor elétrico",
+                "Apenas transmissão",
+                "Motor EV, bateria HV e inversor"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Motor EV, bateria HV e inversor. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Por que a homologação é importante em conversões elétricas?",
             "options": [
-                "Apenas burocracia",
                 "Garante conformidade legal e segurança do veículo",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Não é necessário",
+                "Apenas burocracia",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Garante conformidade legal e segurança do veículo. Em nichos e especialização (“Conversões Elétricas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

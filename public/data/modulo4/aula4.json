@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Sintomas Falha"
+            ],
             "rows": [
-                ["Rotor", "Campo magnético", "Sem carga, luz bateria"],
-                ["Estator", "Geração AC", "Baixa saída, ruído"],
-                ["Regulador", "Controla tensão", "Sobrecarga/subcarga"],
-                ["Diodos", "Retificação AC→DC", "Ripple excessivo, carga fraca"]
+                [
+                    "Rotor",
+                    "Campo magnético",
+                    "Sem carga, luz bateria"
+                ],
+                [
+                    "Estator",
+                    "Geração AC",
+                    "Baixa saída, ruído"
+                ],
+                [
+                    "Regulador",
+                    "Controla tensão",
+                    "Sobrecarga/subcarga"
+                ],
+                [
+                    "Diodos",
+                    "Retificação AC→DC",
+                    "Ripple excessivo, carga fraca"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Verifique correias, conexões, e limpeza regularmente. Teste anualmente para prevenção."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Alternador e Sistema de Carga”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Alternador"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a tensão normal de operação do alternador?",
             "options": [
+                "10.5-11.5V",
                 "12.0-12.6V",
                 "13.8-14.8V",
-                "15.0-16.0V",
-                "10.5-11.5V"
+                "15.0-16.0V"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 13.8-14.8V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "O que indica uma tensão de alternador acima de 15V?",
             "options": [
-                "Alternador funcionando perfeitamente",
                 "Regulador de tensão com defeito (sobrecarga)",
                 "Bateria muito fraca",
+                "Alternador funcionando perfeitamente",
                 "Sistema start-stop ativo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Regulador de tensão com defeito (sobrecarga). Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do regulador de tensão no alternador?",
             "options": [
-                "Controlar a rotação do alternador",
                 "Manter a tensão de saída constante",
                 "Proteger contra curtos-circuitos",
-                "Melhorar a eficiência energética"
+                "Melhorar a eficiência energética",
+                "Controlar a rotação do alternador"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Manter a tensão de saída constante. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

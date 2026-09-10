@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Função BMS", "Limite Típico", "Ação de Proteção"],
+            "headers": [
+                "Função BMS",
+                "Limite Típico",
+                "Ação de Proteção"
+            ],
             "rows": [
-                ["Tensão Célula", "2.5-4.2V", "Desconectar carga/carga"],
-                ["Temperatura", "-20°C a +60°C", "Reduzir performance"],
-                ["Corrente", "1-3C contínua", "Limitar ou desconectar"],
-                ["Balanceamento", "±50mV", "Ativar balanceamento"]
+                [
+                    "Tensão Célula",
+                    "2.5-4.2V",
+                    "Desconectar carga/carga"
+                ],
+                [
+                    "Temperatura",
+                    "-20°C a +60°C",
+                    "Reduzir performance"
+                ],
+                [
+                    "Corrente",
+                    "1-3C contínua",
+                    "Limitar ou desconectar"
+                ],
+                [
+                    "Balanceamento",
+                    "±50mV",
+                    "Ativar balanceamento"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "BMS pode acionar contatores de alta tensão em emergências, isolando a bateria do resto do sistema."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar HV / híbridos / BEV aplicado a “Sistemas de Gestão de Bateria (BMS)”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem PPE + service plug/LOTO + verificação 0 V conforme OEM, não há serviço. 12 V auxiliar fraca impede READY. Isolation fault exige fluxo do fabricante. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Etapa",
+                "Obrigatório",
+                "Por quê"
+            ],
+            "rows": [
+                [
+                    "PPE",
+                    "Classe adequada",
+                    "Arco/choque"
+                ],
+                [
+                    "LOTO",
+                    "Service plug",
+                    "Isolar pack"
+                ],
+                [
+                    "0 V",
+                    "Medir pontos OEM",
+                    "Energia residual"
+                ],
+                [
+                    "12 V aux",
+                    "Estável",
+                    "Contatores"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir capa laranja por curiosidade; saltar interlock."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Treinamento/autorização",
+                "PPE",
+                "Procedimento OEM completo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de BMS"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "O que significa SOC em um sistema BMS?",
             "options": [
-                "State of Charge (carga)",
                 "State of Current (corrente)",
+                "State of Charge (carga)",
                 "System of Control (controle)",
                 "Speed of Charge (velocidade)"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: State of Charge (carga). Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual é a faixa de tensão típica por célula em baterias de íons de lítio?",
             "options": [
-                "1-2V",
                 "2.5-4.2V",
                 "5-6V",
-                "10-12V"
+                "10-12V",
+                "1-2V"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2.5-4.2V. Em HV / híbridos / BEV (“Sistemas de Gestão de Bateria (BMS)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que o balanceamento de células é essencial em um BMS?",
             "options": [
-                "Para aumentar a velocidade",
-                "Para manter células com mesma carga e reduzir desbalanceamento",
+                "Para reduzir o custo",
                 "Para diminuir o peso",
-                "Para reduzir o custo"
+                "Para aumentar a velocidade",
+                "Para manter células com mesma carga e reduzir desbalanceamento"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para manter células com mesma carga e reduzir desbalanceamento. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

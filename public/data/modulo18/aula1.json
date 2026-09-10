@@ -17,13 +17,43 @@
         },
         {
             "type": "table",
-            "headers": ["Sistema GNSS", "País/Região", "Satélites", "Status"],
+            "headers": [
+                "Sistema GNSS",
+                "País/Região",
+                "Satélites",
+                "Status"
+            ],
             "rows": [
-                ["GPS", "EUA", "31+", "Operacional"],
-                ["GLONASS", "Rússia", "24+", "Operacional"],
-                ["Galileo", "Europa", "26+", "Operacional"],
-                ["BeiDou", "China", "45+", "Operacional"],
-                ["IRNSS", "Índia", "7+", "Regional"]
+                [
+                    "GPS",
+                    "EUA",
+                    "31+",
+                    "Operacional"
+                ],
+                [
+                    "GLONASS",
+                    "Rússia",
+                    "24+",
+                    "Operacional"
+                ],
+                [
+                    "Galileo",
+                    "Europa",
+                    "26+",
+                    "Operacional"
+                ],
+                [
+                    "BeiDou",
+                    "China",
+                    "45+",
+                    "Operacional"
+                ],
+                [
+                    "IRNSS",
+                    "Índia",
+                    "7+",
+                    "Regional"
+                ]
             ]
         },
         {
@@ -43,44 +73,114 @@
             "text": "Sistemas WAAS/EGNOS/MSAS melhoram precisão para 1-3 metros usando estações terrestres de referência."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Sistemas de Rastreamento GPS”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistema GPS"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Quantos satélites GPS são necessários para posicionamento 3D?",
             "options": [
+                "4 satélites",
                 "2 satélites",
                 "3 satélites",
-                "4 satélites",
                 "6 satélites"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 4 satélites. Em alarme / rastreador / segurança (“Sistemas de Rastreamento GPS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual sistema GNSS é operado pela Europa?",
             "options": [
-                "GPS",
                 "GLONASS",
                 "Galileo",
-                "BeiDou"
+                "BeiDou",
+                "GPS"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: Galileo. Em alarme / rastreador / segurança (“Sistemas de Rastreamento GPS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que melhora a precisão do GPS de 3-10m para 1-3m?",
             "options": [
-                "Mais satélites",
-                "Sistemas de aumentação WAAS/EGNOS",
+                "Bateria mais forte",
                 "Antena maior",
-                "Bateria mais forte"
+                "Mais satélites",
+                "Sistemas de aumentação WAAS/EGNOS"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Sistemas de aumentação WAAS/EGNOS. Em alarme / rastreador / segurança (“Sistemas de Rastreamento GPS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

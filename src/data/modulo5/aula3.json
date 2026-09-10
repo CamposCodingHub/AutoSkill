@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Sintomas Falha"
+            ],
             "rows": [
-                ["Lâmpada HID", "Gera luz", "Não acende, pisca"],
-                ["Ignitor", "Alta tensão inicial", "Sem ignição, ruído"],
-                ["Ballast", "Controla corrente", "Luz fraca, instável"],
-                ["Sensor Nivelamento", "Ajusta altura", "Farol alto/errado"]
+                [
+                    "Lâmpada HID",
+                    "Gera luz",
+                    "Não acende, pisca"
+                ],
+                [
+                    "Ignitor",
+                    "Alta tensão inicial",
+                    "Sem ignição, ruído"
+                ],
+                [
+                    "Ballast",
+                    "Controla corrente",
+                    "Luz fraca, instável"
+                ],
+                [
+                    "Sensor Nivelamento",
+                    "Ajusta altura",
+                    "Farol alto/errado"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "3x mais brilho, 2x mais eficiência, 2x mais vida útil, mas custo inicial maior."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar iluminação e sinalização aplicado a “Sistemas Xenon/HID”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Farol fraco unilateral = quase sempre caminho (massa/conector/chicote), não “lâmpada fraca mágica”. Meça tensão no soquete com farol aceso e VD na massa. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "1º teste",
+                "Causa comum"
+            ],
+            "rows": [
+                [
+                    "Um lado fraco",
+                    "VD massa/positivo desse lado",
+                    "Massa oxidada"
+                ],
+                [
+                    "Ambos fracos",
+                    "Tensão bateria + carga do sistema",
+                    "Subtensão / cabo"
+                ],
+                [
+                    "Fusível queima",
+                    "Isolar curto após fusível",
+                    "Chicote esfolado"
+                ],
+                [
+                    "LED aftermarket",
+                    "Polaridade/driver/queda no adaptador",
+                    "Adaptador ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar só a lâmpada com 10 V no soquete; ignorar o lado bom como referência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Comparar lado bom vs ruim",
+                "Medir sob carga",
+                "Inspecionar soquete/água"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistemas Xenon"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a tensão de ignição típica em sistemas Xenon?",
             "options": [
+                "240V",
                 "12V",
-                "120V",
                 "20kV+",
-                "240V"
+                "120V"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 20kV+. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal vantagem dos faróis Xenon sobre os halógenos?",
             "options": [
+                "Menor custo de manutenção",
                 "Maior durabilidade",
                 "Maior eficiência luminosa e melhor alcance",
-                "Menor consumo de energia",
-                "Menor custo de manutenção"
+                "Menor consumo de energia"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Maior eficiência luminosa e melhor alcance. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que os faróis Xenon precisam de sistema de nivelamento automático?",
             "options": [
-                "Para economizar energia",
                 "Para evitar ofuscamento de outros motoristas",
                 "Para aumentar a vida útil das lâmpadas",
+                "Para economizar energia",
                 "Para melhorar o aquecimento do sistema"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para evitar ofuscamento de outros motoristas. Em iluminação e sinalização (“Sistemas Xenon/HID”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Perfil", "Função", "Versão Típica"],
+            "headers": [
+                "Perfil",
+                "Função",
+                "Versão Típica"
+            ],
             "rows": [
-                ["HFP", "Hands-Free Profile", "1.6-1.7"],
-                ["A2DP", "Advanced Audio Distribution", "1.2-1.3"],
-                ["PBAP", "Phone Book Access", "1.2"],
-                ["MAP", "Message Access Profile", "1.3"],
-                ["AVRCP", "Audio/Video Remote Control", "1.6"]
+                [
+                    "HFP",
+                    "Hands-Free Profile",
+                    "1.6-1.7"
+                ],
+                [
+                    "A2DP",
+                    "Advanced Audio Distribution",
+                    "1.2-1.3"
+                ],
+                [
+                    "PBAP",
+                    "Phone Book Access",
+                    "1.2"
+                ],
+                [
+                    "MAP",
+                    "Message Access Profile",
+                    "1.3"
+                ],
+                [
+                    "AVRCP",
+                    "Audio/Video Remote Control",
+                    "1.6"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Teste emparelhamento com diferentes dispositivos. Verifique atualizações de firmware do módulo Bluetooth."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar áudio e telemática aplicado a “Bluetooth e Conectividade”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Som aftermarket mal alimentado gera parasita, interferência e até problemas de rede. Use B+ correto, fusível dedicado e massa limpa — nunca “ganze” na CAN. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Item",
+                "Boa prática",
+                "Risco"
+            ],
+            "rows": [
+                [
+                    "Alimentação",
+                    "Fusível calibrado",
+                    "Incêndio / parasita"
+                ],
+                [
+                    "Massa",
+                    "Ponto limpo curto",
+                    "Ruído / resets"
+                ],
+                [
+                    "Remote ACC",
+                    "Sinal adequado",
+                    "Rádio não dorme"
+                ],
+                [
+                    "Antena/GPS",
+                    "Blindagem",
+                    "Recepção ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Emendar em chicotes de airbag/CAN; deixar amp ligado em B+ sem remote."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de instalação",
+                "Medir consumo após sleep",
+                "Validar funções do veículo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Conectividade"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual perfil Bluetooth é usado para streaming de áudio de alta qualidade?",
             "options": [
+                "MAP",
                 "HFP",
-                "A2DP",
                 "PBAP",
-                "MAP"
+                "A2DP"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: A2DP. Em áudio e telemática (“Bluetooth e Conectividade”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é o alcance típico do Bluetooth em veículos?",
             "options": [
-                "1-2 metros",
                 "~10 metros",
-                "50 metros",
-                "100 metros"
+                "1-2 metros",
+                "100 metros",
+                "50 metros"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: ~10 metros. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual perfil Bluetooth é usado para acessar contatos do telefone?",
             "options": [
-                "HFP",
                 "A2DP",
+                "HFP",
                 "PBAP",
                 "AVRCP"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: PBAP. Em áudio e telemática (“Bluetooth e Conectividade”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

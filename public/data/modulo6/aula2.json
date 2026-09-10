@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Característica", "Valor Típico", "Importância"],
+            "headers": [
+                "Característica",
+                "Valor Típico",
+                "Importância"
+            ],
             "rows": [
-                ["Tipo", "Hall effect", "Sinal digital limpo"],
-                ["Alimentação", "5V ou 12V", "Depende do sistema"],
-                ["Sinal", "0-5V digital", "Fácil interpretação"],
-                ["Relação CKP", "1:1 ou 2:1", "Depende do motor"],
-                ["Montagem", "Cabeçote ou tampa", "Acesso variável"]
+                [
+                    "Tipo",
+                    "Hall effect",
+                    "Sinal digital limpo"
+                ],
+                [
+                    "Alimentação",
+                    "5V ou 12V",
+                    "Depende do sistema"
+                ],
+                [
+                    "Sinal",
+                    "0-5V digital",
+                    "Fácil interpretação"
+                ],
+                [
+                    "Relação CKP",
+                    "1:1 ou 2:1",
+                    "Depende do motor"
+                ],
+                [
+                    "Montagem",
+                    "Cabeçote ou tampa",
+                    "Acesso variável"
+                ]
             ]
         },
         {
@@ -43,44 +67,115 @@
             "text": "Motor não pega, falha de cilindro, consumo elevado, e código de falha CMP."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar sensores aplicado a “Sensor CMP (Comando de Válvulas)”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sensor “com código” não é sentença: prove alimentação, massa, sinal e integridade do chicote. Scope ajuda a ver forma; DMM confirma tensão de referência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Verificação",
+                "Esperado (genérico)",
+                "Nota"
+            ],
+            "rows": [
+                [
+                    "Alimentação 5V/12V",
+                    "Conforme diagrama",
+                    "Sem ref = sinal louco"
+                ],
+                [
+                    "Massa do sensor",
+                    "VD baixo",
+                    "Massa compartilhada falha em grupo"
+                ],
+                [
+                    "Sinal",
+                    "Varia com estímulo",
+                    "Compare OEM/lado bom"
+                ],
+                [
+                    "Chicote",
+                    "Sem curto/aberto",
+                    "Wiggle test"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar sensor sem medir no conector; ohms com circuito energizado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Ler DTC + freeze",
+                "Medir no conector",
+                "Estímulo controlado",
+                "Só então substituir"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Análise de Sensor CMP"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a principal função do sensor CMP?",
             "options": [
-                "Medir velocidade do motor",
                 "Determinar posição do cilindro",
+                "Medir pressão do óleo",
                 "Controlar temperatura",
-                "Medir pressão do óleo"
+                "Medir velocidade do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Determinar posição do cilindro. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a diferença principal entre sensor CKP e CMP?",
             "options": [
-                "CKP mede velocidade, CMP mede posição do cilindro",
-                "CKP mede temperatura, CMP mede pressão",
                 "CKP controla injeção, CMP controla ignição",
-                "Não há diferença, são iguais"
+                "CKP mede velocidade, CMP mede posição do cilindro",
+                "Não há diferença, são iguais",
+                "CKP mede temperatura, CMP mede pressão"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: CKP mede velocidade, CMP mede posição do cilindro. Em sensores (“Sensor CMP (Comando de Válvulas)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que acontece se o sensor CMP falhar?",
             "options": [
-                "O motor não liga ou falha ao dar partida",
                 "Apenas a luz de Check Engine acende",
-                "O motor superaquece",
-                "O consumo de combustível diminui"
+                "O motor não liga ou falha ao dar partida",
+                "O consumo de combustível diminui",
+                "O motor superaquece"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: O motor não liga ou falha ao dar partida. No-crank: tensão em repouso e no crank + VD nos cabos + corrente. Click não prova o motor de partida."
         }
     ]
 }

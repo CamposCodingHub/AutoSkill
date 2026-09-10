@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Após Disparo"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Após Disparo"
+            ],
             "rows": [
-                ["Squib", "Explosivo retrator", "Substituir obrigatório"],
-                ["Carretel", "Bobina de cinto", "Verificar danos"],
-                ["Sensor", "Detecta impacto", "Resetar sistema"],
-                ["Módulo SRS", "Controle central", "Limpar memória"]
+                [
+                    "Squib",
+                    "Explosivo retrator",
+                    "Substituir obrigatório"
+                ],
+                [
+                    "Carretel",
+                    "Bobina de cinto",
+                    "Verificar danos"
+                ],
+                [
+                    "Sensor",
+                    "Detecta impacto",
+                    "Resetar sistema"
+                ],
+                [
+                    "Módulo SRS",
+                    "Controle central",
+                    "Limpar memória"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Códigos B2xxx indicam problemas nos cintos. B2491 = pré-tensionador disparado, B2492 = circuito aberto."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança ativa/passiva aplicado a “Cinto com Pré-tensionador”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Airbag e pretensionador: zero improvisação. Use procedimentos OEM, ferramentas adequadas e desarme conforme manual. Diagnóstico elétrico com respeito a squibs. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sistema",
+                "Cuidado",
+                "Abordagem"
+            ],
+            "rows": [
+                [
+                    "Airbag",
+                    "Energia residual",
+                    "Espera/desarme OEM"
+                ],
+                [
+                    "ABS/ESP",
+                    "Módulo + sensores roda",
+                    "Power/rede/sinal"
+                ],
+                [
+                    "Cinto/pré",
+                    "Pirotécnico",
+                    "Não ohm sem método"
+                ],
+                [
+                    "ADAS",
+                    "Calibração",
+                    "Após geometria/vidro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Medir squib “no chute”; alimentar módulo errado; ignorar DTCs de comunicação."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "SSE/procedimento",
+                "Scanner adequado",
+                "Não pular etapas de segurança"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Pré-tensionador"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "O que acontece com um pré-tensionador após disparar?",
             "options": [
-                "Pode ser reutilizado",
                 "Deve ser substituído obrigatoriamente",
                 "Auto-repara em 24 horas",
-                "Não precisa de manutenção"
+                "Não precisa de manutenção",
+                "Pode ser reutilizado"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Deve ser substituído obrigatoriamente. Em segurança ativa/passiva (“Cinto com Pré-tensionador”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Quanto tempo antes dos airbags o pré-tensionador ativa?",
             "options": [
-                "1-5ms",
-                "10-50ms",
                 "100-200ms",
-                "500ms"
+                "1-5ms",
+                "500ms",
+                "10-50ms"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 10-50ms. Em segurança ativa/passiva (“Cinto com Pré-tensionador”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a função do limitador de carga nos cintos modernos?",
             "options": [
-                "Aumentar a retenção do cinto",
                 "Liberar um pouco o cinto para reduzir força no tórax",
-                "Travar o cinto completamente",
-                "Substituir o pré-tensionador"
+                "Aumentar a retenção do cinto",
+                "Substituir o pré-tensionador",
+                "Travar o cinto completamente"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Liberar um pouco o cinto para reduzir força no tórax. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

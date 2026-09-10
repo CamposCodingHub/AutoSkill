@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Competência", "Critério Avaliação", "Nível Mínimo"],
+            "headers": [
+                "Competência",
+                "Critério Avaliação",
+                "Nível Mínimo"
+            ],
             "rows": [
-                ["Conhecimento Técnico", "Provas teóricas", "80% acertos"],
-                ["Habilidade Prática", "Provas práticas", "Execução sem erros"],
-                ["Segurança", "Procedimentos", "100% conformidade"],
-                ["Diagnóstico", "Casos reais", "Resolução em tempo hábil"],
-                ["Comunicação", "Entrevistas", "Clareza técnica"]
+                [
+                    "Conhecimento Técnico",
+                    "Provas teóricas",
+                    "80% acertos"
+                ],
+                [
+                    "Habilidade Prática",
+                    "Provas práticas",
+                    "Execução sem erros"
+                ],
+                [
+                    "Segurança",
+                    "Procedimentos",
+                    "100% conformidade"
+                ],
+                [
+                    "Diagnóstico",
+                    "Casos reais",
+                    "Resolução em tempo hábil"
+                ],
+                [
+                    "Comunicação",
+                    "Entrevistas",
+                    "Clareza técnica"
+                ]
             ]
         },
         {
@@ -43,44 +67,121 @@
             "text": "Emita certificado oficial reconhecido pelo mercado. Inclua competências validadas e projetos realizados."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Validação Final de Competências”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Validação Final"
+                "title": "Caso de oficina guiado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "ASEA6ExamSimulator",
+            "config": {
+                "title": "Validação final — simulado ASE A6 (90 min / 50 Q)"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o nível mínimo de acertos em provas teóricas?",
             "options": [
+                "90%",
                 "60%",
-                "70%",
                 "80%",
-                "90%"
+                "70%"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 80%. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual competência exige 100% de conformidade?",
             "options": [
-                "Conhecimento técnico",
                 "Habilidade prática",
-                "Segurança",
-                "Comunicação"
+                "Conhecimento técnico",
+                "Comunicação",
+                "Segurança"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Segurança. Em certificação / ASE mindset (“Validação Final de Competências”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar múltiplos avaliadores na validação?",
             "options": [
-                "Apenas burocracia",
                 "Garantir validação justa e completa",
                 "Aumentar o custo",
+                "Apenas burocracia",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Garantir validação justa e completa. Em certificação / ASE mindset (“Validação Final de Competências”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

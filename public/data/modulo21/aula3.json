@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Sintomas Falha"
+            ],
             "rows": [
-                ["Rotor", "Campo magnético", "Sem carga, luz bateria"],
-                ["Estator", "Geração AC", "Baixa saída, ruído"],
-                ["Diodos", "Retificação AC→DC", "Ripple excessivo"],
-                ["Regulador", "Controla tensão", "Sobrecarga/subcarga"],
-                ["Rolamentos", "Suporte eixo", "Ruído, superaquecimento"]
+                [
+                    "Rotor",
+                    "Campo magnético",
+                    "Sem carga, luz bateria"
+                ],
+                [
+                    "Estator",
+                    "Geração AC",
+                    "Baixa saída, ruído"
+                ],
+                [
+                    "Diodos",
+                    "Retificação AC→DC",
+                    "Ripple excessivo"
+                ],
+                [
+                    "Regulador",
+                    "Controla tensão",
+                    "Sobrecarga/subcarga"
+                ],
+                [
+                    "Rolamentos",
+                    "Suporte eixo",
+                    "Ruído, superaquecimento"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Verifique correias, conexões, e limpeza regularmente. Teste anualmente para prevenção."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar partida e carga aplicado a “Alternador - Princípio e Componentes”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "No-crank: tensão repouso + crank + VD cabos + corrente. Carga: 13,8–14,5 V típico com motor ligado (OEM). Parasita depois do sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Teste",
+                "Alvo típico*",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Repouso",
+                    "~12,4–12,7 V",
+                    "Estado de carga"
+                ],
+                [
+                    "Crank",
+                    "Não colapsar demais",
+                    "CCA/cabos"
+                ],
+                [
+                    "Carga",
+                    "~13,8–14,5 V",
+                    "Alternador/regulador"
+                ],
+                [
+                    "Parasita",
+                    "OEM (muitos <50–100 mA)",
+                    "Fuga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar arranque sem VD; trocar alternador com 14 V na bateria e luz acesa (circuito da lâmpada)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Números anotados",
+                "Cabos/terminais",
+                "Validar após carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "VoltageDropSimulator",
             "config": {
-                "title": "Análise de Alternador"
+                "title": "Queda de tensão sob carga"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a tensão normal de operação do alternador?",
             "options": [
-                "12.0-12.6V",
-                "13.8-14.8V",
+                "10.5-11.5V",
                 "15.0-16.0V",
-                "10.5-11.5V"
+                "12.0-12.6V",
+                "13.8-14.8V"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 13.8-14.8V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual componente retifica AC para DC no alternador?",
             "options": [
+                "Rolamentos",
                 "Rotor",
                 "Estator",
-                "Diodos",
-                "Rolamentos"
+                "Diodos"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Diodos. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual o ripple AC máximo aceitável em um alternador saudável?",
             "options": [
+                "1.0V",
                 "0.1V",
                 "0.5V",
-                "1.0V",
                 "2.0V"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 0.5V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

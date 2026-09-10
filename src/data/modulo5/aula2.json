@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Característica", "Valor Típico", "Importância"],
+            "headers": [
+                "Característica",
+                "Valor Típico",
+                "Importância"
+            ],
             "rows": [
-                ["Potência", "55-80W", "Determina brilho e consumo"],
-                ["Voltagem", "12V", "Padrão automotivo"],
-                ["Temperatura Cor", "3200-3500K", "Cor da luz (amarelada)"],
-                ["Vida Útil", "500-1000 horas", "Durabilidade"]
+                [
+                    "Potência",
+                    "55-80W",
+                    "Determina brilho e consumo"
+                ],
+                [
+                    "Voltagem",
+                    "12V",
+                    "Padrão automotivo"
+                ],
+                [
+                    "Temperatura Cor",
+                    "3200-3500K",
+                    "Cor da luz (amarelada)"
+                ],
+                [
+                    "Vida Útil",
+                    "500-1000 horas",
+                    "Durabilidade"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Faróis devem ser regulados para não ofuscar outros motoristas. Verifique regulagem regularmente."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar iluminação e sinalização aplicado a “Faróis Halógenos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Farol fraco unilateral = quase sempre caminho (massa/conector/chicote), não “lâmpada fraca mágica”. Meça tensão no soquete com farol aceso e VD na massa. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "1º teste",
+                "Causa comum"
+            ],
+            "rows": [
+                [
+                    "Um lado fraco",
+                    "VD massa/positivo desse lado",
+                    "Massa oxidada"
+                ],
+                [
+                    "Ambos fracos",
+                    "Tensão bateria + carga do sistema",
+                    "Subtensão / cabo"
+                ],
+                [
+                    "Fusível queima",
+                    "Isolar curto após fusível",
+                    "Chicote esfolado"
+                ],
+                [
+                    "LED aftermarket",
+                    "Polaridade/driver/queda no adaptador",
+                    "Adaptador ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar só a lâmpada com 10 V no soquete; ignorar o lado bom como referência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Comparar lado bom vs ruim",
+                "Medir sob carga",
+                "Inspecionar soquete/água"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Faróis Halógenos"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a temperatura de cor típica de faróis halógenos?",
             "options": [
-                "2500-2800K",
                 "3200-3500K",
+                "5000-6000K",
                 "4000-4500K",
-                "5000-6000K"
+                "2500-2800K"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 3200-3500K. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual temperatura de cor produz luz mais branca/azulada?",
             "options": [
+                "6500K (branca azulada)",
                 "2500K (amarelada)",
-                "3500K (branca quente)",
                 "5000K (branca fria)",
-                "6500K (branca azulada)"
+                "3500K (branca quente)"
             ],
-            "correct": 3
+            "correct": 0,
+            "explanation": "Resposta: 6500K (branca azulada). Em iluminação e sinalização (“Faróis Halógenos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia tem temperatura de cor mais próxima da luz solar?",
             "options": [
+                "Laser (6000K)",
                 "Halógena (3200K)",
                 "Xenon (4300K)",
-                "LED (5500K)",
-                "Laser (6000K)"
+                "LED (5500K)"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: LED (5500K). Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

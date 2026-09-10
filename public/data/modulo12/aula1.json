@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Falha Comum"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Falha Comum"
+            ],
             "rows": [
-                ["Motor Vidro", "Mover vidro para cima/baixo", "Motor queimado, engrenagem"],
-                ["Interruptor Porta", "Controle local", "Contatos oxidados, desgaste"],
-                ["Interruptor Central", "Controle de todos os vidros", "Falha no módulo, mau contato"],
-                ["Sensor Obstrução", "Proteção contra esmagamento", "Calibração, sujeita"]
+                [
+                    "Motor Vidro",
+                    "Mover vidro para cima/baixo",
+                    "Motor queimado, engrenagem"
+                ],
+                [
+                    "Interruptor Porta",
+                    "Controle local",
+                    "Contatos oxidados, desgaste"
+                ],
+                [
+                    "Interruptor Central",
+                    "Controle de todos os vidros",
+                    "Falha no módulo, mau contato"
+                ],
+                [
+                    "Sensor Obstrução",
+                    "Proteção contra esmagamento",
+                    "Calibração, sujeita"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Teste alimentação do motor (10-20A). Verifique continuidade dos interruptores e calibração do sistema."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar conforto e carroceria aplicado a “Vidros Elétricos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Vidro/trava/retrovisor: localize se o comando local, mestre ou módulo falhou. Fusível de conforto e massa de porta são vilões frequentes. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "Isolar",
+                "Teste"
+            ],
+            "rows": [
+                [
+                    "Só um vidro",
+                    "Motor vs interruptor",
+                    "Alimentar motor direto (cuidado)"
+                ],
+                [
+                    "Nenhum conforto",
+                    "Fusível/BCM",
+                    "B+ e rede"
+                ],
+                [
+                    "Após chuva",
+                    "Água na porta",
+                    "Corrosão conector"
+                ],
+                [
+                    "Aftermarket",
+                    "Alarme/som",
+                    "Parasita/CAN"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar motor de vidro sem testar interruptor/chicote da porta."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fusíveis conforto",
+                "Comando vs carga",
+                "Inspecionar chicote porta"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Vidros Elétricos"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual é a corrente típica de um motor de vidro elétrico?",
             "options": [
-                "1-3A",
                 "10-20A",
                 "30-40A",
+                "1-3A",
                 "50A"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 10-20A. Em conforto e carroceria (“Vidros Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como o sistema detecta obstrução durante o fechamento do vidro?",
             "options": [
-                "Por sensor de luz",
                 "Monitorando a corrente do motor",
+                "Por sensor de temperatura",
                 "Por sensor de pressão",
-                "Por sensor de temperatura"
+                "Por sensor de luz"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Monitorando a corrente do motor. Em conforto e carroceria (“Vidros Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que causa funcionamento errático da proteção contra esmagamento?",
             "options": [
-                "Excesso de luz solar",
-                "Calibração incorreta do sistema",
                 "Velocidade muito alta do veículo",
-                "Temperatura muito baixa"
+                "Excesso de luz solar",
+                "Temperatura muito baixa",
+                "Calibração incorreta do sistema"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Calibração incorreta do sistema. Em conforto e carroceria (“Vidros Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

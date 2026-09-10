@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "CCA", "Vida Útil", "Aplicação"],
+            "headers": [
+                "Tipo",
+                "CCA",
+                "Vida Útil",
+                "Aplicação"
+            ],
             "rows": [
-                ["Convencional", "Alto", "3-4 anos", "Veículos básicos"],
-                ["AGM", "Médio-Alto", "4-6 anos", "Start-stop, luxo"],
-                ["EFB", "Médio", "3-5 anos", "Start-stop econômico"],
-                ["Lítio", "Médio", "8-10 anos", "Performance, esportivo"]
+                [
+                    "Convencional",
+                    "Alto",
+                    "3-4 anos",
+                    "Veículos básicos"
+                ],
+                [
+                    "AGM",
+                    "Médio-Alto",
+                    "4-6 anos",
+                    "Start-stop, luxo"
+                ],
+                [
+                    "EFB",
+                    "Médio",
+                    "3-5 anos",
+                    "Start-stop econômico"
+                ],
+                [
+                    "Lítio",
+                    "Médio",
+                    "8-10 anos",
+                    "Performance, esportivo"
+                ]
             ]
         },
         {
@@ -42,44 +67,128 @@
             "text": "Partida lenta, luzes fracas, luz de bateria acesa, e problemas eletrônicos intermitentes."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Baterias Automotivas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Baterias"
+                "title": "Partida e carga — medições"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "ParasiticDrawSimulator",
+            "config": {
+                "title": "Consumo parasita - bateria morre parado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "PowerUpSequenceSimulator",
+            "config": {
+                "title": "Power-up e alimentação permanente/chaveada"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de bateria é recomendada para sistemas start-stop?",
             "options": [
-                "Convencional",
                 "AGM",
+                "Lítio",
                 "EFB",
-                "Lítio"
+                "Convencional"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: AGM. Em arquitetura 12V e distribuição (“Baterias Automotivas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal vantagem das baterias AGM sobre as convencionais?",
             "options": [
-                "Menor peso",
-                "Maior resistência a ciclos de descarga profunda",
                 "Custo mais baixo",
-                "Maior capacidade de partida a frio"
+                "Menor peso",
+                "Maior capacidade de partida a frio",
+                "Maior resistência a ciclos de descarga profunda"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Maior resistência a ciclos de descarga profunda. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você deve testar uma bateria AGM?",
             "options": [
+                "Com teste de carga com lâmpadas",
                 "Com testador de bateria convencional",
                 "Com testador específico para AGM/EFB",
-                "Apenas medindo a tensão em repouso",
-                "Com teste de carga com lâmpadas"
+                "Apenas medindo a tensão em repouso"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Com testador específico para AGM/EFB. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

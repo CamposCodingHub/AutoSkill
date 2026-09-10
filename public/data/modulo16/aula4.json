@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Característica", "Normal", "Indica Problema"],
+            "headers": [
+                "Característica",
+                "Normal",
+                "Indica Problema"
+            ],
             "rows": [
-                ["Pico de tensão", "25-40kV", "Baixo = vela/cabo ruim"],
-                ["Tempo de queima", "1-3ms", "Longo = resistência alta"],
-                ["Oscilações", "Presentes", "Ausentes = sistema aberto"],
-                ["Linha base", "Estável", "Instável = interferência"],
-                ["Dwell", "2-8ms", "Variável = problema ECU"]
+                [
+                    "Pico de tensão",
+                    "25-40kV",
+                    "Baixo = vela/cabo ruim"
+                ],
+                [
+                    "Tempo de queima",
+                    "1-3ms",
+                    "Longo = resistência alta"
+                ],
+                [
+                    "Oscilações",
+                    "Presentes",
+                    "Ausentes = sistema aberto"
+                ],
+                [
+                    "Linha base",
+                    "Estável",
+                    "Instável = interferência"
+                ],
+                [
+                    "Dwell",
+                    "2-8ms",
+                    "Variável = problema ECU"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Compare formas de onda entre cilindros. Diferenças significativas indicam problemas específicos daquele cilindro."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Diagnóstico de Sistemas de Ignição”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Análise de Ignição"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "O que indica um pico de tensão baixo na forma de onda secundária?",
             "options": [
-                "Bobina em curto",
                 "Vela ou cabo com alta resistência",
-                "ECU defeituosa",
-                "Alimentação baixa"
+                "Bobina em curto",
+                "Alimentação baixa",
+                "ECU defeituosa"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Vela ou cabo com alta resistência. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a atenuação típica das probes de alta tensão para medição de ignição?",
             "options": [
-                "10:1",
                 "100:1",
                 "1000:1",
+                "10:1",
                 "10000:1"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 1000:1. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Qual sistema de ignição mostra forma de onda mais limpa sem interferência?",
             "options": [
-                "Sistema com distribuidor",
                 "COP (Coil-On-Plug)",
+                "Sistema de pontos",
                 "DIS convencional",
-                "Sistema de pontos"
+                "Sistema com distribuidor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: COP (Coil-On-Plug). Em osciloscópio e formas de onda (“Diagnóstico de Sistemas de Ignição”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

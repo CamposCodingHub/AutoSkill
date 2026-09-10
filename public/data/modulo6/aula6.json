@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sensor", "Faixa Típica", "Resistência a 25°C", "Aplicação"],
+            "headers": [
+                "Sensor",
+                "Faixa Típica",
+                "Resistência a 25°C",
+                "Aplicação"
+            ],
             "rows": [
-                ["ECT (Líquido)", "-40°C a 130°C", "200-2000Ω", "Temperatura motor"],
-                ["IAT (Ar)", "-40°C a 130°C", "200-2000Ω", "Temperatura admissão"],
-                ["Óleo", "-40°C a 150°C", "100-1000Ω", "Temperatura óleo"],
-                ["Combustível", "-40°C a 125°C", "100-1000Ω", "Temperatura combustível"]
+                [
+                    "ECT (Líquido)",
+                    "-40°C a 130°C",
+                    "200-2000Ω",
+                    "Temperatura motor"
+                ],
+                [
+                    "IAT (Ar)",
+                    "-40°C a 130°C",
+                    "200-2000Ω",
+                    "Temperatura admissão"
+                ],
+                [
+                    "Óleo",
+                    "-40°C a 150°C",
+                    "100-1000Ω",
+                    "Temperatura óleo"
+                ],
+                [
+                    "Combustível",
+                    "-40°C a 125°C",
+                    "100-1000Ω",
+                    "Temperatura combustível"
+                ]
             ]
         },
         {
@@ -42,44 +67,115 @@
             "text": "Aqueça sensor com água quente e resfrie com ar frio. Verifique variação da resistência."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar sensores aplicado a “Sensores de Temperatura”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sensor “com código” não é sentença: prove alimentação, massa, sinal e integridade do chicote. Scope ajuda a ver forma; DMM confirma tensão de referência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Verificação",
+                "Esperado (genérico)",
+                "Nota"
+            ],
+            "rows": [
+                [
+                    "Alimentação 5V/12V",
+                    "Conforme diagrama",
+                    "Sem ref = sinal louco"
+                ],
+                [
+                    "Massa do sensor",
+                    "VD baixo",
+                    "Massa compartilhada falha em grupo"
+                ],
+                [
+                    "Sinal",
+                    "Varia com estímulo",
+                    "Compare OEM/lado bom"
+                ],
+                [
+                    "Chicote",
+                    "Sem curto/aberto",
+                    "Wiggle test"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar sensor sem medir no conector; ohms com circuito energizado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Ler DTC + freeze",
+                "Medir no conector",
+                "Estímulo controlado",
+                "Só então substituir"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Análise de Sensores de Temperatura"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "O que significa NTC em sensores de temperatura?",
             "options": [
-                "Negative Temperature Coefficient",
                 "Normal Temperature Control",
                 "Negative Temperature Calibration",
-                "Normal Thermal Coefficient"
+                "Normal Thermal Coefficient",
+                "Negative Temperature Coefficient"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Negative Temperature Coefficient. Em sensores (“Sensores de Temperatura”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como um sensor NTC se comporta quando a temperatura aumenta?",
             "options": [
-                "A resistência aumenta",
-                "A resistência diminui",
                 "A tensão aumenta",
-                "A corrente diminui"
+                "A resistência aumenta",
+                "A corrente diminui",
+                "A resistência diminui"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: A resistência diminui. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a aplicação mais comum de sensores NTC em veículos?",
             "options": [
+                "Regular a altitude",
                 "Medir temperatura do líquido de arrefecimento",
                 "Controlar a pressão dos pneus",
-                "Medir a velocidade do veículo",
-                "Regular a altitude"
+                "Medir a velocidade do veículo"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Medir temperatura do líquido de arrefecimento. Em sensores (“Sensores de Temperatura”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

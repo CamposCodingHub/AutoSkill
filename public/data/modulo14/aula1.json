@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Especificação", "Função"],
+            "headers": [
+                "Componente",
+                "Especificação",
+                "Função"
+            ],
             "rows": [
-                ["Baterias", "2x12V em série", "Armazenamento de energia"],
-                ["Alternador", "24V/28V output", "Geração de energia"],
-                ["Distribuição", "Fusíveis e relés", "Proteção e controle"],
-                ["Conversores", "24V→12V", "Alimentação de acessórios 12V"]
+                [
+                    "Baterias",
+                    "2x12V em série",
+                    "Armazenamento de energia"
+                ],
+                [
+                    "Alternador",
+                    "24V/28V output",
+                    "Geração de energia"
+                ],
+                [
+                    "Distribuição",
+                    "Fusíveis e relés",
+                    "Proteção e controle"
+                ],
+                [
+                    "Conversores",
+                    "24V→12V",
+                    "Alimentação de acessórios 12V"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Teste voltagem em cada bateria individualmente. Verifique equilíbrio de carga e funcionamento do alternador."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar 24V / pesados aplicado a “Sistema 24V”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "24V = duas baterias em série tipicamente. Queda de tensão e massas ruins derrubam módulos. Cuidado com retornos de chassi e tomadas de reboque. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tópico",
+                "Atenção",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Séries 12+12",
+                    "Balanceamento",
+                    "Tensão por elemento"
+                ],
+                [
+                    "Partida",
+                    "Correntes altas",
+                    "VD cabos"
+                ],
+                [
+                    "Iluminação reboque",
+                    "Terra comum",
+                    "Continuidade/VD"
+                ],
+                [
+                    "ABS/EBS",
+                    "Rede + power",
+                    "Scanner dedicado"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Tratar 24V como 12V sem recalcular corrente/potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Confirmar topologia",
+                "Medir por bateria",
+                "Inspecionar terra pesado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Sistema 24V"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Como as baterias são configuradas para fornecer 24V?",
             "options": [
+                "Uma única bateria de 24V",
                 "Em paralelo",
                 "Em série",
-                "Uma única bateria de 24V",
                 "Em triângulo"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Em série. Em 24V / pesados (“Sistema 24V”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a voltagem de carga típica de um sistema de 24V?",
             "options": [
-                "12V",
                 "24V",
+                "36V",
                 "28V",
-                "36V"
+                "12V"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 28V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Por que sistemas de 24V usam cabos mais finos que sistemas de 12V?",
             "options": [
-                "Porque são mais baratos",
-                "Menor corrente para mesma potência reduz perda",
+                "Porque o alternador é menor",
                 "Porque são mais flexíveis",
-                "Porque o alternador é menor"
+                "Porque são mais baratos",
+                "Menor corrente para mesma potência reduz perda"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Menor corrente para mesma potência reduz perda. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

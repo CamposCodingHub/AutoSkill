@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "headers": [
+                "Sintoma",
+                "Causa Provável",
+                "Teste"
+            ],
             "rows": [
-                ["Vidro não funciona", "Motor vidro, interruptor", "Testar alimentação 12V no motor"],
-                ["Trava não responde", "Atuador, BCM, CAN", "Verificar sinal no atuador"],
-                ["Retrovisor parado", "Motor, interruptor", "Testar continuidade dos fios"],
-                ["Banco não move", "Motor, fusível 30A", "Medir corrente do motor"],
-                ["Áudio sem som", "Amplificador, CAN", "Verificar linha de áudio"]
+                [
+                    "Vidro não funciona",
+                    "Motor vidro, interruptor",
+                    "Testar alimentação 12V no motor"
+                ],
+                [
+                    "Trava não responde",
+                    "Atuador, BCM, CAN",
+                    "Verificar sinal no atuador"
+                ],
+                [
+                    "Retrovisor parado",
+                    "Motor, interruptor",
+                    "Testar continuidade dos fios"
+                ],
+                [
+                    "Banco não move",
+                    "Motor, fusível 30A",
+                    "Medir corrente do motor"
+                ],
+                [
+                    "Áudio sem som",
+                    "Amplificador, CAN",
+                    "Verificar linha de áudio"
+                ]
             ]
         },
         {
@@ -47,44 +71,114 @@
             "value": "Após reparos, execute procedimentos de inicialização e aprendizado. Sistemas modernos precisam 'aprender' posições e configurações após intervenções."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar conforto e carroceria aplicado a “Diagnóstico de Sistemas de Conforto”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Vidro/trava/retrovisor: localize se o comando local, mestre ou módulo falhou. Fusível de conforto e massa de porta são vilões frequentes. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "Isolar",
+                "Teste"
+            ],
+            "rows": [
+                [
+                    "Só um vidro",
+                    "Motor vs interruptor",
+                    "Alimentar motor direto (cuidado)"
+                ],
+                [
+                    "Nenhum conforto",
+                    "Fusível/BCM",
+                    "B+ e rede"
+                ],
+                [
+                    "Após chuva",
+                    "Água na porta",
+                    "Corrosão conector"
+                ],
+                [
+                    "Aftermarket",
+                    "Alarme/som",
+                    "Parasita/CAN"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar motor de vidro sem testar interruptor/chicote da porta."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fusíveis conforto",
+                "Comando vs carga",
+                "Inspecionar chicote porta"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Diagnóstico de Conforto"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual módulo controla a maioria dos sistemas de conforto modernos?",
             "options": [
-                "ECU do motor",
-                "BCM (Body Control Module)",
+                "Módulo de freios ABS",
                 "Módulo de transmissão",
-                "Módulo de freios ABS"
+                "ECU do motor",
+                "BCM (Body Control Module)"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: BCM (Body Control Module). Em conforto e carroceria (“Diagnóstico de Sistemas de Conforto”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que indicam códigos de falha U0xxx?",
             "options": [
-                "Problemas no motor",
                 "Problemas de comunicação CAN",
-                "Problemas no sistema de freios",
-                "Problemas no sistema de áudio"
+                "Problemas no motor",
+                "Problemas no sistema de áudio",
+                "Problemas no sistema de freios"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Problemas de comunicação CAN. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que muitos sistemas de conforto falham simultaneamente?",
             "options": [
+                "Porque todos têm o mesmo fusível",
                 "Porque todos usam a mesma bateria",
                 "Porque são controlados pelo BCM através de rede CAN",
-                "Porque todos têm o mesmo fusível",
                 "Porque todos estão no mesmo painel"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Porque são controlados pelo BCM através de rede CAN. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

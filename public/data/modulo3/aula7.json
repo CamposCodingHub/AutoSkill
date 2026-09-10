@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Função", "Aplicação"],
+            "headers": [
+                "Tipo",
+                "Função",
+                "Aplicação"
+            ],
             "rows": [
-                ["Interruptor Alavanca", "Contato mecânico", "Setas, faróis"],
-                ["Botão Push", "Contato momentâneo", "Buzina, vidros"],
-                ["Chave Ignição", "Múltiplas posições", "Partida, acessórios"],
-                ["Sensor Posição", "Detecta estado", "Portas, capô"],
-                ["Relé Estado Sólido", "Chaveamento eletrônico", "Sistemas modernos"]
+                [
+                    "Interruptor Alavanca",
+                    "Contato mecânico",
+                    "Setas, faróis"
+                ],
+                [
+                    "Botão Push",
+                    "Contato momentâneo",
+                    "Buzina, vidros"
+                ],
+                [
+                    "Chave Ignição",
+                    "Múltiplas posições",
+                    "Partida, acessórios"
+                ],
+                [
+                    "Sensor Posição",
+                    "Detecta estado",
+                    "Portas, capô"
+                ],
+                [
+                    "Relé Estado Sólido",
+                    "Chaveamento eletrônico",
+                    "Sistemas modernos"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Limpe contatos com spray limpador. Verifique folga mecânica e travas. Substitua se apresentar mau contato."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar componentes (fusível, relé, diodo…) aplicado a “Chaves e Interruptores”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Fusível aberto é sintoma. Relé que “clicka” só prova bobina — o contato 30–87 pode estar morto. Sempre separe lado de comando e lado de potência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Peça",
+                "Teste rápido",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Fusível",
+                    "Continuidade / tensão dos dois lados",
+                    "Aberto = achar curto/sobrecorrente"
+                ],
+                [
+                    "Relé",
+                    "85/86 ohms + 30/87 sob comando",
+                    "Click ≠ potência ok"
+                ],
+                [
+                    "Diodo",
+                    "Polarização / queda ~0,5–0,7 V",
+                    "Curto ou aberto"
+                ],
+                [
+                    "Conector",
+                    "VD sob carga + inspeção visual",
+                    "Fretting/corrosão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Upar ampère do fusível; trocar relé sem medir 30 e 87; ignorar diagrama de pinagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar circuito no diagrama",
+                "Medir antes de substituir",
+                "Validar carga real após o reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Interruptores"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de interruptor usa contato momentâneo?",
             "options": [
-                "Alavanca",
-                "Botão push",
+                "Sensor de posição",
                 "Chave de ignição",
-                "Sensor de posição"
+                "Alavanca",
+                "Botão push"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Botão push. Em componentes (fusível, relé, diodo…) (“Chaves e Interruptores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função de um interruptor em circuitos automotivos?",
             "options": [
+                "Amplificar sinais digitais",
                 "Regular a tensão do circuito",
                 "Controlar o fluxo de corrente abrindo/fechando o circuito",
-                "Armazenar energia temporariamente",
-                "Amplificar sinais digitais"
+                "Armazenar energia temporariamente"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Controlar o fluxo de corrente abrindo/fechando o circuito. Em componentes (fusível, relé, diodo…) (“Chaves e Interruptores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como você testa um interruptor com multímetro?",
             "options": [
-                "Medindo a resistência em ambas as posições",
                 "Verificando a tensão nos terminais",
+                "Medindo a resistência em ambas as posições",
                 "Testando a continuidade apenas na posição ligada",
                 "Medindo a capacitância dos contatos"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Medindo a resistência em ambas as posições. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

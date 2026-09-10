@@ -51,37 +51,108 @@
             "value": "Flyback: quando a corrente em uma bobina é interrompida, a tensão pode atingir centenas de volts. Para proteger transistores, usam-se diodos flyback (também chamados de diodos de roda livre)."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Eletromagnetismo”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "Qual componente do carro utiliza o fenômeno do 'flyback' (colapso do campo magnético) para gerar alta tensão?",
             "options": [
-                "Alternador",
-                "Bobina de ignição",
+                "Fusível",
                 "Sensor de temperatura",
-                "Fusível"
+                "Alternador",
+                "Bobina de ignição"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Bobina de ignição. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Ao medir a resistência da bobina de um relé automotivo, qual valor é considerado normal?",
             "options": [
-                "0,5-5Ω",
                 "50-120Ω",
-                "200-2000Ω",
-                "6k-15kΩ"
+                "0,5-5Ω",
+                "6k-15kΩ",
+                "200-2000Ω"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 50-120Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é o princípio fundamental que permite que um sensor indutivo (como CKP) gere sinal elétrico?",
             "options": [
-                "Resistência térmica",
                 "Indução eletromagnética",
                 "Efeito fotoelétrico",
+                "Resistência térmica",
                 "Capacitância variável"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Indução eletromagnética. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

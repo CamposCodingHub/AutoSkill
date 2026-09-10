@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Características"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Características"
+            ],
             "rows": [
-                ["Microcontrolador", "Processamento central", "16/32-bit, 40-200MHz, multicore"],
-                ["Memória Flash", "Armazenamento de calibração", "256KB-4MB, regravável"],
-                ["EEPROM", "Dados adaptativos", "4KB-64KB, não volátil"],
-                ["RAM", "Memória de trabalho", "32KB-512KB, volátil"],
-                ["Drivers de Potência", "Controle de atuadores", "MOSFETs, proteção, diagnóstico"]
+                [
+                    "Microcontrolador",
+                    "Processamento central",
+                    "16/32-bit, 40-200MHz, multicore"
+                ],
+                [
+                    "Memória Flash",
+                    "Armazenamento de calibração",
+                    "256KB-4MB, regravável"
+                ],
+                [
+                    "EEPROM",
+                    "Dados adaptativos",
+                    "4KB-64KB, não volátil"
+                ],
+                [
+                    "RAM",
+                    "Memória de trabalho",
+                    "32KB-512KB, volátil"
+                ],
+                [
+                    "Drivers de Potência",
+                    "Controle de atuadores",
+                    "MOSFETs, proteção, diagnóstico"
+                ]
             ]
         },
         {
@@ -43,44 +67,115 @@
             "text": "De sistemas simples com poucos mapas para ECUs modernas com milhões de parâmetros, aprendizado adaptativo e conectividade."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Arquitetura da ECU”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Arquitetura ECU"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de memória armazena a calibração do motor?",
             "options": [
-                "RAM",
                 "EEPROM",
                 "Flash",
+                "RAM",
                 "Cache"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: Flash. Em ECU e estratégias (“Arquitetura da ECU”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a faixa de temperatura operacional típica de uma ECU?",
             "options": [
-                "0°C a 50°C",
-                "-20°C a 80°C",
                 "-40°C a 125°C",
-                "-10°C a 100°C"
+                "-10°C a 100°C",
+                "-20°C a 80°C",
+                "0°C a 50°C"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: -40°C a 125°C. Em ECU e estratégias (“Arquitetura da ECU”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual componente da ECU é responsável pelo processamento central?",
             "options": [
-                "Memória Flash",
-                "Driver de potência",
                 "Microcontrolador",
-                "Conversor A/D"
+                "Memória Flash",
+                "Conversor A/D",
+                "Driver de potência"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: Microcontrolador. Em ECU e estratégias (“Arquitetura da ECU”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

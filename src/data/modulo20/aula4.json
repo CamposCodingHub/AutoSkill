@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo Circuito", "Cálculo Principal", "Aplicação"],
+            "headers": [
+                "Tipo Circuito",
+                "Cálculo Principal",
+                "Aplicação"
+            ],
             "rows": [
-                ["Série", "Rt = R1 + R2 + ...", "Divisores de tensão"],
-                ["Paralelo", "1/Rt = 1/R1 + 1/R2", "Cargas múltiplas"],
-                ["Misto", "Combinação", "Circuitos reais"],
-                ["Divisor Tensão", "Vout = Vin * (R2/(R1+R2))", "Sensores, referências"]
+                [
+                    "Série",
+                    "Rt = R1 + R2 + ...",
+                    "Divisores de tensão"
+                ],
+                [
+                    "Paralelo",
+                    "1/Rt = 1/R1 + 1/R2",
+                    "Cargas múltiplas"
+                ],
+                [
+                    "Misto",
+                    "Combinação",
+                    "Circuitos reais"
+                ],
+                [
+                    "Divisor Tensão",
+                    "Vout = Vin * (R2/(R1+R2))",
+                    "Sensores, referências"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Simuladores de circuitos, calculadoras online, e software especializado para análise complexa."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar diagramas elétricos aplicado a “Análise de Circuitos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Diagrama é GPS: marque power, gnd, sinal, fusível e conector. Sem leitura de esquema, medição vira turismo no chicote. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Elemento",
+                "Pergunta",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Símbolo",
+                    "O que é o componente?",
+                    "Legenda OEM"
+                ],
+                [
+                    "Código fio",
+                    "Qual circuito?",
+                    "Trace no carro"
+                ],
+                [
+                    "Conector",
+                    "Onde medir?",
+                    "Vista de pinos"
+                ],
+                [
+                    "Splice",
+                    "Onde divide?",
+                    "Isolar trechos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Seguir cor de fio de outro modelo/ano; medir sem identificar pino."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Abrir diagrama do VIN",
+                "Marcar caminho",
+                "Medir nos pontos marcados"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "WiringTraceSimulator",
             "config": {
-                "title": "Análise de Circuitos"
+                "title": "Rastreio de chicote / diagrama"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a fórmula para resistores em paralelo?",
             "options": [
+                "Rt = R1 - R2",
                 "Rt = R1 + R2",
                 "1/Rt = 1/R1 + 1/R2",
-                "Rt = (R1 * R2) / (R1 + R2)",
-                "Rt = R1 - R2"
+                "Rt = (R1 * R2) / (R1 + R2)"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 1/Rt = 1/R1 + 1/R2. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual a Lei de Ohm?",
             "options": [
+                "R = VI",
                 "V = IR",
                 "I = VR",
-                "R = VI",
                 "P = VI"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: V = IR. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Para que serve a análise de circuitos?",
             "options": [
-                "Apenas teoria",
                 "Diagnosticar problemas e prever comportamento do sistema",
+                "Não tem utilidade prática",
                 "Apenas calcular números",
-                "Não tem utilidade prática"
+                "Apenas teoria"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Diagnosticar problemas e prever comportamento do sistema. Em diagramas elétricos (“Análise de Circuitos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

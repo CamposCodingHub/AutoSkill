@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Causa Provável", "Solução"],
+            "headers": [
+                "Sintoma",
+                "Causa Provável",
+                "Solução"
+            ],
             "rows": [
-                ["Sem posição GPS", "Antena/módulo GPS", "Verificar antena, localização"],
-                ["Sem comunicação", "Antena GSM/sinal", "Testar operadora, antena"],
-                ["Alertas falsos", "Sensores/configuração", "Ajustar sensibilidade"],
-                ["Bateria fraca", "Carga/desgaste", "Substituir bateria"],
-                ["Configuração perdida", "Reset/falha", "Reconfigurar sistema"]
+                [
+                    "Sem posição GPS",
+                    "Antena/módulo GPS",
+                    "Verificar antena, localização"
+                ],
+                [
+                    "Sem comunicação",
+                    "Antena GSM/sinal",
+                    "Testar operadora, antena"
+                ],
+                [
+                    "Alertas falsos",
+                    "Sensores/configuração",
+                    "Ajustar sensibilidade"
+                ],
+                [
+                    "Bateria fraca",
+                    "Carga/desgaste",
+                    "Substituir bateria"
+                ],
+                [
+                    "Configuração perdida",
+                    "Reset/falha",
+                    "Reconfigurar sistema"
+                ]
             ]
         },
         {
@@ -47,44 +71,114 @@
             "value": "Documente todas as intervenções e mantenha histórico de manutenção para rastreamento de problemas e planejamento de upgrades."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Diagnóstico e Manutenção”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Diagnóstico"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo ao diagnosticar perda de sinal?",
             "options": [
+                "Resetar sistema",
                 "Substituir módulo",
-                "Verificar antenas e conexões",
                 "Reconfigurar servidor",
-                "Resetar sistema"
+                "Verificar antenas e conexões"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Verificar antenas e conexões. Em alarme / rastreador / segurança (“Diagnóstico e Manutenção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que pode causar alertas falsos em sistemas de alarme?",
             "options": [
-                "Sensores defeituosos ou configuração incorreta",
                 "Bateria muito forte",
-                "Motor muito potente",
-                "Pneus novos"
+                "Sensores defeituosos ou configuração incorreta",
+                "Pneus novos",
+                "Motor muito potente"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Sensores defeituosos ou configuração incorreta. Em alarme / rastreador / segurança (“Diagnóstico e Manutenção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que analisar logs de erros e eventos?",
             "options": [
-                "Para gastar tempo",
                 "Para identificar padrões de falha e otimizar configurações",
+                "Para gastar tempo",
                 "Para não fazer nada",
                 "Para aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para identificar padrões de falha e otimizar configurações. Em alarme / rastreador / segurança (“Diagnóstico e Manutenção”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

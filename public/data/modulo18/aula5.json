@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Dado", "Fonte", "Frequência"],
+            "headers": [
+                "Dado",
+                "Fonte",
+                "Frequência"
+            ],
             "rows": [
-                ["Posição GPS", "Módulo GPS", "1-60 segundos"],
-                ["Velocidade", "CAN/ECU", "5-30 segundos"],
-                ["Nível Combustível", "CAN/Sensor", "30-300 segundos"],
-                ["Status Motor", "CAN/ECU", "Evento-based"],
-                ["Alertas", "Múltiplos", "Imediato"]
+                [
+                    "Posição GPS",
+                    "Módulo GPS",
+                    "1-60 segundos"
+                ],
+                [
+                    "Velocidade",
+                    "CAN/ECU",
+                    "5-30 segundos"
+                ],
+                [
+                    "Nível Combustível",
+                    "CAN/Sensor",
+                    "30-300 segundos"
+                ],
+                [
+                    "Status Motor",
+                    "CAN/ECU",
+                    "Evento-based"
+                ],
+                [
+                    "Alertas",
+                    "Múltiplos",
+                    "Imediato"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use criptografia TLS/SSL, autenticação de dispositivos, e firewalls para proteger dados contra acesso não autorizado."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Comunicação e Telemetria”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Telemetria"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual protocolo é otimizado para dispositivos IoT?",
             "options": [
-                "HTTP",
                 "FTP",
                 "MQTT",
+                "HTTP",
                 "SMTP"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: MQTT. Em alarme / rastreador / segurança (“Comunicação e Telemetria”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a frequência típica de transmissão de posição GPS?",
             "options": [
-                "A cada 24 horas",
-                "1-60 segundos",
                 "Apenas uma vez",
-                "A cada ano"
+                "A cada ano",
+                "1-60 segundos",
+                "A cada 24 horas"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 1-60 segundos. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que é importante otimizar a frequência de transmissão de dados?",
             "options": [
+                "Para danificar o sistema",
                 "Para aumentar o custo",
-                "Para equilibrar informações em tempo real com custos de dados e bateria",
                 "Para não funcionar",
-                "Para danificar o sistema"
+                "Para equilibrar informações em tempo real com custos de dados e bateria"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para equilibrar informações em tempo real com custos de dados e bateria. Em alarme / rastreador / segurança (“Comunicação e Telemetria”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

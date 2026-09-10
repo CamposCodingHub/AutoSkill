@@ -10,7 +10,10 @@
         "build:all": "npm run build:backend && npm run build",
         "preview": "vite preview",
         "test": "vitest",
-        "test:ui": "vitest --ui"
+        "test:ui": "vitest --ui",
+        "validate:lessons": "node scripts/simulate-lessons.mjs",
+        "enrich:lessons": "node scripts/enrich-all-lessons.mjs",
+        "check:sims": "node scripts/check-sims.mjs"
     },
     "dependencies": {
         "@vercel/node": "^4.0.0",
@@ -21,6 +24,7 @@
         "zustand": "^4.5.2"
     },
     "devDependencies": {
+        "@playwright/test": "^1.63.0",
         "@testing-library/jest-dom": "^6.9.1",
         "@testing-library/react": "^16.3.2",
         "@testing-library/user-event": "^14.6.1",

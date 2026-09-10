@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Modelo", "Vantagens", "Desafios"],
+            "headers": [
+                "Modelo",
+                "Vantagens",
+                "Desafios"
+            ],
             "rows": [
-                ["Franchising", "Crescimento rápido, capital externo", "Controle qualidade, padronização"],
-                ["Filiais Próprias", "Controle total", "Alto investimento, gestão complexa"],
-                ["Parcerias", "Baixo risco", "Divisão lucros, dependência"],
-                ["Expansão Digital", "Baixo custo", "Competição online"]
+                [
+                    "Franchising",
+                    "Crescimento rápido, capital externo",
+                    "Controle qualidade, padronização"
+                ],
+                [
+                    "Filiais Próprias",
+                    "Controle total",
+                    "Alto investimento, gestão complexa"
+                ],
+                [
+                    "Parcerias",
+                    "Baixo risco",
+                    "Divisão lucros, dependência"
+                ],
+                [
+                    "Expansão Digital",
+                    "Baixo custo",
+                    "Competição online"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "ROI por unidade, tempo de payback, satisfação de franqueados, e crescimento de mercado."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar empreendedorismo de oficina elétrica aplicado a “Expansão e Franchising”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Preço justo exige método: menos retrabalho, orçamento com evidência, especialização. Elétrica bem feita tem margem — chute não. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Frente",
+                "Ação",
+                "Métrica"
+            ],
+            "rows": [
+                [
+                    "Comercial",
+                    "Orçar após diagnóstico",
+                    "Taxa de aprovação"
+                ],
+                [
+                    "Operação",
+                    "Checklist padrão",
+                    "Retrabalho"
+                ],
+                [
+                    "Financeiro",
+                    "Hora técnica real",
+                    "Margem"
+                ],
+                [
+                    "Reputação",
+                    "Garantia com evidência",
+                    "Indicações"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Aceitar “olha aí rapidinho” sem RO; trabalhar no prejuízo por insegurança técnica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir escopo",
+                "Cobrar diagnóstico",
+                "Entregar validação"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Expansão e Franchising"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual modelo permite crescimento mais rápido?",
             "options": [
-                "Filiais próprias",
-                "Franchising",
+                "Expansão digital",
                 "Parcerias",
-                "Expansão digital"
+                "Filiais próprias",
+                "Franchising"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Franchising. Em empreendedorismo de oficina elétrica (“Expansão e Franchising”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual documento é essencial para franchising?",
             "options": [
-                "Apenas contrato social",
                 "Manual de operações",
-                "Apenas RG",
-                "Apenas CPF"
+                "Apenas contrato social",
+                "Apenas CPF",
+                "Apenas RG"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Manual de operações. Em empreendedorismo de oficina elétrica (“Expansão e Franchising”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que processos padronizados são importantes para expansão?",
             "options": [
+                "Aumentar o custo",
                 "Apenas burocracia",
                 "Garantem consistência e replicação do modelo de negócio",
-                "Aumentar o custo",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Garantem consistência e replicação do modelo de negócio. Em empreendedorismo de oficina elétrica (“Expansão e Franchising”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

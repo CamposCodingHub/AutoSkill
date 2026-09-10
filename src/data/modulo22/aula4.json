@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Técnica", "Aplicação", "Vantagens", "Desvantagens"],
+            "headers": [
+                "Técnica",
+                "Aplicação",
+                "Vantagens",
+                "Desvantagens"
+            ],
             "rows": [
-                ["Solda", "Componentes precisos", "Conexão permanente", "Risco de corrosão"],
-                ["Crimpe", "Fios de potência", "Rápido, confiável", "Requer ferramenta"],
-                ["Conector Reparo", "Reparos rápidos", "Fácil instalação", "Custo elevado"],
-                ["Termo-retrátil", "Selagem perfeita", "Proteção total", "Requer ferramenta"]
+                [
+                    "Solda",
+                    "Componentes precisos",
+                    "Conexão permanente",
+                    "Risco de corrosão"
+                ],
+                [
+                    "Crimpe",
+                    "Fios de potência",
+                    "Rápido, confiável",
+                    "Requer ferramenta"
+                ],
+                [
+                    "Conector Reparo",
+                    "Reparos rápidos",
+                    "Fácil instalação",
+                    "Custo elevado"
+                ],
+                [
+                    "Termo-retrátil",
+                    "Selagem perfeita",
+                    "Proteção total",
+                    "Requer ferramenta"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Emenda ideal deve ter resistência <0.01Ω, ser mecanicamente forte, e completamente selada."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar solda e emendas aplicado a “Emendas de Chicotes Elétricos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Emenda profissional: limpeza, mecânica firme, solda adequada quando indicada, isolação e alívio de tração. Emenda fria = falha intermitente futura. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Bom",
+                "Ruim"
+            ],
+            "rows": [
+                [
+                    "Crimp",
+                    "Ferramenta certa",
+                    "Alicate “amassa”"
+                ],
+                [
+                    "Solda",
+                    "Fluxo limpo",
+                    "Frio/excesso"
+                ],
+                [
+                    "Isolação",
+                    "Termo + adesivo",
+                    "Fita frouxa"
+                ],
+                [
+                    "Local",
+                    "Longe de calor/água",
+                    "No assoalho aberto"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Torcer fio e cobrir com fita; soldar CAN sem padrão OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Preparar condutor",
+                "União mecânica",
+                "Isolar e testar sob carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Emendas de Chicotes"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a resistência máxima aceitável para emenda profissional?",
             "options": [
-                "<0.01Ω",
                 "<0.1Ω",
-                "<1.0Ω",
-                "<10Ω"
+                "<10Ω",
+                "<0.01Ω",
+                "<1.0Ω"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: <0.01Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual técnica é ideal para fios de potência?",
             "options": [
+                "Fita isolante apenas",
                 "Solda",
                 "Crimpe",
-                "Fita isolante apenas",
                 "Nenhuma das acima"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Crimpe. Em solda e emendas (“Emendas de Chicotes Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo no procedimento padrão de emenda?",
             "options": [
-                "Isolar completamente",
                 "Limpar fios",
+                "Estanhar pontas",
                 "Testar continuidade",
-                "Estanhar pontas"
+                "Isolar completamente"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Limpar fios. Em solda e emendas (“Emendas de Chicotes Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Equipamento", "Especificação", "Aplicação"],
+            "headers": [
+                "Equipamento",
+                "Especificação",
+                "Aplicação"
+            ],
             "rows": [
-                ["Fonte Variável", "0-30V, 5A", "Simulação sistemas veiculares"],
-                ["Bancada Testes", "Múltiplos circuitos", "Teste componentes"],
-                ["Multímetros", "CAT III 600V", "Medições gerais"],
-                ["Osciloscópio", "50MHz+, 4 canais", "Análise de sinais"],
-                ["Ferramentas", "Profissionais", "Montagem/reparo"]
+                [
+                    "Fonte Variável",
+                    "0-30V, 5A",
+                    "Simulação sistemas veiculares"
+                ],
+                [
+                    "Bancada Testes",
+                    "Múltiplos circuitos",
+                    "Teste componentes"
+                ],
+                [
+                    "Multímetros",
+                    "CAT III 600V",
+                    "Medições gerais"
+                ],
+                [
+                    "Osciloscópio",
+                    "50MHz+, 4 canais",
+                    "Análise de sinais"
+                ],
+                [
+                    "Ferramentas",
+                    "Profissionais",
+                    "Montagem/reparo"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Registre todos os experimentos, resultados, e aprendizados. Crie um portfólio de projetos práticos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar casos práticos / laboratório aplicado a “Montagem do Laboratório”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Trate cada case como RO real: hipótese → teste que mata hipótese → evidência → correção → reteste. Tempo sem método é tempo perdido. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Passo",
+                "Pergunta",
+                "Saída"
+            ],
+            "rows": [
+                [
+                    "Sintoma",
+                    "O que o cliente vê?",
+                    "Reprodução"
+                ],
+                [
+                    "Hipótese",
+                    "O que explicaria?",
+                    "Lista curta"
+                ],
+                [
+                    "Teste",
+                    "O que prova/refuta?",
+                    "Número"
+                ],
+                [
+                    "Fechamento",
+                    "Validou?",
+                    "RO completo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Mudar três peças de uma vez; não registrar o que já foi testado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Uma variável por vez",
+                "Anotar resultados",
+                "Comparar com lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Laboratório"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a voltagem máxima recomendada para fonte de laboratório automotivo?",
             "options": [
-                "12V",
                 "24V",
                 "30V",
+                "12V",
                 "48V"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 30V. Em casos práticos / laboratório (“Montagem do Laboratório”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual categoria de segurança deve ter multímetros para uso automotivo?",
             "options": [
-                "CAT I",
                 "CAT II",
+                "CAT IV",
                 "CAT III 600V",
-                "CAT IV"
+                "CAT I"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: CAT III 600V. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que é importante documentar todos os experimentos no laboratório?",
             "options": [
-                "Apenas burocracia",
-                "Criar portfólio de projetos e registrar aprendizados",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Criar portfólio de projetos e registrar aprendizados"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Criar portfólio de projetos e registrar aprendizados. Em casos práticos / laboratório (“Montagem do Laboratório”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

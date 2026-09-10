@@ -13,13 +13,37 @@
         },
         {
             "type": "table",
-            "headers": ["Armadilha", "O que acontece", "O que fazer"],
+            "headers": [
+                "Armadilha",
+                "O que acontece",
+                "O que fazer"
+            ],
             "rows": [
-                ["Ohms com circuito energizado", "DMM queima / leitura mentirosa", "Desenergize e isole antes de ohms"],
-                ["Continuidade ‘ok’ e falha sob carga", "Fio partido parcial / corrosão", "Meça voltage drop COM carga ligada"],
-                ["Trocar arranque no primeiro click", "Retrabalho e cliente bravo", "Tensão + VD nos cabos + corrente"],
-                ["Desconectar bateria no teste de fuga", "Módulo dorme e a fuga ‘some’", "mV nos fusíveis ou reespere o sleep"],
-                ["Apagar DTC sem freeze frame", "Perde evidência", "Anote/fotografe antes de limpar"]
+                [
+                    "Ohms com circuito energizado",
+                    "DMM queima / leitura mentirosa",
+                    "Desenergize e isole antes de ohms"
+                ],
+                [
+                    "Continuidade ‘ok’ e falha sob carga",
+                    "Fio partido parcial / corrosão",
+                    "Meça voltage drop COM carga ligada"
+                ],
+                [
+                    "Trocar arranque no primeiro click",
+                    "Retrabalho e cliente bravo",
+                    "Tensão + VD nos cabos + corrente"
+                ],
+                [
+                    "Desconectar bateria no teste de fuga",
+                    "Módulo dorme e a fuga ‘some’",
+                    "mV nos fusíveis ou reespere o sleep"
+                ],
+                [
+                    "Apagar DTC sem freeze frame",
+                    "Perde evidência",
+                    "Anote/fotografe antes de limpar"
+                ]
             ]
         },
         {
@@ -49,6 +73,74 @@
                 "Faça voltage drop nos trechos de corrente",
                 "Só então substitua e valide"
             ]
+        },
+        {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Por onde começar e erros clássicos do iniciante”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
         },
         {
             "type": "simulator",

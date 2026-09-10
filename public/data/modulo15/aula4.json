@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Tecnologia"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Tecnologia"
+            ],
             "rows": [
-                ["IGBT/MOSFET", "Chaveamento de potência", "Silicon, SiC, GaN"],
-                ["Capacitores DC", "Filtragem de ripple", "Eletrólíticos, filme"],
-                ["Driver Gates", "Controle de switches", "Isolamento óptico"],
-                ["Microcontrolador", "Controle PWM", "DSP dedicado"]
+                [
+                    "IGBT/MOSFET",
+                    "Chaveamento de potência",
+                    "Silicon, SiC, GaN"
+                ],
+                [
+                    "Capacitores DC",
+                    "Filtragem de ripple",
+                    "Eletrólíticos, filme"
+                ],
+                [
+                    "Driver Gates",
+                    "Controle de switches",
+                    "Isolamento óptico"
+                ],
+                [
+                    "Microcontrolador",
+                    "Controle PWM",
+                    "DSP dedicado"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Controla amplitude e frequência da tensão AC para regular velocidade e torque do motor com precisão."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar HV / híbridos / BEV aplicado a “Inversores e Eletrônica de Potência”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem PPE + service plug/LOTO + verificação 0 V conforme OEM, não há serviço. 12 V auxiliar fraca impede READY. Isolation fault exige fluxo do fabricante. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Etapa",
+                "Obrigatório",
+                "Por quê"
+            ],
+            "rows": [
+                [
+                    "PPE",
+                    "Classe adequada",
+                    "Arco/choque"
+                ],
+                [
+                    "LOTO",
+                    "Service plug",
+                    "Isolar pack"
+                ],
+                [
+                    "0 V",
+                    "Medir pontos OEM",
+                    "Energia residual"
+                ],
+                [
+                    "12 V aux",
+                    "Estável",
+                    "Contatores"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir capa laranja por curiosidade; saltar interlock."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Treinamento/autorização",
+                "PPE",
+                "Procedimento OEM completo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Inversores"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia de semicondutor está substituindo IGBTs em inversores modernos?",
             "options": [
-                "Silicone tradicional",
                 "SiC (Silicon Carbide)",
-                "Germanium",
-                "Silício amorfo"
+                "Silicone tradicional",
+                "Silício amorfo",
+                "Germanium"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: SiC (Silicon Carbide). Em HV / híbridos / BEV (“Inversores e Eletrônica de Potência”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a frequência típica de operação dos inversores modernos?",
             "options": [
-                "50-60Hz",
                 "10-20kHz",
+                "50-60Hz",
                 "100-200kHz",
                 "1MHz"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 10-20kHz. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que inversores requerem refrigeração líquida?",
             "options": [
-                "Porque são muito grandes",
                 "Geram calor significativo durante operação",
                 "Porque operam em baixa voltagem",
-                "Porque são feitos de plástico"
+                "Porque são feitos de plástico",
+                "Porque são muito grandes"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Geram calor significativo durante operação. Em HV / híbridos / BEV (“Inversores e Eletrônica de Potência”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

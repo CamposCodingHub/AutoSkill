@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Problema", "Causa", "Sintoma"],
+            "headers": [
+                "Problema",
+                "Causa",
+                "Sintoma"
+            ],
             "rows": [
-                ["Resistência > 120Ω", "Terminação faltando", "Comunicação intermitente"],
-                ["Resistência < 60Ω", "Terminação duplicada", "Sinal fraco, ruído"],
-                ["Resistência = ∞", "Circuito aberto", "Sem comunicação"],
-                ["Resistência variável", "Mau contato", "Falhas aleatórias"]
+                [
+                    "Resistência > 120Ω",
+                    "Terminação faltando",
+                    "Comunicação intermitente"
+                ],
+                [
+                    "Resistência < 60Ω",
+                    "Terminação duplicada",
+                    "Sinal fraco, ruído"
+                ],
+                [
+                    "Resistência = ∞",
+                    "Circuito aberto",
+                    "Sem comunicação"
+                ],
+                [
+                    "Resistência variável",
+                    "Mau contato",
+                    "Falhas aleatórias"
+                ]
             ]
         },
         {
@@ -36,44 +56,114 @@
             "value": "A topologia estrela não é recomendada para CAN. Derivações longas podem causar reflexões e degradação do sinal."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar redes CAN/LIN/diagnóstico aplicado a “Topologia e Terminação CAN”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem comunicação: IG off, ohms CAN-H↔L (~60 Ω com duas terminações). 120 Ω ≈ uma terminação; ~0 Ω curto; OL aberto. Aftermarket na rede é suspeito clássico. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Leitura",
+                "Significado usual",
+                "Próximo passo"
+            ],
+            "rows": [
+                [
+                    "~60 Ω",
+                    "Duas terminações",
+                    "Checar níveis/alimentação"
+                ],
+                [
+                    "~120 Ω",
+                    "Falta uma terminação",
+                    "Achar módulo/resistor aberto"
+                ],
+                [
+                    "~0 Ω",
+                    "Curto H-L",
+                    "Isolar trechos"
+                ],
+                [
+                    "OL",
+                    "Aberto / desconectado",
+                    "Conector/DLC/chicote"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Reflashar tudo antes de medir ohms/alimentação; emendar CAN sem diagrama."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Medir terminação",
+                "Power/gnd do módulo offline",
+                "Inspecionar acessórios"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "VoltageDropSimulator",
+            "name": "CANBusSimulator",
             "config": {
-                "title": "Calculadora de Terminação CAN"
+                "title": "Rede CAN — terminação e níveis"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a resistência esperada entre CAN-H e CAN-L em uma rede corretamente terminada?",
             "options": [
+                "240Ω",
                 "120Ω",
                 "60Ω",
-                "240Ω",
                 "0Ω"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 60Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "O que indica uma resistência infinita entre CAN-H e CAN-L?",
             "options": [
-                "Rede com terminação correta",
                 "Rede sem terminação ou com fio quebrado",
+                "Comunicação normal",
                 "Curto-circuito na rede",
-                "Comunicação normal"
+                "Rede com terminação correta"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Rede sem terminação ou com fio quebrado. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você deve testar a terminação de uma rede CAN?",
             "options": [
+                "Apenas com o scanner conectado",
                 "Com o veículo ligado e motor funcionando",
-                "Com a bateria desconectada",
                 "Com o veículo desligado e todos os módulos conectados",
-                "Apenas com o scanner conectado"
+                "Com a bateria desconectada"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Com o veículo desligado e todos os módulos conectados. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

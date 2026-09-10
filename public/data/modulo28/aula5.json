@@ -17,14 +17,42 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Especificação", "Função"],
+            "headers": [
+                "Componente",
+                "Especificação",
+                "Função"
+            ],
             "rows": [
-                ["Painel Solar", "100W 12V", "Geração de energia"],
-                ["Bateria Principal", "12V 100Ah", "Armazenamento principal"],
-                ["Bateria Secundária", "12V 50Ah", "Armazenamento backup"],
-                ["Controlador Solar", "PWM 10A", "Gerenciamento solar"],
-                ["Inversor", "12V 220V 500W", "Conversão AC"],
-                ["Monitor Energia", "IoT WiFi", "Monitoramento remoto"]
+                [
+                    "Painel Solar",
+                    "100W 12V",
+                    "Geração de energia"
+                ],
+                [
+                    "Bateria Principal",
+                    "12V 100Ah",
+                    "Armazenamento principal"
+                ],
+                [
+                    "Bateria Secundária",
+                    "12V 50Ah",
+                    "Armazenamento backup"
+                ],
+                [
+                    "Controlador Solar",
+                    "PWM 10A",
+                    "Gerenciamento solar"
+                ],
+                [
+                    "Inversor",
+                    "12V 220V 500W",
+                    "Conversão AC"
+                ],
+                [
+                    "Monitor Energia",
+                    "IoT WiFi",
+                    "Monitoramento remoto"
+                ]
             ]
         },
         {
@@ -44,44 +72,114 @@
             "text": "Será avaliada eficiência energética, inteligência do sistema, documentação técnica, e inovação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar projetos e portfólio aplicado a “Projeto 5 - Smart Grid Veicular”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Portfólio técnico: RO com fotos de medição, diagrama marcado e validação. Isso vende confiança melhor que discurso. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Entrega",
+                "Conteúdo",
+                "Uso"
+            ],
+            "rows": [
+                [
+                    "Case PDF/MD",
+                    "Sintoma→teste→fixo",
+                    "Cliente/emprego"
+                ],
+                [
+                    "Prints DMM/scope",
+                    "Evidência",
+                    "Auditoria"
+                ],
+                [
+                    "Antes/depois",
+                    "Validação",
+                    "Marketing técnico"
+                ],
+                [
+                    "Lições aprendidas",
+                    "Erro evitado",
+                    "Melhoria contínua"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Portfólio só com “troquei a peça” sem números."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "3 cases documentados",
+                "Medições legíveis",
+                "Resultado validado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Smart Grid Veicular"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente é essencial para gerenciamento solar?",
             "options": [
+                "Monitor de energia",
                 "Inversor",
                 "Controlador solar",
-                "Monitor de energia",
                 "Bateria secundária"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Controlador solar. Em projetos e portfólio (“Projeto 5 - Smart Grid Veicular”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual componente converte DC para AC?",
             "options": [
-                "Controlador solar",
-                "Inversor",
                 "Bateria principal",
-                "Painel solar"
+                "Painel solar",
+                "Inversor",
+                "Controlador solar"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Inversor. Em projetos e portfólio (“Projeto 5 - Smart Grid Veicular”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que algoritmos de otimização são importantes em smart grid?",
             "options": [
+                "Não é necessário",
                 "Apenas burocracia",
-                "Gerenciam múltiplas fontes e otimizam consumo de energia",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Gerenciam múltiplas fontes e otimizam consumo de energia"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Gerenciam múltiplas fontes e otimizam consumo de energia. Em projetos e portfólio (“Projeto 5 - Smart Grid Veicular”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

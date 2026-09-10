@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Requisito", "Android Auto", "Apple CarPlay"],
+            "headers": [
+                "Requisito",
+                "Android Auto",
+                "Apple CarPlay"
+            ],
             "rows": [
-                ["Versão Mínima", "Android 8.0+", "iOS 13+"],
-                ["Conexão", "USB/Wireless", "USB/Wireless"],
-                ["Apps Suportados", "Google Maps, Waze, Spotify", "Apple Maps, Waze, Spotify"],
-                ["Controle", "Touch, voz, botões", "Touch, voz, botões"]
+                [
+                    "Versão Mínima",
+                    "Android 8.0+",
+                    "iOS 13+"
+                ],
+                [
+                    "Conexão",
+                    "USB/Wireless",
+                    "USB/Wireless"
+                ],
+                [
+                    "Apps Suportados",
+                    "Google Maps, Waze, Spotify",
+                    "Apple Maps, Waze, Spotify"
+                ],
+                [
+                    "Controle",
+                    "Touch, voz, botões",
+                    "Touch, voz, botões"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Verifique cabo USB, autenticação do smartphone, e atualizações da head unit. Teste com diferentes dispositivos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar áudio e telemática aplicado a “Android Auto e Apple CarPlay”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Som aftermarket mal alimentado gera parasita, interferência e até problemas de rede. Use B+ correto, fusível dedicado e massa limpa — nunca “ganze” na CAN. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Item",
+                "Boa prática",
+                "Risco"
+            ],
+            "rows": [
+                [
+                    "Alimentação",
+                    "Fusível calibrado",
+                    "Incêndio / parasita"
+                ],
+                [
+                    "Massa",
+                    "Ponto limpo curto",
+                    "Ruído / resets"
+                ],
+                [
+                    "Remote ACC",
+                    "Sinal adequado",
+                    "Rádio não dorme"
+                ],
+                [
+                    "Antena/GPS",
+                    "Blindagem",
+                    "Recepção ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Emendar em chicotes de airbag/CAN; deixar amp ligado em B+ sem remote."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de instalação",
+                "Medir consumo após sleep",
+                "Validar funções do veículo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Integração Smartphone"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual versão mínima do Android é necessária para Android Auto?",
             "options": [
-                "Android 5.0",
                 "Android 6.0",
-                "Android 8.0",
-                "Android 10.0"
+                "Android 5.0",
+                "Android 10.0",
+                "Android 8.0"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Android 8.0. Em áudio e telemática (“Android Auto e Apple CarPlay”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual versão mínima do iOS é necessária para Apple CarPlay?",
             "options": [
-                "iOS 10",
                 "iOS 11",
+                "iOS 10",
                 "iOS 13",
                 "iOS 15"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: iOS 13. Em áudio e telemática (“Android Auto e Apple CarPlay”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que alguns apps são bloqueados durante o movimento do veículo?",
             "options": [
-                "Porque consomem muita bateria",
                 "Requisitos legais de segurança",
+                "Porque causam interferência",
                 "Porque não são compatíveis",
-                "Porque causam interferência"
+                "Porque consomem muita bateria"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Requisitos legais de segurança. Em áudio e telemática (“Android Auto e Apple CarPlay”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

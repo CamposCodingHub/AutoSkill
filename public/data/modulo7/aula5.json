@@ -17,11 +17,23 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Suspeita Principal"],
+            "headers": [
+                "Sintoma",
+                "Suspeita Principal"
+            ],
             "rows": [
-                ["Só alta funciona", "Resistor série queimado, relé de baixa, fusível parcial"],
-                ["Nenhuma velocidade", "Fusível principal, relé de carga, sensor ECT 'mentindo' frio"],
-                ["Liga com AC mas não por temperatura", "Entrada ECT vs lógica de AC - separar causas"]
+                [
+                    "Só alta funciona",
+                    "Resistor série queimado, relé de baixa, fusível parcial"
+                ],
+                [
+                    "Nenhuma velocidade",
+                    "Fusível principal, relé de carga, sensor ECT 'mentindo' frio"
+                ],
+                [
+                    "Liga com AC mas não por temperatura",
+                    "Entrada ECT vs lógica de AC - separar causas"
+                ]
             ]
         },
         {
@@ -45,44 +57,114 @@
             "value": "Para diagnóstico, sempre compare com o esquema elétrico antes de fazer ponte direta na bateria. Teste os relés individualmente e verifique a integridade dos resistores de baixa velocidade."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar atuadores aplicado a “Ventiladores Elétricos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Separe falha de comando (ECU/driver) de falha de potência (fusível/relé/massa) e de falha do próprio atuador. Clique de relé não prova corrente na carga. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Atuador",
+                "Prova",
+                "Armadilha"
+            ],
+            "rows": [
+                [
+                    "Injetor",
+                    "Pulso + resistência isolada",
+                    "Medir ohms energizado"
+                ],
+                [
+                    "Bobina",
+                    "Comando + primary/secondary",
+                    "Cabo/estalo enganoso"
+                ],
+                [
+                    "Solenoide",
+                    "Alimentação + massa comutada",
+                    "Só bip de continuidade"
+                ],
+                [
+                    "Motor DC",
+                    "Corrente + VD",
+                    "Bind mecânico parece elétrico"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Condenar ECU sem provar alimentação/massa/sinal no conector do atuador."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de pinos",
+                "Medir comando e potência",
+                "Validar após reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "VoltageDropSimulator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Simulador de Queda em Ventilador"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Esquema com duas velocidades por dois relés costuma usar qual recurso para a velocidade mais baixa?",
             "options": [
-                "Segundo alternador dedicado",
                 "Resistor em série ou caminho de menor tensão no motor",
                 "Apenas fusível de 3A em ambas",
+                "Segundo alternador dedicado",
                 "Sensor de velocidade das rodas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Resistor em série ou caminho de menor tensão no motor. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do resistor em série em motores de duas velocidades?",
             "options": [
-                "Aumentar a corrente do motor",
-                "Limitar a corrente para reduzir a velocidade",
                 "Proteger contra curtos-circuitos",
-                "Melhorar a eficiência energética"
+                "Melhorar a eficiência energética",
+                "Limitar a corrente para reduzir a velocidade",
+                "Aumentar a corrente do motor"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Limitar a corrente para reduzir a velocidade. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você identifica um motor de duas velocidades no esquema elétrico?",
             "options": [
-                "Apenas pela cor do fio",
-                "Pela presença de dois relés ou resistor limitador",
                 "Pelo tamanho do motor",
-                "Pela potência nominal"
+                "Apenas pela cor do fio",
+                "Pela potência nominal",
+                "Pela presença de dois relés ou resistor limitador"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Pela presença de dois relés ou resistor limitador. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

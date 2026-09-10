@@ -51,37 +51,115 @@
             "ordered": false
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Circuitos em Série e Paralelo”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "Em um circuito com duas lâmpadas idênticas em série, uma delas queima (circuito aberto). O que acontece com a outra lâmpada?",
             "options": [
-                "Ela brilha mais intensamente",
                 "Ela continua acesa com o mesmo brilho",
-                "Ela se apaga, pois o circuito é interrompido",
-                "Ela pisca"
+                "Ela pisca",
+                "Ela brilha mais intensamente",
+                "Ela se apaga, pois o circuito é interrompido"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Ela se apaga, pois o circuito é interrompido. Em fundamentos elétricos (“Circuitos em Série e Paralelo”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que os faróis de um carro são conectados em paralelo e não em série?",
             "options": [
-                "Para economizar fiação",
                 "Para que se um farol queimar, o outro continue funcionando",
                 "Para reduzir o consumo de energia",
+                "Para economizar fiação",
                 "Para aumentar a vida útil das lâmpadas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para que se um farol queimar, o outro continue funcionando. Em fundamentos elétricos (“Circuitos em Série e Paralelo”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Em um circuito paralelo com duas resistências diferentes (10Ω e 20Ω) alimentado por 12V, qual resistor terá maior corrente?",
             "options": [
-                "O de 10Ω (menor resistência)",
-                "O de 20Ω (maior resistência)",
                 "Ambos terão a mesma corrente",
-                "Nenhum, pois não há corrente em paralelo"
+                "Nenhum, pois não há corrente em paralelo",
+                "O de 20Ω (maior resistência)",
+                "O de 10Ω (menor resistência)"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: O de 10Ω (menor resistência). Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
+        },
+        {
+            "type": "simulator",
+            "name": "CurrentPathSimulator",
+            "config": {
+                "title": "Caminho de corrente: serie/paralelo no carro"
+            }
         }
     ]
 }

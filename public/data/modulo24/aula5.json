@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Emergência", "Procedimento", "Equipamentos"],
+            "headers": [
+                "Emergência",
+                "Procedimento",
+                "Equipamentos"
+            ],
             "rows": [
-                ["Choque Elétrico", "RCP, desfibrilador", "Kit primeiros socorros"],
-                ["Queimaduras", "Água fria, curativos", "Kit queimaduras"],
-                ["Arco Elétrico", "Proteção ocular, atendimento médico", "Óculos de segurança"],
-                ["Incêndio", "Extintor CO2, evacuação", "Extintores, alarmes"],
-                ["Queda", "Imobilização, atendimento", "Kit imobilização"]
+                [
+                    "Choque Elétrico",
+                    "RCP, desfibrilador",
+                    "Kit primeiros socorros"
+                ],
+                [
+                    "Queimaduras",
+                    "Água fria, curativos",
+                    "Kit queimaduras"
+                ],
+                [
+                    "Arco Elétrico",
+                    "Proteção ocular, atendimento médico",
+                    "Óculos de segurança"
+                ],
+                [
+                    "Incêndio",
+                    "Extintor CO2, evacuação",
+                    "Extintores, alarmes"
+                ],
+                [
+                    "Queda",
+                    "Imobilização, atendimento",
+                    "Kit imobilização"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Mantenha kit completo: desfibrilador, máscara RCP, luvas, curativos, e números de emergência."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança de oficina aplicado a “Emergências e Primeiros Socorros”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "EPI, ordem no posto, isolamento de HV, e não “testar curto com fio grosso”. Segurança é competência técnica, não burocracia. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Risco",
+                "Controle",
+                "Exemplo"
+            ],
+            "rows": [
+                [
+                    "Choque/arco",
+                    "PPE/LOTO",
+                    "HV"
+                ],
+                [
+                    "Incêndio",
+                    "Fusível correto",
+                    "Aftermarket"
+                ],
+                [
+                    "Química",
+                    "EPIs bateria",
+                    "Ácido/térmica"
+                ],
+                [
+                    "Ergonomia",
+                    "Apoios/cavaletes",
+                    "Queda de veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Anel metálico em bancada energizada; pular espera de airbag."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Avaliar risco",
+                "Preparar EPI",
+                "Procedimento escrito quando HV"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Emergências"
+                "title": "Checklist de segurança HV / LOTO"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo em choque elétrico?",
             "options": [
-                "Iniciar RCP imediatamente",
                 "Desligar fonte de energia",
                 "Chamar emergência",
+                "Iniciar RCP imediatamente",
                 "Aplicar gelo na área"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Desligar fonte de energia. Em segurança de oficina (“Emergências e Primeiros Socorros”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual número de emergência para SAMU?",
             "options": [
-                "190",
                 "191",
+                "193",
                 "192",
-                "193"
+                "190"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 192. Em segurança de oficina (“Emergências e Primeiros Socorros”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que treinar funcionários em primeiros socorros?",
             "options": [
-                "Apenas burocracia",
-                "Responder rapidamente a emergências e salvar vidas",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Responder rapidamente a emergências e salvar vidas"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Responder rapidamente a emergências e salvar vidas. Em segurança de oficina (“Emergências e Primeiros Socorros”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

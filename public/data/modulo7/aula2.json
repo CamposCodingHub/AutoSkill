@@ -17,11 +17,27 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Características", "Aplicação Típica"],
+            "headers": [
+                "Tipo",
+                "Características",
+                "Aplicação Típica"
+            ],
             "rows": [
-                ["Caneta (COP antigo)", "Uma bobina, múltiplas saídas", "Motos mais antigas"],
-                ["DIS", "Módulo com múltiplas bobinas", "Carros anos 90-2000"],
-                ["COP", "Uma bobina por cilindro", "Carros modernos"]
+                [
+                    "Caneta (COP antigo)",
+                    "Uma bobina, múltiplas saídas",
+                    "Motos mais antigas"
+                ],
+                [
+                    "DIS",
+                    "Módulo com múltiplas bobinas",
+                    "Carros anos 90-2000"
+                ],
+                [
+                    "COP",
+                    "Uma bobina por cilindro",
+                    "Carros modernos"
+                ]
             ]
         },
         {
@@ -35,44 +51,114 @@
             "value": "O diagnóstico de bobinas inclui teste de resistência do primário e secundário, verificação de isolamento e análise da forma de onda com osciloscópio."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar atuadores aplicado a “Bobinas de Ignição”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Separe falha de comando (ECU/driver) de falha de potência (fusível/relé/massa) e de falha do próprio atuador. Clique de relé não prova corrente na carga. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Atuador",
+                "Prova",
+                "Armadilha"
+            ],
+            "rows": [
+                [
+                    "Injetor",
+                    "Pulso + resistência isolada",
+                    "Medir ohms energizado"
+                ],
+                [
+                    "Bobina",
+                    "Comando + primary/secondary",
+                    "Cabo/estalo enganoso"
+                ],
+                [
+                    "Solenoide",
+                    "Alimentação + massa comutada",
+                    "Só bip de continuidade"
+                ],
+                [
+                    "Motor DC",
+                    "Corrente + VD",
+                    "Bind mecânico parece elétrico"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Condenar ECU sem provar alimentação/massa/sinal no conector do atuador."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de pinos",
+                "Medir comando e potência",
+                "Validar após reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Cálculo de Potência da Bobina"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de bobina oferece melhor controle individual por cilindro?",
             "options": [
-                "Caneta tradicional",
-                "DIS com múltiplas saídas",
                 "COP (Coil-on-Plug)",
-                "Bobina externa com distribuidor"
+                "Bobina externa com distribuidor",
+                "DIS com múltiplas saídas",
+                "Caneta tradicional"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: COP (Coil-on-Plug). Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal vantagem do sistema COP (Coil-on-Plug)?",
             "options": [
+                "Maior durabilidade do distribuidor",
                 "Menor custo de manutenção",
-                "Maior energia de faísca e melhor controle",
                 "Menor consumo de energia",
-                "Maior durabilidade do distribuidor"
+                "Maior energia de faísca e melhor controle"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Maior energia de faísca e melhor controle. Em atuadores (“Bobinas de Ignição”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como você testa uma bobina COP com multímetro?",
             "options": [
-                "Medindo a resistência primária e secundária",
                 "Verificando apenas a tensão de alimentação",
-                "Testando a continuidade com o motor ligado",
-                "Medindo a corrente de ignição"
+                "Medindo a resistência primária e secundária",
+                "Medindo a corrente de ignição",
+                "Testando a continuidade com o motor ligado"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Medindo a resistência primária e secundária. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Nível Scanner", "Acesso", "Funções", "Preço"],
+            "headers": [
+                "Nível Scanner",
+                "Acesso",
+                "Funções",
+                "Preço"
+            ],
             "rows": [
-                ["Básico", "Motor apenas", "Leitura/limpeza códigos", "R$100-300"],
-                ["Intermediário", "Múltiplos sistemas", "Dados ao vivo, testes", "R$500-1500"],
-                ["Profissional", "Todos sistemas", "Programação, codificação", "R$2000-10000"],
-                ["OEM", "Fabricante específico", "Diagnóstico avançado", "R$5000-50000"]
+                [
+                    "Básico",
+                    "Motor apenas",
+                    "Leitura/limpeza códigos",
+                    "R$100-300"
+                ],
+                [
+                    "Intermediário",
+                    "Múltiplos sistemas",
+                    "Dados ao vivo, testes",
+                    "R$500-1500"
+                ],
+                [
+                    "Profissional",
+                    "Todos sistemas",
+                    "Programação, codificação",
+                    "R$2000-10000"
+                ],
+                [
+                    "OEM",
+                    "Fabricante específico",
+                    "Diagnóstico avançado",
+                    "R$5000-50000"
+                ]
             ]
         },
         {
@@ -42,44 +67,115 @@
             "text": "P0xxx = Genérico/Emissões, P1xxx = Fabricante, C0xxx = Chassi, B0xxx = Carroceria, U0xxx = Comunicação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar instrumentos e medição aplicado a “Scanner OBD-II e Diagnóstico”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "O multímetro é juiz, não adivinho: volts ao vivo, ohms só desenergizado, corrente com método seguro. Voltage drop sob carga é o teste que mais separa técnico de “trocador de peça”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Modo",
+                "Use quando",
+                "Erro clássico"
+            ],
+            "rows": [
+                [
+                    "V DC",
+                    "Alimentação / sinal / VD",
+                    "Massa de referência ruim"
+                ],
+                [
+                    "Ω / bip",
+                    "Componente isolado",
+                    "Medir com tensão presente"
+                ],
+                [
+                    "A / alicate",
+                    "Consumo / partida / parasita",
+                    "Escala errada / acordar módulos"
+                ],
+                [
+                    "mV no fusível",
+                    "Isolar fuga sem puxar fusível",
+                    "Não esperar sleep do veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Ponta no borne 10A sem querer; continuidade como único teste; não zerar/validar o instrumento."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Inspecionar pontas e fusível interno do DMM",
+                "Confirmar COM / VΩ / A",
+                "Ao vivo = volts; morto = ohms",
+                "Documentar foto da tela quando possível"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "MultimeterPracticeSimulator",
             "config": {
-                "title": "Análise de Scanner OBD-II"
+                "title": "Prática de multímetro"
             }
         },
         {
             "type": "quiz",
             "question": "O que significa código P0171?",
             "options": [
-                "Falha no sistema de ignição",
                 "Sistema muito pobre (combustível)",
+                "Problema na transmissão",
                 "Falha no sensor de oxigênio",
-                "Problema na transmissão"
+                "Falha no sistema de ignição"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Sistema muito pobre (combustível). Em instrumentos e medição (“Scanner OBD-II e Diagnóstico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a primeira etapa ao diagnosticar um código de falha?",
             "options": [
+                "Desconectar a bateria para resetar a ECU",
                 "Substituir o componente indicado",
-                "Limpar o código e testar o veículo",
                 "Pesquisar o significado e verificar dados congêneres",
-                "Desconectar a bateria para resetar a ECU"
+                "Limpar o código e testar o veículo"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Pesquisar o significado e verificar dados congêneres. Em instrumentos e medição (“Scanner OBD-II e Diagnóstico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é essencial para diagnosticar problemas intermitentes no sistema elétrico?",
             "options": [
-                "Multímetro básico",
                 "Osciloscópio",
-                "Chave de fenda",
-                "Alicate de pressão"
+                "Alicate de pressão",
+                "Multímetro básico",
+                "Chave de fenda"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Osciloscópio. Em instrumentos e medição (“Scanner OBD-II e Diagnóstico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

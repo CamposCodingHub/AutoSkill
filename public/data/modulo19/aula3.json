@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Ferramenta", "Frequência Manutenção", "Vida Útil Típica"],
+            "headers": [
+                "Ferramenta",
+                "Frequência Manutenção",
+                "Vida Útil Típica"
+            ],
             "rows": [
-                ["Scanner Automotivo", "Calibração anual", "5-8 anos"],
-                ["Osciloscópio", "Verificação mensal", "8-10 anos"],
-                ["Compressor", "Manutenção semestral", "10-15 anos"],
-                ["Ponte Rolante", "Inspeção anual", "15-20 anos"],
-                ["Ferramentas Manuais", "Limpeza semanal", "Indefinida"]
+                [
+                    "Scanner Automotivo",
+                    "Calibração anual",
+                    "5-8 anos"
+                ],
+                [
+                    "Osciloscópio",
+                    "Verificação mensal",
+                    "8-10 anos"
+                ],
+                [
+                    "Compressor",
+                    "Manutenção semestral",
+                    "10-15 anos"
+                ],
+                [
+                    "Ponte Rolante",
+                    "Inspeção anual",
+                    "15-20 anos"
+                ],
+                [
+                    "Ferramentas Manuais",
+                    "Limpeza semanal",
+                    "Indefinida"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Ferramentas de qualidade têm custo inicial maior mas ROI melhor através de durabilidade e precisão."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar gestão de oficina aplicado a “Gestão de Ferramentas e Equipamentos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "RO claro: sintoma → testes → evidências → peça → validação. Técnico excelente documenta; retrabalho come margem. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Benefício",
+                "KPI"
+            ],
+            "rows": [
+                [
+                    "Checklist diagnóstico",
+                    "Menos chute",
+                    "Retrabalho %"
+                ],
+                [
+                    "Foto de medições",
+                    "Prova para cliente",
+                    "Aprovação orçamento"
+                ],
+                [
+                    "Tempo por RO",
+                    "Produtividade",
+                    "Horas faturáveis"
+                ],
+                [
+                    "Estoque crítico",
+                    "Menos espera",
+                    "Giro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Orçar peça antes da evidência; não validar após o reparo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "RO padronizado",
+                "Evidência anexada",
+                "Teste final registrado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Gestão de Ferramentas"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a frequência recomendada para calibração de scanner automotivo?",
             "options": [
+                "Anual",
                 "Mensal",
-                "Trimestral",
                 "Semestral",
-                "Anual"
+                "Trimestral"
             ],
-            "correct": 3
+            "correct": 0,
+            "explanation": "Resposta: Anual. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia pode ser usada para controle de inventário de ferramentas?",
             "options": [
-                "Apenas papel",
                 "Código de barras, RFID ou software específico",
-                "Apenas memória",
-                "Não é possível controlar"
+                "Apenas papel",
+                "Não é possível controlar",
+                "Apenas memória"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Código de barras, RFID ou software específico. Em gestão de oficina (“Gestão de Ferramentas e Equipamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que investir em ferramentas de qualidade?",
             "options": [
-                "Apenas estética",
                 "Melhor ROI através de durabilidade e precisão",
                 "Aumenta o custo sem benefício",
+                "Apenas estética",
                 "Não faz diferença"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Melhor ROI através de durabilidade e precisão. Em gestão de oficina (“Gestão de Ferramentas e Equipamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

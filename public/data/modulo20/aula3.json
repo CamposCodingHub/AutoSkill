@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Passo", "O que Procurar", "Como Interpretar"],
+            "headers": [
+                "Passo",
+                "O que Procurar",
+                "Como Interpretar"
+            ],
             "rows": [
-                ["1. Fonte", "Identificar alimentação", "Bateria, alternador"],
-                ["2. Proteção", "Localizar fusíveis", "Valores e localização"],
-                ["3. Controle", "Encontrar interruptores", "Posição e função"],
-                ["4. Carga", "Identificar componente", "Tipo e potência"],
-                ["5. Terra", "Verificar retorno", "Pontos de massa"]
+                [
+                    "1. Fonte",
+                    "Identificar alimentação",
+                    "Bateria, alternador"
+                ],
+                [
+                    "2. Proteção",
+                    "Localizar fusíveis",
+                    "Valores e localização"
+                ],
+                [
+                    "3. Controle",
+                    "Encontrar interruptores",
+                    "Posição e função"
+                ],
+                [
+                    "4. Carga",
+                    "Identificar componente",
+                    "Tipo e potência"
+                ],
+                [
+                    "5. Terra",
+                    "Verificar retorno",
+                    "Pontos de massa"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Comece com circuitos simples (iluminação) e avance para sistemas complexos (injeção, CAN bus)."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar diagramas elétricos aplicado a “Leitura de Esquemas Elétricos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Diagrama é GPS: marque power, gnd, sinal, fusível e conector. Sem leitura de esquema, medição vira turismo no chicote. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Elemento",
+                "Pergunta",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Símbolo",
+                    "O que é o componente?",
+                    "Legenda OEM"
+                ],
+                [
+                    "Código fio",
+                    "Qual circuito?",
+                    "Trace no carro"
+                ],
+                [
+                    "Conector",
+                    "Onde medir?",
+                    "Vista de pinos"
+                ],
+                [
+                    "Splice",
+                    "Onde divide?",
+                    "Isolar trechos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Seguir cor de fio de outro modelo/ano; medir sem identificar pino."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Abrir diagrama do VIN",
+                "Marcar caminho",
+                "Medir nos pontos marcados"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "WiringTraceSimulator",
             "config": {
-                "title": "Análise de Leitura de Esquemas"
+                "title": "Rastreio de chicote / diagrama"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a direção recomendada para leitura de diagramas?",
             "options": [
-                "Direita para esquerda",
-                "Esquerda para direita",
+                "Aleatoriamente",
                 "De cima para baixo",
-                "Aleatoriamente"
+                "Direita para esquerda",
+                "Esquerda para direita"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Esquerda para direita. Em diagramas elétricos (“Leitura de Esquemas Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é o fluxo típico em um circuito elétrico?",
             "options": [
+                "Não há fluxo definido",
                 "Terra → Fonte → Carga",
                 "Fonte → Fusíveis → Relés → Interruptores → Carga → Terra",
-                "Carga → Fonte → Terra",
-                "Não há fluxo definido"
+                "Carga → Fonte → Terra"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Fonte → Fusíveis → Relés → Interruptores → Carga → Terra. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Por que usar marcadores coloridos ao ler diagramas?",
             "options": [
+                "Para aumentar o custo",
                 "Apenas estética",
                 "Para identificar diferentes circuitos e visualizar o fluxo",
-                "Para aumentar o custo",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Para identificar diferentes circuitos e visualizar o fluxo. Em diagramas elétricos (“Leitura de Esquemas Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

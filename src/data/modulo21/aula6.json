@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "headers": [
+                "Sintoma",
+                "Causa Provável",
+                "Teste"
+            ],
             "rows": [
-                ["Motor não gira", "Bateria/partida", "Testar tensão partida"],
-                ["Luz bateria acesa", "Alternador/regulador", "Medir tensão carga"],
-                ["Partida lenta", "Bateria/conexões", "Testar queda tensão"],
-                ["Ruído alternador", "Rolamentos/diódos", "Testar ripple AC"],
-                ["Consumo excessivo", "Curto parasita", "Medir corrente descarga"]
+                [
+                    "Motor não gira",
+                    "Bateria/partida",
+                    "Testar tensão partida"
+                ],
+                [
+                    "Luz bateria acesa",
+                    "Alternador/regulador",
+                    "Medir tensão carga"
+                ],
+                [
+                    "Partida lenta",
+                    "Bateria/conexões",
+                    "Testar queda tensão"
+                ],
+                [
+                    "Ruído alternador",
+                    "Rolamentos/diódos",
+                    "Testar ripple AC"
+                ],
+                [
+                    "Consumo excessivo",
+                    "Curto parasita",
+                    "Medir corrente descarga"
+                ]
             ]
         },
         {
@@ -43,44 +67,121 @@
             "text": "Manutenção regular, limpeza de conexões, e testes periódicos previnem a maioria dos problemas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar partida e carga aplicado a “Diagnóstico de Partida e Carga”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "No-crank: tensão repouso + crank + VD cabos + corrente. Carga: 13,8–14,5 V típico com motor ligado (OEM). Parasita depois do sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Teste",
+                "Alvo típico*",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Repouso",
+                    "~12,4–12,7 V",
+                    "Estado de carga"
+                ],
+                [
+                    "Crank",
+                    "Não colapsar demais",
+                    "CCA/cabos"
+                ],
+                [
+                    "Carga",
+                    "~13,8–14,5 V",
+                    "Alternador/regulador"
+                ],
+                [
+                    "Parasita",
+                    "OEM (muitos <50–100 mA)",
+                    "Fuga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar arranque sem VD; trocar alternador com 14 V na bateria e luz acesa (circuito da lâmpada)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Números anotados",
+                "Cabos/terminais",
+                "Validar após carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Diagnóstico"
+                "title": "Partida e carga — medições"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "ParasiticDrawSimulator",
+            "config": {
+                "title": "Consumo parasita - bateria morre parado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo no diagnóstico de sistema de carga?",
             "options": [
-                "Testar alternador",
-                "Testar bateria",
                 "Testar motor de partida",
-                "Verificar fusíveis"
+                "Verificar fusíveis",
+                "Testar bateria",
+                "Testar alternador"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Testar bateria. No-crank: tensão em repouso e no crank + VD nos cabos + corrente. Click não prova o motor de partida."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta simula demanda real no sistema de carga?",
             "options": [
+                "Apenas martelo",
                 "Apenas multímetro",
-                "Carbon pile ou testador de carga",
                 "Apenas chave de fenda",
-                "Apenas martelo"
+                "Carbon pile ou testador de carga"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Carbon pile ou testador de carga. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "O que sintomas intermitentes frequentemente indicam?",
             "options": [
-                "Componentes perfeitos",
                 "Conexões ruins ou componentes com falha térmica",
-                "Bateria muito forte",
-                "Motor muito potente"
+                "Componentes perfeitos",
+                "Motor muito potente",
+                "Bateria muito forte"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Conexões ruins ou componentes com falha térmica. Em partida e carga (“Diagnóstico de Partida e Carga”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

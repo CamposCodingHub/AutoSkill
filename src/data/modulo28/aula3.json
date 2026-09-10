@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Especificação", "Função"],
+            "headers": [
+                "Componente",
+                "Especificação",
+                "Função"
+            ],
             "rows": [
-                ["Microcontrolador", "ESP32/STM32", "Processamento principal"],
-                ["Osciloscópio", "2 canais 1MHz", "Análise de sinais"],
-                ["Sensores", "Temperatura, tensão, corrente", "Coleta de dados"],
-                ["Display", "TFT 3.5\"", "Interface visual"],
-                ["Comunicação", "CAN, Bluetooth", "Conectividade"]
+                [
+                    "Microcontrolador",
+                    "ESP32/STM32",
+                    "Processamento principal"
+                ],
+                [
+                    "Osciloscópio",
+                    "2 canais 1MHz",
+                    "Análise de sinais"
+                ],
+                [
+                    "Sensores",
+                    "Temperatura, tensão, corrente",
+                    "Coleta de dados"
+                ],
+                [
+                    "Display",
+                    "TFT 3.5\"",
+                    "Interface visual"
+                ],
+                [
+                    "Comunicação",
+                    "CAN, Bluetooth",
+                    "Conectividade"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Será avaliada precisão de diagnóstico, velocidade de processamento, inovação técnica, e documentação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar projetos e portfólio aplicado a “Projeto 3 - Diagnóstico Avançado Integrado”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Portfólio técnico: RO com fotos de medição, diagrama marcado e validação. Isso vende confiança melhor que discurso. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Entrega",
+                "Conteúdo",
+                "Uso"
+            ],
+            "rows": [
+                [
+                    "Case PDF/MD",
+                    "Sintoma→teste→fixo",
+                    "Cliente/emprego"
+                ],
+                [
+                    "Prints DMM/scope",
+                    "Evidência",
+                    "Auditoria"
+                ],
+                [
+                    "Antes/depois",
+                    "Validação",
+                    "Marketing técnico"
+                ],
+                [
+                    "Lições aprendidas",
+                    "Erro evitado",
+                    "Melhoria contínua"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Portfólio só com “troquei a peça” sem números."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "3 cases documentados",
+                "Medições legíveis",
+                "Resultado validado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Diagnóstico Avançado"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual microcontrolador é ideal para diagnóstico?",
             "options": [
-                "Arduino Uno",
-                "ESP32/STM32",
+                "PIC16F",
                 "Raspberry Pi",
-                "PIC16F"
+                "Arduino Uno",
+                "ESP32/STM32"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: ESP32/STM32. Em projetos e portfólio (“Projeto 3 - Diagnóstico Avançado Integrado”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual componente é usado para análise de sinais?",
             "options": [
-                "Multímetro básico",
                 "Osciloscópio 2 canais",
-                "Apenas sensor de temperatura",
-                "Chave de fenda"
+                "Multímetro básico",
+                "Chave de fenda",
+                "Apenas sensor de temperatura"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Osciloscópio 2 canais. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Por que o processamento em tempo real é importante em diagnóstico?",
             "options": [
+                "Aumentar o custo",
                 "Apenas burocracia",
                 "Permite detecção imediata de falhas e padrões",
-                "Aumentar o custo",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Permite detecção imediata de falhas e padrões. Em projetos e portfólio (“Projeto 3 - Diagnóstico Avançado Integrado”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

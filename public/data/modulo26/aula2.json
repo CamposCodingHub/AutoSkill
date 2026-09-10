@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tecnologia", "Potência", "Aplicação", "Vantagens"],
+            "headers": [
+                "Tecnologia",
+                "Potência",
+                "Aplicação",
+                "Vantagens"
+            ],
             "rows": [
-                ["Indução", "7.7-22kW", "Estacionamento", "Conveniência total"],
-                ["Dinâmico", "11-350kW", "Estradas especiais", "Carregamento contínuo"],
-                ["V2G", "7.4-22kW", "Rede inteligente", "Monetização"],
-                ["Ultra-rápido", "350kW+", "Postos especiais", "Minuto para 80%"]
+                [
+                    "Indução",
+                    "7.7-22kW",
+                    "Estacionamento",
+                    "Conveniência total"
+                ],
+                [
+                    "Dinâmico",
+                    "11-350kW",
+                    "Estradas especiais",
+                    "Carregamento contínuo"
+                ],
+                [
+                    "V2G",
+                    "7.4-22kW",
+                    "Rede inteligente",
+                    "Monetização"
+                ],
+                [
+                    "Ultra-rápido",
+                    "350kW+",
+                    "Postos especiais",
+                    "Minuto para 80%"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Carregamento inteligente distribui carga, evita picos, e otimiza uso de energia renovável."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar tendências 48V/zonal/IA aplicado a “Carregamento Wireless e Dinâmico”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "48V reduz corrente para mesma potência; zonal concentra falhas por zona. Smart fuse reporta DTC — “só trocar fusível” ficou velho. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Arquitetura",
+                "Impacto no diagnóstico",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "48V",
+                    "Domínio de tensão",
+                    "Identificar LV/HV"
+                ],
+                [
+                    "Zonal",
+                    "Vários sistemas caem juntos",
+                    "Power da zone ECU"
+                ],
+                [
+                    "eFuse",
+                    "DTC de distribuição",
+                    "Ler PDU"
+                ],
+                [
+                    "OTA",
+                    "Software",
+                    "Histórico de update"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Diagnosticar 48V com mentalidade só 12V sem PPE/OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar domínio",
+                "Ler módulos de energia",
+                "Seguir fluxos novos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Carregamento Wireless"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia permite carregamento sem conexão física?",
             "options": [
-                "CCS Tipo 2",
                 "Carregamento por indução",
+                "GB/T",
                 "CHAdeMO",
-                "GB/T"
+                "CCS Tipo 2"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Carregamento por indução. Em tendências 48V/zonal/IA (“Carregamento Wireless e Dinâmico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual potência típica do carregamento dinâmico em estradas?",
             "options": [
+                "50kW",
                 "7.7kW",
-                "11-350kW",
                 "22kW",
-                "50kW"
+                "11-350kW"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 11-350kW. Em tendências 48V/zonal/IA (“Carregamento Wireless e Dinâmico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que o carregamento inteligente é importante para a rede elétrica?",
             "options": [
-                "Apenas burocracia",
                 "Distribui carga, evita picos e otimiza uso de energia renovável",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Não é necessário",
+                "Apenas burocracia",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Distribui carga, evita picos e otimiza uso de energia renovável. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

@@ -17,11 +17,31 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Configuração", "Aplicação", "Proteção"],
+            "headers": [
+                "Tipo",
+                "Configuração",
+                "Aplicação",
+                "Proteção"
+            ],
             "rows": [
-                ["Low-side", "Transistor NPN/MOSFET para terra", "Injetores, bobinas", "Clamp diodo"],
-                ["High-side", "Transistor PNP/MOSFET para +12V", "Relés, solenoides", "Current limit"],
-                ["H-bridge", "4 transistores em ponte", "Motores DC, válvulas", "Shoot-through protection"]
+                [
+                    "Low-side",
+                    "Transistor NPN/MOSFET para terra",
+                    "Injetores, bobinas",
+                    "Clamp diodo"
+                ],
+                [
+                    "High-side",
+                    "Transistor PNP/MOSFET para +12V",
+                    "Relés, solenoides",
+                    "Current limit"
+                ],
+                [
+                    "H-bridge",
+                    "4 transistores em ponte",
+                    "Motores DC, válvulas",
+                    "Shoot-through protection"
+                ]
             ]
         },
         {
@@ -41,44 +61,115 @@
             "text": "Teste de drivers envolve medida de resistência, verificação de sinais com osciloscópio e testes de carga controlada."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Drivers de Potência e Estágios de Saída”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Drivers"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de driver é mais comum para controle de injetores?",
             "options": [
-                "High-side",
-                "H-bridge", 
                 "Low-side",
-                "Linear"
+                "High-side",
+                "Linear",
+                "H-bridge"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: Low-side. Em ECU e estratégias (“Drivers de Potência e Estágios de Saída”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal vantagem do driver low-side para injetores?",
             "options": [
+                "Menor consumo de energia",
                 "Maior precisão de controle",
                 "Menor custo e simplicidade de implementação",
-                "Maior imunidade a ruído",
-                "Menor consumo de energia"
+                "Maior imunidade a ruído"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Menor custo e simplicidade de implementação. Em ECU e estratégias (“Drivers de Potência e Estágios de Saída”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como um driver low-side controla um injetor?",
             "options": [
-                "Controlando a alimentação positiva do injetor",
                 "Controlando o terra (negativo) do injetor",
+                "Controlando a alimentação positiva do injetor",
                 "Variando a resistência do injetor",
                 "Modulando a pressão do combustível"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Controlando o terra (negativo) do injetor. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

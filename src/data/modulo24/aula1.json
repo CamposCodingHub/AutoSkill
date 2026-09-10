@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Risco", "Causa", "Prevenção"],
+            "headers": [
+                "Risco",
+                "Causa",
+                "Prevenção"
+            ],
             "rows": [
-                ["Choque Elétrico", "Contato direto com energizado", "EPI, ferramentas isoladas"],
-                ["Arco Elétrico", "Curto-circuito com alta corrente", "Proteção facial, óculos"],
-                ["Explosão Bateria", "Faísca em ambiente gás", "Ventilação, sem chamas"],
-                ["Queimaduras", "Contato com componentes quentes", "Luvas, proteção térmica"],
-                ["Incêndio", "Curto-circuito, sobrecarga", "Extintor, procedimentos"]
+                [
+                    "Choque Elétrico",
+                    "Contato direto com energizado",
+                    "EPI, ferramentas isoladas"
+                ],
+                [
+                    "Arco Elétrico",
+                    "Curto-circuito com alta corrente",
+                    "Proteção facial, óculos"
+                ],
+                [
+                    "Explosão Bateria",
+                    "Faísca em ambiente gás",
+                    "Ventilação, sem chamas"
+                ],
+                [
+                    "Queimaduras",
+                    "Contato com componentes quentes",
+                    "Luvas, proteção térmica"
+                ],
+                [
+                    "Incêndio",
+                    "Curto-circuito, sobrecarga",
+                    "Extintor, procedimentos"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Tanto empregador quanto empregado têm responsabilidades na segurança. Conheça seus direitos e deveres."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança de oficina aplicado a “Segurança Elétrica Fundamentos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "EPI, ordem no posto, isolamento de HV, e não “testar curto com fio grosso”. Segurança é competência técnica, não burocracia. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Risco",
+                "Controle",
+                "Exemplo"
+            ],
+            "rows": [
+                [
+                    "Choque/arco",
+                    "PPE/LOTO",
+                    "HV"
+                ],
+                [
+                    "Incêndio",
+                    "Fusível correto",
+                    "Aftermarket"
+                ],
+                [
+                    "Química",
+                    "EPIs bateria",
+                    "Ácido/térmica"
+                ],
+                [
+                    "Ergonomia",
+                    "Apoios/cavaletes",
+                    "Queda de veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Anel metálico em bancada energizada; pular espera de airbag."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Avaliar risco",
+                "Preparar EPI",
+                "Procedimento escrito quando HV"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Segurança Elétrica"
+                "title": "Checklist de segurança HV / LOTO"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro princípio de segurança elétrica?",
             "options": [
-                "Trabalhar rápido",
                 "Desconectar sempre que possível",
                 "Usar ferramentas baratas",
+                "Trabalhar rápido",
                 "Ignorar procedimentos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Desconectar sempre que possível. Em segurança de oficina (“Segurança Elétrica Fundamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual EPI é essencial para proteção contra arco elétrico?",
             "options": [
-                "Apenas luvas",
                 "Proteção facial e óculos",
                 "Apenas sapatos",
-                "Nenhum EPI necessário"
+                "Nenhum EPI necessário",
+                "Apenas luvas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Proteção facial e óculos. Em segurança de oficina (“Segurança Elétrica Fundamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a segurança deve ser parte integrada do trabalho?",
             "options": [
-                "Apenas burocracia",
-                "Cada ação deve considerar os riscos envolvidos",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Cada ação deve considerar os riscos envolvidos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Cada ação deve considerar os riscos envolvidos. Em segurança de oficina (“Segurança Elétrica Fundamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

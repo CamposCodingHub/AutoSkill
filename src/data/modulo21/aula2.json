@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Sintomas Falha"
+            ],
             "rows": [
-                ["Bobina", "Gera campo magnético", "Sem engate ou ruído"],
-                ["Mecanismo", "Move pinhão", "Engate intermitente"],
-                ["Contatos", "Transmite corrente", "Corrente excessiva ou nula"],
-                ["Mola", "Retorna posição", "Não desengata"]
+                [
+                    "Bobina",
+                    "Gera campo magnético",
+                    "Sem engate ou ruído"
+                ],
+                [
+                    "Mecanismo",
+                    "Move pinhão",
+                    "Engate intermitente"
+                ],
+                [
+                    "Contatos",
+                    "Transmite corrente",
+                    "Corrente excessiva ou nula"
+                ],
+                [
+                    "Mola",
+                    "Retorna posição",
+                    "Não desengata"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Controlada pela ECU ou módulo de partida. Comunica status para diagnóstico de sistema."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar partida e carga aplicado a “Solenóide de Engate”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "No-crank: tensão repouso + crank + VD cabos + corrente. Carga: 13,8–14,5 V típico com motor ligado (OEM). Parasita depois do sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Teste",
+                "Alvo típico*",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Repouso",
+                    "~12,4–12,7 V",
+                    "Estado de carga"
+                ],
+                [
+                    "Crank",
+                    "Não colapsar demais",
+                    "CCA/cabos"
+                ],
+                [
+                    "Carga",
+                    "~13,8–14,5 V",
+                    "Alternador/regulador"
+                ],
+                [
+                    "Parasita",
+                    "OEM (muitos <50–100 mA)",
+                    "Fuga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar arranque sem VD; trocar alternador com 14 V na bateria e luz acesa (circuito da lâmpada)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Números anotados",
+                "Cabos/terminais",
+                "Validar após carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "VoltageDropSimulator",
             "config": {
-                "title": "Análise de Solenóide de Engate"
+                "title": "Queda de tensão sob carga"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a corrente típica de manutenção da solenóide?",
             "options": [
-                "5-10A",
                 "15-20A",
                 "30-50A",
-                "60-80A"
+                "60-80A",
+                "5-10A"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: 5-10A. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual a resistência típica da bobina da solenóide?",
             "options": [
-                "0.1-0.5Ω",
-                "2-5Ω",
+                "50-100Ω",
                 "10-20Ω",
-                "50-100Ω"
+                "0.1-0.5Ω",
+                "2-5Ω"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 2-5Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a função da solenóide de engate?",
             "options": [
+                "Apenas aquecer o motor",
                 "Apenas gerar luz",
                 "Mover o pinhão para engatar com o volante do motor",
-                "Apenas emitir som",
-                "Apenas aquecer o motor"
+                "Apenas emitir som"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Mover o pinhão para engatar com o volante do motor. Em partida e carga (“Solenóide de Engate”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

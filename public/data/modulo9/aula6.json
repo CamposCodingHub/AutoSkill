@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Código", "Sistema", "Exemplo Comum"],
+            "headers": [
+                "Código",
+                "Sistema",
+                "Exemplo Comum"
+            ],
             "rows": [
-                ["P0xxx", "Powertrain", "P0171 - Sistema muito pobre"],
-                ["B0xxx", "Body", "B1234 - Sensor de temperatura"],
-                ["C0xxx", "Chassis", "C0035 - Sensor ABS"],
-                ["U0xxx", "Network", "U0001 - CAN bus off"]
+                [
+                    "P0xxx",
+                    "Powertrain",
+                    "P0171 - Sistema muito pobre"
+                ],
+                [
+                    "B0xxx",
+                    "Body",
+                    "B1234 - Sensor de temperatura"
+                ],
+                [
+                    "C0xxx",
+                    "Chassis",
+                    "C0035 - Sensor ABS"
+                ],
+                [
+                    "U0xxx",
+                    "Network",
+                    "U0001 - CAN bus off"
+                ]
             ]
         },
         {
@@ -42,44 +62,115 @@
             "text": "Scanners avançados permitem atuar componentes específicos para teste, como injetores, relés e válvulas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Diagnóstico da ECU”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de DTCs"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "O que indica um código começando com 'U' em diagnóstico veicular?",
             "options": [
-                "Problema no motor",
                 "Falha na carroceria",
+                "Sistema de freios",
                 "Comunicação de rede",
-                "Sistema de freios"
+                "Problema no motor"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Comunicação de rede. Em ECU e estratégias (“Diagnóstico da ECU”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual prefixo de código indica problemas no sistema de transmissão?",
             "options": [
-                "P (Powertrain)",
-                "B (Body)",
+                "U (Network)",
                 "C (Chassis)",
-                "U (Network)"
+                "P (Powertrain)",
+                "B (Body)"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: C (Chassis). Em ECU e estratégias (“Diagnóstico da ECU”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que significa o primeiro caractere 'B' em um código de falha?",
             "options": [
+                "Problema no motor",
                 "Problema no sistema de freios",
                 "Falha na carroceria ou acessórios",
-                "Comunicação de rede",
-                "Problema no motor"
+                "Comunicação de rede"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Falha na carroceria ou acessórios. Em ECU e estratégias (“Diagnóstico da ECU”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

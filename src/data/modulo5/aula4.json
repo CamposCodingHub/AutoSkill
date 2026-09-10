@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Característica", "LED vs Halógena", "Impacto"],
+            "headers": [
+                "Característica",
+                "LED vs Halógena",
+                "Impacto"
+            ],
             "rows": [
-                ["Consumo", "80% menor", "Menor carga bateria"],
-                ["Vida Útil", "100x maior", "Menor manutenção"],
-                ["Temperatura Cor", "5000-6500K", "Luz branca pura"],
-                ["Tempo Resposta", "Instantâneo", "Sem delay"],
-                ["Design", "Flexível", "Formas criativas"]
+                [
+                    "Consumo",
+                    "80% menor",
+                    "Menor carga bateria"
+                ],
+                [
+                    "Vida Útil",
+                    "100x maior",
+                    "Menor manutenção"
+                ],
+                [
+                    "Temperatura Cor",
+                    "5000-6500K",
+                    "Luz branca pura"
+                ],
+                [
+                    "Tempo Resposta",
+                    "Instantâneo",
+                    "Sem delay"
+                ],
+                [
+                    "Design",
+                    "Flexível",
+                    "Formas criativas"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "COB (Chip on Board), SMD (Surface Mount), e High-Power. Cada um com aplicações específicas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar iluminação e sinalização aplicado a “Iluminação LED”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Farol fraco unilateral = quase sempre caminho (massa/conector/chicote), não “lâmpada fraca mágica”. Meça tensão no soquete com farol aceso e VD na massa. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "1º teste",
+                "Causa comum"
+            ],
+            "rows": [
+                [
+                    "Um lado fraco",
+                    "VD massa/positivo desse lado",
+                    "Massa oxidada"
+                ],
+                [
+                    "Ambos fracos",
+                    "Tensão bateria + carga do sistema",
+                    "Subtensão / cabo"
+                ],
+                [
+                    "Fusível queima",
+                    "Isolar curto após fusível",
+                    "Chicote esfolado"
+                ],
+                [
+                    "LED aftermarket",
+                    "Polaridade/driver/queda no adaptador",
+                    "Adaptador ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar só a lâmpada com 10 V no soquete; ignorar o lado bom como referência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Comparar lado bom vs ruim",
+                "Medir sob carga",
+                "Inspecionar soquete/água"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Iluminação LED"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a principal vantagem do LED sobre halógena?",
             "options": [
+                "Menor custo inicial",
                 "Maior potência",
                 "Menor consumo e vida útil",
-                "Cor mais amarelada",
-                "Menor custo inicial"
+                "Cor mais amarelada"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Menor consumo e vida útil. Em iluminação e sinalização (“Iluminação LED”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual componente controla o brilho individual dos LEDs em sistemas Matrix?",
             "options": [
-                "Resistor variável",
                 "Módulo de controle LED",
                 "Alternador",
+                "Resistor variável",
                 "Sensor de luz"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Módulo de controle LED. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como os sistemas LED Matrix adaptam o feixe de luz?",
             "options": [
-                "Movendo fisicamente o farol",
                 "Ajustando individualmente cada LED",
+                "Variando a potência total",
                 "Mudando a temperatura de cor",
-                "Variando a potência total"
+                "Movendo fisicamente o farol"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Ajustando individualmente cada LED. Em iluminação e sinalização (“Iluminação LED”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

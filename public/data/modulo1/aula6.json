@@ -22,38 +22,109 @@
             "text": "Teste de queda de tensão (voltage drop): meça a tensão entre dois pontos que deveriam ter a mesma tensão com o circuito sob carga. Qualquer diferença indica resistência indesejada – use KVL para localizar exatamente onde a tensão está sendo 'roubada'."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Leis de Kirchhoff”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "Você mede 12,4V na bateria e apenas 9,8V no farol (com o farol aceso). Qual a queda de tensão total no circuito até o farol?",
             "options": [
-                "12,4V",
-                "9,8V",
                 "2,6V",
-                "22,2V",
-                "0V"
+                "0V",
+                "9,8V",
+                "12,4V",
+                "22,2V"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 2,6V. Voltage drop só faz sentido sob carga (corrente fluindo). Compare com limites típicos/OEM e isole o trecho."
         },
         {
             "type": "quiz",
             "question": "Segundo a Lei das Malhas de Kirchhoff, o que acontece com a tensão fornecida por uma bateria em um circuito?",
             "options": [
-                "Aumenta à medida que passa pelos componentes",
-                "Diminui à medida que é consumida pelas cargas e resistências",
+                "É duplicada em circuitos paralelos",
                 "Permanece constante em todo o circuito",
-                "É duplicada em circuitos paralelos"
+                "Aumenta à medida que passa pelos componentes",
+                "Diminui à medida que é consumida pelas cargas e resistências"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Diminui à medida que é consumida pelas cargas e resistências. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Em um nó de circuito onde chegam 5A e saem 3A para um ramo e 2A para outro, o que a Lei dos Nós de Kirchhoff nos diz?",
             "options": [
-                "O circuito está com defeito, pois a soma não é zero",
                 "O nó está em equilíbrio, pois 5A = 3A + 2A",
-                "Faltam 2A para completar o circuito",
-                "Sobram 2A que devem retornar à bateria"
+                "O circuito está com defeito, pois a soma não é zero",
+                "Sobram 2A que devem retornar à bateria",
+                "Faltam 2A para completar o circuito"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: O nó está em equilíbrio, pois 5A = 3A + 2A. Em fundamentos elétricos (“Leis de Kirchhoff”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

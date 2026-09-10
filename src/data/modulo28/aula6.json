@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Documento", "Conteúdo", "Padrão"],
+            "headers": [
+                "Documento",
+                "Conteúdo",
+                "Padrão"
+            ],
             "rows": [
-                ["Diagrama Elétrico", "Esquema completo", "IEEE/IEC"],
-                ["Manual Operação", "Uso do sistema", "ISO 9001"],
-                ["Procedimentos", "Passo a passo", "ISO 13485"],
-                ["Relatório Técnico", "Análise completa", "ABNT"],
-                ["Lista Materiais", "BOM completo", "Padrão interno"]
+                [
+                    "Diagrama Elétrico",
+                    "Esquema completo",
+                    "IEEE/IEC"
+                ],
+                [
+                    "Manual Operação",
+                    "Uso do sistema",
+                    "ISO 9001"
+                ],
+                [
+                    "Procedimentos",
+                    "Passo a passo",
+                    "ISO 13485"
+                ],
+                [
+                    "Relatório Técnico",
+                    "Análise completa",
+                    "ABNT"
+                ],
+                [
+                    "Lista Materiais",
+                    "BOM completo",
+                    "Padrão interno"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "AutoCAD Electrical, Altium Designer, LaTeX, e sistemas de gestão de documentação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar projetos e portfólio aplicado a “Documentação Técnica Profissional”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Portfólio técnico: RO com fotos de medição, diagrama marcado e validação. Isso vende confiança melhor que discurso. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Entrega",
+                "Conteúdo",
+                "Uso"
+            ],
+            "rows": [
+                [
+                    "Case PDF/MD",
+                    "Sintoma→teste→fixo",
+                    "Cliente/emprego"
+                ],
+                [
+                    "Prints DMM/scope",
+                    "Evidência",
+                    "Auditoria"
+                ],
+                [
+                    "Antes/depois",
+                    "Validação",
+                    "Marketing técnico"
+                ],
+                [
+                    "Lições aprendidas",
+                    "Erro evitado",
+                    "Melhoria contínua"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Portfólio só com “troquei a peça” sem números."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "3 cases documentados",
+                "Medições legíveis",
+                "Resultado validado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Documentação Técnica"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual padrão é comum para diagramas elétricos?",
             "options": [
-                "ISO 9001",
-                "IEEE/IEC",
                 "ISO 13485",
-                "ABNT"
+                "ABNT",
+                "IEEE/IEC",
+                "ISO 9001"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: IEEE/IEC. Em projetos e portfólio (“Documentação Técnica Profissional”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é usada para desenhar diagramas elétricos profissionais?",
             "options": [
+                "Excel",
                 "Paint",
-                "AutoCAD Electrical",
                 "Bloco de notas",
-                "Excel"
+                "AutoCAD Electrical"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: AutoCAD Electrical. Em projetos e portfólio (“Documentação Técnica Profissional”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que versionar documentação com histórico de mudanças?",
             "options": [
-                "Apenas burocracia",
                 "Permite rastrear evolução e reverter versões se necessário",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Permite rastrear evolução e reverter versões se necessário. Em projetos e portfólio (“Documentação Técnica Profissional”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

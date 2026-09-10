@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Software", "Recursos", "Aplicação"],
+            "headers": [
+                "Software",
+                "Recursos",
+                "Aplicação"
+            ],
             "rows": [
-                ["Alldata", "Completo, atualizado", "Oficinas profissionais"],
-                ["Mitchell", "Detalhado, preciso", "Diagnóstico avançado"],
-                ["Bentley", "Fabricante específico", "Luxo europeu"],
-                ["Esi Tronic", "Multimarca", "Reparos gerais"],
-                ["Autodata", "Europeu/asiático", "Importados"]
+                [
+                    "Alldata",
+                    "Completo, atualizado",
+                    "Oficinas profissionais"
+                ],
+                [
+                    "Mitchell",
+                    "Detalhado, preciso",
+                    "Diagnóstico avançado"
+                ],
+                [
+                    "Bentley",
+                    "Fabricante específico",
+                    "Luxo europeu"
+                ],
+                [
+                    "Esi Tronic",
+                    "Multimarca",
+                    "Reparos gerais"
+                ],
+                [
+                    "Autodata",
+                    "Europeu/asiático",
+                    "Importados"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Nuvem (cloud-based), IA para diagnóstico, realidade aumentada, e integração com ferramentas de teste."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar diagramas elétricos aplicado a “Software de Diagramas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Diagrama é GPS: marque power, gnd, sinal, fusível e conector. Sem leitura de esquema, medição vira turismo no chicote. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Elemento",
+                "Pergunta",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Símbolo",
+                    "O que é o componente?",
+                    "Legenda OEM"
+                ],
+                [
+                    "Código fio",
+                    "Qual circuito?",
+                    "Trace no carro"
+                ],
+                [
+                    "Conector",
+                    "Onde medir?",
+                    "Vista de pinos"
+                ],
+                [
+                    "Splice",
+                    "Onde divide?",
+                    "Isolar trechos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Seguir cor de fio de outro modelo/ano; medir sem identificar pino."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Abrir diagrama do VIN",
+                "Marcar caminho",
+                "Medir nos pontos marcados"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "WiringTraceSimulator",
             "config": {
-                "title": "Análise de Software de Diagramas"
+                "title": "Rastreio de chicote / diagrama"
             }
         },
         {
             "type": "quiz",
             "question": "Qual software é mais usado em oficinas profissionais?",
             "options": [
-                "Alldata",
                 "Mitchell",
+                "Esi Tronic",
                 "Bentley",
-                "Esi Tronic"
+                "Alldata"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Alldata. Em diagramas elétricos (“Software de Diagramas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual recurso permite encontrar componentes rapidamente em software de diagramas?",
             "options": [
+                "Apenas impressão",
                 "Busca por componente",
-                "Apenas rolagem manual",
                 "Não é possível buscar",
-                "Apenas impressão"
+                "Apenas rolagem manual"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Busca por componente. Em diagramas elétricos (“Software de Diagramas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tendência está emergindo em software de diagramas?",
             "options": [
-                "Apenas papel",
                 "Nuvem, IA para diagnóstico e realidade aumentada",
-                "Apenas disquetes",
-                "Software estático"
+                "Software estático",
+                "Apenas papel",
+                "Apenas disquetes"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Nuvem, IA para diagnóstico e realidade aumentada. Em diagramas elétricos (“Software de Diagramas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

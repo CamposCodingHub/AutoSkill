@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tecnologia", "Eficiência", "Vida Útil", "Aplicação"],
+            "headers": [
+                "Tecnologia",
+                "Eficiência",
+                "Vida Útil",
+                "Aplicação"
+            ],
             "rows": [
-                ["Halógena", "15-25 lm/W", "500-1000 horas", "Padrão, econômico"],
-                ["Xenon/HID", "80-120 lm/W", "2000-3000 horas", "Alta performance"],
-                ["LED", "100-200 lm/W", "10000+ horas", "Moderno, eficiente"],
-                ["Laser", "200+ lm/W", "10000+ horas", "Futuro, premium"]
+                [
+                    "Halógena",
+                    "15-25 lm/W",
+                    "500-1000 horas",
+                    "Padrão, econômico"
+                ],
+                [
+                    "Xenon/HID",
+                    "80-120 lm/W",
+                    "2000-3000 horas",
+                    "Alta performance"
+                ],
+                [
+                    "LED",
+                    "100-200 lm/W",
+                    "10000+ horas",
+                    "Moderno, eficiente"
+                ],
+                [
+                    "Laser",
+                    "200+ lm/W",
+                    "10000+ horas",
+                    "Futuro, premium"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Verifique legislação local para uso de diferentes tecnologias. Algumas têm restrições específicas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar iluminação e sinalização aplicado a “Tipos de Lâmpadas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Farol fraco unilateral = quase sempre caminho (massa/conector/chicote), não “lâmpada fraca mágica”. Meça tensão no soquete com farol aceso e VD na massa. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "1º teste",
+                "Causa comum"
+            ],
+            "rows": [
+                [
+                    "Um lado fraco",
+                    "VD massa/positivo desse lado",
+                    "Massa oxidada"
+                ],
+                [
+                    "Ambos fracos",
+                    "Tensão bateria + carga do sistema",
+                    "Subtensão / cabo"
+                ],
+                [
+                    "Fusível queima",
+                    "Isolar curto após fusível",
+                    "Chicote esfolado"
+                ],
+                [
+                    "LED aftermarket",
+                    "Polaridade/driver/queda no adaptador",
+                    "Adaptador ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar só a lâmpada com 10 V no soquete; ignorar o lado bom como referência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Comparar lado bom vs ruim",
+                "Medir sob carga",
+                "Inspecionar soquete/água"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Lâmpadas"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia tem maior eficiência luminosa?",
             "options": [
+                "LED",
                 "Halógena",
                 "Xenon",
-                "LED",
                 "Laser"
             ],
-            "correct": 3
+            "correct": 3,
+            "explanation": "Resposta: Laser. Em iluminação e sinalização (“Tipos de Lâmpadas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal vantagem das luzes LED em veículos modernos?",
             "options": [
-                "Maior consumo de energia",
                 "Menor durabilidade",
+                "Maior geração de calor",
                 "Menor consumo de energia e maior durabilidade",
-                "Maior geração de calor"
+                "Maior consumo de energia"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Menor consumo de energia e maior durabilidade. Em iluminação e sinalização (“Tipos de Lâmpadas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia de iluminação requer sistema de nivelamento automático obrigatório?",
             "options": [
+                "Laser",
                 "Halógena",
-                "LED",
                 "Xenon",
-                "Laser"
+                "LED"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Xenon. Em iluminação e sinalização (“Tipos de Lâmpadas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Método", "Ativação", "Recuperação"],
+            "headers": [
+                "Método",
+                "Ativação",
+                "Recuperação"
+            ],
             "rows": [
-                ["Corte Combustível", "Comando remoto", "Senha/autorização"],
-                ["Bloqueio Motor", "Imobilizador", "Chave original"],
-                ["Inibição Partida", "ECU", "Reset sistema"],
-                ["Bloqueio Eletrônico", "Módulo específico", "Reprogramação"],
-                ["Trava Física", "Mecânica", "Chave mestre"]
+                [
+                    "Corte Combustível",
+                    "Comando remoto",
+                    "Senha/autorização"
+                ],
+                [
+                    "Bloqueio Motor",
+                    "Imobilizador",
+                    "Chave original"
+                ],
+                [
+                    "Inibição Partida",
+                    "ECU",
+                    "Reset sistema"
+                ],
+                [
+                    "Bloqueio Eletrônico",
+                    "Módulo específico",
+                    "Reprogramação"
+                ],
+                [
+                    "Trava Física",
+                    "Mecânica",
+                    "Chave mestre"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Métodos alternativos como códigos mestre, senhas de emergência, ou procedimentos especiais para recuperação em caso de falha."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Bloqueadores e Imobilizadores”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistemas de Bloqueio"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual método oferece maior segurança contra roubo?",
             "options": [
+                "Trava mecânica apenas",
                 "Apenas alarme sonoro",
                 "Bloqueio de combustível",
-                "Múltiplas camadas de segurança",
-                "Trava mecânica apenas"
+                "Múltiplas camadas de segurança"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Múltiplas camadas de segurança. Em alarme / rastreador / segurança (“Bloqueadores e Imobilizadores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que é bloqueio progressivo?",
             "options": [
-                "Bloqueio imediato do veículo",
                 "Alerta, limitação de performance e depois parada completa",
                 "Apenas emitir som",
+                "Bloqueio imediato do veículo",
                 "Bloqueio apenas das portas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Alerta, limitação de performance e depois parada completa. Em alarme / rastreador / segurança (“Bloqueadores e Imobilizadores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como recuperar um veículo com bloqueio de combustível?",
             "options": [
-                "Apenas com chave física",
-                "Com senha/autorização através do sistema",
                 "Desconectando a bateria",
-                "Não é possível recuperar"
+                "Não é possível recuperar",
+                "Com senha/autorização através do sistema",
+                "Apenas com chave física"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Com senha/autorização através do sistema. Em alarme / rastreador / segurança (“Bloqueadores e Imobilizadores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

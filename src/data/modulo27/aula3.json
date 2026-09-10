@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Tecnologia", "Benefício"],
+            "headers": [
+                "Componente",
+                "Tecnologia",
+                "Benefício"
+            ],
             "rows": [
-                ["Processador DSP", "Processamento digital", "Qualidade superior"],
-                ["Amplificador Classe D", "Alta eficiência", "Baixo consumo"],
-                ["Subwoofers", "Baixa frequência", "Impacto sonoro"],
-                ["Tweeters", "Alta frequência", "Detalhes finos"],
-                ["Equalização", "Ajuste fino", "Personalização"]
+                [
+                    "Processador DSP",
+                    "Processamento digital",
+                    "Qualidade superior"
+                ],
+                [
+                    "Amplificador Classe D",
+                    "Alta eficiência",
+                    "Baixo consumo"
+                ],
+                [
+                    "Subwoofers",
+                    "Baixa frequência",
+                    "Impacto sonoro"
+                ],
+                [
+                    "Tweeters",
+                    "Alta frequência",
+                    "Detalhes finos"
+                ],
+                [
+                    "Equalização",
+                    "Ajuste fino",
+                    "Personalização"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Alta demanda por sistemas premium. Especialização em marcas específicas aumenta o valor profissional."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Som Automotivo High-End”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Som High-End"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia oferece melhor qualidade de áudio?",
             "options": [
+                "Processamento estéreo básico",
                 "Processamento analógico",
-                "Processamento digital DSP",
                 "Processamento AM/FM",
-                "Processamento estéreo básico"
+                "Processamento digital DSP"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Processamento digital DSP. Em nichos e especialização (“Som Automotivo High-End”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de amplificador oferece alta eficiência?",
             "options": [
+                "Classe C",
                 "Classe A",
                 "Classe AB",
-                "Classe D",
-                "Classe C"
+                "Classe D"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Classe D. Em nichos e especialização (“Som Automotivo High-End”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a calibração precisa é importante em som high-end?",
             "options": [
-                "Apenas burocracia",
                 "Garante qualidade sonora ideal e personalização",
                 "Aumentar o custo",
+                "Apenas burocracia",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Garante qualidade sonora ideal e personalização. Em nichos e especialização (“Som Automotivo High-End”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

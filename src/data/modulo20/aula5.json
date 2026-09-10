@@ -17,14 +17,42 @@
         },
         {
             "type": "table",
-            "headers": ["Área", "Componentes Típicos", "Dificuldade de Acesso"],
+            "headers": [
+                "Área",
+                "Componentes Típicos",
+                "Dificuldade de Acesso"
+            ],
             "rows": [
-                ["Compartimento Motor", "ECU, sensores, relés", "Média"],
-                ["Painel Instrumentos", "Módulos, conectores", "Fácil"],
-                ["Porta Motorista", "Módulos de conforto", "Fácil"],
-                ["Porta Passageiro", "Módulos, alto-falantes", "Fácil"],
-                ["Traseira", "Módulos, amplificador", "Média"],
-                ["Bagageiro", "ECU, bateria (híbridos)", "Difícil"]
+                [
+                    "Compartimento Motor",
+                    "ECU, sensores, relés",
+                    "Média"
+                ],
+                [
+                    "Painel Instrumentos",
+                    "Módulos, conectores",
+                    "Fácil"
+                ],
+                [
+                    "Porta Motorista",
+                    "Módulos de conforto",
+                    "Fácil"
+                ],
+                [
+                    "Porta Passageiro",
+                    "Módulos, alto-falantes",
+                    "Fácil"
+                ],
+                [
+                    "Traseira",
+                    "Módulos, amplificador",
+                    "Média"
+                ],
+                [
+                    "Bagageiro",
+                    "ECU, bateria (híbridos)",
+                    "Difícil"
+                ]
             ]
         },
         {
@@ -44,44 +72,114 @@
             "text": "Fotografe antes de desmontar. Anote posições e orientações. Isso facilita montagem posterior."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar diagramas elétricos aplicado a “Localização de Componentes”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Diagrama é GPS: marque power, gnd, sinal, fusível e conector. Sem leitura de esquema, medição vira turismo no chicote. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Elemento",
+                "Pergunta",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Símbolo",
+                    "O que é o componente?",
+                    "Legenda OEM"
+                ],
+                [
+                    "Código fio",
+                    "Qual circuito?",
+                    "Trace no carro"
+                ],
+                [
+                    "Conector",
+                    "Onde medir?",
+                    "Vista de pinos"
+                ],
+                [
+                    "Splice",
+                    "Onde divide?",
+                    "Isolar trechos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Seguir cor de fio de outro modelo/ano; medir sem identificar pino."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Abrir diagrama do VIN",
+                "Marcar caminho",
+                "Medir nos pontos marcados"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "WiringTraceSimulator",
             "config": {
-                "title": "Análise de Localização"
+                "title": "Rastreio de chicote / diagrama"
             }
         },
         {
             "type": "quiz",
             "question": "Qual área geralmente tem maior dificuldade de acesso?",
             "options": [
+                "Compartimento motor",
                 "Painel instrumentos",
                 "Porta motorista",
-                "Compartimento motor",
                 "Porta passageiro"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: Compartimento motor. Em diagramas elétricos (“Localização de Componentes”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta facilita localização de componentes de difícil acesso?",
             "options": [
-                "Apenas chave de fenda",
                 "Endoscópio ou câmera de inspeção",
+                "Não é possível acessar",
                 "Apenas martelo",
-                "Não é possível acessar"
+                "Apenas chave de fenda"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Endoscópio ou câmera de inspeção. Em diagramas elétricos (“Localização de Componentes”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que fotografar antes de desmontar?",
             "options": [
+                "Apenas por estética",
                 "Para gastar tempo",
-                "Para facilitar montagem posterior e documentar posições",
                 "Para não fazer nada",
-                "Apenas por estética"
+                "Para facilitar montagem posterior e documentar posições"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para facilitar montagem posterior e documentar posições. Em diagramas elétricos (“Localização de Componentes”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

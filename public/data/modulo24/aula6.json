@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Norma", "Abrangência", "Requisitos Principais"],
+            "headers": [
+                "Norma",
+                "Abrangência",
+                "Requisitos Principais"
+            ],
             "rows": [
-                ["NR-10", "Instalações elétricas", "Segurança em instalações, EPIs"],
-                ["NR-12", "Trabalho em altura", "Proteção contra quedas"],
-                ["NR-35", "Trabalho em altura", "Equipamentos, procedimentos"],
-                ["ABNT NBR 5410", "Instalações elétricas", "Padrões técnicos"],
-                ["ABNT NBR 14039", "Emergências médicas", "Procedimentos de resposta"]
+                [
+                    "NR-10",
+                    "Instalações elétricas",
+                    "Segurança em instalações, EPIs"
+                ],
+                [
+                    "NR-12",
+                    "Trabalho em altura",
+                    "Proteção contra quedas"
+                ],
+                [
+                    "NR-35",
+                    "Trabalho em altura",
+                    "Equipamentos, procedimentos"
+                ],
+                [
+                    "ABNT NBR 5410",
+                    "Instalações elétricas",
+                    "Padrões técnicos"
+                ],
+                [
+                    "ABNT NBR 14039",
+                    "Emergências médicas",
+                    "Procedimentos de resposta"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Normas são atualizadas regularmente. Mantenha-se informado sobre mudanças e novas exigências."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança de oficina aplicado a “Normas e Regulamentações”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "EPI, ordem no posto, isolamento de HV, e não “testar curto com fio grosso”. Segurança é competência técnica, não burocracia. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Risco",
+                "Controle",
+                "Exemplo"
+            ],
+            "rows": [
+                [
+                    "Choque/arco",
+                    "PPE/LOTO",
+                    "HV"
+                ],
+                [
+                    "Incêndio",
+                    "Fusível correto",
+                    "Aftermarket"
+                ],
+                [
+                    "Química",
+                    "EPIs bateria",
+                    "Ácido/térmica"
+                ],
+                [
+                    "Ergonomia",
+                    "Apoios/cavaletes",
+                    "Queda de veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Anel metálico em bancada energizada; pular espera de airbag."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Avaliar risco",
+                "Preparar EPI",
+                "Procedimento escrito quando HV"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Normas e Regulamentações"
+                "title": "Checklist de segurança HV / LOTO"
             }
         },
         {
             "type": "quiz",
             "question": "Qual norma trata de segurança em instalações elétricas?",
             "options": [
-                "NR-10",
                 "NR-12",
+                "ABNT NBR 5410",
                 "NR-35",
-                "ABNT NBR 5410"
+                "NR-10"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: NR-10. Em segurança de oficina (“Normas e Regulamentações”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual norma trata de trabalho em altura?",
             "options": [
-                "NR-10",
-                "NR-12",
                 "NR-35",
-                "ABNT NBR 14039"
+                "NR-10",
+                "ABNT NBR 14039",
+                "NR-12"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: NR-35. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Por que manter documentação de segurança atualizada?",
             "options": [
-                "Apenas burocracia",
                 "Evitar multas, interdição e responsabilização legal",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Evitar multas, interdição e responsabilização legal. Em segurança de oficina (“Normas e Regulamentações”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

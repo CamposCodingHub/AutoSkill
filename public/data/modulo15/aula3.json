@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Eficiência", "Aplicação", "Características"],
+            "headers": [
+                "Tipo",
+                "Eficiência",
+                "Aplicação",
+                "Características"
+            ],
             "rows": [
-                ["BLDC", "92-95%", "BEV, HEV", "Alto torque, controle preciso"],
-                ["Indução", "85-92%", "HEV, industrial", "Robusto, baixo custo"],
-                ["PMSM", "94-97%", "BEV premium", "Alta densidade potência"],
-                ["SRM", "85-90%", "Aplicações especiais", "Robusto, sem ímãs"]
+                [
+                    "BLDC",
+                    "92-95%",
+                    "BEV, HEV",
+                    "Alto torque, controle preciso"
+                ],
+                [
+                    "Indução",
+                    "85-92%",
+                    "HEV, industrial",
+                    "Robusto, baixo custo"
+                ],
+                [
+                    "PMSM",
+                    "94-97%",
+                    "BEV premium",
+                    "Alta densidade potência"
+                ],
+                [
+                    "SRM",
+                    "85-90%",
+                    "Aplicações especiais",
+                    "Robusto, sem ímãs"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Motores operam como geradores durante frenagem, convertendo energia cinética em elétrica para recarregar baterias."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar HV / híbridos / BEV aplicado a “Motores Elétricos de Tração”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem PPE + service plug/LOTO + verificação 0 V conforme OEM, não há serviço. 12 V auxiliar fraca impede READY. Isolation fault exige fluxo do fabricante. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Etapa",
+                "Obrigatório",
+                "Por quê"
+            ],
+            "rows": [
+                [
+                    "PPE",
+                    "Classe adequada",
+                    "Arco/choque"
+                ],
+                [
+                    "LOTO",
+                    "Service plug",
+                    "Isolar pack"
+                ],
+                [
+                    "0 V",
+                    "Medir pontos OEM",
+                    "Energia residual"
+                ],
+                [
+                    "12 V aux",
+                    "Estável",
+                    "Contatores"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir capa laranja por curiosidade; saltar interlock."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Treinamento/autorização",
+                "PPE",
+                "Procedimento OEM completo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Motores Elétricos"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente converte DC das baterias em AC para o motor?",
             "options": [
-                "BMS",
-                "Inversor",
                 "DC-DC Converter",
-                "OBC"
+                "BMS",
+                "OBC",
+                "Inversor"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Inversor. Em HV / híbridos / BEV (“Motores Elétricos de Tração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de motor tem a maior eficiência (94-97%)?",
             "options": [
-                "Motor de Indução",
                 "BLDC",
-                "PMSM (Síncrono com Ímãs Permanentes)",
-                "SRM (Relutância Chaveada)"
+                "Motor de Indução",
+                "SRM (Relutância Chaveada)",
+                "PMSM (Síncrono com Ímãs Permanentes)"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: PMSM (Síncrono com Ímãs Permanentes). Em HV / híbridos / BEV (“Motores Elétricos de Tração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como os motores elétricos funcionam durante a frenagem regenerativa?",
             "options": [
-                "Desligam completamente",
                 "Operam como geradores convertendo energia cinética em elétrica",
+                "Desligam completamente",
                 "Aumentam a velocidade",
                 "Consumem mais energia"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Operam como geradores convertendo energia cinética em elétrica. Em HV / híbridos / BEV (“Motores Elétricos de Tração”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -27,11 +27,27 @@
         },
         {
             "type": "table",
-            "headers": ["Problema", "Causa Elétrica", "Sintoma"],
+            "headers": [
+                "Problema",
+                "Causa Elétrica",
+                "Sintoma"
+            ],
             "rows": [
-                ["Queda de tensão > 0.5V", "Fio fino ou mau contato", "Pressão baixa em carga"],
-                ["Relé com contato ruim", "Corrosão nos contatos", "Partida longa ou intermitente"],
-                ["Terra deficiente", "Oxidação no chassi", "Bomba superaquece"]
+                [
+                    "Queda de tensão > 0.5V",
+                    "Fio fino ou mau contato",
+                    "Pressão baixa em carga"
+                ],
+                [
+                    "Relé com contato ruim",
+                    "Corrosão nos contatos",
+                    "Partida longa ou intermitente"
+                ],
+                [
+                    "Terra deficiente",
+                    "Oxidação no chassi",
+                    "Bomba superaquece"
+                ]
             ]
         },
         {
@@ -45,44 +61,114 @@
             "value": "Para diagnóstico, meça a queda de tensão no circuito completo: bateria → relé → bomba → massa. Qualquer queda acima de 0.5V indica problema que precisa ser corrigido."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar atuadores aplicado a “Bomba de Combustível Elétrica”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Separe falha de comando (ECU/driver) de falha de potência (fusível/relé/massa) e de falha do próprio atuador. Clique de relé não prova corrente na carga. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Atuador",
+                "Prova",
+                "Armadilha"
+            ],
+            "rows": [
+                [
+                    "Injetor",
+                    "Pulso + resistência isolada",
+                    "Medir ohms energizado"
+                ],
+                [
+                    "Bobina",
+                    "Comando + primary/secondary",
+                    "Cabo/estalo enganoso"
+                ],
+                [
+                    "Solenoide",
+                    "Alimentação + massa comutada",
+                    "Só bip de continuidade"
+                ],
+                [
+                    "Motor DC",
+                    "Corrente + VD",
+                    "Bind mecânico parece elétrico"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Condenar ECU sem provar alimentação/massa/sinal no conector do atuador."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de pinos",
+                "Medir comando e potência",
+                "Validar após reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "VoltageDropSimulator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Queda de Tensão na Bomba"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Pressão de combustível baixa só em aceleração forte ou estrada; marcha lenta ok. Causa elétrica plausível?",
             "options": [
-                "Sensor MAP com defeito",
-                "Queda de tensão no circuito da bomba",
                 "Filtro de ar sujo",
-                "Vela de ignição gasta"
+                "Vela de ignição gasta",
+                "Queda de tensão no circuito da bomba",
+                "Sensor MAP com defeito"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Queda de tensão no circuito da bomba. Voltage drop só faz sentido sob carga (corrente fluindo). Compare com limites típicos/OEM e isole o trecho."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal causa de queda de tensão em circuitos de bomba de combustível?",
             "options": [
-                "Alternador com defeito",
-                "Resistência alta em conexões ou chicotes",
                 "Bateria muito fraca",
-                "Excesso de acessórios ligados"
+                "Alternador com defeito",
+                "Excesso de acessórios ligados",
+                "Resistência alta em conexões ou chicotes"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Resistência alta em conexões ou chicotes. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você testa a queda de tensão na bomba de combustível?",
             "options": [
-                "Medindo a resistência da bomba",
                 "Medindo a tensão na bomba durante operação",
-                "Testando a continuidade com o motor desligado",
-                "Verificando a pressão apenas em marcha lenta"
+                "Medindo a resistência da bomba",
+                "Verificando a pressão apenas em marcha lenta",
+                "Testando a continuidade com o motor desligado"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Medindo a tensão na bomba durante operação. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

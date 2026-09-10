@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Função Principal", "Quando Usar"],
+            "headers": [
+                "Tipo",
+                "Função Principal",
+                "Quando Usar"
+            ],
             "rows": [
-                ["Esquemático", "Mostra funcionamento", "Diagnóstico de circuitos"],
-                ["Localização", "Posição física", "Encontrar componentes"],
-                ["Conectores", "Pinos e terminais", "Teste de conectores"],
-                ["Roteamento", "Caminho dos fios", "Reparo de chicotes"],
-                ["Blocos", "Visão geral", "Entendimento do sistema"]
+                [
+                    "Esquemático",
+                    "Mostra funcionamento",
+                    "Diagnóstico de circuitos"
+                ],
+                [
+                    "Localização",
+                    "Posição física",
+                    "Encontrar componentes"
+                ],
+                [
+                    "Conectores",
+                    "Pinos e terminais",
+                    "Teste de conectores"
+                ],
+                [
+                    "Roteamento",
+                    "Caminho dos fios",
+                    "Reparo de chicotes"
+                ],
+                [
+                    "Blocos",
+                    "Visão geral",
+                    "Entendimento do sistema"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Diagramas podem ser encontrados em manuais de serviço, software de diagnóstico, e sites especializados."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar diagramas elétricos aplicado a “Tipos de Diagramas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Diagrama é GPS: marque power, gnd, sinal, fusível e conector. Sem leitura de esquema, medição vira turismo no chicote. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Elemento",
+                "Pergunta",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Símbolo",
+                    "O que é o componente?",
+                    "Legenda OEM"
+                ],
+                [
+                    "Código fio",
+                    "Qual circuito?",
+                    "Trace no carro"
+                ],
+                [
+                    "Conector",
+                    "Onde medir?",
+                    "Vista de pinos"
+                ],
+                [
+                    "Splice",
+                    "Onde divide?",
+                    "Isolar trechos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Seguir cor de fio de outro modelo/ano; medir sem identificar pino."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Abrir diagrama do VIN",
+                "Marcar caminho",
+                "Medir nos pontos marcados"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "WiringTraceSimulator",
             "config": {
-                "title": "Análise de Tipos de Diagramas"
+                "title": "Rastreio de chicote / diagrama"
             }
         },
         {
             "type": "quiz",
             "question": "Qual diagrama mostra posição física dos componentes?",
             "options": [
-                "Esquemático",
                 "Localização",
+                "Roteamento",
                 "Conectores",
-                "Roteamento"
+                "Esquemático"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Localização. Em diagramas elétricos (“Tipos de Diagramas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual diagrama é usado para teste de conectores?",
             "options": [
-                "Esquemático",
-                "Localização",
+                "Blocos",
                 "Conectores",
-                "Blocos"
+                "Esquemático",
+                "Localização"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: Conectores. Em diagramas elétricos (“Tipos de Diagramas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar múltiplos diagramas juntos?",
             "options": [
+                "Não é necessário",
                 "Para confundir",
                 "Cada diagrama complementa o outro para diagnóstico completo",
-                "Apenas um é suficiente",
-                "Não é necessário"
+                "Apenas um é suficiente"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Cada diagrama complementa o outro para diagnóstico completo. Em diagramas elétricos (“Tipos de Diagramas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Corrente", "Aplicação", "Identificação"],
+            "headers": [
+                "Tipo",
+                "Corrente",
+                "Aplicação",
+                "Identificação"
+            ],
             "rows": [
-                ["MINI", "2-30A", "Circuitos baixa potência", "Pequeno, verde/azul"],
-                ["ATO", "5-40A", "Circuitos médios", "Padrão japonês"],
-                ["MAXI", "20-80A", "Potência elevada", "Grande, amarelo/vermelho"],
-                ["JCASE", "30-100A", "Sistemas de alta potência", "Retangular"]
+                [
+                    "MINI",
+                    "2-30A",
+                    "Circuitos baixa potência",
+                    "Pequeno, verde/azul"
+                ],
+                [
+                    "ATO",
+                    "5-40A",
+                    "Circuitos médios",
+                    "Padrão japonês"
+                ],
+                [
+                    "MAXI",
+                    "20-80A",
+                    "Potência elevada",
+                    "Grande, amarelo/vermelho"
+                ],
+                [
+                    "JCASE",
+                    "30-100A",
+                    "Sistemas de alta potência",
+                    "Retangular"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Modernos incluem indicadores visuais, proteção contra surtos, e comunicação com sistemas de diagnóstico."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar componentes (fusível, relé, diodo…) aplicado a “Fusíveis Automotivos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Fusível aberto é sintoma. Relé que “clicka” só prova bobina — o contato 30–87 pode estar morto. Sempre separe lado de comando e lado de potência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Peça",
+                "Teste rápido",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Fusível",
+                    "Continuidade / tensão dos dois lados",
+                    "Aberto = achar curto/sobrecorrente"
+                ],
+                [
+                    "Relé",
+                    "85/86 ohms + 30/87 sob comando",
+                    "Click ≠ potência ok"
+                ],
+                [
+                    "Diodo",
+                    "Polarização / queda ~0,5–0,7 V",
+                    "Curto ou aberto"
+                ],
+                [
+                    "Conector",
+                    "VD sob carga + inspeção visual",
+                    "Fretting/corrosão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Upar ampère do fusível; trocar relé sem medir 30 e 87; ignorar diagrama de pinagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar circuito no diagrama",
+                "Medir antes de substituir",
+                "Validar carga real após o reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise de Fusíveis"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de fusível para circuito de alta potência?",
             "options": [
+                "MAXI",
                 "MINI",
                 "ATO",
-                "MAXI",
                 "JCASE"
             ],
-            "correct": 3
+            "correct": 3,
+            "explanation": "Resposta: JCASE. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         },
         {
             "type": "quiz",
             "question": "Qual é a função principal de um fusível em um circuito automotivo?",
             "options": [
-                "Regular a tensão do circuito",
                 "Proteger contra correntes excessivas",
+                "Armazenar energia temporariamente",
                 "Melhorar a eficiência energética",
-                "Armazenar energia temporariamente"
+                "Regular a tensão do circuito"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Proteger contra correntes excessivas. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         },
         {
             "type": "quiz",
             "question": "O que acontece quando um fusível queima?",
             "options": [
-                "O circuito continua funcionando com tensão reduzida",
-                "O circuito se abre e para de funcionar",
                 "O circuito entra em curto-circuito",
-                "O fusível se regenera automaticamente"
+                "O circuito continua funcionando com tensão reduzida",
+                "O fusível se regenera automaticamente",
+                "O circuito se abre e para de funcionar"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: O circuito se abre e para de funcionar. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         }
     ]
 }

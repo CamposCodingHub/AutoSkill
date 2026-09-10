@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Ferramenta", "Função", "Aplicação"],
+            "headers": [
+                "Ferramenta",
+                "Função",
+                "Aplicação"
+            ],
             "rows": [
-                ["Testador Injetor", "Teste de injetores", "Balançamento, resistência"],
-                ["Testador Bobina", "Teste de ignição", "Faísca, resistência"],
-                ["Extractor Fusível", "Remoção fusíveis", "Fusíveis difíceis acesso"],
-                ["Kit Conectores", "Reparo conectores", "Terminais, reparos"],
-                ["Ferramenta Relay", "Teste de relés", "Contato, bobina"]
+                [
+                    "Testador Injetor",
+                    "Teste de injetores",
+                    "Balançamento, resistência"
+                ],
+                [
+                    "Testador Bobina",
+                    "Teste de ignição",
+                    "Faísca, resistência"
+                ],
+                [
+                    "Extractor Fusível",
+                    "Remoção fusíveis",
+                    "Fusíveis difíceis acesso"
+                ],
+                [
+                    "Kit Conectores",
+                    "Reparo conectores",
+                    "Terminais, reparos"
+                ],
+                [
+                    "Ferramenta Relay",
+                    "Teste de relés",
+                    "Contato, bobina"
+                ]
             ]
         },
         {
@@ -43,44 +67,115 @@
             "text": "Mantenha ferramentas organizadas e etiquetadas. Use caixas de ferramentas com divisórias e sistema de inventário."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar instrumentos e medição aplicado a “Ferramentas Especiais Automotivas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "O multímetro é juiz, não adivinho: volts ao vivo, ohms só desenergizado, corrente com método seguro. Voltage drop sob carga é o teste que mais separa técnico de “trocador de peça”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Modo",
+                "Use quando",
+                "Erro clássico"
+            ],
+            "rows": [
+                [
+                    "V DC",
+                    "Alimentação / sinal / VD",
+                    "Massa de referência ruim"
+                ],
+                [
+                    "Ω / bip",
+                    "Componente isolado",
+                    "Medir com tensão presente"
+                ],
+                [
+                    "A / alicate",
+                    "Consumo / partida / parasita",
+                    "Escala errada / acordar módulos"
+                ],
+                [
+                    "mV no fusível",
+                    "Isolar fuga sem puxar fusível",
+                    "Não esperar sleep do veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Ponta no borne 10A sem querer; continuidade como único teste; não zerar/validar o instrumento."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Inspecionar pontas e fusível interno do DMM",
+                "Confirmar COM / VΩ / A",
+                "Ao vivo = volts; morto = ohms",
+                "Documentar foto da tela quando possível"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "MultimeterPracticeSimulator",
             "config": {
-                "title": "Análise de Ferramentas"
+                "title": "Prática de multímetro"
             }
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é essencial para testar injetores?",
             "options": [
-                "Multímetro básico",
                 "Testador de injetores",
+                "Scanner OBD-II",
                 "Alicate amperímetro",
-                "Scanner OBD-II"
+                "Multímetro básico"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Testador de injetores. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do testador de injetores?",
             "options": [
-                "Medir a resistência do injetor",
-                "Testar o funcionamento e padrão de pulverização",
                 "Ajustar a pressão do combustível",
-                "Calcular o tempo de injeção"
+                "Medir a resistência do injetor",
+                "Calcular o tempo de injeção",
+                "Testar o funcionamento e padrão de pulverização"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Testar o funcionamento e padrão de pulverização. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você deve testar um injetor com multímetro?",
             "options": [
-                "Medir a resistência da bobina",
                 "Medir a tensão de operação",
-                "Testar a continuidade do terra",
-                "Verificar o fluxo de combustível"
+                "Verificar o fluxo de combustível",
+                "Medir a resistência da bobina",
+                "Testar a continuidade do terra"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: Medir a resistência da bobina. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Entrada", "Fonte", "Função no Controle"],
+            "headers": [
+                "Entrada",
+                "Fonte",
+                "Função no Controle"
+            ],
             "rows": [
-                ["Temperatura Cabine", "Sensor NTC", "Controle principal de conforto"],
-                ["Temperatura Externa", "Sensor NTC", "Compensação externa"],
-                ["Sensor Solar", "Fotodiodo", "Ajuste por radiação solar"],
-                ["Velocidade Veículo", "CAN/ABS", "Controle de fluxo natural"],
-                ["RPM Motor", "CAN/ECU", "Controle de compressor variável"]
+                [
+                    "Temperatura Cabine",
+                    "Sensor NTC",
+                    "Controle principal de conforto"
+                ],
+                [
+                    "Temperatura Externa",
+                    "Sensor NTC",
+                    "Compensação externa"
+                ],
+                [
+                    "Sensor Solar",
+                    "Fotodiodo",
+                    "Ajuste por radiação solar"
+                ],
+                [
+                    "Velocidade Veículo",
+                    "CAN/ABS",
+                    "Controle de fluxo natural"
+                ],
+                [
+                    "RPM Motor",
+                    "CAN/ECU",
+                    "Controle de compressor variável"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Ao ligar, o módulo executa autodiagnóstico verificando todos os sensores e atuadores. Códigos de falha são armazenados para diagnóstico."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Módulo HVAC e Clima Automático”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise de Controle HVAC"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "O que o módulo HVAC usa para compensar radiação solar?",
             "options": [
-                "Sensor de pressão",
                 "Sensor solar",
+                "Sensor de velocidade",
                 "Sensor de umidade",
-                "Sensor de velocidade"
+                "Sensor de pressão"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Sensor solar. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Qual é a diferença principal entre modo manual e automático do HVAC?",
             "options": [
-                "Modo manual usa mais combustível",
-                "Em automático o módulo controla tudo, em manual o usuário define",
+                "Não há diferença entre os modos",
                 "Modo automático só funciona no inverno",
-                "Não há diferença entre os modos"
+                "Modo manual usa mais combustível",
+                "Em automático o módulo controla tudo, em manual o usuário define"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Em automático o módulo controla tudo, em manual o usuário define. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "O que o módulo HVAC faz ao ligar o veículo?",
             "options": [
-                "Liga o compressor imediatamente",
                 "Executa autodiagnóstico verificando sensores e atuadores",
-                "Desliga todos os sistemas",
-                "Ajusta apenas a temperatura"
+                "Ajusta apenas a temperatura",
+                "Liga o compressor imediatamente",
+                "Desliga todos os sistemas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Executa autodiagnóstico verificando sensores e atuadores. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

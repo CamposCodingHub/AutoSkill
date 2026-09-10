@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Canal", "Função", "Investimento"],
+            "headers": [
+                "Canal",
+                "Função",
+                "Investimento"
+            ],
             "rows": [
-                ["Google Meu Negócio", "Presença local", "Gratuito"],
-                ["SEO Local", "Busca orgânica", "Médio"],
-                ["Redes Sociais", "Engajamento", "Baixo/Médio"],
-                ["Anúncios Google", "Geração de leads", "Médio/Alto"],
-                ["Email Marketing", "Retenção", "Baixo"]
+                [
+                    "Google Meu Negócio",
+                    "Presença local",
+                    "Gratuito"
+                ],
+                [
+                    "SEO Local",
+                    "Busca orgânica",
+                    "Médio"
+                ],
+                [
+                    "Redes Sociais",
+                    "Engajamento",
+                    "Baixo/Médio"
+                ],
+                [
+                    "Anúncios Google",
+                    "Geração de leads",
+                    "Médio/Alto"
+                ],
+                [
+                    "Email Marketing",
+                    "Retenção",
+                    "Baixo"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use ferramentas para automatizar: emails, posts em redes sociais, e follow-up de clientes."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar empreendedorismo de oficina elétrica aplicado a “Marketing Digital para Oficinas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Preço justo exige método: menos retrabalho, orçamento com evidência, especialização. Elétrica bem feita tem margem — chute não. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Frente",
+                "Ação",
+                "Métrica"
+            ],
+            "rows": [
+                [
+                    "Comercial",
+                    "Orçar após diagnóstico",
+                    "Taxa de aprovação"
+                ],
+                [
+                    "Operação",
+                    "Checklist padrão",
+                    "Retrabalho"
+                ],
+                [
+                    "Financeiro",
+                    "Hora técnica real",
+                    "Margem"
+                ],
+                [
+                    "Reputação",
+                    "Garantia com evidência",
+                    "Indicações"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Aceitar “olha aí rapidinho” sem RO; trabalhar no prejuízo por insegurança técnica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir escopo",
+                "Cobrar diagnóstico",
+                "Entregar validação"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Marketing Digital"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é essencial para presença local?",
             "options": [
-                "Facebook Ads",
                 "Instagram",
+                "LinkedIn",
                 "Google Meu Negócio",
-                "LinkedIn"
+                "Facebook Ads"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Google Meu Negócio. Em empreendedorismo de oficina elétrica (“Marketing Digital para Oficinas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de conteúdo atrai clientes para oficinas?",
             "options": [
-                "Apenas promoções",
-                "Tutoriais, dicas de manutenção e informações técnicas",
+                "Apenas memes",
                 "Apenas fotos",
-                "Apenas memes"
+                "Apenas promoções",
+                "Tutoriais, dicas de manutenção e informações técnicas"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Tutoriais, dicas de manutenção e informações técnicas. Em empreendedorismo de oficina elétrica (“Marketing Digital para Oficinas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar métricas em marketing digital?",
             "options": [
-                "Apenas burocracia",
                 "Avaliar resultados, tráfego, conversões e ROI",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Não é necessário",
+                "Apenas burocracia",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Avaliar resultados, tráfego, conversões e ROI. Em empreendedorismo de oficina elétrica (“Marketing Digital para Oficinas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

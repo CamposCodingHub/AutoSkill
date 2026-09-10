@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Sistema", "Função", "Características"],
+            "headers": [
+                "Sistema",
+                "Função",
+                "Características"
+            ],
             "rows": [
-                ["Engate Mecânico", "Conexão física", "Quinta roda, engates tipo anel"],
-                ["Pneumático", "Freios e suspensão", "Linhas de ar, válvulas protetoras"],
-                ["Elétrico", "Iluminação e comunicação", "7/13 pinos, CAN bus"],
-                ["Eletrônico", "Controle integrado", "EBS, TPMS, telemática"]
+                [
+                    "Engate Mecânico",
+                    "Conexão física",
+                    "Quinta roda, engates tipo anel"
+                ],
+                [
+                    "Pneumático",
+                    "Freios e suspensão",
+                    "Linhas de ar, válvulas protetoras"
+                ],
+                [
+                    "Elétrico",
+                    "Iluminação e comunicação",
+                    "7/13 pinos, CAN bus"
+                ],
+                [
+                    "Eletrônico",
+                    "Controle integrado",
+                    "EBS, TPMS, telemática"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Use scanner específico para sistemas de trailer. Verifique integridade das conexões e comunicação CAN."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar 24V / pesados aplicado a “Sistemas de Trailer e Acoplamento”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "24V = duas baterias em série tipicamente. Queda de tensão e massas ruins derrubam módulos. Cuidado com retornos de chassi e tomadas de reboque. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tópico",
+                "Atenção",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Séries 12+12",
+                    "Balanceamento",
+                    "Tensão por elemento"
+                ],
+                [
+                    "Partida",
+                    "Correntes altas",
+                    "VD cabos"
+                ],
+                [
+                    "Iluminação reboque",
+                    "Terra comum",
+                    "Continuidade/VD"
+                ],
+                [
+                    "ABS/EBS",
+                    "Rede + power",
+                    "Scanner dedicado"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Tratar 24V como 12V sem recalcular corrente/potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Confirmar topologia",
+                "Medir por bateria",
+                "Inspecionar terra pesado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Sistemas de Trailer"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sistema permite controle distribuído dos freios entre caminhão e trailer?",
             "options": [
-                "ABS tradicional",
-                "EBS (Electronic Braking System)",
                 "Freios a ar manuais",
-                "Freios hidráulicos"
+                "Freios hidráulicos",
+                "EBS (Electronic Braking System)",
+                "ABS tradicional"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: EBS (Electronic Braking System). Em 24V / pesados (“Sistemas de Trailer e Acoplamento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de engate mecânico é mais comum em caminhões para reboques pesados?",
             "options": [
+                "Engate por gravidade",
                 "Engate tipo bola",
-                "Quinta roda",
                 "Engate magnético",
-                "Engate por gravidade"
+                "Quinta roda"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Quinta roda. Em 24V / pesados (“Sistemas de Trailer e Acoplamento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que o sistema pneumático no acoplamento de trailer controla?",
             "options": [
-                "Apenas a iluminação",
                 "Freios e suspensão",
-                "Apenas o sistema de áudio",
-                "Apenas o GPS"
+                "Apenas a iluminação",
+                "Apenas o GPS",
+                "Apenas o sistema de áudio"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Freios e suspensão. Em 24V / pesados (“Sistemas de Trailer e Acoplamento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

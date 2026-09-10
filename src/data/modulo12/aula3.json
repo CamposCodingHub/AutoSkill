@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Falha Comum"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Falha Comum"
+            ],
             "rows": [
-                ["Motor Ajuste", "Mover espelho", "Motor queimado, engrenagem"],
-                ["Elemento Aquecedor", "Desembaçar", "Circuito aberto, não aquece"],
-                ["Seta Integrada", "Sinalização", "LED queimado, má conexão"],
-                ["Mecanismo Rebatimento", "Dobrar espelho", "Motor travado, cabo rompido"]
+                [
+                    "Motor Ajuste",
+                    "Mover espelho",
+                    "Motor queimado, engrenagem"
+                ],
+                [
+                    "Elemento Aquecedor",
+                    "Desembaçar",
+                    "Circuito aberto, não aquece"
+                ],
+                [
+                    "Seta Integrada",
+                    "Sinalização",
+                    "LED queimado, má conexão"
+                ],
+                [
+                    "Mecanismo Rebatimento",
+                    "Dobrar espelho",
+                    "Motor travado, cabo rompido"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Teste cada função individualmente. Verifique fusíveis, interruptores e chicote na dobradiça da porta."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar conforto e carroceria aplicado a “Retrovisores Elétricos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Vidro/trava/retrovisor: localize se o comando local, mestre ou módulo falhou. Fusível de conforto e massa de porta são vilões frequentes. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "Isolar",
+                "Teste"
+            ],
+            "rows": [
+                [
+                    "Só um vidro",
+                    "Motor vs interruptor",
+                    "Alimentar motor direto (cuidado)"
+                ],
+                [
+                    "Nenhum conforto",
+                    "Fusível/BCM",
+                    "B+ e rede"
+                ],
+                [
+                    "Após chuva",
+                    "Água na porta",
+                    "Corrosão conector"
+                ],
+                [
+                    "Aftermarket",
+                    "Alarme/som",
+                    "Parasita/CAN"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar motor de vidro sem testar interruptor/chicote da porta."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fusíveis conforto",
+                "Comando vs carga",
+                "Inspecionar chicote porta"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Retrovisores"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente causa o não funcionamento do aquecimento do retrovisor?",
             "options": [
-                "Motor de ajuste",
-                "Elemento aquecedor",
                 "Seta integrada",
-                "Mecanismo de rebatimento"
+                "Motor de ajuste",
+                "Mecanismo de rebatimento",
+                "Elemento aquecedor"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Elemento aquecedor. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Quanta potência um elemento aquecedor de retrovisor tipicamente consome?",
             "options": [
-                "1-5W",
                 "10-20W",
-                "50-100W",
-                "200W"
+                "1-5W",
+                "200W",
+                "50-100W"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 10-20W. Em conforto e carroceria (“Retrovisores Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Onde geralmente se encontra problemas de conexão elétrica nos retrovisores?",
             "options": [
-                "No painel de instrumentos",
                 "No chicote na dobradiça da porta",
+                "No painel de instrumentos",
                 "No módulo de controle do motor",
                 "Na bateria"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: No chicote na dobradiça da porta. Em conforto e carroceria (“Retrovisores Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

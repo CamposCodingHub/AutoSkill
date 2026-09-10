@@ -17,11 +17,23 @@
         },
         {
             "type": "table",
-            "headers": ["Pino Típico", "Função"],
+            "headers": [
+                "Pino Típico",
+                "Função"
+            ],
             "rows": [
-                ["Alimentação chaveada + relé principal", "ECM 'acorda' com ignição; keep-alive separado"],
-                ["Sensor ground", "Retorno de 5V ref, NTC, TPS"],
-                ["Power ground", "Retorno de corrente dos drivers"]
+                [
+                    "Alimentação chaveada + relé principal",
+                    "ECM 'acorda' com ignição; keep-alive separado"
+                ],
+                [
+                    "Sensor ground",
+                    "Retorno de 5V ref, NTC, TPS"
+                ],
+                [
+                    "Power ground",
+                    "Retorno de corrente dos drivers"
+                ]
             ]
         },
         {
@@ -45,44 +57,115 @@
             "value": "Verifique sempre a continuidade e integridade dos pontos de terra com o motor desligado. Terra ruim causa sintomas intermitentes e difíceis de diagnosticar."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Alimentação e Aterramento”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "VoltageDropSimulator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Alimentação ECU"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Por que a ECM costuma ter mais de um terminal de massa dedicado?",
             "options": [
-                "Apenas para ocupar pinos vazios no conector",
-                "Isolar retornos de sensíveis dos retornos de alta corrente dos drivers",
                 "Para aumentar a tensão da bateria",
-                "Para eliminar a necessidade de fusível"
+                "Para eliminar a necessidade de fusível",
+                "Isolar retornos de sensíveis dos retornos de alta corrente dos drivers",
+                "Apenas para ocupar pinos vazios no conector"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Isolar retornos de sensíveis dos retornos de alta corrente dos drivers. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal consequência de um terra ruim na ECU?",
             "options": [
-                "Apenas aumento do consumo de combustível",
-                "Funcionamento errático dos sensores e atuadores",
                 "Melhor performance do motor",
-                "Redução da temperatura de operação"
+                "Apenas aumento do consumo de combustível",
+                "Redução da temperatura de operação",
+                "Funcionamento errático dos sensores e atuadores"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Funcionamento errático dos sensores e atuadores. Massa ruim aparece como VD elevado sob carga entre o ponto e o − da bateria."
         },
         {
             "type": "quiz",
             "question": "Como você deve testar a qualidade do terra da ECU?",
             "options": [
+                "Testando apenas com multímetro analógico",
                 "Apenas com o motor desligado",
                 "Medindo a resistência entre o terra da ECU e o negativo da bateria",
-                "Verificando a tensão com o motor funcionando",
-                "Testando apenas com multímetro analógico"
+                "Verificando a tensão com o motor funcionando"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Medindo a resistência entre o terra da ECU e o negativo da bateria. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

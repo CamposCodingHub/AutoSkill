@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Conexão Típica"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Conexão Típica"
+            ],
             "rows": [
-                ["Head Unit", "Processamento central", "CAN, MOST, USB, Bluetooth"],
-                ["Amplificador", "Potência dos alto-falantes", "Line-level, CAN, speaker level"],
-                ["Alto-falantes", "Conversão elétrico-som", "2-8 ohms, 20-100W"],
-                ["Subwoofer", "Graves profundos", "Mono bridge, 4-8 ohms"],
-                ["Processador", "Equalização e crossover", "Digital/analógico"]
+                [
+                    "Head Unit",
+                    "Processamento central",
+                    "CAN, MOST, USB, Bluetooth"
+                ],
+                [
+                    "Amplificador",
+                    "Potência dos alto-falantes",
+                    "Line-level, CAN, speaker level"
+                ],
+                [
+                    "Alto-falantes",
+                    "Conversão elétrico-som",
+                    "2-8 ohms, 20-100W"
+                ],
+                [
+                    "Subwoofer",
+                    "Graves profundos",
+                    "Mono bridge, 4-8 ohms"
+                ],
+                [
+                    "Processador",
+                    "Equalização e crossover",
+                    "Digital/analógico"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use scanner específico para áudio. Teste alimentação, terra e sinais de áudio com osciloscópio."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar conforto e carroceria aplicado a “Sistema de Áudio e Entretenimento”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Vidro/trava/retrovisor: localize se o comando local, mestre ou módulo falhou. Fusível de conforto e massa de porta são vilões frequentes. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "Isolar",
+                "Teste"
+            ],
+            "rows": [
+                [
+                    "Só um vidro",
+                    "Motor vs interruptor",
+                    "Alimentar motor direto (cuidado)"
+                ],
+                [
+                    "Nenhum conforto",
+                    "Fusível/BCM",
+                    "B+ e rede"
+                ],
+                [
+                    "Após chuva",
+                    "Água na porta",
+                    "Corrosão conector"
+                ],
+                [
+                    "Aftermarket",
+                    "Alarme/som",
+                    "Parasita/CAN"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar motor de vidro sem testar interruptor/chicote da porta."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fusíveis conforto",
+                "Comando vs carga",
+                "Inspecionar chicote porta"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistema de Áudio"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual protocolo é usado para streaming de áudio Bluetooth de alta qualidade?",
             "options": [
-                "CAN",
                 "MOST",
                 "A2DP",
-                "USB"
+                "USB",
+                "CAN"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: A2DP. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a impedância típica dos alto-falantes automotivos?",
             "options": [
-                "1 ohm",
-                "2-8 ohms",
+                "32 ohms",
                 "16 ohms",
-                "32 ohms"
+                "1 ohm",
+                "2-8 ohms"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 2-8 ohms. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual função o CAN bus fornece para sistemas de áudio modernos?",
             "options": [
-                "Apenas alimentação elétrica",
                 "Informações de velocidade, volume automático e comandos por volante",
-                "Apenas conexão com GPS",
-                "Controle apenas da antena"
+                "Apenas alimentação elétrica",
+                "Controle apenas da antena",
+                "Apenas conexão com GPS"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Informações de velocidade, volume automático e comandos por volante. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Especificação", "Função"],
+            "headers": [
+                "Componente",
+                "Especificação",
+                "Função"
+            ],
             "rows": [
-                ["Faróis LED Matrix", "Adaptivos, 100W", "Iluminação principal"],
-                ["DRLs", "LEDs 5W", "Luz diurna"],
-                ["Setas Dinâmicas", "LEDs sequenciais", "Sinalização"],
-                ["Módulo Controle", "Arduino/ESP32", "Gerenciamento"],
-                ["Sensor Luz", "LDR + RTC", "Controle automático"]
+                [
+                    "Faróis LED Matrix",
+                    "Adaptivos, 100W",
+                    "Iluminação principal"
+                ],
+                [
+                    "DRLs",
+                    "LEDs 5W",
+                    "Luz diurna"
+                ],
+                [
+                    "Setas Dinâmicas",
+                    "LEDs sequenciais",
+                    "Sinalização"
+                ],
+                [
+                    "Módulo Controle",
+                    "Arduino/ESP32",
+                    "Gerenciamento"
+                ],
+                [
+                    "Sensor Luz",
+                    "LDR + RTC",
+                    "Controle automático"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Será avaliado funcionalidade, eficiência energética, qualidade da documentação, e inovação técnica."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar projetos e portfólio aplicado a “Projeto 1 - Sistema de Iluminação Completo”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Portfólio técnico: RO com fotos de medição, diagrama marcado e validação. Isso vende confiança melhor que discurso. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Entrega",
+                "Conteúdo",
+                "Uso"
+            ],
+            "rows": [
+                [
+                    "Case PDF/MD",
+                    "Sintoma→teste→fixo",
+                    "Cliente/emprego"
+                ],
+                [
+                    "Prints DMM/scope",
+                    "Evidência",
+                    "Auditoria"
+                ],
+                [
+                    "Antes/depois",
+                    "Validação",
+                    "Marketing técnico"
+                ],
+                [
+                    "Lições aprendidas",
+                    "Erro evitado",
+                    "Melhoria contínua"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Portfólio só com “troquei a peça” sem números."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "3 cases documentados",
+                "Medições legíveis",
+                "Resultado validado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Sistema de Iluminação"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o principal desafio em sistemas de iluminação integrados?",
             "options": [
-                "Apenas consumo de energia",
                 "Integração de múltiplos sistemas",
                 "Apenas seleção de LEDs",
+                "Apenas consumo de energia",
                 "Apenas conformidade legal"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Integração de múltiplos sistemas. Em projetos e portfólio (“Projeto 1 - Sistema de Iluminação Completo”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual componente é responsável pelo gerenciamento do sistema?",
             "options": [
-                "Faróis LED Matrix",
-                "DRLs",
                 "Módulo de controle Arduino/ESP32",
-                "Sensor de luz"
+                "Sensor de luz",
+                "DRLs",
+                "Faróis LED Matrix"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: Módulo de controle Arduino/ESP32. Em projetos e portfólio (“Projeto 1 - Sistema de Iluminação Completo”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que documentar o projeto com esquemas e código?",
             "options": [
-                "Apenas burocracia",
-                "Permite reprodução, manutenção e avaliação completa",
+                "Não é necessário",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Permite reprodução, manutenção e avaliação completa"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Permite reprodução, manutenção e avaliação completa. Em projetos e portfólio (“Projeto 1 - Sistema de Iluminação Completo”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

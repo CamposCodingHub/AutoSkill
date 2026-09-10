@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Condição", "Pressão", "Voltagem Típica"],
+            "headers": [
+                "Condição",
+                "Pressão",
+                "Voltagem Típica"
+            ],
             "rows": [
-                ["Marcha lenta", "20-40 kPa", "0.5-1.5V"],
-                ["Carga leve", "40-80 kPa", "1.5-2.5V"],
-                ["Carga média", "80-100 kPa", "2.5-3.5V"],
-                ["Plena carga", "100-105 kPa", "3.5-4.5V"],
-                ["Turbo", ">100 kPa", "4.5-5.0V"]
+                [
+                    "Marcha lenta",
+                    "20-40 kPa",
+                    "0.5-1.5V"
+                ],
+                [
+                    "Carga leve",
+                    "40-80 kPa",
+                    "1.5-2.5V"
+                ],
+                [
+                    "Carga média",
+                    "80-100 kPa",
+                    "2.5-3.5V"
+                ],
+                [
+                    "Plena carga",
+                    "100-105 kPa",
+                    "3.5-4.5V"
+                ],
+                [
+                    "Turbo",
+                    ">100 kPa",
+                    "4.5-5.0V"
+                ]
             ]
         },
         {
@@ -43,44 +67,115 @@
             "text": "ECU combina MAP com temperatura do ar e RPM para calcular massa de ar admitida com precisão."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar sensores aplicado a “Sensor MAP (Pressão Absoluta)”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sensor “com código” não é sentença: prove alimentação, massa, sinal e integridade do chicote. Scope ajuda a ver forma; DMM confirma tensão de referência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Verificação",
+                "Esperado (genérico)",
+                "Nota"
+            ],
+            "rows": [
+                [
+                    "Alimentação 5V/12V",
+                    "Conforme diagrama",
+                    "Sem ref = sinal louco"
+                ],
+                [
+                    "Massa do sensor",
+                    "VD baixo",
+                    "Massa compartilhada falha em grupo"
+                ],
+                [
+                    "Sinal",
+                    "Varia com estímulo",
+                    "Compare OEM/lado bom"
+                ],
+                [
+                    "Chicote",
+                    "Sem curto/aberto",
+                    "Wiggle test"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar sensor sem medir no conector; ohms com circuito energizado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Ler DTC + freeze",
+                "Medir no conector",
+                "Estímulo controlado",
+                "Só então substituir"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Análise de Sensor MAP"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a voltagem típica do MAP em plena carga aspirada?",
             "options": [
-                "0.5-1.5V",
-                "1.5-2.5V",
                 "3.5-4.5V",
-                "4.5-5.0V"
+                "0.5-1.5V",
+                "4.5-5.0V",
+                "1.5-2.5V"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 3.5-4.5V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do sensor MAP?",
             "options": [
-                "Medir a temperatura do ar admitido",
                 "Medir a pressão absoluta no coletor de admissão",
-                "Controlar a rotação do motor",
-                "Regular a pressão do combustível"
+                "Medir a temperatura do ar admitido",
+                "Regular a pressão do combustível",
+                "Controlar a rotação do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Medir a pressão absoluta no coletor de admissão. Em sensores (“Sensor MAP (Pressão Absoluta)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como o sensor MAP afeta o cálculo de combustível?",
             "options": [
-                "Não afeta, apenas mede pressão",
                 "Ajuda a ECU a calcular a densidade do ar e ajustar injeção",
+                "Não afeta, apenas mede pressão",
                 "Controla diretamente a bomba de combustível",
                 "Regula apenas o tempo de ignição"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Ajuda a ECU a calcular a densidade do ar e ajustar injeção. Em sensores (“Sensor MAP (Pressão Absoluta)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

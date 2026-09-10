@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Especificação Típica"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Especificação Típica"
+            ],
             "rows": [
-                ["Processador", "Processamento central", "ARM Cortex-A53, 1-2GHz"],
-                ["RAM", "Memória temporária", "2-8GB DDR4"],
-                ["Armazenamento", "Mapas e apps", "32-128GB eMMC"],
-                ["Display", "Interface visual", "7-12\" HD/4K touch"],
-                ["SoC Áudio", "Processamento de som", "DSP dedicado"]
+                [
+                    "Processador",
+                    "Processamento central",
+                    "ARM Cortex-A53, 1-2GHz"
+                ],
+                [
+                    "RAM",
+                    "Memória temporária",
+                    "2-8GB DDR4"
+                ],
+                [
+                    "Armazenamento",
+                    "Mapas e apps",
+                    "32-128GB eMMC"
+                ],
+                [
+                    "Display",
+                    "Interface visual",
+                    "7-12\" HD/4K touch"
+                ],
+                [
+                    "SoC Áudio",
+                    "Processamento de som",
+                    "DSP dedicado"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use ferramentas de diagnóstico específicas. Verifique atualizações de software e integridade do sistema."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar áudio e telemática aplicado a “Sistemas de Infoentretenimento”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Som aftermarket mal alimentado gera parasita, interferência e até problemas de rede. Use B+ correto, fusível dedicado e massa limpa — nunca “ganze” na CAN. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Item",
+                "Boa prática",
+                "Risco"
+            ],
+            "rows": [
+                [
+                    "Alimentação",
+                    "Fusível calibrado",
+                    "Incêndio / parasita"
+                ],
+                [
+                    "Massa",
+                    "Ponto limpo curto",
+                    "Ruído / resets"
+                ],
+                [
+                    "Remote ACC",
+                    "Sinal adequado",
+                    "Rádio não dorme"
+                ],
+                [
+                    "Antena/GPS",
+                    "Blindagem",
+                    "Recepção ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Emendar em chicotes de airbag/CAN; deixar amp ligado em B+ sem remote."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de instalação",
+                "Medir consumo após sleep",
+                "Validar funções do veículo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Infoentretenimento"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sistema operacional é mais comum em head units modernas?",
             "options": [
-                "Windows",
                 "macOS",
+                "Windows",
                 "Android Automotive",
                 "iOS"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Android Automotive. Em áudio e telemática (“Sistemas de Infoentretenimento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a quantidade típica de RAM em head units modernas?",
             "options": [
-                "512MB - 1GB",
                 "2-8GB",
+                "64-128GB",
                 "16-32GB",
-                "64-128GB"
+                "512MB - 1GB"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2-8GB. Em áudio e telemática (“Sistemas de Infoentretenimento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Para que a head unit se comunica com a rede CAN do veículo?",
             "options": [
-                "Apenas para alimentação elétrica",
-                "Para obter dados de velocidade, gear e informações do veículo",
                 "Apenas para conectar com GPS",
-                "Apenas para controle de áudio"
+                "Apenas para alimentação elétrica",
+                "Apenas para controle de áudio",
+                "Para obter dados de velocidade, gear e informações do veículo"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para obter dados de velocidade, gear e informações do veículo. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

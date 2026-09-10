@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Aplicação", "Range Típico", "O que Medir"],
+            "headers": [
+                "Aplicação",
+                "Range Típico",
+                "O que Medir"
+            ],
             "rows": [
-                ["Consumo Motor Partida", "100-400A", "Corrente de partida"],
-                ["Alternador Carregando", "10-100A", "Saída do alternador"],
-                ["Bomba Combustível", "3-8A", "Consumo da bomba"],
-                ["Ventilador Radiador", "15-40A", "Corrente do motor"],
-                ["Sistema Áudio", "5-50A", "Consumo amplificador"]
+                [
+                    "Consumo Motor Partida",
+                    "100-400A",
+                    "Corrente de partida"
+                ],
+                [
+                    "Alternador Carregando",
+                    "10-100A",
+                    "Saída do alternador"
+                ],
+                [
+                    "Bomba Combustível",
+                    "3-8A",
+                    "Consumo da bomba"
+                ],
+                [
+                    "Ventilador Radiador",
+                    "15-40A",
+                    "Corrente do motor"
+                ],
+                [
+                    "Sistema Áudio",
+                    "5-50A",
+                    "Consumo amplificador"
+                ]
             ]
         },
         {
@@ -43,44 +67,115 @@
             "text": "Não funciona em cabos blindados ou múltiplos cabos juntos. Precisa separar fios individuais."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar instrumentos e medição aplicado a “Alicate Amperímetro e Teste de Corrente”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "O multímetro é juiz, não adivinho: volts ao vivo, ohms só desenergizado, corrente com método seguro. Voltage drop sob carga é o teste que mais separa técnico de “trocador de peça”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Modo",
+                "Use quando",
+                "Erro clássico"
+            ],
+            "rows": [
+                [
+                    "V DC",
+                    "Alimentação / sinal / VD",
+                    "Massa de referência ruim"
+                ],
+                [
+                    "Ω / bip",
+                    "Componente isolado",
+                    "Medir com tensão presente"
+                ],
+                [
+                    "A / alicate",
+                    "Consumo / partida / parasita",
+                    "Escala errada / acordar módulos"
+                ],
+                [
+                    "mV no fusível",
+                    "Isolar fuga sem puxar fusível",
+                    "Não esperar sleep do veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Ponta no borne 10A sem querer; continuidade como único teste; não zerar/validar o instrumento."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Inspecionar pontas e fusível interno do DMM",
+                "Confirmar COM / VΩ / A",
+                "Ao vivo = volts; morto = ohms",
+                "Documentar foto da tela quando possível"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "MultimeterPracticeSimulator",
             "config": {
-                "title": "Análise de Corrente"
+                "title": "Prática de multímetro"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o principal benefício do alicate amperímetro?",
             "options": [
-                "Maior precisão que multímetro",
                 "Não precisa interromper o circuito",
-                "Mede tensão e corrente",
-                "Funciona sem bateria"
+                "Funciona sem bateria",
+                "Maior precisão que multímetro",
+                "Mede tensão e corrente"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Não precisa interromper o circuito. Em instrumentos e medição (“Alicate Amperímetro e Teste de Corrente”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a limitação principal do alicate amperímetro?",
             "options": [
-                "Não mede correntes muito baixas (< 0.1A)",
                 "Não funciona em circuitos de alta tensão",
                 "Precisa de calibração frequente",
+                "Não mede correntes muito baixas (< 0.1A)",
                 "Só mede corrente alternada"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: Não mede correntes muito baixas (< 0.1A). HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Quando você deve preferir o multímetro em série sobre o alicate amperímetro?",
             "options": [
-                "Para medir correntes muito baixas",
                 "Para medir correntes muito altas",
+                "Para medições rápidas",
                 "Para medir em espaços apertados",
-                "Para medições rápidas"
+                "Para medir correntes muito baixas"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Para medir correntes muito baixas. Em instrumentos e medição (“Alicate Amperímetro e Teste de Corrente”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

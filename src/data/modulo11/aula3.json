@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sensor", "Tipo", "Faixa Típica", "Função"],
+            "headers": [
+                "Sensor",
+                "Tipo",
+                "Faixa Típica",
+                "Função"
+            ],
             "rows": [
-                ["Pressostato Baixa", "Discreto ON/OFF", "20-25 PSI", "Proteção contra falta de gás"],
-                ["Pressostato Alta", "Discreto ON/OFF", "250-300 PSI", "Proteção contra excesso"],
-                ["Transdutor", "Analógico 0-5V", "0-500 PSI", "Controle preciso e diagnóstico"],
-                ["Sensor Trinary", "Três estágios", "Baixa/Média/Alta", "Controle de ventilador"]
+                [
+                    "Pressostato Baixa",
+                    "Discreto ON/OFF",
+                    "20-25 PSI",
+                    "Proteção contra falta de gás"
+                ],
+                [
+                    "Pressostato Alta",
+                    "Discreto ON/OFF",
+                    "250-300 PSI",
+                    "Proteção contra excesso"
+                ],
+                [
+                    "Transdutor",
+                    "Analógico 0-5V",
+                    "0-500 PSI",
+                    "Controle preciso e diagnóstico"
+                ],
+                [
+                    "Sensor Trinary",
+                    "Três estágios",
+                    "Baixa/Média/Alta",
+                    "Controle de ventilador"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Use manifold para verificar pressões reais e comparar com leituras dos sensores. Diferenças indicam sensor defeituoso."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Sensores de Pressão do Refrigerante”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise de Pressão"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a função principal do pressostato de baixa pressão?",
             "options": [
-                "Controlar velocidade do ventilador",
-                "Proteger compressor contra falta de refrigerante",
+                "Medir umidade do ar",
                 "Ajustar temperatura da cabine",
-                "Medir umidade do ar"
+                "Controlar velocidade do ventilador",
+                "Proteger compressor contra falta de refrigerante"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Proteger compressor contra falta de refrigerante. Em A/C automotivo elétrico (“Sensores de Pressão do Refrigerante”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Em que pressão o pressostato de alta geralmente desliga o compressor?",
             "options": [
+                "400-500 PSI",
                 "50-100 PSI",
                 "100-150 PSI",
-                "250-300 PSI",
-                "400-500 PSI"
+                "250-300 PSI"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: 250-300 PSI. Em A/C automotivo elétrico (“Sensores de Pressão do Refrigerante”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a diferença entre pressostato e transdutor de pressão?",
             "options": [
+                "Não há diferença, são iguais",
                 "Pressostato é analógico, transdutor é digital",
                 "Pressostato é discreto ON/OFF, transdutor é analógico",
-                "Não há diferença, são iguais",
                 "Transdutor só funciona em alta pressão"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Pressostato é discreto ON/OFF, transdutor é analógico. Em A/C automotivo elétrico (“Sensores de Pressão do Refrigerante”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

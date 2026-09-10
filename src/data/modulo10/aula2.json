@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Sensor", "Função", "Falha Comum"],
+            "headers": [
+                "Sensor",
+                "Função",
+                "Falha Comum"
+            ],
             "rows": [
-                ["Sensor de Yaw", "Detecta rotação do veículo", "Calibração incorreta"],
-                ["Acelerômetro", "Mede aceleração lateral", "Sensibilidade reduzida"],
-                ["Sensor Ângulo Volante", "Intenção do motorista", "Desalinhamento"],
-                ["Sensores de Roda", "Velocidade individual", "Sujeira, dano"]
+                [
+                    "Sensor de Yaw",
+                    "Detecta rotação do veículo",
+                    "Calibração incorreta"
+                ],
+                [
+                    "Acelerômetro",
+                    "Mede aceleração lateral",
+                    "Sensibilidade reduzida"
+                ],
+                [
+                    "Sensor Ângulo Volante",
+                    "Intenção do motorista",
+                    "Desalinhamento"
+                ],
+                [
+                    "Sensores de Roda",
+                    "Velocidade individual",
+                    "Sujeira, dano"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "ESP pode ser desativado parcialmente (tração apenas) ou completamente (off) para condições específicas como neve profunda ou areia."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança ativa/passiva aplicado a “ESP/ESC - Controle de Estabilidade”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Airbag e pretensionador: zero improvisação. Use procedimentos OEM, ferramentas adequadas e desarme conforme manual. Diagnóstico elétrico com respeito a squibs. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sistema",
+                "Cuidado",
+                "Abordagem"
+            ],
+            "rows": [
+                [
+                    "Airbag",
+                    "Energia residual",
+                    "Espera/desarme OEM"
+                ],
+                [
+                    "ABS/ESP",
+                    "Módulo + sensores roda",
+                    "Power/rede/sinal"
+                ],
+                [
+                    "Cinto/pré",
+                    "Pirotécnico",
+                    "Não ohm sem método"
+                ],
+                [
+                    "ADAS",
+                    "Calibração",
+                    "Após geometria/vidro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Medir squib “no chute”; alimentar módulo errado; ignorar DTCs de comunicação."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "SSE/procedimento",
+                "Scanner adequado",
+                "Não pular etapas de segurança"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sinais ESP"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sensor detecta se o veículo está girando em torno do eixo vertical?",
             "options": [
-                "Sensor de roda",
-                "Sensor de yaw",
                 "Acelerômetro",
-                "Sensor MAP"
+                "Sensor MAP",
+                "Sensor de yaw",
+                "Sensor de roda"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Sensor de yaw. Em segurança ativa/passiva (“ESP/ESC - Controle de Estabilidade”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do sistema de controle de estabilidade (ESC)?",
             "options": [
+                "Controlar apenas a direção",
                 "Aumentar a velocidade máxima",
-                "Prevenir perda de tração e derrapagens",
                 "Melhorar o consumo de combustível",
-                "Controlar apenas a direção"
+                "Prevenir perda de tração e derrapagens"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Prevenir perda de tração e derrapagens. Em segurança ativa/passiva (“ESP/ESC - Controle de Estabilidade”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como o ESC atua quando detecta uma derrapagem?",
             "options": [
-                "Apenas acelera o motor",
                 "Aplica freios individualmente e reduz potência",
-                "Desliga todos os freios",
-                "Aumenta a pressão dos pneus"
+                "Apenas acelera o motor",
+                "Aumenta a pressão dos pneus",
+                "Desliga todos os freios"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Aplica freios individualmente e reduz potência. Em segurança ativa/passiva (“ESP/ESC - Controle de Estabilidade”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -75,60 +75,124 @@
             "value": "Para estimar rapidamente a corrente de um acessório de 12V, divida a potência (W) por 12. Ex: um amplificador de 300W puxará cerca de 25A. Isso ajuda a escolher fusível e cabo."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Potência Elétrica (Watts)”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "quiz",
             "question": "O que a potência elétrica (em watts) representa em um circuito?",
             "options": [
-                "A força que empurra os elétrons (tensão)",
-                "O fluxo de elétrons através do condutor",
-                "A quantidade de energia consumida ou transformada por segundo",
+                "A capacidade de armazenar carga elétrica",
                 "A oposição à passagem da corrente",
-                "A capacidade de armazenar carga elétrica"
+                "A quantidade de energia consumida ou transformada por segundo",
+                "A força que empurra os elétrons (tensão)",
+                "O fluxo de elétrons através do condutor"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: A quantidade de energia consumida ou transformada por segundo. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Você vai instalar um compressor de ar de 180W em um carro (12V). Qual a corrente aproximada que ele consumirá?",
             "options": [
-                "1,5 A",
-                "7,5 A",
                 "15 A",
                 "21,6 A",
-                "180 A"
+                "180 A",
+                "1,5 A",
+                "7,5 A"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 15 A. Em fundamentos elétricos (“Potência Elétrica (Watts)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Você calculou que um circuito consumirá 12A contínuos. Qual fusível é o mais adequado para proteger esse circuito?",
             "options": [
-                "10 A",
                 "15 A",
+                "30 A",
                 "20 A",
-                "12 A",
-                "30 A"
+                "10 A",
+                "12 A"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 15 A. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         },
         {
             "type": "simulator",
-            "name": "PowerSimulator",
+            "name": "PowerCalculator",
             "config": {
-                "title": "Simulador de Potência – Corrente e Fusível",
-                "defaultPower": 110,
-                "defaultVoltage": 12
+                "title": "Calculadora de potência (W = V × I)"
             }
         },
         {
             "type": "simulator",
             "name": "PowerCalculator",
             "config": {
-                "title": "Calculadora de Potência",
-                "modes": [
-                    "calcularP",
-                    "calcularI",
-                    "calcularV"
-                ]
+                "title": "Calculadora de potência (W = V × I)"
             }
         }
     ]

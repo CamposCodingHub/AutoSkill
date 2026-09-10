@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Sintoma", "Causa Provável", "Teste"],
+            "headers": [
+                "Sintoma",
+                "Causa Provável",
+                "Teste"
+            ],
             "rows": [
-                ["U0001 - Bus Off", "Excesso de erros", "Verificar terminações"],
-                ["U0002 - Sem Comunicação", "Circuito aberto", "Testar continuidade"],
-                ["U0073 - Módulo Off", "Módulo defeituoso", "Testar alimentação"],
-                ["Comunicação Lenta", "Resistência alta", "Medir terminação"]
+                [
+                    "U0001 - Bus Off",
+                    "Excesso de erros",
+                    "Verificar terminações"
+                ],
+                [
+                    "U0002 - Sem Comunicação",
+                    "Circuito aberto",
+                    "Testar continuidade"
+                ],
+                [
+                    "U0073 - Módulo Off",
+                    "Módulo defeituoso",
+                    "Testar alimentação"
+                ],
+                [
+                    "Comunicação Lenta",
+                    "Resistência alta",
+                    "Medir terminação"
+                ]
             ]
         },
         {
@@ -36,44 +56,114 @@
             "value": "Use osciloscópio para verificar ruído, reflexões e amplitude dos sinais. Sinais distorcidos indicam problemas físicos na rede."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar redes CAN/LIN/diagnóstico aplicado a “Diagnóstico de Redes CAN”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem comunicação: IG off, ohms CAN-H↔L (~60 Ω com duas terminações). 120 Ω ≈ uma terminação; ~0 Ω curto; OL aberto. Aftermarket na rede é suspeito clássico. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Leitura",
+                "Significado usual",
+                "Próximo passo"
+            ],
+            "rows": [
+                [
+                    "~60 Ω",
+                    "Duas terminações",
+                    "Checar níveis/alimentação"
+                ],
+                [
+                    "~120 Ω",
+                    "Falta uma terminação",
+                    "Achar módulo/resistor aberto"
+                ],
+                [
+                    "~0 Ω",
+                    "Curto H-L",
+                    "Isolar trechos"
+                ],
+                [
+                    "OL",
+                    "Aberto / desconectado",
+                    "Conector/DLC/chicote"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Reflashar tudo antes de medir ohms/alimentação; emendar CAN sem diagrama."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Medir terminação",
+                "Power/gnd do módulo offline",
+                "Inspecionar acessórios"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CANBusSimulator",
             "config": {
-                "title": "Análise de Sinais CAN"
+                "title": "Rede CAN — terminação e níveis"
             }
         },
         {
             "type": "quiz",
             "question": "O que significa o código U0001 em redes CAN?",
             "options": [
-                "Alta tensão na rede",
                 "Módulo em modo bus off",
+                "Comunicação normal",
                 "Resistência baixa",
-                "Comunicação normal"
+                "Alta tensão na rede"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Módulo em modo bus off. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal causa de um módulo entrar em modo bus off?",
             "options": [
+                "Bateria fraca",
                 "Consumo excessivo de combustível",
-                "Excesso de erros de comunicação ou ruído na rede",
                 "Temperatura alta do motor",
-                "Bateria fraca"
+                "Excesso de erros de comunicação ou ruído na rede"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Excesso de erros de comunicação ou ruído na rede. Em redes CAN/LIN/diagnóstico (“Diagnóstico de Redes CAN”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como você recupera um módulo em modo bus off?",
             "options": [
-                "Desconectando e reconectando a bateria",
                 "Apenas apagando os códigos com scanner",
-                "Corrigindo o problema raiz e ciclando a ignição",
-                "Substituindo o módulo imediatamente"
+                "Substituindo o módulo imediatamente",
+                "Desconectando e reconectando a bateria",
+                "Corrigindo o problema raiz e ciclando a ignição"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Corrigindo o problema raiz e ciclando a ignição. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

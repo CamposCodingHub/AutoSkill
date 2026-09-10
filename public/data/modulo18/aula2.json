@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tecnologia", "Função", "Aplicação"],
+            "headers": [
+                "Tecnologia",
+                "Função",
+                "Aplicação"
+            ],
             "rows": [
-                ["GPS", "Posicionamento global", "Localização em tempo real"],
-                ["GSM/GPRS", "Comunicação celular", "Envio de dados para servidor"],
-                ["WiFi", "Posicionamento indoor", "Backup em garagens"],
-                ["GLONASS", "Sistema russo", "Backup adicional"],
-                ["Galileo", "Sistema europeu", "Precisão melhorada"]
+                [
+                    "GPS",
+                    "Posicionamento global",
+                    "Localização em tempo real"
+                ],
+                [
+                    "GSM/GPRS",
+                    "Comunicação celular",
+                    "Envio de dados para servidor"
+                ],
+                [
+                    "WiFi",
+                    "Posicionamento indoor",
+                    "Backup em garagens"
+                ],
+                [
+                    "GLONASS",
+                    "Sistema russo",
+                    "Backup adicional"
+                ],
+                [
+                    "Galileo",
+                    "Sistema europeu",
+                    "Precisão melhorada"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Garantem operação por 24-48 horas sem alimentação do veículo. Essencial para rastreamento em caso de roubo."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar alarme / rastreador / segurança aplicado a “Sistemas de Rastreamento GPS”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Instalação invasiva é causa nº1 de parasita e U-codes. Documente pontos de emenda e meça consumo após sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma pós-instação",
+                "Suspeita",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Bateria morre",
+                    "B+ errado / módulo acordado",
+                    "Parasita + diagrama"
+                ],
+                [
+                    "Sem com",
+                    "Emenda CAN",
+                    "Ohms/rede"
+                ],
+                [
+                    "No-start",
+                    "IMMO/corte combustível",
+                    "Scanner + fiação"
+                ],
+                [
+                    "Ruído rádio",
+                    "Massa/alimentação",
+                    "Refazer terra"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Cortar chicote original sem identificação; alimentar sirene em circuito crítico."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Plano de instalação",
+                "Fusível dedicado",
+                "Teste de sleep"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistema GPS"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Quantos satélites são necessários para posicionamento 3D?",
             "options": [
-                "2 satélites",
                 "3 satélites",
                 "4 satélites",
-                "6 satélites"
+                "6 satélites",
+                "2 satélites"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 4 satélites. Em alarme / rastreador / segurança (“Sistemas de Rastreamento GPS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a precisão típica do GPS em veículos?",
             "options": [
-                "1-2 metros",
-                "3-10 metros",
+                "1-2 quilômetros",
                 "50-100 metros",
-                "1-2 quilômetros"
+                "1-2 metros",
+                "3-10 metros"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 3-10 metros. Em alarme / rastreador / segurança (“Sistemas de Rastreamento GPS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que é geofencing em sistemas de rastreamento?",
             "options": [
+                "Protocolo de comunicação",
                 "Tipo de antena",
                 "Cercas virtuais para alertas de entrada/saída",
-                "Tipo de bateria",
-                "Protocolo de comunicação"
+                "Tipo de bateria"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Cercas virtuais para alertas de entrada/saída. Em alarme / rastreador / segurança (“Sistemas de Rastreamento GPS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

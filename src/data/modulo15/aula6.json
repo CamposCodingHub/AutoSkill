@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Carregamento", "Potência", "Tempo 0-80%", "Aplicação"],
+            "headers": [
+                "Carregamento",
+                "Potência",
+                "Tempo 0-80%",
+                "Aplicação"
+            ],
             "rows": [
-                ["Level 1 AC", "1.2-3.3kW", "8-20 horas", "Doméstico 120V"],
-                ["Level 2 AC", "3.3-22kW", "4-8 horas", "Residencial/Trabalho"],
-                ["DC Fast", "50-350kW", "20-40 min", "Estações públicas"],
-                ["Regeneração", "10-60kW", "Contínuo", "Frenagem/desaceleração"]
+                [
+                    "Level 1 AC",
+                    "1.2-3.3kW",
+                    "8-20 horas",
+                    "Doméstico 120V"
+                ],
+                [
+                    "Level 2 AC",
+                    "3.3-22kW",
+                    "4-8 horas",
+                    "Residencial/Trabalho"
+                ],
+                [
+                    "DC Fast",
+                    "50-350kW",
+                    "20-40 min",
+                    "Estações públicas"
+                ],
+                [
+                    "Regeneração",
+                    "10-60kW",
+                    "Contínuo",
+                    "Frenagem/desaceleração"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Carregamento rápido gera calor significativo. Requer sistemas de refrigeração ativa para proteger baterias."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar HV / híbridos / BEV aplicado a “Carregamento e Sistemas de Recuperação”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem PPE + service plug/LOTO + verificação 0 V conforme OEM, não há serviço. 12 V auxiliar fraca impede READY. Isolation fault exige fluxo do fabricante. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Etapa",
+                "Obrigatório",
+                "Por quê"
+            ],
+            "rows": [
+                [
+                    "PPE",
+                    "Classe adequada",
+                    "Arco/choque"
+                ],
+                [
+                    "LOTO",
+                    "Service plug",
+                    "Isolar pack"
+                ],
+                [
+                    "0 V",
+                    "Medir pontos OEM",
+                    "Energia residual"
+                ],
+                [
+                    "12 V aux",
+                    "Estável",
+                    "Contatores"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir capa laranja por curiosidade; saltar interlock."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Treinamento/autorização",
+                "PPE",
+                "Procedimento OEM completo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Carregamento"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente converte AC da rede em DC para carregar baterias?",
             "options": [
-                "Inversor",
                 "DC-DC Converter",
                 "On-Board Charger (OBC)",
-                "BMS"
+                "BMS",
+                "Inversor"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: On-Board Charger (OBC). Em HV / híbridos / BEV (“Carregamento e Sistemas de Recuperação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a potência típica de carregamento DC rápido?",
             "options": [
-                "1-3kW",
-                "10-20kW",
+                "500kW",
                 "50-350kW",
-                "500kW"
+                "1-3kW",
+                "10-20kW"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 50-350kW. Em HV / híbridos / BEV (“Carregamento e Sistemas de Recuperação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Quanta energia pode ser recuperada durante frenagem regenerativa?",
             "options": [
-                "1-5%",
                 "10-30%",
-                "50-70%",
-                "90-100%"
+                "1-5%",
+                "90-100%",
+                "50-70%"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 10-30%. Em HV / híbridos / BEV (“Carregamento e Sistemas de Recuperação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

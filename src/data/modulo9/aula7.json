@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Ferramenta", "Protocolo", "Aplicação"],
+            "headers": [
+                "Ferramenta",
+                "Protocolo",
+                "Aplicação"
+            ],
             "rows": [
-                ["OEM Scanner", "CAN/ISO9141", "Atualizações oficiais"],
-                ["J2534", "Múltiplos", "Reparos independentes"],
-                ["Bench Flasher", "Bootloader", "Performance tuning"],
-                ["OBD-II Programmer", "CAN", "Calibrações básicas"]
+                [
+                    "OEM Scanner",
+                    "CAN/ISO9141",
+                    "Atualizações oficiais"
+                ],
+                [
+                    "J2534",
+                    "Múltiplos",
+                    "Reparos independentes"
+                ],
+                [
+                    "Bench Flasher",
+                    "Bootloader",
+                    "Performance tuning"
+                ],
+                [
+                    "OBD-II Programmer",
+                    "CAN",
+                    "Calibrações básicas"
+                ]
             ]
         },
         {
@@ -42,44 +62,115 @@
             "text": "Arquivos de calibração possuem checksum que deve ser recalculado após modificações para evitar erros de integridade."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Reprogramação e Flash”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Flash"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o requisito mínimo de voltagem da bateria para flash seguro da ECU?",
             "options": [
-                "11.0V",
-                "12.0V",
+                "13.8V",
                 "12.6V",
-                "13.8V"
+                "11.0V",
+                "12.0V"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: 12.6V. Em ECU e estratégias (“Reprogramação e Flash”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que é importante manter a voltagem estável durante o flash da ECU?",
             "options": [
+                "Para testar o alternador",
                 "Apenas para economizar bateria",
                 "Para evitar corrupção do software durante a programação",
-                "Para esquentar a ECU mais rápido",
-                "Para testar o alternador"
+                "Para esquentar a ECU mais rápido"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Para evitar corrupção do software durante a programação. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual equipamento é essencial para flash seguro de ECU?",
             "options": [
+                "Alicate amperímetro",
                 "Apenas um scanner básico",
                 "Fonte de alimentação estabilizada ou mantenedor de bateria",
-                "Alicate amperímetro",
                 "Osciloscópio"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Fonte de alimentação estabilizada ou mantenedor de bateria. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

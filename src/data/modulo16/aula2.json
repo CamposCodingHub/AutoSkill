@@ -1,106 +1,198 @@
 {
-  "id": 2,
-  "title": "Osciloscópio - Fundamentos e Aplicações",
-  "slug": "fundamentos-osciloscopio",
-  "content": [
-    {
-      "type": "text",
-      "value": "Para usar o osciloscópio efetivamente, você precisa entender seus fundamentos. A tela do osciloscópio mostra tensão no eixo Y e tempo no eixo X. Cada divisão vertical representa uma voltagem (volts/div) e cada divisão horizontal representa um período de tempo (tempo/div)."
-    },
-    {
-      "type": "callout",
-      "style": "tip",
-      "title": "Trigger - O Segredo do Osciloscópio",
-      "text": "O trigger é o que 'congela' a forma de onda na tela. Sem trigger, a imagem ficaria se movendo rapidamente. Ajuste o nível de trigger para um ponto estável do sinal para obter uma imagem clara."
-    },
-    {
-      "type": "text",
-      "value": "Em automóveis, os sinais mais comuns são: sinais analógicos de 0-5V (sensores), sinais PWM (atuadores), sinais digitais (comunicação), e sinais de alta tensão (ignição). Cada tipo requer configurações específicas do osciloscópio."
-    },
-    {
-      "type": "callout",
-      "style": "warning",
-      "title": "Atenção à Isolação",
-      "text": "Nunca conecte o terra do osciloscópio diretamente ao terra da bateria quando medir sinais flutuantes. Use sempre pontas de prova diferenciais ou isolação adequada para evitar curtos-circuitos."
-    }
-  ],
-  "table": {
-    "headers": ["Tipo de Sinal", "Faixa de Tensão", "Tempo/Div Recomendado", "Aplicação"],
-    "rows": [
-      ["Sensor MAP", "0-5V", "10-50ms", "Variação de pressão"],
-      ["Sensor TPS", "0.5-4.5V", "100-500ms", "Posição da borboleta"],
-      ["Sinal CKP", "0.5-50V", "2-10ms", "Rotação do motor"],
-      ["Injetor", "12V PWM", "1-5ms", "Pulso de injeção"],
-      ["Bobina Ignição", "200-400V", "1-5ms", "Faísca de ignição"]
+    "title": "Configuração: V/div, time/div e interpretação",
+    "content": [
+        {
+            "type": "text",
+            "value": "Objetivo: escolher volts/div e time/div de forma consciente e interpretar amplitude, período, duty cycle e anomalias (corte, ruído, atraso)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Regra prática de enquadramento",
+            "text": "O sinal deve ocupar cerca de 50–80% da altura da tela e mostrar pelo menos 2 ciclos completos. Se está minúsculo, baixe V/div; se só aparece um “risco”, aumente time/div."
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "Faixa típica",
+                "Time/div inicial",
+                "O que observar"
+            ],
+            "rows": [
+                [
+                    "MAP / TPS (0–5 V)",
+                    "0,5–4,5 V",
+                    "50–200 ms",
+                    "Transições suaves; drops; alimentação 5 V estável"
+                ],
+                [
+                    "CKP indutivo",
+                    "centenas mV a alguns V AC",
+                    "2–10 ms",
+                    "Simetria, gap de dente, perda de pulsos"
+                ],
+                [
+                    "Injetor (comando)",
+                    "12 V → ~0–2 V no pulso",
+                    "1–5 ms",
+                    "Tempo de abertura, ausência de pulso, bounce"
+                ],
+                [
+                    "Sonda O2 zirconia",
+                    "0,1–0,9 V comutando",
+                    "200–500 ms",
+                    "Frequência de comutação; sinal lazy/flat"
+                ],
+                [
+                    "Alimentação / ripple",
+                    "12–14 V + ripple",
+                    "1–10 ms",
+                    "Diodo aberto → ripple excessivo"
+                ]
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Duty cycle (ciclo de trabalho) em PWM: percentual do tempo em que o sinal está no estado ativo. Em ventoinhas, solenoides e alguns reles de estado sólido, duty errado ou frequência ausente explica sintoma mesmo com “12 V na alimentação”."
+        },
+        {
+            "type": "callout",
+            "style": "warning",
+            "title": "Alta tensão de ignição",
+            "text": "Secundário de ignição exige atenuador/probe específico. Nunca conecte ponta comum de 10:1 diretamente esperando medir kV. Procedimento e EPI conforme o equipamento."
+        },
+        {
+            "type": "list",
+            "items": [
+                "Anote a escala (V/div × divisões = amplitude).",
+                "Período T → frequência f = 1/T (útil em CKP/CMP vs RPM).",
+                "Compare canal 1 (sensor) com canal 2 (comando/alimentação) quando o sintoma for correlação.",
+                "Salve a captura com identificação do veículo, ponto de medição e condição."
+            ],
+            "ordered": true
+        },
+        {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Configuração: V/div, time/div e interpretação”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
+            "type": "simulator",
+            "name": "ScopeWaveformSimulator",
+            "config": {
+                "title": "Treino de reconhecimento de padrões"
+            }
+        },
+        {
+            "type": "quiz",
+            "question": "Um sinal de 0–5 V aparece como uma linha quase plana no meio da tela. O que fazer primeiro?",
+            "options": [
+                "Aumentar muito o time/div para 10 s",
+                "Reduzir volts/div (mais sensibilidade) e verificar se o sensor realmente varia",
+                "Medir resistência com o circuito energizado",
+                "Desconectar a bateria e medir ohms na ECU"
+            ],
+            "correct": 1,
+            "explanation": "Escala vertical grosseira esconde variação. Depois confirme se o mecânico/elétrico do sensor realmente muda."
+        },
+        {
+            "type": "quiz",
+            "question": "No comando de injetor ground-side, o que normalmente se espera durante o pulso de abertura?",
+            "options": [
+                "Tensão presa em 0 V o tempo todo sem pulso",
+                "Queda de ~12 V para próximo de 0–2 V durante o tempo de injeção",
+                "Sinal senoidal de 50 Hz",
+                "Tensão de 400 V contínuos"
+            ],
+            "correct": 1,
+            "explanation": "A ECU comuta a massa; o fio de comando cai enquanto o injetor está energizado."
+        },
+        {
+            "type": "quiz",
+            "question": "Sonda lambda “lazy” tipicamente aparece no scope como:",
+            "options": [
+                "Comutação rápida 0,1↔0,9 V",
+                "Sinal quase plano em torno de 0,45–0,5 V",
+                "Onda quadrada de 12 V",
+                "Ausência total de massa no chassis"
+            ],
+            "correct": 1,
+            "explanation": "Sensor lento/envenenado ou aquecedor falho reduz a comutação — impacto em malha fechada e emissões."
+        },
+        {
+            "type": "quiz",
+            "question": "Para correlacionar “sensor vs comando”, a prática profissional é:",
+            "options": [
+                "Usar apenas o scanner e nunca o scope",
+                "Usar dois canais e capturar ambos na mesma condição do sintoma",
+                "Medir só continuidade do chicote com IG on",
+                "Trocar as duas peças ao mesmo tempo"
+            ],
+            "correct": 1,
+            "explanation": "A correlação temporal entre canais revela atraso, falta de comando ou sensor que não responde."
+        }
     ]
-  },
-  "simulator": {
-    "type": "WaveformAnalyzer",
-    "title": "Analisador de Formas de Onda",
-    "description": "Selecione diferentes tipos de sinais automotivos para análise",
-    "controls": [
-      {
-        "label": "Tipo de Sinal",
-        "type": "select",
-        "options": ["Senoidal", "Quadrada", "Triangular", "Dente de Serra", "PWM"],
-        "default": "Senoidal"
-      },
-      {
-        "label": "Frequência (Hz)",
-        "type": "range",
-        "min": 1,
-        "max": 1000,
-        "default": 50,
-        "unit": "Hz"
-      },
-      {
-        "label": "Amplitude (V)",
-        "type": "range",
-        "min": 0.5,
-        "max": 50,
-        "default": 5,
-        "unit": "V"
-      },
-      {
-        "label": "Duty Cycle (%)",
-        "type": "range",
-        "min": 10,
-        "max": 90,
-        "default": 50,
-        "unit": "%"
-      }
-    ]
-  },
-  "quiz": {
-    "question": "O que acontece se você configurar o tempo/div muito alto para medir um sinal rápido?",
-    "options": [
-      "O sinal aparecerá muito comprimido na tela",
-      "O sinal aparecerá muito alongado na tela",
-      "O osciloscópio não funcionará",
-      "O sinal desaparecerá completamente"
-    ],
-    "correct": 0
-  },
-  "quizzes": [
-    {
-      "question": "O que o trigger faz no osciloscópio?",
-      "options": [
-        "Aumenta a voltagem",
-        "'Congela' a forma de onda na tela",
-        "Desliga o equipamento",
-        "Reduz o ruído"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "Qual é a faixa de tensão típica de sinais de sensores automotivos?",
-      "options": [
-        "0-1V",
-        "0-5V",
-        "12-24V",
-        "100-200V"
-      ],
-      "correct": 1
-    }
-  ]
 }

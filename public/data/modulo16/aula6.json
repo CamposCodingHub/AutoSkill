@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Técnica", "Aplicação", "Configuração"],
+            "headers": [
+                "Técnica",
+                "Aplicação",
+                "Configuração"
+            ],
             "rows": [
-                ["Single Capture", "Eventos únicos", "Trigger normal, single sweep"],
-                ["Roll Mode", "Sinais muito lentos", "Sem trigger, time base longa"],
-                ["Segmented Memory", "Eventos múltiplos", "Trigger rápido, memória segmentada"],
-                ["FFT Analysis", "Análise de frequência", "Math function FFT"],
-                ["XY Mode", "Comparação de sinais", "Dois canais, X-Y display"]
+                [
+                    "Single Capture",
+                    "Eventos únicos",
+                    "Trigger normal, single sweep"
+                ],
+                [
+                    "Roll Mode",
+                    "Sinais muito lentos",
+                    "Sem trigger, time base longa"
+                ],
+                [
+                    "Segmented Memory",
+                    "Eventos múltiplos",
+                    "Trigger rápido, memória segmentada"
+                ],
+                [
+                    "FFT Analysis",
+                    "Análise de frequência",
+                    "Math function FFT"
+                ],
+                [
+                    "XY Mode",
+                    "Comparação de sinais",
+                    "Dois canais, X-Y display"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Osciloscópios modernos podem decodificar protocolos seriais como UART, SPI, I2C, e CAN para análise detalhada."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Técnicas Avançadas de Captura”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Técnicas de Captura Avançadas"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual modo usar para analisar sinais muito lentos como temperatura?",
             "options": [
-                "Normal trigger",
                 "Single capture",
+                "FFT analysis",
                 "Roll mode",
-                "FFT analysis"
+                "Normal trigger"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Roll mode. Em osciloscópio e formas de onda (“Técnicas Avançadas de Captura”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual técnica reduz ruído em sinais repetitivos?",
             "options": [
-                "Aumentar a voltagem",
-                "Averaging de múltiplas capturas",
                 "Usar trigger automático",
-                "Desligar o osciloscópio"
+                "Aumentar a voltagem",
+                "Desligar o osciloscópio",
+                "Averaging de múltiplas capturas"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Averaging de múltiplas capturas. Em osciloscópio e formas de onda (“Técnicas Avançadas de Captura”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Para que serve a memória segmentada (Segmented Memory)?",
             "options": [
-                "Para economizar bateria",
                 "Para capturar eventos múltiplos",
-                "Para aumentar a resolução",
-                "Para reduzir o tamanho do arquivo"
+                "Para reduzir o tamanho do arquivo",
+                "Para economizar bateria",
+                "Para aumentar a resolução"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para capturar eventos múltiplos. Em osciloscópio e formas de onda (“Técnicas Avançadas de Captura”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Tecnologia", "Vantagens"],
+            "headers": [
+                "Tipo",
+                "Tecnologia",
+                "Vantagens"
+            ],
             "rows": [
-                ["Mecânico", "Contato físico", "Simples, robusto"],
-                ["Eletrônico", "Transistor/MOSFET", "Preciso, eficiente"],
-                ["Inteligente", "Microcontrolador", "Adaptativo, comunicação"],
-                ["Multifase", "Múltiplos estágios", "Alta corrente"]
+                [
+                    "Mecânico",
+                    "Contato físico",
+                    "Simples, robusto"
+                ],
+                [
+                    "Eletrônico",
+                    "Transistor/MOSFET",
+                    "Preciso, eficiente"
+                ],
+                [
+                    "Inteligente",
+                    "Microcontrolador",
+                    "Adaptativo, comunicação"
+                ],
+                [
+                    "Multifase",
+                    "Múltiplos estágios",
+                    "Alta corrente"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Reguladores modernos comunicam com sistemas de gerenciamento de bateria para otimizar carga."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar partida e carga aplicado a “Regulador de Tensão”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "No-crank: tensão repouso + crank + VD cabos + corrente. Carga: 13,8–14,5 V típico com motor ligado (OEM). Parasita depois do sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Teste",
+                "Alvo típico*",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Repouso",
+                    "~12,4–12,7 V",
+                    "Estado de carga"
+                ],
+                [
+                    "Crank",
+                    "Não colapsar demais",
+                    "CCA/cabos"
+                ],
+                [
+                    "Carga",
+                    "~13,8–14,5 V",
+                    "Alternador/regulador"
+                ],
+                [
+                    "Parasita",
+                    "OEM (muitos <50–100 mA)",
+                    "Fuga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar arranque sem VD; trocar alternador com 14 V na bateria e luz acesa (circuito da lâmpada)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Números anotados",
+                "Cabos/terminais",
+                "Validar após carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "VoltageDropSimulator",
             "config": {
-                "title": "Análise de Regulador de Tensão"
+                "title": "Queda de tensão sob carga"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a faixa normal de tensão regulada pelo alternador?",
             "options": [
+                "10.5-11.5V",
                 "12.0-12.6V",
                 "13.8-14.8V",
-                "15.0-16.0V",
-                "10.5-11.5V"
+                "15.0-16.0V"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 13.8-14.8V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia usam reguladores modernos para maior eficiência?",
             "options": [
+                "Contato mecânico",
                 "Transistores bipolares",
                 "Transistores MOSFET",
-                "Contato mecânico",
                 "Relés"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Transistores MOSFET. Separe bobina (85/86) de contato (30/87). Click ≠ passagem de potência."
         },
         {
             "type": "quiz",
             "question": "Qual sintoma indica falha do regulador de tensão?",
             "options": [
-                "Sobrecarga (>15V) ou subcarga (<13V)",
-                "Motor funcionando perfeitamente",
                 "Bateria sempre carregada",
-                "Não há sintomas"
+                "Não há sintomas",
+                "Motor funcionando perfeitamente",
+                "Sobrecarga (>15V) ou subcarga (<13V)"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Sobrecarga (>15V) ou subcarga (<13V). Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         }
     ]
 }

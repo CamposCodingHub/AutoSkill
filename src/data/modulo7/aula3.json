@@ -17,10 +17,25 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Fios", "Controle", "Características"],
+            "headers": [
+                "Tipo",
+                "Fios",
+                "Controle",
+                "Características"
+            ],
             "rows": [
-                ["Motor de Passo", "4-6 fios", "Sequência de passos", "Movimento preciso em etapas"],
-                ["Rotativa PWM", "2 fios", "Modulação por largura de pulso", "Controle proporcional contínuo"]
+                [
+                    "Motor de Passo",
+                    "4-6 fios",
+                    "Sequência de passos",
+                    "Movimento preciso em etapas"
+                ],
+                [
+                    "Rotativa PWM",
+                    "2 fios",
+                    "Modulação por largura de pulso",
+                    "Controle proporcional contínuo"
+                ]
             ]
         },
         {
@@ -53,44 +68,114 @@
             "text": "Em muitos veículos antigos, perder memória de adaptação de IAC exige procedimento de relearn - não assuma defeito imediato."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar atuadores aplicado a “Válvula IAC / IACV - Ar de Marcha Lenta”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Separe falha de comando (ECU/driver) de falha de potência (fusível/relé/massa) e de falha do próprio atuador. Clique de relé não prova corrente na carga. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Atuador",
+                "Prova",
+                "Armadilha"
+            ],
+            "rows": [
+                [
+                    "Injetor",
+                    "Pulso + resistência isolada",
+                    "Medir ohms energizado"
+                ],
+                [
+                    "Bobina",
+                    "Comando + primary/secondary",
+                    "Cabo/estalo enganoso"
+                ],
+                [
+                    "Solenoide",
+                    "Alimentação + massa comutada",
+                    "Só bip de continuidade"
+                ],
+                [
+                    "Motor DC",
+                    "Corrente + VD",
+                    "Bind mecânico parece elétrico"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Condenar ECU sem provar alimentação/massa/sinal no conector do atuador."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de pinos",
+                "Medir comando e potência",
+                "Validar após reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Cálculo de Consumo IAC"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "IAC do tipo motor de passo é controlado principalmente por:",
             "options": [
+                "Apenas o sensor de oxigênio, sem ECU",
                 "Um único fio de massa contínua",
-                "Sequência de excitação nas bobinas do motor em passos",
                 "Tensão fixa de 100V",
-                "Apenas o sensor de oxigênio, sem ECU"
+                "Sequência de excitação nas bobinas do motor em passos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Sequência de excitação nas bobinas do motor em passos. Massa ruim aparece como VD elevado sob carga entre o ponto e o − da bateria."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do IAC (Idle Air Control)?",
             "options": [
-                "Controlar a pressão do combustível",
                 "Regular a rotação de marcha lenta",
-                "Controlar a temperatura do motor",
-                "Regular a pressão do óleo"
+                "Controlar a pressão do combustível",
+                "Regular a pressão do óleo",
+                "Controlar a temperatura do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Regular a rotação de marcha lenta. Em atuadores (“Válvula IAC / IACV - Ar de Marcha Lenta”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que acontece se o IAC falhar na posição fechada?",
             "options": [
-                "O motor superaquece",
                 "O motor pode morrer em marcha lenta",
                 "O consumo de combustível aumenta",
+                "O motor superaquece",
                 "A pressão do combustível cai"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: O motor pode morrer em marcha lenta. Em atuadores (“Válvula IAC / IACV - Ar de Marcha Lenta”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

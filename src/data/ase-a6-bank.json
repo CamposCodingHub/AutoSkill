@@ -1,0 +1,702 @@
+[
+  {
+    "id": "a6-a01",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Queda de 1,8 V no cabo positivo do farol sob carga. Interpretação?",
+    "options": [
+      "Normal",
+      "Alta resistência no positivo",
+      "Curto à massa",
+      "Bateria em 0 V"
+    ],
+    "correct": 1,
+    "explanation": "VD elevado sob carga = resistência indesejada."
+  },
+  {
+    "id": "a6-a02",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Antes de medir ohms em circuito instalado?",
+    "options": [
+      "IG ON",
+      "Desenergizar/isolar",
+      "Escala 10A na bateria",
+      "Inverter CAN"
+    ],
+    "correct": 1,
+    "explanation": "Ohms só com circuito morto."
+  },
+  {
+    "id": "a6-a03",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "12,4 V no positivo da lâmpada e 12,3 V no pino de massa vs chassis. Conclusão?",
+    "options": [
+      "Lâmpada ok",
+      "Massa aberta/alta R",
+      "ABS em curto",
+      "Curto alimentação-sinal"
+    ],
+    "correct": 1,
+    "explanation": "Tensão alta no pino de massa indica retorno ruim."
+  },
+  {
+    "id": "a6-a04",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Resistor 3 Ω em 12 V. Corrente aproximada?",
+    "options": [
+      "0,25 A",
+      "4 A",
+      "36 A",
+      "1 A"
+    ],
+    "correct": 1,
+    "explanation": "I=V/R=4 A."
+  },
+  {
+    "id": "a6-a05",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Melhor teste para fio que bipa mas falha sob carga?",
+    "options": [
+      "Só continuidade",
+      "Voltage drop sob carga",
+      "Ohms com IG ON",
+      "Aumentar fusível"
+    ],
+    "correct": 1,
+    "explanation": "Continuidade a frio mente; VD sob carga revela."
+  },
+  {
+    "id": "a6-a06",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Referência preferencial da ponta preta ao medir volts?",
+    "options": [
+      "Parafuso enferrujado",
+      "Negativo da bateria / massa validada",
+      "CAN-H",
+      "Tampa do radiador"
+    ],
+    "correct": 1,
+    "explanation": "Massa ruim gera leitura falsa."
+  },
+  {
+    "id": "a6-a07",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Fusível queima ao ligar. Primeira atitude correta?",
+    "options": [
+      "Fusível maior",
+      "Isolar curto após o fusível",
+      "Trocar ECU",
+      "Amarrar fio"
+    ],
+    "correct": 1,
+    "explanation": "Aberto protege; ache o curto."
+  },
+  {
+    "id": "a6-a08",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "VD de massa sob carga = 0,05 V. Avaliação?",
+    "options": [
+      "Massa excelente",
+      "Curto",
+      "Alternador ruim",
+      "Fusível aberto"
+    ],
+    "correct": 0,
+    "explanation": "Queda tipicamente baixa = boa."
+  },
+  {
+    "id": "a6-a09",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Potência de lâmpada 55 W em 12 V. Corrente aprox.?",
+    "options": [
+      "0,2 A",
+      "4,6 A",
+      "55 A",
+      "12 A"
+    ],
+    "correct": 1,
+    "explanation": "I=P/V."
+  },
+  {
+    "id": "a6-a10",
+    "area": "A",
+    "areaName": "Elétrica geral",
+    "question": "Diagrama elétrico serve principalmente para?",
+    "options": [
+      "Decorar",
+      "Marcar power/gnd/sinal e pontos de medição",
+      "Substituir o DMM",
+      "Apagar DTC"
+    ],
+    "correct": 1,
+    "explanation": "Diagrama orienta a medição."
+  },
+  {
+    "id": "a6-b01",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Click no solenoide, corrente ~15 A, motor não gira. Suspeita?",
+    "options": [
+      "Contato/solenoide/motor aberto",
+      "Bateria perfeita com alta corrente",
+      "CAN bus-off",
+      "TPMS"
+    ],
+    "correct": 0,
+    "explanation": "Corrente baixa com click = potência aberta."
+  },
+  {
+    "id": "a6-b02",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Repouso 12,6 V; no crank cai a 6,5 V com corrente baixa. Foco?",
+    "options": [
+      "Alta R ou bateria sem capacidade",
+      "LIN",
+      "Sensor chuva",
+      "Freio"
+    ],
+    "correct": 0,
+    "explanation": "Queda extrema + corrente baixa."
+  },
+  {
+    "id": "a6-b03",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "CCA especificado 600, medido 280. Conclusão?",
+    "options": [
+      "Bateria boa",
+      "Bateria fraca sob carga",
+      "Só alternador",
+      "Só limpador"
+    ],
+    "correct": 1,
+    "explanation": "CCA baixo = comprometida."
+  },
+  {
+    "id": "a6-b04",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Durante partida 10,2 V e 320 A. Avaliação geral?",
+    "options": [
+      "Sem CCA",
+      "Cabo aberto",
+      "Solenoide aberto",
+      "Muitos motores gasolina saudáveis nessa faixa"
+    ],
+    "correct": 3,
+    "explanation": "Faixa comum de partida ok."
+  },
+  {
+    "id": "a6-b05",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Primeiro trio de testes no no-crank?",
+    "options": [
+      "Trocar arranque",
+      "Tensão repouso+crank e VD cabos",
+      "Apagar ABS",
+      "Medir estepe"
+    ],
+    "correct": 1,
+    "explanation": "Evidência antes da peça."
+  },
+  {
+    "id": "a6-b06",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Terminais oxidados na bateria causam principalmente?",
+    "options": [
+      "Aumento de CCA",
+      "Queda de tensão sob corrente alta",
+      "CAN a 0 Ω",
+      "LED mais forte"
+    ],
+    "correct": 1,
+    "explanation": "Resistência de contato."
+  },
+  {
+    "id": "a6-b07",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Partida lenta a frio com cabos quentes. Suspeita forte?",
+    "options": [
+      "Alta resistência nos cabos/terminais",
+      "Pressão do ar",
+      "TPMS",
+      "Óleo de freio"
+    ],
+    "correct": 0,
+    "explanation": "Aquecimento = I²R."
+  },
+  {
+    "id": "a6-b08",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Bateria nova e ainda no-crank. Próximo?",
+    "options": [
+      "Ignorar cabos",
+      "Medir VD positivo e massa sob tentativa",
+      "Só o rádio",
+      "Catalisador"
+    ],
+    "correct": 1,
+    "explanation": "Cabos/solenoide/arranque."
+  },
+  {
+    "id": "a6-b09",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Tensão em repouso 11,8 V. Indica tipicamente?",
+    "options": [
+      "Carga plena",
+      "Estado de carga baixo",
+      "Carga de 14,5 V",
+      "Terminação CAN"
+    ],
+    "correct": 1,
+    "explanation": "Abaixo de ~12,4 V carga baixa."
+  },
+  {
+    "id": "a6-b10",
+    "area": "B",
+    "areaName": "Bateria e partida",
+    "question": "Solenoide clicka, 12 V no 30 do contato, 0 V no 87.?",
+    "options": [
+      "Contato aberto",
+      "Bobina aberta",
+      "Bateria 0 V",
+      "FlexRay"
+    ],
+    "correct": 0,
+    "explanation": "Click=bobina; sem 87=contato."
+  },
+  {
+    "id": "a6-c01",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Motor 2000 rpm, 12,2 V na bateria. Foco?",
+    "options": [
+      "Sistema de carga",
+      "Estepe",
+      "Freio",
+      "Limpador só"
+    ],
+    "correct": 0,
+    "explanation": "Subcarga."
+  },
+  {
+    "id": "a6-c02",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Ripple AC 1,2 V RMS na bateria. Sugere?",
+    "options": [
+      "Diodos/retificador",
+      "CAN perfeita",
+      "Bateria nova só",
+      "MAP"
+    ],
+    "correct": 0,
+    "explanation": "Ripple alto."
+  },
+  {
+    "id": "a6-c03",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Carga 15,8 V. Risco?",
+    "options": [
+      "Sobrecarga/regulador alto",
+      "Só subcarga",
+      "Massa CAN",
+      "Nenhum"
+    ],
+    "correct": 0,
+    "explanation": "Sobretensão."
+  },
+  {
+    "id": "a6-c04",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Luz de carga acesa com 14,2 V na bateria. Próximo?",
+    "options": [
+      "Circuito da luz/excitação",
+      "Trocar bateria só",
+      "Compressão",
+      "Airbag"
+    ],
+    "correct": 0,
+    "explanation": "Carga ok, luz mente o circuito."
+  },
+  {
+    "id": "a6-c05",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "B+ alternador 14,3 V; bateria 13,1 V sob carga.?",
+    "options": [
+      "Queda no cabo B+",
+      "Perfeito",
+      "Curto H-L",
+      "CKP"
+    ],
+    "correct": 0,
+    "explanation": "Resistência no cabo de carga."
+  },
+  {
+    "id": "a6-c06",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Correia escorrega sob carga elétrica. Efeito?",
+    "options": [
+      "Tensão de carga cai",
+      "CAN some",
+      "16 V fixo",
+      "Injetor 100%"
+    ],
+    "correct": 0,
+    "explanation": "Menos rotação efetiva."
+  },
+  {
+    "id": "a6-c07",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Faixa típica de tensão de carga (muitos veículos)?",
+    "options": [
+      "9–10 V",
+      "13,8–14,5 V",
+      "16–18 V",
+      "5 V"
+    ],
+    "correct": 1,
+    "explanation": "Confirme OEM."
+  },
+  {
+    "id": "a6-c08",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Alternador com diodo aberto tipicamente causa?",
+    "options": [
+      "Ripple/subtensão",
+      "Terminação 60 Ω",
+      "CCA maior",
+      "LED azul"
+    ],
+    "correct": 0,
+    "explanation": "Retificação ruim."
+  },
+  {
+    "id": "a6-c09",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Antes de condenar o alternador, confirme?",
+    "options": [
+      "Correia, conexões B+/massa e excitação",
+      "Só o estepe",
+      "Pastilhas",
+      "Filtro cabine"
+    ],
+    "correct": 0,
+    "explanation": "Power path primeiro."
+  },
+  {
+    "id": "a6-c10",
+    "area": "C",
+    "areaName": "Sistema de carga",
+    "question": "Veículo descarrega em uso com faróis. Medir?",
+    "options": [
+      "Tensão de carga com consumidores ligados",
+      "Só ohms no limpador",
+      "Pressão pneu",
+      "TPMS"
+    ],
+    "correct": 0,
+    "explanation": "Carga sob demanda."
+  },
+  {
+    "id": "a6-d01",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Farol fraco só esquerdo. Hipótese produtiva?",
+    "options": [
+      "Alternador sempre",
+      "Alta R/massa desse circuito",
+      "Só rádio",
+      "TPMS"
+    ],
+    "correct": 1,
+    "explanation": "Unilateral."
+  },
+  {
+    "id": "a6-d02",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Seta esquerda fixa no painel, não pisca. Comum?",
+    "options": [
+      "Lâmpada/circuito aberto (carga flasher)",
+      "AGM",
+      "ABS hidráulico",
+      "TPMS"
+    ],
+    "correct": 0,
+    "explanation": "Flasher sente carga."
+  },
+  {
+    "id": "a6-d03",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Freio: central acende, laterais não. Fusível ok.?",
+    "options": [
+      "Ramo/massa das laterais",
+      "Ripple",
+      "CAN 60 Ω",
+      "Óleo motor"
+    ],
+    "correct": 0,
+    "explanation": "Seletivo."
+  },
+  {
+    "id": "a6-d04",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Painel escuro, outros 12 V ok. Prioridade?",
+    "options": [
+      "Alimentação/massa do cluster",
+      "Trocar arranque",
+      "Compressão",
+      "Filtro ar"
+    ],
+    "correct": 0,
+    "explanation": "Cluster power."
+  },
+  {
+    "id": "a6-d05",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Farol alto: relé clicka, 12 V no 30, 0 V no 87.?",
+    "options": [
+      "Contato do relé",
+      "Bobina aberta",
+      "Bateria 0",
+      "FlexRay"
+    ],
+    "correct": 0,
+    "explanation": "Contato."
+  },
+  {
+    "id": "a6-d06",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "LED freio fraco após adaptador genérico. Causa?",
+    "options": [
+      "Queda/massa/polaridade no adaptador",
+      "Óleo freio",
+      "Pneu",
+      "Chuva"
+    ],
+    "correct": 0,
+    "explanation": "Adaptador."
+  },
+  {
+    "id": "a6-d07",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Melhor medição no soquete do farol fraco?",
+    "options": [
+      "Tensão sob farol aceso",
+      "Ohms com IG ON",
+      "10A na bateria",
+      "Inverter CAN"
+    ],
+    "correct": 0,
+    "explanation": "Sob carga."
+  },
+  {
+    "id": "a6-d08",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "DRL intermitente com vibração. Suspeita?",
+    "options": [
+      "Mau contato/chicote",
+      "Catalisador",
+      "Pastilha",
+      "Estepe"
+    ],
+    "correct": 0,
+    "explanation": "Intermitente mecânico."
+  },
+  {
+    "id": "a6-d09",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Lâmpadas vivem pouco com 15,5 V de carga.?",
+    "options": [
+      "Sobrecarga do sistema",
+      "Falta de CAN",
+      "CCA alto",
+      "LIN"
+    ],
+    "correct": 0,
+    "explanation": "Sobretensão."
+  },
+  {
+    "id": "a6-d10",
+    "area": "D",
+    "areaName": "Iluminação e avisos",
+    "question": "Comparar lado bom vs ruim serve para?",
+    "options": [
+      "Referência rápida de VD/tensão",
+      "Apagar airbag",
+      "Medir compressão",
+      "Trocar óleo"
+    ],
+    "correct": 0,
+    "explanation": "Benchmark."
+  },
+  {
+    "id": "a6-e01",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "CAN-H↔L = 120 Ω IG off. Indica?",
+    "options": [
+      "Duas terminações",
+      "Uma terminação",
+      "Curto",
+      "Rede perfeita 60"
+    ],
+    "correct": 1,
+    "explanation": "Uma de 120."
+  },
+  {
+    "id": "a6-e02",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "CAN-H↔L = 0 Ω. Significado?",
+    "options": [
+      "Curto H-L",
+      "60 Ω ok",
+      "120 Ω",
+      "OL"
+    ],
+    "correct": 0,
+    "explanation": "Curto."
+  },
+  {
+    "id": "a6-e03",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "Após alarme aftermarket, módulos offline. Primeiro?",
+    "options": [
+      "Revisar emendas CAN/alimentação/parasita",
+      "Fusível maior",
+      "Desativar ABS",
+      "Catalisador"
+    ],
+    "correct": 0,
+    "explanation": "Aftermarket."
+  },
+  {
+    "id": "a6-e04",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "BCM ok, ABS sem com, fusível ABS ok. Prioridade?",
+    "options": [
+      "Power/gnd e trecho de rede do ABS",
+      "Pastilhas",
+      "Compressão",
+      "Farol alto"
+    ],
+    "correct": 0,
+    "explanation": "Módulo isolado."
+  },
+  {
+    "id": "a6-e05",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "Vidro passageiro só pelo mestre; botão local morto.?",
+    "options": [
+      "Switch/chicote da porta",
+      "Alternador",
+      "MAP",
+      "Pastilhas"
+    ],
+    "correct": 0,
+    "explanation": "Ramo local."
+  },
+  {
+    "id": "a6-e06",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "Trava: remoto e botão interno mortos. Fusível ok.?",
+    "options": [
+      "Power/massa/rede do módulo conforto",
+      "Trocar todas fechaduras",
+      "Compressor A/C",
+      "TPMS"
+    ],
+    "correct": 0,
+    "explanation": "Módulo/rede."
+  },
+  {
+    "id": "a6-e07",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "Chuva: teto solar offline intermitente.?",
+    "options": [
+      "Água/corrosão alimentação/rede",
+      "Caixa direção",
+      "Ignorar",
+      "Estepe"
+    ],
+    "correct": 0,
+    "explanation": "Umidade."
+  },
+  {
+    "id": "a6-e08",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "U-codes em vários módulos após instalação som.?",
+    "options": [
+      "Emenda/rede/alimentação do acessório",
+      "Óleo",
+      "Pneu",
+      "Pastilha"
+    ],
+    "correct": 0,
+    "explanation": "Integração ruim."
+  },
+  {
+    "id": "a6-e09",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "Ohms CAN ~60 Ω e ainda sem com. Próximo?",
+    "options": [
+      "Alimentação/massa/níveis/gateway",
+      "Aumentar fusível",
+      "Desligar ABS hidráulico",
+      "Trocar catalisador"
+    ],
+    "correct": 0,
+    "explanation": "Terminação ok ≠ power ok."
+  },
+  {
+    "id": "a6-e10",
+    "area": "E",
+    "areaName": "Body electrical e redes",
+    "question": "Porta com chicote quebrado tipicamente causa?",
+    "options": [
+      "Falhas intermitentes de vidro/trava/falantes",
+      "Melhora CCA",
+      "14 V fixo",
+      "Terminação 0 Ω"
+    ],
+    "correct": 0,
+    "explanation": "Flexão cíclica."
+  }
+]

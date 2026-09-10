@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Especificação", "Função"],
+            "headers": [
+                "Componente",
+                "Especificação",
+                "Função"
+            ],
             "rows": [
-                ["Processador DSP", "24-bit/192kHz", "Processamento digital"],
-                ["Amplificador", "4x200W Classe D", "Amplificação"],
-                ["Subwoofer", "12\" 500W", "Baixas frequências"],
-                ["Mid-Range", "6.5\" 100W", "Frequências médias"],
-                ["Tweeters", "1\" 50W", "Altas frequências"]
+                [
+                    "Processador DSP",
+                    "24-bit/192kHz",
+                    "Processamento digital"
+                ],
+                [
+                    "Amplificador",
+                    "4x200W Classe D",
+                    "Amplificação"
+                ],
+                [
+                    "Subwoofer",
+                    "12\" 500W",
+                    "Baixas frequências"
+                ],
+                [
+                    "Mid-Range",
+                    "6.5\" 100W",
+                    "Frequências médias"
+                ],
+                [
+                    "Tweeters",
+                    "1\" 50W",
+                    "Altas frequências"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Será avaliada qualidade sonora, integração, documentação técnica, e inovação no processamento."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar projetos e portfólio aplicado a “Projeto 2 - Sistema de Áudio Premium”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Portfólio técnico: RO com fotos de medição, diagrama marcado e validação. Isso vende confiança melhor que discurso. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Entrega",
+                "Conteúdo",
+                "Uso"
+            ],
+            "rows": [
+                [
+                    "Case PDF/MD",
+                    "Sintoma→teste→fixo",
+                    "Cliente/emprego"
+                ],
+                [
+                    "Prints DMM/scope",
+                    "Evidência",
+                    "Auditoria"
+                ],
+                [
+                    "Antes/depois",
+                    "Validação",
+                    "Marketing técnico"
+                ],
+                [
+                    "Lições aprendidas",
+                    "Erro evitado",
+                    "Melhoria contínua"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Portfólio só com “troquei a peça” sem números."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "3 cases documentados",
+                "Medições legíveis",
+                "Resultado validado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Sistema de Áudio Premium"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente é essencial para processamento digital?",
             "options": [
-                "Amplificador analógico",
-                "Processador DSP",
                 "Subwoofer passivo",
-                "Tweeter simples"
+                "Tweeter simples",
+                "Processador DSP",
+                "Amplificador analógico"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Processador DSP. Em projetos e portfólio (“Projeto 2 - Sistema de Áudio Premium”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de amplificador oferece melhor eficiência?",
             "options": [
-                "Classe A",
-                "Classe AB",
+                "Classe C",
                 "Classe D",
-                "Classe C"
+                "Classe A",
+                "Classe AB"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: Classe D. Em projetos e portfólio (“Projeto 2 - Sistema de Áudio Premium”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a calibração acústica é importante?",
             "options": [
-                "Apenas burocracia",
                 "Garante qualidade sonora ideal em diferentes ambientes",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Garante qualidade sonora ideal em diferentes ambientes. Em projetos e portfólio (“Projeto 2 - Sistema de Áudio Premium”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

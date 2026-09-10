@@ -73,6 +73,73 @@
             "text": "Verifique conexões, limpe terminais, e teste corrente de partida regularmente."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar partida e carga aplicado a “Motor de Arranque - Fundamentos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "No-crank: tensão repouso + crank + VD cabos + corrente. Carga: 13,8–14,5 V típico com motor ligado (OEM). Parasita depois do sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Teste",
+                "Alvo típico*",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Repouso",
+                    "~12,4–12,7 V",
+                    "Estado de carga"
+                ],
+                [
+                    "Crank",
+                    "Não colapsar demais",
+                    "CCA/cabos"
+                ],
+                [
+                    "Carga",
+                    "~13,8–14,5 V",
+                    "Alternador/regulador"
+                ],
+                [
+                    "Parasita",
+                    "OEM (muitos <50–100 mA)",
+                    "Fuga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar arranque sem VD; trocar alternador com 14 V na bateria e luz acesa (circuito da lâmpada)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Números anotados",
+                "Cabos/terminais",
+                "Validar após carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
             "name": "StarterCurrentSimulator",
             "config": {
@@ -96,7 +163,7 @@
                 "7.2V"
             ],
             "correct": 0,
-            "explanation": "Revise a medição e o raciocínio diagnóstico da aula antes de avançar. Na oficina, evidência vem antes da peça."
+            "explanation": "Resposta: 9.6V. Voltage drop só faz sentido sob carga (corrente fluindo). Compare com limites típicos/OEM e isole o trecho."
         },
         {
             "type": "quiz",
@@ -108,7 +175,7 @@
                 "10-50A"
             ],
             "correct": 0,
-            "explanation": "Revise a medição e o raciocínio diagnóstico da aula antes de avançar. Na oficina, evidência vem antes da peça."
+            "explanation": "Resposta: 100-400A. No-crank: tensão em repouso e no crank + VD nos cabos + corrente. Click não prova o motor de partida."
         },
         {
             "type": "quiz",
@@ -120,7 +187,7 @@
                 "1-3 segundos"
             ],
             "correct": 3,
-            "explanation": "Revise a medição e o raciocínio diagnóstico da aula antes de avançar. Na oficina, evidência vem antes da peça."
+            "explanation": "Resposta: 1-3 segundos. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Área", "Modificação", "Impacto"],
+            "headers": [
+                "Área",
+                "Modificação",
+                "Impacto"
+            ],
             "rows": [
-                ["Motor", "Reprogramação ECU", "+30-50% potência"],
-                ["Suspensão", "Kit esportivo", "Melhor manuseio"],
-                ["Freios", "Disco ventilado", "Melhor frenagem"],
-                ["Aerodinâmica", "Kit aerodinâmico", "Redução arrasto"],
-                ["Infoentretenimento", "Sistema premium", "Experiência superior"]
+                [
+                    "Motor",
+                    "Reprogramação ECU",
+                    "+30-50% potência"
+                ],
+                [
+                    "Suspensão",
+                    "Kit esportivo",
+                    "Melhor manuseio"
+                ],
+                [
+                    "Freios",
+                    "Disco ventilado",
+                    "Melhor frenagem"
+                ],
+                [
+                    "Aerodinâmica",
+                    "Kit aerodinâmico",
+                    "Redução arrasto"
+                ],
+                [
+                    "Infoentretenimento",
+                    "Sistema premium",
+                    "Experiência superior"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Alta demanda, margens atrativas, e especialização em marcas específicas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Customização e Performance”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Customização e Performance"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual modificação oferece maior ganho de potência?",
             "options": [
+                "Freios ventilados",
                 "Kit aerodinâmico",
                 "Suspensão esportiva",
-                "Reprogramação de ECU",
-                "Freios ventilados"
+                "Reprogramação de ECU"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Reprogramação de ECU. Em nichos e especialização (“Customização e Performance”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual ganho típico de potência com reprogramação de ECU?",
             "options": [
-                "+5-10%",
                 "+30-50%",
                 "+100-150%",
+                "+5-10%",
                 "+200-300%"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: +30-50%. Em nichos e especialização (“Customização e Performance”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a calibração precisa é importante em customização?",
             "options": [
-                "Apenas burocracia",
                 "Garante integração de sistemas e conformidade com regulamentações",
+                "Não é necessário",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Garante integração de sistemas e conformidade com regulamentações. Em nichos e especialização (“Customização e Performance”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

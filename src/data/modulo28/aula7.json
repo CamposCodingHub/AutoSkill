@@ -17,14 +17,42 @@
         },
         {
             "type": "table",
-            "headers": ["Seção", "Duração", "Conteúdo"],
+            "headers": [
+                "Seção",
+                "Duração",
+                "Conteúdo"
+            ],
             "rows": [
-                ["Introdução", "2 minutos", "Contexto e importância"],
-                ["Objetivos", "3 minutos", "Metas e escopo"],
-                ["Metodologia", "5 minutos", "Técnicas e ferramentas"],
-                ["Resultados", "7 minutos", "Demonstração prática"],
-                ["Conclusões", "2 minutos", "Aprendizados e impactos"],
-                ["Perguntas", "6 minutos", "Discussão e feedback"]
+                [
+                    "Introdução",
+                    "2 minutos",
+                    "Contexto e importância"
+                ],
+                [
+                    "Objetivos",
+                    "3 minutos",
+                    "Metas e escopo"
+                ],
+                [
+                    "Metodologia",
+                    "5 minutos",
+                    "Técnicas e ferramentas"
+                ],
+                [
+                    "Resultados",
+                    "7 minutos",
+                    "Demonstração prática"
+                ],
+                [
+                    "Conclusões",
+                    "2 minutos",
+                    "Aprendizados e impactos"
+                ],
+                [
+                    "Perguntas",
+                    "6 minutos",
+                    "Discussão e feedback"
+                ]
             ]
         },
         {
@@ -44,44 +72,114 @@
             "text": "Serão avaliados: clareza, profundidade técnica, qualidade da apresentação, e capacidade de responder perguntas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar projetos e portfólio aplicado a “Apresentação e Defesa de Projetos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Portfólio técnico: RO com fotos de medição, diagrama marcado e validação. Isso vende confiança melhor que discurso. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Entrega",
+                "Conteúdo",
+                "Uso"
+            ],
+            "rows": [
+                [
+                    "Case PDF/MD",
+                    "Sintoma→teste→fixo",
+                    "Cliente/emprego"
+                ],
+                [
+                    "Prints DMM/scope",
+                    "Evidência",
+                    "Auditoria"
+                ],
+                [
+                    "Antes/depois",
+                    "Validação",
+                    "Marketing técnico"
+                ],
+                [
+                    "Lições aprendidas",
+                    "Erro evitado",
+                    "Melhoria contínua"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Portfólio só com “troquei a peça” sem números."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "3 cases documentados",
+                "Medições legíveis",
+                "Resultado validado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Apresentação de Projetos"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a duração recomendada para a seção de resultados?",
             "options": [
+                "10 minutos",
                 "2 minutos",
-                "5 minutos",
                 "7 minutos",
-                "10 minutos"
+                "5 minutos"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 7 minutos. Em projetos e portfólio (“Apresentação e Defesa de Projetos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual seção deve ter maior duração na apresentação?",
             "options": [
-                "Introdução",
                 "Objetivos",
-                "Resultados",
-                "Conclusões"
+                "Introdução",
+                "Conclusões",
+                "Resultados"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Resultados. Em projetos e portfólio (“Apresentação e Defesa de Projetos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que ensaiar a apresentação é essencial?",
             "options": [
-                "Apenas perda de tempo",
                 "Garante fluência, timing e preparação para perguntas",
                 "Não é necessário",
+                "Apenas perda de tempo",
                 "Apenas estética"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Garante fluência, timing e preparação para perguntas. Em projetos e portfólio (“Apresentação e Defesa de Projetos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

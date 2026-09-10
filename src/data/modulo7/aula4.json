@@ -27,11 +27,27 @@
         },
         {
             "type": "table",
-            "headers": ["Condição", "Resistência", "Diagnóstico"],
+            "headers": [
+                "Condição",
+                "Resistência",
+                "Diagnóstico"
+            ],
             "rows": [
-                ["Normal", "20-80 Ω (típico)", "Solenoide funcional"],
-                ["Circuito Aberto", "∞ Ω", "Nunca abre - MIL acesa"],
-                ["Curto Circuito", "0 Ω", "Pode derrubar driver da ECU"]
+                [
+                    "Normal",
+                    "20-80 Ω (típico)",
+                    "Solenoide funcional"
+                ],
+                [
+                    "Circuito Aberto",
+                    "∞ Ω",
+                    "Nunca abre - MIL acesa"
+                ],
+                [
+                    "Curto Circuito",
+                    "0 Ω",
+                    "Pode derrubar driver da ECU"
+                ]
             ]
         },
         {
@@ -55,44 +71,114 @@
             "value": "Sintomas comuns de falha no solenoide de purge incluem mistura rica/ pobre instável, odor de combustível, MIL acesa com código P0443, e dificuldade na partida a quente."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar atuadores aplicado a “Solenoide de Purge (Cânister EVAP)”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Separe falha de comando (ECU/driver) de falha de potência (fusível/relé/massa) e de falha do próprio atuador. Clique de relé não prova corrente na carga. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Atuador",
+                "Prova",
+                "Armadilha"
+            ],
+            "rows": [
+                [
+                    "Injetor",
+                    "Pulso + resistência isolada",
+                    "Medir ohms energizado"
+                ],
+                [
+                    "Bobina",
+                    "Comando + primary/secondary",
+                    "Cabo/estalo enganoso"
+                ],
+                [
+                    "Solenoide",
+                    "Alimentação + massa comutada",
+                    "Só bip de continuidade"
+                ],
+                [
+                    "Motor DC",
+                    "Corrente + VD",
+                    "Bind mecânico parece elétrico"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Condenar ECU sem provar alimentação/massa/sinal no conector do atuador."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Diagrama de pinos",
+                "Medir comando e potência",
+                "Validar após reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Teste de Solenoide EVAP"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "O que acontece se o solenoide de purge ficar travado aberto?",
             "options": [
-                "Motor não pega",
                 "Mistura excessivamente rica com odor de combustível",
-                "Aumenta a potência do motor",
-                "Não afeta o funcionamento"
+                "Motor não pega",
+                "Não afeta o funcionamento",
+                "Aumenta a potência do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Mistura excessivamente rica com odor de combustível. Em atuadores (“Solenoide de Purge (Cânister EVAP)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do solenoide de purge EVAP?",
             "options": [
-                "Controlar a pressão do combustível",
                 "Direcionar vapores de combustível do tanque para o motor",
                 "Regular a temperatura do motor",
+                "Controlar a pressão do combustível",
                 "Controlar a rotação de marcha lenta"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Direcionar vapores de combustível do tanque para o motor. Em atuadores (“Solenoide de Purge (Cânister EVAP)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como você testa um solenoide de purge com multímetro?",
             "options": [
-                "Medindo a resistência da bobina",
-                "Verificando a pressão do combustível",
                 "Testando a continuidade com o motor ligado",
-                "Medindo a voltagem da bateria"
+                "Medindo a voltagem da bateria",
+                "Verificando a pressão do combustível",
+                "Medindo a resistência da bobina"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Medindo a resistência da bobina. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

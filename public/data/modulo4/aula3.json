@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Sintomas Falha"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Sintomas Falha"
+            ],
             "rows": [
-                ["Motor Partida", "Girar motor", "Clique sem girar, ruído"],
-                ["Solenoide", "Engatar pinhão", "Clique único, sem giro"],
-                ["Bateria", "Fornecer energia", "Giro lento, não gira"],
-                ["Chave Ignição", "Ativar sistema", "Sem resposta, intermitente"]
+                [
+                    "Motor Partida",
+                    "Girar motor",
+                    "Clique sem girar, ruído"
+                ],
+                [
+                    "Solenoide",
+                    "Engatar pinhão",
+                    "Clique único, sem giro"
+                ],
+                [
+                    "Bateria",
+                    "Fornecer energia",
+                    "Giro lento, não gira"
+                ],
+                [
+                    "Chave Ignição",
+                    "Ativar sistema",
+                    "Sem resposta, intermitente"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Verifique conexões, limpe terminais, e teste corrente de partida regularmente."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Sistema de Partida”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Sistema de Partida"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a queda de tensão máxima aceitável durante partida?",
             "options": [
-                "10.5V",
-                "9.6V",
                 "8.0V",
-                "7.2V"
+                "10.5V",
+                "7.2V",
+                "9.6V"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 9.6V. Voltage drop só faz sentido sob carga (corrente fluindo). Compare com limites típicos/OEM e isole o trecho."
         },
         {
             "type": "quiz",
             "question": "O que indica uma queda de tensão abaixo de 9.6V durante a partida?",
             "options": [
+                "Sistema start-stop funcionando",
                 "Bateria em perfeitas condições",
                 "Bateria fraca ou conexões ruins",
-                "Alternador com defeito",
-                "Sistema start-stop funcionando"
+                "Alternador com defeito"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Bateria fraca ou conexões ruins. Voltage drop só faz sentido sob carga (corrente fluindo). Compare com limites típicos/OEM e isole o trecho."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal causa de queda de tensão excessiva durante a partida?",
             "options": [
-                "Alternador sobrecarregado",
                 "Resistência alta no circuito de partida",
                 "Fusível queimado",
+                "Alternador sobrecarregado",
                 "Muitos acessórios ligados"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Resistência alta no circuito de partida. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

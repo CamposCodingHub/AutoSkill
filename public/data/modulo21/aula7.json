@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Requisitos"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Requisitos"
+            ],
             "rows": [
-                ["Bateria AGM/EFB", "Ciclagem profunda", "Alta durabilidade"],
-                ["Motor Partida", "Partidas frequentes", "Alta resistência"],
-                ["ECU Start-Stop", "Controle inteligente", "Sensores específicos"],
-                ["Gerenciamento", "Otimização", "Comunicação CAN"],
-                ["Recuperação", "Conversão energia", "Motor/gerador"]
+                [
+                    "Bateria AGM/EFB",
+                    "Ciclagem profunda",
+                    "Alta durabilidade"
+                ],
+                [
+                    "Motor Partida",
+                    "Partidas frequentes",
+                    "Alta resistência"
+                ],
+                [
+                    "ECU Start-Stop",
+                    "Controle inteligente",
+                    "Sensores específicos"
+                ],
+                [
+                    "Gerenciamento",
+                    "Otimização",
+                    "Comunicação CAN"
+                ],
+                [
+                    "Recuperação",
+                    "Conversão energia",
+                    "Motor/gerador"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Redução de consumo 5-15%, menor emissão, e maior vida útil do motor em tráfego urbano."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar partida e carga aplicado a “Sistemas Start-Stop e Recuperação”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "No-crank: tensão repouso + crank + VD cabos + corrente. Carga: 13,8–14,5 V típico com motor ligado (OEM). Parasita depois do sleep. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Teste",
+                "Alvo típico*",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Repouso",
+                    "~12,4–12,7 V",
+                    "Estado de carga"
+                ],
+                [
+                    "Crank",
+                    "Não colapsar demais",
+                    "CCA/cabos"
+                ],
+                [
+                    "Carga",
+                    "~13,8–14,5 V",
+                    "Alternador/regulador"
+                ],
+                [
+                    "Parasita",
+                    "OEM (muitos <50–100 mA)",
+                    "Fuga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar arranque sem VD; trocar alternador com 14 V na bateria e luz acesa (circuito da lâmpada)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Números anotados",
+                "Cabos/terminais",
+                "Validar após carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Start-Stop"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de bateria é exigido para sistemas start-stop?",
             "options": [
+                "Gel",
                 "Convencional",
-                "AGM ou EFB",
                 "Lítio",
-                "Gel"
+                "AGM ou EFB"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: AGM ou EFB. Em partida e carga (“Sistemas Start-Stop e Recuperação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual a redução típica de consumo com sistemas start-stop?",
             "options": [
-                "1-2%",
                 "5-15%",
-                "20-30%",
-                "40-50%"
+                "1-2%",
+                "40-50%",
+                "20-30%"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 5-15%. Em partida e carga (“Sistemas Start-Stop e Recuperação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como o sistema de recuperação funciona?",
             "options": [
-                "Apenas desliga o motor",
                 "Converte energia cinética em elétrica durante frenagem",
                 "Apenas aumenta a potência",
+                "Apenas desliga o motor",
                 "Não faz nada"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Converte energia cinética em elétrica durante frenagem. Em partida e carga (“Sistemas Start-Stop e Recuperação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

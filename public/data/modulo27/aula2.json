@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Categoria", "Foco Principal", "Especialização"],
+            "headers": [
+                "Categoria",
+                "Foco Principal",
+                "Especialização"
+            ],
             "rows": [
-                ["Drift", "Controle lateral", "Suspensão, direção"],
-                ["Circuito", "Tempo por volta", "Aerodinâmica, motor"],
-                ["Arrancada", "Aceleração máxima", "Transmissão, tração"],
-                ["Speed", "Velocidade final", "Aerodinâmica, potência"],
-                ["Rally", "Controle em superfícies variadas", "Suspensão, tração"]
+                [
+                    "Drift",
+                    "Controle lateral",
+                    "Suspensão, direção"
+                ],
+                [
+                    "Circuito",
+                    "Tempo por volta",
+                    "Aerodinâmica, motor"
+                ],
+                [
+                    "Arrancada",
+                    "Aceleração máxima",
+                    "Transmissão, tração"
+                ],
+                [
+                    "Speed",
+                    "Velocidade final",
+                    "Aerodinâmica, potência"
+                ],
+                [
+                    "Rally",
+                    "Controle em superfícies variadas",
+                    "Suspensão, tração"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Workshops de preparação, equipes de competição, e consultoria especializada em performance."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Preparação de Competição”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Preparação de Competição"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual categoria foca em controle lateral?",
             "options": [
-                "Drift",
                 "Speed",
+                "Circuito",
                 "Arrancada",
-                "Circuito"
+                "Drift"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Drift. Em nichos e especialização (“Preparação de Competição”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual categoria foca em aceleração máxima?",
             "options": [
+                "Rally",
                 "Drift",
-                "Speed",
                 "Arrancada",
-                "Rally"
+                "Speed"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Arrancada. Em nichos e especialização (“Preparação de Competição”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a segurança é crítica em competição?",
             "options": [
+                "Apenas estética",
                 "Apenas burocracia",
                 "Velocidade alta exige equipamentos e procedimentos de emergência",
-                "Não é necessário",
-                "Apenas estética"
+                "Não é necessário"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Velocidade alta exige equipamentos e procedimentos de emergência. Em nichos e especialização (“Preparação de Competição”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

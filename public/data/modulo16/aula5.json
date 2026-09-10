@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Parâmetro", "Normal", "Indica Problema"],
+            "headers": [
+                "Parâmetro",
+                "Normal",
+                "Indica Problema"
+            ],
             "rows": [
-                ["Amplitude", "2-3V pico a pico", "Baixa = terminação ruim"],
-                ["Transições", "Limpeza, simetria", "Ruído = interferência"],
-                ["Tempo subida", "<100ns", "Lento = problemas físicos"],
-                ["Nível idle", "2.5V ambos", "Offset = terra ruim"],
-                ["Atividade", "Frames visíveis", "Sem sinal = bus off"]
+                [
+                    "Amplitude",
+                    "2-3V pico a pico",
+                    "Baixa = terminação ruim"
+                ],
+                [
+                    "Transições",
+                    "Limpeza, simetria",
+                    "Ruído = interferência"
+                ],
+                [
+                    "Tempo subida",
+                    "<100ns",
+                    "Lento = problemas físicos"
+                ],
+                [
+                    "Nível idle",
+                    "2.5V ambos",
+                    "Offset = terra ruim"
+                ],
+                [
+                    "Atividade",
+                    "Frames visíveis",
+                    "Sem sinal = bus off"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Osciloscópios avançados podem decodificar frames CAN, mostrando IDs, dados e timestamps para análise detalhada."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Análise de Comunicação CAN Bus”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Análise de CAN Bus"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a amplitude esperada entre CAN-H e CAN-L em operação normal?",
             "options": [
-                "1-2V",
                 "2-3V",
                 "5-12V",
+                "1-2V",
                 "0.5-1V"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 2-3V. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é o nível idle esperado para CAN-H e CAN-L?",
             "options": [
-                "0V",
                 "5V",
+                "12V",
                 "2.5V ambos",
-                "12V"
+                "0V"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 2.5V ambos. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "O que indica amplitude baixa nos sinais CAN?",
             "options": [
-                "Terminação ruim",
-                "Sistema funcionando perfeitamente",
                 "Bateria muito forte",
-                "Motor desligado"
+                "Terminação ruim",
+                "Motor desligado",
+                "Sistema funcionando perfeitamente"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Terminação ruim. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

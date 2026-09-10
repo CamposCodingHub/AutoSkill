@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Etapa", "Ações", "Ferramentas"],
+            "headers": [
+                "Etapa",
+                "Ações",
+                "Ferramentas"
+            ],
             "rows": [
-                ["Coleta", "Entrevista, observação", "Scanner, multímetro"],
-                ["Análise", "Interpretação sintomas", "Experiência, manuais"],
-                ["Hipóteses", "Possíveis causas", "Conhecimento técnico"],
-                ["Testes", "Verificação sistemática", "Ferramentas específicas"],
-                ["Validação", "Confirmar solução", "Teste de road"]
+                [
+                    "Coleta",
+                    "Entrevista, observação",
+                    "Scanner, multímetro"
+                ],
+                [
+                    "Análise",
+                    "Interpretação sintomas",
+                    "Experiência, manuais"
+                ],
+                [
+                    "Hipóteses",
+                    "Possíveis causas",
+                    "Conhecimento técnico"
+                ],
+                [
+                    "Testes",
+                    "Verificação sistemática",
+                    "Ferramentas específicas"
+                ],
+                [
+                    "Validação",
+                    "Confirmar solução",
+                    "Teste de road"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Após cada diagnóstico, analise o processo. Identifique o que funcionou e o que pode ser melhorado."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar casos práticos / laboratório aplicado a “Metodologia de Diagnóstico Prático”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Trate cada case como RO real: hipótese → teste que mata hipótese → evidência → correção → reteste. Tempo sem método é tempo perdido. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Passo",
+                "Pergunta",
+                "Saída"
+            ],
+            "rows": [
+                [
+                    "Sintoma",
+                    "O que o cliente vê?",
+                    "Reprodução"
+                ],
+                [
+                    "Hipótese",
+                    "O que explicaria?",
+                    "Lista curta"
+                ],
+                [
+                    "Teste",
+                    "O que prova/refuta?",
+                    "Número"
+                ],
+                [
+                    "Fechamento",
+                    "Validou?",
+                    "RO completo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Mudar três peças de uma vez; não registrar o que já foi testado."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Uma variável por vez",
+                "Anotar resultados",
+                "Comparar com lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Metodologia de Diagnóstico"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o princípio fundamental do diagnóstico?",
             "options": [
+                "Resetar todos os sistemas",
                 "Substituir componentes até resolver",
-                "Abordagem sistemática e metódica",
                 "Confiar apenas na intuição",
-                "Resetar todos os sistemas"
+                "Abordagem sistemática e metódica"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Abordagem sistemática e metódica. Em casos práticos / laboratório (“Metodologia de Diagnóstico Prático”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é o princípio da navalha de Occam?",
             "options": [
+                "Usar apenas ferramentas complexas",
                 "Substituir tudo",
                 "A solução mais simples geralmente é a correta",
-                "Ignorar problemas simples",
-                "Usar apenas ferramentas complexas"
+                "Ignorar problemas simples"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: A solução mais simples geralmente é a correta. Em casos práticos / laboratório (“Metodologia de Diagnóstico Prático”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que analisar o processo após cada diagnóstico?",
             "options": [
-                "Apenas burocracia",
                 "Identificar o que funcionou e o que pode ser melhorado",
                 "Aumentar o custo",
+                "Apenas burocracia",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Identificar o que funcionou e o que pode ser melhorado. Em casos práticos / laboratório (“Metodologia de Diagnóstico Prático”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

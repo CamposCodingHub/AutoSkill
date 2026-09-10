@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Ponto", "Função", "Problemas Comuns"],
+            "headers": [
+                "Ponto",
+                "Função",
+                "Problemas Comuns"
+            ],
             "rows": [
-                ["Chassi", "Retorno principal", "Oxidação, folga"],
-                ["Motor", "Aterramento motor", "Vibração, corrosão"],
-                ["ECU", "Referência sensores", "Interferência, ruído"],
-                ["Sistema Áudio", "Reduz ruído", "Zumbido, interferência"]
+                [
+                    "Chassi",
+                    "Retorno principal",
+                    "Oxidação, folga"
+                ],
+                [
+                    "Motor",
+                    "Aterramento motor",
+                    "Vibração, corrosão"
+                ],
+                [
+                    "ECU",
+                    "Referência sensores",
+                    "Interferência, ruído"
+                ],
+                [
+                    "Sistema Áudio",
+                    "Reduz ruído",
+                    "Zumbido, interferência"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Adicione cabos suplementares, use terminais estanhados, e aplique graxa dielétrica para prevenir corrosão."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Sistema de Aterramento”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "VoltageDropSimulator",
             "config": {
-                "title": "Análise de Aterramento"
+                "title": "Queda de tensão sob carga"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a resistência máxima aceitável para aterramento?",
             "options": [
-                "<0.1Ω",
                 "<1.0Ω",
                 "<10Ω",
+                "<0.1Ω",
                 "<100Ω"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: <0.1Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "O que causa alta resistência no aterramento do veículo?",
             "options": [
-                "Conexões oxidadas ou soltas",
                 "Excesso de corrente no sistema",
                 "Alternador sobrecarregado",
-                "Bateria muito forte"
+                "Bateria muito forte",
+                "Conexões oxidadas ou soltas"
             ],
-            "correct": 0
+            "correct": 3,
+            "explanation": "Resposta: Conexões oxidadas ou soltas. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Como você testa a qualidade do aterramento do motor?",
             "options": [
-                "Medindo a resistência entre o motor e o negativo da bateria",
-                "Verificando a tensão no motor com o veículo desligado",
                 "Testando a continuidade com o motor ligado",
-                "Medindo a corrente que passa pelo terra"
+                "Medindo a resistência entre o motor e o negativo da bateria",
+                "Medindo a corrente que passa pelo terra",
+                "Verificando a tensão no motor com o veículo desligado"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: Medindo a resistência entre o motor e o negativo da bateria. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

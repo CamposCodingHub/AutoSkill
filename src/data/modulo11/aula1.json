@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Componente", "Função", "Estado do Refrigerante"],
+            "headers": [
+                "Componente",
+                "Função",
+                "Estado do Refrigerante"
+            ],
             "rows": [
-                ["Compressor", "Comprime e circula refrigerante", "Baixa pressão gás → Alta pressão gás"],
-                ["Condensador", "Libera calor para ambiente", "Alta pressão gás → Alta pressão líquido"],
-                ["Válvula Expansão", "Reduz pressão e controla fluxo", "Alta pressão líquido → Baixa pressão mistura"],
-                ["Evaporador", "Absorve calor da cabine", "Baixa pressão mistura → Baixa pressão gás"]
+                [
+                    "Compressor",
+                    "Comprime e circula refrigerante",
+                    "Baixa pressão gás → Alta pressão gás"
+                ],
+                [
+                    "Condensador",
+                    "Libera calor para ambiente",
+                    "Alta pressão gás → Alta pressão líquido"
+                ],
+                [
+                    "Válvula Expansão",
+                    "Reduz pressão e controla fluxo",
+                    "Alta pressão líquido → Baixa pressão mistura"
+                ],
+                [
+                    "Evaporador",
+                    "Absorve calor da cabine",
+                    "Baixa pressão mistura → Baixa pressão gás"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Manutenção correta inclui verificação de vazamentos, limpeza do condensador e carga adequada de refrigerante."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar A/C automotivo elétrico aplicado a “Ciclo Térmico e Componentes”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Compressor/embraiaagem/pressostatos/sensores: confirme comando elétrico e pressões. Relé e fusível mentem menos que “gás no olhômetro”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Checagem",
+                "Elétrica",
+                "Resultado"
+            ],
+            "rows": [
+                [
+                    "Relé clutch",
+                    "30/87 sob pedido de frio",
+                    "Sem 87 = potência"
+                ],
+                [
+                    "Pressostato",
+                    "Sinal/continuidade conforme OEM",
+                    "Abre por pressão"
+                ],
+                [
+                    "Sensor temp/press",
+                    "Tensão/sinal",
+                    "ECU inibe"
+                ],
+                [
+                    "Ventilador",
+                    "Corrente + comando",
+                    "Sobrepressão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Só completar gás sem provar por que o clutch não engata."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Códigos A/C",
+                "Comando elétrico",
+                "Depois carga de fluido"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "RelayCircuitSimulator",
             "config": {
-                "title": "Análise do Ciclo Térmico"
+                "title": "Diagnóstico de relé"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente absorve calor do interior do veículo?",
             "options": [
+                "Evaporador",
                 "Compressor",
                 "Condensador",
-                "Evaporador",
                 "Válvula de expansão"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: Evaporador. Em A/C automotivo elétrico (“Ciclo Térmico e Componentes”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que acontece com o refrigerante no condensador?",
             "options": [
-                "Absorve calor",
-                "Libera calor e condensa",
                 "Evapora",
-                "Muda de cor"
+                "Muda de cor",
+                "Libera calor e condensa",
+                "Absorve calor"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Libera calor e condensa. Em A/C automotivo elétrico (“Ciclo Térmico e Componentes”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a função principal do compressor no sistema A/C?",
             "options": [
-                "Resfriar o refrigerante",
-                "Comprimir e circular o refrigerante",
+                "Controlar a velocidade do ventilador",
                 "Filtrar impurezas",
-                "Controlar a velocidade do ventilador"
+                "Resfriar o refrigerante",
+                "Comprimir e circular o refrigerante"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Comprimir e circular o refrigerante. Em A/C automotivo elétrico (“Ciclo Térmico e Componentes”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

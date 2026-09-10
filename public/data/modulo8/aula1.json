@@ -17,11 +17,27 @@
         },
         {
             "type": "table",
-            "headers": ["Característica", "CAN High Speed", "CAN Low Speed"],
+            "headers": [
+                "Característica",
+                "CAN High Speed",
+                "CAN Low Speed"
+            ],
             "rows": [
-                ["Velocidade", "500 kbps", "125 kbps"],
-                ["Aplicação", "Motor, transmissão, freios", "Ar condicionado, vidros, áudio"],
-                ["Cor dos fios", "Verde/branco e branco/verde", "Amarelo/branco e branco/amarelo"]
+                [
+                    "Velocidade",
+                    "500 kbps",
+                    "125 kbps"
+                ],
+                [
+                    "Aplicação",
+                    "Motor, transmissão, freios",
+                    "Ar condicionado, vidros, áudio"
+                ],
+                [
+                    "Cor dos fios",
+                    "Verde/branco e branco/verde",
+                    "Amarelo/branco e branco/amarelo"
+                ]
             ]
         },
         {
@@ -35,44 +51,128 @@
             "value": "A topologia CAN é um barramento linear com terminações em ambas as extremidades. Todos os módulos conectados devem estar em boas condições para não afetar a comunicação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar redes CAN/LIN/diagnóstico aplicado a “Protocolo CAN Bus”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem comunicação: IG off, ohms CAN-H↔L (~60 Ω com duas terminações). 120 Ω ≈ uma terminação; ~0 Ω curto; OL aberto. Aftermarket na rede é suspeito clássico. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Leitura",
+                "Significado usual",
+                "Próximo passo"
+            ],
+            "rows": [
+                [
+                    "~60 Ω",
+                    "Duas terminações",
+                    "Checar níveis/alimentação"
+                ],
+                [
+                    "~120 Ω",
+                    "Falta uma terminação",
+                    "Achar módulo/resistor aberto"
+                ],
+                [
+                    "~0 Ω",
+                    "Curto H-L",
+                    "Isolar trechos"
+                ],
+                [
+                    "OL",
+                    "Aberto / desconectado",
+                    "Conector/DLC/chicote"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Reflashar tudo antes de medir ohms/alimentação; emendar CAN sem diagrama."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Medir terminação",
+                "Power/gnd do módulo offline",
+                "Inspecionar acessórios"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "VoltageDropSimulator",
+            "name": "CANBusSimulator",
             "config": {
-                "title": "Simulador de Terminação CAN"
+                "title": "Rede CAN — terminação e níveis"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "CANTrafficViewerSimulator",
+            "config": {
+                "title": "CAN traffic viewer"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "UDSLiteSimulator",
+            "config": {
+                "title": "UDS/OBD lite"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a resistência total esperada em uma rede CAN corretamente terminada?",
             "options": [
-                "60Ω",
-                "120Ω", 
                 "240Ω",
+                "60Ω",
+                "120Ω",
                 "500Ω"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: 60Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função dos resistores de terminação em uma rede CAN?",
             "options": [
-                "Proteger contra picos de tensão",
-                "Evitar reflexões de sinal e garantir comunicação estável",
                 "Limitar a corrente na rede",
-                "Aumentar a velocidade de comunicação"
+                "Aumentar a velocidade de comunicação",
+                "Evitar reflexões de sinal e garantir comunicação estável",
+                "Proteger contra picos de tensão"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Evitar reflexões de sinal e garantir comunicação estável. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "O que indica uma resistência de 120Ω entre CAN-H e CAN-L?",
             "options": [
-                "Rede com terminação correta",
-                "Apenas um resistor de terminação presente",
                 "Rede sem terminação",
-                "Curto-circuito na rede"
+                "Rede com terminação correta",
+                "Curto-circuito na rede",
+                "Apenas um resistor de terminação presente"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Apenas um resistor de terminação presente. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Consumo", "Vantagens", "Desvantagens"],
+            "headers": [
+                "Tipo",
+                "Consumo",
+                "Vantagens",
+                "Desvantagens"
+            ],
             "rows": [
-                ["LED", "5-15W", "Eficiente, vida útil longa", "Custo inicial"],
-                ["Halógeno", "55W", "Baixo custo", "Alto consumo"],
-                ["CCFL", "25W", "Boa eficiência", "Complexo"],
-                ["Fibra Óptica", "10W", "Design flexível", "Custo elevado"]
+                [
+                    "LED",
+                    "5-15W",
+                    "Eficiente, vida útil longa",
+                    "Custo inicial"
+                ],
+                [
+                    "Halógeno",
+                    "55W",
+                    "Baixo custo",
+                    "Alto consumo"
+                ],
+                [
+                    "CCFL",
+                    "25W",
+                    "Boa eficiência",
+                    "Complexo"
+                ],
+                [
+                    "Fibra Óptica",
+                    "10W",
+                    "Design flexível",
+                    "Custo elevado"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "DRLs integram com sistema de iluminação, controladas pela ECU ou módulo específico."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar iluminação e sinalização aplicado a “Luzes Diurnas (DRL)”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Farol fraco unilateral = quase sempre caminho (massa/conector/chicote), não “lâmpada fraca mágica”. Meça tensão no soquete com farol aceso e VD na massa. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sintoma",
+                "1º teste",
+                "Causa comum"
+            ],
+            "rows": [
+                [
+                    "Um lado fraco",
+                    "VD massa/positivo desse lado",
+                    "Massa oxidada"
+                ],
+                [
+                    "Ambos fracos",
+                    "Tensão bateria + carga do sistema",
+                    "Subtensão / cabo"
+                ],
+                [
+                    "Fusível queima",
+                    "Isolar curto após fusível",
+                    "Chicote esfolado"
+                ],
+                [
+                    "LED aftermarket",
+                    "Polaridade/driver/queda no adaptador",
+                    "Adaptador ruim"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trocar só a lâmpada com 10 V no soquete; ignorar o lado bom como referência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Comparar lado bom vs ruim",
+                "Medir sob carga",
+                "Inspecionar soquete/água"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Sistema DRL"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o principal benefício das DRLs?",
             "options": [
-                "Economia de combustível",
                 "Aumento da visibilidade e segurança",
+                "Redução de manutenção",
                 "Melhor estética",
-                "Redução de manutenção"
+                "Economia de combustível"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Aumento da visibilidade e segurança. Em iluminação e sinalização (“Luzes Diurnas (DRL)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia é mais comum em DRLs modernas?",
             "options": [
-                "Halógena",
-                "Xenon",
+                "Laser",
                 "LED",
-                "Laser"
+                "Halógena",
+                "Xenon"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: LED. Em iluminação e sinalização (“Luzes Diurnas (DRL)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Quando as DRLs devem acender automaticamente?",
             "options": [
-                "Apenas à noite",
                 "Apenas com chuva",
-                "Com o motor ligado e luz baixa desligada",
-                "Apenas com faróis altos"
+                "Apenas com faróis altos",
+                "Apenas à noite",
+                "Com o motor ligado e luz baixa desligada"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Com o motor ligado e luz baixa desligada. Em iluminação e sinalização (“Luzes Diurnas (DRL)”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

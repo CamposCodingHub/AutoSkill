@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Foco", "Preparação"],
+            "headers": [
+                "Tipo",
+                "Foco",
+                "Preparação"
+            ],
             "rows": [
-                ["Técnica", "Conhecimento específico", "Estudo teórico profundo"],
-                ["Prática", "Habilidades manuais", "Treinamento em bancada"],
-                ["Comportamental", "Atitudes profissionais", "Exemplos STAR"],
-                ["Com Gestor", "Visão geral", "Questões estratégicas"]
+                [
+                    "Técnica",
+                    "Conhecimento específico",
+                    "Estudo teórico profundo"
+                ],
+                [
+                    "Prática",
+                    "Habilidades manuais",
+                    "Treinamento em bancada"
+                ],
+                [
+                    "Comportamental",
+                    "Atitudes profissionais",
+                    "Exemplos STAR"
+                ],
+                [
+                    "Com Gestor",
+                    "Visão geral",
+                    "Questões estratégicas"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Mostre projetos desafiadores, certificações raras, e especializações em alta demanda."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Entrevistas Técnicas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Entrevistas Técnicas"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o significado de 'T' no método STAR?",
             "options": [
+                "Team",
                 "Time",
                 "Task",
-                "Team",
                 "Technical"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Task. Em certificação / ASE mindset (“Entrevistas Técnicas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de entrevista foca em habilidades manuais?",
             "options": [
-                "Técnica",
-                "Prática",
                 "Comportamental",
-                "Com gestor"
+                "Com gestor",
+                "Prática",
+                "Técnica"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Prática. Em certificação / ASE mindset (“Entrevistas Técnicas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que pesquisar a empresa antes da entrevista?",
             "options": [
+                "Não é necessário",
                 "Apenas curiosidade",
-                "Demonstrar interesse genuíno e preparar perguntas relevantes",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Demonstrar interesse genuíno e preparar perguntas relevantes"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Demonstrar interesse genuíno e preparar perguntas relevantes. Separe bobina (85/86) de contato (30/87). Click ≠ passagem de potência."
         }
     ]
 }

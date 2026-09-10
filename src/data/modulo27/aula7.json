@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Área", "Modificação", "Mercado"],
+            "headers": [
+                "Área",
+                "Modificação",
+                "Mercado"
+            ],
             "rows": [
-                ["Performance", "ECU tuning, turbos", "Entusiastas de potência"],
-                ["Estética", "LEDs, iluminação custom", "Jovens e customização"],
-                ["Áudio", "Sistemas premium", "Audiófilos automotivos"],
-                ["Eletrônica", "Displays, sensores", "Tecnólogos"],
-                ["Interior", "Iluminação ambiente", "Customização de interior"]
+                [
+                    "Performance",
+                    "ECU tuning, turbos",
+                    "Entusiastas de potência"
+                ],
+                [
+                    "Estética",
+                    "LEDs, iluminação custom",
+                    "Jovens e customização"
+                ],
+                [
+                    "Áudio",
+                    "Sistemas premium",
+                    "Audiófilos automotivos"
+                ],
+                [
+                    "Eletrônica",
+                    "Displays, sensores",
+                    "Tecnólogos"
+                ],
+                [
+                    "Interior",
+                    "Iluminação ambiente",
+                    "Customização de interior"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Alta demanda por modificações personalizadas. Especialização em nichos específicos aumenta o valor."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Mercado de Tuning”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Mercado de Tuning"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual área de tuning tem maior demanda entre jovens?",
             "options": [
-                "Performance extrema",
-                "Estética e iluminação custom",
                 "Áudio profissional",
-                "Tuning de motor"
+                "Performance extrema",
+                "Tuning de motor",
+                "Estética e iluminação custom"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Estética e iluminação custom. Em nichos e especialização (“Mercado de Tuning”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual modificação é focada em entusiastas de potência?",
             "options": [
-                "Iluminação ambiente",
                 "ECU tuning e turbos",
-                "Áudio premium",
-                "Displays custom"
+                "Displays custom",
+                "Iluminação ambiente",
+                "Áudio premium"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: ECU tuning e turbos. Em nichos e especialização (“Mercado de Tuning”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a especialização em nichos aumenta o valor?",
             "options": [
-                "Apenas burocracia",
                 "Permite cobrar valores premium por serviços especializados",
+                "Apenas burocracia",
                 "Aumentar o custo",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Permite cobrar valores premium por serviços especializados. Em nichos e especialização (“Mercado de Tuning”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

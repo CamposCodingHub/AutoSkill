@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Dano", "Técnica Reparo", "Ferramentas"],
+            "headers": [
+                "Dano",
+                "Técnica Reparo",
+                "Ferramentas"
+            ],
             "rows": [
-                ["Trava Quebrada", "Substituir trava", "Kit de reparo"],
-                ["Terminal Corroído", "Limpar/substituir", "Limpador químico"],
-                ["Pino Danificado", "Extrair e substituir", "Extractor de pinos"],
-                ["Invólucro Trincado", "Reparar com epóxi", "Resina epóxi"],
-                ["Mau Contato", "Ajustar terminal", "Alicate de crimpagem"]
+                [
+                    "Trava Quebrada",
+                    "Substituir trava",
+                    "Kit de reparo"
+                ],
+                [
+                    "Terminal Corroído",
+                    "Limpar/substituir",
+                    "Limpador químico"
+                ],
+                [
+                    "Pino Danificado",
+                    "Extrair e substituir",
+                    "Extractor de pinos"
+                ],
+                [
+                    "Invólucro Trincado",
+                    "Reparar com epóxi",
+                    "Resina epóxi"
+                ],
+                [
+                    "Mau Contato",
+                    "Ajustar terminal",
+                    "Alicate de crimpagem"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Reparo ideal deve ter encaixe firme, contato elétrico perfeito, e proteção contra umidade."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar solda e emendas aplicado a “Reparo de Conectores”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Emenda profissional: limpeza, mecânica firme, solda adequada quando indicada, isolação e alívio de tração. Emenda fria = falha intermitente futura. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Bom",
+                "Ruim"
+            ],
+            "rows": [
+                [
+                    "Crimp",
+                    "Ferramenta certa",
+                    "Alicate “amassa”"
+                ],
+                [
+                    "Solda",
+                    "Fluxo limpo",
+                    "Frio/excesso"
+                ],
+                [
+                    "Isolação",
+                    "Termo + adesivo",
+                    "Fita frouxa"
+                ],
+                [
+                    "Local",
+                    "Longe de calor/água",
+                    "No assoalho aberto"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Torcer fio e cobrir com fita; soldar CAN sem padrão OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Preparar condutor",
+                "União mecânica",
+                "Isolar e testar sob carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Reparo de Conectores"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a primeira etapa no reparo de conectores?",
             "options": [
+                "Limpar conector",
                 "Extrair terminal danificado",
                 "Desconectar bateria",
-                "Limpar conector",
                 "Testar continuidade"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Desconectar bateria. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é usada para extrair pinos danificados?",
             "options": [
-                "Alicate de corte",
                 "Extractor de pinos",
+                "Martelo",
                 "Chave de fenda",
-                "Martelo"
+                "Alicate de corte"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Extractor de pinos. Em solda e emendas (“Reparo de Conectores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar kits de reparo específicos do fabricante?",
             "options": [
+                "Não faz diferença",
                 "Apenas estética",
-                "Terminais universais podem não ter encaixe perfeito",
                 "Aumentar o custo",
-                "Não faz diferença"
+                "Terminais universais podem não ter encaixe perfeito"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Terminais universais podem não ter encaixe perfeito. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         }
     ]
 }

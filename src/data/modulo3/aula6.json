@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Característica", "Aplicação"],
+            "headers": [
+                "Tipo",
+                "Característica",
+                "Aplicação"
+            ],
             "rows": [
-                ["Weather-Pack", "Selagem completa", "Motor, exterior"],
-                ["Deutsch", "Alta confiabilidade", "Caminhões, industriais"],
-                ["AMP", "Padrão americano", "Veículos americanos"],
-                ["Molex", "Custo-benefício", "Circuitos gerais"],
-                ["Bosch", "Padrão europeu", "Veículos europeus"]
+                [
+                    "Weather-Pack",
+                    "Selagem completa",
+                    "Motor, exterior"
+                ],
+                [
+                    "Deutsch",
+                    "Alta confiabilidade",
+                    "Caminhões, industriais"
+                ],
+                [
+                    "AMP",
+                    "Padrão americano",
+                    "Veículos americanos"
+                ],
+                [
+                    "Molex",
+                    "Custo-benefício",
+                    "Circuitos gerais"
+                ],
+                [
+                    "Bosch",
+                    "Padrão europeu",
+                    "Veículos europeus"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use ferramentas adequadas para cada tipo de conector. Evite danificar travas ou terminais durante extração."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar componentes (fusível, relé, diodo…) aplicado a “Conectores e Terminais”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Fusível aberto é sintoma. Relé que “clicka” só prova bobina — o contato 30–87 pode estar morto. Sempre separe lado de comando e lado de potência. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Peça",
+                "Teste rápido",
+                "Interpretação"
+            ],
+            "rows": [
+                [
+                    "Fusível",
+                    "Continuidade / tensão dos dois lados",
+                    "Aberto = achar curto/sobrecorrente"
+                ],
+                [
+                    "Relé",
+                    "85/86 ohms + 30/87 sob comando",
+                    "Click ≠ potência ok"
+                ],
+                [
+                    "Diodo",
+                    "Polarização / queda ~0,5–0,7 V",
+                    "Curto ou aberto"
+                ],
+                [
+                    "Conector",
+                    "VD sob carga + inspeção visual",
+                    "Fretting/corrosão"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Upar ampère do fusível; trocar relé sem medir 30 e 87; ignorar diagrama de pinagem."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar circuito no diagrama",
+                "Medir antes de substituir",
+                "Validar carga real após o reparo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Conectores"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tipo de conector é melhor para áreas externas?",
             "options": [
-                "Molex",
                 "Weather-Pack",
                 "AMP",
-                "Bosch"
+                "Bosch",
+                "Molex"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Weather-Pack. Em componentes (fusível, relé, diodo…) (“Conectores e Terminais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal característica dos conectores Weather-Pack?",
             "options": [
-                "Maior capacidade de corrente",
-                "Proteção contra umidade e poeira",
+                "Conexão mais rápida",
                 "Menor tamanho físico",
-                "Conexão mais rápida"
+                "Maior capacidade de corrente",
+                "Proteção contra umidade e poeira"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Proteção contra umidade e poeira. Em componentes (fusível, relé, diodo…) (“Conectores e Terminais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Como você deve testar a continuidade de um conector automotivo?",
             "options": [
+                "Aplicando corrente e medindo queda",
                 "Medindo a resistência entre pinos",
                 "Verificando a tensão nos terminais",
-                "Testando com multímetro em modo continuidade",
-                "Aplicando corrente e medindo queda"
+                "Testando com multímetro em modo continuidade"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: Testando com multímetro em modo continuidade. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

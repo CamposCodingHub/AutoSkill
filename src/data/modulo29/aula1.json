@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Seção", "Conteúdo", "Importância"],
+            "headers": [
+                "Seção",
+                "Conteúdo",
+                "Importância"
+            ],
             "rows": [
-                ["Sumário Executivo", "Visão geral do negócio", "Primeira impressão"],
-                ["Análise de Mercado", "Concorrência e oportunidades", "Posicionamento"],
-                ["Plano Financeiro", "Projeções e investimentos", "Viabilidade econômica"],
-                ["Estratégia", "Diferenciação e marketing", "Como competir"],
-                ["Operações", "Processos e recursos", "Como executar"]
+                [
+                    "Sumário Executivo",
+                    "Visão geral do negócio",
+                    "Primeira impressão"
+                ],
+                [
+                    "Análise de Mercado",
+                    "Concorrência e oportunidades",
+                    "Posicionamento"
+                ],
+                [
+                    "Plano Financeiro",
+                    "Projeções e investimentos",
+                    "Viabilidade econômica"
+                ],
+                [
+                    "Estratégia",
+                    "Diferenciação e marketing",
+                    "Como competir"
+                ],
+                [
+                    "Operações",
+                    "Processos e recursos",
+                    "Como executar"
+                ]
             ]
         },
         {
@@ -43,44 +67,128 @@
             "text": "Defina KPIs claros: faturamento, margem, número de clientes, satisfação, e crescimento."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar empreendedorismo de oficina elétrica aplicado a “Planejamento de Negócios”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Preço justo exige método: menos retrabalho, orçamento com evidência, especialização. Elétrica bem feita tem margem — chute não. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Frente",
+                "Ação",
+                "Métrica"
+            ],
+            "rows": [
+                [
+                    "Comercial",
+                    "Orçar após diagnóstico",
+                    "Taxa de aprovação"
+                ],
+                [
+                    "Operação",
+                    "Checklist padrão",
+                    "Retrabalho"
+                ],
+                [
+                    "Financeiro",
+                    "Hora técnica real",
+                    "Margem"
+                ],
+                [
+                    "Reputação",
+                    "Garantia com evidência",
+                    "Indicações"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Aceitar “olha aí rapidinho” sem RO; trabalhar no prejuízo por insegurança técnica."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir escopo",
+                "Cobrar diagnóstico",
+                "Entregar validação"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Planejamento de Negócios"
+                "title": "Caso de oficina guiado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "ProfessorModeSimulator",
+            "config": {
+                "title": "Modo professor (demo)"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "DiagnosticCompetitionSimulator",
+            "config": {
+                "title": "Competição / leaderboard"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a primeira seção de um plano de negócios?",
             "options": [
-                "Análise de mercado",
                 "Sumário executivo",
                 "Plano financeiro",
+                "Análise de mercado",
                 "Estratégia de marketing"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Sumário executivo. Em empreendedorismo de oficina elétrica (“Planejamento de Negócios”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que significa a letra 'O' na análise SWOT?",
             "options": [
-                "Operations",
                 "Objectives",
+                "Outcomes",
                 "Opportunities",
-                "Outcomes"
+                "Operations"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: Opportunities. Em empreendedorismo de oficina elétrica (“Planejamento de Negócios”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que definir KPIs claros é importante?",
             "options": [
-                "Apenas burocracia",
-                "Permite medir progresso e sucesso do negócio",
+                "Não é necessário",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Permite medir progresso e sucesso do negócio"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Permite medir progresso e sucesso do negócio. Em empreendedorismo de oficina elétrica (“Planejamento de Negócios”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

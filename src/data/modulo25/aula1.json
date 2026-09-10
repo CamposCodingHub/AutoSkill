@@ -17,13 +17,43 @@
         },
         {
             "type": "table",
-            "headers": ["Certificação", "Instituição", "Validade", "Requisitos"],
+            "headers": [
+                "Certificação",
+                "Instituição",
+                "Validade",
+                "Requisitos"
+            ],
             "rows": [
-                ["INMETRO", "INMETRO", "5 anos", "Exame teórico + prático"],
-                ["SENAI", "SENAI", "Específica", "Curso completo + prova"],
-                ["ASE (EUA)", "ASE", "5 anos", "Exame internacional"],
-                ["IMI (Europa)", "IMI", "3 anos", "Exame europeu"],
-                ["ABNT", "ABNT", "Variável", "Normas específicas"]
+                [
+                    "INMETRO",
+                    "INMETRO",
+                    "5 anos",
+                    "Exame teórico + prático"
+                ],
+                [
+                    "SENAI",
+                    "SENAI",
+                    "Específica",
+                    "Curso completo + prova"
+                ],
+                [
+                    "ASE (EUA)",
+                    "ASE",
+                    "5 anos",
+                    "Exame internacional"
+                ],
+                [
+                    "IMI (Europa)",
+                    "IMI",
+                    "3 anos",
+                    "Exame europeu"
+                ],
+                [
+                    "ABNT",
+                    "ABNT",
+                    "Variável",
+                    "Normas específicas"
+                ]
             ]
         },
         {
@@ -43,44 +73,121 @@
             "text": "Participe de cursos de atualização, mantenha-se informado sobre novas tecnologias, e renove antes do vencimento."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Certificações Profissionais”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Certificações"
+                "title": "Caso de oficina guiado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "ASEA6ExamSimulator",
+            "config": {
+                "title": "Simulado ASE A6 — prática e exame cronometrado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual certificação é reconhecida internacionalmente?",
             "options": [
-                "INMETRO",
                 "SENAI",
+                "INMETRO",
                 "ASE",
                 "ABNT"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: ASE. Em certificação / ASE mindset (“Certificações Profissionais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual a validade da certificação INMETRO?",
             "options": [
-                "1 ano",
                 "3 anos",
+                "10 anos",
                 "5 anos",
-                "10 anos"
+                "1 ano"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 5 anos. Em certificação / ASE mindset (“Certificações Profissionais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que participar de cursos de atualização?",
             "options": [
-                "Apenas burocracia",
-                "Manter certificação e atualizar conhecimentos",
+                "Não é necessário",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Manter certificação e atualizar conhecimentos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Manter certificação e atualizar conhecimentos. Em certificação / ASE mindset (“Certificações Profissionais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Métrica", "Meta Saudável", "Como Medir"],
+            "headers": [
+                "Métrica",
+                "Meta Saudável",
+                "Como Medir"
+            ],
             "rows": [
-                ["Margem Líquida", "15-25%", "Lucro ÷ Receita"],
-                ["ROI Investimentos", ">20%/ano", "Retorno ÷ Investimento"],
-                ["Ticket Médio", "R$300-800", "Receita ÷ Clientes"],
-                ["Taxa Conversão", "60-80%", "Orçamentos ÷ Contatos"],
-                ["CAC", "<R$50", "Custo ÷ Novos Clientes"]
+                [
+                    "Margem Líquida",
+                    "15-25%",
+                    "Lucro ÷ Receita"
+                ],
+                [
+                    "ROI Investimentos",
+                    ">20%/ano",
+                    "Retorno ÷ Investimento"
+                ],
+                [
+                    "Ticket Médio",
+                    "R$300-800",
+                    "Receita ÷ Clientes"
+                ],
+                [
+                    "Taxa Conversão",
+                    "60-80%",
+                    "Orçamentos ÷ Contatos"
+                ],
+                [
+                    "CAC",
+                    "<R$50",
+                    "Custo ÷ Novos Clientes"
+                ]
             ]
         },
         {
@@ -47,44 +71,114 @@
             "value": "Use tecnologia para otimizar processos: software de gestão, marketing digital, e automação de tarefas repetitivas."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar gestão de oficina aplicado a “Gestão Financeira e Crescimento”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "RO claro: sintoma → testes → evidências → peça → validação. Técnico excelente documenta; retrabalho come margem. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Benefício",
+                "KPI"
+            ],
+            "rows": [
+                [
+                    "Checklist diagnóstico",
+                    "Menos chute",
+                    "Retrabalho %"
+                ],
+                [
+                    "Foto de medições",
+                    "Prova para cliente",
+                    "Aprovação orçamento"
+                ],
+                [
+                    "Tempo por RO",
+                    "Produtividade",
+                    "Horas faturáveis"
+                ],
+                [
+                    "Estoque crítico",
+                    "Menos espera",
+                    "Giro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Orçar peça antes da evidência; não validar após o reparo."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "RO padronizado",
+                "Evidência anexada",
+                "Teste final registrado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise Financeira"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a margem líquida saudável para oficina de serviços?",
             "options": [
-                "5-10%",
-                "15-25%",
                 "30-40%",
-                "50-60%"
+                "5-10%",
+                "50-60%",
+                "15-25%"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: 15-25%. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual a reserva de emergência recomendada para a oficina?",
             "options": [
-                "1 mês de custos fixos",
                 "3-6 meses de custos fixos",
-                "12 meses de custos fixos",
-                "Não é necessário reserva"
+                "Não é necessário reserva",
+                "1 mês de custos fixos",
+                "12 meses de custos fixos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 3-6 meses de custos fixos. Em gestão de oficina (“Gestão Financeira e Crescimento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que representa o CAC (Custo de Aquisição de Cliente)?",
             "options": [
-                "Custo total para adquirir um novo cliente",
                 "Custo de peças",
                 "Custo de mão de obra",
+                "Custo total para adquirir um novo cliente",
                 "Lucro do negócio"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: Custo total para adquirir um novo cliente. Em gestão de oficina (“Gestão Financeira e Crescimento”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

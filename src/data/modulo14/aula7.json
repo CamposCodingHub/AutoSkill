@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Problema", "Causa Comum", "Diagnóstico"],
+            "headers": [
+                "Problema",
+                "Causa Comum",
+                "Diagnóstico"
+            ],
             "rows": [
-                ["Bateria não carrega", "Alternador, regulador", "Testar carga 28V"],
-                ["Faróis fracos", "Fiação, terra ruim", "Medir queda de tensão"],
-                ["ABS não funciona", "Sensor, válvula", "Testar pressão ar"],
-                ["Trailer sem comunicação", "Conector, CAN", "Verificar terminação CAN"],
-                ["Partida difícil", "Motor partida, bateria", "Testar corrente partida"]
+                [
+                    "Bateria não carrega",
+                    "Alternador, regulador",
+                    "Testar carga 28V"
+                ],
+                [
+                    "Faróis fracos",
+                    "Fiação, terra ruim",
+                    "Medir queda de tensão"
+                ],
+                [
+                    "ABS não funciona",
+                    "Sensor, válvula",
+                    "Testar pressão ar"
+                ],
+                [
+                    "Trailer sem comunicação",
+                    "Conector, CAN",
+                    "Verificar terminação CAN"
+                ],
+                [
+                    "Partida difícil",
+                    "Motor partida, bateria",
+                    "Testar corrente partida"
+                ]
             ]
         },
         {
@@ -47,44 +71,114 @@
             "value": "Após reparos, execute testes de carga completos e verifique todos os sistemas interconectados. Documente todas as intervenções para rastreamento."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar 24V / pesados aplicado a “Diagnóstico de Sistemas Pesados”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "24V = duas baterias em série tipicamente. Queda de tensão e massas ruins derrubam módulos. Cuidado com retornos de chassi e tomadas de reboque. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Tópico",
+                "Atenção",
+                "Medição"
+            ],
+            "rows": [
+                [
+                    "Séries 12+12",
+                    "Balanceamento",
+                    "Tensão por elemento"
+                ],
+                [
+                    "Partida",
+                    "Correntes altas",
+                    "VD cabos"
+                ],
+                [
+                    "Iluminação reboque",
+                    "Terra comum",
+                    "Continuidade/VD"
+                ],
+                [
+                    "ABS/EBS",
+                    "Rede + power",
+                    "Scanner dedicado"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Tratar 24V como 12V sem recalcular corrente/potência."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Confirmar topologia",
+                "Medir por bateria",
+                "Inspecionar terra pesado"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Diagnóstico Pesado"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual protocolo de comunicação é comum em caminhões modernos?",
             "options": [
+                "PWM",
                 "OBD-II",
-                "J1939/CAN",
                 "K-Line",
-                "PWM"
+                "J1939/CAN"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: J1939/CAN. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual é a voltagem de carga típica em sistemas de 24V de veículos pesados?",
             "options": [
-                "12V",
                 "28V",
-                "36V",
-                "48V"
+                "12V",
+                "48V",
+                "36V"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: 28V. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "Por que sistemas pesados apresentam corrosão acelerada?",
             "options": [
-                "Porque usam materiais de baixa qualidade",
                 "Exposição a elementos, vibrações extremas e ambientes agressivos",
                 "Porque não têm proteção",
+                "Porque usam materiais de baixa qualidade",
                 "Porque operam em baixa voltagem"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Exposição a elementos, vibrações extremas e ambientes agressivos. Em 24V / pesados (“Diagnóstico de Sistemas Pesados”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

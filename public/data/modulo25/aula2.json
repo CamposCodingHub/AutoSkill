@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo Prova", "Duração", "Avaliação", "Peso"],
+            "headers": [
+                "Tipo Prova",
+                "Duração",
+                "Avaliação",
+                "Peso"
+            ],
             "rows": [
-                ["Teórica", "2 horas", "Conhecimento técnico", "30%"],
-                ["Prática Bancada", "4 horas", "Habilidade manual", "40%"],
-                ["Diagnóstico Veículo", "3 horas", "Raciocínio lógico", "20%"],
-                ["Simulação Emergência", "1 hora", "Segurança", "10%"]
+                [
+                    "Teórica",
+                    "2 horas",
+                    "Conhecimento técnico",
+                    "30%"
+                ],
+                [
+                    "Prática Bancada",
+                    "4 horas",
+                    "Habilidade manual",
+                    "40%"
+                ],
+                [
+                    "Diagnóstico Veículo",
+                    "3 horas",
+                    "Raciocínio lógico",
+                    "20%"
+                ],
+                [
+                    "Simulação Emergência",
+                    "1 hora",
+                    "Segurança",
+                    "10%"
+                ]
             ]
         },
         {
@@ -42,44 +67,121 @@
             "text": "Forneça feedback específico sobre pontos fortes e áreas de melhoria. Sugira treinamentos complementares."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Provas Práticas de Validação”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Provas Práticas"
+                "title": "Caso de oficina guiado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "ASEA6ExamSimulator",
+            "config": {
+                "title": "Banco ASE A6 — áreas A–E"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o peso recomendado para prova prática em bancada?",
             "options": [
-                "20%",
                 "30%",
+                "50%",
                 "40%",
-                "50%"
+                "20%"
             ],
-            "correct": 2
+            "correct": 2,
+            "explanation": "Resposta: 40%. Em certificação / ASE mindset (“Provas Práticas de Validação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual critério é avaliado em provas práticas?",
             "options": [
-                "Apenas velocidade",
-                "Precisão, tempo, segurança, organização e documentação",
+                "Apenas custo",
                 "Apenas aparência",
-                "Apenas custo"
+                "Apenas velocidade",
+                "Precisão, tempo, segurança, organização e documentação"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Precisão, tempo, segurança, organização e documentação. Em certificação / ASE mindset (“Provas Práticas de Validação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que usar checklists detalhados na avaliação?",
             "options": [
-                "Apenas burocracia",
                 "Documentar cada etapa, tempo gasto e resultado obtido",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Documentar cada etapa, tempo gasto e resultado obtido. Em certificação / ASE mindset (“Provas Práticas de Validação”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

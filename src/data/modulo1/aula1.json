@@ -65,73 +65,161 @@
             "ordered": false
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar fundamentos elétricos aplicado a “Tensão, Corrente e Resistência”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Na bancada, traduzir sintoma em grandeza: falta de tensão? queda sob carga? corrente excessiva? Resistência indesejada quase sempre aparece como voltage drop com a carga ligada — continuidade a frio mente. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Conceito",
+                "Pergunta na oficina",
+                "Medição típica"
+            ],
+            "rows": [
+                [
+                    "Tensão",
+                    "Chega alimentação no conector?",
+                    "Volts DC vs − bateria"
+                ],
+                [
+                    "Corrente",
+                    "A carga puxa o esperado?",
+                    "Alicate DC / shunt"
+                ],
+                [
+                    "Resistência",
+                    "Há aperto/corrosão no caminho?",
+                    "VD sob carga (não só ohms)"
+                ],
+                [
+                    "Potência",
+                    "O componente consegue trabalhar?",
+                    "P ≈ V × I"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Não meça ohms com circuito energizado. Não use parafuso enferrujado como “massa”. Não troque peça sem número (tensão/VD/corrente)."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Definir o que medir antes de abrir a caixa de ferramentas",
+                "Escolher escala/modo corretos no DMM",
+                "Registrar valor + condição (IG on/off, carga ligada)",
+                "Comparar com especificação ou lado bom"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
+            "type": "simulator",
+            "name": "DailyMicroCaseSimulator",
+            "config": {
+                "title": "Microcaso do dia"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "TutorRAGLiteSimulator",
+            "config": {
+                "title": "Tutor AutoSkill"
+            }
+        },
+        {
             "type": "quiz",
             "question": "Um eletricista mede 0,3 Ω de resistência no fio que alimenta uma lâmpada que não acende. O que esse valor indica?",
             "options": [
-                "Resistência muito alta – o fio está partido internamente",
-                "Resistência normal – o problema está em outro ponto (interruptor, fusível, massa)",
                 "Resistência zero – o fio está em curto-circuito",
                 "Resistência infinita – o circuito está aberto",
+                "Resistência normal – o problema está em outro ponto (interruptor, fusível, massa)",
+                "Resistência muito alta – o fio está partido internamente",
                 "Resistência variável – o fio está se partindo com a vibração"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Resistência normal – o problema está em outro ponto (interruptor, fusível, massa). Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "O cliente reclama que o farol direito está mais fraco que o esquerdo. As lâmpadas são novas e idênticas. Qual a causa MAIS provável?",
             "options": [
-                "Fusível do farol direito queimado",
                 "Alta resistência no circuito (mau contato no soquete ou massa oxidada)",
                 "Alternador com defeito, gerando tensão insuficiente",
                 "Bateria descarregada, fornecendo menos de 12V",
+                "Fusível do farol direito queimado",
                 "Lâmpada com potência diferente (ex: 35W em vez de 55W)"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Alta resistência no circuito (mau contato no soquete ou massa oxidada). Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Você precisa medir a corrente que uma lâmpada de freio está consumindo. Como deve conectar o multímetro e em qual escala?",
             "options": [
-                "Em paralelo com a lâmpada, na escala de tensão DC (20V)",
-                "Em série com o circuito, na escala de corrente DC (10A)",
-                "Em paralelo com a lâmpada, na escala de resistência (200Ω)",
+                "Em série com o circuito, na escala de tensão DC (20V)",
                 "Com o alicate amperímetro, sem precisar interromper o circuito",
-                "Em série com o circuito, na escala de tensão DC (20V)"
+                "Em paralelo com a lâmpada, na escala de resistência (200Ω)",
+                "Em paralelo com a lâmpada, na escala de tensão DC (20V)",
+                "Em série com o circuito, na escala de corrente DC (10A)"
             ],
-            "correct": 1
+            "correct": 4,
+            "explanation": "Resposta: Em série com o circuito, na escala de corrente DC (10A). Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual é a função principal do alternador em um veículo?",
             "options": [
-                "Aumentar a rotação do motor durante a partida",
                 "Carregar a bateria enquanto o motor está ligado",
-                "Regular a tensão do sistema elétrico",
-                "Fornecer energia para o sistema de injeção"
+                "Fornecer energia para o sistema de injeção",
+                "Aumentar a rotação do motor durante a partida",
+                "Regular a tensão do sistema elétrico"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Carregar a bateria enquanto o motor está ligado. No-crank: tensão em repouso e no crank + VD nos cabos + corrente. Click não prova o motor de partida."
         },
         {
             "type": "quiz",
             "question": "O que acontece se você medir resistência em um circuito energizado?",
             "options": [
-                "A medição será incorreta e pode danificar o multímetro",
                 "O multímetro mostrará apenas a resistência interna do circuito",
                 "A medição será precisa se usar a escala correta",
+                "A medição será incorreta e pode danificar o multímetro",
                 "O circuito entrará em curto automaticamente"
             ],
-            "correct": 0
+            "correct": 2,
+            "explanation": "Resposta: A medição será incorreta e pode danificar o multímetro. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual componente é essencial para proteger o sistema elétrico contra correntes excessivas?",
             "options": [
-                "Resistor de potência",
-                "Capacitor",
                 "Diodo retificador",
-                "Fusível"
+                "Fusível",
+                "Capacitor",
+                "Resistor de potência"
             ],
-            "correct": 3
+            "correct": 1,
+            "explanation": "Resposta: Fusível. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         }
     ]
 }

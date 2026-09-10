@@ -17,13 +17,43 @@
         },
         {
             "type": "table",
-            "headers": ["Caso", "Sintoma", "Diagnóstico", "Solução"],
+            "headers": [
+                "Caso",
+                "Sintoma",
+                "Diagnóstico",
+                "Solução"
+            ],
             "rows": [
-                ["Farol intermitente", "Luz pisca aleatoriamente", "Mau contato no soquete", "Limpeza e reaperto"],
-                ["Motor não pega", "Sem rotação", "Sensor CKP com falha", "Substituir sensor"],
-                ["Consumo excessivo", "15km/L", "Injetor gotejando", "Limpeza/injeção"],
-                ["Bateria descarrega", "Bateria morre", "Corrente parasita 80mA", "Isolar circuito"],
-                ["Ar condicionado não liga", "Sem refrigeração", "Pressostato aberto", "Substituir sensor"]
+                [
+                    "Farol intermitente",
+                    "Luz pisca aleatoriamente",
+                    "Mau contato no soquete",
+                    "Limpeza e reaperto"
+                ],
+                [
+                    "Motor não pega",
+                    "Sem rotação",
+                    "Sensor CKP com falha",
+                    "Substituir sensor"
+                ],
+                [
+                    "Consumo excessivo",
+                    "15km/L",
+                    "Injetor gotejando",
+                    "Limpeza/injeção"
+                ],
+                [
+                    "Bateria descarrega",
+                    "Bateria morre",
+                    "Corrente parasita 80mA",
+                    "Isolar circuito"
+                ],
+                [
+                    "Ar condicionado não liga",
+                    "Sem refrigeração",
+                    "Pressostato aberto",
+                    "Substituir sensor"
+                ]
             ]
         },
         {
@@ -43,44 +73,114 @@
             "text": "Pratique regularmente, aprenda com cada caso, e desenvolva intuição para diagnóstico rápido."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar diagramas elétricos aplicado a “Prática e Estudos de Caso”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Diagrama é GPS: marque power, gnd, sinal, fusível e conector. Sem leitura de esquema, medição vira turismo no chicote. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Elemento",
+                "Pergunta",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "Símbolo",
+                    "O que é o componente?",
+                    "Legenda OEM"
+                ],
+                [
+                    "Código fio",
+                    "Qual circuito?",
+                    "Trace no carro"
+                ],
+                [
+                    "Conector",
+                    "Onde medir?",
+                    "Vista de pinos"
+                ],
+                [
+                    "Splice",
+                    "Onde divide?",
+                    "Isolar trechos"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Seguir cor de fio de outro modelo/ano; medir sem identificar pino."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Abrir diagrama do VIN",
+                "Marcar caminho",
+                "Medir nos pontos marcados"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "WiringTraceSimulator",
             "config": {
-                "title": "Análise de Estudos de Caso"
+                "title": "Rastreio de chicote / diagrama"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o primeiro passo no diagnóstico sistemático?",
             "options": [
+                "Resetar ECU",
                 "Substituir componentes",
-                "Analisar sintomas e formular hipóteses",
                 "Testar aleatoriamente",
-                "Resetar ECU"
+                "Analisar sintomas e formular hipóteses"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Analisar sintomas e formular hipóteses. Em diagramas elétricos (“Prática e Estudos de Caso”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que documentar cada caso de diagnóstico?",
             "options": [
-                "Para gastar tempo",
                 "Para criar banco de dados e aprender com cada caso",
-                "Para não fazer nada",
-                "Apenas por obrigação"
+                "Apenas por obrigação",
+                "Para gastar tempo",
+                "Para não fazer nada"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Para criar banco de dados e aprender com cada caso. Em diagramas elétricos (“Prática e Estudos de Caso”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual corrente parasita é considerada anormal?",
             "options": [
+                "200mA",
                 "10mA",
                 "80mA",
-                "200mA",
                 "500mA"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: 80mA. Meça após sleep. Desconectar a bateria pode mascarar o módulo. Isolar por fusível ou mV no fusível."
         }
     ]
 }

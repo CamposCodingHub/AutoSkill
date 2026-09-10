@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Circuito", "Função", "Proteção"],
+            "headers": [
+                "Circuito",
+                "Função",
+                "Proteção"
+            ],
             "rows": [
-                ["Positivo Permanente", "Sistemas sempre ativos", "Fusível principal"],
-                ["Positivo Chaveado", "Sistemas com ignição", "Chave de ignição"],
-                ["Massa", "Retorno para bateria", "Múltiplos pontos"],
-                ["Distribuição", "Alimentação de cargas", "Fusíveis individuais"]
+                [
+                    "Positivo Permanente",
+                    "Sistemas sempre ativos",
+                    "Fusível principal"
+                ],
+                [
+                    "Positivo Chaveado",
+                    "Sistemas com ignição",
+                    "Chave de ignição"
+                ],
+                [
+                    "Massa",
+                    "Retorno para bateria",
+                    "Múltiplos pontos"
+                ],
+                [
+                    "Distribuição",
+                    "Alimentação de cargas",
+                    "Fusíveis individuais"
+                ]
             ]
         },
         {
@@ -42,44 +62,121 @@
             "text": "De sistemas simples com poucos fios para redes complexas com múltiplos módulos e comunicação digital."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Arquitetura da Rede Elétrica”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Rede Elétrica"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "PowerUpSequenceSimulator",
+            "config": {
+                "title": "Sequência de power-up: Bateria → IG → ECU"
             }
         },
         {
             "type": "quiz",
             "question": "Qual circuito alimenta sistemas sempre ativos?",
             "options": [
-                "Positivo chaveado",
                 "Positivo permanente",
                 "Massa",
+                "Positivo chaveado",
                 "Distribuição"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Positivo permanente. Massa ruim aparece como VD elevado sob carga entre o ponto e o − da bateria."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do positivo chaveado em um veículo?",
             "options": [
-                "Alimentar sistemas de segurança sempre ativos",
                 "Alimentar acessórios que só funcionam com ignição ligada",
+                "Proteger contra sobretensão",
                 "Fornecer terra para componentes",
-                "Proteger contra sobretensão"
+                "Alimentar sistemas de segurança sempre ativos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Alimentar acessórios que só funcionam com ignição ligada. Massa ruim aparece como VD elevado sob carga entre o ponto e o − da bateria."
         },
         {
             "type": "quiz",
             "question": "O que acontece se o positivo permanente for interrompido?",
             "options": [
-                "O veículo não liga",
-                "A memória da ECU é perdida",
                 "Apenas o rádio para de funcionar",
-                "Nenhum efeito perceptível"
+                "O veículo não liga",
+                "Nenhum efeito perceptível",
+                "A memória da ECU é perdida"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: A memória da ECU é perdida. Em arquitetura 12V e distribuição (“Arquitetura da Rede Elétrica”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

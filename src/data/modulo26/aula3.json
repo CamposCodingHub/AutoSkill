@@ -1,86 +1,200 @@
 {
-    "title": "Novas Arquiteturas Elétricas",
+    "title": "Novas Arquiteturas Elétricas — 48V, zonal e smart fuse",
     "content": [
         {
             "type": "text",
-            "value": "Novas arquiteturas elétricas estão redefinindo o design de sistemas veiculares, com distribuição de alta tensão, smart grids, e integração total de sistemas."
+            "value": "Arquiteturas elétricas modernas saem do modelo “uma caixa de fusíveis + chicote gigante”. Surgem três pilares: (1) barramento 48 V para cargas de potência com menor corrente, (2) arquitetura zonal — ECUs e distribuição por zona do veículo (dianteira, porta, traseira), (3) smart fuses / eFuses com diagnóstico e religamento controlado."
         },
         {
             "type": "callout",
             "style": "tip",
-            "title": "Arquiteturas Emergentes",
-            "text": "Smart grids veiculares, distribuição em 48V, sistemas modulares, e arquiteturas baseadas em domínio."
-        },
-        {
-            "type": "text",
-            "value": "Sistemas modernos integram: múltiplos níveis de tensão, gerenciamento inteligente de energia, e comunicação em tempo real entre componentes."
+            "title": "Por que 48 V?",
+            "text": "Potência = V × I. Em 48 V, a mesma potência exige ~1/4 da corrente de 12 V, permitindo cabos mais leves para aquecedores, compressores elétricos, e-boosters e mild hybrid. Continua havendo 12 V (ou DC-DC) para eletrônica sensível."
         },
         {
             "type": "table",
-            "headers": ["Arquitetura", "Características", "Aplicações"],
+            "headers": [
+                "Camada",
+                "Tensão típica",
+                "Exemplos",
+                "Risco diagnóstico"
+            ],
             "rows": [
-                ["48V Mild Hybrid", "Eficiência melhorada", "Veículos leves"],
-                ["800V Performance", "Alta potência", "VEs premium"],
-                ["Distribuída", "Redução de peso", "Veículos modernos"],
-                ["Modular", "Flexibilidade", "Plataformas compartilhadas"],
-                ["Smart Grid", "Otimização", "Frotas inteligentes"]
+                [
+                    "LV clássica",
+                    "12 V",
+                    "ECUs, sensores, iluminação LED",
+                    "Voltage drop / massa"
+                ],
+                [
+                    "LV potência",
+                    "48 V",
+                    "BSG, aquecimento, compressor",
+                    "Arco/energia — respeitar PPE OEM"
+                ],
+                [
+                    "HV tração",
+                    "200–800 V",
+                    "BEV/PHEV",
+                    "LOTO obrigatório"
+                ],
+                [
+                    "Zonal",
+                    "mista",
+                    "Zone controllers + Ethernet/CAN",
+                    "Falha de zona derruba vários sistemas"
+                ]
             ]
         },
         {
             "type": "callout",
             "style": "warning",
-            "title": "Desafios Técnicos",
-            "text": "Gerenciamento térmico, segurança em alta tensão, compatibilidade eletromagnética, e complexidade crescente."
+            "title": "Smart fuse ≠ fusível “cego”",
+            "text": "eFuse pode abrir por sobrecorrente e reportar DTC. Trocar “só o fusível” sem ler o módulo de distribuição é retrabalho. Sempre: sintoma → comunicação com zone/PDU → medição sob carga."
         },
         {
             "type": "text",
-            "value": "O futuro inclui: arquiteturas reconfiguráveis, distribuição baseada em demanda, e integração total com sistemas de energia."
+            "value": "No diagnóstico zonal, um único conector de zona pode alimentar farol, radar e módulo de porta. Abra o diagrama por zona, não só por nome do componente. Valide alimentação da zone ECU, massa, e backbone (CAN/Ethernet) antes de condenar atuadores."
         },
         {
             "type": "callout",
             "style": "info",
-            "title": "Padrões e Protocolos",
-            "text": "Novos padrões para comunicação, segurança, e interoperabilidade entre sistemas elétricos."
+            "title": "Checklist rápido 48V/zonal",
+            "text": "1) Identifique domínio (12/48/HV). 2) Confirme DC-DC e estado de contator se aplicável. 3) Leia DTCs da PDU/zone. 4) Meça VD sob carga no ramal. 5) Só então substitua componente."
+        },
+        {
+            "type": "list",
+            "style": "checklist",
+            "items": [
+                "Separar sintomas 12 V de sintomas 48 V no mesmo veículo",
+                "Localizar zone controller no diagrama do VIN",
+                "Não “upar” ampère de smart fuse",
+                "Documentar evidências (tensão, DTC, print) no RO"
+            ]
+        },
+        {
+            "type": "text",
+            "value": "Objetivo didático: dominar tendências 48V/zonal/IA aplicado a “Novas Arquiteturas Elétricas — 48V, zonal e smart fuse”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "48V reduz corrente para mesma potência; zonal concentra falhas por zona. Smart fuse reporta DTC — “só trocar fusível” ficou velho. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Arquitetura",
+                "Impacto no diagnóstico",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "48V",
+                    "Domínio de tensão",
+                    "Identificar LV/HV"
+                ],
+                [
+                    "Zonal",
+                    "Vários sistemas caem juntos",
+                    "Power da zone ECU"
+                ],
+                [
+                    "eFuse",
+                    "DTC de distribuição",
+                    "Ler PDU"
+                ],
+                [
+                    "OTA",
+                    "Software",
+                    "Histórico de update"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Diagnosticar 48V com mentalidade só 12V sem PPE/OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar domínio",
+                "Ler módulos de energia",
+                "Seguir fluxos novos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
         },
         {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Arquiteturas Elétricas"
+                "title": "Caso de oficina guiado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "PowerUpSequenceSimulator",
+            "config": {
+                "title": "Power path 12V/48V (educacional)"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "TutorRAGLiteSimulator",
+            "config": {
+                "title": "Pergunte sobre 48V/zonal"
             }
         },
         {
             "type": "quiz",
-            "question": "Qual arquitetura oferece melhor eficiência para hybrids leves?",
+            "question": "Qual a principal vantagem elétrica do barramento 48 V frente ao 12 V para a mesma potência?",
             "options": [
-                "12V tradicional",
-                "24V",
-                "48V mild hybrid",
-                "800V performance"
+                "Aumenta a corrente na mesma proporção",
+                "Reduz a corrente (cabos mais leves) para a mesma potência",
+                "Elimina a necessidade de fusíveis",
+                "Substitui completamente o HV de tração"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "P = V×I: maior tensão → menor corrente para a mesma potência. 48 V não substitui HV de tração."
         },
         {
             "type": "quiz",
-            "question": "Qual arquitetura é usada em VEs premium para alta potência?",
+            "question": "Em arquitetura zonal, o que costuma acontecer se a zone ECU dianteira perder alimentação?",
             "options": [
-                "12V tradicional",
-                "24V",
-                "48V mild hybrid",
-                "800V performance"
+                "Apenas o limpador traseiro falha",
+                "Vários sistemas da zona (ex.: iluminação/radar/módulos locais) podem cair juntos",
+                "Somente o estepe esvazia",
+                "A terminação CAN vira 0 Ω automaticamente"
             ],
-            "correct": 3
+            "correct": 1,
+            "explanation": "Zona concentra distribuição — falha de power/rede da zone afeta múltiplos consumidores."
         },
         {
             "type": "quiz",
-            "question": "Por que arquiteturas modulares são importantes?",
+            "question": "Por que um eFuse/smart fuse exige abordagem diferente do fusível térmico clássico?",
             "options": [
-                "Apenas estética",
-                "Oferecem flexibilidade para plataformas compartilhadas",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Porque nunca abre",
+                "Porque pode reportar diagnóstico e religar — leia o módulo antes de só “trocar fusível”",
+                "Porque elimina voltage drop",
+                "Porque substitui o diagrama elétrico"
             ],
-            "correct": 1
+            "correct": 1,
+            "explanation": "Smart fuse tem inteligência e DTC; o fluxo é evidência + módulo PDU/zone."
         }
     ]
 }

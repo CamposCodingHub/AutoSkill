@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Circuito", "Proteção", "Controle"],
+            "headers": [
+                "Circuito",
+                "Proteção",
+                "Controle"
+            ],
             "rows": [
-                ["Motor", "Fusível 30A", "ECU/Relé"],
-                ["Faróis", "Fusível 15A", "Interruptor/Relé"],
-                ["Bomba Combustível", "Fusível 20A", "Relé/ECU"],
-                ["Ventilador", "Fusível 25A", "ECU/Termostato"],
-                ["Áudio", "Fusível 10A", "Chave/Head Unit"]
+                [
+                    "Motor",
+                    "Fusível 30A",
+                    "ECU/Relé"
+                ],
+                [
+                    "Faróis",
+                    "Fusível 15A",
+                    "Interruptor/Relé"
+                ],
+                [
+                    "Bomba Combustível",
+                    "Fusível 20A",
+                    "Relé/ECU"
+                ],
+                [
+                    "Ventilador",
+                    "Fusível 25A",
+                    "ECU/Termostato"
+                ],
+                [
+                    "Áudio",
+                    "Fusível 10A",
+                    "Chave/Head Unit"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use cores padronizadas, proteção contra abrasão, e identificação clara de cada circuito."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Distribuição de Energia”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Distribuição"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual componente protege circuitos individuais?",
             "options": [
-                "Relé",
                 "Fusível",
                 "Interruptor",
-                "Conector"
+                "Conector",
+                "Relé"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Fusível. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         },
         {
             "type": "quiz",
             "question": "Qual é a diferença entre fusível e disjuntor automotivo?",
             "options": [
-                "O disjuntor pode ser resetado, o fusível precisa ser substituído",
-                "O fusível é mais caro que o disjuntor",
                 "O disjuntor só protege contra sobrecarga, o fusível contra curto",
-                "Não há diferença, são iguais"
+                "O disjuntor pode ser resetado, o fusível precisa ser substituído",
+                "Não há diferença, são iguais",
+                "O fusível é mais caro que o disjuntor"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: O disjuntor pode ser resetado, o fusível precisa ser substituído. Com motor ligado, tensão de carga tipicamente ~13,8–14,5 V (confirme OEM). Sem isso, investigue alternador/correia/excitação/cabos."
         },
         {
             "type": "quiz",
             "question": "O que acontece se você substituir um fusível por outro de amperagem maior?",
             "options": [
-                "O circuito fica mais protegido",
                 "O circuito pode ser danificado por sobrecorrente",
-                "O consumo de energia diminui",
-                "Não há problema, apenas aumenta a capacidade"
+                "Não há problema, apenas aumenta a capacidade",
+                "O circuito fica mais protegido",
+                "O consumo de energia diminui"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: O circuito pode ser danificado por sobrecorrente. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         }
     ]
 }

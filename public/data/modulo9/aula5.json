@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Estratégia", "Sensores Principais", "Aplicação"],
+            "headers": [
+                "Estratégia",
+                "Sensores Principais",
+                "Aplicação"
+            ],
             "rows": [
-                ["Speed-Density", "MAP, TPS, IAT", "Motores sem MAF"],
-                ["MAF-based", "MAF, O2", "Controle preciso de massa de ar"],
-                ["Alpha-N", "TPS, RPM", "Racing, alta rotação"],
-                ["Closed-loop", "O2, MAP/MAF", "Correção em tempo real"]
+                [
+                    "Speed-Density",
+                    "MAP, TPS, IAT",
+                    "Motores sem MAF"
+                ],
+                [
+                    "MAF-based",
+                    "MAF, O2",
+                    "Controle preciso de massa de ar"
+                ],
+                [
+                    "Alpha-N",
+                    "TPS, RPM",
+                    "Racing, alta rotação"
+                ],
+                [
+                    "Closed-loop",
+                    "O2, MAP/MAF",
+                    "Correção em tempo real"
+                ]
             ]
         },
         {
@@ -36,44 +56,115 @@
             "value": "Estratégias de ignição calculam avanço baseado em RPM, carga, temperatura e octanagem. Mapas 3D definem avanço ideal para cada condição de operação."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar ECU e estratégias aplicado a “Estratégias de Controle do Motor”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "ECU precisa de B+, IG, massas sólidas e rede ok. Sem isso, “estratégias” parecem defeito de software. Evidência no conector antes de programação. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Pino/função",
+                "Prova",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "B+ / IG",
+                    "Tensão estável",
+                    "Fusível/relé"
+                ],
+                [
+                    "Massas",
+                    "VD baixo",
+                    "Oxidação"
+                ],
+                [
+                    "Rede",
+                    "Com scanner/ohms",
+                    "Bus off"
+                ],
+                [
+                    "Driver",
+                    "Scope no comando",
+                    "Curto na carga"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Clonar/flashar sem backup e sem tensão estável na bateria."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Alimentações",
+                "Massas",
+                "Comunicação",
+                "Depois lógica/software"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Estratégias"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual estratégia usa principalmente sensor MAF para controle de combustível?",
             "options": [
-                "Speed-Density",
                 "MAF-based",
+                "Speed-Density",
                 "Alpha-N",
                 "Open-loop"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: MAF-based. Em ECU e estratégias (“Estratégias de Controle do Motor”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual estratégia usa sensores MAP e TPS para calcular combustível?",
             "options": [
-                "MAF-based",
                 "Speed-Density",
+                "Closed-loop",
                 "Alpha-N",
-                "Closed-loop"
+                "MAF-based"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Speed-Density. Em ECU e estratégias (“Estratégias de Controle do Motor”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Quando a ECU usa a estratégia Alpha-N?",
             "options": [
-                "Em marcha lenta normal",
-                "Em alta rotação com TPS e MAP",
+                "Em todas as condições de operação",
                 "Apenas com motor frio",
-                "Em todas as condições de operação"
+                "Em marcha lenta normal",
+                "Em alta rotação com TPS e MAP"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Em alta rotação com TPS e MAP. Em ECU e estratégias (“Estratégias de Controle do Motor”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

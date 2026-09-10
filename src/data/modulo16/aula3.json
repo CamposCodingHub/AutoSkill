@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sensor", "Sinal Esperado", "Problemas Comuns"],
+            "headers": [
+                "Sensor",
+                "Sinal Esperado",
+                "Problemas Comuns"
+            ],
             "rows": [
-                ["TPS", "0.5-4.5V linear", "Saltos, ruído, dead zone"],
-                ["MAP", "0.5-4.5V (vácuo)", "Instável, resposta lenta"],
-                ["MAF", "0-5V (fluxo ar)", "Ruído, sinal fraco"],
-                ["O2", "0.1-0.9V oscilando", "Lento, constante, sem oscilação"],
-                ["CKP", "Pulsos 5V", "Amplitude variável, ruído"]
+                [
+                    "TPS",
+                    "0.5-4.5V linear",
+                    "Saltos, ruído, dead zone"
+                ],
+                [
+                    "MAP",
+                    "0.5-4.5V (vácuo)",
+                    "Instável, resposta lenta"
+                ],
+                [
+                    "MAF",
+                    "0-5V (fluxo ar)",
+                    "Ruído, sinal fraco"
+                ],
+                [
+                    "O2",
+                    "0.1-0.9V oscilando",
+                    "Lento, constante, sem oscilação"
+                ],
+                [
+                    "CKP",
+                    "Pulsos 5V",
+                    "Amplitude variável, ruído"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use math functions para FFT (análise de frequência), XY mode para comparação de sinais, e averaging para reduzir ruído."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar osciloscópio e formas de onda aplicado a “Análise de Sinais de Sensores”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Scope mostra o tempo: glitch, drop, duty e sincronismo que o DMM média. Comece com acoplamento DC, escala e trigger coerentes com o sinal. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sinal",
+                "O que olhar",
+                "Falha típica"
+            ],
+            "rows": [
+                [
+                    "CKP/CMP",
+                    "Amplitude/dentes",
+                    "Entreferro / chicote"
+                ],
+                [
+                    "Injetor",
+                    "Indutivo kick",
+                    "Aberto / driver"
+                ],
+                [
+                    "Primary ign",
+                    "Dwell/burn",
+                    "Bobina/carga"
+                ],
+                [
+                    "CAN",
+                    "Níveis diferenciais",
+                    "Ruído/terminação"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Trigger errado; sonda no lugar errado; comparar sem referência boa."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Setup de escala",
+                "Trigger estável",
+                "Salvar print no RO"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "ScopeWaveformSimulator",
             "config": {
-                "title": "Análise de Sensores"
+                "title": "Padrões de osciloscópio"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sensor deve mostrar oscilação típica de 0.1-0.9V em operação normal?",
             "options": [
-                "TPS",
-                "MAP",
                 "Sonda Lambda",
-                "Sensor de temperatura"
+                "TPS",
+                "Sensor de temperatura",
+                "MAP"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: Sonda Lambda. Em osciloscópio e formas de onda (“Análise de Sinais de Sensores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que indica ruído excessivo no sinal do TPS?",
             "options": [
-                "Sensor funcionando perfeitamente",
                 "Problemas no chicote ou no próprio sensor",
-                "Bateria fraca",
-                "Motor desligado"
+                "Sensor funcionando perfeitamente",
+                "Motor desligado",
+                "Bateria fraca"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Problemas no chicote ou no próprio sensor. Em osciloscópio e formas de onda (“Análise de Sinais de Sensores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tipo de trigger deve ser usado para sensores digitais como CKP?",
             "options": [
-                "Trigger automático",
                 "Trigger de borda",
                 "Trigger de vídeo",
+                "Trigger automático",
                 "Trigger de ruído"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Trigger de borda. Em osciloscópio e formas de onda (“Análise de Sinais de Sensores”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

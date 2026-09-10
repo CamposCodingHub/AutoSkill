@@ -17,12 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Química", "Tensão Nominal", "Vida Útil", "Aplicação"],
+            "headers": [
+                "Química",
+                "Tensão Nominal",
+                "Vida Útil",
+                "Aplicação"
+            ],
             "rows": [
-                ["Li-ion NMC", "3.6-3.7V célula", "8-10 anos", "BEV moderno"],
-                ["Li-ion LFP", "3.2-3.3V célula", "10-15 anos", "BEV seguro"],
-                ["NiMH", "1.2V célula", "5-8 anos", "HEV antigo"],
-                ["Solid-State", "3.6-4.0V célula", "15+ anos", "Futuro"]
+                [
+                    "Li-ion NMC",
+                    "3.6-3.7V célula",
+                    "8-10 anos",
+                    "BEV moderno"
+                ],
+                [
+                    "Li-ion LFP",
+                    "3.2-3.3V célula",
+                    "10-15 anos",
+                    "BEV seguro"
+                ],
+                [
+                    "NiMH",
+                    "1.2V célula",
+                    "5-8 anos",
+                    "HEV antigo"
+                ],
+                [
+                    "Solid-State",
+                    "3.6-4.0V célula",
+                    "15+ anos",
+                    "Futuro"
+                ]
             ]
         },
         {
@@ -42,44 +67,114 @@
             "text": "Monitora tensão, temperatura, corrente de cada célula. Protege contra sobrecarga, descarga profunda e desbalanceamento."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar HV / híbridos / BEV aplicado a “Baterias de Alta Tensão - Fundamentos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Sem PPE + service plug/LOTO + verificação 0 V conforme OEM, não há serviço. 12 V auxiliar fraca impede READY. Isolation fault exige fluxo do fabricante. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Etapa",
+                "Obrigatório",
+                "Por quê"
+            ],
+            "rows": [
+                [
+                    "PPE",
+                    "Classe adequada",
+                    "Arco/choque"
+                ],
+                [
+                    "LOTO",
+                    "Service plug",
+                    "Isolar pack"
+                ],
+                [
+                    "0 V",
+                    "Medir pontos OEM",
+                    "Energia residual"
+                ],
+                [
+                    "12 V aux",
+                    "Estável",
+                    "Contatores"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir capa laranja por curiosidade; saltar interlock."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Treinamento/autorização",
+                "PPE",
+                "Procedimento OEM completo"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "BatteryChargeSimulator",
             "config": {
-                "title": "Análise de Baterias HV"
+                "title": "Partida e carga — medições"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a tensão típica de um sistema de bateria em um BEV moderno?",
             "options": [
-                "12-24V",
-                "48-72V",
                 "200-800V",
-                "1000-1500V"
+                "1000-1500V",
+                "48-72V",
+                "12-24V"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: 200-800V. Em HV / híbridos / BEV (“Baterias de Alta Tensão - Fundamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que veículos elétricos usam tensões tão altas (400-800V)?",
             "options": [
-                "Para ser mais seguro",
-                "Para reduzir corrente e permitir cabos mais finos",
                 "Para aumentar o peso do veículo",
-                "Para usar baterias menores"
+                "Para ser mais seguro",
+                "Para usar baterias menores",
+                "Para reduzir corrente e permitir cabos mais finos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Para reduzir corrente e permitir cabos mais finos. Em HV / híbridos / BEV (“Baterias de Alta Tensão - Fundamentos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do BMS em veículos elétricos?",
             "options": [
-                "Controlar apenas a velocidade",
                 "Gerenciar carga, descarga e segurança da bateria",
-                "Regular a temperatura do motor",
-                "Controlar o sistema de áudio"
+                "Controlar apenas a velocidade",
+                "Controlar o sistema de áudio",
+                "Regular a temperatura do motor"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Gerenciar carga, descarga e segurança da bateria. Meça após sleep. Desconectar a bateria pode mascarar o módulo. Isolar por fusível ou mV no fusível."
         }
     ]
 }

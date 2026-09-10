@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Tipo", "Função", "Quando Usar"],
+            "headers": [
+                "Tipo",
+                "Função",
+                "Quando Usar"
+            ],
             "rows": [
-                ["Esquemático", "Mostra funcionamento", "Diagnóstico de circuitos"],
-                ["Localização", "Posição componentes", "Encontrar peças no veículo"],
-                ["Conectores", "Pinos e terminais", "Teste de conectores"],
-                ["Roteamento", "Caminho dos fios", "Reparo de chicotes"]
+                [
+                    "Esquemático",
+                    "Mostra funcionamento",
+                    "Diagnóstico de circuitos"
+                ],
+                [
+                    "Localização",
+                    "Posição componentes",
+                    "Encontrar peças no veículo"
+                ],
+                [
+                    "Conectores",
+                    "Pinos e terminais",
+                    "Teste de conectores"
+                ],
+                [
+                    "Roteamento",
+                    "Caminho dos fios",
+                    "Reparo de chicotes"
+                ]
             ]
         },
         {
@@ -42,44 +62,114 @@
             "text": "Siga o fluxo da esquerda para direita, use cores para identificar circuitos, e marque problemas encontrados."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar arquitetura 12V e distribuição aplicado a “Diagramas Elétricos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Siga o caminho: Bateria → fusível/caixa → relé → carga → massa. Positivo permanente ≠ chaveado. Parasita: espere sleep; prefira mV nos fusíveis para não mascarar o módulo. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Trecho",
+                "O que provar",
+                "Dica"
+            ],
+            "rows": [
+                [
+                    "B+",
+                    "Tensão na origem",
+                    "12,6 V repouso tipicamente"
+                ],
+                [
+                    "Fusível",
+                    "Passagem e ampère correto",
+                    "Nunca “gambiarra” maior"
+                ],
+                [
+                    "Relé/IG",
+                    "Comando vs potência",
+                    "Pinos 30/87/85/86"
+                ],
+                [
+                    "Massa",
+                    "VD < ~0,1–0,2 V sob carga",
+                    "Limpe e retorque"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Desconectar bateria no meio do teste de fuga; misturar B+ permanente com ACC."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Mapear power/gnd no diagrama",
+                "Medir no conector da carga",
+                "Confirmar massa de retorno"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Diagramas"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual diagrama mostra posição física dos componentes?",
             "options": [
-                "Esquemático",
-                "Localização",
                 "Conectores",
-                "Roteamento"
+                "Esquemático",
+                "Roteamento",
+                "Localização"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Localização. Em arquitetura 12V e distribuição (“Diagramas Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual é a principal função do diagrama esquemático?",
             "options": [
-                "Mostrar onde os componentes estão fisicamente localizados",
                 "Mostrar as conexões elétricas entre componentes",
-                "Indicar o comprimento dos fios",
-                "Listar as cores dos fios"
+                "Listar as cores dos fios",
+                "Mostrar onde os componentes estão fisicamente localizados",
+                "Indicar o comprimento dos fios"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Mostrar as conexões elétricas entre componentes. Em arquitetura 12V e distribuição (“Diagramas Elétricos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual diagrama você deve usar para encontrar um fusível queimado?",
             "options": [
+                "Diagrama de conectores",
                 "Diagrama esquemático",
                 "Diagrama de localização de componentes",
-                "Diagrama de conectores",
                 "Diagrama de roteamento de fios"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Diagrama de localização de componentes. Fusível aberto protege o circuito — ache a causa (curto/sobrecorrente). Nunca aumente o ampère por conveniência."
         }
     ]
 }

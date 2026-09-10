@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Sistema", "Códigos Típicos", "Teste Principal"],
+            "headers": [
+                "Sistema",
+                "Códigos Típicos",
+                "Teste Principal"
+            ],
             "rows": [
-                ["ABS", "C0xxx - Circuito sensor", "Testar resistência do sensor"],
-                ["ESP", "C1xxx - Yaw/accelerômetro", "Calibrar sensores"],
-                ["SRS", "B2xxx - Squib/cinto", "Verificar continuidade"],
-                ["Comunicação", "U0xxx - CAN", "Testar barramento"]
+                [
+                    "ABS",
+                    "C0xxx - Circuito sensor",
+                    "Testar resistência do sensor"
+                ],
+                [
+                    "ESP",
+                    "C1xxx - Yaw/accelerômetro",
+                    "Calibrar sensores"
+                ],
+                [
+                    "SRS",
+                    "B2xxx - Squib/cinto",
+                    "Verificar continuidade"
+                ],
+                [
+                    "Comunicação",
+                    "U0xxx - CAN",
+                    "Testar barramento"
+                ]
             ]
         },
         {
@@ -46,44 +66,114 @@
             "value": "Após reparos, execute procedimentos de calibração e aprendizado. Sistemas modernos requerem recalibração de sensores e zeramento de adaptativos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança ativa/passiva aplicado a “Diagnóstico de ABS/ESP/SRS”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Airbag e pretensionador: zero improvisação. Use procedimentos OEM, ferramentas adequadas e desarme conforme manual. Diagnóstico elétrico com respeito a squibs. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Sistema",
+                "Cuidado",
+                "Abordagem"
+            ],
+            "rows": [
+                [
+                    "Airbag",
+                    "Energia residual",
+                    "Espera/desarme OEM"
+                ],
+                [
+                    "ABS/ESP",
+                    "Módulo + sensores roda",
+                    "Power/rede/sinal"
+                ],
+                [
+                    "Cinto/pré",
+                    "Pirotécnico",
+                    "Não ohm sem método"
+                ],
+                [
+                    "ADAS",
+                    "Calibração",
+                    "Após geometria/vidro"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Medir squib “no chute”; alimentar módulo errado; ignorar DTCs de comunicação."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "SSE/procedimento",
+                "Scanner adequado",
+                "Não pular etapas de segurança"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "OhmLawCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Diagnóstico"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual código indica problema em sensor de roda do ABS?",
             "options": [
-                "B1234",
-                "C1234",
                 "P1234",
-                "U1234"
+                "B1234",
+                "U1234",
+                "C1234"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: C1234. Em segurança ativa/passiva (“Diagnóstico de ABS/ESP/SRS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que códigos OBD-II genéricos não são suficientes para diagnóstico de ABS/ESP/SRS?",
             "options": [
-                "Porque são muito caros",
                 "Não fornecem detalhes suficientes para diagnóstico preciso",
-                "Porque só funcionam em veículos antigos",
-                "Porque não existem códigos para esses sistemas"
+                "Porque são muito caros",
+                "Porque não existem códigos para esses sistemas",
+                "Porque só funcionam em veículos antigos"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Não fornecem detalhes suficientes para diagnóstico preciso. Em segurança ativa/passiva (“Diagnóstico de ABS/ESP/SRS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "O que deve ser feito após reparos em sistemas de segurança modernos?",
             "options": [
+                "Trocar a bateria do veículo",
                 "Apenas limpar os códigos",
                 "Executar procedimentos de calibração e aprendizado",
-                "Trocar a bateria do veículo",
                 "Reiniciar o veículo 3 vezes"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Executar procedimentos de calibração e aprendizado. Em segurança ativa/passiva (“Diagnóstico de ABS/ESP/SRS”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

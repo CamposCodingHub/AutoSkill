@@ -17,12 +17,32 @@
         },
         {
             "type": "table",
-            "headers": ["Caso Simulado", "Objetivo", "Habilidades Testadas"],
+            "headers": [
+                "Caso Simulado",
+                "Objetivo",
+                "Habilidades Testadas"
+            ],
             "rows": [
-                ["Falha intermitente CAN", "Diagnóstico de rede", "Análise de sinais"],
-                ["Problema térmico ECU", "Diagnóstico térmico", "Uso de termovisão"],
-                ["Múltiplos sistemas", "Diagnóstico integrado", "Sistêmica"],
-                ["Emergência elétrica", "Resposta rápida", "Procedimentos de segurança"]
+                [
+                    "Falha intermitente CAN",
+                    "Diagnóstico de rede",
+                    "Análise de sinais"
+                ],
+                [
+                    "Problema térmico ECU",
+                    "Diagnóstico térmico",
+                    "Uso de termovisão"
+                ],
+                [
+                    "Múltiplos sistemas",
+                    "Diagnóstico integrado",
+                    "Sistêmica"
+                ],
+                [
+                    "Emergência elétrica",
+                    "Resposta rápida",
+                    "Procedimentos de segurança"
+                ]
             ]
         },
         {
@@ -42,44 +62,121 @@
             "text": "Forneça feedback específico sobre cada etapa. Identifique pontos fortes e áreas de melhoria."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Simulações de Casos Reais”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Simulações"
+                "title": "Caso de oficina guiado"
+            }
+        },
+        {
+            "type": "simulator",
+            "name": "DiagnosticCompetitionSimulator",
+            "config": {
+                "title": "Competição de diagnóstico"
             }
         },
         {
             "type": "quiz",
             "question": "Qual o objetivo principal de simulações?",
             "options": [
-                "Testar apenas conhecimento teórico",
-                "Preparar para situações reais e intermitentes",
                 "Avaliar velocidade de trabalho",
-                "Testar apenas ferramentas"
+                "Testar apenas ferramentas",
+                "Preparar para situações reais e intermitentes",
+                "Testar apenas conhecimento teórico"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Preparar para situações reais e intermitentes. Em certificação / ASE mindset (“Simulações de Casos Reais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual condição deve ser reproduzida em simulações?",
             "options": [
+                "Nenhuma condição",
                 "Apenas temperatura ambiente",
-                "Temperatura, vibração, umidade e pressão atmosférica",
                 "Apenas luz",
-                "Nenhuma condição"
+                "Temperatura, vibração, umidade e pressão atmosférica"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Temperatura, vibração, umidade e pressão atmosférica. Em certificação / ASE mindset (“Simulações de Casos Reais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que fornecer feedback detalhado após simulações?",
             "options": [
-                "Apenas burocracia",
                 "Identificar pontos fortes e áreas de melhoria",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Identificar pontos fortes e áreas de melhoria. Em certificação / ASE mindset (“Simulações de Casos Reais”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

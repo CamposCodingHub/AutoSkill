@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Teste", "Valor Aceitável", "Como Medir"],
+            "headers": [
+                "Teste",
+                "Valor Aceitável",
+                "Como Medir"
+            ],
             "rows": [
-                ["Resistência", "<0.01Ω", "Multímetro precisão"],
-                ["Continuidade", "0Ω", "Teste de continuidade"],
-                ["Isolamento", ">10MΩ", "Megômetro"],
-                ["Carga", "Sem falha", "Teste de corrente"],
-                ["Vibração", "Sem desconexão", "Teste mecânico"]
+                [
+                    "Resistência",
+                    "<0.01Ω",
+                    "Multímetro precisão"
+                ],
+                [
+                    "Continuidade",
+                    "0Ω",
+                    "Teste de continuidade"
+                ],
+                [
+                    "Isolamento",
+                    ">10MΩ",
+                    "Megômetro"
+                ],
+                [
+                    "Carga",
+                    "Sem falha",
+                    "Teste de corrente"
+                ],
+                [
+                    "Vibração",
+                    "Sem desconexão",
+                    "Teste mecânico"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Registre todos os testes, valores obtidos, e aprovação/reprovação. Crie histórico de qualidade."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar solda e emendas aplicado a “Qualidade e Teste de Emendas”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Emenda profissional: limpeza, mecânica firme, solda adequada quando indicada, isolação e alívio de tração. Emenda fria = falha intermitente futura. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Bom",
+                "Ruim"
+            ],
+            "rows": [
+                [
+                    "Crimp",
+                    "Ferramenta certa",
+                    "Alicate “amassa”"
+                ],
+                [
+                    "Solda",
+                    "Fluxo limpo",
+                    "Frio/excesso"
+                ],
+                [
+                    "Isolação",
+                    "Termo + adesivo",
+                    "Fita frouxa"
+                ],
+                [
+                    "Local",
+                    "Longe de calor/água",
+                    "No assoalho aberto"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Torcer fio e cobrir com fita; soldar CAN sem padrão OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Preparar condutor",
+                "União mecânica",
+                "Isolar e testar sob carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Qualidade de Emendas"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual a resistência máxima aceitável para emenda profissional?",
             "options": [
+                "<10Ω",
                 "<0.01Ω",
-                "<0.1Ω",
                 "<1.0Ω",
-                "<10Ω"
+                "<0.1Ω"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: <0.01Ω. Ohms/continuidade exige circuito desenergizado e, quando necessário, componente isolado. Ao vivo, use volts ou voltage drop."
         },
         {
             "type": "quiz",
             "question": "Qual ferramenta é usada para medir isolamento de emendas?",
             "options": [
-                "Multímetro comum",
                 "Megômetro",
-                "Alicate de corte",
-                "Chave de fenda"
+                "Multímetro comum",
+                "Chave de fenda",
+                "Alicate de corte"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Megômetro. Em solda e emendas (“Qualidade e Teste de Emendas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que documentar todos os testes de qualidade?",
             "options": [
-                "Para gastar tempo",
                 "Criar histórico de qualidade e rastreamento",
                 "Apenas por obrigação",
+                "Para gastar tempo",
                 "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Criar histórico de qualidade e rastreamento. Em solda e emendas (“Qualidade e Teste de Emendas”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

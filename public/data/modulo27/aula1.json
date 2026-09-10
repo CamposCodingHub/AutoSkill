@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Marca", "Tecnologias Chave", "Sistemas Específicos"],
+            "headers": [
+                "Marca",
+                "Tecnologias Chave",
+                "Sistemas Específicos"
+            ],
             "rows": [
-                ["BMW", "iDrive, ConnectedDrive", "ECU Bosch/Continental"],
-                ["Mercedes", "COMAND, MBUX", "Sistemas proprietários"],
-                ["Audi", "MMI, Virtual Cockpit", "Audi Connect"],
-                ["Porsche", "PCM, Sport Chrono", "Sistemas high-end"],
-                ["VAG", "MIB, Infotainment", "Sistemas compartilhados"]
+                [
+                    "BMW",
+                    "iDrive, ConnectedDrive",
+                    "ECU Bosch/Continental"
+                ],
+                [
+                    "Mercedes",
+                    "COMAND, MBUX",
+                    "Sistemas proprietários"
+                ],
+                [
+                    "Audi",
+                    "MMI, Virtual Cockpit",
+                    "Audi Connect"
+                ],
+                [
+                    "Porsche",
+                    "PCM, Sport Chrono",
+                    "Sistemas high-end"
+                ],
+                [
+                    "VAG",
+                    "MIB, Infotainment",
+                    "Sistemas compartilhados"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Workshops especializados, preparação de veículos premium, e consultoria técnica."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Marcas Premium Alemãs”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Marcas Premium"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sistema de infotainment usa a BMW?",
             "options": [
-                "MMI",
                 "COMAND",
                 "iDrive",
+                "MMI",
                 "MBUX"
             ],
-            "correct": 2
+            "correct": 1,
+            "explanation": "Resposta: iDrive. Em nichos e especialização (“Marcas Premium Alemãs”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual sistema usa a Mercedes-Benz?",
             "options": [
-                "MMI",
                 "COMAND/MBUX",
+                "PCM",
                 "iDrive",
-                "PCM"
+                "MMI"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: COMAND/MBUX. Em nichos e especialização (“Marcas Premium Alemãs”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que marcas premium exigem especialização?",
             "options": [
+                "Apenas para aumentar custo",
                 "Apenas marketing",
-                "Usam tecnologias proprietárias e protocolos específicos",
                 "Não exigem especialização",
-                "Apenas para aumentar custo"
+                "Usam tecnologias proprietárias e protocolos específicos"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Usam tecnologias proprietárias e protocolos específicos. Em nichos e especialização (“Marcas Premium Alemãs”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

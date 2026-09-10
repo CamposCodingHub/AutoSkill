@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Sistema", "Modificação Moderna", "Benefício"],
+            "headers": [
+                "Sistema",
+                "Modificação Moderna",
+                "Benefício"
+            ],
             "rows": [
-                ["Iluminação", "LED + relés modernos", "Eficiência e durabilidade"],
-                ["Ignição", "Eletrônica moderna", "Melhor combustão"],
-                ["Carregamento", "Alternador moderno", "Confiabilidade"],
-                ["Áudio", "Sistemas Bluetooth/USB", "Conectividade"],
-                ["Segurança", "Alarmes modernos", "Proteção avançada"]
+                [
+                    "Iluminação",
+                    "LED + relés modernos",
+                    "Eficiência e durabilidade"
+                ],
+                [
+                    "Ignição",
+                    "Eletrônica moderna",
+                    "Melhor combustão"
+                ],
+                [
+                    "Carregamento",
+                    "Alternador moderno",
+                    "Confiabilidade"
+                ],
+                [
+                    "Áudio",
+                    "Sistemas Bluetooth/USB",
+                    "Conectividade"
+                ],
+                [
+                    "Segurança",
+                    "Alarmes modernos",
+                    "Proteção avançada"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Workshops especializados, consultoria em restauração, e fornecimento de componentes modernizados."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar nichos e especialização aplicado a “Restauração de Clássicos”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Escolha um nicho (EV, coding, pesados, body) depois da base sólida. Especialista sem fundamentos vira dependente de sorte. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Nicho",
+                "Pré-requisito",
+                "Diferencial"
+            ],
+            "rows": [
+                [
+                    "EV/HV",
+                    "Segurança + 12V",
+                    "Isolation/BMS"
+                ],
+                [
+                    "Coding",
+                    "Rede + energia",
+                    "Procedimento"
+                ],
+                [
+                    "Pesados",
+                    "24V",
+                    "EBS/rede"
+                ],
+                [
+                    "Áudio",
+                    "Parasita/massa",
+                    "Instalação limpa"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Abrir nicho HV sem base e sem EPI."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Fechar base A6",
+                "Escolher nicho",
+                "Montar portfólio de cases"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Restauração de Clássicos"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual sistema oferece maior eficiência em clássicos?",
             "options": [
-                "Iluminação original com lâmpadas halógenas",
                 "Iluminação moderna com LEDs",
                 "Sistema sem iluminação",
+                "Iluminação original com lâmpadas halógenas",
                 "Iluminação com velas"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Iluminação moderna com LEDs. Em nichos e especialização (“Restauração de Clássicos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual modificação melhora a combustão em clássicos?",
             "options": [
-                "Ignição original",
                 "Ignição eletrônica moderna",
+                "Ignição com velas",
                 "Sem ignição",
-                "Ignição com velas"
+                "Ignição original"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Ignição eletrônica moderna. Em nichos e especialização (“Restauração de Clássicos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a preservação do original é importante em restauração?",
             "options": [
-                "Apenas estética",
-                "Mantém valor histórico e autenticidade do veículo",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas estética",
+                "Não é necessário",
+                "Mantém valor histórico e autenticidade do veículo"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Mantém valor histórico e autenticidade do veículo. Em nichos e especialização (“Restauração de Clássicos”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Tecnologia", "Aplicação", "Benefícios"],
+            "headers": [
+                "Tecnologia",
+                "Aplicação",
+                "Benefícios"
+            ],
             "rows": [
-                ["5G NR", "Comunicação ultra-rápida", "Baixa latência, alta banda"],
-                ["V2V", "Comunicação entre veículos", "Segurança ativa, cooperativa"],
-                ["V2I", "Veículo-infraestrutura", "Semaforos inteligentes, rotas"],
-                ["V2P", "Veículo-pedestre", "Segurança pedestre, alertas"],
-                ["V2X", "Integração total", "Sistema completo conectado"]
+                [
+                    "5G NR",
+                    "Comunicação ultra-rápida",
+                    "Baixa latência, alta banda"
+                ],
+                [
+                    "V2V",
+                    "Comunicação entre veículos",
+                    "Segurança ativa, cooperativa"
+                ],
+                [
+                    "V2I",
+                    "Veículo-infraestrutura",
+                    "Semaforos inteligentes, rotas"
+                ],
+                [
+                    "V2P",
+                    "Veículo-pedestre",
+                    "Segurança pedestre, alertas"
+                ],
+                [
+                    "V2X",
+                    "Integração total",
+                    "Sistema completo conectado"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Especialização em conectividade, desenvolvimento de V2X, e integração com sistemas inteligentes."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar tendências 48V/zonal/IA aplicado a “Conectividade 5G e V2X”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "48V reduz corrente para mesma potência; zonal concentra falhas por zona. Smart fuse reporta DTC — “só trocar fusível” ficou velho. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Arquitetura",
+                "Impacto no diagnóstico",
+                "Ação"
+            ],
+            "rows": [
+                [
+                    "48V",
+                    "Domínio de tensão",
+                    "Identificar LV/HV"
+                ],
+                [
+                    "Zonal",
+                    "Vários sistemas caem juntos",
+                    "Power da zone ECU"
+                ],
+                [
+                    "eFuse",
+                    "DTC de distribuição",
+                    "Ler PDU"
+                ],
+                [
+                    "OTA",
+                    "Software",
+                    "Histórico de update"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Diagnosticar 48V com mentalidade só 12V sem PPE/OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Identificar domínio",
+                "Ler módulos de energia",
+                "Seguir fluxos novos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Conectividade 5G e V2X"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia permite comunicação entre veículos?",
             "options": [
-                "V2I",
-                "V2P",
                 "V2V",
-                "5G NR"
+                "5G NR",
+                "V2P",
+                "V2I"
             ],
-            "correct": 2
+            "correct": 0,
+            "explanation": "Resposta: V2V. Em tendências 48V/zonal/IA (“Conectividade 5G e V2X”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual tecnologia permite comunicação veículo-infraestrutura?",
             "options": [
-                "V2I",
-                "V2P",
                 "V2V",
-                "V2X"
+                "V2I",
+                "V2X",
+                "V2P"
             ],
-            "correct": 0
+            "correct": 1,
+            "explanation": "Resposta: V2I. Em tendências 48V/zonal/IA (“Conectividade 5G e V2X”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que a segurança cibernética é importante em V2X?",
             "options": [
+                "Não é necessário",
                 "Apenas burocracia",
                 "Sistemas conectados são vulneráveis a ataques e precisam proteção",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Sistemas conectados são vulneráveis a ataques e precisam proteção. Em tendências 48V/zonal/IA (“Conectividade 5G e V2X”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

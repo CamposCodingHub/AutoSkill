@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Equipamento", "Características", "Aplicação"],
+            "headers": [
+                "Equipamento",
+                "Características",
+                "Aplicação"
+            ],
             "rows": [
-                ["Estação Solda", "Temperatura controlada", "Componentes precisos"],
-                ["Ferro Solda", "Temperatura fixa", "Trabalhos gerais"],
-                ["Pistola Ar Quente", "Ar aquecido", "Emendas de chicotes"],
-                ["Microscópio", "Ampliação", "Componentes SMD"],
-                ["Fume Extractor", "Extração fumaça", "Segurança e qualidade"]
+                [
+                    "Estação Solda",
+                    "Temperatura controlada",
+                    "Componentes precisos"
+                ],
+                [
+                    "Ferro Solda",
+                    "Temperatura fixa",
+                    "Trabalhos gerais"
+                ],
+                [
+                    "Pistola Ar Quente",
+                    "Ar aquecido",
+                    "Emendas de chicotes"
+                ],
+                [
+                    "Microscópio",
+                    "Ampliação",
+                    "Componentes SMD"
+                ],
+                [
+                    "Fume Extractor",
+                    "Extração fumaça",
+                    "Segurança e qualidade"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use ventilação adequada, proteção ocular, e luvas de proteção. Fumaça de solda é tóxica."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar solda e emendas aplicado a “Equipamentos de Soldagem”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Emenda profissional: limpeza, mecânica firme, solda adequada quando indicada, isolação e alívio de tração. Emenda fria = falha intermitente futura. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Prática",
+                "Bom",
+                "Ruim"
+            ],
+            "rows": [
+                [
+                    "Crimp",
+                    "Ferramenta certa",
+                    "Alicate “amassa”"
+                ],
+                [
+                    "Solda",
+                    "Fluxo limpo",
+                    "Frio/excesso"
+                ],
+                [
+                    "Isolação",
+                    "Termo + adesivo",
+                    "Fita frouxa"
+                ],
+                [
+                    "Local",
+                    "Longe de calor/água",
+                    "No assoalho aberto"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Torcer fio e cobrir com fita; soldar CAN sem padrão OEM."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Preparar condutor",
+                "União mecânica",
+                "Isolar e testar sob carga"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "CircuitFaultSimulator",
             "config": {
-                "title": "Análise de Equipamentos de Soldagem"
+                "title": "Diagnóstico: aberto, curto e alta resistência"
             }
         },
         {
             "type": "quiz",
             "question": "Qual equipamento oferece melhor controle de temperatura?",
             "options": [
-                "Ferro de solda tradicional",
                 "Estação de solda",
                 "Pistola de ar quente",
-                "Microscópio"
+                "Microscópio",
+                "Ferro de solda tradicional"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Estação de solda. Em solda e emendas (“Equipamentos de Soldagem”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual equipamento é usado para emendas de chicotes?",
             "options": [
-                "Microscópio",
-                "Pistola de ar quente",
+                "Apenas fita isolante",
                 "Fume extractor",
-                "Apenas fita isolante"
+                "Microscópio",
+                "Pistola de ar quente"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Pistola de ar quente. Em solda e emendas (“Equipamentos de Soldagem”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que é importante usar fume extractor ao soldar?",
             "options": [
-                "Apenas estética",
                 "Fumaça de solda é tóxica e prejudica saúde",
-                "Não é necessário",
-                "Apenas para aumentar o custo"
+                "Apenas para aumentar o custo",
+                "Apenas estética",
+                "Não é necessário"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Fumaça de solda é tóxica e prejudica saúde. Em solda e emendas (“Equipamentos de Soldagem”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

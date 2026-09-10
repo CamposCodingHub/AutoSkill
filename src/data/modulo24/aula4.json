@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Procedimento", "Passos", "Risco se Ignorado"],
+            "headers": [
+                "Procedimento",
+                "Passos",
+                "Risco se Ignorado"
+            ],
             "rows": [
-                ["Identificação", "Verificar tensão máxima", "Exposição a tensão letal"],
-                ["Isolamento", "Desconectar e isolar", "Choque elétrico"],
-                ["Descarga", "Descargar capacitores", "Arco elétrico"],
-                ["Verificação", "Testar zero tensão", "Trabalho em circuito energizado"],
-                ["Proteção", "Barreiras, sinalização", "Acesso não autorizado"]
+                [
+                    "Identificação",
+                    "Verificar tensão máxima",
+                    "Exposição a tensão letal"
+                ],
+                [
+                    "Isolamento",
+                    "Desconectar e isolar",
+                    "Choque elétrico"
+                ],
+                [
+                    "Descarga",
+                    "Descargar capacitores",
+                    "Arco elétrico"
+                ],
+                [
+                    "Verificação",
+                    "Testar zero tensão",
+                    "Trabalho em circuito energizado"
+                ],
+                [
+                    "Proteção",
+                    "Barreiras, sinalização",
+                    "Acesso não autorizado"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Tenha plano de emergência, saiba usar desfibrilador, e mantenha treinamento atualizado."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar segurança de oficina aplicado a “Trabalho em Alta Tensão”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "EPI, ordem no posto, isolamento de HV, e não “testar curto com fio grosso”. Segurança é competência técnica, não burocracia. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Risco",
+                "Controle",
+                "Exemplo"
+            ],
+            "rows": [
+                [
+                    "Choque/arco",
+                    "PPE/LOTO",
+                    "HV"
+                ],
+                [
+                    "Incêndio",
+                    "Fusível correto",
+                    "Aftermarket"
+                ],
+                [
+                    "Química",
+                    "EPIs bateria",
+                    "Ácido/térmica"
+                ],
+                [
+                    "Ergonomia",
+                    "Apoios/cavaletes",
+                    "Queda de veículo"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Anel metálico em bancada energizada; pular espera de airbag."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Avaliar risco",
+                "Preparar EPI",
+                "Procedimento escrito quando HV"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "HVSafetyChecklistSimulator",
             "config": {
-                "title": "Análise de Alta Tensão"
+                "title": "Checklist de segurança HV / LOTO"
             }
         },
         {
             "type": "quiz",
             "question": "Qual tensão define trabalho em alta tensão?",
             "options": [
+                "120V",
                 "12V",
                 "24V",
-                "60V",
-                "120V"
+                "60V"
             ],
-            "correct": 2
+            "correct": 3,
+            "explanation": "Resposta: 60V. Em CAN clássica, duas terminações de 120 Ω em paralelo ≈ 60 Ω (IG off). 120 Ω sugere uma terminação; ~0 Ω curto."
         },
         {
             "type": "quiz",
             "question": "Qual categoria de EPI é necessária para alta tensão?",
             "options": [
-                "CAT I",
                 "CAT II",
                 "CAT III",
+                "CAT I",
                 "CAT IV 1000V"
             ],
-            "correct": 3
+            "correct": 3,
+            "explanation": "Resposta: CAT IV 1000V. HV: PPE + service plug/LOTO + verificar 0 V conforme OEM. Sem isso não há diagnóstico seguro."
         },
         {
             "type": "quiz",
             "question": "Por que descarregar capacitores antes de trabalhar?",
             "options": [
-                "Apenas procedimento",
                 "Evitar arco elétrico e choque",
+                "Não é necessário",
                 "Aumentar o custo",
-                "Não é necessário"
+                "Apenas procedimento"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Evitar arco elétrico e choque. Em segurança de oficina (“Trabalho em Alta Tensão”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }

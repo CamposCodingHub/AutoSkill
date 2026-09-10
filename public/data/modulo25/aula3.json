@@ -17,13 +17,37 @@
         },
         {
             "type": "table",
-            "headers": ["Seção", "Conteúdo", "Formato"],
+            "headers": [
+                "Seção",
+                "Conteúdo",
+                "Formato"
+            ],
             "rows": [
-                ["Projetos", "Diagnósticos, reparos, instalações", "Fotos + relatórios"],
-                ["Certificações", "Cursos, provas, especializações", "PDFs originais"],
-                ["Ferramentas", "Equipamentos dominados", "Lista detalhada"],
-                ["Clientes", "Serviços realizados", "Depoimentos"],
-                ["Aprendizados", "Casos complexos solucionados", "Análise crítica"]
+                [
+                    "Projetos",
+                    "Diagnósticos, reparos, instalações",
+                    "Fotos + relatórios"
+                ],
+                [
+                    "Certificações",
+                    "Cursos, provas, especializações",
+                    "PDFs originais"
+                ],
+                [
+                    "Ferramentas",
+                    "Equipamentos dominados",
+                    "Lista detalhada"
+                ],
+                [
+                    "Clientes",
+                    "Serviços realizados",
+                    "Depoimentos"
+                ],
+                [
+                    "Aprendizados",
+                    "Casos complexos solucionados",
+                    "Análise crítica"
+                ]
             ]
         },
         {
@@ -43,44 +67,114 @@
             "text": "Use design limpo, linguagem técnica precisa, e destaque resultados e impactos."
         },
         {
+            "type": "text",
+            "value": "Objetivo didático: dominar certificação / ASE mindset aplicado a “Portfólio Técnico”. Ao final, você deve saber o que medir primeiro, quais valores interpretam o sintoma e quais erros de iniciante evitar nesta aula."
+        },
+        {
+            "type": "callout",
+            "style": "info",
+            "title": "Na oficina (aplicação real)",
+            "text": "Provas tipo ASE cobram raciocínio: VD, interpretação de sintoma, ordem de teste. Treine com timer e revise por área fraca — não só “ler PDF”. [autoskill-enriched-v2]"
+        },
+        {
+            "type": "table",
+            "headers": [
+                "Área A6",
+                "Peso mental",
+                "Treino AutoSkill"
+            ],
+            "rows": [
+                [
+                    "Geral/VD",
+                    "Alto",
+                    "M1–M4, M20"
+                ],
+                [
+                    "Partida",
+                    "Alto",
+                    "M21"
+                ],
+                [
+                    "Carga",
+                    "Médio",
+                    "M21"
+                ],
+                [
+                    "Body/redes",
+                    "Alto",
+                    "M5, M8, M12"
+                ]
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "danger",
+            "title": "Erros clássicos nesta área",
+            "text": "Decorar gabarito; ignorar explicação do erro."
+        },
+        {
+            "type": "callout",
+            "style": "tip",
+            "title": "Método em 4 passos",
+            "text": "1) Reproduzir sintoma 2) Inspeção visual/diagrama 3) Medir sob condição correta (carga/sleep/IG) 4) Corrigir causa raiz e validar."
+        },
+        {
+            "type": "list",
+            "ordered": true,
+            "items": [
+                "Simulado cronometrado",
+                "Revisão por área",
+                "Refazer labs fracos"
+            ]
+        },
+        {
+            "type": "callout",
+            "style": "analogy",
+            "title": "Como estudar esta aula",
+            "text": "Leia → faça o lab → responda o quiz lendo a explicação → explique o fluxo em voz alta como se fosse para um ajudante na oficina."
+        },
+        {
             "type": "simulator",
-            "name": "PowerCalculator",
+            "name": "DiagnosticCasePlayer",
             "config": {
-                "title": "Análise de Portfólio"
+                "title": "Caso de oficina guiado"
             }
         },
         {
             "type": "quiz",
             "question": "Qual seção essencial do portfólio técnico?",
             "options": [
-                "Apenas certificações",
-                "Projetos completos com documentação",
+                "Fotos pessoais",
                 "Apenas lista de ferramentas",
-                "Fotos pessoais"
+                "Apenas certificações",
+                "Projetos completos com documentação"
             ],
-            "correct": 1
+            "correct": 3,
+            "explanation": "Resposta: Projetos completos com documentação. Em certificação / ASE mindset (“Portfólio Técnico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Por que criar versões diferentes do portfólio?",
             "options": [
-                "Apenas burocracia",
                 "Adaptar para diferentes públicos (empregadores, clientes)",
-                "Aumentar o custo",
-                "Não é necessário"
+                "Apenas burocracia",
+                "Não é necessário",
+                "Aumentar o custo"
             ],
-            "correct": 1
+            "correct": 0,
+            "explanation": "Resposta: Adaptar para diferentes públicos (empregadores, clientes). Em certificação / ASE mindset (“Portfólio Técnico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         },
         {
             "type": "quiz",
             "question": "Qual característica define um portfólio profissional?",
             "options": [
+                "Apenas fotos",
                 "Design caótico",
                 "Estrutura clara, organização e atualização regular",
-                "Apenas fotos",
                 "Apenas texto"
             ],
-            "correct": 1
+            "correct": 2,
+            "explanation": "Resposta: Estrutura clara, organização e atualização regular. Em certificação / ASE mindset (“Portfólio Técnico”), priorize evidência medida antes de substituir componente. Confirme sempre a especificação OEM."
         }
     ]
 }
